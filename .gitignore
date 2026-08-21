@@ -1,0 +1,33 @@
+# Logs — autobuild transcripts are regenerable; keep the .md reports
+*.log
+
+# Dependencies / build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Tauri
+src-tauri/target
+
+# Generated router tree — never edited, never committed
+src/routeTree.gen.ts
+
+# Autobuild pid files (junk)
+*.pid
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+docs/
+content/physics/
+.opencode/
+DESIGN.md
+cbc-science-app-build-plan.md

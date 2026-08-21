@@ -1,0 +1,90 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+          # TODO: re-enable when Gate 0 confirms Linux as a target (see docs/plan/01-gate-zero.md)
+          # - ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Cache Rust target
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: 'src-tauri -> target'
+
+      - name: Install JS dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Typecheck
+        run: bun run tsc
+
+      - name: Unit tests
+        run: bun test
+
+      - name: Clippy
+        working-directory: src-tauri
+        run: cargo clippy -- -D warnings
+
+      - name: Rust tests
+        working-directory: src-tauri
+        run: cargo test
+
+      - name: Build installer
+        run: bun tauri build
+
+      - name: Enforce installer size budget (20MB)
+        shell: bash
+        run: |
+          set -euo pipefail
+          BUDGET=$((20 * 1024 * 1024))
+          BUNDLE_DIR="src-tauri/target/release/bundle"
+          echo "Bundle directory: $BUNDLE_DIR"
+          if [ ! -d "$BUNDLE_DIR" ]; then
+            echo "ERROR: bundle directory not found: $BUNDLE_DIR"
+            exit 1
+          fi
+          max=0
+          max_file=""
+          while IFS= read -r -d '' f; do
+            size=$(stat -c%s "$f" 2>/dev/null || stat -f%z "$f")
+            echo "$size bytes  $f"
+            if [ "$size" -gt "$max" ]; then
+              max=$size
+              max_file="$f"
+            fi
+          done < <(find "$BUNDLE_DIR" -type f -print0)
+          budget_mb=$((BUDGET / 1024 / 1024))
+          max_mb=$((max / 1024 / 1024))
+          echo "----"
+          echo "Largest bundle file: $max bytes (~${max_mb} MB) -> $max_file"
+          echo "Budget: $BUDGET bytes (~${budget_mb} MB)"
+          if [ "$max" -gt "$BUDGET" ]; then
+            echo "FAIL: largest bundle file exceeds the ${budget_mb}MB installer budget (see docs/plan/08-hardening-and-pilot.md)"
+            exit 1
+          fi
+          echo "OK: within budget"
+
+      - name: Upload bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: cbclab-bundle-${{ matrix.os }}
+          path: src-tauri/target/release/bundle/
+          if-no-files-found: error
