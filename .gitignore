@@ -27,7 +27,6 @@ src/routeTree.gen.ts
 *.sln
 *.sw?
 docs/
-content/physics/
 .opencode/
 DESIGN.md
 cbc-science-app-build-plan.md

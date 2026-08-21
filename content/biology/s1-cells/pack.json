@@ -1,0 +1,97 @@
+{
+  "packId": "bio.s1.cells.structure",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s1.cells.structure",
+      "title": "Cell Structure",
+      "subject": "biology",
+      "level": "S1",
+      "strand": "Cells",
+      "subStrand": "Plant and animal cells",
+      "outcomes": [
+        "State that the cell is the basic unit of life.",
+        "Identify the main parts of a plant cell and an animal cell.",
+        "Distinguish between plant and animal cells based on their structures.",
+        "State the functions of the nucleus, cell membrane, cytoplasm, cell wall and chloroplast."
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The cell is the basic unit of life. All living things are made of one or more cells. A cell has three main parts: the cell membrane, which controls what enters and leaves the cell; the cytoplasm, a jelly-like substance where chemical reactions happen; and the nucleus, which controls the cell's activities and contains genetic material."
+        },
+        {
+          "type": "text",
+          "text": "Plant cells and animal cells share these three parts, but plant cells have extra structures. A plant cell has a cell wall made of cellulose outside the cell membrane, which gives the cell a fixed shape and supports it. Plant cells also contain chloroplasts, which contain the green pigment chlorophyll and use sunlight to make food by photosynthesis. Plant cells usually have a large permanent vacuole filled with cell sap."
+        },
+        {
+          "type": "text",
+          "text": "Animal cells do not have a cell wall, chloroplasts, or a large permanent vacuole. Because they have no cell wall, animal cells can change shape. The differences in structure reflect the different ways plants and animals live and get their food."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": "Which organelle controls all the activities of the cell and contains the genetic material?",
+          "kind": "single",
+          "options": [
+            { "id": "a", "text": "Nucleus" },
+            { "id": "b", "text": "Cytoplasm" },
+            { "id": "c", "text": "Cell wall" },
+            { "id": "d", "text": "Vacuole" }
+          ],
+          "correct": ["a"],
+          "explanation": "The nucleus contains the genetic material (DNA) and controls the cell's activities. The cytoplasm is where reactions happen, the cell wall supports the plant cell, and the vacuole stores cell sap."
+        },
+        {
+          "id": "q2",
+          "prompt": "Which structures are found in plant cells but NOT in animal cells? (Select all that apply.)",
+          "kind": "multi",
+          "options": [
+            { "id": "a", "text": "Cell wall" },
+            { "id": "b", "text": "Chloroplast" },
+            { "id": "c", "text": "Cell membrane" },
+            { "id": "d", "text": "Nucleus" }
+          ],
+          "correct": ["a", "b"],
+          "explanation": "The cell wall and chloroplasts are found only in plant cells. Both plant and animal cells have a cell membrane and a nucleus. Chloroplasts let plants make food by photosynthesis; the cell wall gives plant cells a fixed shape."
+        },
+        {
+          "id": "q3",
+          "prompt": "What is the basic unit of life?",
+          "kind": "single",
+          "options": [
+            { "id": "a", "text": "The cell" },
+            { "id": "b", "text": "The tissue" },
+            { "id": "c", "text": "The organ" },
+            { "id": "d", "text": "The atom" }
+          ],
+          "correct": ["a"],
+          "explanation": "The cell is the smallest unit that can carry out all the processes of life. Tissues and organs are made of cells, and atoms are not living."
+        },
+        {
+          "id": "q4",
+          "prompt": "A parent bacterial cell divides by binary fission into two daughter cells. How many cells result from one parent cell?",
+          "kind": "numeric",
+          "correct": ["2"],
+          "tolerance": 0,
+          "explanation": "In binary fission, one parent cell divides once to form two daughter cells. Each daughter cell is a copy of the parent, so one parent produces 2 cells."
+        },
+        {
+          "id": "q5",
+          "prompt": "Why do plant cells have a more fixed shape than animal cells?",
+          "kind": "single",
+          "options": [
+            { "id": "a", "text": "Because they have a cell wall" },
+            { "id": "b", "text": "Because they have no nucleus" },
+            { "id": "c", "text": "Because they are smaller" },
+            { "id": "d", "text": "Because they contain more water" }
+          ],
+          "correct": ["a"],
+          "explanation": "The cell wall, made of cellulose, is rigid and gives the plant cell a fixed, regular shape. Animal cells have no cell wall, only a flexible membrane, so they can change shape."
+        }
+      ]
+    }
+  ]
+}
