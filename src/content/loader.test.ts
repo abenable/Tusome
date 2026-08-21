@@ -1,9 +1,10 @@
 import { describe, it, expect } from "bun:test";
 import { Pack, Block } from "./schema";
-import { loadPacks, loadPackForTopic } from "./loader";
+import { loadPacks, loadPackForTopic, loadPacksWithErrors } from "./loader";
 import { mkdir, writeFile, rm, readFile, mkdtemp } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
+import { QueryClient } from "@tanstack/react-query";
 
 describe("schema: Pack", () => {
   it("parses the real projectile pack", async () => {
@@ -299,6 +300,89 @@ describe("loader: malformed packs are skipped, never thrown", () => {
       expect(
         result.packs.some((p) => p.packId === "phy.s2.motion.projectile"),
       ).toBe(true);
+    } finally {
+      delete process.env.CBL_CONTENT_DIR;
+      await rm(tmp, { recursive: true, force: true });
+    }
+  });
+});
+
+// W7: the admin-facing loader. `loadPacksWithErrors` re-exposes the loader's
+// `skipped` array under the name `errors` so the AdminPanel can surface
+// invalid packs in its log. The behaviour is identical to `loadPacksCached`
+// — only the returned field name changes — so these tests assert both that a
+// malformed pack lands in `errors` (not `packs`) and that valid packs survive.
+describe("loadPacksWithErrors (W7 admin loader)", () => {
+  it("returns { packs, errors } with a malformed pack in errors, not packs", async () => {
+    const tmp = await mkdtemp(join(tmpdir(), "cbclab-admin-"));
+
+    // A valid pack alongside the broken one, so `packs` isn't empty.
+    const realPackSrc = join(
+      import.meta.dirname,
+      "..",
+      "..",
+      "content",
+      "physics",
+      "s2-projectile",
+      "pack.json",
+    );
+    const realPack = await readFile(realPackSrc, "utf-8");
+    await mkdir(join(tmp, "physics", "s2-projectile"), { recursive: true });
+    await writeFile(join(tmp, "physics", "s2-projectile", "pack.json"), realPack);
+
+    // Malformed: `version` is a string, not a number.
+    await mkdir(join(tmp, "z-test-malformed", "broken"), { recursive: true });
+    await writeFile(
+      join(tmp, "z-test-malformed", "broken", "pack.json"),
+      JSON.stringify({
+        packId: "broken",
+        version: "not-a-number",
+        schemaVersion: 1,
+        topics: [],
+      }),
+    );
+
+    process.env.CBL_CONTENT_DIR = tmp;
+    try {
+      const qc = new QueryClient();
+      const { packs, errors } = await loadPacksWithErrors(qc);
+
+      // The broken pack is in `errors`, never in `packs`.
+      expect(errors.length).toBeGreaterThanOrEqual(1);
+      expect(errors.some((e) => e.path.includes("broken"))).toBe(true);
+      expect(packs.some((p) => p.packId === "broken")).toBe(false);
+
+      // The valid pack survives alongside the broken one.
+      expect(packs.some((p) => p.packId === "phy.s2.motion.projectile")).toBe(
+        true,
+      );
+    } finally {
+      delete process.env.CBL_CONTENT_DIR;
+      await rm(tmp, { recursive: true, force: true });
+    }
+  });
+
+  it("returns empty errors when all packs validate", async () => {
+    const tmp = await mkdtemp(join(tmpdir(), "cbclab-admin-clean-"));
+    const realPackSrc = join(
+      import.meta.dirname,
+      "..",
+      "..",
+      "content",
+      "physics",
+      "s2-projectile",
+      "pack.json",
+    );
+    const realPack = await readFile(realPackSrc, "utf-8");
+    await mkdir(join(tmp, "physics", "s2-projectile"), { recursive: true });
+    await writeFile(join(tmp, "physics", "s2-projectile", "pack.json"), realPack);
+
+    process.env.CBL_CONTENT_DIR = tmp;
+    try {
+      const qc = new QueryClient();
+      const { packs, errors } = await loadPacksWithErrors(qc);
+      expect(errors).toEqual([]);
+      expect(packs.length).toBeGreaterThanOrEqual(1);
     } finally {
       delete process.env.CBL_CONTENT_DIR;
       await rm(tmp, { recursive: true, force: true });

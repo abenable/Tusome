@@ -99,15 +99,39 @@ async function loadFromTauri(): Promise<RawFile[]> {
   return invoke<RawFile[]>("read_content_packs");
 }
 
-// Non-Tauri: walk the repo-root content/ (or $CBL_CONTENT_DIR) with node:fs.
-// `@vite-ignore` keeps Vite from trying to externalize the node builtin for
-// the browser build (this branch is dead in the webview — isTauri() is true
-// there — but Vite analyzes it statically).
+// Non-Tauri covers two distinct runtimes that need different content sources:
+//
+//   - `bun test` (Node/Bun): reads `content/` off the filesystem with
+//     `node:fs`. `CBL_CONTENT_DIR` overrides the root so the malformed-pack test
+//     can point at a temp tree.
+//   - `bun run dev` / plain browser: there is no `node:fs` in a browser. Vite's
+//     `import.meta.glob` (eager, `?raw`) bundles every `pack.json` into the
+//     client at build time, so the browser gets content without filesystem
+//     access. This branch never runs under Tauri (isTauri() → the invoke path)
+//     or in `bun test` (the node:fs try succeeds, so the catch is unreached).
+//
+// The glob is statically analyzed by Vite at build time even though it sits in
+// the catch; the JSON it pulls in is small (a few KB of pack text) and is dead
+// in production, where the Rust command reads the seeded writable dir instead.
 async function loadFromRepo(): Promise<RawFile[]> {
-  const fs = await import(/* @vite-ignore */ "node:fs/promises");
-  const out: RawFile[] = [];
-  await walk(repoContentDir(), fs, out);
-  return out;
+  try {
+    const fs = await import(/* @vite-ignore */ "node:fs/promises");
+    const out: RawFile[] = [];
+    await walk(repoContentDir(), fs, out);
+    return out;
+  } catch {
+    return loadFromViteGlob();
+  }
+}
+
+// Browser fallback: Vite bundles these pack.json files into the client.
+function loadFromViteGlob(): RawFile[] {
+  const mods = import.meta.glob("../../content/**/pack.json", {
+    eager: true,
+    query: "?raw",
+    import: "default",
+  }) as Record<string, string>;
+  return Object.entries(mods).map(([path, raw]) => ({ path, raw }));
 }
 
 async function walk(
@@ -162,6 +186,24 @@ export async function loadPacksCached(qc: QueryClient): Promise<LoadResult> {
     queryKey: PACKS_QUERY_KEY,
     queryFn: loadPacks,
   }) as Promise<LoadResult>;
+}
+
+/**
+ * Admin-facing loader (W7): the same packs + skipped list as
+ * `loadPacksCached`, re-exposed under the name `errors` so the admin panel can
+ * surface invalid/skipped packs in its log. No behaviour change — the existing
+ * `skipped` array IS the error list. Kept as a thin wrapper so the admin route
+ * reads cleanly (`errors`) and so the loader's public surface stays stable if
+ * `LoadResult.skipped` ever needs to grow.
+ */
+export async function loadPacksWithErrors(
+  qc: QueryClient,
+): Promise<{
+  packs: PackT[];
+  errors: Array<{ path: string; error: string }>;
+}> {
+  const r = await loadPacksCached(qc);
+  return { packs: r.packs, errors: r.skipped };
 }
 
 // ---------------------------------------------------------------------------
