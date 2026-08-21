@@ -1,4 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router"
+import katex from "katex"
+import "katex/dist/katex.min.css"
 
 import { SUBJECT_LABELS, isSubject, type Subject } from "@/lib/subjects"
 import { type BlockT, type TopicT } from "@/content/schema"
@@ -37,7 +39,7 @@ function TopicView() {
         <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
           Topic not found
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#7a7a7a]">
+        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
           This topic isn’t available yet.
         </p>
       </div>
@@ -49,7 +51,7 @@ function TopicView() {
       <BackLink subject={subject} />
 
       <header className="flex flex-col gap-2">
-        <p className="font-sans text-[14px] uppercase tracking-wide text-[#7a7a7a]">
+        <p className="font-sans text-[14px] uppercase tracking-wide text-[#666666]">
           {SUBJECT_LABELS[subject as Subject]} · {topic.level} · {topic.strand}
         </p>
         <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
@@ -86,13 +88,37 @@ function TopicView() {
             )
           }
           if (block.type === "equation") {
-            const expr = block.latex ?? block.expr ?? ""
+            // `latex` → typeset with KaTeX; `expr` → plain readable math.
+            //
+            // KaTeX's output HTML is generated from a trusted pack math string,
+            // not arbitrary pack HTML — KaTeX only emits math markup (no
+            // script/links), and `throwOnError: false` renders bad TeX in red
+            // rather than throwing. This is the standard safe pattern for math
+            // typesetting; it is distinct from doc 07's "never
+            // dangerouslySetInnerHTML pack HTML" rule, which is about author
+            // content, not the math renderer.
+            if (block.latex) {
+              const html = katex.renderToString(block.latex, {
+                displayMode: true,
+                throwOnError: false,
+                output: "htmlAndMathml",
+              })
+              return (
+                <div
+                  key={i}
+                  className="mx-auto flex max-w-fit justify-center overflow-x-auto rounded-[8px] bg-[#f5f5f7] px-6 py-4 text-[#1d1d1f]"
+                  aria-label="equation"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              )
+            }
             return (
               <pre
                 key={i}
-                className="overflow-x-auto rounded-[8px] bg-[#f5f5f7] px-4 py-3 font-sans text-[17px] text-[#1d1d1f]"
+                className="mx-auto max-w-fit overflow-x-auto rounded-[8px] bg-[#f5f5f7] px-6 py-4 font-sans text-[19px] tracking-tight text-[#1d1d1f]"
+                aria-label="equation"
               >
-                {expr}
+                {block.expr ?? ""}
               </pre>
             )
           }
@@ -100,7 +126,7 @@ function TopicView() {
           return (
             <div
               key={i}
-              className="rounded-[8px] border border-hairline bg-[#f5f5f7] px-4 py-8 text-center font-sans text-[14px] text-[#7a7a7a]"
+              className="rounded-[8px] border border-hairline bg-[#f5f5f7] px-4 py-8 text-center font-sans text-[14px] text-[#666666]"
             >
               [image: {block.alt}]
             </div>
@@ -121,7 +147,7 @@ function TopicView() {
             params={(topic.sim.params as Record<string, number>) ?? {}}
           />
           {topic.sim.caption ? (
-            <p className="font-sans text-[14px] text-[#7a7a7a]">
+            <p className="font-sans text-[14px] text-[#666666]">
               {topic.sim.caption}
             </p>
           ) : null}
