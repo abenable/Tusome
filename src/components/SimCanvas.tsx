@@ -4,6 +4,7 @@ import { getSim, type SimState } from "@/sims"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
+import { simReadoutLines } from "@/lib/sim-readout"
 
 // Fixed physics timestep. The accumulator drains in FIXED_DT-sized chunks so the
 // physics is deterministic regardless of render rate; a slow machine drops draw
@@ -59,6 +60,39 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
   const [sliderValues, setSliderValues] = React.useState<Record<string, number>>(
     {},
   )
+
+  // ── Screen-reader DOM readout (W8 a11y). ───────────────────────────────
+  // The canvas paints telemetry as pixels — invisible to the accessibility
+  // tree. This readout mirrors the sim's current CONTROL values (the launch
+  // configuration: speed/angle/gravity for the projectile) as DOM text in an
+  // aria-live region, so a screen-reader user hears the configuration.
+  //
+  // Throttling: stateRef changes 60× a second, but re-rendering React every
+  // frame would defeat the whole point of keeping sim state in a ref. So a
+  // ~200ms interval snapshots stateRef.current into React state — five
+  // updates/second is enough for a human-readable config readout and keeps
+  // the screen-reader announcement cadence sane (aria-live regions blurt on
+  // every text change; 60×/s would be unusable). The interval reads the ref,
+  // never the rAF loop, so the loop is untouched. Cleared on unmount.
+  //
+  // The readout is driven by `simReadoutLines(module, state)`: control values
+  // (launch params) plus, when the sim implements `telemetry(state)`, its
+  // live in-flight values (projectile exposes height/range/time/speed). Both
+  // come from the module generically — no sim-specific knowledge here.
+  const [readoutLines, setReadoutLines] = React.useState<
+    Array<{ label: string; value: string }>
+  >([])
+  React.useEffect(() => {
+    if (!module) return
+    // Seed the readout immediately so the region isn't empty on first paint.
+    setReadoutLines(simReadoutLines(module, stateRef.current ?? {}))
+    const id = window.setInterval(() => {
+      if (module) {
+        setReadoutLines(simReadoutLines(module, stateRef.current ?? {}))
+      }
+    }, 200)
+    return () => window.clearInterval(id)
+  }, [module])
 
   // Draw the current state once. Reads refs only, so it's stable across frames
   // apart from the `module` dependency. Called as a method on `module` so
@@ -184,7 +218,7 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
         <p className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
           Simulation unavailable
         </p>
-        <p className="font-sans text-[17px] leading-relaxed text-[#7a7a7a]">
+        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
           The simulation &ldquo;{simId}&rdquo; isn&rsquo;t installed. Ask your
           teacher to update the content packs.
         </p>
@@ -232,6 +266,23 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
         />
       </div>
 
+      {/* Screen-reader DOM readout (W8 a11y). The canvas paints telemetry as
+          pixels; this region mirrors the sim's current CONTROL values (the
+          launch configuration) as text for assistive tech. Visually hidden —
+          the on-canvas readout + the slider value displays already show the
+          numbers to sighted users, so a visible duplicate would be noise.
+          aria-live="polite" announces updates without interrupting. */}
+      <div
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+      >
+        {readoutLines.length > 0
+          ? readoutLines.map((l) => `${l.label}: ${l.value}`).join(", ")
+          : ""}
+      </div>
+
       <div className="flex flex-col gap-4">
         {/* Transport controls. Pills per DESIGN.md; 44px min touch target
             (08-hardening-and-pilot.md). Action Blue is the single accent. */}
@@ -274,7 +325,7 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
                   >
                     {control.label}
                   </Label>
-                  <span className="font-sans text-[14px] tabular-nums text-[#7a7a7a]">
+                  <span className="font-sans text-[14px] tabular-nums text-[#666666]">
                     {val}
                   </span>
                 </div>

@@ -17,6 +17,14 @@ export interface SimModule {
   /** Draw current state. No physics. */
   draw(ctx: CanvasRenderingContext2D, state: SimState, w: number, h: number): void
   reset(params: Record<string, number>): SimState
+  /**
+   * Live in-flight telemetry for the screen-reader / DOM readout — the values
+   * that change every step but aren't slider `controls` (e.g. projectile height,
+   * range, time, speed). Optional: a sim with no dynamic readout leaves it off
+   * and the DOM readout shows controls only. Returning numbers (not pre-formatted
+   * strings) lets the readout apply consistent formatting and units. Pure.
+   */
+  telemetry?: (state: SimState) => Array<{ label: string; value: number; unit?: string }>
 }
 
 /** id -> module registry. Populated in Phase 1 (04-vertical-slice.md). */

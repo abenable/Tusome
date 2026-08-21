@@ -77,6 +77,21 @@ export const projectile: SimModule = {
     // that does nothing is a worse UX than no knob.
   ],
 
+  // Live in-flight values for the screen-reader / DOM readout. These change
+  // every step but aren't slider `controls` — they're what the on-canvas
+  // readout paints (height/range/time) plus the current speed magnitude, so a
+  // screen-reader user gets the same live information a sighted user does.
+  telemetry(state: SimState): Array<{ label: string; value: number; unit?: string }> {
+    const s = fromState(state)
+    const speed = Math.sqrt(s.vx * s.vx + s.vy * s.vy)
+    return [
+      { label: 'Height', value: s.y, unit: 'm' },
+      { label: 'Range', value: s.x, unit: 'm' },
+      { label: 'Time', value: s.t, unit: 's' },
+      { label: 'Speed', value: speed, unit: 'm/s' },
+    ]
+  },
+
   reset(params: Record<string, number>): SimState {
     const speed = params.speed ?? this.defaults.speed
     const angleDeg = params.angle ?? this.defaults.angle

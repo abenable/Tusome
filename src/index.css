@@ -7,6 +7,11 @@
 @theme inline {
     --font-heading: 'SF Pro Display', system-ui, -apple-system, sans-serif;
     --font-sans: 'SF Pro Text', system-ui, -apple-system, sans-serif;
+    /* DESIGN.md hairline = #e0e0e0. Without this token the `border-hairline`
+       Tailwind utility falls back to currentColor, which made cards render a
+       dark 1px border across ~15 components. Defining it here fixes that
+       codebase-wide visual bug without touching component code. */
+    --color-hairline: #e0e0e0;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,6 +52,15 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* ink-muted-48 contrast (resolved)
+ *
+ * DESIGN.md `ink-muted-48` (#7a7a7a) measured ≈4.29:1 against white — below
+ * WCAG AA 4.5:1 for normal text. Bumped to #666666 (≈5.74:1, passes AA) across
+ * all call sites. This deviates from DESIGN.md's literal token; update
+ * DESIGN.md's `ink-muted-48` to #666666 to keep it the source of truth.
+ * Re-check on a real projector at Gate 3 — muted text at the back of a room
+ * is the case that actually matters.
+ */
 :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -126,4 +140,43 @@
   html {
     @apply font-sans;
     }
+  /* Visible focus ring for the hand-rolled <Link>/<button> elements across
+     the app (route back-links, profile tiles, table cells, admin controls).
+     shadcn Button/Input/Slider/Dialog/Select/Tabs all carry a `data-slot`
+     attribute and handle their own focus via cva `focus-visible:ring-*`
+     utilities; `:not([data-slot])` excludes every one of them so the two
+     focus styles don't stack into a doubled ring+outline. Uses DESIGN.md
+     focus blue #0071e3. A missing focus ring was the main W8 keyboard-nav
+     gap; a global rule fixes every current + future custom control without
+     per-element churn. */
+  a:not([data-slot]):focus-visible,
+  button:not([data-slot]):focus-visible {
+    outline: 2px solid #0071e3;
+    outline-offset: 2px;
+  }
+}
+
+/* prefers-reduced-motion — UI chrome only (W8 a11y).
+ *
+ * Collapses every CSS transition/animation to an instantaneous change so a
+ * user who prefers reduced motion doesn't see the active:scale-95 press,
+ * the hover colour fades, or any shadcn/Base UI panel transitions. The ~0ms
+ * (not 0) duration keeps the active-press transform as instant feedback
+ * without a smooth tween.
+ *
+ * IMPORTANT: this does NOT affect the simulations. Sim motion is JS
+ * requestAnimationFrame driving a Canvas2D draw loop (see SimCanvas.tsx) —
+ * it is the CONTENT, not UI chrome, and is intentionally not gated here. A
+ * paused sim is already controllable via the Pause button; reducing its
+ * motion would defeat the purpose of the sim. This rule only touches CSS
+ * transitions/animations on DOM elements. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
