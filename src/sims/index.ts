@@ -1,5 +1,11 @@
+// A sim's state is a string-keyed bag of numbers, arrays of numbers, or a
+// trail of [x, y] pairs. `step` must not mutate the state it is given; it
+// returns a new state object. Widening from `number` only → `SimValue` is what
+// lets a sim carry a trail without leaving the registry-facing interface.
+export type SimValue = number | number[] | [number, number][]
+
 export interface SimState {
-  [key: string]: number
+  [key: string]: SimValue
 }
 
 export interface SimModule {
@@ -19,3 +25,6 @@ export const sims: Record<string, SimModule> = {}
 export function getSim(id: string): SimModule | undefined {
   return sims[id]
 }
+
+import { projectile } from './projectile'
+sims['projectile'] = projectile
