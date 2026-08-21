@@ -59,16 +59,27 @@ pub fn run() {
             Builder::default()
                 .add_migrations(
                     "sqlite:cbclab.db",
-                    vec![Migration {
-                        version: 1,
-                        description: "init",
-                        sql: include_str!("../migrations/001_init.sql"),
-                        kind: MigrationKind::Up,
-                    }],
+                    vec![
+                        Migration {
+                            version: 1,
+                            description: "init",
+                            sql: include_str!("../migrations/001_init.sql"),
+                            kind: MigrationKind::Up,
+                        },
+                        Migration {
+                            version: 2,
+                            description: "settings_and_seed",
+                            sql: include_str!("../migrations/002_settings_and_seed.sql"),
+                            kind: MigrationKind::Up,
+                        },
+                    ],
                 )
                 .build(),
         )
-        .invoke_handler(tauri::generate_handler![read_content_packs])
+        .invoke_handler(tauri::generate_handler![
+            read_content_packs,
+            get_content_manifest_version
+        ])
         .setup(|app| {
             seed_content(&app.handle());
             Ok(())
@@ -141,6 +152,46 @@ fn walk_packs(dir: &Path, out: &mut Vec<(PathBuf, String)>) {
                 out.push((path, raw));
             }
         }
+    }
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// get_content_manifest_version — read the content manifest's `version` field.
+//
+// Reads `<app_data_dir>/cbclab/content/manifest.json` (the same writable
+// content dir `read_content_packs` reads from), parses it as JSON, and returns
+// the `version` field as a string. On ANY error — file missing, unreadable,
+// not valid JSON, or no `version` field — returns `"unknown"`. Never panics:
+// a school machine with no manifest (first run, wiped dir) must still show
+// "unknown" in the AdminPanel About section, not a crash.
+//
+// This is the single Rust command the frontend's About panel needs; it's kept
+// here rather than the JS plugin-fs so the read path mirrors the production
+// content-read path (no fs capability-scope to configure).
+// ──────────────────────────────────────────────────────────────────────────
+#[tauri::command]
+fn get_content_manifest_version(app: tauri::AppHandle) -> String {
+    let paths = app.path();
+    let manifest = match paths.app_data_dir() {
+        Ok(data_dir) => data_dir.join("cbclab").join("content").join("manifest.json"),
+        Err(_) => return "unknown".to_string(),
+    };
+
+    let raw = match fs::read_to_string(&manifest) {
+        Ok(s) => s,
+        Err(_) => return "unknown".to_string(),
+    };
+
+    let parsed: serde_json::Value = match serde_json::from_str(&raw) {
+        Ok(v) => v,
+        Err(_) => return "unknown".to_string(),
+    };
+
+    match parsed.get("version") {
+        Some(serde_json::Value::String(v)) => v.clone(),
+        // A numeric version (e.g. 2) is stringified so the panel shows "2".
+        Some(serde_json::Value::Number(n)) => n.to_string(),
+        _ => "unknown".to_string(),
     }
 }
 
