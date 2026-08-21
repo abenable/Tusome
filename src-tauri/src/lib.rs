@@ -41,6 +41,8 @@ use serde::Serialize;
 use tauri::Manager;
 use tauri_plugin_sql::{Builder, Migration, MigrationKind};
 
+mod updates;
+
 #[derive(Serialize)]
 struct ContentPackFile {
     path: String,
@@ -72,16 +74,35 @@ pub fn run() {
                             sql: include_str!("../migrations/002_settings_and_seed.sql"),
                             kind: MigrationKind::Up,
                         },
+                        Migration {
+                            version: 3,
+                            description: "update_log",
+                            sql: include_str!("../migrations/003_update_log.sql"),
+                            kind: MigrationKind::Up,
+                        },
                     ],
                 )
                 .build(),
         )
         .invoke_handler(tauri::generate_handler![
             read_content_packs,
-            get_content_manifest_version
+            get_content_manifest_version,
+            updates::scan_and_apply_usb_updates,
+            updates::apply_online_content_bundle,
+            updates::check_and_stage_app_update,
+            updates::write_text_file,
+            updates::append_update_log,
+            updates::get_update_log
         ])
         .setup(|app| {
             seed_content(&app.handle());
+            // Silent startup USB scan (docs/plan/07): never blocks launch, never
+            // shows the student anything. Spawned on the async runtime so it can
+            // await the sql pool for log persistence without holding up setup.
+            let handle = app.handle().clone();
+            tauri::async_runtime::spawn(async move {
+                let _ = updates::run_usb_scan(&handle).await;
+            });
             Ok(())
         })
         .run(tauri::generate_context!())
@@ -156,14 +177,15 @@ fn walk_packs(dir: &Path, out: &mut Vec<(PathBuf, String)>) {
 }
 
 // ──────────────────────────────────────────────────────────────────────────
-// get_content_manifest_version — read the content manifest's `version` field.
+// get_content_manifest_version — read the content manifest's version field.
 //
 // Reads `<app_data_dir>/cbclab/content/manifest.json` (the same writable
 // content dir `read_content_packs` reads from), parses it as JSON, and returns
-// the `version` field as a string. On ANY error — file missing, unreadable,
-// not valid JSON, or no `version` field — returns `"unknown"`. Never panics:
-// a school machine with no manifest (first run, wiped dir) must still show
-// "unknown" in the AdminPanel About section, not a crash.
+// the `bundleVersion` field as a string (Phase 7 manifest shape, camelCase),
+// falling back to a legacy `version` field, else `"unknown"`. On ANY error —
+// file missing, unreadable, not valid JSON — returns `"unknown"`. Never
+// panics: a school machine with no manifest (first run, wiped dir) must still
+// show "unknown" in the AdminPanel About section, not a crash.
 //
 // This is the single Rust command the frontend's About panel needs; it's kept
 // here rather than the JS plugin-fs so the read path mirrors the production
@@ -173,7 +195,10 @@ fn walk_packs(dir: &Path, out: &mut Vec<(PathBuf, String)>) {
 fn get_content_manifest_version(app: tauri::AppHandle) -> String {
     let paths = app.path();
     let manifest = match paths.app_data_dir() {
-        Ok(data_dir) => data_dir.join("cbclab").join("content").join("manifest.json"),
+        Ok(data_dir) => data_dir
+            .join("cbclab")
+            .join("content")
+            .join("manifest.json"),
         Err(_) => return "unknown".to_string(),
     };
 
@@ -187,6 +212,16 @@ fn get_content_manifest_version(app: tauri::AppHandle) -> String {
         Err(_) => return "unknown".to_string(),
     };
 
+    // Phase 7 manifest uses `bundleVersion` (camelCase). Fall back to a legacy
+    // `version` for any manifest written before this work unit.
+    if let Some(v) = parsed.get("bundleVersion") {
+        if let Some(s) = v.as_str() {
+            return s.to_string();
+        }
+        if let Some(n) = v.as_number() {
+            return n.to_string();
+        }
+    }
     match parsed.get("version") {
         Some(serde_json::Value::String(v)) => v.clone(),
         // A numeric version (e.g. 2) is stringified so the panel shows "2".
@@ -236,6 +271,19 @@ fn seed_content(app: &tauri::AppHandle) {
             source.display(),
             target.display()
         );
+        return;
+    }
+    // Phase 7: materialise the content manifest over the just-seeded packs so
+    // the USB update channel has a local baseline to diff against. Only written
+    // when the manifest is missing (mirrors the "don't clobber populated dir"
+    // rule above — a USB-delivered manifest must never be overwritten by seed).
+    let manifest_path = target.join("manifest.json");
+    if !manifest_path.exists() {
+        if let Some(bundle) = updates::build_manifest_for_dir(&target) {
+            if let Err(e) = updates::write_manifest(&target, &bundle) {
+                eprintln!("[seed] failed to write content manifest: {e}");
+            }
+        }
     }
 }
 

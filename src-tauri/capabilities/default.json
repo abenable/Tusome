@@ -8,7 +8,6 @@
   "permissions": [
     "core:default",
     "sql:default",
-    "fs:default",
     "dialog:default",
     "os:default",
     "process:default",

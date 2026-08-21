@@ -10,6 +10,13 @@ dist-ssr
 # Tauri
 src-tauri/target
 
+# CBCLab signing keypair — the minisign keypair lives in ~/.cbclab (outside the
+# repo), but these patterns are defensive so no key ever lands in a commit.
+*.key
+*.key.pub
+*.key.pw
+dev-keys/
+
 # Generated router tree — never edited, never committed
 src/routeTree.gen.ts
 

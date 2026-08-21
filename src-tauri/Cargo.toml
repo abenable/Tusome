@@ -26,7 +26,28 @@ tauri-plugin-fs = "2.5.1"
 tauri-plugin-dialog = "2.7.2"
 tauri-plugin-os = "2.3.2"
 tauri-plugin-process = "2.3.1"
+# Update channel core (docs/plan/07). All small pure-Rust crates so the
+# installer stays <=20MB (docs/plan/08). `minisign-verify` is the zero-dep
+# trust root for content-bundle manifest signatures; `sha2` does the
+# deterministic per-pack directory hash; `zip` unpacks the online content
+# channel's untrusted archive (the manifest signature inside is the trust
+# root, not the archive). `sqlx` is pinned to 0.8 to match the version
+# tauri-plugin-sql 2.4.0 compiles against, so we can reuse its managed
+# connection pool from Rust (see append_update_log / get_update_log) —
+# it is already in the dep tree transitively, so this adds no new compile.
+minisign-verify = "0.2.5"
+sha2 = "0.10"
+zip = "0.6"
+sqlx = { version = "0.8", default-features = false, features = ["sqlite", "runtime-tokio"] }
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
 tauri-plugin-updater = "2.10.1"
+
+[dev-dependencies]
+# Test-only signing: `minisign` mints an in-memory keypair so unit tests
+# produce valid minisign signatures WITHOUT any on-disk private key. The prod
+# verify path (`minisign-verify`) never depends on this. `tempfile` gives the
+# tests throwaway content dirs and bundle roots.
+minisign = "0.9.1"
+tempfile = "3"
 
