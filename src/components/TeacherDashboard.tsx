@@ -12,8 +12,9 @@
 //     the persisted seed.
 //   - "Export class results to CSV": builds the same grid as a CSV (UTF-8 BOM,
 //     CRLF, all fields quoted — opens clean in Excel) via `toCsv`, then uses
-//     the Tauri save dialog + fs writeTextFile. Guarded so it no-ops cleanly
-//     outside Tauri (bun test / plain browser).
+//     the Tauri save dialog + a Rust `write_text_file` command (no broad fs
+//     scope). Guarded so it no-ops cleanly outside Tauri (bun test / plain
+//     browser).
 //
 // DESIGN.md: 17px body, single Action Blue #0066cc, pill CTAs, ≥44px targets,
 // no shadows on chrome, no gradients, no second brand color. The whole thing
@@ -356,7 +357,7 @@ function ExportBar({
     }
     try {
       const { save } = await import("@tauri-apps/plugin-dialog");
-      const { writeTextFile } = await import("@tauri-apps/plugin-fs");
+      const { invoke } = await import("@tauri-apps/api/core");
       const path = await save({
         defaultPath: "cbclab-class-results.csv",
         filters: [{ name: "CSV", extensions: ["csv"] }],
@@ -367,7 +368,9 @@ function ExportBar({
         onDone("cancelled");
         return;
       }
-      await writeTextFile(path, csv);
+      // File write via the Rust `write_text_file` command (no broad fs scope;
+      // the Rust side validates the user-chosen path against its allowed dirs).
+      await invoke("write_text_file", { path, contents: csv });
       setStatus("Saved class results.");
       onDone("saved");
     } catch (err) {

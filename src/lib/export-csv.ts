@@ -87,7 +87,7 @@ export async function exportClassResultsCsv(
   }
   try {
     const { save } = await import("@tauri-apps/plugin-dialog");
-    const { writeTextFile } = await import("@tauri-apps/plugin-fs");
+    const { invoke } = await import("@tauri-apps/api/core");
     const path = await save({
       defaultPath: "cbclab-class-results.csv",
       filters: [{ name: "CSV", extensions: ["csv"] }],
@@ -95,7 +95,11 @@ export async function exportClassResultsCsv(
     if (path === null) {
       return { message: null, outcome: "cancelled" };
     }
-    await writeTextFile(path, csv);
+    // File write goes through the Rust `write_text_file` command (doc 07: grant
+    // fs scope only to the app data dir and removable drives — the webview
+    // doesn't get broad filesystem access). The path the save dialog returns is
+    // user-chosen, which the Rust side validates against its scope.
+    await invoke("write_text_file", { path, contents: csv });
     return { message: "Saved class results.", outcome: "saved" };
   } catch (err) {
     return {
