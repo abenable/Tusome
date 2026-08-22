@@ -12,7 +12,7 @@
 
 import { type JSX } from "react";
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, GraduationCap } from "lucide-react";
 
 import { PinGate } from "@/components/PinGate";
 import { AdminNav } from "@/components/admin/AdminNav";
@@ -36,8 +36,8 @@ function SettingsLayout(): JSX.Element {
           Back
         </Link>
         <Link to="/" className="flex items-center gap-[10px]" title="CBCLab">
-          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand font-heading text-[16px] font-extrabold text-white">
-            CB
+          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
+            <GraduationCap size={18} aria-hidden />
           </span>
           <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
             CBCLab

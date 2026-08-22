@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Dna,
   FlaskConical,
+  GraduationCap,
   Home,
   LayoutDashboard,
   Sigma,
@@ -116,8 +117,8 @@ function Sidebar({
           className="mb-7 flex items-center gap-[10px] px-[6px]"
           title={collapsed ? "CBCLab" : undefined}
         >
-          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand font-heading text-[16px] font-extrabold text-white">
-            CB
+          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
+            <GraduationCap size={18} aria-hidden />
           </span>
           {!collapsed && (
             <span className="whitespace-nowrap font-heading text-[20px] font-extrabold tracking-tight text-white">
