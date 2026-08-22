@@ -9,13 +9,15 @@
 //     never load, and its licence is unknown. The hero reads fine without it.
 //   - Icons come from lucide-react rather than unpkg.com/lucide-static — same
 //     glyphs, already a dependency, works with no network.
-//   - The featured sim is the first installed topic that actually has one.
+//   - The featured sim is picked at random from installed topics that have
+//     one (memoized on the topic list, so it doesn't reshuffle on every
+//     re-render — just on each fresh visit to Home).
 //
 // The mock's weekly leaderboard and quiz shortcuts are dropped along with the
 // rest of the quiz engine (schema, DB tables, dashboards) — the app isn't
 // ready to ship quiz content yet.
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { createFileRoute, Link } from "@tanstack/react-router"
 import { Play } from "lucide-react"
 
@@ -60,6 +62,15 @@ function Home() {
   const topics: TopicT[] = packs.flatMap((p) => p.topics)
   const name = isGuest || student === null ? "there" : student.display_name
 
+  const withSim = topics.filter((t) => t.sim)
+  const featured = useMemo(
+    () => (withSim.length === 0 ? undefined : withSim[Math.floor(Math.random() * withSim.length)]),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally
+    // not depending on `withSim` (a new array every render): re-picking only
+    // when the topic count changes keeps the choice stable across re-renders.
+    [withSim.length],
+  )
+
   if (topics.length === 0) {
     return (
       <EmptyState
@@ -80,7 +91,6 @@ function Home() {
     progress,
   )
   const continueTarget = topics.find((t) => t.id === continueId) ?? topics[0]
-  const featured = topics.find((t) => t.sim)
 
   return (
     <div className="flex flex-col gap-12">
