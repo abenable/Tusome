@@ -1,9 +1,11 @@
 // Reusable PIN gate — admin speed-bump only (07-updates-and-security.md).
 //
-// This is NOT student auth (00-decisions §4: no student passwords). It guards
-// admin-only surfaces (here: "Manage profiles"; later W6/W7: updates, export,
-// wipe). The threat model is a curious student on a shared machine, not an
-// offline cracking rig — see the hashing note in src/db/index.ts.
+// This is NOT student auth — student login now has its own per-account
+// password (ProfilePicker + src/lib/student-context.tsx verifyPassword),
+// separate from this single shared admin PIN. This gate guards admin-only
+// surfaces (updates, export, wipe, the settings area). The threat model is a
+// curious student on a shared machine, not an offline cracking rig — see the
+// hashing note in src/db/index.ts (the same hashPin/verifyPin now backs both).
 //
 // API (render-prop): the children of <PinGate> is a function
 // `(unlocked: boolean) => ReactNode`. When unlocked is false, PinGate renders
@@ -19,7 +21,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { getSetting, hashPin, setSetting, verifyPin } from "@/db/index";
-import { Input } from "@/components/ui/input";
+import { PasswordField } from "@/components/PasswordField";
 
 const MAX_ATTEMPTS = 3;
 const COOLDOWN_MS = 30_000;
@@ -161,45 +163,41 @@ function SetPinForm({
   return (
     <form
       onSubmit={submit}
-      className="flex flex-col gap-3"
+      className="mx-auto flex w-full max-w-[400px] flex-col items-center gap-3 text-center"
       aria-label={ariaLabel ?? "Set admin PIN"}
     >
-      <p className="font-sans text-[17px] leading-relaxed text-ink">
+      <p className="font-sans text-[19px] leading-relaxed text-ink">
         Set an admin PIN. A teacher uses this to manage profiles and updates.
       </p>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
+      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
         New PIN
-        <Input
-          type="password"
-          inputMode="numeric"
-          autoComplete="new-password"
-          autoFocus
+        <PasswordField
           value={pin}
-          onChange={(e) => setPin(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
+          onChange={setPin}
+          autoComplete="new-password"
+          inputMode="numeric"
+          autoFocus
         />
       </label>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
+      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
         Confirm PIN
-        <Input
-          ref={confirmRef}
-          type="password"
-          inputMode="numeric"
-          autoComplete="new-password"
+        <PasswordField
           value={confirm}
-          onChange={(e) => setConfirm(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
+          onChange={setConfirm}
+          autoComplete="new-password"
+          inputMode="numeric"
+          inputRef={confirmRef}
         />
       </label>
       {error ? (
-        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
+        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
       <button
         type="submit"
         disabled={busy}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
+        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
       >
         Set PIN
       </button>
@@ -256,39 +254,34 @@ function VerifyPinForm({
   return (
     <form
       onSubmit={submit}
-      className="flex flex-col gap-3"
+      className="mx-auto flex w-full max-w-[400px] flex-col items-center gap-3 text-center"
       aria-label={ariaLabel ?? "Admin PIN"}
     >
-      <p className="font-sans text-[17px] leading-relaxed text-ink">
-        Enter the admin PIN to continue.
-      </p>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
+      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
         Admin PIN
-        <Input
-          type="password"
-          inputMode="numeric"
+        <PasswordField
+          value={pin}
+          onChange={setPin}
           autoComplete="current-password"
+          inputMode="numeric"
           autoFocus
           disabled={cooling}
-          value={pin}
-          onChange={(e) => setPin(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink disabled:opacity-50"
         />
       </label>
       {error && !cooling ? (
-        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
+        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
       {cooling ? (
-        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
+        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
           Too many tries. Try again in {seconds}s.
         </p>
       ) : null}
       <button
         type="submit"
         disabled={busy || cooling}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
       >
         Unlock
       </button>

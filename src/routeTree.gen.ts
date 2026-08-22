@@ -14,8 +14,11 @@ import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SubjectsRouteImport } from './routes/subjects'
 import { Route as SubjectIndexRouteImport } from './routes/$subject/index'
+import { Route as SettingsIndexRouteImport } from './routes/settings/index'
+import { Route as SettingsStudentsRouteImport } from './routes/settings/students'
+import { Route as SettingsSubjectsRouteImport } from './routes/settings/subjects'
+import { Route as SettingsSystemRouteImport } from './routes/settings/system'
 import { Route as SubjectTopicIdIndexRouteImport } from './routes/$subject/$topicId/index'
-import { Route as SubjectTopicIdQuizRouteImport } from './routes/$subject/$topicId/quiz'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,43 +45,66 @@ const SubjectIndexRoute = SubjectIndexRouteImport.update({
   path: '/$subject/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SettingsIndexRoute = SettingsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SettingsRoute,
+} as any)
+const SettingsStudentsRoute = SettingsStudentsRouteImport.update({
+  id: '/students',
+  path: '/students',
+  getParentRoute: () => SettingsRoute,
+} as any)
+const SettingsSubjectsRoute = SettingsSubjectsRouteImport.update({
+  id: '/subjects',
+  path: '/subjects',
+  getParentRoute: () => SettingsRoute,
+} as any)
+const SettingsSystemRoute = SettingsSystemRouteImport.update({
+  id: '/system',
+  path: '/system',
+  getParentRoute: () => SettingsRoute,
+} as any)
 const SubjectTopicIdIndexRoute = SubjectTopicIdIndexRouteImport.update({
   id: '/$subject/$topicId/',
   path: '/$subject/$topicId/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SubjectTopicIdQuizRoute = SubjectTopicIdQuizRouteImport.update({
-  id: '/$subject/$topicId/quiz',
-  path: '/$subject/$topicId/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
-  '/settings': typeof SettingsRoute
+  '/settings': typeof SettingsRouteWithChildren
   '/subjects': typeof SubjectsRoute
+  '/settings/students': typeof SettingsStudentsRoute
+  '/settings/subjects': typeof SettingsSubjectsRoute
+  '/settings/system': typeof SettingsSystemRoute
   '/$subject/': typeof SubjectIndexRoute
-  '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
+  '/settings/': typeof SettingsIndexRoute
   '/$subject/$topicId/': typeof SubjectTopicIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
-  '/settings': typeof SettingsRoute
   '/subjects': typeof SubjectsRoute
+  '/settings/students': typeof SettingsStudentsRoute
+  '/settings/subjects': typeof SettingsSubjectsRoute
+  '/settings/system': typeof SettingsSystemRoute
   '/$subject': typeof SubjectIndexRoute
-  '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
+  '/settings': typeof SettingsIndexRoute
   '/$subject/$topicId': typeof SubjectTopicIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
-  '/settings': typeof SettingsRoute
+  '/settings': typeof SettingsRouteWithChildren
   '/subjects': typeof SubjectsRoute
+  '/settings/students': typeof SettingsStudentsRoute
+  '/settings/subjects': typeof SettingsSubjectsRoute
+  '/settings/system': typeof SettingsSystemRoute
   '/$subject/': typeof SubjectIndexRoute
-  '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
+  '/settings/': typeof SettingsIndexRoute
   '/$subject/$topicId/': typeof SubjectTopicIdIndexRoute
 }
 export interface FileRouteTypes {
@@ -88,17 +114,22 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/settings'
     | '/subjects'
+    | '/settings/students'
+    | '/settings/subjects'
+    | '/settings/system'
     | '/$subject/'
-    | '/$subject/$topicId/quiz'
+    | '/settings/'
     | '/$subject/$topicId/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/dashboard'
-    | '/settings'
     | '/subjects'
+    | '/settings/students'
+    | '/settings/subjects'
+    | '/settings/system'
     | '/$subject'
-    | '/$subject/$topicId/quiz'
+    | '/settings'
     | '/$subject/$topicId'
   id:
     | '__root__'
@@ -106,18 +137,20 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/settings'
     | '/subjects'
+    | '/settings/students'
+    | '/settings/subjects'
+    | '/settings/system'
     | '/$subject/'
-    | '/$subject/$topicId/quiz'
+    | '/settings/'
     | '/$subject/$topicId/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRoute: typeof DashboardRoute
-  SettingsRoute: typeof SettingsRoute
+  SettingsRoute: typeof SettingsRouteWithChildren
   SubjectsRoute: typeof SubjectsRoute
   SubjectIndexRoute: typeof SubjectIndexRoute
-  SubjectTopicIdQuizRoute: typeof SubjectTopicIdQuizRoute
   SubjectTopicIdIndexRoute: typeof SubjectTopicIdIndexRoute
 }
 
@@ -158,6 +191,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubjectIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/settings/': {
+      id: '/settings/'
+      path: '/'
+      fullPath: '/settings/'
+      preLoaderRoute: typeof SettingsIndexRouteImport
+      parentRoute: typeof SettingsRoute
+    }
+    '/settings/students': {
+      id: '/settings/students'
+      path: '/students'
+      fullPath: '/settings/students'
+      preLoaderRoute: typeof SettingsStudentsRouteImport
+      parentRoute: typeof SettingsRoute
+    }
+    '/settings/subjects': {
+      id: '/settings/subjects'
+      path: '/subjects'
+      fullPath: '/settings/subjects'
+      preLoaderRoute: typeof SettingsSubjectsRouteImport
+      parentRoute: typeof SettingsRoute
+    }
+    '/settings/system': {
+      id: '/settings/system'
+      path: '/system'
+      fullPath: '/settings/system'
+      preLoaderRoute: typeof SettingsSystemRouteImport
+      parentRoute: typeof SettingsRoute
+    }
     '/$subject/$topicId/': {
       id: '/$subject/$topicId/'
       path: '/$subject/$topicId'
@@ -165,23 +226,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubjectTopicIdIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$subject/$topicId/quiz': {
-      id: '/$subject/$topicId/quiz'
-      path: '/$subject/$topicId/quiz'
-      fullPath: '/$subject/$topicId/quiz'
-      preLoaderRoute: typeof SubjectTopicIdQuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
+
+interface SettingsRouteChildren {
+  SettingsStudentsRoute: typeof SettingsStudentsRoute
+  SettingsSubjectsRoute: typeof SettingsSubjectsRoute
+  SettingsSystemRoute: typeof SettingsSystemRoute
+  SettingsIndexRoute: typeof SettingsIndexRoute
+}
+
+const SettingsRouteChildren: SettingsRouteChildren = {
+  SettingsStudentsRoute: SettingsStudentsRoute,
+  SettingsSubjectsRoute: SettingsSubjectsRoute,
+  SettingsSystemRoute: SettingsSystemRoute,
+  SettingsIndexRoute: SettingsIndexRoute,
+}
+
+const SettingsRouteWithChildren = SettingsRoute._addFileChildren(
+  SettingsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRoute: DashboardRoute,
-  SettingsRoute: SettingsRoute,
+  SettingsRoute: SettingsRouteWithChildren,
   SubjectsRoute: SubjectsRoute,
   SubjectIndexRoute: SubjectIndexRoute,
-  SubjectTopicIdQuizRoute: SubjectTopicIdQuizRoute,
   SubjectTopicIdIndexRoute: SubjectTopicIdIndexRoute,
 }
 export const routeTree = rootRouteImport

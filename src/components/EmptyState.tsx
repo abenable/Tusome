@@ -22,10 +22,10 @@ export function EmptyState({ title, message, children }: EmptyStateProps) {
       // distinct region, not just a loose stack of paragraphs.
       aria-label={title}
     >
-      <h2 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-ink">
+      <h2 className="font-heading text-[38px] font-semibold leading-tight tracking-tight text-ink">
         {title}
       </h2>
-      <p className="font-sans text-[17px] leading-relaxed text-ink-2">
+      <p className="font-sans text-[19px] leading-relaxed text-ink-2">
         {message}
       </p>
       {children ? <div className="flex flex-col gap-3">{children}</div> : null}

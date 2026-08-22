@@ -148,9 +148,9 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
 
   // ── The rAF loop with a fixed-timestep accumulator. ────────────────────
   // Owns its own `last`/`acc` locals; the cleanup cancels the frame, which
-  // covers route-change unmount (the topic route unmounts when navigating to
-  // the quiz) and the play/pause toggle. `module.step` is called as a method
-  // (bound to `module`) so `this.defaults` works inside projectile.ts.
+  // covers route-change unmount and the play/pause toggle. `module.step` is
+  // called as a method (bound to `module`) so `this.defaults` works inside
+  // projectile.ts.
   React.useEffect(() => {
     if (!module || !playing) return
 
@@ -215,10 +215,10 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
         role="status"
         aria-live="polite"
       >
-        <p className="font-heading text-[21px] font-semibold tracking-tight text-ink">
+        <p className="font-heading text-[24px] font-semibold tracking-tight text-ink">
           Simulation unavailable
         </p>
-        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
+        <p className="font-sans text-[19px] leading-relaxed text-ink-3">
           The simulation &ldquo;{simId}&rdquo; isn&rsquo;t installed. Ask your
           teacher to update the content packs.
         </p>
@@ -291,7 +291,7 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
             type="button"
             onClick={handlePlay}
             disabled={playing}
-            className="min-h-[44px] rounded-[9999px] bg-brand px-6 text-[17px] text-white hover:bg-brand-hover disabled:opacity-50"
+            className="min-h-[44px] rounded-[9999px] bg-brand px-6 text-[19px] text-white hover:bg-brand-hover disabled:opacity-50"
           >
             Play
           </Button>
@@ -299,14 +299,14 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
             type="button"
             onClick={handlePause}
             disabled={!playing}
-            className="min-h-[44px] rounded-[9999px] border border-brand bg-transparent px-6 text-[17px] text-brand hover:bg-brand/5 disabled:opacity-50"
+            className="min-h-[44px] rounded-[9999px] border border-brand bg-transparent px-6 text-[19px] text-brand hover:bg-brand/5 disabled:opacity-50"
           >
             Pause
           </Button>
           <Button
             type="button"
             onClick={handleReset}
-            className="min-h-[44px] rounded-[9999px] bg-surface px-6 text-[17px] text-ink-2 hover:bg-line-soft"
+            className="min-h-[44px] rounded-[9999px] bg-surface px-6 text-[19px] text-ink-2 hover:bg-line-soft"
           >
             Reset
           </Button>
@@ -321,11 +321,11 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
                 <div className="flex items-baseline justify-between gap-3">
                   <Label
                     htmlFor={`sim-${module.id}-${control.key}`}
-                    className="font-sans text-[14px] font-semibold text-ink"
+                    className="font-sans text-[16px] font-semibold text-ink"
                   >
                     {control.label}
                   </Label>
-                  <span className="font-sans text-[14px] tabular-nums text-ink-3">
+                  <span className="font-sans text-[16px] tabular-nums text-ink-3">
                     {val}
                   </span>
                 </div>

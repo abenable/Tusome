@@ -19,8 +19,6 @@ export type TopicStatus = "completed" | "in-progress" | "not-started";
 
 export type TopicProgress = {
   status: TopicStatus;
-  /** Best score as a 0..1 fraction, or null if never attempted. */
-  best: number | null;
 };
 
 export type TopicGroupProps = {
@@ -50,12 +48,12 @@ export function TopicGroup({
 
   return (
     <section className="flex flex-col gap-[14px]" aria-label={heading}>
-      <Heading className="font-sans text-[13px] font-bold uppercase tracking-[.06em] text-ink-3">
+      <Heading className="font-sans text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">
         {heading}
       </Heading>
       <ul className="flex flex-col gap-3">
         {topics.map((topic, i) => {
-          const { status, best } = progressOf(topic.id);
+          const { status } = progressOf(topic.id);
           const isLast = i === topics.length - 1;
           return (
             <li key={topic.id} className="flex gap-4">
@@ -79,7 +77,7 @@ export function TopicGroup({
                     />
                   </span>
                 ) : (
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-line bg-surface font-sans text-[12px] font-extrabold text-ink-3">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-line bg-surface font-sans text-[14px] font-extrabold text-ink-3">
                     {i + 1}
                   </span>
                 )}
@@ -93,13 +91,13 @@ export function TopicGroup({
                   <Link
                     to="/$subject/$topicId"
                     params={{ subject, topicId: topic.id }}
-                    className="font-sans text-[18px] font-bold text-ink hover:text-brand"
+                    className="font-sans text-[20px] font-bold text-ink hover:text-brand"
                   >
                     {topic.title}
                   </Link>
                   <div className="mt-[6px] flex flex-wrap items-center gap-[10px]">
                     <span
-                      className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[12px] font-bold ${
+                      className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[14px] font-bold ${
                         status === "completed"
                           ? `${accent.bg} text-white`
                           : status === "in-progress"
@@ -110,17 +108,12 @@ export function TopicGroup({
                       {status === "completed" ? "✓ " : ""}
                       {BADGE_TEXT[status]}
                     </span>
-                    {best !== null && (
-                      <span className="font-sans text-[13px] font-semibold text-ink-3">
-                        Best: {Math.round(best * 100)}%
-                      </span>
-                    )}
                   </div>
                 </div>
                 <Link
                   to="/$subject/$topicId"
                   params={{ subject, topicId: topic.id }}
-                  className={`inline-flex min-h-[44px] shrink-0 items-center font-sans text-[14px] font-bold ${accent.text} hover:underline`}
+                  className={`inline-flex min-h-[44px] shrink-0 items-center font-sans text-[16px] font-bold ${accent.text} hover:underline`}
                   aria-label={`Open ${topic.title}`}
                 >
                   Open

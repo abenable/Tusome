@@ -6,9 +6,7 @@
 // (Dashboard.dc.html), using the design's own defaults for its explorer props:
 // `heroStyle: "gradient"`, `progressStyle: "rings"`, `tone: "encouraging"`.
 //
-// Data: progress + best scores are read from the DB in an effect (simple, no
-// new deps). `best` is COMPUTED from quiz_attempts by `bestScorePerTopic`
-// (never stored) — see src/db/index.ts for the canonical implementation.
+// Data: progress is read from the DB in an effect (simple, no new deps).
 //
 // Still no comparisons and no other students' data: everything here is the
 // current student's own. The weekly leaderboard the owner asked for lives on
@@ -30,12 +28,7 @@ import {
   SUBJECT_LABELS,
   type Subject,
 } from "@/lib/subjects";
-import {
-  bestScorePerTopic,
-  continueTopic,
-  getProgress,
-  type ProgressRow,
-} from "@/db/index";
+import { continueTopic, getProgress, type ProgressRow } from "@/db/index";
 import { useStudent } from "@/lib/student-context";
 import { EmptyState } from "@/components/EmptyState";
 
@@ -45,9 +38,6 @@ const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
   biology: Dna,
   mathematics: Sigma,
 };
-
-/** A score at or above this counts as the "High scorer" achievement. */
-const HIGH_SCORE_THRESHOLD = 0.8;
 
 export type StudentDashboardProps = {
   studentId: number;
@@ -60,22 +50,17 @@ export function StudentDashboard({
 }: StudentDashboardProps): JSX.Element {
   const { student } = useStudent();
   const [progress, setProgress] = useState<ProgressRow[]>([]);
-  const [best, setBest] = useState<Map<string, number>>(new Map());
 
-  // Kept simple (effect + state): these are DB reads that could be TanStack
+  // Kept simple (effect + state): this is a DB read that could be TanStack
   // Query, but adding a query key here would be the only caller and there's no
   // cache sharing need yet. Cancelled on unmount / studentId change so a stale
   // write can't clobber a new student's view after a fast switch.
   useEffect(() => {
     let cancelled = false;
     void (async () => {
-      const [prog, scores] = await Promise.all([
-        getProgress(studentId),
-        bestScorePerTopic(studentId),
-      ]);
+      const prog = await getProgress(studentId);
       if (cancelled) return;
       setProgress(prog);
-      setBest(new Map(scores.map((s) => [s.topic_id, s.best])));
     })();
     return () => {
       cancelled = true;
@@ -110,6 +95,11 @@ export function StudentDashboard({
     (t) => progressByTopic.get(t.id)?.state === "started",
   );
 
+  // No progress rows at all — a brand-new profile. See the matching note in
+  // routes/index.tsx: send it to the subject picker rather than an arbitrary
+  // first topic.
+  const isNew = progress.length === 0;
+
   const continueId = continueTopic(
     allTopics.map((t) => t.id),
     progress,
@@ -121,30 +111,37 @@ export function StudentDashboard({
 
   return (
     <div className="flex flex-col gap-8">
-      <header className="flex flex-wrap items-end justify-between gap-6">
+      <header className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-3 text-center">
         <div>
-          <h1 className="mb-[6px] font-heading text-[34px] font-extrabold tracking-[-0.02em] text-ink">
+          <h1 className="mb-[6px] font-heading text-[38px] font-extrabold tracking-[-0.02em] text-ink">
             Your progress
           </h1>
-          <p className="font-sans text-[17px] text-ink-2">
+          <p className="font-sans text-[19px] text-ink-2">
             Welcome back, {name}
           </p>
         </div>
-        {continueTopicObj ? (
+        {isNew ? (
+          <Link
+            to="/subjects"
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-[22px] font-sans text-[17px] font-bold text-white transition-colors hover:bg-brand-hover"
+          >
+            Start learning
+          </Link>
+        ) : continueTopicObj ? (
           <Link
             to="/$subject/$topicId"
             params={{
               subject: continueTopicObj.subject,
               topicId: continueTopicObj.id,
             }}
-            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-[22px] font-sans text-[15px] font-bold text-white transition-colors hover:bg-brand-hover"
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-[22px] font-sans text-[17px] font-bold text-white transition-colors hover:bg-brand-hover"
           >
             Continue learning
           </Link>
         ) : null}
       </header>
 
-      <dl className="grid max-w-[640px] grid-cols-3 gap-4">
+      <dl className="mx-auto grid w-full max-w-[640px] grid-cols-3 gap-4">
         <StatCard n={completed.length} label="Completed" />
         <StatCard n={started.length} label="In progress" />
         <StatCard n={allTopics.length} label="Installed" />
@@ -163,16 +160,16 @@ export function StudentDashboard({
           aria-label="All caught up"
         >
           <div>
-            <h2 className="mb-1 font-heading text-[24px] font-extrabold tracking-[-0.01em] text-ink">
+            <h2 className="mb-1 font-heading text-[27px] font-extrabold tracking-[-0.01em] text-ink">
               All caught up
             </h2>
-            <p className="font-sans text-[15px] text-ink-2">
+            <p className="font-sans text-[17px] text-ink-2">
               You’ve completed every installed topic.
             </p>
           </div>
           <Link
             to="/subjects"
-            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-6 font-sans text-[15px] font-bold text-white hover:bg-brand-hover"
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-6 font-sans text-[17px] font-bold text-white hover:bg-brand-hover"
           >
             Browse subjects
           </Link>
@@ -181,12 +178,11 @@ export function StudentDashboard({
 
       <Achievements
         completed={completed}
-        best={best}
         startedOrDone={[...completed, ...started]}
       />
 
       <section aria-label="By subject">
-        <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
+        <h2 className="mb-4 font-heading text-[25px] font-extrabold tracking-[-0.01em] text-ink">
           By subject
         </h2>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -208,7 +204,7 @@ export function StudentDashboard({
       </section>
 
       <section aria-label="All topics">
-        <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
+        <h2 className="mb-4 font-heading text-[25px] font-extrabold tracking-[-0.01em] text-ink">
           All topics
         </h2>
         <ul className="flex flex-col gap-[10px]">
@@ -217,11 +213,6 @@ export function StudentDashboard({
             const accent = SUBJECT_ACCENTS[subject];
             const Icon = SUBJECT_ICONS[subject];
             const state = progressByTopic.get(topic.id)?.state;
-            const bestFrac = best.get(topic.id);
-            const pct =
-              bestFrac === undefined || bestFrac === null
-                ? null
-                : Math.round(bestFrac * 100);
             return (
               <li
                 key={topic.id}
@@ -235,7 +226,7 @@ export function StudentDashboard({
                 <Link
                   to="/$subject/$topicId"
                   params={{ subject: topic.subject, topicId: topic.id }}
-                  className="min-w-0 flex-1 font-sans text-[16px] font-bold text-ink hover:text-brand"
+                  className="min-w-0 flex-1 font-sans text-[18px] font-bold text-ink hover:text-brand"
                 >
                   {topic.title}
                   <span className="ml-2 font-normal text-ink-3">
@@ -243,7 +234,7 @@ export function StudentDashboard({
                   </span>
                 </Link>
                 <span
-                  className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[12px] font-bold ${
+                  className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[14px] font-bold ${
                     state === "completed"
                       ? `${accent.bg} text-white`
                       : state === "started"
@@ -256,9 +247,6 @@ export function StudentDashboard({
                     : state === "started"
                       ? "In progress"
                       : "Not started"}
-                </span>
-                <span className="w-[70px] text-right font-sans text-[13px] font-semibold text-ink-3">
-                  {pct === null ? "—" : `${pct}%`}
                 </span>
               </li>
             );
@@ -274,10 +262,10 @@ function StatCard({ n, label }: { n: number; label: string }) {
     <div className="rounded-2xl border border-line bg-surface px-5 py-[18px]">
       <dt className="sr-only">{label}</dt>
       <dd>
-        <span className="block font-heading text-[28px] font-extrabold text-ink">
+        <span className="block font-heading text-[31px] font-extrabold text-ink">
           {n}
         </span>
-        <span className="block font-sans text-[13px] font-semibold text-ink-3">
+        <span className="block font-sans text-[15px] font-semibold text-ink-3">
           {label}
         </span>
       </dd>
@@ -308,13 +296,13 @@ function ContinueHero({
       aria-label="Continue where you left off"
     >
       <div>
-        <p className="mb-2 font-sans text-[13px] font-bold uppercase tracking-[.06em] text-white/70">
+        <p className="mb-2 font-sans text-[15px] font-bold uppercase tracking-[.06em] text-white/70">
           Continue where you left off
         </p>
-        <h2 className="mb-1 font-heading text-[26px] font-extrabold tracking-[-0.01em] text-white">
+        <h2 className="mb-1 font-heading text-[29px] font-extrabold tracking-[-0.01em] text-white">
           {topic.title}
         </h2>
-        <p className="font-sans text-[15px] text-white/75">
+        <p className="font-sans text-[17px] text-white/75">
           {SUBJECT_LABELS[subject]} · {topic.level}
           {topic.strand ? ` · ${topic.strand}` : ""}
         </p>
@@ -322,7 +310,7 @@ function ContinueHero({
       <Link
         to="/$subject/$topicId"
         params={{ subject: topic.subject, topicId: topic.id }}
-        className={`inline-flex min-h-[48px] shrink-0 items-center rounded-full bg-white px-[26px] font-sans text-[16px] font-extrabold ${accent.text}`}
+        className={`inline-flex min-h-[48px] shrink-0 items-center rounded-full bg-white px-[26px] font-sans text-[18px] font-extrabold ${accent.text}`}
       >
         {resuming ? "Resume" : "Start"}
       </Link>
@@ -337,24 +325,12 @@ function ContinueHero({
  */
 function Achievements({
   completed,
-  best,
   startedOrDone,
 }: {
   completed: TopicT[];
-  best: Map<string, number>;
   startedOrDone: TopicT[];
 }) {
   const first = completed[0] ?? null;
-
-  // Highest best-score across topics that actually have one.
-  let topScore: { topic: TopicT; pct: number } | null = null;
-  for (const t of completed) {
-    const b = best.get(t.id);
-    if (b === undefined || b < HIGH_SCORE_THRESHOLD) continue;
-    const pct = Math.round(b * 100);
-    if (topScore === null || pct > topScore.pct) topScore = { topic: t, pct };
-  }
-
   const subjectsTouched = new Set(startedOrDone.map((t) => t.subject));
 
   const badges: JSX.Element[] = [];
@@ -366,21 +342,6 @@ function Achievements({
         chip={<span className={`${accent.bg} ${CHIP} text-white`}>✓</span>}
         title="First topic done"
         subtitle={first.title}
-      />,
-    );
-  }
-  if (topScore) {
-    const accent = SUBJECT_ACCENTS[topScore.topic.subject as Subject];
-    badges.push(
-      <Badge
-        key="high"
-        chip={
-          <span className={`${accent.bg} ${CHIP} text-[13px] text-white`}>
-            {topScore.pct}%
-          </span>
-        }
-        title="High scorer"
-        subtitle={topScore.topic.title}
       />,
     );
   }
@@ -403,7 +364,7 @@ function Achievements({
 
   return (
     <section aria-label="Achievements">
-      <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
+      <h2 className="mb-4 font-heading text-[25px] font-extrabold tracking-[-0.01em] text-ink">
         Achievements
       </h2>
       <div className="flex flex-wrap gap-[14px]">{badges}</div>
@@ -412,7 +373,7 @@ function Achievements({
 }
 
 const CHIP =
-  "flex size-[38px] shrink-0 items-center justify-center rounded-full font-heading text-[15px] font-extrabold";
+  "flex size-[38px] shrink-0 items-center justify-center rounded-full font-heading text-[17px] font-extrabold";
 
 function Badge({
   chip,
@@ -427,8 +388,8 @@ function Badge({
     <div className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-[18px] py-3">
       {chip}
       <div>
-        <p className="font-sans text-[14px] font-bold text-ink">{title}</p>
-        <p className="font-sans text-[12px] text-ink-3">{subtitle}</p>
+        <p className="font-sans text-[16px] font-bold text-ink">{title}</p>
+        <p className="font-sans text-[14px] text-ink-3">{subtitle}</p>
       </div>
     </div>
   );
@@ -460,7 +421,7 @@ function SubjectRing({
         aria-label={`${SUBJECT_LABELS[subject]} ${pct}% complete, ${done} of ${total} topics`}
       >
         <span
-          className={`flex size-[42px] items-center justify-center rounded-full bg-surface font-sans text-[12px] font-extrabold ${
+          className={`flex size-[42px] items-center justify-center rounded-full bg-surface font-sans text-[14px] font-extrabold ${
             pct === 0 ? "text-ink-3" : accent.text
           }`}
           aria-hidden
@@ -468,10 +429,10 @@ function SubjectRing({
           {pct}%
         </span>
       </div>
-      <span className="font-sans text-[14px] font-bold text-ink">
+      <span className="font-sans text-[16px] font-bold text-ink">
         {SUBJECT_LABELS[subject]}
       </span>
-      <span className="font-sans text-[12px] text-ink-3">
+      <span className="font-sans text-[14px] text-ink-3">
         {done} of {total} done
       </span>
     </div>

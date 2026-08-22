@@ -12,11 +12,7 @@ import { type TopicT } from "@/content/schema"
 import { groupTopicsByLevelThenStrand, LEVEL_ORDER } from "@/lib/topics-group"
 import { EmptyState } from "@/components/EmptyState"
 import { TopicGroup, type TopicProgress } from "@/components/TopicGroup"
-import {
-  bestScorePerTopic,
-  getProgress,
-  type ProgressRow,
-} from "@/db/index"
+import { getProgress, type ProgressRow } from "@/db/index"
 import { useStudent } from "@/lib/student-context"
 
 // The content loader reads packs from disk (cached in TanStack Query) and
@@ -66,23 +62,17 @@ function TopicList() {
   const Icon = SUBJECT_ICONS[subjectKey]
 
   const [progress, setProgress] = useState<ProgressRow[]>([])
-  const [best, setBest] = useState<Map<string, number>>(new Map())
 
   useEffect(() => {
     if (studentId === null) {
       setProgress([])
-      setBest(new Map())
       return
     }
     let cancelled = false
     void (async () => {
-      const [prog, scores] = await Promise.all([
-        getProgress(studentId),
-        bestScorePerTopic(studentId),
-      ])
+      const prog = await getProgress(studentId)
       if (cancelled) return
       setProgress(prog)
-      setBest(new Map(scores.map((s) => [s.topic_id, s.best])))
     })()
     return () => {
       cancelled = true
@@ -120,9 +110,8 @@ function TopicList() {
           : byId.get(topicId) === "started"
             ? "in-progress"
             : "not-started",
-      best: best.get(topicId) ?? null,
     })
-  }, [progress, best])
+  }, [progress])
 
   if (topics.length === 0) {
     return (
@@ -147,10 +136,10 @@ function TopicList() {
           <Icon size={24} className="text-white" aria-hidden />
         </span>
         <div>
-          <h1 className="font-heading text-[32px] font-extrabold tracking-[-0.02em] text-ink">
+          <h1 className="font-heading text-[36px] font-extrabold tracking-[-0.02em] text-ink">
             {label}
           </h1>
-          <p className="mt-[2px] font-sans text-[15px] text-ink-2">
+          <p className="mt-[2px] font-sans text-[17px] text-ink-2">
             {activeLevel} · {shown.length}{" "}
             {shown.length === 1 ? "topic" : "topics"}
           </p>
@@ -175,7 +164,7 @@ function TopicList() {
               disabled={!has}
               aria-pressed={isActive}
               onClick={() => setLevel(lvl)}
-              className={`min-h-[30px] rounded-full px-3 font-sans text-[12px] font-bold transition-colors ${
+              className={`min-h-[30px] rounded-full px-3 font-sans text-[14px] font-bold transition-colors ${
                 isActive
                   ? `${accent.bg} text-white`
                   : has
@@ -191,7 +180,7 @@ function TopicList() {
 
       {shown.length === 0 ? (
         <section className="rounded-[18px] border border-dashed border-line p-8 text-center">
-          <p className="font-sans text-[16px] text-ink-2">
+          <p className="font-sans text-[18px] text-ink-2">
             No {label} topics in {activeLevel} yet.
           </p>
         </section>
@@ -217,9 +206,9 @@ function BackLink() {
   return (
     <Link
       to="/subjects"
-      className="mb-5 inline-flex min-h-[44px] items-center gap-2 font-sans text-[14px] font-semibold text-brand hover:underline"
+      className="mb-5 inline-flex min-h-[44px] items-center gap-2 font-sans text-[16px] font-semibold text-brand hover:underline"
     >
-      <span aria-hidden className="text-[22px] leading-none">
+      <span aria-hidden className="text-[25px] leading-none">
         ←
       </span>
       All subjects
