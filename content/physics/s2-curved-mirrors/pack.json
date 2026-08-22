@@ -1,0 +1,42 @@
+{
+  "packId": "phy.s2.light.curved-mirrors",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.light.curved-mirrors",
+      "title": "Reflection of Light by Curved Mirrors",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Light",
+      "subStrand": "Reflection of light at curved surfaces",
+      "order": 6,
+      "outcomes": [
+        "Understand reflection of light and the formation of images by curved mirrors (u)",
+        "Use ray diagrams to show how images are formed by curved mirrors and the nature of the images (s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A concave mirror curves inward, like the inside of a spoon. A convex mirror curves outward, like the back of a spoon. Both reflect light, but they form images very differently from a flat (plane) mirror."
+        },
+        {
+          "type": "text",
+          "text": "A concave mirror can focus parallel rays of light to a single point, called the focal point, at a distance called the focal length from the mirror. Depending on how far an object is from a concave mirror, it can form a magnified, real image (used in torches, satellite dishes, and shaving mirrors) or a different kind of image altogether."
+        },
+        {
+          "type": "text",
+          "text": "A convex mirror always forms a smaller, upright image, and it gives a wider field of view than a flat mirror of the same size. This is why convex mirrors are used as vehicle wing mirrors and in shops, to see a wide area at a glance."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Geometric Optics: Basics simulation below (Mirror screen). Move an object in front of a concave or convex mirror and see how the image changes."
+        }
+      ],
+      "sim": {
+        "phet": "geometric-optics-basics_en.html",
+        "caption": "PhET Geometric Optics: Basics (Mirror screen). Move an object in front of a concave or convex mirror and watch the image form. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

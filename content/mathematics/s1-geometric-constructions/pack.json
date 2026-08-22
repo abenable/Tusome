@@ -1,0 +1,48 @@
+{
+  "packId": "mat.s1.geometry.geometric-construction-skills",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.geometry.geometric-construction-skills",
+      "title": "Geometric Construction Skills",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Geometry and Measures",
+      "subStrand": "Constructions",
+      "order": 5,
+      "outcomes": [
+        "draw perpendicular and parallel lines. (k, s)",
+        "construct perpendiculars, angle bisectors, mediators and parallel lines. (u, s)",
+        "use a pair of compasses and a ruler to construct special angles. (60°, 45°) (u, s)",
+        "describe a locus. (u)",
+        "relate parallel lines, perpendicular bisector, angle bisector, straight line and a circle as loci. (k, u)",
+        "draw polygons. (u)",
+        "measure lengths and angles. (s)",
+        "construct geometrical figures such as triangle, square, rectangle, rhombus, parallelogram. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Two lines are perpendicular if they meet at a right angle (90°), and parallel if they never meet, however far extended, because they point in exactly the same direction and stay the same distance apart. A pair of compasses and a ruler (with no measurements marked, just a straightedge) are the classic tools for constructing these accurately, rather than just sketching by eye."
+        },
+        {
+          "type": "text",
+          "text": "To construct a 60° angle: draw a line and mark a point on it. Without changing the compass width, draw an arc centred on that point crossing the line, then, using the same width, draw a second arc centred where the first arc crosses the line. The line from the original point to where the two arcs intersect makes a 60° angle with the first line — this works because it builds an equilateral triangle, whose angles are always 60°. A 45° angle is then found by bisecting a constructed 90° angle."
+        },
+        {
+          "type": "text",
+          "text": "A locus (plural: loci) is the set of all points that satisfy a given rule — the path traced out by a point as it moves under some condition. For example, the locus of points equidistant from a single fixed point is a circle centred on that point; the locus of points equidistant from two fixed points is the perpendicular bisector of the line joining them; the locus of points equidistant from two intersecting lines is their angle bisector."
+        },
+        {
+          "type": "text",
+          "text": "These constructions connect directly to loci: a perpendicular bisector is drawn by finding two points equidistant from both ends of a line segment, and an angle bisector by finding points equidistant from both arms of an angle. Recognising a construction as \"the locus of points equidistant from...\" explains why the compass-and-straightedge method gives an exact answer rather than an estimate."
+        },
+        {
+          "type": "text",
+          "text": "The same tools construct regular polygons and quadrilaterals precisely: a square from four equal sides at right angles, a rhombus from four equal sides with two pairs of parallel sides, and a parallelogram from two pairs of parallel, equal-length sides. Always measure and check lengths with a ruler and angles with a protractor once a construction is complete, to confirm the figure matches its definition."
+        }
+      ]
+    }
+  ]
+}

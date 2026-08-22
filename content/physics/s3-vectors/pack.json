@@ -1,0 +1,42 @@
+{
+  "packId": "phy.s3.matter.vectors",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.matter.vectors",
+      "title": "Vectors and Resultant Forces",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Linear and non-linear motion",
+      "order": 3,
+      "outcomes": [
+        "understand the differences between vector and scalar quantities, and give examples of each (u)",
+        "understand that a number of forces acting on a body can be represented by a single resultant force (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A scalar quantity has only a size (magnitude) \u2014 for example mass, distance, speed, and time. A vector quantity has both a size and a direction \u2014 for example weight, displacement, velocity, and force."
+        },
+        {
+          "type": "text",
+          "text": "When two or more forces act on an object at the same time, they can be combined into a single resultant force that has the same overall effect on the object. If two forces act at an angle to each other (not simply in line), the resultant can be found using a scale drawing, placing the force vectors head-to-tail, or using Pythagoras' theorem when the forces are perpendicular to each other."
+        },
+        {
+          "type": "equation",
+          "latex": "F_{resultant} = \\sqrt{F_1^2 + F_2^2} \\quad \\text{(perpendicular forces)}"
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Vector Addition simulation below. Add vectors together and see how their resultant depends on both their sizes and their directions."
+        }
+      ],
+      "sim": {
+        "phet": "vector-addition_en.html",
+        "caption": "PhET Vector Addition. Combine vectors of different sizes and directions and see the resultant vector. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

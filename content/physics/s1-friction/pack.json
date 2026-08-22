@@ -1,0 +1,41 @@
+{
+  "packId": "phy.s1.matter.friction",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.friction",
+      "title": "Friction",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Effects of forces",
+      "order": 6,
+      "outcomes": [
+        "understand the concept of friction in everyday life contexts (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Friction is a force that opposes relative motion (or attempted motion) between two surfaces in contact. It acts along the surfaces, in the direction opposite to the motion."
+        },
+        {
+          "type": "text",
+          "text": "Friction is not always unwanted. It lets us walk without slipping, lets tyres grip the road, and lets brakes stop a moving vehicle. But it also wastes energy as heat and wears surfaces down over time, for example in engine parts, shoe soles, and tyre tread."
+        },
+        {
+          "type": "text",
+          "text": "Friction can be reduced by smoothing or polishing surfaces, or by adding a lubricant such as oil or grease. It can be increased by roughening a surface, for example the tread pattern cut into a tyre."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Friction simulation below. Rub the two surfaces together and watch how friction between them generates heat."
+        }
+      ],
+      "sim": {
+        "phet": "friction_en.html",
+        "caption": "PhET Friction. Rub two surfaces together and see how friction between them generates heat. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

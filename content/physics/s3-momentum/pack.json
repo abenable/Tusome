@@ -1,0 +1,46 @@
+{
+  "packId": "phy.s3.matter.momentum",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.matter.momentum",
+      "title": "Momentum and Collisions",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Linear and non-linear motion",
+      "order": 2,
+      "outcomes": [
+        "understand linear momentum and that it is conserved during collisions (u, s)",
+        "understand that momentum is conserved during a collision and the implication of this (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Momentum is a measure of how hard it is to stop a moving object. It depends on both mass and velocity."
+        },
+        {
+          "type": "equation",
+          "latex": "p = m v"
+        },
+        {
+          "type": "text",
+          "text": "The law of conservation of momentum states that, in a collision, the total momentum of the objects involved stays the same before and after \u2014 provided no external force acts on the system. Momentum lost by one object is gained by the other(s)."
+        },
+        {
+          "type": "text",
+          "text": "This is why a fast, light ball and a slow, heavy ball can have the same momentum, and why a small car colliding with a large truck experiences a much bigger change in velocity than the truck does \u2014 because the same change in momentum is shared unequally due to their different masses."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Collision Lab simulation below. Set up collisions between objects of different masses and velocities and check that total momentum before the collision always equals total momentum after."
+        }
+      ],
+      "sim": {
+        "phet": "collision-lab_en.html",
+        "caption": "PhET Collision Lab. Collide objects of different masses and velocities and verify that momentum is conserved. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

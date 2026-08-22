@@ -1,0 +1,48 @@
+{
+  "packId": "mat.s1.numbers.number-bases",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.numbers.number-bases",
+      "title": "Number Bases",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Numbers",
+      "subStrand": "Number bases",
+      "order": 1,
+      "outcomes": [
+        "identify numbers in any base using abacus. (k)",
+        "convert numbers from one base to another. (u)",
+        "manipulate numbers in different bases with respect to all four operations. (u s)",
+        "identify place value in different bases. (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Every number we write uses place value: in the number 342 (base ten), the 3 is worth 3 hundreds, the 4 is worth 4 tens, and the 2 is worth 2 units, because base ten uses powers of ten (100, 10, 1) as its place values. A number in base b uses powers of b instead — the digits allowed run from 0 up to b-1. Base two (binary) only uses the digits 0 and 1; base eight (octal) uses 0 to 7."
+        },
+        {
+          "type": "text",
+          "text": "To convert a base-ten number to another base, repeatedly divide by the new base and record the remainders. Reading the remainders from last to first gives the digits in the new base. Convert 23 (base ten) to base two: 23 ÷ 2 = 11 remainder 1; 11 ÷ 2 = 5 remainder 1; 5 ÷ 2 = 2 remainder 1; 2 ÷ 2 = 1 remainder 0; 1 ÷ 2 = 0 remainder 1. Reading the remainders bottom to top gives 10111."
+        },
+        {
+          "type": "equation",
+          "expr": "23 (base ten)  ->  10111 (base two)"
+        },
+        {
+          "type": "text",
+          "text": "To convert the other way, multiply each digit by its place value (a power of the base) and add the results. Check 10111 in base two: (1 x 16) + (0 x 8) + (1 x 4) + (1 x 2) + (1 x 1) = 16 + 0 + 4 + 2 + 1 = 23, which matches the number we started with."
+        },
+        {
+          "type": "text",
+          "text": "Once numbers are in the same base, the four operations work exactly as in base ten, except a carry happens whenever a column reaches the value of the base rather than ten. Add 111 (base two) and 11 (base two): 111 + 011 = 1010 in base two — the units column gives 1+1=2, which is written as 0 with 1 carried, and so on, just as a base-ten carry happens at 10."
+        },
+        {
+          "type": "equation",
+          "expr": "111 + 011 = 1010 (all in base two)"
+        }
+      ]
+    }
+  ]
+}

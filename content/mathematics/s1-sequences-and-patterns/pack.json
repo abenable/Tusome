@@ -1,0 +1,49 @@
+{
+  "packId": "mat.s1.algebra.sequence-and-patterns",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.algebra.sequence-and-patterns",
+      "title": "Sequence and Patterns",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Sequences",
+      "order": 6,
+      "outcomes": [
+        "recognise and generate number patterns. (k, u)",
+        "explain how to generate a sequence. (u)",
+        "use number machines to generate a sequence. (k, s)",
+        "describe a general rule when a pattern is given. (k, s)",
+        "determine terms in a sequence. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A sequence is a list of numbers, called terms, that follow a rule. In 2, 5, 8, 11, ..., each term is found by adding 3 to the term before it — spotting that fixed step is the key to recognising and continuing a pattern."
+        },
+        {
+          "type": "text",
+          "text": "A number machine generates a sequence by applying one or more operations to each input in turn. A machine that does \"x3 then -2\" turns the inputs 1, 2, 3, 4, 5 into the sequence 1, 4, 7, 10, 13 — because 1x3-2=1, 2x3-2=4, 3x3-2=7, and so on."
+        },
+        {
+          "type": "equation",
+          "expr": "input n  ->  x3  ->  -2  ->  output (3n - 2)"
+        },
+        {
+          "type": "text",
+          "text": "That machine gives a general rule for the nth term: 3n - 2, where n is the term's position (1st, 2nd, 3rd, ...). Once a rule is known, any term can be found directly without listing every term before it. The 20th term of this sequence is 3(20) - 2 = 58."
+        },
+        {
+          "type": "equation",
+          "latex": "n^{th} \\text{ term} = 3n - 2 \\;\\Rightarrow\\; 20^{th} \\text{ term} = 3(20) - 2 = 58"
+        },
+        {
+          "type": "text",
+          "text": "To find the nth-term rule for a sequence with a constant step, use the step as the multiplier of n, then adjust by a constant so the first term matches. For 2, 5, 8, 11 (step +3), start with 3n; when n=1, 3n=3, but the first term is 2, one less, so the rule is 3n - 1."
+        }
+      ]
+    }
+  ]
+}

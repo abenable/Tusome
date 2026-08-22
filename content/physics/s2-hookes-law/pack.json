@@ -1,0 +1,45 @@
+{
+  "packId": "phy.s2.matter.hookes-law",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.matter.hookes-law",
+      "title": "Hooke's Law",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Mechanical properties of materials; Hooke's law",
+      "order": 5,
+      "outcomes": [
+        "understand how the mechanical properties of common materials can be utilised in physical structures (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Materials have different mechanical properties: some are brittle (snap without bending), some are ductile (can be drawn into wires), some are malleable (can be hammered into shape), and some are elastic (return to their original shape after a stretching force is removed)."
+        },
+        {
+          "type": "text",
+          "text": "For a spring or an elastic material, Hooke's law states that the extension is directly proportional to the force applied \u2014 as long as the elastic limit is not exceeded."
+        },
+        {
+          "type": "equation",
+          "latex": "F = k x"
+        },
+        {
+          "type": "text",
+          "text": "Here F is the stretching force, x is the extension, and k is the spring constant \u2014 a measure of how stiff the spring is. Beyond the elastic limit, a spring stretches permanently and no longer obeys Hooke's law."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Hooke's Law simulation below. Hang different weights on a spring and see how the extension changes, and how the force-versus-extension graph relates to the spring constant."
+        }
+      ],
+      "sim": {
+        "phet": "hookes-law_en.html",
+        "caption": "PhET Hooke's Law. Stretch a spring with different forces and see how extension relates to force and the spring constant. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

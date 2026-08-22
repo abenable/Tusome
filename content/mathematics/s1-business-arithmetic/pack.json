@@ -1,0 +1,51 @@
+{
+  "packId": "mat.s1.geometry.business-arithmetic",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.geometry.business-arithmetic",
+      "title": "Business Arithmetic",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Geometry and Measures",
+      "subStrand": "Business arithmetic",
+      "order": 13,
+      "outcomes": [
+        "describe and calculate profit (includes all expenses incurred), loss, commission, interest, insurance and discount. (k, u)",
+        "express profit or loss as a percentage. (u)",
+        "solve simple interest problems. (k, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Profit is made when the selling price is more than everything spent to acquire and sell an item (the cost price, including any expenses like transport); a loss happens when the selling price is less. Profit = selling price - cost price (and expenses); loss = cost price (and expenses) - selling price."
+        },
+        {
+          "type": "text",
+          "text": "A trader buys a bicycle for UGX 150 000, pays UGX 10 000 to transport it, and sells it for UGX 200 000. Total cost = 150 000 + 10 000 = 160 000. Profit = 200 000 - 160 000 = UGX 40 000."
+        },
+        {
+          "type": "text",
+          "text": "Profit or loss is often expressed as a percentage of the cost price, so different sales can be compared fairly. Percentage profit = (profit ÷ cost price) x 100. For the bicycle: (40 000 ÷ 160 000) x 100 = 25%."
+        },
+        {
+          "type": "equation",
+          "expr": "(40 000 / 160 000) x 100 = 25%"
+        },
+        {
+          "type": "text",
+          "text": "Commission is a payment (often a percentage of a sale) made to someone for arranging a deal; a discount is a reduction from the marked price, usually to encourage a sale. Simple interest is money earned or charged on a loan or savings, calculated only on the original amount (the principal), using I = PRT ÷ 100, where P is the principal, R is the rate per year (as a percentage), and T is the time in years."
+        },
+        {
+          "type": "equation",
+          "latex": "I = \\frac{P \\times R \\times T}{100}"
+        },
+        {
+          "type": "text",
+          "text": "Ashok invests UGX 500 000 at a simple interest rate of 8% per year for 3 years. Interest = (500 000 x 8 x 3) ÷ 100 = UGX 120 000, so after 3 years his savings total 500 000 + 120 000 = UGX 620 000."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "packId": "phy.s4.modern.atomic-models",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.modern.atomic-models",
+      "title": "Atomic Models",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Modern Physics",
+      "subStrand": "Atomic models",
+      "order": 4,
+      "outcomes": [
+        "understand the structure of an atom in terms of a positive nucleus and negative electrons (u)",
+        "understand the terms: atomic number, mass number, and isotopes, and use them to represent different nuclides (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "An atom has a small, dense, positively charged nucleus at its centre, made up of protons (positively charged) and neutrons (no charge). Much lighter, negatively charged electrons occupy the much larger space around the nucleus."
+        },
+        {
+          "type": "text",
+          "text": "The atomic number of an element is the number of protons in its nucleus \u2014 it defines which element the atom is. In a neutral atom, the number of electrons equals the number of protons, so the positive and negative charges balance out."
+        },
+        {
+          "type": "text",
+          "text": "The mass number is the total number of protons and neutrons in the nucleus. Atoms of the same element (same atomic number) can have different numbers of neutrons, and so different mass numbers \u2014 these are called isotopes of that element."
+        },
+        {
+          "type": "text",
+          "text": "This model of the atom \u2014 a tiny, dense positive nucleus surrounded by orbiting electrons \u2014 was proposed by Ernest Rutherford, replacing an earlier model by J. J. Thomson in which an atom was imagined as a more uniform sphere of positive charge with electrons scattered through it, sometimes called the 'plum pudding' model."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Build an Atom simulation below. Add protons, neutrons, and electrons to build different atoms, and see how the atomic number, mass number, and charge change as you do."
+        }
+      ],
+      "sim": {
+        "phet": "build-an-atom_en.html",
+        "caption": "PhET Build an Atom. Add protons, neutrons, and electrons and see the atomic number, mass number, and charge of the atom you build. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

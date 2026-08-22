@@ -1,0 +1,51 @@
+{
+  "packId": "phy.s1.heat.transfer",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.heat.transfer",
+      "title": "Heat Transfer",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Heat",
+      "subStrand": "Conduction, convection and radiation",
+      "order": 9,
+      "outcomes": [
+        "understand how heat energy is transferred and the rate at which transfer takes place (u, s)",
+        "understand what is happening at particle level when conduction, convection, and radiation take place and their application (k, u, v/a)",
+        "understand that greenhouse effect and global warming are aspects related to heat transfer on the earth surface (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Heat can move from one place to another by three processes: conduction, convection, and radiation."
+        },
+        {
+          "type": "text",
+          "text": "Conduction transfers heat through a material \u2014 mainly solids \u2014 as vibrating particles pass energy to their neighbours, without the particles themselves moving from place to place. Metals are good conductors of heat."
+        },
+        {
+          "type": "text",
+          "text": "Convection transfers heat through liquids and gases. A heated fluid expands, becomes less dense, and rises; cooler, denser fluid moves in to take its place. This sets up a convection current."
+        },
+        {
+          "type": "text",
+          "text": "Radiation transfers heat as electromagnetic waves and needs no medium at all \u2014 it can travel through empty space. This is how heat from the Sun reaches the Earth."
+        },
+        {
+          "type": "text",
+          "text": "The greenhouse effect happens when gases in the atmosphere absorb heat radiated from the Earth's surface and re-radiate some of it back down, warming the surface further. A rise in the level of these gases is linked to global warming."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Energy Forms and Changes simulation below. Heat different objects and watch thermal energy transfer between them."
+        }
+      ],
+      "sim": {
+        "phet": "energy-forms-and-changes_en.html",
+        "caption": "PhET Energy Forms and Changes. Heat different objects and watch thermal energy transfer between them. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

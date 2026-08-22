@@ -4,95 +4,19 @@
 // rather than maintaining a second definition. See docs/plan/03-architecture.md
 // §"Content pack schema" and docs/plan/00-decisions.md §2.
 //
-// Two rules from the architecture doc that matter more than the fields:
-//
-//   1. `schemaVersion` is `z.literal(1)` from day one. Packs live on machines we
-//      cannot reach; a v2 app will meet a v1 pack in a school in 2028. Bump this
-//      on any breaking change.
-//   2. `explanation` is required on every question. Offline means no teacher
-//      Googling the answer. If the schema lets an author skip it, they will —
-//      so the schema must not.
+// `schemaVersion` is `z.literal(1)` from day one. Packs live on machines we
+// cannot reach; a v2 app will meet a v1 pack in a school in 2028. Bump this
+// on any breaking change.
 //
 // Images referenced by body blocks live beside the JSON in the pack folder and
 // are resolved relative to it — never absolute paths, never remote URLs. The
 // `image` block enforces that with a `.refine`.
+//
+// No quiz: the quiz engine (question schema, seeded randomization, DB writes,
+// dashboards) was removed — the app isn't ready to ship quiz content yet. A
+// topic is body + an optional sim only.
 
 import { z } from "zod";
-
-// ---------------------------------------------------------------------------
-// Question
-// ---------------------------------------------------------------------------
-
-export const Question = z
-  .object({
-    id: z.string(),
-    prompt: z.string(),
-    kind: z.enum(["single", "multi", "numeric"]),
-    options: z.array(z.object({ id: z.string(), text: z.string() })).optional(),
-    correct: z.array(z.string()).min(1),
-    // For `kind: "numeric"` only — absolute tolerance on the correct value.
-    tolerance: z.number().optional(),
-    // Always shown after answering, regardless of correctness. Required.
-    explanation: z.string(),
-  })
-  .superRefine((q, ctx) => {
-    if (q.kind === "single" || q.kind === "multi") {
-      // A choice question with no options renders zero inputs, so it can never
-      // be answered and Submit stays permanently disabled. Reject it at the
-      // schema so authoring tools can't ship an unanswerable question.
-      if (!q.options || q.options.length === 0) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `a "${q.kind}" question needs at least one option`,
-          path: ["options"],
-        });
-        return;
-      }
-      // Every correct id must name an actual option, else the question can
-      // never be answered right.
-      const optionIds = new Set(q.options.map((o) => o.id));
-      for (const c of q.correct) {
-        if (!optionIds.has(c)) {
-          ctx.addIssue({
-            code: z.ZodIssueCode.custom,
-            message: `correct id "${c}" is not among the options`,
-            path: ["correct"],
-          });
-        }
-      }
-      if (q.kind === "single" && q.correct.length !== 1) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "a single-choice question must have exactly one correct answer",
-          path: ["correct"],
-        });
-      }
-    } else {
-      // numeric: no options; exactly one correct value that parses to a finite
-      // number. Without this, `Number("abc") = NaN` validates clean and the
-      // quiz can never mark the answer right.
-      if (q.options !== undefined) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "a numeric question must not have options",
-          path: ["options"],
-        });
-      }
-      if (q.correct.length !== 1) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "a numeric question must have exactly one correct value",
-          path: ["correct"],
-        });
-      } else if (!Number.isFinite(Number(q.correct[0]))) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "the numeric correct value must parse to a finite number",
-          path: ["correct", 0],
-        });
-      }
-    }
-  });
 
 // ---------------------------------------------------------------------------
 // Simulation reference
@@ -173,12 +97,18 @@ export const Topic = z.object({
   level: z.enum(["S1", "S2", "S3", "S4"]),
   strand: z.string(), // from the NCDC syllabus
   subStrand: z.string(),
+  // Position within the syllabus's own term-by-term programme planner (1 =
+  // taught first). Optional so single-topic packs can omit it; the grouping
+  // helper (src/lib/topics-group.ts) falls back to a stable but undefined
+  // order for topics that don't set it. Without this, topics render in
+  // whatever order the filesystem happens to list pack directories, which has
+  // no relationship to teaching order.
+  order: z.number().int().optional(),
   // Verbatim NCDC learning outcomes — teachers cross-check against the
   // official document. Keep them as authored.
   outcomes: z.array(z.string()).min(1),
   body: z.array(Block),
   sim: SimRef.optional(),
-  quiz: z.array(Question).min(1),
 });
 
 // ---------------------------------------------------------------------------
@@ -197,7 +127,6 @@ export const Pack = z.object({
 // Inferred TypeScript types
 // ---------------------------------------------------------------------------
 
-export type QuestionT = z.infer<typeof Question>;
 export type SimRefT = z.infer<typeof SimRef>;
 export type BlockT = z.infer<typeof Block>;
 export type TopicT = z.infer<typeof Topic>;

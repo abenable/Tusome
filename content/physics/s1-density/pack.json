@@ -1,0 +1,55 @@
+{
+  "packId": "phy.s1.matter.density",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.density",
+      "title": "Density",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Density",
+      "order": 2,
+      "outcomes": [
+        "understand density and its application to floating and sinking (u)",
+        "determine densities of substances and relate them to purity (u, s, gs)",
+        "appreciate that the accuracy of measurements may be improved by making several measurements and taking an average value (gs, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Density is the mass of a substance packed into each unit of volume. It tells you how tightly matter is packed into a space \u2014 a small, heavy block is denser than a large, light one of the same mass."
+        },
+        {
+          "type": "equation",
+          "latex": "\\rho = \\frac{m}{V}"
+        },
+        {
+          "type": "text",
+          "text": "Density is usually measured in grams per cubic centimetre (g/cm\u00b3) in the lab, or kilograms per cubic metre (kg/m\u00b3) as the SI unit."
+        },
+        {
+          "type": "text",
+          "text": "An object floats in a fluid if its density is less than the fluid's density, and sinks if its density is greater. This is why a piece of wood floats on water but a stone sinks \u2014 and why a solid lump of iron sinks while a hollow iron ship floats, because the ship's average density (metal plus the air inside) is less than water's."
+        },
+        {
+          "type": "text",
+          "text": "Every pure substance has a fixed, known density. This makes density a useful test for purity: if a sample's measured density does not match the accepted value for that substance, it may have been diluted or contaminated \u2014 for example, checking whether fuel or cooking oil has been adulterated."
+        },
+        {
+          "type": "text",
+          "text": "Because any single measurement of mass or volume can have a small error, repeating the measurement several times and taking the average gives a more accurate result."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Density simulation below. Drop blocks of different materials into the water and see which float and which sink, then try the mystery blocks and work out what they might be made of from their density."
+        }
+      ],
+      "sim": {
+        "phet": "density_en.html",
+        "caption": "PhET Density. Compare blocks of different materials and sizes in water, and identify mystery blocks from their density. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

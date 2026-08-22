@@ -1,0 +1,45 @@
+{
+  "packId": "phy.s1.matter.diffusion",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.diffusion",
+      "title": "Diffusion",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Diffusion",
+      "order": 4,
+      "outcomes": [
+        "apply the particle theory to explain diffusion and Brownian motion and their applications (s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. It happens because particles are always moving randomly, and over time this random motion spreads them out evenly."
+        },
+        {
+          "type": "text",
+          "text": "Diffusion happens much faster in gases than in liquids. Gas particles are farther apart, move at higher speeds, and collide less often, so they spread out quickly. Liquid particles are closer together and collide much more, slowing their spread. Diffusion does not happen through a solid under normal conditions, because its particles are fixed in position."
+        },
+        {
+          "type": "text",
+          "text": "A familiar example: the smell of food cooking spreads through a whole house even when there are no air currents. Scent particles diffuse outward from the kitchen, where their concentration is high, into the rest of the rooms, where it is lower."
+        },
+        {
+          "type": "text",
+          "text": "The rate of diffusion is affected by temperature \u2014 heating a substance gives its particles more energy, so they move and diffuse faster \u2014 and by the mass of the particles, since lighter particles move faster than heavier ones at the same temperature and so diffuse more quickly."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Diffusion simulation below to compare how heavy and light particles spread through a container, and see how changing the temperature changes the rate of diffusion."
+        }
+      ],
+      "sim": {
+        "phet": "diffusion_en.html",
+        "caption": "PhET Diffusion. Compare how heavy and light gas particles spread through a container, and see how temperature changes the rate. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

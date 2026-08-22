@@ -1,0 +1,46 @@
+{
+  "packId": "phy.s2.matter.flotation",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.matter.flotation",
+      "title": "Flotation and Archimedes' Principle",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Pressure in solids and fluids",
+      "order": 4,
+      "outcomes": [
+        "understand the concept of sinking and flotation in terms of forces acting on a body submerged in a fluid (u)",
+        "understand and apply the Archimedes' Principle in different situations (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "When an object is placed in a fluid, the fluid pushes up on it with a force called upthrust (or buoyant force). This is why objects feel lighter when submerged in water than they do in air."
+        },
+        {
+          "type": "text",
+          "text": "Archimedes' Principle states that the upthrust on a submerged object equals the weight of the fluid it displaces."
+        },
+        {
+          "type": "text",
+          "text": "An object floats when the upthrust it experiences is enough to support its whole weight. It sinks when even fully submerged, the upthrust is still less than its weight."
+        },
+        {
+          "type": "text",
+          "text": "A solid lump of steel sinks, but a steel ship floats. This is because the ship's shape is mostly hollow, filled with air \u2014 so its overall (average) density, taking the whole hull and the air inside into account, is less than the density of water, even though steel itself is much denser than water."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Buoyancy: Basics simulation below. Place different blocks in the water and see how their weight compares with the upthrust acting on them, and whether they float or sink."
+        }
+      ],
+      "sim": {
+        "phet": "buoyancy-basics_en.html",
+        "caption": "PhET Buoyancy: Basics. Compare an object's weight with the upthrust from the fluid, and see why it floats or sinks. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

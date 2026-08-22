@@ -21,16 +21,6 @@ function topic(
     subStrand: "stub",
     outcomes: ["stub"],
     body: [{ type: "text", text: "stub" }],
-    quiz: [
-      {
-        id: "q1",
-        prompt: "stub",
-        kind: "single",
-        options: [{ id: "a", text: "a" }],
-        correct: ["a"],
-        explanation: "stub",
-      },
-    ],
   } as unknown as TopicT;
 }
 

@@ -1,0 +1,44 @@
+{
+  "packId": "mat.s2.algebra.vectors-and-translation",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.algebra.vectors-and-translation",
+      "title": "Vectors and Translation",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Vectors",
+      "order": 2,
+      "outcomes": [
+        "Define translation with a vector. (k, u, s)",
+        "Identify scalars and vectors. (k, u)",
+        "Use vector notation. (k, s)",
+        "Represent vectors both single and combined geometrically. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A scalar is a quantity with size only, such as 5 kg or 20°C. A vector has both size (magnitude) and direction, such as \"3 km east\". A translation slides every point of a shape the same distance in the same direction without turning or resizing it — a vector describes exactly that slide."
+        },
+        {
+          "type": "text",
+          "text": "A column vector is written (a, b) stacked vertically, where a is the movement parallel to the x-axis (positive = right) and b is the movement parallel to the y-axis (positive = up). The vector that translates point (1, 2) to point (4, -1) is found by subtracting: (4-1, -1-2) = (3, -3)."
+        },
+        {
+          "type": "equation",
+          "expr": "(1, 2) -> (4, -1):  vector = (4-1, -1-2) = (3, -3)"
+        },
+        {
+          "type": "text",
+          "text": "Combining two translations means adding their column vectors component by component. Translating a point first by (2, 3) then by (-5, 1) has the same overall effect as one translation by (2+(-5), 3+1) = (-3, 4)."
+        },
+        {
+          "type": "equation",
+          "expr": "(2, 3) + (-5, 1) = (-3, 4)"
+        }
+      ]
+    }
+  ]
+}

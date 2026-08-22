@@ -7,84 +7,44 @@ import { tmpdir } from "node:os";
 import { QueryClient } from "@tanstack/react-query";
 
 describe("schema: Pack", () => {
-  it("parses the real projectile pack", async () => {
+  it("parses the real electricity-circuits pack", async () => {
     const { packs, skipped } = await loadPacks();
     expect(skipped).toEqual([]);
     expect(packs.length).toBeGreaterThanOrEqual(1);
 
-    const projectile = packs.find((p) => p.packId === "phy.s2.motion.projectile");
-    expect(projectile).toBeDefined();
-    expect(projectile!.schemaVersion).toBe(1);
-    expect(projectile!.topics.length).toBe(1);
+    const circuits = packs.find((p) => p.packId === "phy.s4.electricity.circuits");
+    expect(circuits).toBeDefined();
+    expect(circuits!.schemaVersion).toBe(1);
+    expect(circuits!.topics.length).toBe(1);
 
-    const topic = projectile!.topics[0];
-    expect(topic.id).toBe("phy.s2.motion.projectile");
+    const topic = circuits!.topics[0];
+    expect(topic.id).toBe("phy.s4.electricity.circuits");
     expect(topic.subject).toBe("physics");
-    expect(topic.level).toBe("S2");
+    expect(topic.level).toBe("S4");
 
-    // Exactly five questions, every one with a non-empty explanation.
-    expect(topic.quiz.length).toBe(5);
-    for (const q of topic.quiz) {
-      expect(q.explanation.length).toBeGreaterThan(0);
-    }
-
-    // Sim reference: projectile, no mass param.
+    // Sim reference: a vendored PhET HTML5 sim, not a custom TS module.
     expect(topic.sim).toBeDefined();
     const sim = topic.sim!;
-    expect("simId" in sim).toBe(true);
-    if ("simId" in sim) {
-      expect(sim.simId).toBe("projectile");
-      expect(sim.params).not.toHaveProperty("mass");
-      expect(sim.params).toHaveProperty("gravity");
+    expect("phet" in sim).toBe(true);
+    if ("phet" in sim) {
+      expect(sim.phet).toBe("circuit-construction-kit-dc_en.html");
     }
   });
 
-  it("loadPackForTopic returns the projectile topic", async () => {
-    const result = await loadPackForTopic("phy.s2.motion.projectile");
+  it("loadPackForTopic returns the electricity-circuits topic", async () => {
+    const result = await loadPackForTopic("phy.s4.electricity.circuits");
     expect(result).not.toBeNull();
-    expect(result!.topic.id).toBe("phy.s2.motion.projectile");
+    expect(result!.topic.id).toBe("phy.s4.electricity.circuits");
   });
 });
 
 describe("schema: Pack rejects bad data", () => {
   it("rejects a pack with the wrong schemaVersion", () => {
     const bad = {
-      packId: "phy.s2.motion.projectile",
+      packId: "phy.s4.electricity.circuits",
       version: 1,
       schemaVersion: 2, // wrong — only 1 is allowed
       topics: [],
-    };
-    const result = Pack.safeParse(bad);
-    expect(result.success).toBe(false);
-  });
-
-  it("rejects a pack whose question has no explanation", () => {
-    const bad = {
-      packId: "phy.s2.bad",
-      version: 1,
-      schemaVersion: 1,
-      topics: [
-        {
-          id: "phy.s2.bad",
-          title: "Bad",
-          subject: "physics",
-          level: "S2",
-          strand: "Motion",
-          subStrand: "Projectiles",
-          outcomes: ["an outcome"],
-          body: [{ type: "text", text: "hello" }],
-          quiz: [
-            {
-              id: "q1",
-              prompt: "Why?",
-              kind: "single",
-              options: [{ id: "a", text: "a" }],
-              correct: ["a"],
-              // explanation intentionally missing
-            },
-          ],
-        },
-      ],
     };
     const result = Pack.safeParse(bad);
     expect(result.success).toBe(false);
@@ -169,96 +129,9 @@ describe("schema: Block discriminated union", () => {
   });
 });
 
-describe("schema: Question superRefine (unanswerable questions)", () => {
-  // The three kinds the schema used to accept silently: an options-less single
-  // (renders zero inputs → Submit stuck), a numeric whose correct isn't a
-  // number (can never be right), and a single whose correct id isn't an option.
-  // Each must now be rejected at parse time.
-  function base(over: Record<string, unknown>) {
-    return {
-      packId: "phy.s2.q",
-      version: 1,
-      schemaVersion: 1,
-      topics: [
-        {
-          id: "phy.s2.q",
-          title: "Q",
-          subject: "physics",
-          level: "S2",
-          strand: "s",
-          subStrand: "s",
-          outcomes: ["o"],
-          body: [{ type: "text", text: "x" }],
-          quiz: [
-            {
-              id: "q1",
-              prompt: "Why?",
-              kind: "single",
-              options: [{ id: "a", text: "a" }, { id: "b", text: "b" }],
-              correct: ["a"],
-              explanation: "because",
-              ...over,
-            },
-          ],
-        },
-      ],
-    };
-  }
-
-  it("rejects a single question without options", () => {
-    const r = Pack.safeParse(
-      base({ kind: "single", options: undefined, correct: ["x"], explanation: "e" }),
-    );
-    expect(r.success).toBe(false);
-  });
-
-  it("rejects a single question whose correct id is not among options", () => {
-    const r = Pack.safeParse(base({ kind: "single", correct: ["zzz"] }));
-    expect(r.success).toBe(false);
-  });
-
-  it("rejects a single question with more than one correct answer", () => {
-    const r = Pack.safeParse(base({ kind: "single", correct: ["a", "b"] }));
-    expect(r.success).toBe(false);
-  });
-
-  it("rejects a multi question without options", () => {
-    const r = Pack.safeParse(
-      base({ kind: "multi", options: undefined, correct: ["a"], explanation: "e" }),
-    );
-    expect(r.success).toBe(false);
-  });
-
-  it("rejects a numeric question whose correct does not parse to a number", () => {
-    const r = Pack.safeParse(
-      base({ kind: "numeric", options: undefined, correct: ["abc"], explanation: "e" }),
-    );
-    expect(r.success).toBe(false);
-  });
-
-  it("rejects a numeric question that carries options", () => {
-    const r = Pack.safeParse(
-      base({ kind: "numeric", options: [{ id: "a", text: "a" }], correct: ["5"] }),
-    );
-    expect(r.success).toBe(false);
-  });
-
-  it("accepts a well-formed numeric question", () => {
-    const r = Pack.safeParse(
-      base({ kind: "numeric", options: undefined, correct: ["9.8"], tolerance: 0.1 }),
-    );
-    expect(r.success).toBe(true);
-  });
-
-  it("accepts a well-formed multi question", () => {
-    const r = Pack.safeParse(base({ kind: "multi", correct: ["a", "b"] }));
-    expect(r.success).toBe(true);
-  });
-});
-
 describe("loader: malformed packs are skipped, never thrown", () => {
   // The loader reads from the content dir. We build a throwaway tree in the OS
-  // temp dir — containing a copy of the real projectile pack AND a malformed
+  // temp dir — containing a copy of the real electricity-circuits pack AND a malformed
   // pack — and point the loader at it via CBL_CONTENT_DIR. That keeps the test
   // out of the curated content tree (an interrupted run used to leave a broken
   // pack in content/z-test-malformed) while still exercising the real walk +
@@ -274,12 +147,12 @@ describe("loader: malformed packs are skipped, never thrown", () => {
       "..",
       "content",
       "physics",
-      "s2-projectile",
+      "s4-electricity-circuits",
       "pack.json",
     );
     const realPack = await readFile(realPackSrc, "utf-8");
-    await mkdir(join(tmp, "physics", "s2-projectile"), { recursive: true });
-    await writeFile(join(tmp, "physics", "s2-projectile", "pack.json"), realPack);
+    await mkdir(join(tmp, "physics", "s4-electricity-circuits"), { recursive: true });
+    await writeFile(join(tmp, "physics", "s4-electricity-circuits", "pack.json"), realPack);
 
     // A malformed pack: invalid `version` (string, not number).
     await mkdir(join(tmp, "z-test-malformed", "broken"), { recursive: true });
@@ -302,7 +175,7 @@ describe("loader: malformed packs are skipped, never thrown", () => {
       expect(result.skipped.some((s) => s.path.includes("broken"))).toBe(true);
       // The real pack still loaded alongside the broken one.
       expect(
-        result.packs.some((p) => p.packId === "phy.s2.motion.projectile"),
+        result.packs.some((p) => p.packId === "phy.s4.electricity.circuits"),
       ).toBe(true);
     } finally {
       delete process.env.CBL_CONTENT_DIR;
@@ -327,12 +200,12 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
       "..",
       "content",
       "physics",
-      "s2-projectile",
+      "s4-electricity-circuits",
       "pack.json",
     );
     const realPack = await readFile(realPackSrc, "utf-8");
-    await mkdir(join(tmp, "physics", "s2-projectile"), { recursive: true });
-    await writeFile(join(tmp, "physics", "s2-projectile", "pack.json"), realPack);
+    await mkdir(join(tmp, "physics", "s4-electricity-circuits"), { recursive: true });
+    await writeFile(join(tmp, "physics", "s4-electricity-circuits", "pack.json"), realPack);
 
     // Malformed: `version` is a string, not a number.
     await mkdir(join(tmp, "z-test-malformed", "broken"), { recursive: true });
@@ -357,7 +230,7 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
       expect(packs.some((p) => p.packId === "broken")).toBe(false);
 
       // The valid pack survives alongside the broken one.
-      expect(packs.some((p) => p.packId === "phy.s2.motion.projectile")).toBe(
+      expect(packs.some((p) => p.packId === "phy.s4.electricity.circuits")).toBe(
         true,
       );
     } finally {
@@ -374,12 +247,12 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
       "..",
       "content",
       "physics",
-      "s2-projectile",
+      "s4-electricity-circuits",
       "pack.json",
     );
     const realPack = await readFile(realPackSrc, "utf-8");
-    await mkdir(join(tmp, "physics", "s2-projectile"), { recursive: true });
-    await writeFile(join(tmp, "physics", "s2-projectile", "pack.json"), realPack);
+    await mkdir(join(tmp, "physics", "s4-electricity-circuits"), { recursive: true });
+    await writeFile(join(tmp, "physics", "s4-electricity-circuits", "pack.json"), realPack);
 
     process.env.CBL_CONTENT_DIR = tmp;
     try {

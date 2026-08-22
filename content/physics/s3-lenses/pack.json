@@ -1,0 +1,42 @@
+{
+  "packId": "phy.s3.light.lenses",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.light.lenses",
+      "title": "Lenses and Optical Instruments",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Light",
+      "subStrand": "Lenses and optical instruments",
+      "order": 5,
+      "outcomes": [
+        "know the properties of converging and diverging lenses, and how they are used in everyday life (k, u, s)",
+        "understand how lenses are used in optical systems such as the magnifying glass, correcting sight in the human eye and in camera lenses (k, u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A converging (convex) lens bulges outward and bends light rays inward, bringing parallel rays together at the focal point. A diverging (concave) lens curves inward and spreads light rays apart."
+        },
+        {
+          "type": "text",
+          "text": "A converging lens can form a magnified image, which is why it is used in magnifying glasses, cameras, and to correct long sight (where the eye cannot focus on near objects). A diverging lens is used to correct short sight (where the eye cannot focus on distant objects)."
+        },
+        {
+          "type": "text",
+          "text": "The human eye itself contains a converging lens that focuses light onto the retina at the back of the eye, allowing us to see clearly."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Geometric Optics: Basics simulation below (Lens screen). Move an object in front of a converging lens and watch how the image forms, and how it changes as you move the object or change the lens."
+        }
+      ],
+      "sim": {
+        "phet": "geometric-optics-basics_en.html",
+        "caption": "PhET Geometric Optics: Basics (Lens screen). Move an object in front of a lens and watch how the image forms. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

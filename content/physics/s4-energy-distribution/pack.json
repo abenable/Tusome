@@ -1,0 +1,43 @@
+{
+  "packId": "phy.s4.electricity.energy-distribution",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.electricity.energy-distribution",
+      "title": "Electric Energy Distribution and Consumption",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Electricity",
+      "subStrand": "Electric energy distribution and consumption",
+      "order": 3,
+      "outcomes": [
+        "understand the distribution of electricity from the source to consumer units (u)",
+        "understand the energy transformations in common domestic electrical devices and how energy can be saved (u)",
+        "know the dangers of mains electricity and understand how these may be minimised by safety devices, and by sensible precautions (k, u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Electricity is generated at a power station, usually by spinning a coil of wire inside a magnetic field (or a magnet inside a coil) \u2014 this is what a generator does. It is then transmitted over long distances at very high voltage, which reduces energy losses along the way, before being stepped down to a safer voltage for use in homes and businesses."
+        },
+        {
+          "type": "text",
+          "text": "Domestic electrical devices transform electrical energy into other useful forms: a heater transforms it into heat energy, a lamp into heat and light energy, a speaker into sound energy, and a fan into sound and mechanical (kinetic) energy. Choosing energy-efficient appliances reduces how much electrical energy is wasted, most often as unwanted heat."
+        },
+        {
+          "type": "text",
+          "text": "Mains electricity can be dangerous: it can cause electric shock, burns, or fire if used carelessly. Safety devices \u2014 fuses, circuit breakers, and earthing \u2014 protect people and appliances by cutting off the current if something goes wrong, such as a fault causing too much current to flow."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Generator simulation below. Turn the crank (or let the water wheel spin it) to rotate a magnet near a coil, and watch how this generates an electric current."
+        }
+      ],
+      "sim": {
+        "phet": "generator_en.html",
+        "caption": "PhET Generator. Spin a magnet near a coil and watch it generate an electric current \u2014 the basic principle behind every power station. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

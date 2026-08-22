@@ -1,0 +1,55 @@
+{
+  "packId": "phy.s4.electricity.circuits",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.electricity.circuits",
+      "title": "Electric Circuits",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Electricity",
+      "subStrand": "Simple circuits",
+      "order": 1,
+      "outcomes": [
+        "DRAFT \u2014 Define electric current as the flow of charge and state its unit, the ampere (A).",
+        "DRAFT \u2014 State Ohm's law and apply V = I R to series and parallel circuits.",
+        "DRAFT \u2014 Build a simple d.c. circuit and predict how current, voltage and resistance change in series and parallel arrangements."
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "An electric current is a flow of electric charge. In a metal wire, the charge carriers are electrons. Current is measured in amperes (A), and it is the amount of charge passing a point each second."
+        },
+        {
+          "type": "equation",
+          "latex": "I = \\frac{Q}{t}"
+        },
+        {
+          "type": "text",
+          "text": "Ohm's law relates the current through a resistor to the voltage across it and its resistance. Voltage is measured in volts (V) and resistance in ohms (\u03a9)."
+        },
+        {
+          "type": "equation",
+          "latex": "V = I \\, R"
+        },
+        {
+          "type": "text",
+          "text": "In a series circuit the same current flows through every component and the total resistance is the sum of the individual resistances. In a parallel circuit the voltage across each branch is the same and the total current is the sum of the branch currents, so the combined resistance is smaller than any single branch."
+        },
+        {
+          "type": "equation",
+          "latex": "R_{series} = R_1 + R_2 + \\cdots \\qquad \\frac{1}{R_{parallel}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots"
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Circuit Construction Kit below to drag a battery, wires and a bulb or resistor onto the workbench. Build both a series and a parallel circuit and watch how the current and voltage change. A voltmeter is connected across a component; an ammeter is connected in series with it."
+        }
+      ],
+      "sim": {
+        "phet": "circuit-construction-kit-dc_en.html",
+        "caption": "PhET Circuit Construction Kit: DC. Drag components onto the workbench to build series and parallel circuits. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

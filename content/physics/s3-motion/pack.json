@@ -1,0 +1,63 @@
+{
+  "packId": "phy.s3.matter.motion",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.matter.motion",
+      "title": "Speed, Velocity and Newton's Laws",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Linear and non-linear motion",
+      "order": 1,
+      "outcomes": [
+        "understand and apply the relationship between speed, distance, and time (u, s)",
+        "understand the terms: linear motion, speed, average speed, acceleration, and be able to investigate resistance to motion (u, s)",
+        "understand and apply Newton's laws of motion (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Speed tells you how fast something moves \u2014 the distance travelled per unit of time."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{speed} = \\frac{\\text{distance}}{\\text{time}}"
+        },
+        {
+          "type": "text",
+          "text": "Velocity is speed in a stated direction. Acceleration is the rate at which velocity changes \u2014 how quickly an object speeds up, slows down, or changes direction."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{acceleration} = \\frac{\\text{change in velocity}}{\\text{time taken}}"
+        },
+        {
+          "type": "text",
+          "text": "On a distance-time graph, the gradient (slope) at any point gives the speed at that instant \u2014 a steeper line means a faster speed, and a flat (horizontal) line means the object is stationary. On a velocity-time graph, the gradient gives the acceleration."
+        },
+        {
+          "type": "text",
+          "text": "Newton's first law says an object stays at rest, or keeps moving at constant velocity, unless a resultant (unbalanced) force acts on it. Newton's second law relates the resultant force on an object to its mass and acceleration."
+        },
+        {
+          "type": "equation",
+          "latex": "F = m a"
+        },
+        {
+          "type": "text",
+          "text": "Newton's third law says that whenever one object exerts a force on a second object, the second object exerts an equal and opposite force back on the first \u2014 forces always come in equal, opposite pairs."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Forces and Motion: Basics simulation below (Motion screen). Push the object with different forces and watch its position, velocity, and acceleration graphs as it moves."
+        }
+      ],
+      "sim": {
+        "phet": "forces-and-motion-basics_en.html",
+        "caption": "PhET Forces and Motion: Basics (Motion screen). Apply a force and watch position, velocity, and acceleration change over time. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

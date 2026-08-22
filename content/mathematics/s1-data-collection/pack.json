@@ -1,0 +1,42 @@
+{
+  "packId": "mat.s1.data.data-collection-and-presentation",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.data.data-collection-and-presentation",
+      "title": "Data Collection and Presentation",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Data and Probability",
+      "subStrand": "Data collection",
+      "order": 9,
+      "outcomes": [
+        "understand the differences between types of data. (k, u)",
+        "collect and represents simple data from the local environment using tally chart, bar chart (bars do not touch), pie chart and line graph. (k, u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Data can be qualitative (describing a quality, like favourite colour or type of shop) or quantitative (a number, like height or number of siblings). Quantitative data can be further split into discrete data, which can only take exact, separate values (like the number of learners in a class — never 22.5), and continuous data, which can take any value in a range (like height or time)."
+        },
+        {
+          "type": "text",
+          "text": "A tally chart records data as it is collected, using a mark for each item and grouping every fifth mark across the previous four (|||| ) to make counting easy afterwards."
+        },
+        {
+          "type": "text",
+          "text": "A bar chart displays discrete or qualitative data as separate bars, one per category, with a gap between each bar to show the categories are distinct — this is different from a histogram, where continuous data is shown with touching bars because the categories flow into each other."
+        },
+        {
+          "type": "text",
+          "text": "A pie chart shows how a total is divided into categories, using the size of each slice to represent its share. A line graph plots points connected by straight lines, and is best for showing how a continuous quantity changes over time, such as rainfall recorded each month."
+        },
+        {
+          "type": "text",
+          "text": "Choosing the right chart depends on the data and the question being asked: a bar chart compares separate categories, a pie chart shows proportions of a whole, and a line graph shows a trend over time. Collecting data for a clear purpose — such as testing whether most learners in a class walk to school — makes it easier to decide which of these will present the findings most clearly."
+        }
+      ]
+    }
+  ]
+}

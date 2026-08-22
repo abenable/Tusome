@@ -1,0 +1,47 @@
+{
+  "packId": "phy.s1.matter.states-of-matter",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.states-of-matter",
+      "title": "States of Matter",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Particle theory of matter",
+      "order": 3,
+      "outcomes": [
+        "understand that atoms are the building blocks from which all matter is made; appreciate that the states of matter have different properties (k, u)",
+        "understand how the particle theory of matter explains the properties of solids, liquids and gases, changes of state, and diffusion (u)",
+        "understand the meaning and importance of plasma in physics (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "All matter is made of tiny particles (atoms and molecules) that are always in motion. The three familiar states of matter \u2014 solid, liquid, and gas \u2014 differ in how tightly those particles are packed and how freely they can move."
+        },
+        {
+          "type": "text",
+          "text": "In a solid, particles are packed closely in fixed positions and only vibrate, giving the solid a fixed shape and a fixed volume. In a liquid, particles are still close together but can slide past one another, so a liquid has a fixed volume but takes the shape of its container. In a gas, particles are far apart and move quickly in random directions, so a gas has no fixed shape or volume and spreads to fill any container."
+        },
+        {
+          "type": "text",
+          "text": "Heating a substance gives its particles more energy and can change its state: melting turns a solid into a liquid, and boiling (or evaporation) turns a liquid into a gas. Cooling has the opposite effect: condensation turns a gas into a liquid, and freezing turns a liquid into a solid."
+        },
+        {
+          "type": "text",
+          "text": "Plasma is often called the fourth state of matter. It forms when a gas is given enough energy that electrons are stripped away from its atoms, leaving a mix of charged particles. Plasma is found in stars \u2014 including the Sun \u2014 as well as in lightning and in neon or fluorescent lights."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET States of Matter: Basics simulation below to compare how particles are arranged and how they move in a solid, a liquid, and a gas, and to see what happens as you heat or cool a substance."
+        }
+      ],
+      "sim": {
+        "phet": "states-of-matter-basics_en.html",
+        "caption": "PhET States of Matter: Basics. Watch how particles behave in a solid, liquid, and gas, and heat or cool a substance to change its state. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

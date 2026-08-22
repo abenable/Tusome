@@ -1,0 +1,50 @@
+{
+  "packId": "phy.s2.matter.turning-effect",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.matter.turning-effect",
+      "title": "Turning Effect of Forces, Centre of Gravity and Stability",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Turning effect of forces, centre of gravity and stability",
+      "order": 2,
+      "outcomes": [
+        "understand the turning effect of forces and its applications (u, s, v/a)",
+        "understand and apply the concept of centre of gravity (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A force can turn an object about a pivot. The turning effect of a force is called its moment, and it depends on both the size of the force and its perpendicular distance from the pivot."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{moment} = \\text{force} \\times \\text{perpendicular distance from the pivot}"
+        },
+        {
+          "type": "text",
+          "text": "A see-saw (or beam balanced on a pivot) is balanced \u2014 in equilibrium \u2014 when the total clockwise moment equals the total anticlockwise moment. This is the principle of moments."
+        },
+        {
+          "type": "text",
+          "text": "Every object has a centre of gravity: the single point where its whole weight can be thought of as acting. An object is more stable \u2014 harder to tip over \u2014 when its centre of gravity is low and its base is wide. If the centre of gravity moves outside the base, the object topples over."
+        },
+        {
+          "type": "text",
+          "text": "This is why buses, racing cars, and other vehicles are designed with a low centre of gravity and a wide wheelbase for stability."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Balancing Act simulation below. Place masses at different distances from the pivot on the see-saw and find the combinations that balance it."
+        }
+      ],
+      "sim": {
+        "phet": "balancing-act_en.html",
+        "caption": "PhET Balancing Act. Place masses at different distances from the pivot and find out what makes a see-saw balance. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

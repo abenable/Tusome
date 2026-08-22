@@ -1,0 +1,57 @@
+{
+  "packId": "mat.s1.numbers.working-with-integers",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.numbers.working-with-integers",
+      "title": "Working with Integers",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Numbers",
+      "subStrand": "Integers",
+      "order": 2,
+      "outcomes": [
+        "identify, read and write natural numbers as numerals and words in million, billion and trillion. (u s)",
+        "differentiate between natural numbers and whole numbers/integers. (u)",
+        "identify directed numbers. (k)",
+        "use directed numbers (limited to integers) in real life situations. (u s)",
+        "use the hierarchy of operations to carry out the four mathematical operations on integers. (u)",
+        "identify even, odd, prime and composite numbers. (k u)",
+        "find the prime factorisation of any number. (k u s)",
+        "relate common factors with HCF and multiples with LCM. (k u)",
+        "work out and use divisibility tests of some numbers. (k, u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Natural numbers (1, 2, 3, ...) are the counting numbers. Whole numbers add zero (0, 1, 2, 3, ...). Integers extend further to include negative numbers (..., -2, -1, 0, 1, 2, ...) — these are directed numbers, because the sign shows a direction: above or below zero, such as a temperature, or above or below sea level."
+        },
+        {
+          "type": "text",
+          "text": "For example, a temperature of -5°C is 5 degrees below zero, and an altitude of -100 m means 100 metres below sea level. Directed numbers combine by moving along a number line: -5 + 3 means starting at -5 and moving 3 to the right, landing on -2."
+        },
+        {
+          "type": "text",
+          "text": "When a calculation mixes operations, follow the hierarchy of operations (BODMAS): Brackets, then Of/Orders (powers), then Division and Multiplication (left to right), then Addition and Subtraction (left to right). Work out 3 + 4 x (6 - 2): first the bracket gives 6 - 2 = 4, then the multiplication gives 4 x 4 = 16, then the addition gives 3 + 16 = 19."
+        },
+        {
+          "type": "equation",
+          "expr": "3 + 4 x (6 - 2) = 3 + 4 x 4 = 3 + 16 = 19"
+        },
+        {
+          "type": "text",
+          "text": "A prime number has exactly two factors: 1 and itself (2, 3, 5, 7, 11, ...). A composite number has more than two factors. Every composite number can be broken down into a unique product of prime factors — for 60: 60 = 2 x 30 = 2 x 2 x 15 = 2 x 2 x 3 x 5, so 60 = 2² x 3 x 5."
+        },
+        {
+          "type": "equation",
+          "latex": "60 = 2^2 \\times 3 \\times 5"
+        },
+        {
+          "type": "text",
+          "text": "The Highest Common Factor (HCF) of two numbers is the largest number that divides both exactly; the Lowest Common Multiple (LCM) is the smallest number that both divide into exactly. Using prime factors, the HCF takes the lowest power of each shared prime, and the LCM takes the highest power of every prime that appears. For 60 = 2² x 3 x 5 and 42 = 2 x 3 x 7: HCF = 2 x 3 = 6, and LCM = 2² x 3 x 5 x 7 = 420."
+        }
+      ]
+    }
+  ]
+}

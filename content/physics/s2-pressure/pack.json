@@ -1,0 +1,47 @@
+{
+  "packId": "phy.s2.matter.pressure",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.matter.pressure",
+      "title": "Pressure in Fluids",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Pressure in solids and fluids",
+      "order": 3,
+      "outcomes": [
+        "understand that pressure is the result of a force applied over an area (u, s)",
+        "understand the effect of depth on the pressure in a fluid and the implications of this (u, s)",
+        "understand the nature of the atmosphere and how atmospheric pressure is measured (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Pressure is the force acting on each unit of area. For the same force, a smaller area produces a bigger pressure \u2014 this is why a drawing pin has a sharp point, and why a tractor's wide tyres spread its weight to avoid sinking into soft ground."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{pressure} = \\frac{\\text{force}}{\\text{area}}"
+        },
+        {
+          "type": "text",
+          "text": "In a fluid (a liquid or a gas), pressure increases with depth: the deeper you go, the greater the weight of fluid pressing down from above. This is why a dam wall is built thicker at the bottom than at the top, and why the pressure at the bottom of the sea is much higher than at the surface."
+        },
+        {
+          "type": "text",
+          "text": "The atmosphere is the layer of air surrounding the Earth. Air has weight, so it exerts pressure \u2014 atmospheric pressure \u2014 which can be measured with a barometer. Atmospheric pressure decreases with altitude, which is why it becomes harder to breathe high up a mountain."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Under Pressure simulation below. Change the depth and the liquid, and see how the pressure at different points changes."
+        }
+      ],
+      "sim": {
+        "phet": "under-pressure_en.html",
+        "caption": "PhET Under Pressure. Change depth and liquid density and see how fluid pressure changes. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

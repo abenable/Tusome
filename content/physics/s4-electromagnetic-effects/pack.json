@@ -1,0 +1,43 @@
+{
+  "packId": "phy.s4.magnetism.electromagnetic-effects",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.magnetism.electromagnetic-effects",
+      "title": "Electromagnetic Effects",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Magnetism",
+      "subStrand": "Electromagnetic effects",
+      "order": 2,
+      "outcomes": [
+        "understand that a current carrying conductor produces a magnetic field that can be detected. (u, s)",
+        "understand the application of electromagnets in devices such as motors, bells, and generators (u, s)",
+        "understand the difference between a.c. and d.c (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Whenever an electric current flows through a conductor, it produces a magnetic field around it. This effect can be strengthened by winding the conductor into a coil, and further strengthened by placing an iron core inside the coil \u2014 the result is called an electromagnet."
+        },
+        {
+          "type": "text",
+          "text": "The strength of an electromagnet increases with the number of turns of wire in the coil and with the size of the current flowing through it. Unlike a permanent magnet, an electromagnet can be switched on and off, and its strength can be varied \u2014 which is why electromagnets, not permanent magnets, are used in devices such as electric bells, relays, and electric motors."
+        },
+        {
+          "type": "text",
+          "text": "Direct current (d.c.) flows in one direction only, the kind produced by a battery or cell. Alternating current (a.c.) regularly reverses direction, the kind supplied to homes from the mains \u2014 most household appliances use a.c."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Magnets and Electromagnets simulation below. Build an electromagnet by wrapping a coil around an iron core, then change the number of turns and the current to see how the magnet's strength changes."
+        }
+      ],
+      "sim": {
+        "phet": "magnets-and-electromagnets_en.html",
+        "caption": "PhET Magnets and Electromagnets. Build an electromagnet and see how coil turns and current affect its strength. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "packId": "phy.s1.matter.gravity-and-weight",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.gravity-and-weight",
+      "title": "Gravity and Weight",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Effects of forces",
+      "order": 7,
+      "outcomes": [
+        "understand the existence of the force of gravity and distinguish between mass and weight (u)",
+        "appreciate that the weight of a body depends on the size of the force of gravity acting upon it (k, u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Gravity is a force of attraction that exists between any two masses. The Earth's gravity pulls objects near it towards the Earth's centre."
+        },
+        {
+          "type": "text",
+          "text": "Mass is the amount of matter in an object, measured in kilograms (kg); it does not change with location. Weight is the force of gravity acting on that mass, measured in newtons (N), and it depends on the size of the gravitational force acting on the object."
+        },
+        {
+          "type": "equation",
+          "latex": "W = m g"
+        },
+        {
+          "type": "text",
+          "text": "Because the Moon has far less mass than the Earth, it pulls objects with a much smaller gravitational force. An object's weight on the Moon is only about one-sixth of its weight on Earth, even though the object's mass has not changed at all."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Gravity Force Lab: Basics simulation below. Change the mass of the two objects and the distance between them, and see how the gravitational force between them changes."
+        }
+      ],
+      "sim": {
+        "phet": "gravity-force-lab-basics_en.html",
+        "caption": "PhET Gravity Force Lab: Basics. Change mass and distance and see how the gravitational force between two objects changes. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

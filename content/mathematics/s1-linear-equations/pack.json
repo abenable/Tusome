@@ -8,8 +8,9 @@
       "title": "Linear Equations in One Variable",
       "subject": "mathematics",
       "level": "S1",
-      "strand": "Algebra",
+      "strand": "Patterns and Algebra",
       "subStrand": "Linear equations",
+      "order": 12,
       "outcomes": [
         "Solve linear equations in one variable using the balance method.",
         "Solve linear equations involving brackets and fractions.",
@@ -32,58 +33,6 @@
         {
           "type": "text",
           "text": "Always check the answer by substituting it back into the original equation. For x = 4: 2(4) + 3 = 8 + 3 = 11, which matches the right side, so the solution is correct."
-        }
-      ],
-      "quiz": [
-        {
-          "id": "q1",
-          "prompt": "Solve for x:  2x + 3 = 11",
-          "kind": "numeric",
-          "correct": ["4"],
-          "tolerance": 0,
-          "explanation": "Subtract 3 from both sides: 2x = 8. Divide both sides by 2: x = 4. Check: 2(4) + 3 = 11. Correct."
-        },
-        {
-          "id": "q2",
-          "prompt": "Solve for x:  3x - 5 = 10",
-          "kind": "numeric",
-          "correct": ["5"],
-          "tolerance": 0,
-          "explanation": "Add 5 to both sides: 3x = 15. Divide both sides by 3: x = 5. Check: 3(5) - 5 = 10. Correct."
-        },
-        {
-          "id": "q3",
-          "prompt": "What is the correct first step to solve 2x + 3 = 11?",
-          "kind": "single",
-          "options": [
-            { "id": "a", "text": "Subtract 3 from both sides" },
-            { "id": "b", "text": "Add 3 to both sides" },
-            { "id": "c", "text": "Multiply both sides by 2" },
-            { "id": "d", "text": "Divide both sides by x" }
-          ],
-          "correct": ["a"],
-          "explanation": "Undo the addition first: subtract 3 from both sides to isolate the term with x, giving 2x = 8. Then divide by 2. You never divide by the variable itself in a linear equation."
-        },
-        {
-          "id": "q4",
-          "prompt": "Solve for x:  x / 2 = 6",
-          "kind": "numeric",
-          "correct": ["12"],
-          "tolerance": 0,
-          "explanation": "Multiply both sides by 2 to undo the division: x = 12. Check: 12 / 2 = 6. Correct."
-        },
-        {
-          "id": "q5",
-          "prompt": "A linear equation of the form ax + b = 0 (with a ≠ 0) has how many solutions?",
-          "kind": "single",
-          "options": [
-            { "id": "a", "text": "Exactly one solution" },
-            { "id": "b", "text": "Two solutions" },
-            { "id": "c", "text": "Infinitely many solutions" },
-            { "id": "d", "text": "No solution" }
-          ],
-          "correct": ["a"],
-          "explanation": "A linear equation ax + b = 0 with a ≠ 0 has exactly one solution, x = -b/a. Two solutions would mean the variable is squared; infinitely many or none happen only when a = 0, which is excluded here."
         }
       ]
     }

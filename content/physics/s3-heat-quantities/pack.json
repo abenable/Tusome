@@ -1,0 +1,47 @@
+{
+  "packId": "phy.s3.heat.quantities",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.heat.quantities",
+      "title": "Heat Quantities and Vapours",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Heat",
+      "subStrand": "Heat quantities and vapours",
+      "order": 8,
+      "outcomes": [
+        "understand and use the concepts of heat capacity and latent heat (k, u, s)",
+        "understand the concept of latent heat and change of state, and use them to explain melting and boiling point (u, s)",
+        "appreciate the cooling effect of evaporation and how this contributes to maintaining constant body temperature (k, u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Heat capacity describes how much heat energy is needed to raise the temperature of a substance by a certain amount. Different materials need different amounts of heat energy to warm up by the same number of degrees."
+        },
+        {
+          "type": "text",
+          "text": "Latent heat is the heat energy absorbed or released when a substance changes state (for example melting or boiling) without any change in temperature. While ice is melting, or water is boiling, the temperature stays constant even though heat energy is still being supplied \u2014 that energy is being used to break the bonds between particles, not to raise the temperature."
+        },
+        {
+          "type": "text",
+          "text": "Evaporation is the escape of the fastest-moving particles from the surface of a liquid, even below its boiling point. Because it is the higher-energy particles that escape, the average energy \u2014 and so the temperature \u2014 of the remaining liquid drops. This cooling effect is why sweating helps mammals, including humans, keep a constant body temperature: as sweat evaporates from the skin, it carries heat energy away from the body."
+        },
+        {
+          "type": "text",
+          "text": "A saturated vapour is one in which particles are evaporating from and condensing back into the liquid at the same rate \u2014 no net change. Boiling happens when a liquid's saturated vapour pressure becomes equal to the surrounding atmospheric pressure, which is why water boils at a lower temperature at high altitude, where atmospheric pressure is lower."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET States of Matter simulation below (Phase Changes screen). Heat and cool a substance and watch its temperature and phase change on the phase diagram."
+        }
+      ],
+      "sim": {
+        "phet": "states-of-matter_en.html",
+        "caption": "PhET States of Matter (Phase Changes screen). Heat or cool a substance and watch its temperature and state change together. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

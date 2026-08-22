@@ -1,0 +1,44 @@
+{
+  "packId": "mat.s2.data.graphs",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.data.graphs",
+      "title": "Graphs",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Data and Probability",
+      "subStrand": "Graphs",
+      "order": 3,
+      "outcomes": [
+        "Tabulate values from given relations. (u)",
+        "Plot and draw lines through given points. (u, s)",
+        "Choose and use appropriate scales. (u, s)",
+        "Draw, read and interpret the graph (e.g. Distance-Time and Speed-Time Graphs to estimate distance, speed and time). (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "To draw a graph from a relation, first tabulate values: choose several x values, work out the matching y values from the relation, then plot the points and join them. Pick a scale for each axis that fits the data on the grid and is easy to read (e.g. 1 square = 10 units, not 1 square = 7 units)."
+        },
+        {
+          "type": "text",
+          "text": "A distance-time graph plots distance travelled (vertical axis) against time (horizontal axis). The steepness (gradient) of the line at any point is the speed at that moment: a steeper line means faster travel, a flat (horizontal) section means the object has stopped."
+        },
+        {
+          "type": "text",
+          "text": "A cyclist travels 20 km in the first hour, rests for 30 minutes, then travels a further 15 km in 45 minutes. Reading the distance-time graph: speed for the first hour = 20 km ÷ 1 h = 20 km/h; during the rest, distance stays flat at 20 km; speed for the last section = 15 km ÷ 0.75 h = 20 km/h."
+        },
+        {
+          "type": "equation",
+          "expr": "speed = distance ÷ time:  20 km ÷ 1 h = 20 km/h,   15 km ÷ 0.75 h = 20 km/h"
+        },
+        {
+          "type": "text",
+          "text": "A speed-time graph plots speed against time instead. Here the gradient represents acceleration, and the area under the graph between two times gives the distance travelled in that interval."
+        }
+      ]
+    }
+  ]
+}

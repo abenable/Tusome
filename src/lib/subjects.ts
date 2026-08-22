@@ -45,7 +45,7 @@ export function isSubject(x: string | undefined): x is Subject {
 export interface SubjectAccent {
   /** Filled chip / icon tile background. */
   bg: string
-  /** Accent text (headings, score figures, "Start quiz" links). */
+  /** Accent text (headings, links). */
   text: string
   /** Pale badge background, e.g. behind "Physics · S2". */
   tint: string

@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s1.numbers.cartesian-coordinates",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.numbers.cartesian-coordinates",
+      "title": "Rectangular Cartesian Coordinates in 2 Dimensions",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Numbers",
+      "subStrand": "Cartesian coordinates",
+      "order": 4,
+      "outcomes": [
+        "draw and label the Cartesian plane. (k, s)",
+        "identify the x– and y-axis. (k)",
+        "read and plot points on the Cartesian plane/coordinate grid. (k, s)",
+        "complete shapes on a coordinate grid. (k, u, s)",
+        "choose and uses appropriate scale for a bi-variate data set. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The Cartesian plane is formed by two number lines crossing at right angles at a point called the origin, (0, 0). The horizontal line is the x-axis and the vertical line is the y-axis. Every point on the plane is described by an ordered pair (x, y), where x tells how far to move along the x-axis and y tells how far to move along the y-axis."
+        },
+        {
+          "type": "text",
+          "text": "To plot the point (3, 2): start at the origin, move 3 units right along the x-axis, then 2 units up parallel to the y-axis. To plot (-4, 1): move 4 units left, then 1 unit up. A negative x moves left, a negative y moves down."
+        },
+        {
+          "type": "text",
+          "text": "Shapes can be completed on a coordinate grid using symmetry and known properties. A square has three vertices at (2, 1), (6, 1) and (6, 5). Since all sides of a square are equal and meet at right angles, the fourth vertex must be directly above (2, 1) at the same height as (6, 5), giving (2, 5)."
+        },
+        {
+          "type": "equation",
+          "expr": "(2, 1), (6, 1), (6, 5)  ->  fourth vertex (2, 5)"
+        },
+        {
+          "type": "text",
+          "text": "When plotting real data — for example the height and age of several learners — the scale on each axis should be chosen so the data fills most of the grid without being cramped or spread too thin. If ages range from 11 to 16, a scale where each square represents 1 year suits the x-axis; if heights range from 100 cm to 180 cm, each square representing 10 cm suits the y-axis better than 1 cm, which would make the graph far too tall."
+        }
+      ]
+    }
+  ]
+}

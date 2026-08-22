@@ -1,0 +1,47 @@
+{
+  "packId": "mat.s2.numbers.indices-and-standard-form",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.numbers.indices-and-standard-form",
+      "title": "Numerical Concept 1: Indices and Standard Form",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Numbers",
+      "subStrand": "Indices and standard form",
+      "order": 4,
+      "outcomes": [
+        "Give approximate answers to calculations. (u, s)",
+        "Write numbers to a given number of significant figures. (u, s)",
+        "Differentiate between significant figures and decimal places. (u, s)",
+        "Express numbers in standard form. (u)",
+        "Identify base number and index. (k)",
+        "State and apply the laws of indices in calculations. (k, u, s)",
+        "Use a calculator to find powers and roots. (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In an index form like 5^3, 5 is the base and 3 is the index (or power) — it means 5 x 5 x 5 = 125. The laws of indices let you combine powers of the same base without expanding them: multiplying adds the indices, dividing subtracts them, and raising a power to a power multiplies the indices."
+        },
+        {
+          "type": "equation",
+          "latex": "a^m \\times a^n = a^{m+n}, \\qquad a^m \\div a^n = a^{m-n}, \\qquad (a^m)^n = a^{mn}"
+        },
+        {
+          "type": "text",
+          "text": "Standard form (scientific notation) writes a number as A x 10^n, where 1 <= A < 10. The population of Uganda, about 45 000 000, is written 4.5 x 10^7 in standard form — count how many places the decimal point moves to get A between 1 and 10; that count is the power of 10."
+        },
+        {
+          "type": "equation",
+          "expr": "45 000 000 = 4.5 x 10^7"
+        },
+        {
+          "type": "text",
+          "text": "Significant figures count all the meaningful digits in a number starting from the first non-zero digit, while decimal places count only digits after the decimal point. 0.00456 has 3 significant figures (4, 5, 6) but 5 decimal places. Rounding 3.14159 to 3 significant figures gives 3.14; rounding it to 3 decimal places gives 3.142."
+        }
+      ]
+    }
+  ]
+}

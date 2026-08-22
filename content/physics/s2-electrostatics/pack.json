@@ -1,0 +1,41 @@
+{
+  "packId": "phy.s2.electricity.electrostatics",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.electricity.electrostatics",
+      "title": "Electrostatics",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Electricity",
+      "subStrand": "Electrostatics",
+      "order": 8,
+      "outcomes": [
+        "understand everyday effects of static electricity and explain them in terms of the build-up and transfer of electrical charge (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Rubbing certain materials together can transfer electrons from one surface to the other. The surface that gains electrons becomes negatively charged; the surface that loses electrons becomes positively charged. This build-up of charge on an insulator is called static electricity."
+        },
+        {
+          "type": "text",
+          "text": "A charged object can attract light, uncharged objects \u2014 such as small bits of paper \u2014 because it induces an opposite charge on the near side of the object. Like charges repel each other, and opposite charges attract."
+        },
+        {
+          "type": "text",
+          "text": "Lightning is a large-scale example of static electricity. Friction between moving bodies of air and ice particles inside a storm cloud builds up a huge charge. When the charge becomes great enough, it discharges suddenly as a lightning strike \u2014 either within the cloud, between clouds, or to the ground."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Balloons and Static Electricity simulation below. Rub a balloon against the sweater and see how it becomes charged, then see how it interacts with the wall and with a neutral object."
+        }
+      ],
+      "sim": {
+        "phet": "balloons-and-static-electricity_en.html",
+        "caption": "PhET Balloons and Static Electricity. Rub a balloon on a sweater and see how the charge it picks up attracts other objects. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

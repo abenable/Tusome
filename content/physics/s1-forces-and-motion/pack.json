@@ -1,0 +1,42 @@
+{
+  "packId": "phy.s1.matter.forces-and-motion",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.forces-and-motion",
+      "title": "Balanced and Unbalanced Forces",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Effects of forces",
+      "order": 5,
+      "outcomes": [
+        "know that a force is a push or a pull and that the unit of force is the Newton (k)",
+        "know the effects of balanced and unbalanced forces on objects (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A force is a push or a pull that one object exerts on another. The SI unit of force is the newton (N)."
+        },
+        {
+          "type": "text",
+          "text": "When two or more forces act on an object, they can be combined into a single resultant force that has the same overall effect. Forces acting in the same direction add together; forces acting in opposite directions subtract from each other."
+        },
+        {
+          "type": "text",
+          "text": "When the forces acting on an object are balanced \u2014 their resultant is zero \u2014 the object's motion does not change: it stays at rest, or keeps moving at a constant speed in a straight line. When the forces are unbalanced \u2014 a non-zero resultant force acts \u2014 the object's motion changes: it speeds up, slows down, or changes direction."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Forces and Motion: Basics simulation below (Net Force screen). Apply pushes and pulls to the cart and watch how balanced and unbalanced forces change \u2014 or fail to change \u2014 its motion."
+        }
+      ],
+      "sim": {
+        "phet": "forces-and-motion-basics_en.html",
+        "caption": "PhET Forces and Motion: Basics. Apply forces to a cart and see how balanced and unbalanced forces affect its motion. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

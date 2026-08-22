@@ -1,0 +1,47 @@
+{
+  "packId": "phy.s2.space.solar-system",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.space.solar-system",
+      "title": "The Solar System",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Earth and Space Physics",
+      "subStrand": "The solar system",
+      "order": 9,
+      "outcomes": [
+        "know the relative sizes, positions, and motions of the earth, sun and moon (k, u)",
+        "understand how day and night occur and demonstrate the phases of the moon (u, s)",
+        "know the components of the solar system and their positions (k)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The Earth orbits the Sun once every year, spinning on its own axis once approximately every 24 hours. The Moon orbits the Earth roughly once a month."
+        },
+        {
+          "type": "text",
+          "text": "Day and night happen because the Earth spins on its axis: the side facing the Sun experiences day, while the side facing away experiences night. As the Earth keeps turning, every location passes in and out of sunlight."
+        },
+        {
+          "type": "text",
+          "text": "The Moon does not produce its own light \u2014 we see it because it reflects sunlight. As the Moon orbits the Earth, we see different amounts of its sunlit side, which is why the Moon appears to change shape over about a month \u2014 from new moon, through crescent, half, and full moon, and back again. These are the phases of the Moon."
+        },
+        {
+          "type": "text",
+          "text": "The solar system consists of the Sun at its centre, the eight planets that orbit it (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune), their moons, and smaller bodies including asteroids and comets."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET My Solar System simulation below to build your own simplified model of the Sun, Earth, and Moon, and explore how changing their masses, speeds, and starting positions affects their orbits."
+        }
+      ],
+      "sim": {
+        "phet": "my-solar-system_en.html",
+        "caption": "PhET My Solar System. Build a model solar system and see how mass, speed, and position affect the orbits of the bodies in it. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s2.algebra.mappings-and-relations",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.algebra.mappings-and-relations",
+      "title": "Mappings and Relations",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Relations and functions",
+      "order": 1,
+      "outcomes": [
+        "Use arrow diagrams/mappings to represent relations and functions. (k, u)",
+        "Identify domain and range of a mapping. (k, u)",
+        "Describe and distinguish between function and non-function mapping. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A mapping connects each member of one set (the domain) to a member of another set (the range) using an arrow diagram. The set of starting values is the domain; the set of values they map to is the range."
+        },
+        {
+          "type": "text",
+          "text": "Consider the mapping \"add 3\" from the set {5, 7, 8, 10} to another set. Applying the rule: 5 -> 8, 7 -> 10, 8 -> 11, 10 -> 13. The domain is {5, 7, 8, 10} and the range is {8, 10, 11, 13}."
+        },
+        {
+          "type": "equation",
+          "expr": "domain {5, 7, 8, 10}  --(add 3)-->  range {8, 10, 11, 13}"
+        },
+        {
+          "type": "text",
+          "text": "A mapping is a function only if every member of the domain maps to exactly one member of the range. \"Add 3\" is a function, because each input gives a single output. A mapping where one input arrows to two different outputs (for example, both 4 and -4 mapping from 16 under \"square root\") is not a function — it is a one-to-many relation."
+        },
+        {
+          "type": "text",
+          "text": "Mappings can be one-to-one (each domain value has its own range value, e.g. \"add 3\"), many-to-one (several domain values share a range value, e.g. \"square\", since both 2 and -2 map to 4), or one-to-many (not a function). Checking which is which comes down to counting how many arrows leave and arrive at each point."
+        }
+      ]
+    }
+  ]
+}

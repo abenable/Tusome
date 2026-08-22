@@ -1,0 +1,54 @@
+{
+  "packId": "mat.s1.numbers.fractions-percentages-decimals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.numbers.fractions-percentages-decimals",
+      "title": "Fractions, Percentages and Decimals",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Numbers",
+      "subStrand": "Fractions, decimals and percentages",
+      "order": 3,
+      "outcomes": [
+        "describe different types of fractions. (k)",
+        "convert improper fractions to mixed numbers and vice versa. (k, s)",
+        "work out problems from real life situations. (u, s)",
+        "add, subtract, divide and Multiplies Decimals. (u, s)",
+        "converts fractions to decimals and vice versa. (u, s)",
+        "identifies and classifies decimals into terminating, non-terminating and recurring decimals. (u)",
+        "converts recurring decimals into fractions. (u, s)",
+        "converts fractions and decimals into percentages and vice versa. (u s)",
+        "calculates a percentage of a given quantity. (s)",
+        "works out real-life problems involving percentages. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A proper fraction has a numerator smaller than its denominator (3/4). An improper fraction has a numerator equal to or larger than its denominator (7/4), and can be rewritten as a mixed number — a whole number plus a proper fraction. Convert 7/4: 7 ÷ 4 = 1 remainder 3, so 7/4 = 1¾."
+        },
+        {
+          "type": "text",
+          "text": "A fraction converts to a decimal by dividing the numerator by the denominator. 3/4 = 3 ÷ 4 = 0.75 — this stops after two decimal places, so it is a terminating decimal. But 1/3 = 0.333... never stops; the 3 repeats forever, so it is a recurring decimal, usually written 0.3̇."
+        },
+        {
+          "type": "equation",
+          "expr": "3/4 = 0.75 (terminating)      1/3 = 0.333... (recurring)"
+        },
+        {
+          "type": "text",
+          "text": "A percentage is a fraction out of 100. To turn a decimal into a percentage, multiply by 100: 0.75 x 100 = 75%. To turn a percentage into a decimal, divide by 100: 75% = 0.75. A fraction converts to a percentage the same way it converts to a decimal, then multiplied by 100."
+        },
+        {
+          "type": "text",
+          "text": "To find a percentage of a quantity, convert the percentage to a decimal and multiply. A trader in Kampala sells a shirt marked at UGX 40 000 with a 15% discount. The discount is 15% of 40 000 = 0.15 x 40 000 = UGX 6 000, so the shirt sells for 40 000 - 6 000 = UGX 34 000."
+        },
+        {
+          "type": "equation",
+          "expr": "15% of 40 000 = 0.15 x 40 000 = 6 000  ->  40 000 - 6 000 = 34 000"
+        }
+      ]
+    }
+  ]
+}

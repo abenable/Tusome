@@ -1,0 +1,39 @@
+{
+  "packId": "phy.s3.light.refraction",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.light.refraction",
+      "title": "Refraction, Dispersion and Colour",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Light",
+      "subStrand": "Refraction, dispersion, and colour",
+      "order": 4,
+      "outcomes": [
+        "understand that light may be refracted as it passes from one medium to another and that this has both consequences and uses (u, s, v/a)",
+        "know that white light can be split into coloured light by refraction (k, s)",
+        "know that white light results from the superimposition of light of all colours of the visible spectrum (u, k)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Refraction is the bending of light as it passes from one transparent medium into another \u2014 for example from air into glass or water \u2014 caused by a change in the speed of light between the two media. This is why a straight stick appears to bend at the point where it enters water."
+        },
+        {
+          "type": "text",
+          "text": "White light, like sunlight, is actually a mixture of all the colours of the visible spectrum \u2014 red, orange, yellow, green, blue, indigo, and violet \u2014 superimposed together. Because each colour refracts by a slightly different amount, a glass prism can split (disperse) white light into its separate colours, spreading them out into a spectrum. A rainbow forms in a similar way, as sunlight is refracted and dispersed by tiny water droplets in the air."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Bending Light simulation below (Prisms screen). Shine white light through a glass prism and watch it split into a spectrum of colours."
+        }
+      ],
+      "sim": {
+        "phet": "bending-light_en.html",
+        "caption": "PhET Bending Light (Prisms screen). Shine white light through a prism and see it split into the colours of the spectrum. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

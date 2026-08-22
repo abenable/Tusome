@@ -1,0 +1,55 @@
+{
+  "packId": "phy.s2.matter.work-energy-power",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.matter.work-energy-power",
+      "title": "Work, Energy and Power",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Work, energy and power",
+      "order": 1,
+      "outcomes": [
+        "know that energy can be changed from one form into another and understand the law of conservation of energy (k, u)",
+        "know and use the relationship between work done, force, and distance moved, and time taken (k, s)",
+        "understand that an object may have energy due to its motion or its position and change between kinetic and positional potential energy (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Work is done when a force moves an object through a distance in the direction of the force. Work done is measured in joules (J)."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{work done} = \\text{force} \\times \\text{distance moved}"
+        },
+        {
+          "type": "text",
+          "text": "Power is the rate at which work is done \u2014 how quickly energy is transferred \u2014 measured in watts (W)."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{power} = \\frac{\\text{work done}}{\\text{time taken}}"
+        },
+        {
+          "type": "text",
+          "text": "An object can have energy because of its motion (kinetic energy) or because of its position, for example its height above the ground (positional, or gravitational potential, energy). The law of conservation of energy says energy cannot be created or destroyed, only changed from one form into another."
+        },
+        {
+          "type": "text",
+          "text": "A swinging pendulum is a good example of this. At the highest point of its swing, the pendulum bob is momentarily still and has maximum potential energy and no kinetic energy. As it swings down, potential energy converts into kinetic energy, and the bob has maximum kinetic energy \u2014 and moves fastest \u2014 at the lowest point of the swing. As it swings back up the other side, kinetic energy converts back into potential energy."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Pendulum Lab simulation below. Release the pendulum from different heights and watch how kinetic and potential energy trade off as it swings."
+        }
+      ],
+      "sim": {
+        "phet": "pendulum-lab_en.html",
+        "caption": "PhET Pendulum Lab. Swing a pendulum and watch kinetic and potential energy change into each other. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

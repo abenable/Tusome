@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s1.geometry.reflection",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.geometry.reflection",
+      "title": "Reflection",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Geometry and Measures",
+      "subStrand": "Transformations",
+      "order": 10,
+      "outcomes": [
+        "identify lines of symmetry for different figures. (k)",
+        "reflect shapes and objects. (u, s)",
+        "apply reflection in the Cartesian plane. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A shape has a line of symmetry if it can be folded along that line so the two halves match exactly. A square has four lines of symmetry (two through opposite corners, two through the midpoints of opposite sides); a circle has infinitely many, through its centre; a scalene triangle, with three different side lengths, has none."
+        },
+        {
+          "type": "text",
+          "text": "Reflection is a transformation that flips a shape across a line, called the mirror line, to produce an image. Every point of the image is the same perpendicular distance from the mirror line as the matching point on the original shape, on the opposite side — as if the mirror line were a real mirror."
+        },
+        {
+          "type": "text",
+          "text": "On the Cartesian plane, reflecting in the y-axis (x = 0) keeps the y-coordinate the same and reverses the sign of the x-coordinate: (x, y) becomes (-x, y). Reflecting in the x-axis (y = 0) does the opposite: (x, y) becomes (x, -y). Reflecting in the line y = x swaps the coordinates: (x, y) becomes (y, x)."
+        },
+        {
+          "type": "equation",
+          "expr": "reflect (3, 4) in the x-axis: (3, 4) -> (3, -4)"
+        },
+        {
+          "type": "text",
+          "text": "A triangle with vertices A(1, 2), B(-1, 1) and C(-4, 3) is reflected to give image points A'(2, 1), B'(1, -1) and C'(3, -4). Comparing original to image, each coordinate pair has been swapped — (x, y) has become (y, x) — so the mirror line is y = x."
+        }
+      ]
+    }
+  ]
+}

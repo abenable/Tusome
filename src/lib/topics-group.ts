@@ -2,8 +2,14 @@
 //
 // Topics are grouped by level (S1..S4) and, within a level, by strand — the way
 // a teacher scanning the NCDC syllabus looks for a topic. Levels always render
-// in canonical order; strands sort alphabetically so two packs authored
-// independently produce the same on-screen order.
+// in canonical order. Strands and the topics within them sort by each topic's
+// `order` (its position in the syllabus's own term-by-term programme planner)
+// so the on-screen sequence matches teaching order, not filesystem directory
+// order (which Rust's `fs::read_dir` — and therefore pack load order — never
+// guarantees). A strand's position is its lowest topic `order`; strands tie
+// (or a topic omits `order` entirely) fall back to alphabetical, so two packs
+// authored independently without `order` still produce a stable, if
+// syllabus-agnostic, on-screen order.
 //
 // Kept pure (no React, no IO) so it can be unit-tested with bun:test and
 // reused outside the route component.
@@ -45,8 +51,15 @@ export function groupTopicsByLevelThenStrand(topics: TopicT[]): LevelGroup[] {
     }
 
     const strands: StrandGroup[] = [...byStrand.entries()]
-      .map(([strand, ts]) => ({ strand, topics: ts }))
-      .sort((a, b) => a.strand.localeCompare(b.strand));
+      .map(([strand, ts]) => ({
+        strand,
+        topics: [...ts].sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity)),
+      }))
+      .sort((a, b) => {
+        const orderOf = (s: StrandGroup) =>
+          Math.min(...s.topics.map((t) => t.order ?? Infinity));
+        return orderOf(a) - orderOf(b) || a.strand.localeCompare(b.strand);
+      });
 
     out.push({ level, strands });
   }

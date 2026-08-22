@@ -1,0 +1,46 @@
+{
+  "packId": "phy.s3.waves.general",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.waves.general",
+      "title": "General Wave Properties",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Waves",
+      "subStrand": "General wave properties",
+      "order": 6,
+      "outcomes": [
+        "understand that energy is transferred by waves, and these may be transverse or longitudinal (k, u)",
+        "know and use the relationship between velocity, frequency, and wavelength (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A wave transfers energy from one place to another without transferring matter. Waves are described as transverse if the particles (or field) vibrate at right angles to the direction the wave travels \u2014 like a wave on a string \u2014 or longitudinal if the vibration is along the same direction as the wave travels, like sound."
+        },
+        {
+          "type": "text",
+          "text": "Key features of a wave: amplitude (the maximum displacement from the rest position), wavelength (the distance between one point on the wave and the next identical point, such as crest to crest), frequency (the number of complete waves passing a point each second, measured in hertz, Hz), and period (the time taken for one complete wave)."
+        },
+        {
+          "type": "equation",
+          "latex": "v = f \\lambda"
+        },
+        {
+          "type": "text",
+          "text": "The wave equation relates the speed (v), frequency (f), and wavelength (\u03bb, the Greek letter lambda) of a wave."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Wave on a String simulation below. Change the frequency and amplitude of the wave and see how the wave's shape and speed respond."
+        }
+      ],
+      "sim": {
+        "phet": "wave-on-a-string_en.html",
+        "caption": "PhET Wave on a String. Change frequency and amplitude and watch a transverse wave travel along a string. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "packId": "phy.s3.waves.sound",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.waves.sound",
+      "title": "Sound Waves",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Waves",
+      "subStrand": "Sound waves",
+      "order": 7,
+      "outcomes": [
+        "understand that sound is an example of a wave form that requires a medium through which to travel, and determine its velocity in air by the echo method (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Sound is produced by a vibrating object, such as a tuning fork, a drum skin, or vocal cords. These vibrations disturb the particles of a surrounding medium \u2014 a gas, liquid, or solid \u2014 creating a longitudinal wave that carries the sound outward."
+        },
+        {
+          "type": "text",
+          "text": "Sound needs a medium to travel through: it cannot travel through a vacuum (empty space), because there are no particles there to vibrate. Sound travels fastest through solids, slower through liquids, and slowest through gases like air, because particles are packed more closely in solids and can pass the vibration on more quickly."
+        },
+        {
+          "type": "text",
+          "text": "The loudness of a sound depends on the amplitude of the vibration; the pitch depends on its frequency \u2014 a higher frequency gives a higher-pitched sound."
+        },
+        {
+          "type": "text",
+          "text": "The speed of sound in air can be found using the echo method: make a sound near a large, flat wall a known distance away, and measure the time for the echo to return. Because the sound travels to the wall and back, the total distance travelled is twice the distance to the wall."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{speed of sound} = \\frac{2 \\times \\text{distance to wall}}{\\text{time for echo to return}}"
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Waves Intro simulation below (Sound screen). Make a sound source vibrate and watch how the sound wave travels through the air, represented by moving particles."
+        }
+      ],
+      "sim": {
+        "phet": "waves-intro_en.html",
+        "caption": "PhET Waves Intro (Sound screen). Watch how a vibrating source produces a sound wave that travels through the air. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

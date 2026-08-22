@@ -33,63 +33,6 @@
           "type": "text",
           "text": "Neutralisation is the reaction between an acid and a base. The products are a salt and water. For example, hydrochloric acid reacts with sodium hydroxide to form sodium chloride (common salt) and water. Neutralisation is used to treat acid soils (by adding lime) and to relieve excess stomach acid (using antacids)."
         }
-      ],
-      "quiz": [
-        {
-          "id": "q1",
-          "prompt": "Which of these is a common acid found in the home?",
-          "kind": "single",
-          "options": [
-            { "id": "a", "text": "Vinegar (ethanoic acid)" },
-            { "id": "b", "text": "Soap solution" },
-            { "id": "c", "text": "Table salt" },
-            { "id": "d", "text": "Pure water" }
-          ],
-          "correct": ["a"],
-          "explanation": "Vinegar contains ethanoic (acetic) acid, so it is acidic with a pH below 7. Soap solution is a base, table salt is a neutral salt, and pure water is neutral at pH 7."
-        },
-        {
-          "id": "q2",
-          "prompt": "What is the pH of pure water at 25°C?",
-          "kind": "numeric",
-          "correct": ["7"],
-          "tolerance": 0,
-          "explanation": "Pure water is neutral. On the pH scale (0–14), a pH of 7 is neutral. Values below 7 are acidic and values above 7 are basic."
-        },
-        {
-          "id": "q3",
-          "prompt": "Which of the following are indicators used to test for acids and bases? (Select all that apply.)",
-          "kind": "multi",
-          "options": [
-            { "id": "a", "text": "Litmus paper" },
-            { "id": "b", "text": "Universal indicator" },
-            { "id": "c", "text": "Phenolphthalein" },
-            { "id": "d", "text": "Table sugar" }
-          ],
-          "correct": ["a", "b", "c"],
-          "explanation": "Litmus, universal indicator and phenolphthalein all change colour in acid or base, so they are indicators. Table sugar does not change colour and is not an indicator."
-        },
-        {
-          "id": "q4",
-          "prompt": "What colour does blue litmus paper turn when it is placed in an acid?",
-          "kind": "single",
-          "options": [
-            { "id": "a", "text": "Red" },
-            { "id": "b", "text": "Blue" },
-            { "id": "c", "text": "Green" },
-            { "id": "d", "text": "It stays the same" }
-          ],
-          "correct": ["a"],
-          "explanation": "Acids turn blue litmus paper red. Bases turn red litmus paper blue. This colour change is the simplest test for distinguishing an acid from a base."
-        },
-        {
-          "id": "q5",
-          "prompt": "A solution has a pH of 2. Compared to a solution of pH 5, how many times more acidic is the pH 2 solution?",
-          "kind": "numeric",
-          "correct": ["1000"],
-          "tolerance": 0,
-          "explanation": "The pH scale is logarithmic: each step of 1 in pH means a 10-fold change in acidity. From pH 5 to pH 2 is 3 steps, so the pH 2 solution is 10 × 10 × 10 = 1000 times more acidic."
-        }
       ]
     }
   ]

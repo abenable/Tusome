@@ -1,0 +1,47 @@
+{
+  "packId": "mat.s1.geometry.time-and-time-tables",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.geometry.time-and-time-tables",
+      "title": "Time and Time Tables",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Geometry and Measures",
+      "subStrand": "Time",
+      "order": 14,
+      "outcomes": [
+        "identify and use units of time. (k, u, s)",
+        "use and interpret different representations of time. (u, s)",
+        "apply the understanding of time in a range of relevant real-life contexts. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Time is measured in seconds, minutes (60 seconds), hours (60 minutes), days (24 hours), weeks (7 days), months and years (12 months, about 365 days). Converting between units means multiplying or dividing by the right conversion factor — 2.5 hours = 2.5 x 60 = 150 minutes."
+        },
+        {
+          "type": "text",
+          "text": "The 12-hour clock uses am (before midday) and pm (after midday), so times need am/pm to be unambiguous. The 24-hour clock avoids this by counting hours from 00:00 (midnight) to 23:59, so 3:45 pm on the 12-hour clock is written 15:45 on the 24-hour clock — add 12 to any pm hour."
+        },
+        {
+          "type": "equation",
+          "expr": "3:45 pm = 15:45 (24-hour clock)"
+        },
+        {
+          "type": "text",
+          "text": "Timetables (like bus or train schedules) list arrival and departure times, often on the 24-hour clock, to plan a journey. A bus leaves Kampala at 04:00 and arrives in Soroti at 20:30. The journey time is found by subtracting: from 04:00 to 20:30 is 16 hours 30 minutes."
+        },
+        {
+          "type": "text",
+          "text": "When a journey crosses midnight, add 24 hours to the later time before subtracting. A bus departs at 22:00 and arrives at 03:15 the next day: treat the arrival as 27:15, so the journey takes 27:15 - 22:00 = 5 hours 15 minutes."
+        },
+        {
+          "type": "equation",
+          "expr": "27:15 - 22:00 = 5 hours 15 minutes"
+        }
+      ]
+    }
+  ]
+}

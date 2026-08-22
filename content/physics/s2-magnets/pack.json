@@ -1,0 +1,43 @@
+{
+  "packId": "phy.s2.magnetism.magnets",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s2.magnetism.magnets",
+      "title": "Magnets and Magnetic Fields",
+      "subject": "physics",
+      "level": "S2",
+      "strand": "Magnetism",
+      "subStrand": "Magnets and magnetic field",
+      "order": 7,
+      "outcomes": [
+        "know that a small number of materials are magnetic, but most are not (k)",
+        "understand the behaviour of magnets and magnetic fields (u)",
+        "know that the Earth is a magnet and how a compass is used to determine direction (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Only a small number of materials are magnetic \u2014 mainly iron, steel, cobalt, and nickel. Most materials, including copper, aluminium, wood, and plastic, are not magnetic at all."
+        },
+        {
+          "type": "text",
+          "text": "Every magnet has a north pole and a south pole. Like poles repel each other; unlike poles attract. The space around a magnet where its magnetic effect can be detected is called its magnetic field, often shown using field lines running from the north pole to the south pole."
+        },
+        {
+          "type": "text",
+          "text": "The Earth itself behaves like a giant magnet, with a magnetic field extending out into space. A compass needle is a small magnet that is free to turn \u2014 it lines up with the Earth's magnetic field, so its north pole points towards the Earth's magnetic north, letting it be used for navigation."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Magnet and Compass simulation below. Move a compass around a bar magnet to explore its magnetic field, then find and flip the hidden bar magnet inside the Earth to see how it explains a compass needle's behaviour."
+        }
+      ],
+      "sim": {
+        "phet": "magnet-and-compass_en.html",
+        "caption": "PhET Magnet and Compass. Explore the field around a bar magnet and see how the Earth itself behaves as a magnet. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+      }
+    }
+  ]
+}

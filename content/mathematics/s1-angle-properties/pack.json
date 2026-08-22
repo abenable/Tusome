@@ -1,0 +1,48 @@
+{
+  "packId": "mat.s1.geometry.angle-properties-of-geometric-figures",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s1.geometry.angle-properties-of-geometric-figures",
+      "title": "General and Angle Properties of Geometric Figures",
+      "subject": "mathematics",
+      "level": "S1",
+      "strand": "Geometry and Measures",
+      "subStrand": "Angle properties",
+      "order": 8,
+      "outcomes": [
+        "identify different angles. (k)",
+        "solve problems involving angles at a point on a straight line, angles on a transversal and parallel lines. (k, u, s)",
+        "know and use the angle sum of a triangle. (k, u)",
+        "state and uses angle properties of polygons when solving problems. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Angles are classified by size: acute (less than 90°), right (exactly 90°), obtuse (between 90° and 180°), straight (exactly 180°), and reflex (between 180° and 360°). Angles on a straight line always add up to 180°, and angles at a point (all the way around) always add up to 360°."
+        },
+        {
+          "type": "text",
+          "text": "When a transversal crosses a pair of parallel lines, it creates equal pairs of angles: corresponding angles (same position at each crossing) are equal, and alternate angles (on opposite sides of the transversal, between the parallel lines) are equal. Angles on the same side of the transversal, between the parallel lines, are supplementary — they add up to 180°."
+        },
+        {
+          "type": "text",
+          "text": "The angles inside any triangle always add up to 180°. If a triangle has angles of 50° and 65°, the third angle is 180 - 50 - 65 = 65°."
+        },
+        {
+          "type": "equation",
+          "expr": "180 - 50 - 65 = 65"
+        },
+        {
+          "type": "text",
+          "text": "This 180° fact extends to any polygon: split a polygon with n sides into (n-2) triangles from one vertex, and since each triangle contributes 180°, the interior angles of any polygon sum to (n-2) x 180°. For a pentagon (n=5): (5-2) x 180 = 540°. A regular polygon's exterior angles always sum to 360°, so a regular polygon with an exterior angle of 72° has 360 ÷ 72 = 5 sides."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{interior angle sum} = (n-2) \\times 180^\\circ"
+        }
+      ]
+    }
+  ]
+}
