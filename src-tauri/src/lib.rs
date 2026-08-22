@@ -96,7 +96,7 @@ pub fn run() {
             updates::get_update_log
         ])
         .setup(|app| {
-            seed_content(&app.handle());
+            seed_content(app.handle());
             // Silent startup USB scan (docs/plan/07): never blocks launch, never
             // shows the student anything. Spawned on the async runtime so it can
             // await the sql pool for log persistence without holding up setup.

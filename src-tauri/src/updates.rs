@@ -148,10 +148,7 @@ pub fn compute_pack_sha256(pack_dir: &Path) -> std::io::Result<String> {
 }
 
 fn collect_files(base: &Path, dir: &Path, out: &mut Vec<String>) -> std::io::Result<()> {
-    let entries = match fs::read_dir(dir) {
-        Ok(e) => e,
-        Err(e) => return Err(e),
-    };
+    let entries = fs::read_dir(dir)?;
     for entry in entries {
         let entry = entry?;
         let path = entry.path();
