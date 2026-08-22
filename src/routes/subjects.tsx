@@ -8,10 +8,11 @@
 // a welcome page — so the picker moved here and the sidebar's four subject
 // links cover the same ground for anyone who doesn't come via Home.
 //
-// Deviations, both forced:
-//   - The mock's four rackcdn illustrations are dropped (offline app, CSP
-//     `default-src 'self'`, unknown licence). The subject's own lucide glyph is
-//     drawn large on the tint instead, which keeps the colour-coding intact.
+// Deviations:
+//   - The mock's four illustrations are unDraw pieces (MIT-licensed, free for
+//     commercial use, no attribution required — undraw.co/license), vendored
+//     into public/illustrations/ so they load offline under CSP `default-src
+//     'self'` like everything else here. See SUBJECT_ILLUSTRATIONS below.
 //   - The mock hardcodes "50% / 3 topics". Both figures here are real: the
 //     count comes from installed packs, the ring from this student's completed
 //     progress rows.
@@ -31,6 +32,7 @@ import {
 } from "@/lib/subjects"
 import { getProgress, type ProgressRow } from "@/db/index"
 import { useStudent } from "@/lib/student-context"
+import { SUBJECT_ILLUSTRATIONS } from "@/lib/subject-illustrations"
 
 const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
   physics: Atom,
@@ -75,11 +77,11 @@ function SubjectPicker() {
   return (
     <div className="mx-auto max-w-[920px]">
       <header className="mx-auto mb-10 max-w-[640px] text-center">
-        <h1 className="mb-[10px] font-heading text-[38px] font-extrabold tracking-[-0.02em] text-ink">
+        <h1 className="mb-[10px] font-heading text-[42px] font-extrabold tracking-[-0.02em] text-ink">
           Pick a subject
         </h1>
-        <p className="font-sans text-[17px] leading-[1.55] text-ink-2">
-          Lower-secondary CBC lessons, simulations and quizzes — pick a subject
+        <p className="font-sans text-[19px] leading-[1.55] text-ink-2">
+          Lower-secondary CBC lessons and simulations — pick a subject
           to begin.
         </p>
       </header>
@@ -101,13 +103,13 @@ function SubjectPicker() {
                 className="flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface shadow-[0_1px_2px_rgba(0,0,0,.04),0_16px_32px_-22px_rgba(0,0,0,.2)] transition-transform hover:-translate-y-[3px]"
               >
                 <div
-                  className={`flex h-[140px] items-center justify-center ${accent.tint}`}
+                  className={`flex h-[140px] items-center justify-center overflow-hidden ${accent.tint}`}
                 >
-                  <Icon
-                    size={64}
-                    strokeWidth={1.25}
-                    className={accent.text}
+                  <img
+                    src={SUBJECT_ILLUSTRATIONS[subject]}
+                    alt=""
                     aria-hidden
+                    className="h-full w-full object-contain p-4"
                   />
                 </div>
                 <div className="flex flex-col gap-[10px] px-[22px] pb-6 pt-5">
@@ -118,16 +120,16 @@ function SubjectPicker() {
                       >
                         <Icon size={18} className="text-white" aria-hidden />
                       </span>
-                      <span className="font-heading text-[20px] font-bold tracking-[-0.01em] text-ink">
+                      <span className="font-heading text-[22px] font-bold tracking-[-0.01em] text-ink">
                         {SUBJECT_LABELS[subject]}
                       </span>
                     </div>
                     <ProgressRing subject={subject} pct={pct} />
                   </div>
-                  <p className="font-sans text-[14px] leading-[1.5] text-ink-2">
+                  <p className="font-sans text-[16px] leading-[1.5] text-ink-2">
                     {SUBJECT_BLURBS[subject]}
                   </p>
-                  <span className="font-sans text-[13px] font-semibold text-ink-3">
+                  <span className="font-sans text-[15px] font-semibold text-ink-3">
                     {mine.length === 1 ? "1 topic" : `${mine.length} topics`}
                   </span>
                 </div>
@@ -160,7 +162,7 @@ function ProgressRing({ subject, pct }: { subject: Subject; pct: number }) {
       aria-label={`${SUBJECT_LABELS[subject]} ${pct}% complete`}
     >
       <span
-        className={`flex size-7 items-center justify-center rounded-full bg-surface font-sans text-[9px] font-extrabold ${
+        className={`flex size-7 items-center justify-center rounded-full bg-surface font-sans text-[10px] font-extrabold ${
           pct === 0 ? "text-ink-3" : accent.text
         }`}
         aria-hidden
