@@ -264,6 +264,66 @@ export async function classResults(): Promise<
   );
 }
 
+// ──────────────────────────────────────────────────────────────────────────
+// Home leaderboard — top scores in a recent window, across all students.
+//
+// DELIBERATE PLAN DEVIATION. docs/plan/06-app-features.md:49 says of the
+// progress dashboard: "Nothing comparative; no leaderboards." That rule still
+// governs /dashboard, which stays strictly personal. The Home screen carries a
+// leaderboard because the project owner asked for one on Home specifically,
+// after the conflict was raised. Two consequences worth knowing before this is
+// changed again:
+//   - It puts other students' names on a shared classroom machine's first
+//     screen. Guests are excluded (they record no attempts at all), but named
+//     students are visible to whoever is sitting at the machine.
+//   - It is a `best score` board, not a `most improved` one, so it rewards the
+//     already-confident. If that turns out to demotivate in the pilot, the
+//     honest fix is to change what it ranks, not to hide it.
+// ──────────────────────────────────────────────────────────────────────────
+
+export interface TopScoreRow {
+  student_id: number;
+  display_name: string;
+  topic_id: string;
+  /** 0..1 fraction, computed at read time. Never stored. */
+  best: number;
+  /** Most recent attempt for this (student, topic), UTC 'YYYY-MM-DD HH:MM:SS'. */
+  last_at: string;
+}
+
+/**
+ * Best score per (student, topic) for attempts in the last `days` days,
+ * ranked highest first.
+ *
+ * `taken_at` is written by SQLite's `datetime('now')` (UTC, lexicographically
+ * sortable), so a string comparison against `datetime('now', '-N days')` is a
+ * correct window filter. The modifier is bound rather than interpolated.
+ *
+ * `MAX(a.taken_at)` rather than a bare `a.taken_at` in ORDER BY: with a GROUP
+ * BY, a bare column picks an arbitrary row from the group. SQLite tolerates
+ * it; being explicit makes the tie-break (most recent first) actually mean
+ * what it says.
+ *
+ * Returns at most `limit` rows. A student appears once per topic, so a strong
+ * student can legitimately occupy several rows.
+ */
+export async function topScores(
+  days = 7,
+  limit = 5,
+): Promise<TopScoreRow[]> {
+  const db = await getDb();
+  return db.select<TopScoreRow[]>(
+    "SELECT a.student_id AS student_id, s.display_name AS display_name, " +
+      "a.topic_id AS topic_id, MAX(a.score * 1.0 / a.max_score) AS best, " +
+      "MAX(a.taken_at) AS last_at " +
+      "FROM quiz_attempts a JOIN students s ON s.id = a.student_id " +
+      "WHERE a.taken_at >= datetime('now', $1) " +
+      "GROUP BY a.student_id, a.topic_id " +
+      "ORDER BY best DESC, last_at DESC LIMIT $2",
+    [`-${days} days`, limit],
+  );
+}
+
 /**
  * All quiz_attempts for one student on one topic, oldest first — the rows
  * the W6 per-question breakdown renders. Append-only table (never UPDATE), so

@@ -56,6 +56,7 @@ import {
   bestScorePerTopic,
   continueTopic,
   classResults,
+  topScores,
   getAttemptsForStudentTopic,
   _resetStateForTests,
 } from "./index";
@@ -462,6 +463,52 @@ describe("continueTopic (pure selection — no DB)", () => {
 });
 
 // ── W6: teacher class grid + per-question breakdown reads ───────────────────
+
+describe("topScores (Home leaderboard)", () => {
+  it("windows on taken_at, ranks by computed best, and binds the window + limit", async () => {
+    selectQueue.push([]);
+    await topScores(7, 5);
+    const selects = sqlLog.filter((e) => e.kind === "select");
+    expect(selects).toHaveLength(1);
+    const { query, params } = selects[0];
+
+    // Best score is computed at read time, never read from a stored column.
+    expect(query).toMatch(/MAX\(a\.score \* 1\.0 \/ a\.max_score\)/i);
+    expect(query).not.toMatch(/best_score/i);
+    // One row per (student, topic), joined to students for the display name.
+    expect(query).toMatch(/JOIN students/i);
+    expect(query).toMatch(/GROUP BY a\.student_id, a\.topic_id/i);
+    // Recent window, highest first, capped.
+    expect(query).toMatch(/WHERE a\.taken_at >= datetime\('now', \$1\)/i);
+    expect(query).toMatch(/ORDER BY best DESC/i);
+    expect(query).toMatch(/LIMIT \$2/i);
+    // The window modifier is BOUND, not interpolated into the SQL.
+    expect(params).toEqual(["-7 days", 5]);
+    expect(query).not.toContain("-7 days");
+  });
+
+  it("defaults to a 7-day window and 5 rows", async () => {
+    selectQueue.push([]);
+    await topScores();
+    const selects = sqlLog.filter((e) => e.kind === "select");
+    expect(selects[0].params).toEqual(["-7 days", 5]);
+  });
+
+  it("tie-breaks on MAX(taken_at), not a bare grouped column", async () => {
+    selectQueue.push([]);
+    await topScores();
+    const { query } = sqlLog.filter((e) => e.kind === "select")[0];
+    expect(query).toMatch(/MAX\(a\.taken_at\) AS last_at/i);
+    expect(query).toMatch(/ORDER BY best DESC, last_at DESC/i);
+  });
+
+  it("passes a custom window through to the bind params", async () => {
+    selectQueue.push([]);
+    await topScores(30, 3);
+    const { params } = sqlLog.filter((e) => e.kind === "select")[0];
+    expect(params).toEqual(["-30 days", 3]);
+  });
+});
 
 describe("classResults (computed, never stored)", () => {
   it("issues a SELECT that computes MAX(score * 1.0 / max_score) GROUP BY student_id, topic_id", async () => {
