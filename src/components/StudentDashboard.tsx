@@ -1,23 +1,35 @@
-// The current student's progress dashboard body — installed topics, summary
-// counts, a "Continue where you left off" card, and a per-topic list showing
-// progress state and best score.
+// The current student's progress dashboard — installed topics, summary
+// counts, a "Continue where you left off" hero, earned achievements, per-subject
+// completion rings, and a per-topic list.
 //
-// DESIGN.md voice: 17px body, Action Blue (#0066cc) links, pill CTA on the
-// continue card, ≥44px touch targets, no shadows on chrome, no gradients.
-// Headings use SF Pro Display with negative letter-spacing (tracking-tight).
+// Ported from the claude.ai/design project "UI design improvement request"
+// (Dashboard.dc.html), using the design's own defaults for its explorer props:
+// `heroStyle: "gradient"`, `progressStyle: "rings"`, `tone: "encouraging"`.
 //
-// Data: progress + best scores are read from the DB in an effect (simple,
-// no new deps). `best` is COMPUTED from quiz_attempts by `bestScorePerTopic`
+// Data: progress + best scores are read from the DB in an effect (simple, no
+// new deps). `best` is COMPUTED from quiz_attempts by `bestScorePerTopic`
 // (never stored) — see src/db/index.ts for the canonical implementation.
 //
-// No comparisons, no leaderboards, no other students' data — only the current
-// student's own topics. See docs/plan/06-app-features.md §"Dashboard".
+// Still no comparisons and no other students' data: everything here is the
+// current student's own. The weekly leaderboard the owner asked for lives on
+// Home only, and docs/plan/06-app-features.md:49 continues to govern this
+// screen.
+//
+// The mock's achievements are hardcoded; these are earned or absent. A badge
+// that appears for everyone regardless of what they did is decoration, and a
+// student works out it means nothing within a lesson.
 
-import { useEffect, useState, type JSX } from "react";
+import { useEffect, useMemo, useState, type JSX } from "react";
 import { Link } from "@tanstack/react-router";
+import { Atom, Dna, FlaskConical, Sigma, type LucideIcon } from "lucide-react";
 
 import type { PackT, TopicT } from "@/content/schema";
-import { SUBJECT_LABELS, type Subject } from "@/lib/subjects";
+import {
+  SUBJECTS,
+  SUBJECT_ACCENTS,
+  SUBJECT_LABELS,
+  type Subject,
+} from "@/lib/subjects";
 import {
   bestScorePerTopic,
   continueTopic,
@@ -26,6 +38,16 @@ import {
 } from "@/db/index";
 import { useStudent } from "@/lib/student-context";
 import { EmptyState } from "@/components/EmptyState";
+
+const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
+  physics: Atom,
+  chemistry: FlaskConical,
+  biology: Dna,
+  mathematics: Sigma,
+};
+
+/** A score at or above this counts as the "High scorer" achievement. */
+const HIGH_SCORE_THRESHOLD = 0.8;
 
 export type StudentDashboardProps = {
   studentId: number;
@@ -40,15 +62,13 @@ export function StudentDashboard({
   const [progress, setProgress] = useState<ProgressRow[]>([]);
   const [best, setBest] = useState<Map<string, number>>(new Map());
 
-  // Read progress + computed best scores. Kept simple (effect + state) per the
-  // three-sources rule: these are DB reads that could be TanStack Query, but
-  // adding a query key here would be the only caller and there's no cache
-  // sharing need yet — a local effect is the lighter choice. Cancelled on
-  // unmount / studentId change so a stale write can't clobber a new student's
-  // view after a fast switch.
+  // Kept simple (effect + state): these are DB reads that could be TanStack
+  // Query, but adding a query key here would be the only caller and there's no
+  // cache sharing need yet. Cancelled on unmount / studentId change so a stale
+  // write can't clobber a new student's view after a fast switch.
   useEffect(() => {
     let cancelled = false;
-    (async () => {
+    void (async () => {
       const [prog, scores] = await Promise.all([
         getProgress(studentId),
         bestScorePerTopic(studentId),
@@ -64,8 +84,15 @@ export function StudentDashboard({
 
   // Installed topics across all packs — the universe the dashboard reasons
   // about. A topic whose pack was uninstalled is intentionally absent.
-  const allTopics: TopicT[] = packs.flatMap((p) => p.topics);
-  const allTopicIds = allTopics.map((t) => t.id);
+  const allTopics: TopicT[] = useMemo(
+    () => packs.flatMap((p) => p.topics),
+    [packs],
+  );
+
+  const progressByTopic = useMemo(
+    () => new Map(progress.map((r) => [r.topic_id, r])),
+    [progress],
+  );
 
   if (allTopics.length === 0) {
     return (
@@ -76,152 +103,377 @@ export function StudentDashboard({
     );
   }
 
-  // Summary counts — over installed topics only.
-  const progressByTopic = new Map(progress.map((r) => [r.topic_id, r]));
   const completed = allTopics.filter(
     (t) => progressByTopic.get(t.id)?.state === "completed",
-  ).length;
+  );
   const started = allTopics.filter(
     (t) => progressByTopic.get(t.id)?.state === "started",
-  ).length;
-  const installed = allTopics.length;
+  );
 
-  const continueId = continueTopic(allTopicIds, progress);
+  const continueId = continueTopic(
+    allTopics.map((t) => t.id),
+    progress,
+  );
   const continueTopicObj =
-    continueId != null ? allTopics.find((t) => t.id === continueId) ?? null : null;
+    continueId != null ? (allTopics.find((t) => t.id === continueId) ?? null) : null;
 
   const name = student?.display_name ?? "You";
 
   return (
     <div className="flex flex-col gap-8">
-      <nav className="text-[17px]">
-        <Link
-          to="/"
-          className="text-[#0066cc] hover:underline"
-          style={{ minHeight: 44, display: "inline-flex", alignItems: "center" }}
-        >
-          Subjects
-        </Link>
-      </nav>
-
-      <header className="flex flex-col gap-2">
-        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
-          Your progress
-        </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
-          {name}
-        </p>
+      <header className="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <h1 className="mb-[6px] font-heading text-[34px] font-extrabold tracking-[-0.02em] text-ink">
+            Your progress
+          </h1>
+          <p className="font-sans text-[17px] text-ink-2">
+            Welcome back, {name}
+          </p>
+        </div>
+        {continueTopicObj ? (
+          <Link
+            to="/$subject/$topicId"
+            params={{
+              subject: continueTopicObj.subject,
+              topicId: continueTopicObj.id,
+            }}
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-[22px] font-sans text-[15px] font-bold text-white transition-colors hover:bg-brand-hover"
+          >
+            Continue learning
+          </Link>
+        ) : null}
       </header>
 
-      {/* Summary counts — a quiet stat row, no card chrome (DESIGN.md: surface
-          change, not shadows, carries hierarchy). */}
-      <dl className="flex flex-wrap gap-x-8 gap-y-2 font-sans text-[17px] text-[#1d1d1f]">
-        <div className="flex gap-2">
-          <dt className="font-semibold">{completed}</dt>
-          <dd className="text-[#666666]">completed</dd>
-        </div>
-        <div className="flex gap-2">
-          <dt className="font-semibold">{started}</dt>
-          <dd className="text-[#666666]">in progress</dd>
-        </div>
-        <div className="flex gap-2">
-          <dt className="font-semibold">{installed}</dt>
-          <dd className="text-[#666666]">topics installed</dd>
-        </div>
+      <dl className="grid max-w-[640px] grid-cols-3 gap-4">
+        <StatCard n={completed.length} label="Completed" />
+        <StatCard n={started.length} label="In progress" />
+        <StatCard n={allTopics.length} label="Installed" />
       </dl>
 
-      {/* Continue where you left off — a prominent card with a pill CTA. */}
       {continueTopicObj ? (
-        <section
-          className="flex flex-col gap-4 rounded-[18px] border border-hairline bg-card px-6 py-6"
-          aria-label="Continue where you left off"
-        >
-          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
-            Continue where you left off
-          </h2>
-          <p className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
-            {continueTopicObj.title}
-          </p>
-          <div className="flex">
-            <Link
-              to="/$subject/$topicId"
-              params={{
-                subject: continueTopicObj.subject,
-                topicId: continueTopicObj.id,
-              }}
-              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white hover:bg-[#0071e3]"
-            >
-              {progressByTopic.get(continueTopicObj.id)?.state === "started"
-                ? "Resume"
-                : "Start"}
-            </Link>
-          </div>
-        </section>
+        <ContinueHero
+          topic={continueTopicObj}
+          resuming={
+            progressByTopic.get(continueTopicObj.id)?.state === "started"
+          }
+        />
       ) : (
         <section
-          className="flex flex-col gap-4 rounded-[18px] border border-hairline bg-card px-6 py-6"
+          className="flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-line bg-surface px-9 py-7"
           aria-label="All caught up"
         >
-          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
-            All caught up
-          </h2>
-          <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
-            You’ve completed every installed topic. Take a new quiz or explore a
-            subject.
-          </p>
-          <div className="flex">
-            <Link
-              to="/"
-              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white hover:bg-[#0071e3]"
-            >
-              Browse subjects
-            </Link>
+          <div>
+            <h2 className="mb-1 font-heading text-[24px] font-extrabold tracking-[-0.01em] text-ink">
+              All caught up
+            </h2>
+            <p className="font-sans text-[15px] text-ink-2">
+              You’ve completed every installed topic.
+            </p>
           </div>
+          <Link
+            to="/subjects"
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-brand px-6 font-sans text-[15px] font-bold text-white hover:bg-brand-hover"
+          >
+            Browse subjects
+          </Link>
         </section>
       )}
 
-      {/* Per-topic list — flat, one row per installed topic. Each row shows
-          the title, subject label, progress state, and best score percentage
-          (computed) when any attempts exist. */}
-      <section className="flex flex-col gap-5" aria-label="All topics">
-        <h2 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+      <Achievements
+        completed={completed}
+        best={best}
+        startedOrDone={[...completed, ...started]}
+      />
+
+      <section aria-label="By subject">
+        <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
+          By subject
+        </h2>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {SUBJECTS.map((subject) => {
+            const mine = allTopics.filter((t) => t.subject === subject);
+            const done = mine.filter(
+              (t) => progressByTopic.get(t.id)?.state === "completed",
+            ).length;
+            return (
+              <SubjectRing
+                key={subject}
+                subject={subject}
+                done={done}
+                total={mine.length}
+              />
+            );
+          })}
+        </div>
+      </section>
+
+      <section aria-label="All topics">
+        <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
           All topics
         </h2>
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-[10px]">
           {allTopics.map((topic) => {
+            const subject = topic.subject as Subject;
+            const accent = SUBJECT_ACCENTS[subject];
+            const Icon = SUBJECT_ICONS[subject];
             const state = progressByTopic.get(topic.id)?.state;
             const bestFrac = best.get(topic.id);
-            const hasBest = bestFrac !== undefined && bestFrac !== null;
-            const pct = hasBest ? Math.round((bestFrac as number) * 100) : null;
+            const pct =
+              bestFrac === undefined || bestFrac === null
+                ? null
+                : Math.round(bestFrac * 100);
             return (
               <li
                 key={topic.id}
-                className="flex flex-col gap-2 rounded-[11px] border border-hairline bg-card px-6 py-5"
+                className="flex flex-wrap items-center gap-[14px] rounded-2xl border border-line bg-surface px-5 py-[14px]"
               >
+                <span
+                  className={`flex size-[30px] shrink-0 items-center justify-center rounded-[9px] ${accent.bg}`}
+                >
+                  <Icon size={16} className="text-white" aria-hidden />
+                </span>
                 <Link
                   to="/$subject/$topicId"
                   params={{ subject: topic.subject, topicId: topic.id }}
-                  className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f] hover:text-[#0066cc]"
-                  style={{ minHeight: 44, display: "inline-flex", alignItems: "center" }}
+                  className="min-w-0 flex-1 font-sans text-[16px] font-bold text-ink hover:text-brand"
                 >
                   {topic.title}
+                  <span className="ml-2 font-normal text-ink-3">
+                    {SUBJECT_LABELS[subject]} · {topic.level}
+                  </span>
                 </Link>
-                <p className="font-sans text-[14px] text-[#666666]">
-                  {SUBJECT_LABELS[topic.subject as Subject]} · {topic.level}
-                </p>
-                <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+                <span
+                  className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[12px] font-bold ${
+                    state === "completed"
+                      ? `${accent.bg} text-white`
+                      : state === "started"
+                        ? `${accent.tint} ${accent.text}`
+                        : "bg-canvas text-ink-3"
+                  }`}
+                >
                   {state === "completed"
-                    ? "Completed"
+                    ? "✓ Completed"
                     : state === "started"
                       ? "In progress"
                       : "Not started"}
-                  {pct !== null ? ` · Best: ${pct}%` : ""}
-                </p>
+                </span>
+                <span className="w-[70px] text-right font-sans text-[13px] font-semibold text-ink-3">
+                  {pct === null ? "—" : `${pct}%`}
+                </span>
               </li>
             );
           })}
         </ul>
       </section>
+    </div>
+  );
+}
+
+function StatCard({ n, label }: { n: number; label: string }) {
+  return (
+    <div className="rounded-2xl border border-line bg-surface px-5 py-[18px]">
+      <dt className="sr-only">{label}</dt>
+      <dd>
+        <span className="block font-heading text-[28px] font-extrabold text-ink">
+          {n}
+        </span>
+        <span className="block font-sans text-[13px] font-semibold text-ink-3">
+          {label}
+        </span>
+      </dd>
+    </div>
+  );
+}
+
+/**
+ * The gradient "continue" band. The gradient is built from the topic's own
+ * subject token, so resuming a chemistry topic reads green rather than always
+ * physics blue as in the mock.
+ */
+function ContinueHero({
+  topic,
+  resuming,
+}: {
+  topic: TopicT;
+  resuming: boolean;
+}) {
+  const subject = topic.subject as Subject;
+  const accent = SUBJECT_ACCENTS[subject];
+  return (
+    <section
+      className="flex flex-wrap items-center justify-between gap-6 rounded-3xl px-9 py-8"
+      style={{
+        backgroundImage: `linear-gradient(135deg, var(--color-${subject}), color-mix(in oklch, var(--color-${subject}) 80%, black))`,
+      }}
+      aria-label="Continue where you left off"
+    >
+      <div>
+        <p className="mb-2 font-sans text-[13px] font-bold uppercase tracking-[.06em] text-white/70">
+          Continue where you left off
+        </p>
+        <h2 className="mb-1 font-heading text-[26px] font-extrabold tracking-[-0.01em] text-white">
+          {topic.title}
+        </h2>
+        <p className="font-sans text-[15px] text-white/75">
+          {SUBJECT_LABELS[subject]} · {topic.level}
+          {topic.strand ? ` · ${topic.strand}` : ""}
+        </p>
+      </div>
+      <Link
+        to="/$subject/$topicId"
+        params={{ subject: topic.subject, topicId: topic.id }}
+        className={`inline-flex min-h-[48px] shrink-0 items-center rounded-full bg-white px-[26px] font-sans text-[16px] font-extrabold ${accent.text}`}
+      >
+        {resuming ? "Resume" : "Start"}
+      </Link>
+    </section>
+  );
+}
+
+/**
+ * Earned achievements only. Each is computed from data the app already stores,
+ * and the section disappears entirely when none are earned rather than showing
+ * empty placeholders.
+ */
+function Achievements({
+  completed,
+  best,
+  startedOrDone,
+}: {
+  completed: TopicT[];
+  best: Map<string, number>;
+  startedOrDone: TopicT[];
+}) {
+  const first = completed[0] ?? null;
+
+  // Highest best-score across topics that actually have one.
+  let topScore: { topic: TopicT; pct: number } | null = null;
+  for (const t of completed) {
+    const b = best.get(t.id);
+    if (b === undefined || b < HIGH_SCORE_THRESHOLD) continue;
+    const pct = Math.round(b * 100);
+    if (topScore === null || pct > topScore.pct) topScore = { topic: t, pct };
+  }
+
+  const subjectsTouched = new Set(startedOrDone.map((t) => t.subject));
+
+  const badges: JSX.Element[] = [];
+  if (first) {
+    const accent = SUBJECT_ACCENTS[first.subject as Subject];
+    badges.push(
+      <Badge
+        key="first"
+        chip={<span className={`${accent.bg} ${CHIP} text-white`}>✓</span>}
+        title="First topic done"
+        subtitle={first.title}
+      />,
+    );
+  }
+  if (topScore) {
+    const accent = SUBJECT_ACCENTS[topScore.topic.subject as Subject];
+    badges.push(
+      <Badge
+        key="high"
+        chip={
+          <span className={`${accent.bg} ${CHIP} text-[13px] text-white`}>
+            {topScore.pct}%
+          </span>
+        }
+        title="High scorer"
+        subtitle={topScore.topic.title}
+      />,
+    );
+  }
+  if (subjectsTouched.size >= 2) {
+    badges.push(
+      <Badge
+        key="multi"
+        chip={
+          <span className={`${CHIP} border-2 border-line bg-canvas text-ink-3`}>
+            {subjectsTouched.size}
+          </span>
+        }
+        title="Multi-subject learner"
+        subtitle={`Started ${subjectsTouched.size} of ${SUBJECTS.length} subjects`}
+      />,
+    );
+  }
+
+  if (badges.length === 0) return null;
+
+  return (
+    <section aria-label="Achievements">
+      <h2 className="mb-4 font-heading text-[22px] font-extrabold tracking-[-0.01em] text-ink">
+        Achievements
+      </h2>
+      <div className="flex flex-wrap gap-[14px]">{badges}</div>
+    </section>
+  );
+}
+
+const CHIP =
+  "flex size-[38px] shrink-0 items-center justify-center rounded-full font-heading text-[15px] font-extrabold";
+
+function Badge({
+  chip,
+  title,
+  subtitle,
+}: {
+  chip: JSX.Element;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <div className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-[18px] py-3">
+      {chip}
+      <div>
+        <p className="font-sans text-[14px] font-bold text-ink">{title}</p>
+        <p className="font-sans text-[12px] text-ink-3">{subtitle}</p>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Per-subject completion ring. Announced as text — a conic gradient is
+ * invisible to a screen reader and colour alone can't carry the number.
+ */
+function SubjectRing({
+  subject,
+  done,
+  total,
+}: {
+  subject: Subject;
+  done: number;
+  total: number;
+}) {
+  const accent = SUBJECT_ACCENTS[subject];
+  const pct = total === 0 ? 0 : Math.round((done / total) * 100);
+  const track = "var(--color-line)";
+  const fill = pct === 0 ? track : `var(--color-${subject})`;
+  return (
+    <div className="flex flex-col items-center gap-[10px] rounded-[18px] border border-line bg-surface p-[18px] text-center">
+      <div
+        className="flex size-14 items-center justify-center rounded-full"
+        style={{ background: `conic-gradient(${fill} ${pct}%, ${track} 0)` }}
+        role="img"
+        aria-label={`${SUBJECT_LABELS[subject]} ${pct}% complete, ${done} of ${total} topics`}
+      >
+        <span
+          className={`flex size-[42px] items-center justify-center rounded-full bg-surface font-sans text-[12px] font-extrabold ${
+            pct === 0 ? "text-ink-3" : accent.text
+          }`}
+          aria-hidden
+        >
+          {pct}%
+        </span>
+      </div>
+      <span className="font-sans text-[14px] font-bold text-ink">
+        {SUBJECT_LABELS[subject]}
+      </span>
+      <span className="font-sans text-[12px] text-ink-3">
+        {done} of {total} done
+      </span>
     </div>
   );
 }

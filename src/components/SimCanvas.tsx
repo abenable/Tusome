@@ -211,14 +211,14 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
   if (!module) {
     return (
       <div
-        className="flex min-h-[320px] flex-col items-center justify-center gap-2 rounded-[11px] border border-hairline bg-[#f5f5f7] px-6 py-10 text-center"
+        className="flex min-h-[320px] flex-col items-center justify-center gap-2 rounded-[11px] border border-hairline bg-canvas px-6 py-10 text-center"
         role="status"
         aria-live="polite"
       >
-        <p className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+        <p className="font-heading text-[21px] font-semibold tracking-tight text-ink">
           Simulation unavailable
         </p>
-        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
           The simulation &ldquo;{simId}&rdquo; isn&rsquo;t installed. Ask your
           teacher to update the content packs.
         </p>
@@ -255,7 +255,7 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
     <div className="flex flex-col gap-4">
       <div
         ref={containerRef}
-        className="w-full overflow-hidden rounded-[11px] border border-hairline bg-[#f5f5f7]"
+        className="w-full overflow-hidden rounded-[11px] border border-hairline bg-canvas"
       >
         <canvas
           ref={canvasRef}
@@ -291,7 +291,7 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
             type="button"
             onClick={handlePlay}
             disabled={playing}
-            className="min-h-[44px] rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white hover:bg-[#0071e3] disabled:opacity-50"
+            className="min-h-[44px] rounded-[9999px] bg-brand px-6 text-[17px] text-white hover:bg-brand-hover disabled:opacity-50"
           >
             Play
           </Button>
@@ -299,14 +299,14 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
             type="button"
             onClick={handlePause}
             disabled={!playing}
-            className="min-h-[44px] rounded-[9999px] border border-[#0066cc] bg-transparent px-6 text-[17px] text-[#0066cc] hover:bg-[#0066cc]/5 disabled:opacity-50"
+            className="min-h-[44px] rounded-[9999px] border border-brand bg-transparent px-6 text-[17px] text-brand hover:bg-brand/5 disabled:opacity-50"
           >
             Pause
           </Button>
           <Button
             type="button"
             onClick={handleReset}
-            className="min-h-[44px] rounded-[9999px] bg-[#fafafc] px-6 text-[17px] text-[#333333] hover:bg-[#f0f0f0]"
+            className="min-h-[44px] rounded-[9999px] bg-surface px-6 text-[17px] text-ink-2 hover:bg-line-soft"
           >
             Reset
           </Button>
@@ -321,11 +321,11 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
                 <div className="flex items-baseline justify-between gap-3">
                   <Label
                     htmlFor={`sim-${module.id}-${control.key}`}
-                    className="font-sans text-[14px] font-semibold text-[#1d1d1f]"
+                    className="font-sans text-[14px] font-semibold text-ink"
                   >
                     {control.label}
                   </Label>
-                  <span className="font-sans text-[14px] tabular-nums text-[#666666]">
+                  <span className="font-sans text-[14px] tabular-nums text-ink-3">
                     {val}
                   </span>
                 </div>

@@ -1,4 +1,5 @@
 import type { SimModule, SimState } from './index'
+import { SIM_COLORS, SIM_FONT } from './colors'
 
 // Internal typed view of the SimState bag. The registry-facing `step`/`reset`
 // use the widened `SimState`; we cast to/from this shape at the boundary for
@@ -165,7 +166,7 @@ export const projectile: SimModule = {
     const s = fromState(state)
 
     // Background
-    ctx.fillStyle = '#f5f5f7'
+    ctx.fillStyle = SIM_COLORS.canvas
     ctx.fillRect(0, 0, w, h)
 
     // Size the view from the *theoretical* full trajectory for this launch, not
@@ -194,7 +195,7 @@ export const projectile: SimModule = {
     ]
 
     // Ground line
-    ctx.strokeStyle = '#1d1d1f'
+    ctx.strokeStyle = SIM_COLORS.ink
     ctx.lineWidth = 1.5
     ctx.beginPath()
     ctx.moveTo(MARGIN_PX, h - MARGIN_PX)
@@ -202,7 +203,7 @@ export const projectile: SimModule = {
     ctx.stroke()
 
     // Trail
-    ctx.strokeStyle = '#0066cc'
+    ctx.strokeStyle = SIM_COLORS.physics
     ctx.lineWidth = 2
     ctx.beginPath()
     for (let i = 0; i < s.trail.length; i++) {
@@ -214,16 +215,16 @@ export const projectile: SimModule = {
 
     // Projectile
     const [cx, cy] = toPx(s.x, s.y)
-    ctx.fillStyle = '#1d1d1f'
+    ctx.fillStyle = SIM_COLORS.ink
     ctx.beginPath()
     ctx.arc(cx, cy, 7, 0, Math.PI * 2)
     ctx.fill()
 
     // Live readout of height (y), range (x), time (t), and the current gravity
     // from state (not this.defaults — the slider now takes effect immediately).
-    ctx.fillStyle = '#1d1d1f'
+    ctx.fillStyle = SIM_COLORS.ink
     ctx.font =
-      '14px "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, sans-serif'
+      `14px ${SIM_FONT}`
     const readout =
       `height ${s.y.toFixed(2)} m   ` +
       `range ${s.x.toFixed(2)} m   ` +

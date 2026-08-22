@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SubjectsRouteImport } from './routes/subjects'
 import { Route as SubjectIndexRouteImport } from './routes/$subject/index'
 import { Route as SubjectTopicIdIndexRouteImport } from './routes/$subject/$topicId/index'
 import { Route as SubjectTopicIdQuizRouteImport } from './routes/$subject/$topicId/quiz'
@@ -29,6 +30,11 @@ const DashboardRoute = DashboardRouteImport.update({
 const SettingsRoute = SettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SubjectsRoute = SubjectsRouteImport.update({
+  id: '/subjects',
+  path: '/subjects',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SubjectIndexRoute = SubjectIndexRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/settings': typeof SettingsRoute
+  '/subjects': typeof SubjectsRoute
   '/$subject/': typeof SubjectIndexRoute
   '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
   '/$subject/$topicId/': typeof SubjectTopicIdIndexRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/settings': typeof SettingsRoute
+  '/subjects': typeof SubjectsRoute
   '/$subject': typeof SubjectIndexRoute
   '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
   '/$subject/$topicId': typeof SubjectTopicIdIndexRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/settings': typeof SettingsRoute
+  '/subjects': typeof SubjectsRoute
   '/$subject/': typeof SubjectIndexRoute
   '/$subject/$topicId/quiz': typeof SubjectTopicIdQuizRoute
   '/$subject/$topicId/': typeof SubjectTopicIdIndexRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/settings'
+    | '/subjects'
     | '/$subject/'
     | '/$subject/$topicId/quiz'
     | '/$subject/$topicId/'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/settings'
+    | '/subjects'
     | '/$subject'
     | '/$subject/$topicId/quiz'
     | '/$subject/$topicId'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/settings'
+    | '/subjects'
     | '/$subject/'
     | '/$subject/$topicId/quiz'
     | '/$subject/$topicId/'
@@ -103,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRoute: typeof DashboardRoute
   SettingsRoute: typeof SettingsRoute
+  SubjectsRoute: typeof SubjectsRoute
   SubjectIndexRoute: typeof SubjectIndexRoute
   SubjectTopicIdQuizRoute: typeof SubjectTopicIdQuizRoute
   SubjectTopicIdIndexRoute: typeof SubjectTopicIdIndexRoute
@@ -129,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/settings'
       preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/subjects': {
+      id: '/subjects'
+      path: '/subjects'
+      fullPath: '/subjects'
+      preLoaderRoute: typeof SubjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$subject/': {
@@ -159,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRoute: DashboardRoute,
   SettingsRoute: SettingsRoute,
+  SubjectsRoute: SubjectsRoute,
   SubjectIndexRoute: SubjectIndexRoute,
   SubjectTopicIdQuizRoute: SubjectTopicIdQuizRoute,
   SubjectTopicIdIndexRoute: SubjectTopicIdIndexRoute,

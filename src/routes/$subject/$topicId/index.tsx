@@ -37,10 +37,10 @@ function TopicView() {
     return (
       <div className="flex flex-col gap-6">
         <BackLink subject={subject} />
-        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-ink">
           Topic not found
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
           This topic isn’t available yet.
         </p>
       </div>
@@ -52,10 +52,10 @@ function TopicView() {
       <BackLink subject={subject} />
 
       <header className="flex flex-col gap-2">
-        <p className="font-sans text-[14px] uppercase tracking-wide text-[#666666]">
+        <p className="font-sans text-[14px] uppercase tracking-wide text-ink-3">
           {SUBJECT_LABELS[subject as Subject]} · {topic.level} · {topic.strand}
         </p>
-        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-ink">
           {topic.title}
         </h1>
       </header>
@@ -63,10 +63,10 @@ function TopicView() {
       {/* Learning outcomes, verbatim from the NCDC syllabus. */}
       {topic.outcomes.length > 0 && (
         <section className="flex flex-col gap-2">
-          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
             Learning outcomes
           </h2>
-          <ul className="flex list-disc flex-col gap-1 pl-6 font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
+          <ul className="flex list-disc flex-col gap-1 pl-6 font-sans text-[17px] leading-relaxed text-ink">
             {topic.outcomes.map((o, i) => (
               <li key={i}>{o}</li>
             ))}
@@ -82,7 +82,7 @@ function TopicView() {
             return (
               <p
                 key={i}
-                className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]"
+                className="font-sans text-[17px] leading-relaxed text-ink"
               >
                 {block.text}
               </p>
@@ -107,7 +107,7 @@ function TopicView() {
               return (
                 <div
                   key={i}
-                  className="mx-auto flex max-w-fit justify-center overflow-x-auto rounded-[8px] bg-[#f5f5f7] px-6 py-4 text-[#1d1d1f]"
+                  className="mx-auto flex max-w-fit justify-center overflow-x-auto rounded-[8px] bg-canvas px-6 py-4 text-ink"
                   aria-label="equation"
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
@@ -116,7 +116,7 @@ function TopicView() {
             return (
               <pre
                 key={i}
-                className="mx-auto max-w-fit overflow-x-auto rounded-[8px] bg-[#f5f5f7] px-6 py-4 font-sans text-[19px] tracking-tight text-[#1d1d1f]"
+                className="mx-auto max-w-fit overflow-x-auto rounded-[8px] bg-canvas px-6 py-4 font-sans text-[19px] tracking-tight text-ink"
                 aria-label="equation"
               >
                 {block.expr ?? ""}
@@ -127,7 +127,7 @@ function TopicView() {
           return (
             <div
               key={i}
-              className="rounded-[8px] border border-hairline bg-[#f5f5f7] px-4 py-8 text-center font-sans text-[14px] text-[#666666]"
+              className="rounded-[8px] border border-hairline bg-canvas px-4 py-8 text-center font-sans text-[14px] text-ink-3"
             >
               [image: {block.alt}]
             </div>
@@ -142,7 +142,7 @@ function TopicView() {
           `phet` → PhET file (03-architecture.md §Simulation contract). */}
       {topic.sim ? (
         <section className="flex flex-col gap-3">
-          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+          <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
             Simulation
           </h2>
           {"simId" in topic.sim ? (
@@ -154,7 +154,7 @@ function TopicView() {
             <PhETSim file={topic.sim.phet} />
           )}
           {topic.sim.caption ? (
-            <p className="font-sans text-[14px] text-[#666666]">
+            <p className="font-sans text-[14px] text-ink-3">
               {topic.sim.caption}
             </p>
           ) : null}
@@ -165,7 +165,7 @@ function TopicView() {
         <Link
           to="/$subject/$topicId/quiz"
           params={{ subject, topicId }}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white hover:bg-[#0071e3]"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white hover:bg-brand-hover"
         >
           Take quiz
         </Link>
@@ -180,7 +180,7 @@ function BackLink({ subject }: { subject: string }) {
       <Link
         to="/$subject"
         params={{ subject }}
-        className="text-[17px] text-[#0066cc] hover:underline"
+        className="text-[17px] text-brand hover:underline"
         style={{ minHeight: 44, display: "inline-flex", alignItems: "center" }}
       >
         Back to {SUBJECT_LABELS[subject as keyof typeof SUBJECT_LABELS] ?? subject}

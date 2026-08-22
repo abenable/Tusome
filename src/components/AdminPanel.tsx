@@ -52,10 +52,10 @@ export function AdminPanel({ packs, errors }: AdminPanelProps): JSX.Element {
   return (
     <div className="flex flex-col gap-12">
       <header className="flex flex-col gap-2">
-        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-ink">
           Admin
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-2">
           Manage profiles, content, and the admin PIN.
         </p>
       </header>
@@ -82,12 +82,12 @@ function InstalledPacksSection({
 }): JSX.Element {
   return (
     <section className="flex flex-col gap-4" aria-label="Installed content packs">
-      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
         Installed content packs
       </h2>
 
       {packs.length === 0 ? (
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-2">
           No content packs installed.
         </p>
       ) : (
@@ -95,11 +95,11 @@ function InstalledPacksSection({
           {packs.map((p) => (
             <li
               key={p.packId}
-              className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-sans text-[17px] text-[#1d1d1f]"
+              className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-sans text-[17px] text-ink"
             >
               <span className="font-semibold">{p.packId}</span>
-              <span className="text-[#666666]">v{p.version}</span>
-              <span className="text-[#666666]">
+              <span className="text-ink-3">v{p.version}</span>
+              <span className="text-ink-3">
                 · {p.topics.length}{" "}
                 {p.topics.length === 1 ? "topic" : "topics"}
               </span>
@@ -112,11 +112,11 @@ function InstalledPacksSection({
           (never as a student-facing modal). Each shows the path basename and
           the validation/parse error message. */}
       <div className="flex flex-col gap-2">
-        <h3 className="font-sans text-[17px] font-semibold text-[#1d1d1f]">
+        <h3 className="font-sans text-[17px] font-semibold text-ink">
           Validation log
         </h3>
         {errors.length === 0 ? (
-          <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+          <p className="font-sans text-[17px] leading-relaxed text-ink-2">
             All installed packs validated.
           </p>
         ) : (
@@ -126,10 +126,10 @@ function InstalledPacksSection({
                 key={`${e.path}-${i}`}
                 className="flex flex-col gap-1 rounded-[8px] border border-hairline bg-card px-4 py-3"
               >
-                <span className="font-sans text-[14px] font-semibold text-[#1d1d1f]">
+                <span className="font-sans text-[14px] font-semibold text-ink">
                   {basename(e.path)}
                 </span>
-                <span className="font-sans text-[14px] leading-relaxed text-[#666666]">
+                <span className="font-sans text-[14px] leading-relaxed text-ink-3">
                   {e.error}
                 </span>
               </li>
@@ -180,16 +180,16 @@ function ProfileSection(): JSX.Element {
 
   return (
     <section className="flex flex-col gap-4" aria-label="Profile management">
-      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
         Profiles
       </h2>
-      <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink-2">
         Rename or remove students on this shared machine. Deleting a student
         also deletes their progress and quiz attempts.
       </p>
 
       {students.length === 0 ? (
-        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
           No students yet.
         </p>
       ) : (
@@ -214,18 +214,18 @@ function ProfileSection(): JSX.Element {
         <button
           type="button"
           onClick={handleExport}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3]"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover"
         >
           Export class results to CSV
         </button>
         <Link
           to="/dashboard"
-          className="inline-flex min-h-[44px] items-center text-[17px] text-[#0066cc] hover:underline"
+          className="inline-flex min-h-[44px] items-center text-[17px] text-brand hover:underline"
         >
           Open teacher dashboard
         </Link>
         {exportStatus ? (
-          <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+          <p className="font-sans text-[17px] leading-relaxed text-ink-2">
             {exportStatus}
           </p>
         ) : null}
@@ -308,25 +308,25 @@ function StudentRowItem({
     <li className="flex flex-col gap-2 rounded-[11px] border border-hairline bg-card px-4 py-3">
       {editing ? (
         <div className="flex flex-col gap-3">
-          <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+          <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
             Display name
             <Input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="min-h-[44px] max-w-[320px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+              className="min-h-[44px] max-w-[320px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
             />
           </label>
-          <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+          <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
             Class label (optional)
             <Input
               value={label}
               placeholder="e.g. S2A"
               onChange={(e) => setLabel(e.target.value)}
-              className="min-h-[44px] max-w-[320px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+              className="min-h-[44px] max-w-[320px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
             />
           </label>
           {error ? (
-            <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+            <p className="font-sans text-[14px] leading-relaxed text-ink-3">
               {error}
             </p>
           ) : null}
@@ -335,7 +335,7 @@ function StudentRowItem({
               type="button"
               onClick={save}
               disabled={busy}
-              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-5 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-5 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
             >
               Save
             </button>
@@ -348,7 +348,7 @@ function StudentRowItem({
                 setEditing(false);
               }}
               disabled={busy}
-              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-[#0066cc] hover:underline"
+              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-brand hover:underline"
             >
               Cancel
             </button>
@@ -357,11 +357,11 @@ function StudentRowItem({
       ) : (
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-col">
-            <span className="font-sans text-[17px] font-semibold text-[#1d1d1f]">
+            <span className="font-sans text-[17px] font-semibold text-ink">
               {displayName}
             </span>
             {classLabel ? (
-              <span className="font-sans text-[14px] text-[#666666]">
+              <span className="font-sans text-[14px] text-ink-3">
                 {classLabel}
               </span>
             ) : null}
@@ -370,20 +370,20 @@ function StudentRowItem({
             <button
               type="button"
               onClick={() => setEditing(true)}
-              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-[#0066cc] hover:underline"
+              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-brand hover:underline"
             >
               Rename
             </button>
             {confirmingDelete ? (
               <>
-                <span className="inline-flex items-center font-sans text-[14px] text-[#666666]">
+                <span className="inline-flex items-center font-sans text-[14px] text-ink-3">
                   Delete this student?
                 </span>
                 <button
                   type="button"
                   onClick={doDelete}
                   disabled={busy}
-                  className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-[#0066cc] hover:underline disabled:opacity-50"
+                  className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-brand hover:underline disabled:opacity-50"
                 >
                   Yes, delete
                 </button>
@@ -391,7 +391,7 @@ function StudentRowItem({
                   type="button"
                   onClick={() => setConfirmingDelete(false)}
                   disabled={busy}
-                  className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-[#333333] hover:underline"
+                  className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-ink-2 hover:underline"
                 >
                   No
                 </button>
@@ -400,7 +400,7 @@ function StudentRowItem({
               <button
                 type="button"
                 onClick={() => setConfirmingDelete(true)}
-                className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-[#333333] hover:text-[#0066cc]"
+                className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[17px] text-ink-2 hover:text-brand"
               >
                 Delete
               </button>
@@ -451,24 +451,24 @@ function AboutSection(): JSX.Element {
 
   return (
     <section className="flex flex-col gap-4" aria-label="About this app">
-      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
         About
       </h2>
-      <dl className="flex flex-col gap-2 font-sans text-[17px] text-[#1d1d1f]">
+      <dl className="flex flex-col gap-2 font-sans text-[17px] text-ink">
         <div className="flex flex-col gap-1">
-          <dt className="text-[14px] text-[#666666]">App version</dt>
+          <dt className="text-[14px] text-ink-3">App version</dt>
           <dd>{appVersion}</dd>
         </div>
         <div className="flex flex-col gap-1">
-          <dt className="text-[14px] text-[#666666]">Content manifest version</dt>
+          <dt className="text-[14px] text-ink-3">Content manifest version</dt>
           <dd>{manifestVersion}</dd>
         </div>
         <div className="flex flex-col gap-1">
-          <dt className="text-[14px] text-[#666666]">Build id</dt>
+          <dt className="text-[14px] text-ink-3">Build id</dt>
           <dd>{buildId}</dd>
         </div>
       </dl>
-      <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+      <p className="font-sans text-[14px] leading-relaxed text-ink-3">
         Share these three values when reporting a problem.
       </p>
     </section>
@@ -634,10 +634,10 @@ function UpdatesSection(): JSX.Element {
 
   return (
     <section className="flex flex-col gap-4" aria-label="Updates">
-      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
         Updates
       </h2>
-      <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink-2">
         Content updates arrive by USB. Online checks are off by default and only
         run when a teacher turns them on.
       </p>
@@ -685,7 +685,7 @@ function UpdatesSection(): JSX.Element {
           type="button"
           onClick={handleUsbNow}
           disabled={usbBusy}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
         >
           {usbBusy ? "Checking USB…" : "Check USB now"}
         </button>
@@ -693,18 +693,18 @@ function UpdatesSection(): JSX.Element {
           type="button"
           onClick={handleOnlineNow}
           disabled={onlineBusy || !anyOnlineOn}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
         >
           {onlineBusy ? "Checking online…" : "Check online now"}
         </button>
         {statusMessage ? (
-          <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+          <p className="font-sans text-[17px] leading-relaxed text-ink-2">
             {statusMessage}
           </p>
         ) : null}
       </div>
 
-      <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+      <p className="font-sans text-[14px] leading-relaxed text-ink-3">
         Content manifest version: {manifestVersion}
       </p>
 
@@ -712,22 +712,22 @@ function UpdatesSection(): JSX.Element {
           shown within the single-blue system: ok = Action Blue, fail = ink,
           skipped = muted. No red/green — no second brand color. */}
       <div className="flex flex-col gap-2">
-        <h3 className="font-sans text-[14px] font-semibold text-[#1d1d1f]">
+        <h3 className="font-sans text-[14px] font-semibold text-ink">
           Update log
         </h3>
         {!logLoaded ? (
-          <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+          <p className="font-sans text-[14px] leading-relaxed text-ink-3">
             Loading…
           </p>
         ) : logRows.length === 0 ? (
-          <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+          <p className="font-sans text-[14px] leading-relaxed text-ink-3">
             No update activity yet.
           </p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="font-sans text-[14px] font-semibold text-[#1d1d1f]">
+                <tr className="font-sans text-[14px] font-semibold text-ink">
                   <th scope="col" className="px-2 py-2 font-semibold">Time (UTC)</th>
                   <th scope="col" className="px-2 py-2 font-semibold">Channel</th>
                   <th scope="col" className="px-2 py-2 font-semibold">Kind</th>
@@ -738,29 +738,29 @@ function UpdatesSection(): JSX.Element {
               <tbody>
                 {logRows.map((row) => (
                   <tr key={row.id} className="align-top">
-                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-[#666666]">
+                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-ink-3">
                       {row.ts}
                     </td>
-                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-[#1d1d1f]">
+                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-ink">
                       {row.channel}
                     </td>
-                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-[#1d1d1f]">
+                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-ink">
                       {row.kind}
                     </td>
                     <td className="px-2 py-2 font-sans text-[14px] leading-relaxed">
                       <span
                         className={
                           row.outcome === "ok"
-                            ? "font-semibold text-[#0066cc]"
+                            ? "font-semibold text-brand"
                             : row.outcome === "fail"
-                              ? "font-semibold text-[#1d1d1f]"
-                              : "text-[#666666]"
+                              ? "font-semibold text-ink"
+                              : "text-ink-3"
                         }
                       >
                         {row.outcome}
                       </span>
                     </td>
-                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-[#333333]">
+                    <td className="px-2 py-2 font-sans text-[14px] leading-relaxed text-ink-2">
                       {row.detail}
                     </td>
                   </tr>
@@ -808,24 +808,24 @@ function ToggleRow({
         />
         <span
           aria-hidden="true"
-          className={`pointer-events-none inline-flex h-[28px] w-[48px] items-center rounded-[9999px] border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0071e3] ${
+          className={`pointer-events-none inline-flex h-[28px] w-[48px] items-center rounded-[9999px] border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-hover ${
             checked
-              ? "border-[#0066cc] bg-[#0066cc]"
-              : "border-[#e0e0e0] bg-[#f5f5f7]"
+              ? "border-brand bg-brand"
+              : "border-line bg-canvas"
           }`}
         >
           <span
-            className={`ml-1 inline-block h-[20px] w-[20px] rounded-full bg-[#ffffff] transition ${
+            className={`ml-1 inline-block h-[20px] w-[20px] rounded-full bg-white transition ${
               checked ? "translate-x-[20px]" : "translate-x-0"
             }`}
           />
         </span>
       </span>
       <span className="flex flex-col gap-1">
-        <span className="font-sans text-[17px] font-semibold text-[#1d1d1f]">
+        <span className="font-sans text-[17px] font-semibold text-ink">
           {label}
         </span>
-        <span className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <span className="font-sans text-[14px] leading-relaxed text-ink-3">
           {description}
         </span>
       </span>
@@ -890,10 +890,10 @@ function PinChangeSection(): JSX.Element {
 
   return (
     <section className="flex flex-col gap-4" aria-label="Change admin PIN">
-      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+      <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
         Admin PIN
       </h2>
-      <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink-2">
         {hasPin === null
           ? "Loading…"
           : hasPin
@@ -905,7 +905,7 @@ function PinChangeSection(): JSX.Element {
         className="flex flex-col gap-3"
         aria-label="Change admin PIN"
       >
-        <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+        <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
           New PIN
           <Input
             type="password"
@@ -913,10 +913,10 @@ function PinChangeSection(): JSX.Element {
             autoComplete="new-password"
             value={pin}
             onChange={(e) => setPin(e.target.value)}
-            className="min-h-[44px] max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
-        <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+        <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
           Confirm PIN
           <Input
             ref={confirmRef}
@@ -925,23 +925,23 @@ function PinChangeSection(): JSX.Element {
             autoComplete="new-password"
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
-            className="min-h-[44px] max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
         {error ? (
-          <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+          <p className="font-sans text-[14px] leading-relaxed text-ink-3">
             {error}
           </p>
         ) : null}
         {success ? (
-          <p className="font-sans text-[14px] leading-relaxed text-[#0066cc]">
+          <p className="font-sans text-[14px] leading-relaxed text-brand">
             {success}
           </p>
         ) : null}
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
         >
           Save PIN
         </button>

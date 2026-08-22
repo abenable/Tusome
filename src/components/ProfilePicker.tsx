@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import { Cog, Plus, Trash2, Pencil } from "lucide-react";
 
 import { useStudent, type StudentContextValue } from "@/lib/student-context";
+import { SUBJECTS, SUBJECT_ACCENTS } from "@/lib/subjects";
 import type { StudentRow } from "@/db/index";
 import { Input } from "@/components/ui/input";
 import { PinGate } from "@/components/PinGate";
@@ -31,10 +32,10 @@ export function ProfilePicker() {
       aria-label="Choose a profile"
     >
       <header className="flex flex-col gap-3">
-        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
           Who’s using CBCLab?
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-2">
           {firstRun
             ? "Add your name to save your progress, or continue as a guest."
             : "Pick your name to continue, or use Guest."}
@@ -91,8 +92,8 @@ function FirstRunForm({ ctx }: { ctx: StudentContextValue }) {
 
   return (
     <form onSubmit={addAndPick} className="flex flex-col gap-5">
-      <div className="flex flex-col gap-5 rounded-[11px] border border-hairline bg-card px-6 py-5">
-        <label className="flex flex-col gap-2 font-sans text-[14px] text-[#333333]">
+      <div className="flex flex-col gap-5 rounded-[18px] border border-line bg-surface px-6 py-5">
+        <label className="flex flex-col gap-2 font-sans text-[14px] text-ink-2">
           Your name
           <Input
             ref={nameRef}
@@ -100,23 +101,23 @@ function FirstRunForm({ ctx }: { ctx: StudentContextValue }) {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="e.g. Aisha"
-            className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
-        <label className="flex flex-col gap-2 font-sans text-[14px] text-[#333333]">
-          Class <span className="text-[#666666]">(optional)</span>
+        <label className="flex flex-col gap-2 font-sans text-[14px] text-ink-2">
+          Class <span className="text-ink-3">(optional)</span>
           <Input
             type="text"
             value={classLabel}
             onChange={(e) => setClassLabel(e.target.value)}
             placeholder="e.g. S2 Blue"
-            className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
       </div>
 
       {error ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
@@ -125,7 +126,7 @@ function FirstRunForm({ ctx }: { ctx: StudentContextValue }) {
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
         >
           Add name &amp; start
         </button>
@@ -133,7 +134,7 @@ function FirstRunForm({ ctx }: { ctx: StudentContextValue }) {
           type="button"
           onClick={guest}
           disabled={busy}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] border border-[#0066cc] bg-transparent px-6 text-[17px] text-[#0066cc] transition active:scale-95 hover:bg-[#0066cc]/5 disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] border border-brand bg-transparent px-6 text-[17px] text-brand transition active:scale-95 hover:bg-brand/5 disabled:opacity-50"
         >
           Continue as Guest
         </button>
@@ -166,13 +167,21 @@ function NameGrid({ ctx }: { ctx: StudentContextValue }) {
           <button
             type="button"
             onClick={() => ctx.setStudent(null)}
-            className="flex min-h-[88px] w-full flex-col items-start justify-center gap-1 rounded-[11px] border border-dashed border-hairline bg-transparent px-6 text-left transition active:scale-95 hover:bg-[#f5f5f7]"
+            className="flex min-h-20 w-full items-center gap-3 rounded-[18px] border-[1.5px] border-dashed border-line bg-transparent px-[18px] text-left transition active:scale-95 hover:bg-canvas"
           >
-            <span className="font-sans text-[17px] font-medium text-[#333333]">
-              Guest
+            <span
+              className="flex size-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-line bg-canvas font-sans text-[13px] text-ink-3"
+              aria-hidden
+            >
+              ?
             </span>
-            <span className="font-sans text-[14px] text-[#666666]">
-              Practise without saving
+            <span className="flex min-w-0 flex-col">
+              <span className="font-sans text-[16px] font-semibold text-ink-2">
+                Guest
+              </span>
+              <span className="font-sans text-[13px] text-ink-3">
+                Practise without saving
+              </span>
             </span>
           </button>
         </li>
@@ -180,10 +189,10 @@ function NameGrid({ ctx }: { ctx: StudentContextValue }) {
           <button
             type="button"
             onClick={() => setAdding(true)}
-            className="flex min-h-[88px] w-full items-center gap-2 rounded-[11px] border border-dashed border-hairline bg-transparent px-6 text-left text-[#0066cc] transition active:scale-95 hover:bg-[#f5f5f7]"
+            className="flex min-h-20 w-full items-center gap-[10px] rounded-[18px] border-[1.5px] border-dashed border-line bg-transparent px-[18px] text-left font-sans text-[16px] font-semibold text-brand transition active:scale-95 hover:bg-canvas"
           >
             <Plus className="size-5" aria-hidden />
-            <span className="font-sans text-[17px]">Add name</span>
+            <span>Add name</span>
           </button>
         </li>
       </ul>
@@ -195,6 +204,16 @@ function NameGrid({ ctx }: { ctx: StudentContextValue }) {
   );
 }
 
+/**
+ * A stable avatar colour per student, cycling the four subject accents the way
+ * the design's mock does (Aisha blue, Brian green, Diana orange...). Keyed on
+ * the row id so a person keeps the same colour across sessions and machines —
+ * a hash of the name would change the moment a teacher fixes a typo.
+ */
+function avatarAccent(id: number) {
+  return SUBJECT_ACCENTS[SUBJECTS[Math.abs(id) % SUBJECTS.length]];
+}
+
 function NameTile({
   student,
   onPick,
@@ -202,20 +221,29 @@ function NameTile({
   student: StudentRow;
   onPick: () => void;
 }) {
+  const accent = avatarAccent(student.id);
   return (
     <button
       type="button"
       onClick={onPick}
-      className="flex min-h-[88px] w-full flex-col items-start justify-center gap-1 rounded-[11px] border border-hairline bg-card px-6 text-left transition active:scale-95 hover:bg-[#f5f5f7]"
+      className="flex min-h-20 w-full items-center gap-3 rounded-[18px] border border-line bg-surface px-[18px] text-left shadow-[0_1px_2px_rgba(0,0,0,.03)] transition active:scale-95 hover:bg-canvas"
     >
-      <span className="font-sans text-[17px] font-medium text-[#1d1d1f]">
-        {student.display_name}
+      <span
+        className={`flex size-10 shrink-0 items-center justify-center rounded-full font-heading text-[15px] font-bold text-white ${accent.bg}`}
+        aria-hidden
+      >
+        {student.display_name.slice(0, 1).toUpperCase()}
       </span>
-      {student.class_label ? (
-        <span className="font-sans text-[14px] text-[#666666]">
-          {student.class_label}
+      <span className="flex min-w-0 flex-col">
+        <span className="truncate font-sans text-[17px] font-bold text-ink">
+          {student.display_name}
         </span>
-      ) : null}
+        {student.class_label ? (
+          <span className="truncate font-sans text-[13px] text-ink-3">
+            {student.class_label}
+          </span>
+        ) : null}
+      </span>
     </button>
   );
 }
@@ -260,31 +288,31 @@ function AddNameInline({
   return (
     <form
       onSubmit={submit}
-      className="flex flex-col gap-4 rounded-[11px] border border-hairline bg-card px-6 py-5"
+      className="flex flex-col gap-4 rounded-[18px] border border-line bg-surface px-6 py-5"
       aria-label="Add a new profile"
     >
-      <label className="flex flex-col gap-2 font-sans text-[14px] text-[#333333]">
+      <label className="flex flex-col gap-2 font-sans text-[14px] text-ink-2">
         Name
         <Input
           ref={nameRef}
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+          className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
         />
       </label>
-      <label className="flex flex-col gap-2 font-sans text-[14px] text-[#333333]">
-        Class <span className="text-[#666666]">(optional)</span>
+      <label className="flex flex-col gap-2 font-sans text-[14px] text-ink-2">
+        Class <span className="text-ink-3">(optional)</span>
         <Input
           type="text"
           value={classLabel}
           onChange={(e) => setClassLabel(e.target.value)}
           placeholder="e.g. S2 Blue"
-          className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+          className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
         />
       </label>
       {error ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
@@ -292,7 +320,7 @@ function AddNameInline({
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
         >
           Save &amp; continue
         </button>
@@ -300,7 +328,7 @@ function AddNameInline({
           type="button"
           onClick={onDone}
           disabled={busy}
-          className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[17px] text-[#333333] transition hover:bg-[#f5f5f7] disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[17px] text-ink-2 transition hover:bg-canvas disabled:opacity-50"
         >
           Cancel
         </button>
@@ -323,7 +351,7 @@ function ManageProfiles({ ctx }: { ctx: StudentContextValue }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex min-h-[44px] w-fit items-center gap-2 text-[14px] text-[#666666] transition hover:text-[#1d1d1f]"
+        className="inline-flex min-h-[44px] w-fit items-center gap-2 text-[14px] text-ink-3 transition hover:text-ink"
       >
         <Cog className="size-4" aria-hidden />
         Manage profiles
@@ -331,17 +359,17 @@ function ManageProfiles({ ctx }: { ctx: StudentContextValue }) {
 
       {open ? (
         <div
-          className="flex flex-col gap-5 rounded-[11px] border border-hairline bg-card px-6 py-6"
+          className="flex flex-col gap-5 rounded-[18px] border border-line bg-surface px-6 py-6"
           aria-label="Manage profiles"
         >
           <div className="flex items-center justify-between">
-            <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+            <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
               Manage profiles
             </h2>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[14px] text-[#333333] transition hover:bg-[#f5f5f7]"
+              className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[14px] text-ink-2 transition hover:bg-canvas"
             >
               Close
             </button>
@@ -349,7 +377,7 @@ function ManageProfiles({ ctx }: { ctx: StudentContextValue }) {
 
           {/* Guest has no profiles to manage. */}
           {ctx.students.length === 0 ? (
-            <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+            <p className="font-sans text-[17px] leading-relaxed text-ink-3">
               No profiles yet.
             </p>
           ) : (
@@ -419,32 +447,32 @@ function ManageRow({
     return (
       <form
         onSubmit={save}
-        className="flex flex-col gap-3 rounded-[8px] bg-[#f5f5f7] px-4 py-3"
+        className="flex flex-col gap-3 rounded-[8px] bg-canvas px-4 py-3"
       >
-        <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+        <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
           Name
           <Input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
-        <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+        <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
           Class
           <Input
             type="text"
             value={classLabel}
             onChange={(e) => setClassLabel(e.target.value)}
             placeholder="optional"
-            className="min-h-[44px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+            className="min-h-[44px] rounded-[8px] border border-line bg-surface px-3 py-2 font-sans text-[17px] text-ink"
           />
         </label>
         <div className="flex items-center gap-3">
           <button
             type="submit"
             disabled={busy}
-            className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-5 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+            className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-5 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
           >
             Save
           </button>
@@ -456,7 +484,7 @@ function ManageRow({
               setClassLabel(student.class_label ?? "");
             }}
             disabled={busy}
-            className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[17px] text-[#333333] transition hover:bg-[#e0e0e0] disabled:opacity-50"
+            className="inline-flex min-h-[44px] items-center rounded-[8px] px-4 text-[17px] text-ink-2 transition hover:bg-line disabled:opacity-50"
           >
             Cancel
           </button>
@@ -466,13 +494,13 @@ function ManageRow({
   }
 
   return (
-    <div className="flex items-center justify-between gap-4 rounded-[8px] bg-[#f5f5f7] px-4 py-3">
+    <div className="flex items-center justify-between gap-4 rounded-[8px] bg-canvas px-4 py-3">
       <div className="flex flex-col gap-0.5">
-        <span className="font-sans text-[17px] font-medium text-[#1d1d1f]">
+        <span className="font-sans text-[17px] font-medium text-ink">
           {student.display_name}
         </span>
         {student.class_label ? (
-          <span className="font-sans text-[14px] text-[#666666]">
+          <span className="font-sans text-[14px] text-ink-3">
             {student.class_label}
           </span>
         ) : null}
@@ -480,12 +508,12 @@ function ManageRow({
       <div className="flex items-center gap-2">
         {confirmDelete ? (
           <>
-            <span className="font-sans text-[14px] text-[#666666]">Delete?</span>
+            <span className="font-sans text-[14px] text-ink-3">Delete?</span>
             <button
               type="button"
               onClick={doDelete}
               disabled={busy}
-              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-[#1d1d1f] transition hover:bg-[#e0e0e0] disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-ink transition hover:bg-line disabled:opacity-50"
             >
               Yes, delete
             </button>
@@ -493,7 +521,7 @@ function ManageRow({
               type="button"
               onClick={() => setConfirmDelete(false)}
               disabled={busy}
-              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 text-[14px] text-[#666666] transition hover:bg-[#e0e0e0] disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 text-[14px] text-ink-3 transition hover:bg-line disabled:opacity-50"
             >
               No
             </button>
@@ -503,7 +531,7 @@ function ManageRow({
             <button
               type="button"
               onClick={() => setEditing(true)}
-              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-[#333333] transition hover:bg-[#e0e0e0]"
+              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-ink-2 transition hover:bg-line"
             >
               <Pencil className="size-4" aria-hidden />
               Rename
@@ -511,7 +539,7 @@ function ManageRow({
             <button
               type="button"
               onClick={() => setConfirmDelete(true)}
-              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-[#666666] transition hover:bg-[#e0e0e0]"
+              className="inline-flex min-h-[44px] items-center gap-1 rounded-[8px] px-3 text-[14px] text-ink-3 transition hover:bg-line"
             >
               <Trash2 className="size-4" aria-hidden />
               Delete

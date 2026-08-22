@@ -53,7 +53,7 @@ export function QuestionBreakdown({
       <section
         aria-label={`No attempts for student ${studentId} on ${topic.title}`}
       >
-        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
           No attempts recorded for this student on this topic.
         </p>
       </section>
@@ -65,7 +65,7 @@ export function QuestionBreakdown({
       className="flex flex-col gap-3"
       aria-label={`Attempts for student ${studentId} on ${topic.title}`}
     >
-      <p className="font-sans text-[14px] text-[#666666]">
+      <p className="font-sans text-[14px] text-ink-3">
         {attempts.length} attempt{attempts.length === 1 ? "" : "s"} ·{" "}
         {topic.quiz.length} question{topic.quiz.length === 1 ? "" : "s"} each
       </p>
@@ -75,22 +75,22 @@ export function QuestionBreakdown({
           return (
             <li
               key={attempt.id}
-              className="rounded-[11px] border border-hairline bg-card px-5 py-4"
+              className="rounded-[20px] border border-line bg-surface px-5 py-4"
             >
               <button
                 type="button"
                 onClick={() => setOpenId(open ? null : attempt.id)}
                 aria-expanded={open}
                 aria-controls={`breakdown-attempt-${attempt.id}`}
-                className="flex min-h-[44px] w-full items-center justify-between gap-4 font-sans text-[17px] text-[#1d1d1f]"
+                className="flex min-h-[44px] w-full items-center justify-between gap-4 font-sans text-[17px] text-ink"
               >
                 <span className="text-left">
                   <span className="font-semibold">
                     Score: {attempt.score} / {attempt.max_score}
                   </span>
-                  <span className="text-[#666666]"> · {attempt.taken_at}</span>
+                  <span className="text-ink-3"> · {attempt.taken_at}</span>
                 </span>
-                <span className="text-[14px] text-[#0066cc]">
+                <span className="text-[14px] text-brand">
                   {open ? "Hide" : "Show"}
                 </span>
               </button>
@@ -183,36 +183,33 @@ function QuestionRow({
   const answerText = renderAnswer(question, answer, displayOptions);
   const correctText = renderCorrect(question, displayOptions);
 
+  // The verdict circle is decorative: `aria-hidden`, and the same verdict is
+  // spelled out in the line beneath it ("· Correct" / "· Correct answer: X").
+  // These are the app's only red/green, and neither is load-bearing alone.
   return (
-    <li className="flex flex-col gap-2">
-      <p className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
-        <span className="font-semibold">{index + 1}. </span>
-        {question.prompt}
-      </p>
-      <p
-        className={
-          correct
-            ? "font-sans text-[17px] leading-relaxed text-[#1d1d1f]"
-            : "font-sans text-[17px] font-semibold leading-relaxed text-[#1d1d1f]"
-        }
+    <li className="flex items-start gap-3 rounded-xl bg-canvas px-[14px] py-3">
+      <span
+        aria-hidden
+        className={`flex size-6 shrink-0 items-center justify-center rounded-full font-heading text-[13px] font-extrabold text-white ${
+          correct ? "bg-good" : "bg-bad"
+        }`}
       >
-        <span className="font-semibold">
-          {correct ? "✓" : "✗"}
-        </span>{" "}
-        <span className="text-[#666666]">Answer: </span>
-        {answerText}
-      </p>
-      {!correct ? (
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
-          <span className="text-[#666666]">Correct: </span>
-          {correctText}
+        {correct ? "✓" : "✕"}
+      </span>
+      <div className="min-w-0">
+        <p className="font-sans text-[15px] font-semibold leading-snug text-ink">
+          {index + 1}. {question.prompt}
         </p>
-      ) : null}
-      {question.explanation ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
-          {question.explanation}
+        <p className="mt-1 font-sans text-[13px] leading-relaxed text-ink-3">
+          Answered: “{answerText}”
+          {correct ? " · Correct" : ` · Correct answer: ${correctText}`}
         </p>
-      ) : null}
+        {question.explanation ? (
+          <p className="mt-1 font-sans text-[12px] leading-relaxed text-ink-3">
+            {question.explanation}
+          </p>
+        ) : null}
+      </div>
     </li>
   );
 }

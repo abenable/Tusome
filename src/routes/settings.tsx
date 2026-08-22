@@ -44,7 +44,7 @@ function SettingsPage(): JSX.Element {
     <div className="flex flex-col gap-6">
       <Link
         to="/"
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[8px] px-1 font-sans text-[14px] text-[#0066cc] hover:underline"
+        className="inline-flex min-h-[44px] w-fit items-center rounded-[8px] px-1 font-sans text-[14px] text-brand hover:underline"
       >
         Back to subjects
       </Link>
@@ -56,10 +56,10 @@ function SettingsPage(): JSX.Element {
             // PinGate renders its own PIN form; we add just a heading so the
             // locked state is clearly the admin screen, not a blank page.
             <header className="flex flex-col gap-2">
-              <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+              <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-ink">
                 Admin
               </h1>
-              <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+              <p className="font-sans text-[17px] leading-relaxed text-ink-2">
                 Enter the admin PIN to continue.
               </p>
             </header>

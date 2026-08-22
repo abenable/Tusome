@@ -27,6 +27,7 @@ export interface SimModule {
   telemetry?: (state: SimState) => Array<{ label: string; value: number; unit?: string }>
 }
 
+
 /** id -> module registry. Populated in Phase 1 (04-vertical-slice.md). */
 export const sims: Record<string, SimModule> = {}
 

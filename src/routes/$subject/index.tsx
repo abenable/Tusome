@@ -1,17 +1,36 @@
+import { useEffect, useMemo, useState } from "react"
 import { createFileRoute, Link, notFound } from "@tanstack/react-router"
+import { Atom, Dna, FlaskConical, Sigma, type LucideIcon } from "lucide-react"
 
-import { SUBJECT_LABELS, isSubject, type Subject } from "@/lib/subjects"
+import {
+  SUBJECT_ACCENTS,
+  SUBJECT_LABELS,
+  isSubject,
+  type Subject,
+} from "@/lib/subjects"
 import { type TopicT } from "@/content/schema"
-import { groupTopicsByLevelThenStrand } from "@/lib/topics-group"
+import { groupTopicsByLevelThenStrand, LEVEL_ORDER } from "@/lib/topics-group"
 import { EmptyState } from "@/components/EmptyState"
-import { TopicGroup } from "@/components/TopicGroup"
+import { TopicGroup, type TopicProgress } from "@/components/TopicGroup"
+import {
+  bestScorePerTopic,
+  getProgress,
+  type ProgressRow,
+} from "@/db/index"
+import { useStudent } from "@/lib/student-context"
 
-// The content loader is authored in parallel (content-author). It reads packs
-// from disk (cached in TanStack Query) and returns the topics for a subject,
-// or `[]` when none are authored (chemistry/biology/mathematics during the
-// pilot) or the content directory is unreadable. See
-// docs/plan/04-vertical-slice.md step 3 and 06-app-features.md §"Topic list".
+// The content loader reads packs from disk (cached in TanStack Query) and
+// returns the topics for a subject, or `[]` when none are authored or the
+// content directory is unreadable. See docs/plan/04-vertical-slice.md step 3
+// and 06-app-features.md §"Topic list".
 import { loadPacksCached, topicsForSubject } from "@/content/loader"
+
+const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
+  physics: Atom,
+  chemistry: FlaskConical,
+  biology: Dna,
+  mathematics: Sigma,
+}
 
 export const Route = createFileRoute("/$subject/")({
   // Validate the `$subject` param once, before the component renders. An
@@ -23,10 +42,6 @@ export const Route = createFileRoute("/$subject/")({
     }
   },
   loader: async ({ params, context }): Promise<{ topics: TopicT[] }> => {
-    // Read packs from the TanStack Query cache (one filesystem walk, shared by
-    // every subject/topic/quiz route) instead of re-walking on each navigation.
-    // `beforeLoad` validated the subject; a defensive try/catch keeps the route
-    // safe if the loader itself ever errors.
     try {
       const { packs } = await loadPacksCached(context.queryClient)
       const topics = topicsForSubject(packs, params.subject as TopicT["subject"])
@@ -41,63 +56,173 @@ export const Route = createFileRoute("/$subject/")({
 function TopicList() {
   const { subject } = Route.useParams()
   const { topics } = Route.useLoaderData()
-  // `beforeLoad` validated the subject; the param is typed as a string by the
-  // generated route tree, so narrow it for the labels lookup.
+  const { studentId } = useStudent()
+
+  // `beforeLoad` validated the subject; the generated route tree types the
+  // param as a plain string, so narrow it for the label/accent lookups.
   const subjectKey = subject as Subject
   const label = SUBJECT_LABELS[subjectKey]
+  const accent = SUBJECT_ACCENTS[subjectKey]
+  const Icon = SUBJECT_ICONS[subjectKey]
 
-  // Group topics by level (S1..S4) then by strand — the way a teacher scans
-  // the NCDC syllabus. Empty input yields `[]`, handled by EmptyState below.
-  const levels = groupTopicsByLevelThenStrand(topics)
+  const [progress, setProgress] = useState<ProgressRow[]>([])
+  const [best, setBest] = useState<Map<string, number>>(new Map())
 
-  return (
-    <div className="flex flex-col gap-8">
-      <nav className="text-[17px]">
-        <Link
-          to="/"
-          className="text-[#0066cc] hover:underline"
-          style={{ minHeight: 44, display: "inline-flex", alignItems: "center" }}
-        >
-          Subjects
-        </Link>
-      </nav>
+  useEffect(() => {
+    if (studentId === null) {
+      setProgress([])
+      setBest(new Map())
+      return
+    }
+    let cancelled = false
+    void (async () => {
+      const [prog, scores] = await Promise.all([
+        getProgress(studentId),
+        bestScorePerTopic(studentId),
+      ])
+      if (cancelled) return
+      setProgress(prog)
+      setBest(new Map(scores.map((s) => [s.topic_id, s.best])))
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [studentId])
 
-      <header className="flex flex-col gap-2">
-        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
-          {label}
-        </h1>
-        {topics.length > 0 ? (
-          <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
-            {topics.length} topic{topics.length === 1 ? "" : "s"} available.
-          </p>
-        ) : null}
-      </header>
+  const levels = useMemo(
+    () => groupTopicsByLevelThenStrand(topics),
+    [topics],
+  )
+  const levelsWithTopics = useMemo(
+    () => new Set(levels.map((l) => l.level)),
+    [levels],
+  )
 
-      {topics.length === 0 ? (
+  // The design defaults the level filter to S1. Defaulting to the first level
+  // that actually HAS topics is the same thing whenever S1 is populated, and
+  // avoids opening on an empty screen when it isn't — which is the common case
+  // today (the only physics pack is S2).
+  const [level, setLevel] = useState<string | null>(null)
+  const activeLevel =
+    level && levelsWithTopics.has(level)
+      ? level
+      : (levels[0]?.level ?? LEVEL_ORDER[0])
+
+  const activeGroup = levels.find((l) => l.level === activeLevel)
+  const shown = activeGroup?.strands.flatMap((s) => s.topics) ?? []
+
+  const progressState = useMemo(() => {
+    const byId = new Map(progress.map((r) => [r.topic_id, r.state]))
+    return (topicId: string): TopicProgress => ({
+      status:
+        byId.get(topicId) === "completed"
+          ? "completed"
+          : byId.get(topicId) === "started"
+            ? "in-progress"
+            : "not-started",
+      best: best.get(topicId) ?? null,
+    })
+  }, [progress, best])
+
+  if (topics.length === 0) {
+    return (
+      <div className="flex flex-col gap-8">
+        <BackLink />
         <EmptyState
           title={`No ${label} topics installed yet`}
           message={`Content packs for ${label} aren't installed. Ask your teacher or admin to add them.`}
         />
+      </div>
+    )
+  }
+
+  return (
+    <div className="mx-auto max-w-[980px]">
+      <BackLink />
+
+      <header className="mb-4 flex flex-col items-center gap-[10px] text-center">
+        <span
+          className={`flex size-11 items-center justify-center rounded-[13px] ${accent.bg}`}
+        >
+          <Icon size={24} className="text-white" aria-hidden />
+        </span>
+        <div>
+          <h1 className="font-heading text-[32px] font-extrabold tracking-[-0.02em] text-ink">
+            {label}
+          </h1>
+          <p className="mt-[2px] font-sans text-[15px] text-ink-2">
+            {activeLevel} · {shown.length}{" "}
+            {shown.length === 1 ? "topic" : "topics"}
+          </p>
+        </div>
+      </header>
+
+      {/* Level filter. Levels with no installed topics stay visible but
+          disabled — a student should be able to see that S3 exists and simply
+          isn't installed yet, rather than wondering where it went. */}
+      <div
+        className="mb-9 flex items-center justify-center gap-[6px]"
+        role="group"
+        aria-label="Filter by class level"
+      >
+        {LEVEL_ORDER.map((lvl) => {
+          const has = levelsWithTopics.has(lvl)
+          const isActive = lvl === activeLevel
+          return (
+            <button
+              key={lvl}
+              type="button"
+              disabled={!has}
+              aria-pressed={isActive}
+              onClick={() => setLevel(lvl)}
+              className={`min-h-[30px] rounded-full px-3 font-sans text-[12px] font-bold transition-colors ${
+                isActive
+                  ? `${accent.bg} text-white`
+                  : has
+                    ? "border border-line bg-surface text-ink-3 hover:text-ink"
+                    : "cursor-not-allowed border border-line bg-surface text-ink-3 opacity-40"
+              }`}
+            >
+              {lvl}
+            </button>
+          )
+        })}
+      </div>
+
+      {shown.length === 0 ? (
+        <section className="rounded-[18px] border border-dashed border-line p-8 text-center">
+          <p className="font-sans text-[16px] text-ink-2">
+            No {label} topics in {activeLevel} yet.
+          </p>
+        </section>
       ) : (
         <div className="flex flex-col gap-8">
-          {levels.map(({ level, strands }) => (
-            <section key={level} className="flex flex-col gap-5" aria-label={level}>
-              <h2 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
-                {level}
-              </h2>
-              {strands.map(({ strand, topics: strandTopics }) => (
-                <TopicGroup
-                  key={strand}
-                  heading={strand}
-                  topics={strandTopics}
-                  subject={subjectKey}
-                  headingAs="h3"
-                />
-              ))}
-            </section>
+          {activeGroup?.strands.map(({ strand, topics: strandTopics }) => (
+            <TopicGroup
+              key={strand}
+              heading={strand}
+              topics={strandTopics}
+              subject={subjectKey}
+              progressOf={progressState}
+              headingAs="h2"
+            />
           ))}
         </div>
       )}
     </div>
+  )
+}
+
+function BackLink() {
+  return (
+    <Link
+      to="/subjects"
+      className="mb-5 inline-flex min-h-[44px] items-center gap-2 font-sans text-[14px] font-semibold text-brand hover:underline"
+    >
+      <span aria-hidden className="text-[22px] leading-none">
+        ←
+      </span>
+      All subjects
+    </Link>
   )
 }

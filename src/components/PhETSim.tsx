@@ -63,21 +63,21 @@ export function PhETSim({ file }: { file: string }) {
 
   if (state.kind === "loading") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-[#f5f5f7] text-[#666666]">
+      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-ink-3">
         Loading simulation…
       </div>
     )
   }
   if (state.kind === "non-tauri") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-[#f5f5f7] text-center text-[#666666]">
+      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-center text-ink-3">
         PhET simulation — run under Tauri (`bun tauri dev`) to view.
       </div>
     )
   }
   if (state.kind === "missing") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-[#f5f5f7] text-center text-[#666666]">
+      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-center text-ink-3">
         Simulation file not found. Run `scripts/fetch-phet-sims.sh`.
       </div>
     )

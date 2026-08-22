@@ -164,10 +164,10 @@ function SetPinForm({
       className="flex flex-col gap-3"
       aria-label={ariaLabel ?? "Set admin PIN"}
     >
-      <p className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink">
         Set an admin PIN. A teacher uses this to manage profiles and updates.
       </p>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
         New PIN
         <Input
           type="password"
@@ -176,10 +176,10 @@ function SetPinForm({
           autoFocus
           value={pin}
           onChange={(e) => setPin(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
         />
       </label>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
         Confirm PIN
         <Input
           ref={confirmRef}
@@ -188,18 +188,18 @@ function SetPinForm({
           autoComplete="new-password"
           value={confirm}
           onChange={(e) => setConfirm(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
         />
       </label>
       {error ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
       <button
         type="submit"
         disabled={busy}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:opacity-50"
+        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
       >
         Set PIN
       </button>
@@ -259,10 +259,10 @@ function VerifyPinForm({
       className="flex flex-col gap-3"
       aria-label={ariaLabel ?? "Admin PIN"}
     >
-      <p className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink">
         Enter the admin PIN to continue.
       </p>
-      <label className="flex flex-col gap-1 font-sans text-[14px] text-[#333333]">
+      <label className="flex flex-col gap-1 font-sans text-[14px] text-ink-2">
         Admin PIN
         <Input
           type="password"
@@ -272,23 +272,23 @@ function VerifyPinForm({
           disabled={cooling}
           value={pin}
           onChange={(e) => setPin(e.target.value)}
-          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f] disabled:opacity-50"
+          className="min-h-[44px] max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink disabled:opacity-50"
         />
       </label>
       {error && !cooling ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
           {error}
         </p>
       ) : null}
       {cooling ? (
-        <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[14px] leading-relaxed text-ink-3">
           Too many tries. Try again in {seconds}s.
         </p>
       ) : null}
       <button
         type="submit"
         disabled={busy || cooling}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
       >
         Unlock
       </button>

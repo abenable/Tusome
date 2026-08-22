@@ -25,7 +25,7 @@
 import { useEffect, useState, type JSX } from "react";
 
 import type { PackT, TopicT } from "@/content/schema";
-import { SUBJECT_LABELS, type Subject } from "@/lib/subjects";
+import { SUBJECT_ACCENTS, SUBJECT_LABELS, type Subject } from "@/lib/subjects";
 import {
   classResults,
   getAttemptsForStudentTopic,
@@ -170,14 +170,19 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
 
   return (
     <div className="flex flex-col gap-8">
-      <header className="flex flex-col gap-2">
-        <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
-          Class results
-        </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
-          Best score per student per topic. Select a cell to see a per-question
-          breakdown.
-        </p>
+      {/* The design puts the export CTA on the header's right edge. ExportBar
+          owns the dialog + its own confirmation state, so it sits beside the
+          heading rather than being reimplemented inline. */}
+      <header className="flex flex-wrap items-start justify-between gap-6">
+        <div>
+          <h1 className="mb-[6px] font-heading text-[34px] font-extrabold tracking-[-0.02em] text-ink">
+            Class results
+          </h1>
+          <p className="max-w-[480px] font-sans text-[16px] leading-[1.5] text-ink-2">
+            Best score per student per topic. Select a cell to see a
+            per-question breakdown.
+          </p>
+        </div>
       </header>
 
       <ExportBar
@@ -192,18 +197,18 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
       />
 
       {loadError ? (
-        <p role="alert" className="font-sans text-[17px] text-[#1d1d1f]">
+        <p role="alert" className="font-sans text-[17px] text-ink">
           Could not load class results: {loadError}
         </p>
       ) : null}
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse font-sans text-[17px] text-[#1d1d1f]">
+      <div className="overflow-x-auto rounded-[20px] border border-line bg-surface">
+        <table className="w-full border-collapse font-sans text-[15px] text-ink">
           <thead>
-            <tr className="border-b border-hairline text-left">
+            <tr className="bg-canvas text-left">
               <th
                 scope="col"
-                className="min-w-[200px] py-3 pr-4 font-semibold tracking-tight"
+                className="min-w-[220px] px-[18px] py-[14px] font-extrabold"
               >
                 Topic
               </th>
@@ -211,11 +216,11 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
                 <th
                   key={s.id}
                   scope="col"
-                  className="min-w-[110px] py-3 pr-4 font-semibold tracking-tight"
+                  className="min-w-[110px] px-[18px] py-[14px] font-extrabold"
                 >
                   {s.display_name}
                   {s.class_label ? (
-                    <span className="block font-normal text-[#666666]">
+                    <span className="block font-sans text-[12px] font-medium text-ink-3">
                       {s.class_label}
                     </span>
                   ) : null}
@@ -225,12 +230,10 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
           </thead>
           <tbody>
             {allTopics.map((topic) => (
-              <tr key={topic.id} className="border-b border-hairline">
-                <th scope="row" className="py-3 pr-4 text-left font-normal">
-                  <span className="font-semibold text-[#1d1d1f]">
-                    {topic.title}
-                  </span>
-                  <span className="block text-[14px] text-[#666666]">
+              <tr key={topic.id} className="border-t border-line">
+                <th scope="row" className="px-[18px] py-3 text-left font-bold">
+                  <span className="text-ink">{topic.title}</span>
+                  <span className="block text-[12px] font-medium text-ink-3">
                     {SUBJECT_LABELS[topic.subject as Subject]} · {topic.level}
                   </span>
                 </th>
@@ -241,7 +244,7 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
                     selected.topicId === topic.id;
                   const pct = cellPct(s.id, topic.id);
                   return (
-                    <td key={s.id} className="py-2 pr-4 align-top">
+                    <td key={s.id} className="px-[18px] py-2 align-top">
                       <button
                         type="button"
                         onClick={() =>
@@ -253,11 +256,17 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
                         }
                         aria-pressed={isSel}
                         aria-label={`${topic.title}, ${s.display_name}: ${pct}`}
+                        // The mock's chip is 36px tall; this keeps 44 so the
+                        // cell stays a valid touch target (06-app-features
+                        // §Accessibility). Colour follows the topic's subject,
+                        // so a teacher can scan one subject down the column.
                         className={
-                          "inline-flex min-h-[44px] min-w-[64px] items-center rounded-[8px] px-3 font-sans text-[17px] transition active:scale-95 " +
+                          "inline-flex min-h-[44px] min-w-[56px] items-center justify-center rounded-[10px] px-3 font-sans text-[14px] font-bold transition active:scale-95 " +
                           (isSel
-                            ? "bg-[#0066cc] text-white"
-                            : "text-[#1d1d1f] hover:bg-[#f5f5f7]")
+                            ? `${SUBJECT_ACCENTS[topic.subject as Subject].bg} text-white`
+                            : pct === "—"
+                              ? "font-normal text-ink-3 hover:bg-canvas"
+                              : `${SUBJECT_ACCENTS[topic.subject as Subject].tint} ${SUBJECT_ACCENTS[topic.subject as Subject].text}`)
                         }
                       >
                         {results === null ? "…" : pct}
@@ -273,27 +282,27 @@ function ClassTable({ packs }: { packs: PackT[] }): JSX.Element {
 
       {selected !== null && selectedTopic !== null ? (
         <section
-          className="flex flex-col gap-4 rounded-[11px] border border-hairline bg-card px-5 py-5"
+          className="flex flex-col gap-4 rounded-[20px] border border-line bg-surface px-5 py-5"
           aria-label="Per-question breakdown"
         >
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+            <h2 className="font-heading text-[21px] font-semibold tracking-tight text-ink">
               {selectedTopic.title}
             </h2>
             <button
               type="button"
               onClick={() => setSelected(null)}
-              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[14px] text-[#0066cc] hover:underline"
+              className="inline-flex min-h-[44px] items-center rounded-[8px] px-3 font-sans text-[14px] text-brand hover:underline"
             >
               Close
             </button>
           </div>
           {attemptsError ? (
-            <p role="alert" className="font-sans text-[17px] text-[#1d1d1f]">
+            <p role="alert" className="font-sans text-[17px] text-ink">
               Could not load attempts: {attemptsError}
             </p>
           ) : attempts === null ? (
-            <p className="font-sans text-[17px] text-[#666666]">Loading…</p>
+            <p className="font-sans text-[17px] text-ink-3">Loading…</p>
           ) : (
             <QuestionBreakdown
               topic={selectedTopic}
@@ -386,12 +395,12 @@ function ExportBar({
       <button
         type="button"
         onClick={handleExport}
-        className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3]"
+        className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover"
       >
         Export class results to CSV
       </button>
       {status ? (
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-2">
           {status}
         </p>
       ) : null}

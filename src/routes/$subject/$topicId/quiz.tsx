@@ -52,10 +52,10 @@ function QuizShell() {
     return (
       <div className="flex flex-col gap-6">
         <BackLink subject={subject} topicId={topicId} />
-        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-ink">
           Topic not found
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#666666]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-3">
           This topic isn’t available yet.
         </p>
       </div>
@@ -67,13 +67,13 @@ function QuizShell() {
       <BackLink subject={subject} topicId={topicId} />
 
       <header className="flex flex-col gap-2">
-        <p className="font-sans text-[14px] uppercase tracking-wide text-[#666666]">
+        <p className="font-sans text-[14px] uppercase tracking-wide text-ink-3">
           Quiz
         </p>
-        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-[#1d1d1f]">
+        <h1 className="font-heading text-[34px] font-semibold leading-tight tracking-tight text-ink">
           Quiz: {topic.title}
         </h1>
-        <p className="font-sans text-[17px] leading-relaxed text-[#333333]">
+        <p className="font-sans text-[17px] leading-relaxed text-ink-2">
           {topic.quiz.length} question{topic.quiz.length === 1 ? "" : "s"}.
         </p>
       </header>
@@ -281,7 +281,7 @@ function Quiz({ topic }: { topic: TopicT }) {
       {submitError ? (
         <p
           role="alert"
-          className="rounded-[8px] bg-[#f5f5f7] px-4 py-3 font-sans text-[17px] leading-relaxed text-[#1d1d1f]"
+          className="rounded-[8px] bg-canvas px-4 py-3 font-sans text-[17px] leading-relaxed text-ink"
         >
           {submitError}
         </p>
@@ -298,12 +298,12 @@ function Quiz({ topic }: { topic: TopicT }) {
               // but cannot save — keep the button visible-but-disabled so the
               // sign-in nudge below explains why.
               disabled={!allChecked || guestBlocked}
-              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3] disabled:cursor-not-allowed disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
             >
               Submit
             </button>
             {guestBlocked ? (
-              <p className="font-sans text-[14px] leading-relaxed text-[#666666]">
+              <p className="font-sans text-[14px] leading-relaxed text-ink-3">
                 You’re practising as Guest. Sign in to save your progress.
               </p>
             ) : null}
@@ -312,14 +312,14 @@ function Quiz({ topic }: { topic: TopicT }) {
           <button
             type="button"
             onClick={handleRetake}
-            className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-[#0066cc] px-6 text-[17px] text-white transition active:scale-95 hover:bg-[#0071e3]"
+            className="inline-flex min-h-[44px] items-center rounded-[9999px] bg-brand px-6 text-[17px] text-white transition active:scale-95 hover:bg-brand-hover"
           >
             Retake
           </button>
         )}
 
         {submitted && lastScore !== null ? (
-          <p className="font-sans text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
+          <p className="font-sans text-[21px] font-semibold tracking-tight text-ink">
             Score: {lastScore} / {maxScore}
           </p>
         ) : null}
@@ -378,7 +378,7 @@ function QuestionCard({
     : authoredOptions
   return (
     <li className="flex flex-col gap-3">
-      <p className="font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
+      <p className="font-sans text-[17px] leading-relaxed text-ink">
         <span className="font-semibold">{index + 1}. </span>
         {question.prompt}
       </p>
@@ -396,7 +396,7 @@ function QuestionCard({
               <label
                 key={opt.id}
                 htmlFor={id}
-                className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-[8px] px-3 py-2 font-sans text-[17px] text-[#1d1d1f] hover:bg-[#f5f5f7]"
+                className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-[8px] px-3 py-2 font-sans text-[17px] text-ink hover:bg-canvas"
               >
                 <input
                   id={id}
@@ -405,7 +405,7 @@ function QuestionCard({
                   value={opt.id}
                   checked={checked}
                   onChange={() => onChange(opt.id)}
-                  className="size-5 accent-[#0066cc]"
+                  className="size-5 accent-brand"
                 />
                 <span>{opt.text}</span>
               </label>
@@ -425,7 +425,7 @@ function QuestionCard({
               <label
                 key={opt.id}
                 htmlFor={id}
-                className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-[8px] px-3 py-2 font-sans text-[17px] text-[#1d1d1f] hover:bg-[#f5f5f7]"
+                className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-[8px] px-3 py-2 font-sans text-[17px] text-ink hover:bg-canvas"
               >
                 <input
                   id={id}
@@ -440,7 +440,7 @@ function QuestionCard({
                       : current.filter((id2) => id2 !== opt.id)
                     onChange(next.length > 0 ? next : undefined)
                   }}
-                  className="size-5 accent-[#0066cc]"
+                  className="size-5 accent-brand"
                 />
                 <span>{opt.text}</span>
               </label>
@@ -465,7 +465,7 @@ function QuestionCard({
               onChange(undefined)
             }
           }}
-          className="min-h-[44px] w-full max-w-[240px] rounded-[8px] border border-[#e0e0e0] bg-[#ffffff] px-3 py-2 font-sans text-[17px] text-[#1d1d1f]"
+          className="min-h-[44px] w-full max-w-[240px] rounded-[8px] border border-line bg-white px-3 py-2 font-sans text-[17px] text-ink"
         />
       )}
 
@@ -476,7 +476,7 @@ function QuestionCard({
           type="button"
           onClick={onCheck}
           disabled={!canCheck}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] border border-[#0066cc] bg-transparent px-5 text-[17px] text-[#0066cc] transition active:scale-95 hover:bg-[#0066cc]/5 disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] border border-brand bg-transparent px-5 text-[17px] text-brand transition active:scale-95 hover:bg-brand/5 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {revealed ? "Checked" : "Check answer"}
         </button>
@@ -488,11 +488,11 @@ function QuestionCard({
           brand color — correct and wrong differ by weight + a checkmark, not
           by hue. */}
       {revealed ? (
-        <div className="rounded-[8px] bg-[#f5f5f7] px-4 py-3">
-          <p className="font-sans text-[14px] font-semibold tracking-tight text-[#1d1d1f]">
+        <div className="rounded-[8px] bg-canvas px-4 py-3">
+          <p className="font-sans text-[14px] font-semibold tracking-tight text-ink">
             {correct ? "✓ Correct" : "Not quite yet"}
           </p>
-          <p className="mt-1 font-sans text-[17px] leading-relaxed text-[#1d1d1f]">
+          <p className="mt-1 font-sans text-[17px] leading-relaxed text-ink">
             {question.explanation}
           </p>
         </div>
@@ -513,7 +513,7 @@ function BackLink({
       <Link
         to="/$subject/$topicId"
         params={{ subject, topicId }}
-        className="text-[17px] text-[#0066cc] hover:underline"
+        className="text-[17px] text-brand hover:underline"
         style={{ minHeight: 44, display: "inline-flex", alignItems: "center" }}
       >
         Back to {SUBJECT_LABELS[subject as keyof typeof SUBJECT_LABELS] ?? subject}

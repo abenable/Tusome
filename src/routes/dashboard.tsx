@@ -52,7 +52,7 @@ function DashboardPage() {
         <button
           type="button"
           onClick={() => setView("student")}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-[8px] px-2 font-sans text-[14px] text-[#0066cc] hover:underline"
+          className="inline-flex min-h-[44px] w-fit items-center rounded-[8px] px-2 font-sans text-[14px] text-brand hover:underline"
         >
           Back to student view
         </button>
@@ -109,7 +109,7 @@ function TeacherEntry({ onActivate }: { onActivate: () => void }): JSX.Element {
       <button
         type="button"
         onClick={onActivate}
-        className="inline-flex min-h-[44px] items-center rounded-[8px] px-1 font-sans text-[14px] text-[#666666] hover:text-[#0066cc]"
+        className="inline-flex min-h-[44px] items-center rounded-[8px] px-1 font-sans text-[14px] text-ink-3 hover:text-brand"
         aria-label="Teacher view"
       >
         Teacher view
