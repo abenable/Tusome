@@ -86,6 +86,10 @@ jobs:
           fi
           max=0
           max_file=""
+          # Measure only the distributable installers (.deb/.msi/.exe/.AppImage/.rpm),
+          # NOT the unpacked staging trees (e.g. the raw `usr/bin/cbclab` binary
+          # inside the deb dir, which is ~22 MB but compresses into the 17 MB .deb
+          # the user actually downloads). The budget is on what ships.
           while IFS= read -r -d '' f; do
             size=$(stat -c%s "$f" 2>/dev/null || stat -f%z "$f")
             echo "$size bytes  $f"
@@ -93,7 +97,9 @@ jobs:
               max=$size
               max_file="$f"
             fi
-          done < <(find "$BUNDLE_DIR" -type f -print0)
+          done < <(find "$BUNDLE_DIR" -type f \( \
+            -name '*.deb' -o -name '*.AppImage' -o -name '*.rpm' -o \
+            -name '*.msi' -o -name '*.exe' \) -print0)
           budget_mb=$((BUDGET / 1024 / 1024))
           max_mb=$((max / 1024 / 1024))
           echo "----"
