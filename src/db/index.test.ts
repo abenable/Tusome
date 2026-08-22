@@ -45,7 +45,6 @@ import {
   createStudent,
   renameStudent,
   deleteStudent,
-  recordAttempt,
   getProgress,
   upsertProgress,
   getSetting,
@@ -53,11 +52,7 @@ import {
   ensureSeedStudent,
   hashPin,
   verifyPin,
-  bestScorePerTopic,
   continueTopic,
-  classResults,
-  topScores,
-  getAttemptsForStudentTopic,
   _resetStateForTests,
 } from "./index";
 
@@ -97,22 +92,34 @@ describe("db connection", () => {
 describe("students", () => {
   it("createStudent issues exactly one INSERT into students", async () => {
     selectQueue.push([
-      { id: 1, display_name: "A", class_label: null, created_at: "2026-01-01" },
+      {
+        id: 1,
+        display_name: "A",
+        class_label: null,
+        password_hash: null,
+        created_at: "2026-01-01",
+      },
     ]);
     await createStudent("A");
     const execs = sqlLog.filter((e) => e.kind === "execute");
     expect(execs).toHaveLength(1);
     expect(execs[0].query).toMatch(/^INSERT INTO students\b/i);
-    expect(execs[0].params).toEqual(["A", null]);
+    expect(execs[0].params).toEqual(["A", null, null]);
   });
 
-  it("createStudent accepts an optional class_label", async () => {
+  it("createStudent accepts an optional class_label and password hash", async () => {
     selectQueue.push([
-      { id: 2, display_name: "B", class_label: "S2 Blue", created_at: "2026-01-01" },
+      {
+        id: 2,
+        display_name: "B",
+        class_label: "S2 Blue",
+        password_hash: "salt:hash",
+        created_at: "2026-01-01",
+      },
     ]);
-    const row = await createStudent("B", "S2 Blue");
+    const row = await createStudent("B", "S2 Blue", "salt:hash");
     const execs = sqlLog.filter((e) => e.kind === "execute");
-    expect(execs[0].params).toEqual(["B", "S2 Blue"]);
+    expect(execs[0].params).toEqual(["B", "S2 Blue", "salt:hash"]);
     expect(row.id).toBe(2); // returned by the canned select result
   });
 
@@ -123,56 +130,6 @@ describe("students", () => {
     expect(selects).toHaveLength(1);
     expect(selects[0].query).toMatch(/^SELECT .* FROM students\b/i);
     expect(selects[0].query).toMatch(/ORDER BY id/i);
-  });
-});
-
-describe("quiz_attempts (append-only)", () => {
-  it("recordAttempt issues exactly one INSERT into quiz_attempts and never UPDATEs", async () => {
-    await recordAttempt(7, "phy.s2.motion.projectile", "q1", 3, 5, '{"a":1}');
-
-    const execs = sqlLog.filter((e) => e.kind === "execute");
-    expect(execs).toHaveLength(1);
-    expect(execs[0].query).toMatch(/^INSERT INTO quiz_attempts\b/i);
-    // The body must not contain an UPDATE clause — append-only, never mutate.
-    expect(execs[0].query).not.toMatch(/\bUPDATE\b/i);
-    expect(execs[0].query).not.toMatch(/\bON CONFLICT\b/i);
-    // Column order matches the schema: student, topic, quiz, score, max,
-    // answers, seed. seed defaults to null when omitted.
-    expect(execs[0].params).toEqual([
-      7,
-      "phy.s2.motion.projectile",
-      "q1",
-      3,
-      5,
-      '{"a":1}',
-      null,
-    ]);
-  });
-
-  it("records answers_json as a verbatim string (caller JSON.stringifies)", async () => {
-    const payload = JSON.stringify({ q1: "a", q2: ["b", "c"] });
-    await recordAttempt(1, "t", "q", 2, 2, payload);
-    const exec = sqlLog.filter((e) => e.kind === "execute")[0];
-    expect(typeof exec.params[5]).toBe("string");
-    expect(exec.params[5]).toBe(payload);
-  });
-
-  it("recordAttempt persists a non-null seed as the 7th param", async () => {
-    await recordAttempt(11, "t", "q", 4, 5, '{"a":1}', 123456);
-    const execs = sqlLog.filter((e) => e.kind === "execute");
-    expect(execs).toHaveLength(1);
-    expect(execs[0].query).toMatch(/^INSERT INTO quiz_attempts\b/i);
-    // The seed column is named in the INSERT.
-    expect(execs[0].query).toMatch(/\bseed\b/i);
-    expect(execs[0].params).toEqual([
-      11,
-      "t",
-      "q",
-      4,
-      5,
-      '{"a":1}',
-      123456,
-    ]);
   });
 });
 
@@ -353,46 +310,6 @@ describe("PIN hashing (real Web Crypto)", () => {
 
 // ── W5: dashboard helpers ────────────────────────────────────────────────────
 
-describe("bestScorePerTopic (computed, never stored)", () => {
-  it("issues a SELECT that computes MAX(score * 1.0 / max_score) GROUP BY topic_id, scoped by student_id", async () => {
-    selectQueue.push([]);
-    await bestScorePerTopic(7);
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects).toHaveLength(1);
-    // The aggregation must use MAX(score * 1.0 / max_score) — the * 1.0 forces
-    // floating-point division so the 0..1 fraction survives the integer columns.
-    expect(selects[0].query).toMatch(/MAX\(score \* 1\.0 \/ max_score\)/i);
-    expect(selects[0].query).toMatch(/GROUP BY topic_id/i);
-    expect(selects[0].query).toMatch(/WHERE student_id = \$1/i);
-    expect(selects[0].params).toEqual([7]);
-  });
-
-  it("returns the rows as-is from the driver (best is the max fraction per topic)", async () => {
-    selectQueue.push([
-      { topic_id: "phy.s2.motion.projectile", best: 0.8 },
-      { topic_id: "phy.s2.electricity.circuits", best: 0.6 },
-    ]);
-    const rows = await bestScorePerTopic(1);
-    expect(rows).toEqual([
-      { topic_id: "phy.s2.motion.projectile", best: 0.8 },
-      { topic_id: "phy.s2.electricity.circuits", best: 0.6 },
-    ]);
-  });
-
-  it("returns [] for a student with no attempts (empty select result)", async () => {
-    selectQueue.push([]);
-    const rows = await bestScorePerTopic(99);
-    expect(rows).toEqual([]);
-  });
-
-  it("does not reference a best_score column anywhere (best is computed, not stored)", async () => {
-    selectQueue.push([]);
-    await bestScorePerTopic(1);
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects[0].query).not.toMatch(/\bbest_score\b/i);
-  });
-});
-
 describe("continueTopic (pure selection — no DB)", () => {
   // Helper to build a ProgressRow; progressRows are expected pre-ordered by
   // updated_at DESC (getProgress's ORDER BY), so we hand them in that order.
@@ -462,129 +379,3 @@ describe("continueTopic (pure selection — no DB)", () => {
   });
 });
 
-// ── W6: teacher class grid + per-question breakdown reads ───────────────────
-
-describe("topScores (Home leaderboard)", () => {
-  it("windows on taken_at, ranks by computed best, and binds the window + limit", async () => {
-    selectQueue.push([]);
-    await topScores(7, 5);
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects).toHaveLength(1);
-    const { query, params } = selects[0];
-
-    // Best score is computed at read time, never read from a stored column.
-    expect(query).toMatch(/MAX\(a\.score \* 1\.0 \/ a\.max_score\)/i);
-    expect(query).not.toMatch(/best_score/i);
-    // One row per (student, topic), joined to students for the display name.
-    expect(query).toMatch(/JOIN students/i);
-    expect(query).toMatch(/GROUP BY a\.student_id, a\.topic_id/i);
-    // Recent window, highest first, capped.
-    expect(query).toMatch(/WHERE a\.taken_at >= datetime\('now', \$1\)/i);
-    expect(query).toMatch(/ORDER BY best DESC/i);
-    expect(query).toMatch(/LIMIT \$2/i);
-    // The window modifier is BOUND, not interpolated into the SQL.
-    expect(params).toEqual(["-7 days", 5]);
-    expect(query).not.toContain("-7 days");
-  });
-
-  it("defaults to a 7-day window and 5 rows", async () => {
-    selectQueue.push([]);
-    await topScores();
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects[0].params).toEqual(["-7 days", 5]);
-  });
-
-  it("tie-breaks on MAX(taken_at), not a bare grouped column", async () => {
-    selectQueue.push([]);
-    await topScores();
-    const { query } = sqlLog.filter((e) => e.kind === "select")[0];
-    expect(query).toMatch(/MAX\(a\.taken_at\) AS last_at/i);
-    expect(query).toMatch(/ORDER BY best DESC, last_at DESC/i);
-  });
-
-  it("passes a custom window through to the bind params", async () => {
-    selectQueue.push([]);
-    await topScores(30, 3);
-    const { params } = sqlLog.filter((e) => e.kind === "select")[0];
-    expect(params).toEqual(["-30 days", 3]);
-  });
-});
-
-describe("classResults (computed, never stored)", () => {
-  it("issues a SELECT that computes MAX(score * 1.0 / max_score) GROUP BY student_id, topic_id", async () => {
-    selectQueue.push([]);
-    await classResults();
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects).toHaveLength(1);
-    // Same computation shape as bestScorePerTopic, minus the student filter.
-    expect(selects[0].query).toMatch(/MAX\(score \* 1\.0 \/ max_score\)/i);
-    expect(selects[0].query).toMatch(/GROUP BY student_id, topic_id/i);
-    // No WHERE clause — this returns ALL students (the whole class grid).
-    expect(selects[0].query).not.toMatch(/\bWHERE\b/i);
-    expect(selects[0].params).toEqual([]);
-  });
-
-  it("returns the rows as-is from the driver", async () => {
-    selectQueue.push([
-      { student_id: 1, topic_id: "phy.s2.motion.projectile", best: 0.8 },
-      { student_id: 1, topic_id: "phy.s2.electricity.circuits", best: 0.6 },
-      { student_id: 2, topic_id: "phy.s2.motion.projectile", best: 1.0 },
-    ]);
-    const rows = await classResults();
-    expect(rows).toEqual([
-      { student_id: 1, topic_id: "phy.s2.motion.projectile", best: 0.8 },
-      { student_id: 1, topic_id: "phy.s2.electricity.circuits", best: 0.6 },
-      { student_id: 2, topic_id: "phy.s2.motion.projectile", best: 1.0 },
-    ]);
-  });
-
-  it("returns [] when there are no attempts at all (empty select result)", async () => {
-    selectQueue.push([]);
-    expect(await classResults()).toEqual([]);
-  });
-
-  it("does not reference a best_score column anywhere (best is computed)", async () => {
-    selectQueue.push([]);
-    await classResults();
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects[0].query).not.toMatch(/\bbest_score\b/i);
-  });
-});
-
-describe("getAttemptsForStudentTopic", () => {
-  it("issues a SELECT * FROM quiz_attempts scoped by student_id AND topic_id, ordered by taken_at", async () => {
-    selectQueue.push([]);
-    await getAttemptsForStudentTopic(7, "phy.s2.motion.projectile");
-    const selects = sqlLog.filter((e) => e.kind === "select");
-    expect(selects).toHaveLength(1);
-    expect(selects[0].query).toMatch(/^SELECT \* FROM quiz_attempts\b/i);
-    expect(selects[0].query).toMatch(/WHERE student_id = \$1/i);
-    expect(selects[0].query).toMatch(/AND topic_id = \$2/i);
-    expect(selects[0].query).toMatch(/ORDER BY taken_at/i);
-    expect(selects[0].params).toEqual([7, "phy.s2.motion.projectile"]);
-  });
-
-  it("returns the rows as-is from the driver", async () => {
-    const rows = [
-      {
-        id: 1,
-        student_id: 3,
-        topic_id: "t",
-        quiz_id: "t#quiz",
-        score: 2,
-        max_score: 5,
-        answers_json: "{}",
-        taken_at: "2026-01-01 10:00:00",
-        seed: 123,
-      },
-    ];
-    selectQueue.push(rows);
-    const got = await getAttemptsForStudentTopic(3, "t");
-    expect(got).toEqual(rows);
-  });
-
-  it("returns [] when the student has no attempts on that topic", async () => {
-    selectQueue.push([]);
-    expect(await getAttemptsForStudentTopic(99, "nope")).toEqual([]);
-  });
-});

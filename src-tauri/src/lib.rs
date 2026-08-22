@@ -80,6 +80,12 @@ pub fn run() {
                             sql: include_str!("../migrations/003_update_log.sql"),
                             kind: MigrationKind::Up,
                         },
+                        Migration {
+                            version: 4,
+                            description: "student_passwords",
+                            sql: include_str!("../migrations/004_student_passwords.sql"),
+                            kind: MigrationKind::Up,
+                        },
                     ],
                 )
                 .build(),
@@ -140,14 +146,18 @@ fn read_content_packs(app: tauri::AppHandle) -> Vec<ContentPackFile> {
 
     // 3. Dev-only repo-root fallback. In `bun tauri dev` the bundle.resources
     //    aren't materialized the way a built installer materializes them, so
-    //    both paths above can be empty on a developer's machine. CWD for a dev
-    //    launch is the project root, so `./content` is the authored tree. This
-    //    is gated on debug so it can never ship.
+    //    both paths above can be empty on a developer's machine. `cargo run`
+    //    (which `tauri dev` invokes) sets the process CWD to the crate root
+    //    (src-tauri/), not the repo root, so `current_dir()` is the wrong
+    //    anchor here — it resolves to `src-tauri/content`, which never exists.
+    //    `CARGO_MANIFEST_DIR` is a compile-time constant Cargo always sets to
+    //    the crate root, so `.. ` from it reliably reaches the repo root
+    //    regardless of the runtime CWD. This is gated on debug so it can never
+    //    ship.
     #[cfg(debug_assertions)]
     if found.is_empty() {
-        if let Ok(cwd) = std::env::current_dir() {
-            walk_packs(&cwd.join("content"), &mut found);
-        }
+        let repo_root = Path::new(env!("CARGO_MANIFEST_DIR")).join("..");
+        walk_packs(&repo_root.join("content"), &mut found);
     }
 
     found
@@ -260,10 +270,13 @@ fn resolve_content_path(app: tauri::AppHandle, rel: String) -> Option<String> {
             return Some(p.display().to_string());
         }
     }
-    // 3. Dev-only repo-root fallback (CWD is the project root under `bun tauri dev`).
+    // 3. Dev-only repo-root fallback. `cargo run` sets CWD to the crate root
+    //    (src-tauri/), not the repo root — see the matching comment in
+    //    `read_content_packs` above. CARGO_MANIFEST_DIR is the reliable anchor.
     #[cfg(debug_assertions)]
-    if let Ok(cwd) = std::env::current_dir() {
-        let p = cwd.join("content").join(rel_path);
+    {
+        let repo_root = Path::new(env!("CARGO_MANIFEST_DIR")).join("..");
+        let p = repo_root.join("content").join(rel_path);
         if p.exists() {
             return Some(p.display().to_string());
         }

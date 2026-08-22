@@ -1,70 +1,61 @@
-// Admin settings route — `/settings`. PIN-gated (W7).
+// Admin layout route — `/settings`. The parent of the multi-page admin surface.
 //
-// The route's loader reads packs + the loader's skipped/invalid list once via
-// the shared TanStack Query cache (`loadPacksWithErrors`), so the AdminPanel
-// can surface both the installed packs and any packs that failed validation
-// — never as a student-facing modal. The component wraps everything in
-// <PinGate> (reused from W2 — no new gate); PinGate shows its own PIN form
-// while locked and renders the children once unlocked.
+// This used to be a single leaf route rendering <AdminPanel>; it is now a
+// layout that wraps its <Outlet/> in a single <PinGate> so every child admin
+// page (Overview, Students, Subjects, System) inherits the gate. A single
+// topbar (Back far left, brand mark centered) is always visible so the locked
+// PIN state isn't a bare form; the AdminNav + page content render only once
+// unlocked.
 //
-// Entry to this route is deliberately unobtrusive: a small muted gear link in
-// the header (see src/routes/__root.tsx). The PIN is the real gate; the entry
-// just shouldn't be a big CTA a bored student finds in a minute.
+// Each child route loads its own data via the shared TanStack Query cache, so
+// this layout carries no loader — it is just chrome + gate.
 
-import { useEffect, type JSX } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { type JSX } from "react";
+import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
 
-import { loadPacksWithErrors } from "@/content/loader";
-import type { PackT } from "@/content/schema";
 import { PinGate } from "@/components/PinGate";
-import { AdminPanel, setExportPacks } from "@/components/AdminPanel";
+import { AdminNav } from "@/components/admin/AdminNav";
 
 export const Route = createFileRoute("/settings")({
-  loader: async ({
-    context,
-  }): Promise<{
-    packs: PackT[];
-    errors: Array<{ path: string; error: string }>;
-  }> => {
-    return loadPacksWithErrors(context.queryClient);
-  },
-  component: SettingsPage,
+  component: SettingsLayout,
 });
 
-function SettingsPage(): JSX.Element {
-  const { packs, errors } = Route.useLoaderData();
-
-  // Hand the loaded packs to the AdminPanel's export handler (module slot, see
-  // AdminPanel.setExportPacks). Re-applied whenever the loader data changes.
-  useEffect(() => {
-    setExportPacks(packs);
-  }, [packs]);
-
+function SettingsLayout(): JSX.Element {
   return (
     <div className="flex flex-col gap-6">
-      <Link
-        to="/"
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[8px] px-1 font-sans text-[14px] text-brand hover:underline"
-      >
-        Back to subjects
-      </Link>
+      {/* Topbar: Back pinned far left, brand mark truly centered on the bar
+          (a 1fr/auto/1fr grid, not flex space-between, so the logo stays
+          centered regardless of the Back button's width). */}
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+        <Link
+          to="/"
+          className="inline-flex min-h-[44px] w-fit items-center gap-1.5 font-sans text-[16px] font-semibold text-ink-3 transition hover:text-brand"
+        >
+          <ArrowLeft size={16} aria-hidden />
+          Back
+        </Link>
+        <Link to="/" className="flex items-center gap-[10px]" title="CBCLab">
+          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand font-heading text-[16px] font-extrabold text-white">
+            CB
+          </span>
+          <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
+            CBCLab
+          </span>
+        </Link>
+        <span aria-hidden />
+      </div>
+
+      {/* PinGate renders its own PIN form while locked (it never calls the
+          children until unlocked), so the nav + page content below appear only
+          after the gate opens. */}
       <PinGate aria-label="Admin">
-        {(unlocked) =>
-          unlocked ? (
-            <AdminPanel packs={packs} errors={errors} />
-          ) : (
-            // PinGate renders its own PIN form; we add just a heading so the
-            // locked state is clearly the admin screen, not a blank page.
-            <header className="flex flex-col gap-2">
-              <h1 className="font-heading text-[40px] font-semibold leading-tight tracking-tight text-ink">
-                Admin
-              </h1>
-              <p className="font-sans text-[17px] leading-relaxed text-ink-2">
-                Enter the admin PIN to continue.
-              </p>
-            </header>
-          )
-        }
+        {() => (
+          <div className="flex flex-col gap-6">
+            <AdminNav />
+            <Outlet />
+          </div>
+        )}
       </PinGate>
     </div>
   );

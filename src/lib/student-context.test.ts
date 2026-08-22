@@ -9,6 +9,7 @@ function row(id: number, display_name = "x"): StudentRow {
     id,
     display_name,
     class_label: null,
+    password_hash: null,
     created_at: "2026-01-01",
   };
 }

@@ -1,7 +1,9 @@
 /**
- * Student profile context — the single small context set at the profile picker
- * (00-decisions §4: no student passwords; a name picker IS the whole login;
- * "Guest" records nothing).
+ * Student profile context — the single small context set at the profile
+ * picker ("Guest" records nothing). Superseded 00-decisions §4 ("no student
+ * passwords; a name picker IS the whole login"): every account now has a
+ * password (`addStudent` hashes it; `verifyPassword` checks it), set at
+ * sign-up under a class.
  *
  * State ownership: this is the ONE piece of "current student" state in the
  * app, mounted high in __root so every route can read it. It is NOT server-ish
@@ -10,9 +12,10 @@
  * (value = student id as a string, or `"guest"`).
  *
  * The provider loads students + the persisted choice on mount and exposes
- * `setStudent(id)` (null = Guest) to persist a choice. Mutations
- * (add/rename/delete) delegate to the db helpers in src/db/index.ts and then
- * refresh the in-memory list.
+ * `setStudent(id)` (null = Guest) to persist a choice — callers verify the
+ * password first via `verifyPassword`, `setStudent` itself does not check
+ * one. Mutations (add/rename/delete) delegate to the db helpers in
+ * src/db/index.ts and then refresh the in-memory list.
  */
 
 import {
@@ -32,8 +35,10 @@ import {
   deleteStudent,
   getSetting,
   getStudents,
+  hashPin,
   renameStudent,
   setSetting,
+  verifyStudentPassword,
 } from "@/db/index";
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -54,7 +59,18 @@ export type StudentContextValue = {
   students: StudentRow[];
   /** null = Guest; persists to settings. */
   setStudent: (id: number | null) => Promise<void>;
-  addStudent: (displayName: string, classLabel?: string | null) => Promise<StudentRow>;
+  /** Creates the account with a password (hashed here, never sent as plaintext
+   *  to the DB layer) — every account made through the login/sign-up flow has
+   *  one. Does not sign in; call `setStudent(row.id)` after if that's wanted. */
+  addStudent: (
+    displayName: string,
+    classLabel: string | null,
+    password: string,
+  ) => Promise<StudentRow>;
+  /** True if `password` matches the student's stored hash. False (never
+   *  throws) for a wrong password OR a pre-login-flow account with no
+   *  password set yet — see StudentRow.password_hash. */
+  verifyPassword: (id: number, password: string) => Promise<boolean>;
   renameStudent: (
     id: number,
     displayName: string,
@@ -199,12 +215,18 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
   );
 
   const addStudent = useCallback(
-    async (displayName: string, classLabel?: string | null) => {
-      const row = await createStudent(displayName, classLabel);
+    async (displayName: string, classLabel: string | null, password: string) => {
+      const passwordHash = await hashPin(password);
+      const row = await createStudent(displayName, classLabel, passwordHash);
       await refreshStudents();
       return row;
     },
     [refreshStudents],
+  );
+
+  const verifyPassword = useCallback(
+    (id: number, password: string) => verifyStudentPassword(id, password),
+    [],
   );
 
   const rename = useCallback(
@@ -244,6 +266,7 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
       students,
       setStudent,
       addStudent,
+      verifyPassword,
       renameStudent: rename,
       deleteStudent: remove,
       refreshStudents,
@@ -256,6 +279,7 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
       students,
       setStudent,
       addStudent,
+      verifyPassword,
       rename,
       remove,
       refreshStudents,
