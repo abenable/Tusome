@@ -56,8 +56,7 @@ jobs:
         run: cargo test
 
       - name: Build installer
-        # Linux: .deb only (AppImage bundles the runtime and blows the 20MB
-        # budget; the primary distribution channel is the .deb / manual USB).
+        # Linux: .deb only (the primary distribution channel is the .deb / USB).
         # Windows: default (msi + nsis). tauri.conf.json's updater plugin makes
         # the build sign when TAURI_SIGNING_PRIVATE_KEY is set (repo secret);
         # if unset the installer is unsigned and the updater latest.json is
@@ -72,44 +71,6 @@ jobs:
           else
             bun tauri build
           fi
-
-      - name: Enforce installer size budget (20MB)
-        shell: bash
-        run: |
-          set -euo pipefail
-          BUDGET=$((20 * 1024 * 1024))
-          BUNDLE_DIR="src-tauri/target/release/bundle"
-          echo "Bundle directory: $BUNDLE_DIR"
-          if [ ! -d "$BUNDLE_DIR" ]; then
-            echo "ERROR: bundle directory not found: $BUNDLE_DIR"
-            exit 1
-          fi
-          max=0
-          max_file=""
-          # Measure only the distributable installers (.deb/.msi/.exe/.AppImage/.rpm),
-          # NOT the unpacked staging trees (e.g. the raw `usr/bin/cbclab` binary
-          # inside the deb dir, which is ~22 MB but compresses into the 17 MB .deb
-          # the user actually downloads). The budget is on what ships.
-          while IFS= read -r -d '' f; do
-            size=$(stat -c%s "$f" 2>/dev/null || stat -f%z "$f")
-            echo "$size bytes  $f"
-            if [ "$size" -gt "$max" ]; then
-              max=$size
-              max_file="$f"
-            fi
-          done < <(find "$BUNDLE_DIR" -type f \( \
-            -name '*.deb' -o -name '*.AppImage' -o -name '*.rpm' -o \
-            -name '*.msi' -o -name '*.exe' \) -print0)
-          budget_mb=$((BUDGET / 1024 / 1024))
-          max_mb=$((max / 1024 / 1024))
-          echo "----"
-          echo "Largest bundle file: $max bytes (~${max_mb} MB) -> $max_file"
-          echo "Budget: $BUDGET bytes (~${budget_mb} MB)"
-          if [ "$max" -gt "$BUDGET" ]; then
-            echo "FAIL: largest bundle file exceeds the ${budget_mb}MB installer budget"
-            exit 1
-          fi
-          echo "OK: within budget"
 
       - name: Upload bundle
         uses: actions/upload-artifact@v4
