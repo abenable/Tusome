@@ -165,9 +165,11 @@ function repoContentDir(): string {
   if (override) return override;
   // This file lives at <repo>/src/content/loader.ts → go up two dirs to repo
   // root. `import.meta.dirname` is stable under bun and (vite) dev; this branch
-  // never runs in the webview build.
+  // never runs in the webview build. Split on BOTH `/` and `\` so Windows paths
+  // (backslashes) resolve the same as POSIX — node:fs accepts forward slashes
+  // on every platform, so re-joining with `/` is fine.
   const here = import.meta.dirname;
-  const parts = here.split("/");
+  const parts = here.split(/[\\/]/);
   const repoRoot = parts.slice(0, -2).join("/");
   return `${repoRoot}/content`;
 }
