@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s4.algebra.equations-and-inequalities",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s4.algebra.equations-and-inequalities",
+      "title": "Equations and Inequalities",
+      "subject": "mathematics",
+      "level": "S4",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Equations and inequalities",
+      "order": 2,
+      "outcomes": [
+        "Build formula from word statements. (u, s)",
+        "Re-write a given formula by changing the subject. (u, s)",
+        "Solve equations and inequalities, representing the solutions on a number line or graphically as appropriate. (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Turning a word problem into a formula means naming the unknowns and writing their relationship as an equation. Ruth is r years old; Bayo is one year older than Ruth, so Bayo's age = r+1. John's age is 3 times Bayo's age, so John's age = 3(r+1) = 3r+3."
+        },
+        {
+          "type": "equation",
+          "expr": "Ruth = r,  Bayo = r+1,  John = 3(r+1) = 3r+3"
+        },
+        {
+          "type": "text",
+          "text": "Changing the subject of a formula means rearranging it to isolate a different variable, using the same balance method as solving equations. Given the formula v = u + at (final velocity), rearrange to make t the subject: subtract u from both sides to get v-u = at, then divide both sides by a to get t = (v-u)/a."
+        },
+        {
+          "type": "equation",
+          "expr": "v = u + at   ->   v - u = at   ->   t = (v-u)/a"
+        },
+        {
+          "type": "text",
+          "text": "This year's work extends inequalities (Senior 2, Topic 5) to quadratics. Solve x^2 - 5x + 6 <= 0: first solve the equation x^2-5x+6=0 to get x=2 and x=3 (the graph's roots), then check the sign of the parabola between and outside these roots — since it opens upward, the expression is negative (≤0) between the roots, so the solution is 2 <= x <= 3."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "packId": "mat.s3.geometry.matrix-transformations",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.geometry.matrix-transformations",
+      "title": "Matrix Transformations",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Geometry and Measures",
+      "subStrand": "Transformations",
+      "order": 9,
+      "outcomes": [
+        "Identify transformation matrices for reflection, rotation and enlargement. (k, u, s)",
+        "Determine the image given the object and transformation matrix, on a coordinate grid. (u, s)",
+        "Identify the matrix of transformation when the object and its image are given. (u, s)",
+        "Determine the inverse of a transformation matrix. (u)",
+        "Use the inverse matrix to find the object when the image is given. (u, s)",
+        "Identify the relationship between area scale factor and determinant of the transformation matrix. (u)",
+        "Determines a single matrix for successive transformations. (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A 2x2 matrix can represent a geometric transformation: multiplying it by a point's column vector (x, y) gives the transformed point. A 90° anti-clockwise rotation about the origin has matrix [[0,-1],[1,0]]; a reflection in the line y=x has matrix [[0,1],[1,0]]."
+        },
+        {
+          "type": "text",
+          "text": "Apply the rotation matrix [[0,-1],[1,0]] to the point (3, 2): new x = 0(3)+(-1)(2) = -2, new y = 1(3)+0(2) = 3. So (3,2) maps to (-2,3), matching the 90° anti-clockwise rule (x,y)->(-y,x)."
+        },
+        {
+          "type": "equation",
+          "expr": "[[0,-1],[1,0]] applied to (3,2):  x'=0(3)-1(2)=-2, y'=1(3)+0(2)=3  ->  (-2,3)"
+        },
+        {
+          "type": "text",
+          "text": "The determinant of a transformation matrix equals its area scale factor: a matrix with determinant 4 makes any shape's area 4 times larger. A negative determinant means the transformation also flips (reverses) the shape's orientation. To reverse a transformation, apply the inverse matrix to the image to recover the original object — for a transformation matrix M, applying M⁻¹ undoes it."
+        },
+        {
+          "type": "text",
+          "text": "Two transformations applied one after another (first A, then B) combine into a single matrix BA (multiply in that order — B on the left, since it acts last). This single combined matrix maps the original object straight to the final image in one step."
+        }
+      ]
+    }
+  ]
+}

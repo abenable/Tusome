@@ -1,0 +1,48 @@
+{
+  "packId": "mat.s2.geometry.length-and-area-properties",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.geometry.length-and-area-properties",
+      "title": "Length and Area Properties of Two-Dimensional Geometrical Figures",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Geometry and Measures",
+      "subStrand": "Area and perimeter",
+      "order": 10,
+      "outcomes": [
+        "Describe the length of two dimensional geometrical figures. (u)",
+        "Develop, understand and state Pythagoras' theorem. (k, u)",
+        "Apply Pythagoras' theorem to right angled and isosceles triangles. (u, s)",
+        "Understands the meaning of area in two dimensional geometrical figures (triangles, rectangles). (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Pythagoras' theorem applies to any right-angled triangle: the square of the hypotenuse (the longest side, opposite the right angle) equals the sum of the squares of the other two sides."
+        },
+        {
+          "type": "equation",
+          "latex": "a^2 + b^2 = c^2"
+        },
+        {
+          "type": "text",
+          "text": "A right-angled triangle has shorter sides 6 cm and 8 cm. The hypotenuse c satisfies c^2 = 6^2 + 8^2 = 36 + 64 = 100, so c = √100 = 10 cm."
+        },
+        {
+          "type": "equation",
+          "expr": "c^2 = 6^2 + 8^2 = 100   ->   c = 10 cm"
+        },
+        {
+          "type": "text",
+          "text": "The area of a rectangle is length x width. The area of a triangle is half the base times the perpendicular height (not the slant side), because any triangle is exactly half of the rectangle that surrounds it. A triangle with base 12 cm and perpendicular height 5 cm has area = 0.5 x 12 x 5 = 30 cm^2."
+        },
+        {
+          "type": "equation",
+          "expr": "area of triangle = 0.5 x base x height = 0.5 x 12 x 5 = 30 cm^2"
+        }
+      ]
+    }
+  ]
+}

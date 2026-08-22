@@ -1,0 +1,39 @@
+{
+  "packId": "mat.s3.geometry.trigonometry-2",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.geometry.trigonometry-2",
+      "title": "Trigonometry 2",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Geometry and Measures",
+      "subStrand": "Trigonometry",
+      "order": 7,
+      "outcomes": [
+        "Determine trigonometric ratios of angles greater than 90°. (u, s)",
+        "Use the graphs of trigonometric functions to determine values of sine, cosine and tangent for any angle. (u, s)",
+        "Apply sine and cosine rules to solve real life problems. (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Trigonometric ratios extend beyond the 0°-90° range covered by right-angled triangles: sin(150°) = sin(30°) = 0.5, and cos(120°) = -cos(60°) = -0.5. The graphs of sine and cosine repeat every 360° and oscillate between -1 and 1, which is how a calculator or graph gives values for any angle, including negative and reflex angles."
+        },
+        {
+          "type": "text",
+          "text": "For triangles that are not right-angled, the sine rule relates each side to the sine of its opposite angle, and the cosine rule relates all three sides to one angle. The sine rule: a/sin(A) = b/sin(B) = c/sin(C). The cosine rule: c^2 = a^2 + b^2 - 2ab cos(C)."
+        },
+        {
+          "type": "equation",
+          "latex": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}, \\qquad c^2 = a^2 + b^2 - 2ab\\cos C"
+        },
+        {
+          "type": "text",
+          "text": "Two poles, 8.3 m and 11.5 m long, are placed with one end of each touching, and their far ends 4.7 m apart. Using the cosine rule to find the angle θ between the poles: 4.7^2 = 8.3^2 + 11.5^2 - 2(8.3)(11.5)cos(θ), so 22.09 = 68.89 + 132.25 - 190.9cos(θ), giving cos(θ) = (68.89+132.25-22.09)/190.9 ≈ 0.943, so θ ≈ 19.4°."
+        }
+      ]
+    }
+  ]
+}

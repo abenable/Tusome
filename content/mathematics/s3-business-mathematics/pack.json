@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s3.geometry.business-mathematics",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.geometry.business-mathematics",
+      "title": "Business Mathematics",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Geometry and Measures",
+      "subStrand": "Business arithmetic",
+      "order": 6,
+      "outcomes": [
+        "Use a multiplier when calculating percentage change. (u, s)",
+        "Calculate compound interest. (u, s)",
+        "Understand and calculate depreciation and appreciation. (u, s)",
+        "Understand and convert local and foreign currencies. (u, s)",
+        "Understand and calculate hire purchase. (u)",
+        "Describe and determines Mortgage of assets. (u, s)",
+        "Calculate income tax given income tax bands. (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A multiplier turns a percentage change into a single number to multiply by. A 20% increase uses multiplier 1.20 (100%+20%); a 20% decrease uses multiplier 0.80 (100%-20%). Ashok invests UGX 100 000 at 10% compound interest per year: after 1 year it is worth 100 000 x 1.10 = 110 000; after 2 years, 110 000 x 1.10 = 121 000 — each year's interest is calculated on the new total, not the original amount."
+        },
+        {
+          "type": "equation",
+          "expr": "UGX 100 000 x 1.10 x 1.10 = UGX 121 000 after 2 years at 10% compound interest"
+        },
+        {
+          "type": "text",
+          "text": "Depreciation reduces an asset's value over time (e.g. a car losing value); appreciation increases it (e.g. land gaining value). Both use the same multiplier method, but depreciation's multiplier is below 1. A car worth UGX 20 000 000 depreciates by 15% per year: after 1 year it is worth 20 000 000 x 0.85 = UGX 17 000 000."
+        },
+        {
+          "type": "text",
+          "text": "To convert currency, multiply by the exchange rate. If UGX 3 700 buys 1 US dollar, then UGX 500 000 converts to 500 000 ÷ 3 700 ≈ 135.14 US dollars. Hire purchase spreads the cost of an item over instalments, usually totalling more than the cash price because interest is included."
+        }
+      ]
+    }
+  ]
+}

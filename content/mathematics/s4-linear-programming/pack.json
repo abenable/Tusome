@@ -1,0 +1,39 @@
+{
+  "packId": "mat.s4.algebra.linear-programming",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s4.algebra.linear-programming",
+      "title": "Linear Programming",
+      "subject": "mathematics",
+      "level": "S4",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Linear programming",
+      "order": 3,
+      "outcomes": [
+        "Form linear inequalities based on real life situations. (u, s)",
+        "Represent the inequalities on the graph and identifies the required region. (u, s)",
+        "Find and interpret the optimum solution of a set of linear inequalities in two unknowns. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Linear programming turns a real-world limits problem into a set of linear inequalities, graphs the region that satisfies all of them (the feasible region), then finds the best (optimum) point within that region. A farmer has 32 acres for corn (x acres) and soybean (y acres): x >= 0, y >= 0, x+y <= 32 are the basic constraints, plus any cost or storage limits given."
+        },
+        {
+          "type": "text",
+          "text": "Each constraint is graphed as a boundary line, with the unwanted side shaded out, leaving the feasible region where every inequality holds at once. The optimum solution (maximum profit or minimum cost) always occurs at a corner (vertex) of the feasible region — so instead of testing every point inside, only the corners need to be checked."
+        },
+        {
+          "type": "text",
+          "text": "A mother buys x notebooks at UGX 600 each and y pens at UGX 800 each, with at least 4 notebooks and 4 pens, and at most UGX 8000 to spend. The constraints are: x>=4, y>=4, 600x+800y<=8000. Testing the corners of the resulting feasible region for the combination that uses the budget most fully identifies the optimum purchase."
+        },
+        {
+          "type": "equation",
+          "expr": "x >= 4,  y >= 4,  600x + 800y <= 8000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "packId": "mat.s3.algebra.ratio-and-proportion",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.algebra.ratio-and-proportion",
+      "title": "Ratio and Proportion",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Ratio and proportion",
+      "order": 5,
+      "outcomes": [
+        "Understand and apply equivalent ratios. (u, s)",
+        "Understand and apply direct and inverse proportional reasoning. (u, s)",
+        "Understand and apply ratio, proportion and scale. (k, u, s)",
+        "Draw and interpret the line of best fit when looking for a relationship in bivariate data on a scatter graph. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Two quantities are in direct proportion if their ratio stays constant — as one doubles, so does the other (y ∝ x). A recipe needs 400 g of flour for 8 cakes. For 20 cakes: 400 ÷ 8 = 50 g per cake, so 20 cakes need 50 x 20 = 1000 g of flour."
+        },
+        {
+          "type": "equation",
+          "expr": "400g ÷ 8 cakes = 50 g/cake;   20 cakes need 50 x 20 = 1000 g"
+        },
+        {
+          "type": "text",
+          "text": "Two quantities are in inverse proportion if one increases as the other decreases in a way that keeps their product constant (y ∝ 1/x). A rectangle has area 36 square units: as the width increases, the length must decrease to keep length x width = 36 — if width doubles, length halves."
+        },
+        {
+          "type": "equation",
+          "latex": "y \\propto x \\;\\text{(direct)} \\qquad y \\propto \\frac{1}{x} \\;\\text{(inverse)}"
+        },
+        {
+          "type": "text",
+          "text": "A scatter graph plots pairs of related measurements (e.g. height and mass) as points. A line of best fit is a single straight line drawn through the middle of the scattered points, roughly balancing points above and below it, used to estimate values and describe the trend (e.g. taller people tending to be heavier)."
+        }
+      ]
+    }
+  ]
+}

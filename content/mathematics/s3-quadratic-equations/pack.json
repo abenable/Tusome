@@ -1,0 +1,53 @@
+{
+  "packId": "mat.s3.algebra.quadratic-equations",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.algebra.quadratic-equations",
+      "title": "Quadratic Equations",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Quadratic equations",
+      "order": 12,
+      "outcomes": [
+        "Determine the roots of quadratic equations using factorisation, completing the square and the formula. (k, u, s)",
+        "Form a quadratic equation given its roots. (u, s)",
+        "Make a table of values for a quadratic function and draws the graph. (k, u, s)",
+        "Link the solutions of a quadratic equation with its graphical representation. (k, u)",
+        "Solve simultaneous equations involving one quadratic equation and a linear equation. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Building on Senior 2's factorising (Algebra 2), the quadratic formula solves any quadratic equation ax^2+bx+c=0, even when it doesn't factorise neatly."
+        },
+        {
+          "type": "equation",
+          "latex": "x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}"
+        },
+        {
+          "type": "text",
+          "text": "Solve x^2 - 3x + 4 = 0 using the formula, where a=1, b=-3, c=4: x = (3 ± √(9-16)) / 2. Since 9-16 = -7 is negative, there is no real square root, so this equation has no real solutions — its graph never crosses the x-axis."
+        },
+        {
+          "type": "text",
+          "text": "Solve x^2 - 5x + 6 = 0 using completing the square: x^2 - 5x = -6, add (5/2)^2=6.25 to both sides: x^2-5x+6.25 = 0.25, so (x-2.5)^2 = 0.25, x-2.5 = ±0.5, giving x=3 or x=2 — matching the factorised answer (x-2)(x-3)=0 from Senior 2."
+        },
+        {
+          "type": "text",
+          "text": "The roots of a quadratic equation are exactly where its graph crosses the x-axis. A graph that touches the x-axis at one point (a repeated root) has b^2-4ac=0; a graph that doesn't cross the x-axis at all (no real roots) has b^2-4ac<0, matching the x^2-3x+4 example above."
+        },
+        {
+          "type": "text",
+          "text": "Use the PhET Graphing Quadratics simulation to change a, b and c in y = ax^2+bx+c and watch the parabola and its roots move — a fast way to see how the discriminant b^2-4ac controls whether a quadratic has two, one, or no real roots."
+        }
+      ],
+      "sim": {
+        "phet": "graphing-quadratics_en.html",
+        "caption": "PhET Graphing Quadratics. Adjust a, b and c in y = ax^2 + bx + c and see the parabola and its roots change instantly. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

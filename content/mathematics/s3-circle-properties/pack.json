@@ -1,0 +1,46 @@
+{
+  "packId": "mat.s3.geometry.circle-properties",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.geometry.circle-properties",
+      "title": "Circle Properties",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Geometry and Measures",
+      "subStrand": "Circle",
+      "order": 13,
+      "outcomes": [
+        "Identify arc, chord, sector and segment. (k)",
+        "Relate angles made by an arc at the circumference and centre. (u)",
+        "Determine the tangent, chord and angle properties of the circle. (u)",
+        "Determine and uses the properties of a cyclic quadrilateral. (u, s)",
+        "Find the length of the common chord for two intersecting circles. (u, s)",
+        "Calculate the area of sectors and segments. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Building on Senior 2's Circle topic: an arc is part of the circumference; a chord is a straight line joining two points on the circle; a sector is the pie-slice region between two radii and an arc; a segment is the region between a chord and an arc."
+        },
+        {
+          "type": "text",
+          "text": "Key circle theorems: the angle at the centre is twice the angle at the circumference standing on the same arc. The angle in a semicircle is always 90°. A tangent to a circle is always perpendicular to the radius drawn to the point of contact. Opposite angles of a cyclic quadrilateral (a four-sided shape with all corners on the circle) always add up to 180°."
+        },
+        {
+          "type": "equation",
+          "expr": "angle at centre = 2 x angle at circumference (same arc);   opposite angles of a cyclic quadrilateral sum to 180°"
+        },
+        {
+          "type": "text",
+          "text": "The area of a sector with angle θ (in degrees) and radius r is a fraction of the whole circle's area: (θ/360) x πr^2. A sector with radius 6 cm and angle 60° has area (60/360) x π x 6^2 = (1/6) x π x 36 = 6π ≈ 18.85 cm^2."
+        },
+        {
+          "type": "equation",
+          "expr": "sector area = (60/360) x π(6)^2 = 6π ≈ 18.85 cm^2"
+        }
+      ]
+    }
+  ]
+}

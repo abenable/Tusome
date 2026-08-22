@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s2.geometry.rotation",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.geometry.rotation",
+      "title": "Rotation",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Geometry and Measures",
+      "subStrand": "Transformations",
+      "order": 9,
+      "outcomes": [
+        "Identify the order of rotational symmetry of plane figures. (k, u, s)",
+        "Distinguish between clockwise and anti-clockwise rotation. (k, u)",
+        "State properties of rotation as a transformation including congruence. (k, u)",
+        "Determine the centre and angle of rotation. (u, s)",
+        "Apply properties of rotation in the Cartesian plane. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The order of rotational symmetry of a shape is the number of times it looks exactly the same during one full 360° turn. An equilateral triangle has order 3 (it matches its original outline every 120°); a square has order 4; a shape with no repeat until the full 360° turn has order 1 (no rotational symmetry)."
+        },
+        {
+          "type": "text",
+          "text": "A rotation is described completely by three things: the centre of rotation (the fixed point everything turns around), the angle of rotation, and the direction (clockwise or anti-clockwise). Rotation is a congruent transformation — the image is exactly the same size and shape as the object, just turned."
+        },
+        {
+          "type": "text",
+          "text": "Rotate the point (3, 1) by 90° anti-clockwise about the origin (0, 0). The rule for a 90° anti-clockwise rotation about the origin is (x, y) -> (-y, x). Applying it: (3, 1) -> (-1, 3)."
+        },
+        {
+          "type": "equation",
+          "expr": "90° anti-clockwise about origin: (x, y) -> (-y, x);   (3, 1) -> (-1, 3)"
+        },
+        {
+          "type": "text",
+          "text": "To find the centre of rotation between an object and its image, join a point on the object to its matching point on the image, construct the perpendicular bisector of that line, and repeat for a second pair of points — the two perpendicular bisectors cross at the centre of rotation."
+        }
+      ]
+    }
+  ]
+}

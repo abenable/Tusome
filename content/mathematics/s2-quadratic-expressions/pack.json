@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s2.algebra.quadratic-expressions",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.algebra.quadratic-expressions",
+      "title": "Algebra 2: Quadratic Expressions",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Quadratic expressions",
+      "order": 6,
+      "outcomes": [
+        "Recognise equivalent quadratic expressions. (k, u, s)",
+        "Expand algebraic expressions. (k, s)",
+        "Identify perfect squares. (u)",
+        "Factorise quadratic expressions. (u, s)",
+        "Solve quadratic equations where the quadratic expression can be factorised. (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "To expand (x+3)(x+4), multiply every term in the first bracket by every term in the second: x*x + x*4 + 3*x + 3*4 = x^2 + 4x + 3x + 12 = x^2 + 7x + 12. Notice the coefficient of x (7) is the sum of 3 and 4, and the constant (12) is their product — this pattern is the key to factorising."
+        },
+        {
+          "type": "equation",
+          "expr": "(x+3)(x+4) = x^2 + 4x + 3x + 12 = x^2 + 7x + 12"
+        },
+        {
+          "type": "text",
+          "text": "To factorise x^2 + 7x + 12, find two numbers that multiply to give 12 (the constant) and add to give 7 (the coefficient of x): 3 and 4 work, since 3x4=12 and 3+4=7. So x^2 + 7x + 12 = (x+3)(x+4)."
+        },
+        {
+          "type": "text",
+          "text": "A perfect square like (x+5)^2 expands to x^2 + 10x + 25 — the middle term is always twice the product of x and the constant. To solve a factorisable quadratic equation, factorise it and use the fact that if two things multiply to give zero, one of them must be zero. Solve x^2 - 5x + 6 = 0: this factorises to (x-2)(x-3) = 0, so x=2 or x=3."
+        },
+        {
+          "type": "equation",
+          "expr": "x^2 - 5x + 6 = 0   ->   (x-2)(x-3) = 0   ->   x = 2  or  x = 3"
+        }
+      ]
+    }
+  ]
+}

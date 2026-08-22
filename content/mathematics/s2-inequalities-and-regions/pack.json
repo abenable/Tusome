@@ -1,0 +1,49 @@
+{
+  "packId": "mat.s2.algebra.inequalities-and-regions",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.algebra.inequalities-and-regions",
+      "title": "Inequalities and Regions",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Inequalities",
+      "order": 5,
+      "outcomes": [
+        "Identify and use inequality symbols. (k, s)",
+        "Illustrate inequalities on the number line. (u, s)",
+        "Solve linear inequalities in one unknown. (u, s)",
+        "Represent linear inequalities graphically. (k, u, s)",
+        "Form simple linear inequalities for regions on a graph. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The inequality symbols are: > (greater than), < (less than), >= (greater than or equal to), and <= (less than or equal to). On a number line, a filled (solid) circle marks a value that is included (>= or <=), and an open circle marks a value that is excluded (> or <)."
+        },
+        {
+          "type": "text",
+          "text": "Linear inequalities in one unknown solve like equations, with one key difference: multiplying or dividing both sides by a negative number reverses the inequality sign. Solve 2x + 3 < 11: subtract 3 from both sides to get 2x < 8, then divide both sides by 2 to get x < 4."
+        },
+        {
+          "type": "equation",
+          "expr": "2x + 3 < 11   ->   2x < 8   ->   x < 4"
+        },
+        {
+          "type": "text",
+          "text": "Solve -3x + 2 <= 14: subtract 2 to get -3x <= 12, then divide by -3 — since -3 is negative, the inequality flips — giving x >= -4."
+        },
+        {
+          "type": "equation",
+          "expr": "-3x + 2 <= 14   ->   -3x <= 12   ->   x >= -4   (sign flips on dividing by a negative)"
+        },
+        {
+          "type": "text",
+          "text": "On a coordinate grid, an inequality like y > x + 1 defines a region rather than a single line. Draw the boundary line y = x + 1 (dashed, since y = x+1 itself is not included because the inequality is strict), then shade the side of the line where y is greater than x + 1 — check with a test point such as (0, 0): since 0 is not greater than 0+1=1, (0,0) is on the excluded side."
+        }
+      ]
+    }
+  ]
+}

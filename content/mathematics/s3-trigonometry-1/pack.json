@@ -1,0 +1,44 @@
+{
+  "packId": "mat.s3.geometry.trigonometry-1",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.geometry.trigonometry-1",
+      "title": "Trigonometry I",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Geometry and Measures",
+      "subStrand": "Trigonometry",
+      "order": 2,
+      "outcomes": [
+        "Derive sine, cosine and tangent functions from the unit circle. (k, u, s)",
+        "Read and use calculators to find values of trigonometric functions. (u, s)",
+        "Use sine, cosine and tangent in calculating lengths of sides and angles of right-angled triangles. (u)",
+        "Find angles of elevation and depression. (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In a right-angled triangle, for a chosen angle θ (not the right angle), the side opposite θ, the side adjacent to θ, and the hypotenuse (the longest side) define three ratios: sine, cosine and tangent."
+        },
+        {
+          "type": "equation",
+          "latex": "\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}, \\quad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}, \\quad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}"
+        },
+        {
+          "type": "text",
+          "text": "A ladder leans against a wall, making a 40° angle with the ground, and reaches 3 m up the wall. To find the ladder's length (the hypotenuse), use sine, since the wall height is opposite the 40° angle: sin(40°) = 3 ÷ length, so length = 3 ÷ sin(40°) ≈ 3 ÷ 0.643 ≈ 4.67 m."
+        },
+        {
+          "type": "equation",
+          "expr": "sin(40°) = 3/length  ->  length = 3 ÷ sin(40°) ≈ 4.67 m"
+        },
+        {
+          "type": "text",
+          "text": "An angle of elevation is measured upward from the horizontal (e.g. looking up at the top of a building); an angle of depression is measured downward from the horizontal (e.g. looking down at a boat from a cliff). From a lighthouse 50 m tall, the angle of depression to a boat 600 m away (measured horizontally) satisfies tan(θ) = 50 ÷ 600, so θ = tan⁻¹(50/600) ≈ 4.76°."
+        }
+      ]
+    }
+  ]
+}

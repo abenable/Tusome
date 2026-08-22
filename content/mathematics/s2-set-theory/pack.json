@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s2.data.set-theory",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.data.set-theory",
+      "title": "Set Theory",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Data and Probability",
+      "subStrand": "Sets",
+      "order": 13,
+      "outcomes": [
+        "Describe a set and identify its elements. (k, u)",
+        "Identify different types of sets and their symbols (empty set, universal set, equal set, complement set, disjoint set, intersection set, union set, subset). (k)",
+        "Determine the number of elements in a set. (u, s)",
+        "Represent and show different operations on sets by shading the different regions in a Venn diagram. (k, u, s)",
+        "Apply sets in practical situations using two and three sets. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A set is a well-defined collection of items, called elements. The universal set (U) contains everything under discussion; the empty set (∅) has no elements. The union of A and B (A∪B) contains everything in A or B or both; the intersection (A∩B) contains only what is in both. The number of elements in set A is written n(A)."
+        },
+        {
+          "type": "text",
+          "text": "A school club survey of 30 learners found 15 belong to the Arts Club (A) and 12 belong to the Science Club (S), with every learner belonging to at least one. Since n(A) + n(S) = 15 + 12 = 27 but there are only 30 learners with no overlap needed to reach 30, actually here overlap must be checked: if all 30 belong to at least one club, and 15+12=27 is less than 30, something is inconsistent — so in practice every survey like this must be checked against the total using n(A∪S) = n(A) + n(S) - n(A∩S)."
+        },
+        {
+          "type": "equation",
+          "latex": "n(A \\cup B) = n(A) + n(B) - n(A \\cap B)"
+        },
+        {
+          "type": "text",
+          "text": "Given U = {1,2,3,4,5,6,7,8,9,10}, A = {even numbers} = {2,4,6,8,10}, B = {square numbers} = {1,4,9}. Then n(A) = 5 and n(B) = 3. The intersection A∩B = {4} (the only number that is both even and a perfect square in U), so n(A∩B) = 1, and n(A∪B) = 5 + 3 - 1 = 7."
+        },
+        {
+          "type": "equation",
+          "expr": "A={2,4,6,8,10}, B={1,4,9}:  A∩B={4},  n(A∪B) = 5+3-1 = 7"
+        }
+      ]
+    }
+  ]
+}

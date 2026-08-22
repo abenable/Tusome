@@ -1,0 +1,48 @@
+{
+  "packId": "mat.s3.data.data-collection-and-display",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.data.data-collection-and-display",
+      "title": "Data Collection / Display",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Data and Probability",
+      "subStrand": "Statistics",
+      "order": 3,
+      "outcomes": [
+        "Understand mode, mean and median, as measures of location/central tendency and knows how to find them and when to use them. (k, u, s)",
+        "Understand range as a measure of dispersion/spread and how to find it. (k, u, s)",
+        "Draw and use frequency tables for ungrouped data. (u, s)",
+        "Draw and use frequency tables for grouped data. (u, s)",
+        "Estimate measures of location and dispersion for grouped data. (u, s)",
+        "Calculate the mean using an assumed mean. (u, s)",
+        "Draw a histogram with equal class intervals and use it to estimate the mode. (u, s)",
+        "Draw a cumulative frequency curve (ogive) and use it to estimate the median. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The mean is the sum of all values divided by how many there are; the median is the middle value when the data is ordered; the mode is the most frequently occurring value. The range (highest value minus lowest value) measures how spread out the data is."
+        },
+        {
+          "type": "text",
+          "text": "For the data set 4, 7, 7, 9, 13: mean = (4+7+7+9+13) ÷ 5 = 40 ÷ 5 = 8; median (already ordered, middle value) = 7; mode (most frequent) = 7; range = 13 - 4 = 9."
+        },
+        {
+          "type": "equation",
+          "expr": "4,7,7,9,13:  mean=8, median=7, mode=7, range=9"
+        },
+        {
+          "type": "text",
+          "text": "When data is grouped into class intervals (e.g. 60-64, 65-69, 70-74 heights), the exact values are lost, so the mean is estimated using the midpoint of each class multiplied by its frequency. A cumulative frequency curve (ogive) plots running totals against the upper class boundary; reading across from half the total frequency and down to the horizontal axis estimates the median."
+        },
+        {
+          "type": "text",
+          "text": "A histogram with equal class widths shows frequency as bar height; the tallest bar's class contains the mode. Assumed mean speeds up mean calculations for large data sets: pick a value near the middle of the data (the assumed mean, A), work out how far each value deviates from A, average the deviations, and add that average back to A."
+        }
+      ]
+    }
+  ]
+}

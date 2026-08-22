@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s3.algebra.equation-of-a-straight-line",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.algebra.equation-of-a-straight-line",
+      "title": "Equation of a Straight Line",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Linear equations and graphs",
+      "order": 1,
+      "outcomes": [
+        "Understand the relationship between a linear equation y=mx+c and its graph. (k, u)",
+        "Determine the x and y intercepts of a given linear graph. (u, s)",
+        "Determine the gradient of a straight line. (u, s)",
+        "State the gradient of a straight line when given the equation. (k, u)",
+        "Apply the relationship of gradients of parallel and perpendicular lines to determine the equation of a straight line. (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Building on Senior 1's y = mx + c, the y-intercept is where the line crosses the y-axis (x = 0, so y = c), and the x-intercept is where it crosses the x-axis (y = 0). For y = 2x - 6: the y-intercept is (0, -6); setting y = 0 gives 0 = 2x - 6, so x = 3, giving x-intercept (3, 0)."
+        },
+        {
+          "type": "equation",
+          "expr": "y = 2x - 6:  y-intercept (0,-6);  0=2x-6 -> x=3, x-intercept (3,0)"
+        },
+        {
+          "type": "text",
+          "text": "Parallel lines always have equal gradients. Perpendicular lines have gradients that multiply to give -1 — if one line has gradient m, a line perpendicular to it has gradient -1/m. A line with gradient 2 is perpendicular to a line with gradient -1/2, since 2 x (-1/2) = -1."
+        },
+        {
+          "type": "equation",
+          "latex": "m_1 \\times m_2 = -1 \\;\\text{(perpendicular lines)}"
+        },
+        {
+          "type": "text",
+          "text": "Find the equation of the line through (1, 5) that is parallel to y = 3x + 2. Parallel means the same gradient, m = 3. Using y = mx + c with the point (1, 5): 5 = 3(1) + c, so c = 2. The line is y = 3x + 2 — the same line, since (1,5) already lies on it. Trying (1, 8) instead: 8 = 3(1) + c gives c = 5, so the equation is y = 3x + 5."
+        }
+      ]
+    }
+  ]
+}

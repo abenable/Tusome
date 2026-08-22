@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s3.data.matrices",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.data.matrices",
+      "title": "Matrices",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Data and Probability",
+      "subStrand": "Matrices",
+      "order": 8,
+      "outcomes": [
+        "Define a matrix and state its order. (k)",
+        "Know when matrices can be added or multiplied. (u, s)",
+        "Find the determinant of a 2x2 matrix. (u, s)",
+        "Find the inverse of a 2x2 matrix and understands why it may not be possible to do so. (k, u, s)",
+        "Apply knowledge of matrices in solving problems from real life situation. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A matrix is a rectangular array of numbers arranged in rows and columns. Its order is rows x columns — a matrix with 2 rows and 2 columns is a 2x2 matrix. Matrices can only be added if they have the same order, by adding matching positions. Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second."
+        },
+        {
+          "type": "text",
+          "text": "For A = [[2,-1],[3,0]] and B = [[1,2],[4,0]], the product AB is found by taking each row of A against each column of B: top-left = (2x1)+(-1x4) = -2, top-right = (2x2)+(-1x0) = 4, bottom-left = (3x1)+(0x4) = 3, bottom-right = (3x2)+(0x0) = 6, giving AB = [[-2,4],[3,6]]."
+        },
+        {
+          "type": "text",
+          "text": "The determinant of the 2x2 matrix [[a,b],[c,d]] is ad - bc. If the determinant is zero, the matrix has no inverse (it is called singular)."
+        },
+        {
+          "type": "equation",
+          "latex": "A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}, \\;\\det A = ad-bc, \\; A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}"
+        },
+        {
+          "type": "text",
+          "text": "For A = [[2,0],[1,3]]: det(A) = (2x3)-(0x1) = 6. Since the determinant isn't zero, the inverse exists: A⁻¹ = (1/6) x [[3,0],[-1,2]]."
+        }
+      ]
+    }
+  ]
+}

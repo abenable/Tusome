@@ -1,0 +1,45 @@
+{
+  "packId": "mat.s2.geometry.similarities-and-enlargement",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.geometry.similarities-and-enlargement",
+      "title": "Similarities and Enlargement",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Geometry and Measures",
+      "subStrand": "Similarity and enlargement",
+      "order": 7,
+      "outcomes": [
+        "Identify similar figures. (u, s)",
+        "State and use the properties of similar figures. (k, u)",
+        "Define enlargement. (k)",
+        "State the properties of enlargement to construct objects and images. (k)",
+        "Understand and use the relationship between linear, area and volume scale factors. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Two figures are similar if one is an enlargement of the other: matching angles are equal, and matching sides are all in the same ratio (the scale factor). Enlargement is a transformation that makes a shape bigger or smaller from a fixed centre of enlargement, without changing its shape."
+        },
+        {
+          "type": "text",
+          "text": "Sara is 150 cm tall and casts a shadow 50 cm long. At the same time, a tree casts a shadow 210 cm long. Since Sara and the tree are both vertical and the sun's rays hit them at the same angle, Sara and her shadow form a triangle similar to the tree and its shadow. The scale factor is 210 ÷ 50 = 4.2, so the tree's height is 150 x 4.2 = 630 cm."
+        },
+        {
+          "type": "equation",
+          "expr": "scale factor = 210 ÷ 50 = 4.2;   tree height = 150 x 4.2 = 630 cm"
+        },
+        {
+          "type": "text",
+          "text": "If the linear scale factor between two similar shapes is k, the area scale factor is k^2 and the volume scale factor is k^3 — because area involves two lengths multiplied together, and volume involves three. A model boat built at 1:20 scale (k = 1/20) needs 20^2 = 400 times less paint by area, and holds 20^3 = 8000 times less water by volume than the real boat."
+        },
+        {
+          "type": "equation",
+          "expr": "linear scale factor k  ->  area scale factor k^2,  volume scale factor k^3"
+        }
+      ]
+    }
+  ]
+}

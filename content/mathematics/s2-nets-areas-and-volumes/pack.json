@@ -1,0 +1,46 @@
+{
+  "packId": "mat.s2.geometry.nets-areas-and-volumes-of-solids",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.geometry.nets-areas-and-volumes-of-solids",
+      "title": "Nets, Areas and Volumes of Solids",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Geometry and Measures",
+      "subStrand": "Solids",
+      "order": 11,
+      "outcomes": [
+        "Form nets of common solids. (u, s)",
+        "Identify common solids and their properties including faces, edges and vertices. (k)",
+        "State units of measures. (k)",
+        "Convert units from one form to another. (u)",
+        "Calculate surface areas of three-dimensional figures. (u, s)",
+        "Calculate the volume of cubes and cuboids. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A net is a 2D shape that folds up to make a 3D solid. A cube's net is six identical squares arranged so they fold into a box; a cuboid's net is three pairs of matching rectangles. The surface area of a solid is the total area of all the faces in its net added together."
+        },
+        {
+          "type": "text",
+          "text": "A cuboid measures 5 cm by 3 cm by 4 cm. It has three pairs of rectangular faces: two of 5x3, two of 5x4, and two of 3x4. Surface area = 2(5x3) + 2(5x4) + 2(3x4) = 2(15) + 2(20) + 2(12) = 30 + 40 + 24 = 94 cm^2."
+        },
+        {
+          "type": "equation",
+          "expr": "surface area = 2(5x3) + 2(5x4) + 2(3x4) = 30 + 40 + 24 = 94 cm^2"
+        },
+        {
+          "type": "text",
+          "text": "The volume of a cuboid (and a cube, its special case) is length x width x height. The same cuboid (5 cm x 3 cm x 4 cm) has volume 5 x 3 x 4 = 60 cm^3. When converting units, remember 1 cm^3 = 1000 mm^3 and 1 m^3 = 1 000 000 cm^3, since each linear dimension scales by the conversion factor."
+        },
+        {
+          "type": "equation",
+          "expr": "volume = 5 x 3 x 4 = 60 cm^3"
+        }
+      ]
+    }
+  ]
+}

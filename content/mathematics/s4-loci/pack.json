@@ -1,0 +1,40 @@
+{
+  "packId": "mat.s4.algebra.loci",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s4.algebra.loci",
+      "title": "Loci",
+      "subject": "mathematics",
+      "level": "S4",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Loci",
+      "order": 4,
+      "outcomes": [
+        "Describe common types of loci. (k, u)",
+        "Construct loci involving points under given conditions. (u, s)",
+        "Construct intersecting loci. (u, s)",
+        "Construct loci involving inequalities. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A locus (plural loci) is the set of all points that satisfy a given condition. The locus of points a fixed distance from a point is a circle; the locus of points equidistant from two fixed points is the perpendicular bisector of the line joining them; the locus of points equidistant from two lines is the angle bisector between them."
+        },
+        {
+          "type": "text",
+          "text": "A goat is tethered by a 3 m rope to the corner of a rectangular building. The locus of points the goat can reach is three-quarters of a circle of radius 3 m around that corner (the building blocks the rest), unless the rope is long enough to wrap around an adjacent corner, in which case a smaller circular arc extends around that second corner too."
+        },
+        {
+          "type": "text",
+          "text": "Where two loci must both be true at once (e.g. \"equidistant from points A and B\" AND \"5 cm from point C\"), the solution is the intersection of the two individual loci — draw both (a perpendicular bisector and a circle) and mark where they cross."
+        },
+        {
+          "type": "text",
+          "text": "A locus involving an inequality, such as \"less than 4 cm from point P\", is a region rather than a line — in this case, the inside of a circle of radius 4 cm centred at P, usually shown shaded with a dashed boundary since the boundary itself (exactly 4 cm) is excluded."
+        }
+      ]
+    }
+  ]
+}

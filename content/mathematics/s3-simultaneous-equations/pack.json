@@ -1,0 +1,40 @@
+{
+  "packId": "mat.s3.algebra.simultaneous-equations",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.algebra.simultaneous-equations",
+      "title": "Simultaneous Equations",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Simultaneous equations",
+      "order": 10,
+      "outcomes": [
+        "Solves simultaneous equations using substitution. (u, s)",
+        "Solves simultaneous equations using elimination. (u, s)",
+        "Draws graphs of simultaneous equations and estimates the solution. (u, s)",
+        "Uses matrices to solve simultaneous equations. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Simultaneous equations are two or more equations that share the same solution values. Elimination solves them by adding or subtracting the equations to remove one variable. Solve 7x + 3y = 32 and 3x + 12y = 78: multiply the first by 4 to get 28x + 12y = 128, then subtract the second: 25x = 50, so x = 2. Substituting back: 7(2)+3y=32, so 3y=18, y=6."
+        },
+        {
+          "type": "equation",
+          "expr": "7x+3y=32, 3x+12y=78:  (x4) 28x+12y=128, subtract -> 25x=50 -> x=2, y=6"
+        },
+        {
+          "type": "text",
+          "text": "Substitution solves one equation for one variable, then substitutes that expression into the other equation. Solve x+y=-2 and 4x+2y=0: from the first, y=-2-x; substitute into the second: 4x+2(-2-x)=0, so 4x-4-2x=0, 2x=4, x=2, and y=-2-2=-4."
+        },
+        {
+          "type": "text",
+          "text": "Graphically, each equation is a straight line, and the solution is the point where the two lines cross. Using matrices, the system ax+by=e, cx+dy=f can be written [[a,b],[c,d]] x [[x],[y]] = [[e],[f]], and solved by multiplying both sides by the inverse of the coefficient matrix. If the two lines are parallel (no crossing point), the equations have no solution, and the coefficient matrix's determinant is zero."
+        }
+      ]
+    }
+  ]
+}

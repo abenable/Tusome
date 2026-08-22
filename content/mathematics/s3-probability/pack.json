@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s3.data.probability",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s3.data.probability",
+      "title": "Probability",
+      "subject": "mathematics",
+      "level": "S3",
+      "strand": "Data and Probability",
+      "subStrand": "Probability",
+      "order": 11,
+      "outcomes": [
+        "Understand the terms random, experiment, outcome, sample space, event and probability. (k, u)",
+        "Construct the probability space. (u, s)",
+        "Determine probabilities from experiments and real-life data. (u, s)",
+        "Differentiate between theoretical and experimental probabilities. (k, u, s)",
+        "Identify and understand mutually exclusive and independent events. (k, u)",
+        "Use probability trees to determine the probabilities of mutually exclusive and independent events. (u, s)",
+        "Use Venn diagrams to determine probabilities. (u, s, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain). The sample space is the set of all possible outcomes of an experiment. Theoretical probability is calculated from the sample space (P(event) = favourable outcomes ÷ total outcomes); experimental probability comes from actually repeating a trial and recording results."
+        },
+        {
+          "type": "equation",
+          "latex": "P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}"
+        },
+        {
+          "type": "text",
+          "text": "Two coins are tossed. The sample space is {HH, HT, TH, TT} — 4 equally likely outcomes. The theoretical probability of getting exactly one head is 2/4 = 0.5 (HT and TH). Events are mutually exclusive if they cannot both happen at once (e.g. getting HH and getting TT on the same toss); they are independent if one happening doesn't affect the chance of the other (e.g. the two coin tosses)."
+        },
+        {
+          "type": "text",
+          "text": "A probability tree for two independent coin tosses shows each branch's probability (0.5) multiplied along the path to get the outcome's probability: P(HH) = 0.5 x 0.5 = 0.25. For mutually exclusive events, probabilities add: P(HH or TT) = 0.25 + 0.25 = 0.5. A Venn diagram works the same way as in Set Theory (Senior 2, Topic 13), with regions labelled by their probability instead of a count."
+        }
+      ]
+    }
+  ]
+}

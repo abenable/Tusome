@@ -1,0 +1,39 @@
+{
+  "packId": "mat.s4.geometry.lines-and-planes-in-three-dimensions",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s4.geometry.lines-and-planes-in-three-dimensions",
+      "title": "Lines and Planes in Three Dimensions",
+      "subject": "mathematics",
+      "level": "S4",
+      "strand": "Geometry and Measures",
+      "subStrand": "3D geometry",
+      "order": 5,
+      "outcomes": [
+        "Applies Pythagoras theorem in 3D to calculate the distance between two points. (u, s)",
+        "Finds the angle between a line and a plane. (u, s)",
+        "Finds the angle between two planes. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Pythagoras' theorem (Senior 2) extends into three dimensions by applying it twice: once across the base, then again up to the top corner. A cuboid measures 3 m by 4 m by 12 m. The diagonal across the base is √(3^2+4^2) = √25 = 5 m; the space diagonal (corner to opposite corner) is √(5^2+12^2) = √169 = 13 m."
+        },
+        {
+          "type": "equation",
+          "expr": "base diagonal = √(3^2+4^2) = 5 m;   space diagonal = √(5^2+12^2) = 13 m"
+        },
+        {
+          "type": "text",
+          "text": "A square-based pyramid has a square base of side 8 m and perpendicular height 3 m. To find the angle between a sloping edge and the base, first find the distance from the centre of the base to a corner: half the base diagonal = √(8^2+8^2)/2 = √128/2 ≈ 5.66 m. The angle θ between the edge and the base satisfies tan(θ) = height ÷ 5.66 = 3 ÷ 5.66, so θ ≈ 27.9°."
+        },
+        {
+          "type": "text",
+          "text": "The angle between two planes (e.g. two sloping faces of a roof) is found by identifying the line where they would meet if extended, drawing a line in each plane perpendicular to that meeting line, and measuring the angle between those two perpendicular lines — this reduces a 3D angle problem to an ordinary right-angled-triangle calculation."
+        }
+      ]
+    }
+  ]
+}

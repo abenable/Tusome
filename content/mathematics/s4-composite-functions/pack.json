@@ -1,0 +1,43 @@
+{
+  "packId": "mat.s4.algebra.composite-functions",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s4.algebra.composite-functions",
+      "title": "Composite Functions",
+      "subject": "mathematics",
+      "level": "S4",
+      "strand": "Patterns and Algebra",
+      "subStrand": "Functions",
+      "order": 1,
+      "outcomes": [
+        "Understand and use function notation. (k, u, s)",
+        "Describe and understand a composite function. (k, u, s)",
+        "Work out the inverse of a function and recognise the graphical relationship between a function and its inverse. (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Function notation f(x) means \"the rule f applied to x\". If f(x) = 6x, then f(3) = 6(3) = 18. A composite function g(f(x)), written gf(x), means apply f first, then apply g to the result."
+        },
+        {
+          "type": "text",
+          "text": "Given f(x) = 6x and g(x) = x+5: gf(3) means apply f then g. f(3)=18, then g(18)=18+5=23. Note the order matters — fg(3) means apply g first: g(3)=3+5=8, then f(8)=6(8)=48. gf(3) ≠ fg(3), so composite functions are not generally interchangeable in order."
+        },
+        {
+          "type": "equation",
+          "expr": "f(x)=6x, g(x)=x+5:  gf(3)=g(18)=23;   fg(3)=f(8)=48"
+        },
+        {
+          "type": "text",
+          "text": "The inverse of a function f, written f⁻¹, undoes what f does: if f(3)=18, then f⁻¹(18)=3. For f(x)=6x, work out the inverse by writing y=6x, swapping x and y to get x=6y, then solving for y: y=x/6, so f⁻¹(x) = x/6. Checking: f⁻¹(f(3)) = f⁻¹(18) = 18/6 = 3, correct."
+        },
+        {
+          "type": "text",
+          "text": "Graphically, a function and its inverse are mirror images of each other in the line y=x — reflecting the graph of f(x) in that line gives the graph of f⁻¹(x)."
+        }
+      ]
+    }
+  ]
+}

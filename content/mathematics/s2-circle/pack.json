@@ -1,0 +1,42 @@
+{
+  "packId": "mat.s2.geometry.circle",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "mat.s2.geometry.circle",
+      "title": "Circle",
+      "subject": "mathematics",
+      "level": "S2",
+      "strand": "Geometry and Measures",
+      "subStrand": "Circle",
+      "order": 8,
+      "outcomes": [
+        "Identify various parts of the circle. (k)",
+        "State and use the formulas for circumferences and area enclosed by a circle. (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The main parts of a circle: the centre (the fixed middle point), the radius (distance from centre to the edge), the diameter (distance across through the centre, twice the radius), and the circumference (the distance all the way around the edge)."
+        },
+        {
+          "type": "text",
+          "text": "For every circle, the circumference divided by the diameter gives the same constant, called pi (π ≈ 3.14159). This gives the circumference formula C = πd, or equivalently C = 2πr since d = 2r. The area enclosed by a circle is A = πr^2."
+        },
+        {
+          "type": "equation",
+          "latex": "C = \\pi d = 2\\pi r, \\qquad A = \\pi r^2"
+        },
+        {
+          "type": "text",
+          "text": "A circular plate has a diameter of 28 cm, so its radius is 14 cm. Its circumference is C = π x 28 ≈ 87.96 cm, and the area it encloses is A = π x 14^2 = π x 196 ≈ 615.75 cm^2."
+        },
+        {
+          "type": "equation",
+          "expr": "d=28cm, r=14cm:  C = π(28) ≈ 87.96 cm,   A = π(14)^2 ≈ 615.75 cm^2"
+        }
+      ]
+    }
+  ]
+}
