@@ -5,6 +5,7 @@ import "katex/dist/katex.min.css"
 import { SUBJECT_LABELS, isSubject, type Subject } from "@/lib/subjects"
 import { type BlockT, type TopicT } from "@/content/schema"
 import { SimCanvas } from "@/components/SimCanvas"
+import { PhETSim } from "@/components/PhETSim"
 
 // Cross-builder seam (content-author). See sibling $subject/index.tsx for the
 // rationale: importing defensively, try/catch at the call site.
@@ -134,18 +135,24 @@ function TopicView() {
         })}
       </section>
 
-      {/* Simulation host. <SimCanvas> reads the registry by simId and owns
-          the rAF loop; content packs name only a simId + params, never a
-          component (03-architecture.md §Simulation contract). */}
+      {/* Simulation host. Two kinds: a custom TS sim module (registry, rendered
+          by <SimCanvas> with its own rAF loop) or a bundled PhET HTML5 sim
+          (rendered by <PhETSim> in an iframe via the Tauri asset protocol).
+          The pack's sim ref is a union distinguished by shape: `simId` → custom,
+          `phet` → PhET file (03-architecture.md §Simulation contract). */}
       {topic.sim ? (
         <section className="flex flex-col gap-3">
           <h2 className="font-heading text-[21px] font-semibold tracking-tight text-[#1d1d1f]">
             Simulation
           </h2>
-          <SimCanvas
-            simId={topic.sim.simId}
-            params={(topic.sim.params as Record<string, number>) ?? {}}
-          />
+          {"simId" in topic.sim ? (
+            <SimCanvas
+              simId={topic.sim.simId}
+              params={(topic.sim.params as Record<string, number>) ?? {}}
+            />
+          ) : (
+            <PhETSim file={topic.sim.phet} />
+          )}
           {topic.sim.caption ? (
             <p className="font-sans text-[14px] text-[#666666]">
               {topic.sim.caption}

@@ -1,14 +1,41 @@
 import path from 'node:path'
+import fs from 'node:fs'
 import { defineConfig } from 'vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+
+// Dev-only: serve the bundled PhET sim HTML files at a same-origin URL so the
+// <iframe> in <PhETSim> can load them under `bun run dev` / `bun tauri dev`,
+// without needing the Tauri asset protocol (whose scope is awkward for the
+// repo-root content tree). In a built app the asset protocol serves them.
+const PHET_DIR = path.resolve(import.meta.dirname, './content/sims')
+const servePhetSims = () => ({
+  name: 'cbclab-phet-sims',
+  configureServer(server: any) {
+    server.middlewares.use((req: any, res: any, next: any) => {
+      const url = (req.url ?? '') as string
+      const m = url.match(/^\/__sim\/([^?]+)$/)
+      if (!m) return next()
+      const file = path.basename(decodeURIComponent(m[1]))
+      const abs = path.join(PHET_DIR, file)
+      if (!abs.startsWith(PHET_DIR) || !fs.existsSync(abs)) {
+        res.statusCode = 404
+        res.end('not found')
+        return
+      }
+      res.setHeader('Content-Type', 'text/html; charset=utf-8')
+      fs.createReadStream(abs).pipe(res)
+    })
+  },
+})
 
 export default defineConfig({
   plugins: [
     tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     react(),
     tailwindcss(),
+    servePhetSims(),
   ],
   resolve: { alias: { '@': path.resolve(import.meta.dirname, './src') } },
   // BUILD_ID is stamped at build time. `import.meta.env.BUILD_ID` is replaced

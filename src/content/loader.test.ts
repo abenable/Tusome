@@ -30,9 +30,13 @@ describe("schema: Pack", () => {
 
     // Sim reference: projectile, no mass param.
     expect(topic.sim).toBeDefined();
-    expect(topic.sim!.simId).toBe("projectile");
-    expect(topic.sim!.params).not.toHaveProperty("mass");
-    expect(topic.sim!.params).toHaveProperty("gravity");
+    const sim = topic.sim!;
+    expect("simId" in sim).toBe(true);
+    if ("simId" in sim) {
+      expect(sim.simId).toBe("projectile");
+      expect(sim.params).not.toHaveProperty("mass");
+      expect(sim.params).toHaveProperty("gravity");
+    }
   });
 
   it("loadPackForTopic returns the projectile topic", async () => {

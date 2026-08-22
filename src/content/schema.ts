@@ -98,14 +98,24 @@ export const Question = z
 // Simulation reference
 // ---------------------------------------------------------------------------
 
-export const SimRef = z.object({
-  // Must exist in the sim registry (src/sims/index.ts). The loader does not
-  // enforce this — a pack naming an unknown simId is ignored at render time,
-  // never a hard failure.
-  simId: z.string(),
-  params: z.record(z.string(), z.unknown()).default({}),
-  caption: z.string().optional(),
-});
+export const SimRef = z.union([
+  // Custom TS sim module from the registry (src/sims/index.ts). The existing
+  // projectile pack uses this shape. The loader distinguishes by the presence
+  // of `simId` (custom) vs `phet` (PhET).
+  z.object({
+    simId: z.string(),
+    params: z.record(z.string(), z.unknown()).default({}),
+    caption: z.string().optional(),
+  }),
+  // PhET HTML5 sim — a single self-contained HTML file in content/sims/, loaded
+  // in an iframe via the Tauri asset protocol. `phet` is the filename (e.g.
+  // "circuit-construction-kit-dc_en.html"). See content/sims/phet-manifest.json
+  // for the curated list; scripts/fetch-phet-sims.sh downloads + sha256-verifies.
+  z.object({
+    phet: z.string(),
+    caption: z.string().optional(),
+  }),
+]);
 
 // ---------------------------------------------------------------------------
 // Body blocks — a discriminated union on `type`
