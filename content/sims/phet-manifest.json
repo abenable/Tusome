@@ -1,0 +1,14 @@
+{
+  "source": "https://phet.colorado.edu/sims/html/{id}/latest/{id}_en.html",
+  "license": "CC BY 4.0 (PhET). Partnership license pending — see docs/plan/07 Phase 3. Prototype use only; do not redistribute without a signed license.",
+  "sims": [
+    { "id": "circuit-construction-kit-dc", "subject": "physics",    "file": "circuit-construction-kit-dc_en.html", "sha256": "435750c64760f1c9c4d1cef7691e84b05c80d6c6d6a97a8aa6e50b20d185fe90" },
+    { "id": "pendulum-lab",               "subject": "physics",    "file": "pendulum-lab_en.html",               "sha256": "1cd8125af856cd58821656fccff79cea32ccdcb5437f45ce05082aedb8c423a8" },
+    { "id": "acid-base-solutions",         "subject": "chemistry", "file": "acid-base-solutions_en.html",        "sha256": "2fe0d0c3d8619cf56b302e02a980f95a9db12b6434b4afa0be48a5662f53f60d" },
+    { "id": "build-a-molecule",            "subject": "chemistry", "file": "build-a-molecule_en.html",           "sha256": "faeaa9f0fc61efec57f235ad2a2912d7e3a803556c3538c0b6d1699458fed394" },
+    { "id": "natural-selection",           "subject": "biology",   "file": "natural-selection_en.html",          "sha256": "4d4bd09678747752be0adc1d0981537d5daea4b3608fa3c4034fbd748d30bd98" },
+    { "id": "diffusion",                   "subject": "biology",   "file": "diffusion_en.html",                 "sha256": "5b13d3c0b158200f567cd02606051f45b691239a4a3a44987245d8404daa13ab" },
+    { "id": "graphing-lines",              "subject": "mathematics","file": "graphing-lines_en.html",            "sha256": "8e9dfb36d9da0c15c2977f4cdeac96d96e103537d35dd72a0fab7316fd848aa0" },
+    { "id": "graphing-quadratics",         "subject": "mathematics","file": "graphing-quadratics_en.html",       "sha256": "d114646403882226ca58215520c7a88b64617e97cc3dede909c3cc2da06aa6bd" }
+  ]
+}

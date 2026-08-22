@@ -38,3 +38,6 @@ docs/
 DESIGN.md
 cbc-science-app-build-plan.md
 .tanstack/tmp/
+
+# PhET sim artifacts — vendored, downloaded by scripts/fetch-phet-sims.sh
+content/sims/*.html

@@ -87,6 +87,7 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             read_content_packs,
             get_content_manifest_version,
+            resolve_content_path,
             updates::scan_and_apply_usb_updates,
             updates::apply_online_content_bundle,
             updates::check_and_stage_app_update,
@@ -228,6 +229,46 @@ fn get_content_manifest_version(app: tauri::AppHandle) -> String {
         Some(serde_json::Value::Number(n)) => n.to_string(),
         _ => "unknown".to_string(),
     }
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// resolve_content_path — resolve a path RELATIVE to the content dir to an
+// absolute filesystem path, so the frontend can `convertFileSrc()` it (the
+// PhET iframe needs a real URL, not a Tauri invoke).
+//
+// Same fallback order as `read_content_packs`: writable app-data content dir
+// (the one USB updates write to and the first-run seed populates) → bundled
+// resources → dev repo-root. Returns the first that exists, or null so the
+// frontend can show a "sim not available" state instead of crashing.
+// ──────────────────────────────────────────────────────────────────────────
+#[tauri::command]
+fn resolve_content_path(app: tauri::AppHandle, rel: String) -> Option<String> {
+    let paths = app.path();
+    let rel_path = std::path::Path::new(&rel);
+
+    // 1. Writable content dir (post-seed / post-USB-update).
+    if let Ok(data_dir) = paths.app_data_dir() {
+        let p = data_dir.join("cbclab").join("content").join(rel_path);
+        if p.exists() {
+            return Some(p.display().to_string());
+        }
+    }
+    // 2. Bundled resources fallback.
+    if let Ok(res_dir) = paths.resource_dir() {
+        let p = res_dir.join("content").join(rel_path);
+        if p.exists() {
+            return Some(p.display().to_string());
+        }
+    }
+    // 3. Dev-only repo-root fallback (CWD is the project root under `bun tauri dev`).
+    #[cfg(debug_assertions)]
+    if let Ok(cwd) = std::env::current_dir() {
+        let p = cwd.join("content").join(rel_path);
+        if p.exists() {
+            return Some(p.display().to_string());
+        }
+    }
+    None
 }
 
 // ──────────────────────────────────────────────────────────────────────────
