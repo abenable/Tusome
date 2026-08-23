@@ -1,6 +1,6 @@
 [package]
 name = "cbclab"
-version = "0.1.0"
+version = "1.0.0"
 description = "CBCLab — offline science learning for Uganda lower-secondary CBC"
 authors = ["you"]
 edition = "2021"
