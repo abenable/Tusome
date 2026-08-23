@@ -68,9 +68,7 @@ for (const sim of manifest.sims) {
     const bytes = new Uint8Array(await res.arrayBuffer())
     const got = sha256(bytes)
     if (got !== sim.sha256) {
-      throw new Error(
-        `sha256 mismatch (got ${got.slice(0, 12)}…, expected ${sim.sha256.slice(0, 12)}…)`,
-      )
+      throw new Error(`sha256 mismatch (got ${got}, expected ${sim.sha256})`)
     }
     await mkdir(dirname(out), { recursive: true })
     await writeFile(out, bytes)
