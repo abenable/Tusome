@@ -39,3 +39,4 @@ DESIGN.md
 
 # PhET sim artifacts — vendored, downloaded by scripts/fetch-phet-sims.sh
 content/sims/*.html
+public/Biology_Syllabus_compressed.pdf
