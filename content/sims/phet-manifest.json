@@ -19,7 +19,7 @@
     { "id": "energy-forms-and-changes", "subject": "physics", "file": "energy-forms-and-changes_en.html", "sha256": "90d44963e9835b6fe7558fb59d69c66bb8844716e9c54631ec366131231f58e7" },
     { "id": "energy-skate-park-basics", "subject": "physics", "file": "energy-skate-park-basics_en.html", "sha256": "e7fa625c5202682356aaf959c9e40e0892596325b69d7ae44c0704dee70378b3" },
     { "id": "balancing-act", "subject": "physics", "file": "balancing-act_en.html", "sha256": "5e2bba6363b61bac1449415dbfe2a5f16a9973c03252736017b71aeac03d75ef" },
-    { "id": "under-pressure", "subject": "physics", "file": "under-pressure_en.html", "sha256": "1835d989474f6648737cdd2cae74297cab3a08065c36f0fcf0554d9ef0a6718e" },
+    { "id": "under-pressure", "subject": "physics", "file": "under-pressure_en.html", "sha256": ["7151d564f924c8028139e07f1718a697eda134785bc77da54d08a8c67705d46d", "1835d989474f6648737cdd2cae74297cab3a08065c36f0fcf0554d9ef0a6718e"] },
     { "id": "buoyancy-basics", "subject": "physics", "file": "buoyancy-basics_en.html", "sha256": "3b83585d6535df2648789c3b18b395186f9235f90f2291ac9f5ad4974131cb11" },
     { "id": "hookes-law", "subject": "physics", "file": "hookes-law_en.html", "sha256": "1441d9fab9d10cf3b0ac89663059ff143e2ee8942373b0ad1d423c2114784060" },
     { "id": "masses-and-springs-basics", "subject": "physics", "file": "masses-and-springs-basics_en.html", "sha256": "52bb2601701fdfe516bf068748b0655ac7e9bbf44da83d462f89b8a666f72041" },
@@ -44,6 +44,6 @@
     { "id": "generator", "subject": "physics", "file": "generator_en.html", "sha256": "bb0527b3ce2c933a0f2dbe379e2b20cca92537eefd32626e580a338cafc300d0" },
     { "id": "circuit-construction-kit-ac", "subject": "physics", "file": "circuit-construction-kit-ac_en.html", "sha256": "bee5639ebc35e33b5b704d97d5962b3bc7fe2fb5cba777fe5793e3dee056ecb9" },
     { "id": "build-an-atom", "subject": "physics", "file": "build-an-atom_en.html", "sha256": "8a5131e0c08e54c58c17720c685e602ef6d55adb4a732abebfee0eb246b76b09" },
-    { "id": "rutherford-scattering", "subject": "physics", "file": "rutherford-scattering_en.html", "sha256": "4992bde05aeb72ca908cc40fbd398f061f035e170d33bcfbe30d350f50df31d6" }
+    { "id": "rutherford-scattering", "subject": "physics", "file": "rutherford-scattering_en.html", "sha256": ["e5181722ee84ddbede70fa1e4e0462e5390e3d8a7c2c99312243495eb560b35d", "4992bde05aeb72ca908cc40fbd398f061f035e170d33bcfbe30d350f50df31d6"] }
   ]
 }

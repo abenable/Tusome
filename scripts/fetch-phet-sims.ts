@@ -22,7 +22,11 @@ import { fileURLToPath } from "node:url"
 type SimEntry = {
   id: string
   file: string
-  sha256: string
+  // Usually one hash. Some PhET "latest" URLs are served inconsistently
+  // across CDN edges/requests (observed for under-pressure) — an array
+  // pins every byte stream actually seen from real fetches, so the build
+  // doesn't flap between green and red depending on which edge answers.
+  sha256: string | string[]
 }
 type Manifest = { source: string; sims: SimEntry[] }
 
@@ -50,11 +54,12 @@ let bad = 0
 for (const sim of manifest.sims) {
   const url = manifest.source.replace(/\{id\}/g, sim.id)
   const out = join(simsDir, sim.file)
+  const expected = Array.isArray(sim.sha256) ? sim.sha256 : [sim.sha256]
 
   // Skip if already present and matches.
   if (await exists(out)) {
     const got = sha256(await readFile(out))
-    if (got === sim.sha256) {
+    if (expected.includes(got)) {
       console.log(`  ${sim.id.padEnd(32)} present (sha256 ok)`)
       ok++
       continue
@@ -67,8 +72,10 @@ for (const sim of manifest.sims) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const bytes = new Uint8Array(await res.arrayBuffer())
     const got = sha256(bytes)
-    if (got !== sim.sha256) {
-      throw new Error(`sha256 mismatch (got ${got}, expected ${sim.sha256})`)
+    if (!expected.includes(got)) {
+      throw new Error(
+        `sha256 mismatch (got ${got}, expected one of [${expected.join(", ")}])`,
+      )
     }
     await mkdir(dirname(out), { recursive: true })
     await writeFile(out, bytes)
