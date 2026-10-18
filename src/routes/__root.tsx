@@ -1,26 +1,16 @@
 import { useState } from "react"
 import { createRootRouteWithContext, Link, Outlet, useRouterState } from "@tanstack/react-router"
 import type { QueryClient } from "@tanstack/react-query"
-import {
-  Atom,
-  ChevronLeft,
-  ChevronRight,
-  Dna,
-  FlaskConical,
-  GraduationCap,
-  Home,
-  LayoutDashboard,
-  Sigma,
-  type LucideIcon,
-} from "lucide-react"
+import { ChevronLeft, ChevronRight, Home, LayoutDashboard } from "lucide-react"
 
 import { StudentProvider, useStudent } from "@/lib/student-context"
 import { ProfilePicker } from "@/components/ProfilePicker"
+import { BrandMark } from "@/components/BrandMark"
 import {
   SUBJECTS,
   SUBJECT_ACCENTS,
+  SUBJECT_ICONS,
   SUBJECT_LABELS,
-  type Subject,
 } from "@/lib/subjects"
 
 // The router context — the single thing every route loader receives. It
@@ -37,29 +27,18 @@ export const Route = createRootRouteWithContext<RouterContext>()({
   notFoundComponent: NotFound,
 })
 
-// Subject icons. The design pulls these from unpkg.com/lucide-static as <img>
-// tags, which can never load here — the app ships offline and the CSP is
-// `default-src 'self'`. lucide-react is already a dependency and ships the
-// identical glyphs as components, so this costs nothing and works offline.
-const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
-  physics: Atom,
-  chemistry: FlaskConical,
-  biology: Dna,
-  mathematics: Sigma,
-}
-
 function NotFound() {
   return (
-    <div className="flex flex-col gap-3">
-      <h1 className="font-heading text-[38px] font-extrabold leading-tight tracking-tight text-ink">
-        Not found
+    <div className="flex max-w-[560px] flex-col items-start gap-4 pt-8">
+      <h1 className="font-heading text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-ink">
+        We couldn’t find that page
       </h1>
-      <p className="font-sans text-[19px] leading-relaxed text-ink-3">
-        That page doesn’t exist.
+      <p className="font-sans text-[19px] leading-relaxed text-ink-2">
+        It may have moved, or the topic isn’t installed on this computer.
       </p>
       <Link
         to="/"
-        className="inline-flex min-h-[44px] w-fit items-center rounded-full bg-brand px-6 text-[19px] font-bold text-white hover:bg-brand-hover"
+        className="mt-2 inline-flex min-h-[48px] items-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98]"
       >
         Back to home
       </Link>
@@ -95,8 +74,10 @@ function Sidebar({
   indicator: string
   onSwitchUser: () => void
 }) {
+  // The active row gets a sun bar on its leading edge as well as the lighter
+  // fill, so "where am I" survives a washed-out projector.
   const rowBase =
-    "flex min-h-[44px] items-center gap-3 rounded-xl px-[10px] font-sans text-[17px] font-semibold text-side-text transition-colors hover:bg-white/5 hover:text-white"
+    "relative flex min-h-[44px] items-center gap-3 rounded-xl px-[10px] font-sans text-[17px] font-semibold text-side-text transition-colors hover:bg-white/5 hover:text-white before:absolute before:left-0 before:top-1/2 before:h-5 before:w-[3px] before:-translate-y-1/2 before:rounded-full before:bg-sun before:opacity-0 data-[status=active]:before:opacity-100"
   const align = collapsed ? "justify-center" : "justify-start"
   const activeRow = {
     className: "bg-white/10 text-white",
@@ -111,20 +92,13 @@ function Sidebar({
         }`}
         style={{ minHeight: "100vh" }}
       >
-        {/* Wordmark */}
         <Link
           to="/"
-          className="mb-7 flex items-center gap-[10px] px-[6px]"
+          className={`mb-7 flex rounded-xl px-[6px] ${align}`}
           title={collapsed ? "Tusome" : undefined}
+          aria-label="Tusome home"
         >
-          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
-            <GraduationCap size={18} aria-hidden />
-          </span>
-          {!collapsed && (
-            <span className="whitespace-nowrap font-heading text-[20px] font-extrabold tracking-tight text-white">
-              Tusome
-            </span>
-          )}
+          <BrandMark wordmark={!collapsed} tone="light" />
         </Link>
 
         <nav aria-label="Main" className="mb-7 flex flex-col gap-[2px]">
@@ -136,7 +110,7 @@ function Sidebar({
             activeOptions={{ exact: true }}
           >
             <span className="flex size-[26px] shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <Home size={14} className="text-white" aria-hidden />
+              <Home size={15} className="text-white" aria-hidden />
             </span>
             {!collapsed && <span className="whitespace-nowrap">Home</span>}
           </Link>
@@ -147,14 +121,14 @@ function Sidebar({
             activeProps={activeRow}
           >
             <span className="flex size-[26px] shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <LayoutDashboard size={14} className="text-white" aria-hidden />
+              <LayoutDashboard size={15} className="text-white" aria-hidden />
             </span>
             {!collapsed && <span className="whitespace-nowrap">Dashboard</span>}
           </Link>
         </nav>
 
         {!collapsed && (
-          <div className="mb-2 px-3 font-sans text-[13px] font-bold uppercase tracking-[.09em] text-white/35">
+          <div className="mb-2 px-3 font-sans text-[13px] font-bold uppercase tracking-[.09em] text-white/45">
             Subjects
           </div>
         )}
@@ -193,10 +167,10 @@ function Sidebar({
           type="button"
           onClick={onSwitchUser}
           aria-label={`Signed in as ${indicator}. Switch profile.`}
-          title={collapsed ? `${indicator} — switch profile` : "Switch profile"}
-          className={`flex items-center gap-[10px] rounded-2xl bg-white/[.06] p-2 text-left transition-colors hover:bg-white/10 ${align}`}
+          title={collapsed ? `Switch profile (signed in as ${indicator})` : "Switch profile"}
+          className={`flex items-center gap-[10px] rounded-tile bg-white/[.06] p-2 text-left transition-colors hover:bg-white/10 ${align}`}
         >
-          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand font-heading text-[15px] font-bold text-white">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-sun font-heading text-[15px] font-bold text-ink">
             {indicator.slice(0, 1).toUpperCase()}
           </span>
           {!collapsed && (
@@ -204,7 +178,7 @@ function Sidebar({
               <span className="truncate font-sans text-[15px] font-bold text-white">
                 {indicator}
               </span>
-              <span className="whitespace-nowrap font-sans text-[13px] text-white/50">
+              <span className="whitespace-nowrap font-sans text-[13px] text-white/60">
                 Switch profile
               </span>
             </span>
@@ -221,7 +195,7 @@ function Sidebar({
         aria-expanded={!collapsed}
         aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-        className="absolute top-6 right-0 z-20 flex size-[44px] translate-x-1/2 items-center justify-center rounded-full border border-white/12 bg-side text-white/70 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-hover"
+        className="absolute top-6 right-0 z-20 flex size-[44px] translate-x-1/2 items-center justify-center rounded-full border border-white/12 bg-side text-white/70 transition-colors hover:bg-side hover:text-sun"
       >
         {collapsed ? (
           <ChevronRight size={18} aria-hidden />
@@ -240,19 +214,23 @@ function RootShell() {
   // to set the PIN). Called unconditionally — hooks can't sit behind the status
   // branches below.
   const pathname = useRouterState({ select: (s) => s.location.pathname })
-  // ponytail: collapse is per-session. Persisting it costs a getSetting
-  // round-trip before first paint; if a teacher on a 1024x768 machine asks for
-  // it to be remembered, store `sidebar_collapsed` with the existing
-  // getSetting/setSetting helpers.
-  const [collapsed, setCollapsed] = useState(false)
+  // ponytail: collapse is per-session, starting collapsed on narrow windows
+  // (1024x768 school machines) so content isn't squeezed. Persisting it costs a
+  // getSetting round-trip before first paint; if a teacher asks for it to be
+  // remembered, store `sidebar_collapsed` with the existing helpers.
+  const [collapsed, setCollapsed] = useState(() => window.innerWidth < 1100)
 
-  // Loading: a calm, minimal state (no spinner chrome — a quiet muted line).
+  // Loading: the mark and a quiet line, no spinner chrome.
   if (status === "loading") {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-canvas">
-        <p className="font-sans text-[19px] leading-relaxed text-ink-3">
-          Loading…
-        </p>
+      <div
+        className="flex min-h-screen flex-col items-center justify-center gap-4 bg-canvas"
+        role="status"
+      >
+        <span className="animate-pulse">
+          <BrandMark size={56} wordmark={false} />
+        </span>
+        <p className="font-sans text-[17px] text-ink-3">Loading…</p>
       </div>
     )
   }
@@ -270,18 +248,9 @@ function RootShell() {
     return (
       <div className="min-h-screen bg-canvas font-sans text-ink">
         {onSettings ? null : (
-          <header className="flex items-center gap-[10px] px-6 py-4">
-            <Link
-              to="/"
-              className="flex items-center gap-[10px]"
-              title="Tusome"
-            >
-              <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand font-heading text-[16px] font-extrabold text-white">
-                CB
-              </span>
-              <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
-                Tusome
-              </span>
+          <header className="flex items-center px-6 py-5">
+            <Link to="/" className="rounded-xl" aria-label="Tusome home">
+              <BrandMark />
             </Link>
           </header>
         )}

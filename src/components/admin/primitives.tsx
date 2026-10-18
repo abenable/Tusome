@@ -1,6 +1,6 @@
 // Shared admin display primitives — SectionCard, MetricCard, ProgressBar,
-// ProgressRing, Percent. Styled to DESIGN.md (white cards on canvas, 18px
-// radius, hairline border, single brand accent, Manrope, no shadows on chrome).
+// ProgressRing, Percent. Surface cards on canvas, `rounded-card`, hairline
+// border, ink as the single action colour.
 
 import { type LucideIcon } from "lucide-react";
 import { type JSX, type ReactNode } from "react";
@@ -24,11 +24,11 @@ export function SectionCard({
 }): JSX.Element {
   return (
     <section
-      className="flex flex-col gap-5 rounded-[18px] border border-line bg-surface p-6 lg:p-7"
+      className="flex flex-col gap-5 rounded-card border border-line bg-surface p-6 lg:p-7"
       aria-label={ariaLabel}
     >
       <header className="flex flex-wrap items-center gap-3">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-[10px] bg-canvas text-ink-2">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-tile bg-sun-tint text-sun-ink">
           <Icon size={18} aria-hidden />
         </span>
         <h2 className="font-heading text-[22px] font-bold tracking-[-0.01em] text-ink">
@@ -57,11 +57,11 @@ export function MetricCard({
   sub?: ReactNode;
 }): JSX.Element {
   return (
-    <div className="flex flex-col gap-1.5 rounded-[16px] border border-line bg-surface p-5">
-      <span className="font-sans text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">
+    <div className="flex flex-col gap-1.5 rounded-card border border-line bg-surface p-5">
+      <span className="font-sans text-[16px] font-bold text-ink-3">
         {label}
       </span>
-      <span className="font-heading text-[31px] font-extrabold leading-none tracking-tight text-ink">
+      <span className="font-heading text-[34px] font-extrabold leading-none tracking-tight tabular-nums text-ink">
         {value}
       </span>
       {sub ? <span className="font-sans text-[15px] text-ink-3">{sub}</span> : null}

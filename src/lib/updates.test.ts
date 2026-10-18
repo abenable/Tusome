@@ -105,22 +105,32 @@ describe("checkOnlineContentUpdate", () => {
     expect(invokeMock).not.toHaveBeenCalled();
   });
 
-  it("on a successful apply, invalidates PACKS_QUERY_KEY and returns the apply events", async () => {
+  it("on a successful apply, invalidates PACKS_QUERY_KEY and adds an apply event", async () => {
     const fakeBytes = new Uint8Array([1, 2, 3]);
     fetchMock.mockImplementation(async () =>
       new Response(fakeBytes, { status: 200 }),
     );
+    // The real Rust shape: per-step events, no overall success event.
+    const rustEvents = [
+      {
+        channel: "content-online" as const,
+        kind: "sig-verify" as const,
+        outcome: "ok" as const,
+        detail: "manifest signature valid",
+      },
+    ];
     const applyEvents = [
+      ...rustEvents,
       {
         channel: "content-online" as const,
         kind: "apply" as const,
         outcome: "ok" as const,
-        detail: "applied 2 packs",
+        detail: "applied 1 pack(s): phy-s2-motion",
       },
     ];
     invokeMock.mockImplementation(async (cmd: string, _args?: Record<string, unknown>) => {
       if (cmd === "apply_online_content_bundle") {
-        return { applied: ["phy-s2-motion"], skipped: [], events: applyEvents };
+        return { applied: ["phy-s2-motion"], skipped: [], events: rustEvents };
       }
       throw new Error(`unexpected invoke: ${cmd}`);
     });

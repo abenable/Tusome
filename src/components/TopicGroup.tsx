@@ -10,7 +10,7 @@
 // list can keep a clean h1 (subject) → h2 (strand) outline.
 
 import { Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
+import { Check, ChevronRight } from "lucide-react";
 
 import type { TopicT } from "@/content/schema";
 import { SUBJECT_ACCENTS, type Subject } from "@/lib/subjects";
@@ -48,7 +48,7 @@ export function TopicGroup({
 
   return (
     <section className="flex flex-col gap-[14px]" aria-label={heading}>
-      <Heading className="font-sans text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">
+      <Heading className="font-heading text-[21px] font-bold tracking-[-0.01em] text-ink">
         {heading}
       </Heading>
       <ul className="flex flex-col gap-3">
@@ -81,23 +81,31 @@ export function TopicGroup({
                     {i + 1}
                   </span>
                 )}
+                {/* The segment below a finished topic takes the subject
+                    colour, so the path visibly fills in as you go. */}
                 {!isLast && (
-                  <div className={`-mb-3 mt-1 w-0.5 flex-1 ${accent.bg}`} />
+                  <div
+                    className={`-mb-3 mt-1 w-0.5 flex-1 ${
+                      status === "completed" ? accent.bg : "bg-line"
+                    }`}
+                  />
                 )}
               </div>
 
-              <div className="flex min-w-0 flex-1 items-center gap-4 rounded-[18px] border border-line bg-surface px-[22px] py-[18px] shadow-[0_1px_2px_rgba(0,0,0,.03)]">
+              {/* The whole card is the link: a bigger target than the title
+                  alone, which matters on a shared trackpad. */}
+              <Link
+                to="/$subject/$topicId"
+                params={{ subject, topicId: topic.id }}
+                className="group flex min-w-0 flex-1 items-center gap-4 rounded-card border border-line bg-surface px-[22px] py-[18px] transition hover:-translate-y-px hover:shadow-card"
+              >
                 <div className="min-w-0 flex-1">
-                  <Link
-                    to="/$subject/$topicId"
-                    params={{ subject, topicId: topic.id }}
-                    className="font-sans text-[20px] font-bold text-ink hover:text-brand"
-                  >
+                  <span className="font-sans text-[20px] font-bold text-ink">
                     {topic.title}
-                  </Link>
+                  </span>
                   <div className="mt-[6px] flex flex-wrap items-center gap-[10px]">
                     <span
-                      className={`inline-flex min-h-[26px] items-center rounded-full px-[10px] font-sans text-[14px] font-bold ${
+                      className={`inline-flex min-h-[28px] items-center gap-1 rounded-full px-3 font-sans text-[14px] font-bold ${
                         status === "completed"
                           ? `${accent.bg} text-white`
                           : status === "in-progress"
@@ -105,20 +113,19 @@ export function TopicGroup({
                             : "bg-canvas text-ink-3"
                       }`}
                     >
-                      {status === "completed" ? "✓ " : ""}
+                      {status === "completed" ? (
+                        <Check size={14} strokeWidth={3} aria-hidden />
+                      ) : null}
                       {BADGE_TEXT[status]}
                     </span>
                   </div>
                 </div>
-                <Link
-                  to="/$subject/$topicId"
-                  params={{ subject, topicId: topic.id }}
-                  className={`inline-flex min-h-[44px] shrink-0 items-center font-sans text-[16px] font-bold ${accent.text} hover:underline`}
-                  aria-label={`Open ${topic.title}`}
-                >
-                  Open
-                </Link>
-              </div>
+                <ChevronRight
+                  size={22}
+                  aria-hidden
+                  className={`shrink-0 transition group-hover:translate-x-0.5 ${accent.text}`}
+                />
+              </Link>
             </li>
           );
         })}

@@ -136,7 +136,12 @@ export function SimCanvas({ simId, params = {} }: SimCanvasProps) {
       canvas.height = Math.max(1, Math.floor(cssH * dpr))
       canvas.style.width = `${cssW}px`
       canvas.style.height = `${cssH}px`
-      sizeRef.current = { w: canvas.width, h: canvas.height }
+      // Sims draw in CSS pixels; the transform maps them onto the denser
+      // backing store. Passing device pixels instead made the 14px readout and
+      // margins come out half-size on a HiDPI screen. (Setting canvas.width
+      // resets the transform, so this must follow it.)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      sizeRef.current = { w: cssW, h: cssH }
       draw()
     }
 

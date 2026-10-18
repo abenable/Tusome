@@ -47,6 +47,7 @@ import {
   deleteStudent,
   getProgress,
   upsertProgress,
+  setStudentPassword,
   getSetting,
   setSetting,
   ensureSeedStudent,
@@ -152,6 +153,21 @@ describe("progress (upsert)", () => {
     // Server-side timestamp, not a client-provided one.
     expect(execs[0].query).toMatch(/datetime\('now'\)/i);
     expect(execs[0].params).toEqual([5, "phy.s2.motion.projectile", "completed"]);
+  });
+
+  it("setStudentPassword updates only that student's hash", async () => {
+    await setStudentPassword(7, "aa:bb");
+    const [exec] = sqlLog.filter((e) => e.kind === "execute");
+    expect(exec.query).toMatch(/^UPDATE students SET password_hash = \$2 WHERE id = \$1$/);
+    expect(exec.params).toEqual([7, "aa:bb"]);
+  });
+
+  it("upsertProgress never downgrades a completed row to started", async () => {
+    await upsertProgress(5, "phy.s2.motion.projectile", "started");
+    const [exec] = sqlLog.filter((e) => e.kind === "execute");
+    expect(exec.query).toMatch(
+      /CASE WHEN progress\.state = 'completed' THEN 'completed' ELSE excluded\.state END/,
+    );
   });
 
   it("getProgress issues a SELECT on progress scoped to the student", async () => {

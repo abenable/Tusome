@@ -71,15 +71,15 @@ function AboutCard(): JSX.Element {
     <SectionCard icon={Info} title="About this app" ariaLabel="App version info">
       <dl className="flex flex-col gap-4 font-sans text-ink">
         <div className="flex flex-col gap-0.5">
-          <dt className="text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">App version</dt>
+          <dt className="text-[15px] font-bold text-ink-3">App version</dt>
           <dd className="text-[19px]">{appVersion}</dd>
         </div>
         <div className="flex flex-col gap-0.5">
-          <dt className="text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">Content manifest version</dt>
+          <dt className="text-[15px] font-bold text-ink-3">Content manifest version</dt>
           <dd className="text-[19px]">{manifestVersion}</dd>
         </div>
         <div className="flex flex-col gap-0.5">
-          <dt className="text-[15px] font-bold uppercase tracking-[.06em] text-ink-3">Build id</dt>
+          <dt className="text-[15px] font-bold text-ink-3">Build id</dt>
           <dd className="text-[19px]">{buildId}</dd>
         </div>
       </dl>
@@ -151,7 +151,7 @@ function PinCard(): JSX.Element {
         Enter your current PIN and a new one to replace it.
       </p>
       <form onSubmit={submit} className="flex flex-col gap-4" aria-label="Change admin PIN">
-        <label className="flex flex-col gap-1.5 font-sans text-[16px] text-ink-2">
+        <label className="flex flex-col gap-1.5 font-sans text-[16px] font-bold text-ink-2">
           Old PIN
           <PasswordField
             value={oldPin}
@@ -161,7 +161,7 @@ function PinCard(): JSX.Element {
             widthClassName="max-w-[260px]"
           />
         </label>
-        <label className="flex flex-col gap-1.5 font-sans text-[16px] text-ink-2">
+        <label className="flex flex-col gap-1.5 font-sans text-[16px] font-bold text-ink-2">
           New PIN
           <PasswordField
             value={newPin}
@@ -172,12 +172,20 @@ function PinCard(): JSX.Element {
             widthClassName="max-w-[260px]"
           />
         </label>
-        {error ? <p className="font-sans text-[16px] text-ink-3">{error}</p> : null}
-        {success ? <p className="font-sans text-[16px] font-semibold text-brand">{success}</p> : null}
+        {error ? (
+          <p role="alert" className="font-sans text-[16px] font-bold text-bad">
+            {error}
+          </p>
+        ) : null}
+        {success ? (
+          <p role="status" className="font-sans text-[16px] font-bold text-good">
+            {success}
+          </p>
+        ) : null}
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-full bg-brand px-6 font-sans text-[18px] font-semibold text-white transition hover:bg-brand-hover active:scale-95 disabled:opacity-50"
+          className="inline-flex min-h-[48px] w-fit items-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98] disabled:opacity-50"
         >
           Save PIN
         </button>
@@ -249,9 +257,11 @@ function UpdatesSection(): JSX.Element {
       events.push(...r.events);
       if (r.applied.length > 0) {
         void queryClient.invalidateQueries({ queryKey: PACKS_QUERY_KEY });
-        setStatusMessage(`Applied ${r.applied.length} pack(s) from USB.`);
+        setStatusMessage(
+          `Applied ${r.applied.length} ${r.applied.length === 1 ? "pack" : "packs"} from USB.`,
+        );
       } else {
-        setStatusMessage("USB scan complete — no new content found.");
+        setStatusMessage("USB scan complete. No new content found.");
       }
     } catch (err) {
       const detail =
@@ -284,7 +294,7 @@ function UpdatesSection(): JSX.Element {
       // ignore
     }
     const appliedAny = contentEvents.some((e) => e.outcome === "ok" && e.kind === "apply");
-    setStatusMessage(appliedAny ? "Online check done — new content applied." : "Online check done.");
+    setStatusMessage(appliedAny ? "Online check done. New content applied." : "Online check done.");
     setOnlineBusy(false);
   }
 
@@ -310,7 +320,7 @@ function UpdatesSection(): JSX.Element {
             checked={appOnline}
             disabled={!togglesLoaded}
             label="Check for app updates online"
-            description="Stages a new app version for the next launch — never installs mid-lesson."
+            description="Downloads a new app version when you press Check online now. On Windows the app closes to install it, so don’t run this during a lesson."
             onChange={(v) => {
               setAppOnline(v);
               void persistToggle("updates_app_online", v);
@@ -323,7 +333,7 @@ function UpdatesSection(): JSX.Element {
             type="button"
             onClick={handleUsbNow}
             disabled={usbBusy}
-            className="inline-flex min-h-[44px] items-center rounded-full bg-brand px-6 font-sans text-[18px] font-semibold text-white transition hover:bg-brand-hover active:scale-95 disabled:opacity-50"
+            className="inline-flex min-h-[48px] items-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98] disabled:opacity-50"
           >
             {usbBusy ? "Checking USB…" : "Check USB now"}
           </button>
@@ -331,12 +341,12 @@ function UpdatesSection(): JSX.Element {
             type="button"
             onClick={handleOnlineNow}
             disabled={onlineBusy || !anyOnlineOn}
-            className="inline-flex min-h-[44px] items-center rounded-full bg-brand px-6 font-sans text-[18px] font-semibold text-white transition hover:bg-brand-hover active:scale-95 disabled:opacity-50"
+            className="inline-flex min-h-[48px] items-center rounded-full border-2 border-ink px-6 font-sans text-[18px] font-bold text-ink transition hover:bg-ink/5 active:scale-[0.98] disabled:opacity-50"
           >
             {onlineBusy ? "Checking online…" : "Check online now"}
           </button>
           {statusMessage ? (
-            <p className="font-sans text-[17px] leading-relaxed text-ink-2">{statusMessage}</p>
+            <p role="status" className="font-sans text-[17px] leading-relaxed text-ink-2">{statusMessage}</p>
           ) : null}
         </div>
 
@@ -364,7 +374,7 @@ function ToggleRow({
 }): JSX.Element {
   return (
     <label
-      className={`flex items-start gap-3 rounded-[11px] border border-line bg-canvas px-4 py-3 ${
+      className={`flex items-start gap-3 rounded-tile border border-line bg-canvas px-4 py-3 ${
         disabled ? "opacity-50" : ""
       }`}
     >
@@ -374,24 +384,26 @@ function ToggleRow({
           checked={checked}
           disabled={disabled}
           onChange={(e) => onChange(e.target.checked)}
-          className="absolute h-[44px] w-[44px] cursor-pointer opacity-0"
+          className="peer absolute h-[44px] w-[44px] cursor-pointer opacity-0"
           aria-label={label}
         />
+        {/* The real checkbox is invisible, so its focus ring is drawn on the
+            track via `peer-focus-visible`. */}
         <span
           aria-hidden="true"
-          className={`pointer-events-none inline-flex h-[28px] w-[48px] items-center rounded-full border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-hover ${
-            checked ? "border-brand bg-brand" : "border-line bg-surface"
+          className={`pointer-events-none inline-flex h-[28px] w-[48px] items-center rounded-full border transition peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink ${
+            checked ? "border-good bg-good" : "border-ink-3 bg-surface"
           }`}
         >
           <span
-            className={`ml-1 inline-block h-[20px] w-[20px] rounded-full bg-white transition ${
-              checked ? "translate-x-[20px]" : "translate-x-0"
+            className={`ml-1 inline-block h-[20px] w-[20px] rounded-full transition ${
+              checked ? "translate-x-[18px] bg-white" : "translate-x-0 bg-ink-3"
             }`}
           />
         </span>
       </span>
       <span className="flex flex-col gap-1">
-        <span className="font-sans text-[18px] font-semibold text-ink">{label}</span>
+        <span className="font-sans text-[18px] font-bold text-ink">{label}</span>
         <span className="font-sans text-[16px] leading-relaxed text-ink-3">{description}</span>
       </span>
     </label>

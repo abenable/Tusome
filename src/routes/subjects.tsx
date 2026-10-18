@@ -19,7 +19,6 @@
 
 import { useEffect, useState } from "react"
 import { createFileRoute, Link } from "@tanstack/react-router"
-import { Atom, Dna, FlaskConical, Sigma, type LucideIcon } from "lucide-react"
 
 import { loadPacksCached } from "@/content/loader"
 import type { PackT } from "@/content/schema"
@@ -27,19 +26,13 @@ import {
   SUBJECTS,
   SUBJECT_ACCENTS,
   SUBJECT_BLURBS,
+  SUBJECT_ICONS,
   SUBJECT_LABELS,
   type Subject,
 } from "@/lib/subjects"
 import { getProgress, type ProgressRow } from "@/db/index"
 import { useStudent } from "@/lib/student-context"
 import { SUBJECT_ILLUSTRATIONS } from "@/lib/subject-illustrations"
-
-const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
-  physics: Atom,
-  chemistry: FlaskConical,
-  biology: Dna,
-  mathematics: Sigma,
-}
 
 export const Route = createFileRoute("/subjects")({
   loader: async ({ context }): Promise<{ packs: PackT[] }> => {
@@ -75,18 +68,17 @@ function SubjectPicker() {
   )
 
   return (
-    <div className="mx-auto max-w-[920px]">
-      <header className="mx-auto mb-10 max-w-[640px] text-center">
-        <h1 className="mb-[10px] font-heading text-[42px] font-extrabold tracking-[-0.02em] text-ink">
+    <div>
+      <header className="mb-8 flex max-w-[640px] flex-col gap-3">
+        <h1 className="font-heading text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-ink">
           Pick a subject
         </h1>
         <p className="font-sans text-[19px] leading-[1.55] text-ink-2">
-          Lower-secondary CBC lessons and simulations — pick a subject
-          to begin.
+          Lower-secondary CBC lessons and simulations, S1 to S4.
         </p>
       </header>
 
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {SUBJECTS.map((subject) => {
           const accent = SUBJECT_ACCENTS[subject]
           const Icon = SUBJECT_ICONS[subject]
@@ -100,7 +92,7 @@ function SubjectPicker() {
               <Link
                 to="/$subject"
                 params={{ subject }}
-                className="flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface shadow-[0_1px_2px_rgba(0,0,0,.04),0_16px_32px_-22px_rgba(0,0,0,.2)] transition-transform hover:-translate-y-[3px]"
+                className="flex h-full flex-col overflow-hidden rounded-card border border-line bg-surface shadow-card transition hover:-translate-y-[3px] hover:shadow-lift"
               >
                 <div
                   className={`flex h-[140px] items-center justify-center overflow-hidden ${accent.tint}`}
@@ -116,7 +108,7 @@ function SubjectPicker() {
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-[10px]">
                       <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-[10px] ${accent.bg}`}
+                        className={`flex size-9 shrink-0 items-center justify-center rounded-tile ${accent.bg}`}
                       >
                         <Icon size={18} className="text-white" aria-hidden />
                       </span>
@@ -129,7 +121,7 @@ function SubjectPicker() {
                   <p className="font-sans text-[16px] leading-[1.5] text-ink-2">
                     {SUBJECT_BLURBS[subject]}
                   </p>
-                  <span className="font-sans text-[15px] font-semibold text-ink-3">
+                  <span className="font-sans text-[15px] font-semibold tabular-nums text-ink-3">
                     {mine.length === 1 ? "1 topic" : `${mine.length} topics`}
                   </span>
                 </div>

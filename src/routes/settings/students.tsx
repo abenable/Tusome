@@ -1,6 +1,7 @@
 // Students — `/settings/students`. The student register: a searchable,
 // filterable table with per-student started/completed metrics (across all
-// topics), rename + delete (dialog), and a per-student topic-progress view.
+// topics), edit (name, class, password reset) + delete dialogs, and a
+// per-student topic-progress view.
 // The class filter is a fixed S1–S4 pill row (LEVEL_ORDER) rather than
 // derived from whatever class_labels happen to exist, so a class with no
 // students yet still has a pill to filter to (it just shows an empty table).
@@ -14,11 +15,12 @@ import { Pencil, Search, Trash2, Users } from "lucide-react";
 
 import { loadPacksCached } from "@/content/loader";
 import type { PackT } from "@/content/schema";
-import { getAllProgress } from "@/db/index";
+import { getAllProgress, hashPin, setStudentPassword } from "@/db/index";
 import type { ProgressWithStudent, StudentRow } from "@/db/index";
 import { useStudent } from "@/lib/student-context";
 import { allTopics } from "@/lib/admin-stats";
 import { LEVEL_ORDER } from "@/lib/topics-group";
+import { formatDbTime } from "@/lib/utils";
 import { SectionCard } from "@/components/admin/primitives";
 import {
   Dialog,
@@ -61,8 +63,14 @@ function StudentsPage(): JSX.Element {
   useEffect(() => {
     let cancelled = false;
     void (async () => {
-      const p = await getAllProgress();
-      if (!cancelled) setProgress(p);
+      try {
+        const p = await getAllProgress();
+        if (!cancelled) setProgress(p);
+      } catch (err) {
+        // Names still list from the student context; metrics just read zero.
+        console.error("[Students] getAllProgress failed:", err);
+        if (!cancelled) setProgress([]);
+      }
     })();
     return () => {
       cancelled = true;
@@ -177,22 +185,22 @@ function StudentsPage(): JSX.Element {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="font-sans text-[15px] font-bold text-ink-3">
                     Student
                   </TableHead>
-                  <TableHead className="font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="font-sans text-[15px] font-bold text-ink-3">
                     Class
                   </TableHead>
-                  <TableHead className="text-right font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="text-right font-sans text-[15px] font-bold text-ink-3">
                     Started
                   </TableHead>
-                  <TableHead className="text-right font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="text-right font-sans text-[15px] font-bold text-ink-3">
                     Done
                   </TableHead>
-                  <TableHead className="font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="font-sans text-[15px] font-bold text-ink-3">
                     Last active
                   </TableHead>
-                  <TableHead className="text-right font-sans text-[15px] font-bold uppercase tracking-wide text-ink-3">
+                  <TableHead className="text-right font-sans text-[15px] font-bold text-ink-3">
                     Actions
                   </TableHead>
                 </TableRow>
@@ -202,29 +210,29 @@ function StudentsPage(): JSX.Element {
                   <TableRow key={r.student.id}>
                     <TableCell>
                       <div className="flex items-center gap-3">
-                        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand font-heading text-[14px] font-bold text-white">
+                        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-sun font-heading text-[14px] font-bold text-ink">
                           {r.student.display_name.slice(0, 1).toUpperCase()}
                         </span>
                         <button
                           type="button"
                           onClick={() => setViewing(r.student)}
-                          className="font-sans text-[17px] font-semibold text-ink hover:underline"
+                          className="rounded-full font-sans text-[17px] font-bold text-ink hover:underline"
                         >
                           {r.student.display_name}
                         </button>
                       </div>
                     </TableCell>
                     <TableCell className="font-sans text-[16px] text-ink-2">
-                      {r.student.class_label ?? <span className="text-ink-3">—</span>}
+                      {r.student.class_label ?? <span className="text-ink-3">Not set</span>}
                     </TableCell>
-                    <TableCell className="text-right font-sans text-[17px] text-ink-2">
+                    <TableCell className="text-right font-sans text-[17px] tabular-nums text-ink-2">
                       {r.started}
                     </TableCell>
-                    <TableCell className="text-right font-sans text-[17px] text-ink-2">
+                    <TableCell className="text-right font-sans text-[17px] tabular-nums text-ink-2">
                       {r.completed}
                     </TableCell>
-                    <TableCell className="font-sans text-[15px] text-ink-3">
-                      {r.lastActive ?? "—"}
+                    <TableCell className="font-sans text-[15px] tabular-nums text-ink-3">
+                      {r.lastActive ? formatDbTime(r.lastActive) : "Never"}
                     </TableCell>
                     <TableCell className="text-right">
                       <div className="inline-flex items-center gap-1">
@@ -232,7 +240,7 @@ function StudentsPage(): JSX.Element {
                           variant="ghost"
                           size="icon"
                           onClick={() => setRenaming(r.student)}
-                          aria-label={`Rename ${r.student.display_name}`}
+                          aria-label={`Edit ${r.student.display_name}`}
                         >
                           <Pencil size={16} />
                         </Button>
@@ -258,8 +266,11 @@ function StudentsPage(): JSX.Element {
         <RenameDialog
           student={renaming}
           onClose={() => setRenaming(null)}
-          onSave={async (name, label) => {
+          onSave={async (name, label, password) => {
             await renameStudent(renaming.id, name, label);
+            if (password) {
+              await setStudentPassword(renaming.id, await hashPin(password));
+            }
             await refreshStudents();
             setRenaming(null);
           }}
@@ -294,8 +305,15 @@ function StudentsPage(): JSX.Element {
 }
 
 // ──────────────────────────────────────────────────────────────────────────
-// Rename dialog.
+// Edit dialog: name, class, optional password reset.
+//
+// Class is a required S1–S4 select, never free text: login groups profiles by
+// an exact class match, so a typed "S2 Blue" (or a cleared class) hid the
+// student from every class on the login screen.
 // ──────────────────────────────────────────────────────────────────────────
+
+const FIELD_LABEL = "flex flex-col gap-1.5 font-sans text-[16px] font-bold text-ink-2";
+const ERROR_TEXT = "font-sans text-[16px] font-bold text-bad";
 
 function RenameDialog({
   student,
@@ -304,38 +322,95 @@ function RenameDialog({
 }: {
   student: StudentRow;
   onClose: () => void;
-  onSave: (name: string, classLabel: string | null) => Promise<void>;
+  onSave: (name: string, classLabel: string, password: string | null) => Promise<void>;
 }): JSX.Element {
   const [name, setName] = useState(student.display_name);
-  const [label, setLabel] = useState(student.class_label ?? "");
+  // A legacy free-text label that isn't S1–S4 starts unselected, so the admin
+  // must pick a real class rather than silently keeping a broken one.
+  const [label, setLabel] = useState<string>(
+    (LEVEL_ORDER as readonly string[]).includes(student.class_label ?? "")
+      ? (student.class_label as string)
+      : "",
+  );
+  const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <Dialog open onOpenChange={(o) => { if (!o) onClose(); }}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Rename student</DialogTitle>
-          <DialogDescription>Update the display name and class label.</DialogDescription>
+          <DialogTitle>Edit student</DialogTitle>
+          <DialogDescription>Change the name or class, or set a new password.</DialogDescription>
         </DialogHeader>
         <form
           onSubmit={async (e) => {
             e.preventDefault();
             if (busy) return;
             const trimmed = name.trim();
-            if (trimmed.length < 1) return;
+            if (trimmed.length < 1) {
+              setError("Enter a name.");
+              return;
+            }
+            if (label === "") {
+              setError("Choose a class.");
+              return;
+            }
+            if (password !== "" && password.length < 4) {
+              setError("The new password must be at least 4 characters.");
+              return;
+            }
+            setError(null);
             setBusy(true);
-            await onSave(trimmed, label.trim() === "" ? null : label.trim());
+            try {
+              await onSave(trimmed, label, password === "" ? null : password);
+            } catch (err) {
+              console.error("[Students] save failed:", err);
+              setError("Could not save. Try again.");
+              setBusy(false);
+            }
           }}
           className="flex flex-col gap-4"
         >
-          <label className="flex flex-col gap-1.5 font-sans text-[16px] text-ink-2">
+          <label className={FIELD_LABEL}>
             Display name
-            <Input value={name} onChange={(e) => setName(e.target.value)} className="min-h-[44px]" />
+            <Input value={name} onChange={(e) => setName(e.target.value)} className="min-h-[44px] font-normal" />
           </label>
-          <label className="flex flex-col gap-1.5 font-sans text-[16px] text-ink-2">
-            Class <span className="text-ink-3">(optional)</span>
-            <Input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="e.g. S2 Blue" className="min-h-[44px]" />
+          <label className={FIELD_LABEL}>
+            Class
+            <select
+              value={label}
+              onChange={(e) => setLabel(e.target.value)}
+              className="min-h-[44px] rounded-lg border border-line bg-surface px-3 font-sans text-[17px] font-normal text-ink"
+            >
+              <option value="" disabled>
+                Choose a class
+              </option>
+              {LEVEL_ORDER.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
           </label>
+          <label className={FIELD_LABEL}>
+            New password
+            <Input
+              type="password"
+              autoComplete="new-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="min-h-[44px] font-normal"
+            />
+            <span className="font-normal text-ink-3">
+              Leave blank to keep the current password.
+            </span>
+          </label>
+          {error ? (
+            <p role="alert" className={ERROR_TEXT}>
+              {error}
+            </p>
+          ) : null}
           <DialogFooter>
             <Button type="button" variant="ghost" onClick={onClose} disabled={busy}>
               Cancel
@@ -368,6 +443,7 @@ function DeleteDialog({
   onConfirm: () => Promise<void>;
 }): JSX.Element {
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   return (
     <Dialog open onOpenChange={(o) => { if (!o) onClose(); }}>
       <DialogContent>
@@ -377,6 +453,11 @@ function DeleteDialog({
             This also deletes their progress. This cannot be undone.
           </DialogDescription>
         </DialogHeader>
+        {error ? (
+          <p role="alert" className={ERROR_TEXT}>
+            {error}
+          </p>
+        ) : null}
         <DialogFooter>
           <Button type="button" variant="ghost" onClick={onClose} disabled={busy}>
             Cancel
@@ -384,10 +465,17 @@ function DeleteDialog({
           <Button
             type="button"
             disabled={busy}
-            className="rounded-full bg-ink text-white hover:bg-ink/90"
+            className="rounded-full bg-bad text-white hover:bg-bad/90"
             onClick={async () => {
               setBusy(true);
-              await onConfirm();
+              setError(null);
+              try {
+                await onConfirm();
+              } catch (err) {
+                console.error("[Students] delete failed:", err);
+                setError("Could not delete. Try again.");
+                setBusy(false);
+              }
             }}
           >
             Delete
@@ -424,8 +512,8 @@ function ProgressDialog({
         <DialogHeader>
           <DialogTitle>{student.display_name}’s progress</DialogTitle>
           <DialogDescription>
-            {student.class_label ? `Class ${student.class_label} · ` : ""}
-            {topics.length} topics installed.
+            {student.class_label ? `Class ${student.class_label}. ` : ""}
+            {topics.length} {topics.length === 1 ? "topic" : "topics"} installed.
           </DialogDescription>
         </DialogHeader>
         <div className="max-h-[60vh] overflow-y-auto">
@@ -435,13 +523,13 @@ function ProgressDialog({
               return (
                 <li
                   key={t.id}
-                  className="flex items-center justify-between gap-3 rounded-[10px] border border-line bg-canvas px-3 py-2"
+                  className="flex items-center justify-between gap-3 rounded-tile border border-line-soft bg-canvas px-3 py-2"
                 >
                   <span className="font-sans text-[16px] text-ink">{t.title}</span>
                   <span
                     className={
                       state === "completed"
-                        ? "font-sans text-[15px] font-bold text-brand"
+                        ? "font-sans text-[15px] font-bold text-good"
                         : state === "started"
                           ? "font-sans text-[15px] font-bold text-ink-2"
                           : "font-sans text-[15px] text-ink-3"

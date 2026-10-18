@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react"
 import { createFileRoute, Link, notFound } from "@tanstack/react-router"
-import { Atom, Dna, FlaskConical, Sigma, type LucideIcon } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 
 import {
   SUBJECT_ACCENTS,
+  SUBJECT_ICONS,
   SUBJECT_LABELS,
   isSubject,
   type Subject,
@@ -20,13 +21,6 @@ import { useStudent } from "@/lib/student-context"
 // content directory is unreadable. See docs/plan/04-vertical-slice.md step 3
 // and 06-app-features.md §"Topic list".
 import { loadPacksCached, topicsForSubject } from "@/content/loader"
-
-const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
-  physics: Atom,
-  chemistry: FlaskConical,
-  biology: Dna,
-  mathematics: Sigma,
-}
 
 export const Route = createFileRoute("/$subject/")({
   // Validate the `$subject` param once, before the component renders. An
@@ -126,21 +120,21 @@ function TopicList() {
   }
 
   return (
-    <div className="mx-auto max-w-[980px]">
+    <div>
       <BackLink />
 
-      <header className="mb-4 flex flex-col items-center gap-[10px] text-center">
+      <header className="mb-6 flex items-center gap-4">
         <span
-          className={`flex size-11 items-center justify-center rounded-[13px] ${accent.bg}`}
+          className={`flex size-14 shrink-0 items-center justify-center rounded-card ${accent.bg}`}
         >
-          <Icon size={24} className="text-white" aria-hidden />
+          <Icon size={28} className="text-white" aria-hidden />
         </span>
         <div>
-          <h1 className="font-heading text-[36px] font-extrabold tracking-[-0.02em] text-ink">
+          <h1 className="font-heading text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em] text-ink">
             {label}
           </h1>
-          <p className="mt-[2px] font-sans text-[17px] text-ink-2">
-            {activeLevel} · {shown.length}{" "}
+          <p className="mt-1 font-sans text-[17px] tabular-nums text-ink-2">
+            {activeLevel}, {shown.length}{" "}
             {shown.length === 1 ? "topic" : "topics"}
           </p>
         </div>
@@ -150,7 +144,7 @@ function TopicList() {
           disabled — a student should be able to see that S3 exists and simply
           isn't installed yet, rather than wondering where it went. */}
       <div
-        className="mb-9 flex items-center justify-center gap-[6px]"
+        className="mb-9 inline-flex items-center gap-1 rounded-full border border-line bg-surface p-1"
         role="group"
         aria-label="Filter by class level"
       >
@@ -164,12 +158,12 @@ function TopicList() {
               disabled={!has}
               aria-pressed={isActive}
               onClick={() => setLevel(lvl)}
-              className={`min-h-[30px] rounded-full px-3 font-sans text-[14px] font-bold transition-colors ${
+              className={`min-h-[40px] min-w-[56px] rounded-full px-4 font-sans text-[16px] font-bold transition-colors ${
                 isActive
                   ? `${accent.bg} text-white`
                   : has
-                    ? "border border-line bg-surface text-ink-3 hover:text-ink"
-                    : "cursor-not-allowed border border-line bg-surface text-ink-3 opacity-40"
+                    ? "text-ink-2 hover:bg-canvas hover:text-ink"
+                    : "cursor-not-allowed text-ink-3 opacity-45"
               }`}
             >
               {lvl}
@@ -179,7 +173,7 @@ function TopicList() {
       </div>
 
       {shown.length === 0 ? (
-        <section className="rounded-[18px] border border-dashed border-line p-8 text-center">
+        <section className="rounded-card border border-dashed border-line p-8 text-center">
           <p className="font-sans text-[18px] text-ink-2">
             No {label} topics in {activeLevel} yet.
           </p>
@@ -206,11 +200,9 @@ function BackLink() {
   return (
     <Link
       to="/subjects"
-      className="mb-5 inline-flex min-h-[44px] items-center gap-2 font-sans text-[16px] font-semibold text-brand hover:underline"
+      className="mb-4 -ml-1 inline-flex min-h-[44px] items-center gap-2 rounded-full px-1 font-sans text-[16px] font-bold text-ink-2 transition hover:text-ink"
     >
-      <span aria-hidden className="text-[25px] leading-none">
-        ←
-      </span>
+      <ArrowLeft size={18} aria-hidden />
       All subjects
     </Link>
   )

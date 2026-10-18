@@ -9,6 +9,8 @@
 // Keep the order stable — it drives the subject picker grid, and a re-order
 // is a visible UI change.
 
+import { Atom, Dna, FlaskConical, Sigma, type LucideIcon } from "lucide-react"
+
 export const SUBJECTS = [
   "physics",
   "chemistry",
@@ -24,6 +26,14 @@ export const SUBJECT_LABELS: Record<Subject, string> = {
   chemistry: "Chemistry",
   biology: "Biology",
   mathematics: "Mathematics",
+}
+
+// Subject glyphs, shared by the sidebar, pickers, topic lists and dashboard.
+export const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
+  physics: Atom,
+  chemistry: FlaskConical,
+  biology: Dna,
+  mathematics: Sigma,
 }
 
 /** Type guard for an untrusted `$subject` route param. */

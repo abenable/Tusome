@@ -155,6 +155,22 @@ export async function renameStudent(
 }
 
 /**
+ * Replace a student's password hash (admin reset). `passwordHash` is the
+ * output of `hashPin`. Also how a pre-004 account with a NULL hash, which can
+ * never log in, gets a password.
+ */
+export async function setStudentPassword(
+  id: number,
+  passwordHash: string,
+): Promise<void> {
+  const db = await getDb();
+  await db.execute("UPDATE students SET password_hash = $2 WHERE id = $1", [
+    id,
+    passwordHash,
+  ]);
+}
+
+/**
  * Delete a student row. The progress and quiz_attempts FKs carry
  * ON DELETE CASCADE (001_init.sql), so a single DELETE here cascades to both.
  */
@@ -182,8 +198,9 @@ export async function getProgress(studentId: number): Promise<ProgressRow[]> {
  * `topic_id` is a text key into content, NOT a foreign key (03-architecture.md:
  * content is data on disk and can be swapped; the DB must not break when a
  * pack is removed). The UPSERT keeps the composite-key row stable across
- * updates while refreshing `state` and bumping `updated_at` server-side via
- * `datetime('now')` so ordering is robust regardless of client clock skew.
+ * updates while refreshing `state` (never completed -> started) and bumping
+ * `updated_at` server-side via `datetime('now')` so ordering is robust
+ * regardless of client clock skew.
  */
 export async function upsertProgress(
   studentId: number,
@@ -193,7 +210,11 @@ export async function upsertProgress(
   const db = await getDb();
   await db.execute(
     "INSERT INTO progress(student_id, topic_id, state) VALUES ($1, $2, $3) " +
-      "ON CONFLICT(student_id, topic_id) DO UPDATE SET state = excluded.state, updated_at = datetime('now')",
+      // Never downgrade: reopening a completed topic records the visit (bumps
+      // updated_at) but must not flip it back to "started".
+      "ON CONFLICT(student_id, topic_id) DO UPDATE SET " +
+      "state = CASE WHEN progress.state = 'completed' THEN 'completed' ELSE excluded.state END, " +
+      "updated_at = datetime('now')",
     [studentId, topicId, state],
   );
 }

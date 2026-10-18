@@ -12,9 +12,10 @@
 
 import { type JSX } from "react";
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
-import { ArrowLeft, GraduationCap } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 import { PinGate } from "@/components/PinGate";
+import { BrandMark } from "@/components/BrandMark";
 import { AdminNav } from "@/components/admin/AdminNav";
 
 export const Route = createFileRoute("/settings")({
@@ -30,18 +31,13 @@ function SettingsLayout(): JSX.Element {
       <div className="grid grid-cols-[1fr_auto_1fr] items-center">
         <Link
           to="/"
-          className="inline-flex min-h-[44px] w-fit items-center gap-1.5 font-sans text-[16px] font-semibold text-ink-3 transition hover:text-brand"
+          className="-ml-1 inline-flex min-h-[44px] w-fit items-center gap-2 rounded-full px-1 font-sans text-[16px] font-bold text-ink-2 transition hover:text-ink"
         >
-          <ArrowLeft size={16} aria-hidden />
+          <ArrowLeft size={18} aria-hidden />
           Back
         </Link>
-        <Link to="/" className="flex items-center gap-[10px]" title="Tusome">
-          <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
-            <GraduationCap size={18} aria-hidden />
-          </span>
-          <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
-            Tusome
-          </span>
+        <Link to="/" className="rounded-xl" aria-label="Tusome home">
+          <BrandMark />
         </Link>
         <span aria-hidden />
       </div>

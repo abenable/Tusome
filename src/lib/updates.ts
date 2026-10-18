@@ -68,7 +68,7 @@ export interface AppUpdateResult {
 // added to `connect-src` (see the U2 report). Kept as a single const so a config
 // line swap is all the re-pointing the release job needs.
 export const CONTENT_BUNDLE_URL =
-  "https://github.com/OWNER/REPO/releases/latest/download/bundle.zip";
+  "https://github.com/abenable/Tusome/releases/latest/download/bundle.zip";
 
 // ──────────────────────────────────────────────────────────────────────────
 // Tauri detection — same shape as the content loader's guard.
@@ -161,7 +161,20 @@ export async function checkOnlineContentUpdate(opts: {
     // packs query is `staleTime: Infinity`, so it would otherwise keep serving
     // the pre-apply pack list.
     void opts.queryClient.invalidateQueries({ queryKey: PACKS_QUERY_KEY });
-    return r.events;
+    // Rust reports per-step events but no overall success event — success is
+    // a non-empty `applied`. Record it, so the log (and the admin's status
+    // line) can say content actually arrived.
+    return r.applied.length > 0
+      ? [
+          ...r.events,
+          {
+            channel: "content-online",
+            kind: "apply",
+            outcome: "ok",
+            detail: `applied ${r.applied.length} pack(s): ${r.applied.join(", ")}`,
+          },
+        ]
+      : r.events;
   } catch (err) {
     return [
       {

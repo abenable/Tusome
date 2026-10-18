@@ -14,14 +14,14 @@
  */
 export const SIM_COLORS = {
   /** --color-canvas — the plot background. */
-  canvas: '#f3f5f8',
+  canvas: '#f8f7f3',
   /** --color-ink — axes, the projectile body, readout text. */
-  ink: '#1b1f26',
+  ink: '#201c17',
   /** --color-ink-3 — de-emphasised labels. */
-  ink3: '#66696f',
+  ink3: '#67625c',
   /** --color-physics — the trajectory itself. */
-  physics: '#1f6dd8',
+  physics: '#1364ce',
 } as const
 
 /** The app's UI font, for `ctx.font`. Matches --font-sans in src/index.css. */
-export const SIM_FONT = '"Manrope", system-ui, sans-serif'
+export const SIM_FONT = '"Atkinson Hyperlegible Next", system-ui, sans-serif'

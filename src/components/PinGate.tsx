@@ -20,6 +20,7 @@
 // make shoulder-surfing guesses tedious, nothing more.
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { LockKeyhole } from "lucide-react";
 import { getSetting, hashPin, setSetting, verifyPin } from "@/db/index";
 import { PasswordField } from "@/components/PasswordField";
 
@@ -39,9 +40,12 @@ export function PinGate({ children, ...rest }: PinGateProps) {
   //   "set"       — no PIN configured yet; prompt to set one (enter + confirm).
   //   "verify"    — a PIN exists; prompt to enter it.
   //   "unlocked"  — passed the gate; render children.
+  //   "error"     — the settings read failed; offer a retry instead of a
+  //                 blank page.
   const [phase, setPhase] = useState<
-    "loading" | "set" | "verify" | "unlocked"
+    "loading" | "set" | "verify" | "unlocked" | "error"
   >("loading");
+  const [reload, setReload] = useState(0);
   const [storedPin, setStoredPin] = useState<string | null>(null);
   const [attempts, setAttempts] = useState(0);
   const [cooldownUntil, setCooldownUntil] = useState<number | null>(null);
@@ -51,7 +55,12 @@ export function PinGate({ children, ...rest }: PinGateProps) {
   // updates. Stops ticking when there's no cooldown to avoid an idle timer.
   useEffect(() => {
     if (cooldownUntil === null) return;
-    const t = setInterval(() => setNow(Date.now()), 1000);
+    const t = setInterval(() => {
+      const n = Date.now();
+      setNow(n);
+      // Clearing the cooldown is what stops this interval.
+      if (n >= cooldownUntil) setCooldownUntil(null);
+    }, 1000);
     return () => clearInterval(t);
   }, [cooldownUntil]);
 
@@ -59,21 +68,45 @@ export function PinGate({ children, ...rest }: PinGateProps) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const pin = await getSetting("admin_pin");
-      if (cancelled) return;
-      setStoredPin(pin);
-      setPhase(pin === null ? "set" : "verify");
+      try {
+        const pin = await getSetting("admin_pin");
+        if (cancelled) return;
+        setStoredPin(pin);
+        setPhase(pin === null ? "set" : "verify");
+      } catch (err) {
+        console.error("[PinGate] reading admin_pin failed:", err);
+        if (!cancelled) setPhase("error");
+      }
     })();
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [reload]);
 
   if (phase === "unlocked") {
     return <>{children(true)}</>;
   }
   if (phase === "loading") {
     return null;
+  }
+  if (phase === "error") {
+    return (
+      <div className={CARD} role="alert">
+        <p className="font-sans text-[18px] leading-relaxed text-ink">
+          Couldn’t read the settings on this computer.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setPhase("loading");
+            setReload((r) => r + 1);
+          }}
+          className={BUTTON}
+        >
+          Try again
+        </button>
+      </div>
+    );
   }
 
   const onUnlocked = () => {
@@ -119,9 +152,30 @@ export function PinGate({ children, ...rest }: PinGateProps) {
   );
 }
 
+const CARD =
+  "mx-auto flex w-full max-w-[420px] flex-col gap-4 rounded-card border border-line bg-surface p-7 shadow-card";
+const LABEL = "flex flex-col gap-2 font-sans text-[16px] font-bold text-ink-2";
+const BUTTON =
+  "inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50";
+const ERROR = "font-sans text-[16px] font-bold leading-relaxed text-bad";
+
+function GateHeader({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <span className="mb-1 flex size-12 items-center justify-center rounded-tile bg-sun-tint text-sun-ink">
+        <LockKeyhole size={22} aria-hidden />
+      </span>
+      <h1 className="font-heading text-[28px] font-extrabold tracking-[-0.01em] text-ink">
+        {title}
+      </h1>
+      <p className="font-sans text-[17px] leading-relaxed text-ink-2">{body}</p>
+    </div>
+  );
+}
+
 // ──────────────────────────────────────────────────────────────────────────
 // Set-PIN form (first-run bootstrap). Enter + confirm; mismatch shows an
-// inline muted message (no second accent color — DESIGN.md).
+// inline error.
 // ──────────────────────────────────────────────────────────────────────────
 
 function SetPinForm({
@@ -163,13 +217,14 @@ function SetPinForm({
   return (
     <form
       onSubmit={submit}
-      className="mx-auto flex w-full max-w-[400px] flex-col items-center gap-3 text-center"
+      className={CARD}
       aria-label={ariaLabel ?? "Set admin PIN"}
     >
-      <p className="font-sans text-[19px] leading-relaxed text-ink">
-        Set an admin PIN. A teacher uses this to manage profiles and updates.
-      </p>
-      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
+      <GateHeader
+        title="Set an admin PIN"
+        body="Teachers use it to manage student profiles and updates."
+      />
+      <label className={LABEL}>
         New PIN
         <PasswordField
           value={pin}
@@ -177,9 +232,10 @@ function SetPinForm({
           autoComplete="new-password"
           inputMode="numeric"
           autoFocus
+          widthClassName="w-full"
         />
       </label>
-      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
+      <label className={LABEL}>
         Confirm PIN
         <PasswordField
           value={confirm}
@@ -187,18 +243,15 @@ function SetPinForm({
           autoComplete="new-password"
           inputMode="numeric"
           inputRef={confirmRef}
+          widthClassName="w-full"
         />
       </label>
       {error ? (
-        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
+        <p role="alert" className={ERROR}>
           {error}
         </p>
       ) : null}
-      <button
-        type="submit"
-        disabled={busy}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
-      >
+      <button type="submit" disabled={busy} className={BUTTON}>
         Set PIN
       </button>
     </form>
@@ -228,6 +281,12 @@ function VerifyPinForm({
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
+  // A lockout replaces the "wrong PIN" message; don't let it reappear once
+  // the cooldown ends.
+  useEffect(() => {
+    if (cooling) setError(null);
+  }, [cooling]);
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (busy || cooling) return;
@@ -254,10 +313,14 @@ function VerifyPinForm({
   return (
     <form
       onSubmit={submit}
-      className="mx-auto flex w-full max-w-[400px] flex-col items-center gap-3 text-center"
+      className={CARD}
       aria-label={ariaLabel ?? "Admin PIN"}
     >
-      <label className="flex flex-col items-center gap-1 font-sans text-[16px] text-ink-2">
+      <GateHeader
+        title="Teacher area"
+        body="Enter the admin PIN to manage students, subjects and updates."
+      />
+      <label className={LABEL}>
         Admin PIN
         <PasswordField
           value={pin}
@@ -266,23 +329,20 @@ function VerifyPinForm({
           inputMode="numeric"
           autoFocus
           disabled={cooling}
+          widthClassName="w-full"
         />
       </label>
       {error && !cooling ? (
-        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
+        <p role="alert" className={ERROR}>
           {error}
         </p>
       ) : null}
       {cooling ? (
-        <p className="font-sans text-[16px] leading-relaxed text-ink-3">
+        <p role="status" className="font-sans text-[16px] leading-relaxed text-ink-2">
           Too many tries. Try again in {seconds}s.
         </p>
       ) : null}
-      <button
-        type="submit"
-        disabled={busy || cooling}
-        className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
-      >
+      <button type="submit" disabled={busy || cooling} className={BUTTON}>
         Unlock
       </button>
     </form>

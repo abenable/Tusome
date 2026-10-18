@@ -10,22 +10,14 @@
 
 import { useEffect, useState, type JSX } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Atom,
-  BookOpen,
-  Dna,
-  FlaskConical,
-  Sigma,
-  Trophy,
-  Users,
-  type LucideIcon,
-} from "lucide-react";
+import { BookOpen, Trophy, Users } from "lucide-react";
 
 import { loadPacksWithErrors } from "@/content/loader";
 import type { PackT } from "@/content/schema";
 import { getAllProgress, getStudents } from "@/db/index";
 import type { ProgressWithStudent, StudentRow } from "@/db/index";
-import { SUBJECTS, SUBJECT_LABELS, SUBJECT_ACCENTS, type Subject } from "@/lib/subjects";
+import { SUBJECTS, SUBJECT_ICONS, SUBJECT_LABELS, SUBJECT_ACCENTS } from "@/lib/subjects";
+import { formatDbTime } from "@/lib/utils";
 import {
   allTopics,
   classLabelOf,
@@ -35,13 +27,6 @@ import {
 } from "@/lib/admin-stats";
 import { MetricCard, SectionCard } from "@/components/admin/primitives";
 import { ComingSoon } from "@/components/admin/ComingSoon";
-
-const SUBJECT_ICONS: Record<Subject, LucideIcon> = {
-  physics: Atom,
-  chemistry: FlaskConical,
-  biology: Dna,
-  mathematics: Sigma,
-};
 
 export const Route = createFileRoute("/settings/")({
   loader: async ({ context }): Promise<{
@@ -56,26 +41,44 @@ export const Route = createFileRoute("/settings/")({
 function OverviewPage(): JSX.Element {
   const { packs, errors } = Route.useLoaderData();
   const [students, setStudents] = useState<StudentRow[] | null>(null);
-  const [progress, setProgress] = useState<ProgressWithStudent[] | null>(null);
+  const [allProgress, setProgress] = useState<ProgressWithStudent[] | null>(null);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     void (async () => {
-      const [s, p] = await Promise.all([getStudents(), getAllProgress()]);
-      if (cancelled) return;
-      setStudents(s);
-      setProgress(p);
+      try {
+        const [s, p] = await Promise.all([getStudents(), getAllProgress()]);
+        if (cancelled) return;
+        setStudents(s);
+        setProgress(p);
+      } catch (err) {
+        console.error("[Overview] load failed:", err);
+        if (!cancelled) setFailed(true);
+      }
     })();
     return () => {
       cancelled = true;
     };
   }, []);
 
-  if (!students || !progress) {
+  if (failed) {
+    return (
+      <p role="alert" className="font-sans text-[18px] text-bad">
+        Couldn’t read student data on this computer.
+      </p>
+    );
+  }
+  if (!students || !allProgress) {
     return <p className="font-sans text-[18px] text-ink-3">Loading…</p>;
   }
 
   const topics = allTopics(packs);
+  // Only progress on installed topics counts: a removed pack's rows would
+  // otherwise push completion past 100% (the denominators are installed
+  // topics).
+  const installed = new Set(topics.map((t) => t.id));
+  const progress = allProgress.filter((p) => installed.has(p.topic_id));
   const titleOf = new Map(topics.map((t) => [t.id, t.title]));
   const m = overviewMetrics(students, progress, packs);
   const subjects = subjectSummaries(packs, students.length, progress);
@@ -125,11 +128,11 @@ function OverviewPage(): JSX.Element {
               return (
                 <div
                   key={s}
-                  className="flex flex-col gap-3 rounded-[14px] border border-line bg-canvas p-5"
+                  className="flex flex-col gap-3 rounded-tile border border-line bg-canvas p-5"
                 >
                   <div className="flex items-center gap-3">
                     <span
-                      className={`flex size-9 shrink-0 items-center justify-center rounded-[10px] ${accent.bg}`}
+                      className={`flex size-9 shrink-0 items-center justify-center rounded-tile ${accent.bg}`}
                     >
                       <Icon size={18} className="text-white" aria-hidden />
                     </span>
@@ -137,8 +140,8 @@ function OverviewPage(): JSX.Element {
                       <span className="font-sans text-[17px] font-bold text-ink">
                         {SUBJECT_LABELS[s]}
                       </span>
-                      <span className="font-sans text-[15px] text-ink-3">
-                        {sum.topics} topics
+                      <span className="font-sans text-[15px] tabular-nums text-ink-3">
+                        {sum.topics} {sum.topics === 1 ? "topic" : "topics"}
                       </span>
                     </div>
                   </div>
@@ -158,25 +161,25 @@ function OverviewPage(): JSX.Element {
             {recent.map((p) => (
               <li
                 key={`${p.student_id}-${p.topic_id}-${p.updated_at}`}
-                className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-[12px] border border-line bg-canvas px-4 py-2.5"
+                className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-tile border border-line-soft bg-canvas px-4 py-2.5"
               >
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand font-heading text-[14px] font-bold text-white">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-sun font-heading text-[14px] font-bold text-ink">
                   {p.display_name.slice(0, 1).toUpperCase()}
                 </span>
-                <span className="font-sans text-[17px] font-semibold text-ink">
+                <span className="font-sans text-[17px] font-bold text-ink">
                   {p.display_name}
                 </span>
                 {p.class_label ? (
                   <span className="font-sans text-[15px] text-ink-3">
-                    · {classLabelOf(p.class_label)}
+                    {classLabelOf(p.class_label)}
                   </span>
                 ) : null}
                 <span className="font-sans text-[16px] text-ink-2">
                   {p.state === "completed" ? "completed" : "started"}{" "}
                   {titleOf.get(p.topic_id) ?? p.topic_id}
                 </span>
-                <span className="ml-auto font-sans text-[14px] text-ink-3">
-                  {p.updated_at}
+                <span className="ml-auto font-sans text-[14px] tabular-nums text-ink-3">
+                  {formatDbTime(p.updated_at)}
                 </span>
               </li>
             ))}
@@ -184,10 +187,8 @@ function OverviewPage(): JSX.Element {
         )}
       </SectionCard>
 
-      {/* Leaderboard — ranked by topics completed. Empty/all-zero until
-          something in the app actually marks a topic "completed" again (see
-          the quiz-removal note: progress currently has no completion
-          trigger), but it's wired correctly for whenever that lands. */}
+      {/* Leaderboard — ranked by topics completed (students mark a topic
+          complete at the end of its lesson). */}
       <SectionCard icon={Trophy} title="Leaderboard" count={leaders.length} ariaLabel="Student leaderboard">
         {leaders.length === 0 ? (
           <p className="font-sans text-[18px] text-ink-3">
@@ -198,20 +199,24 @@ function OverviewPage(): JSX.Element {
             {leaders.map((row, i) => (
               <li
                 key={row.student.id}
-                className="flex flex-wrap items-center gap-3 rounded-[12px] border border-line bg-canvas px-4 py-2.5"
+                className="flex flex-wrap items-center gap-3 rounded-tile border border-line-soft bg-canvas px-4 py-2.5"
               >
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-side font-sans text-[14px] font-bold text-white">
+                <span
+                  className={`flex size-7 shrink-0 items-center justify-center rounded-full font-sans text-[14px] font-bold ${
+                    i === 0 ? "bg-sun text-ink" : "bg-side text-white"
+                  }`}
+                >
                   {i + 1}
                 </span>
-                <span className="font-sans text-[17px] font-semibold text-ink">
+                <span className="font-sans text-[17px] font-bold text-ink">
                   {row.student.display_name}
                 </span>
                 {row.student.class_label ? (
                   <span className="font-sans text-[15px] text-ink-3">
-                    · {classLabelOf(row.student.class_label)}
+                    {classLabelOf(row.student.class_label)}
                   </span>
                 ) : null}
-                <span className="ml-auto font-sans text-[16px] font-bold text-ink">
+                <span className="ml-auto font-sans text-[16px] font-bold tabular-nums text-ink">
                   {row.completed}
                 </span>
                 <span className="font-sans text-[14px] text-ink-3">completed</span>
@@ -227,7 +232,7 @@ function OverviewPage(): JSX.Element {
       {errors.length > 0 ? (
         <ComingSoon
           title="Content validation"
-          note={`${errors.length} pack(s) failed validation — see the Content page.`}
+          note={`${errors.length} ${errors.length === 1 ? "pack" : "packs"} failed validation. See the Subjects page for details.`}
         />
       ) : null}
     </div>

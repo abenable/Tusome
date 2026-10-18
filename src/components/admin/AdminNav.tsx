@@ -4,9 +4,9 @@
 // <Link>) rather than in-page tabs so each admin page is a real route:
 // shareable, back-button friendly, and individually loadable.
 //
-// DESIGN.md: single Action Blue for the active/interactive state, pill grammar,
-// Manrope, ≥44px touch targets. Sticky within the admin content column so it
-// stays reachable while scrolling long tables.
+// Ink pill for the active page, pill grammar, ≥44px touch targets. Sticky
+// within the admin content column so it stays reachable while scrolling long
+// tables.
 
 import { Link, type LinkProps } from "@tanstack/react-router";
 
@@ -32,14 +32,14 @@ export function AdminNav() {
   return (
     <nav
       aria-label="Admin sections"
-      className="sticky top-0 z-10 -mx-1 flex flex-wrap justify-center gap-1.5 bg-canvas/90 px-1 py-2 backdrop-blur"
+      className="sticky top-0 z-10 mx-auto flex w-fit flex-wrap justify-center gap-1 rounded-full border border-line bg-surface/95 p-1 shadow-card backdrop-blur"
     >
       {ITEMS.map((item) => (
         <Link
           key={item.label}
           to={item.to}
           activeOptions={item.exact ? { exact: true } : undefined}
-          className="inline-flex min-h-[40px] items-center rounded-full px-4 font-sans text-[17px] font-semibold text-ink-2 transition-colors hover:bg-canvas hover:text-ink"
+          className="inline-flex min-h-[44px] items-center rounded-full px-5 font-sans text-[17px] font-bold text-ink-2 transition-colors hover:bg-canvas hover:text-ink"
           // activeProps swaps in the filled brand pill when this is the current
           // route (TanStack merges the className for the active state).
           activeProps={{

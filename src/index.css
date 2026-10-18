@@ -2,39 +2,58 @@
 @import "tw-animate-css";
 @import "./styles/shadcn.css";
 
-/* Manrope — self-hosted variable font (weights 400-800 in one file).
+/* Two self-hosted variable fonts (OFL), vendored into public/fonts/ because the
+ * app ships offline behind CSP `default-src 'self'` — a Google Fonts link can
+ * never load here. ~113 KB for both families, latin + latin-ext.
  *
- * The design (claude.ai/design "UI design improvement request") links Manrope
- * from fonts.googleapis.com. That can never work here: the app ships offline
- * and the CSP is `default-src 'self'`, so a remote stylesheet and its font
- * files are both blocked. Vendored into public/fonts/ instead — 40 KB total
- * for the whole family, because Manrope is variable. */
+ *   Bricolage Grotesque     — headings. Warm, slightly quirky grotesque; gives
+ *                             the brand a voice without going editorial.
+ *   Atkinson Hyperlegible   — body. Designed by the Braille Institute for low-
+ *   Next                      vision readers: I/l/1 and 0/O are unambiguous,
+ *                             which matters for maths and science text read off
+ *                             a classroom projector. */
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Bricolage Grotesque';
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 200 800;
   font-display: swap;
-  src: url('/fonts/manrope-latin.woff2') format('woff2');
+  src: url('/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Bricolage Grotesque';
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 200 800;
   font-display: swap;
-  src: url('/fonts/manrope-latin-ext.woff2') format('woff2');
+  src: url('/fonts/bricolage-grotesque-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* Light-only by design: the app is read off classroom projectors, where a
+ * dark UI washes out. Keeping `dark:` bound to a `.dark` class nobody sets stops
+ * Tailwind's default (OS prefers-color-scheme) from half-darkening the shadcn
+ * components on a teacher's dark-mode laptop. */
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    /* One family, two roles. The design uses Manrope throughout and separates
-       headings from body by weight (700/800 vs 400/500), not by typeface, so
-       both tokens resolve to the same stack. Kept as two tokens so the ~700
-       existing `font-heading` / `font-sans` call sites keep working. */
-    --font-heading: 'Manrope', system-ui, sans-serif;
-    --font-sans: 'Manrope', system-ui, sans-serif;
+    --font-heading: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-sans: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
 
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
@@ -79,161 +98,106 @@
 /* Design tokens live in a plain `@theme`, NOT `@theme inline`.
  *
  * `@theme inline` resolves a token into the utility that uses it and does not
- * reliably emit the matching `--color-*` custom property to :root — verified
- * against the built CSS, where only 5 of 19 survived. Several places need the
- * real variable at runtime (the subject-tinted hatch on Home's featured card,
- * the conic-gradient progress rings on /subjects), and those are composed from
- * a subject name at render time, so they cannot be written as static utility
- * classes. A plain `@theme` block emits every variable AND still generates the
- * utilities, so `bg-physics` and `var(--color-physics)` both work.
+ * reliably emit the matching `--color-*` custom property to :root. Several
+ * places compose a variable from a subject name at render time (the progress
+ * rings, the continue band's gradient), so they need the real variable. A plain
+ * `@theme` block emits every variable AND still generates the utilities, so
+ * `bg-physics` and `var(--color-physics)` both work.
  *
- * The shadcn mappings above stay `inline` — they are aliases onto variables
- * that :root already declares in ./styles/shadcn.css. */
+ * Every contrast ratio below is WCAG 2.x, measured from the oklch value. */
 @theme {
-    /* ── Design tokens ──────────────────────────────────────────────────
-       Ported from the claude.ai/design project "UI design improvement
-       request" (Home.dc.html and siblings define them inline on the page
-       wrapper). Three of the design's values are darkened here for WCAG AA;
-       each carries its measured ratio. Everything else is verbatim.
+    /* ── Neutrals: one warm family (hue 75-85), never mixed with cool greys.
+       ink 15.7:1, ink-2 7.9:1, ink-3 5.6:1 on canvas. */
+    --color-ink: oklch(0.23 0.012 75);
+    --color-ink-2: oklch(0.42 0.012 75);
+    --color-ink-3: oklch(0.50 0.012 75);
 
-       `border-hairline` predates this palette and is still used by ~15
-       components, so the token stays and now points at the new line colour
-       rather than #e0e0e0 — the utility keeps working, the colour updates. */
-    --color-hairline: oklch(0.9 0.005 260);
+    --color-canvas: oklch(0.975 0.005 85);
+    --color-surface: oklch(0.995 0.002 85);
+    --color-line: oklch(0.905 0.008 85);
+    --color-line-soft: oklch(0.945 0.006 85);
+    /* Legacy alias still used by a few components. */
+    --color-hairline: oklch(0.905 0.008 85);
 
-    /* Text. --color-ink-3 is the design's --ink3 darkened from L=0.6 to
-       L=0.52: at 0.6 it measured 3.62:1 on --color-canvas, below AA's 4.5:1,
-       and it carries every caption and secondary table cell. Now 5.05:1.
-       This is the same failure the Apple palette hit with #7a7a7a — see the
-       ink-muted-48 note below, which this palette supersedes. */
-    --color-ink: oklch(0.24 0.014 260);
-    --color-ink-2: oklch(0.44 0.012 260);
-    --color-ink-3: oklch(0.52 0.01 260);
+    /* ── Brand. Ink is the action colour (white on brand 16.9:1), so every
+       primary button reads at the back of a classroom. Sun is the single
+       accent — logo, the main "continue" CTA, the active sidebar row — and
+       always carries ink text (10.6:1), never white. --color-sun-ink is the
+       text-safe sun for links on light surfaces (7.5:1). */
+    --color-brand: oklch(0.23 0.012 75);
+    --color-brand-hover: oklch(0.34 0.014 75);
+    --color-sun: oklch(0.85 0.165 88);
+    --color-sun-hover: oklch(0.80 0.165 82);
+    --color-sun-tint: oklch(0.96 0.045 95);
+    --color-sun-ink: oklch(0.45 0.10 75);
 
-    /* Surfaces. --color-canvas is the page field, --color-surface the cards
-       that sit on it. --color-line-soft is the design's lighter divider. */
-    --color-canvas: oklch(0.97 0.004 260);
-    --color-surface: oklch(1 0 0);
-    --color-line: oklch(0.9 0.005 260);
-    --color-line-soft: oklch(0.94 0.004 260);
+    /* Sidebar shell. side-text 8.4:1, sun 11.4:1 on side. */
+    --color-side: oklch(0.2 0.012 70);
+    --color-side-text: oklch(0.76 0.012 80);
 
-    /* Brand + the dark sidebar shell. --color-side-text measures 6.91:1 on
-       --color-side, so it needs no correction. */
-    --color-brand: oklch(0.52 0.17 258);
-    --color-brand-hover: oklch(0.46 0.17 258);
-    --color-side: oklch(0.19 0.02 262);
-    --color-side-text: oklch(0.7 0.02 262);
-
-    /* Per-subject accents. Each `-tint` is the pale wash behind a badge; the
-       solid is used for text and filled chips, so each solid must clear AA on
-       both --color-canvas and --color-surface. Chemistry (L 0.55 -> 0.50,
-       was 4.18:1, now 5.13:1) and Biology (L 0.64 -> 0.55, was 3.24:1, now
-       4.67:1) are darkened for that reason. Physics (4.55:1) and Mathematics
-       (4.86:1) pass as designed. */
-    --color-physics: oklch(0.55 0.18 258);
-    --color-physics-tint: oklch(0.94 0.03 258);
+    /* ── Subjects: a functional colour code, not decoration — a student can
+       tell which subject they're in from colour alone. Each solid clears AA as
+       text on surface (>=5.5:1), on canvas (>=5.2:1), on its own tint
+       (>=4.85:1), and with white text on top (>=5.5:1). */
+    --color-physics: oklch(0.52 0.18 258);
+    --color-physics-tint: oklch(0.955 0.028 258);
     --color-chemistry: oklch(0.50 0.13 155);
-    --color-chemistry-tint: oklch(0.94 0.03 155);
-    --color-biology: oklch(0.55 0.15 55);
-    --color-biology-tint: oklch(0.95 0.035 60);
-    --color-mathematics: oklch(0.55 0.17 320);
-    --color-mathematics-tint: oklch(0.94 0.03 320);
+    --color-chemistry-tint: oklch(0.955 0.03 155);
+    --color-biology: oklch(0.53 0.15 55);
+    --color-biology-tint: oklch(0.96 0.035 60);
+    --color-mathematics: oklch(0.52 0.17 320);
+    --color-mathematics-tint: oklch(0.955 0.028 320);
 
-    /* Correct / incorrect, used only by the teacher's per-question breakdown
-       (Admin.dc.html defines --good / --bad; no other screen does). These are
-       filled chips with a white glyph, and the verdict is ALSO written as text
-       beside them, so colour is never the sole carrier.
-
-       --color-good is darkened from the design's L=0.55 to L=0.50: at 0.55
-       white-on-green measured 4.52:1, which clears AA only by 0.02 and fails
-       the moment the chip is reused as text on --color-canvas (4.14:1). At
-       0.50 it is 5.51:1 / 5.05:1. --color-bad passes as designed (5.35:1 /
-       4.90:1) and is unchanged.
-
-       Note these are the ONLY red/green in the app. The Phase 7 update log
-       deliberately avoids them (single-blue outcome badges); correct-vs-wrong
-       is a different signal and the convention earns its place here. */
+    /* Correct / incorrect and form errors. The verdict is always written as
+       text too, so colour is never the only carrier. bad 5.3:1, good 5.4:1. */
     --color-good: oklch(0.50 0.14 155);
     --color-bad: oklch(0.55 0.19 25);
+
+    /* Shape rule: interactive controls are full pills; cards are `rounded-card`
+       (20px); icon chips and inset blocks are `rounded-tile` (12px). */
+    --radius-card: 20px;
+    --radius-tile: 12px;
+
+    /* Shadows are tinted with the ink hue, never neutral black. */
+    --shadow-card: 0 1px 2px oklch(0.3 0.02 70 / 0.05), 0 10px 24px -18px oklch(0.3 0.02 70 / 0.22);
+    --shadow-lift: 0 2px 4px oklch(0.3 0.02 70 / 0.06), 0 18px 36px -20px oklch(0.3 0.02 70 / 0.32);
 }
 
-
-/* ink-muted-48 contrast (resolved)
- *
- * DESIGN.md `ink-muted-48` (#7a7a7a) measured ≈4.29:1 against white — below
- * WCAG AA 4.5:1 for normal text. Bumped to #666666 (≈5.74:1, passes AA) across
- * all call sites. This deviates from DESIGN.md's literal token; update
- * DESIGN.md's `ink-muted-48` to #666666 to keep it the source of truth.
- * Re-check on a real projector at Gate 3 — muted text at the back of a room
- * is the case that actually matters.
- */
+/* shadcn/Base UI components (src/components/ui/*) read these. Mapped onto the
+ * tokens above so dialogs, inputs and selects sit in the same warm family. */
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --background: var(--color-canvas);
+    --foreground: var(--color-ink);
+    --card: var(--color-surface);
+    --card-foreground: var(--color-ink);
+    --popover: var(--color-surface);
+    --popover-foreground: var(--color-ink);
+    --primary: var(--color-brand);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: var(--color-line-soft);
+    --secondary-foreground: var(--color-ink);
+    --muted: var(--color-line-soft);
+    --muted-foreground: var(--color-ink-3);
+    --accent: var(--color-line-soft);
+    --accent-foreground: var(--color-ink);
+    --destructive: var(--color-bad);
+    --border: var(--color-line);
+    --input: var(--color-line);
+    --ring: var(--color-ink-3);
+    --chart-1: var(--color-physics);
+    --chart-2: var(--color-chemistry);
+    --chart-3: var(--color-biology);
+    --chart-4: var(--color-mathematics);
+    --chart-5: var(--color-sun);
+    --radius: 0.75rem;
+    --sidebar: var(--color-side);
+    --sidebar-foreground: var(--color-side-text);
+    --sidebar-primary: var(--color-sun);
+    --sidebar-primary-foreground: var(--color-ink);
+    --sidebar-accent: oklch(1 0 0 / 8%);
+    --sidebar-accent-foreground: oklch(1 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --sidebar-ring: var(--color-sun);
 }
 
 @layer base {
@@ -242,40 +206,42 @@
     }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
     }
   html {
     @apply font-sans;
     }
-  /* Visible focus ring for the hand-rolled <Link>/<button> elements across
-     the app (route back-links, profile tiles, table cells, admin controls).
-     shadcn Button/Input/Slider/Dialog/Select/Tabs all carry a `data-slot`
-     attribute and handle their own focus via cva `focus-visible:ring-*`
-     utilities; `:not([data-slot])` excludes every one of them so the two
-     focus styles don't stack into a doubled ring+outline. Uses DESIGN.md
-     focus colour --color-brand-hover. A missing focus ring was the main W8 keyboard-nav
-     gap; a global rule fixes every current + future custom control without
-     per-element churn. */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  /* Visible focus ring for the hand-rolled <Link>/<button>/<input> elements
+     across the app. shadcn controls carry `data-slot` and draw their own ring,
+     so they're excluded to avoid a doubled ring+outline. Ink on light surfaces;
+     sun inside the dark sidebar, where ink would vanish. */
   a:not([data-slot]):focus-visible,
-  button:not([data-slot]):focus-visible {
-    outline: 2px solid var(--color-brand-hover);
+  button:not([data-slot]):focus-visible,
+  select:not([data-slot]):focus-visible {
+    outline: 2px solid var(--color-ink);
     outline-offset: 2px;
+  }
+  .bg-side a:focus-visible,
+  .bg-side button:focus-visible {
+    outline-color: var(--color-sun);
   }
 }
 
-/* prefers-reduced-motion — UI chrome only (W8 a11y).
+/* prefers-reduced-motion — UI chrome only.
  *
- * Collapses every CSS transition/animation to an instantaneous change so a
- * user who prefers reduced motion doesn't see the active:scale-95 press,
- * the hover colour fades, or any shadcn/Base UI panel transitions. The ~0ms
- * (not 0) duration keeps the active-press transform as instant feedback
+ * Collapses every CSS transition/animation to an instantaneous change. The
+ * ~0ms (not 0) duration keeps the active-press transform as instant feedback
  * without a smooth tween.
  *
- * IMPORTANT: this does NOT affect the simulations. Sim motion is JS
- * requestAnimationFrame driving a Canvas2D draw loop (see SimCanvas.tsx) —
- * it is the CONTENT, not UI chrome, and is intentionally not gated here. A
- * paused sim is already controllable via the Pause button; reducing its
- * motion would defeat the purpose of the sim. This rule only touches CSS
- * transitions/animations on DOM elements. */
+ * This does NOT affect the simulations: sim motion is a JS rAF loop drawing a
+ * Canvas2D scene (SimCanvas.tsx). It is the content, not chrome, and a paused
+ * sim is already controllable via its Pause button. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

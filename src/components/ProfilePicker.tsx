@@ -4,7 +4,7 @@
 // whole login") — see the note atop src/lib/student-context.tsx. Flow:
 //
 //   root (Login / Sign Up buttons, + Guest / Admin tiles)
-//     -> class picker (pick an existing class, or add a new one)
+//     -> class picker (one big button per level, S1..S4)
 //       -> profile cards for that class (+ a "Create account" tile)
 //         -> tap a card            -> password prompt -> verify -> signed in
 //         -> tap "Create account"  -> name + password  -> signed in
@@ -18,6 +18,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, Plus, Settings, UserRound } from "lucide-react";
+
 
 import { useStudent, type StudentContextValue } from "@/lib/student-context";
 import { SUBJECTS, SUBJECT_ACCENTS } from "@/lib/subjects";
@@ -41,7 +42,7 @@ export function ProfilePicker() {
 
   return (
     <section
-      className="mx-auto flex w-full max-w-[560px] flex-col items-center gap-8 text-center"
+      className="mx-auto flex w-full max-w-[600px] flex-col items-center gap-8 pt-4 text-center"
       aria-label="Choose a profile"
     >
       {step.kind === "root" ? (
@@ -117,11 +118,11 @@ function RootScreen({
   return (
     <>
       <header className="flex flex-col items-center gap-3 text-center">
-        <h1 className="font-heading text-[38px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
-          Who’s using Tusome?
+        <h1 className="font-heading text-[44px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink">
+          Who’s learning today?
         </h1>
         <p className="font-sans text-[19px] leading-relaxed text-ink-2">
-          Log in to an existing profile, or sign up for a new one.
+          Log in to your profile, or sign up if you’re new.
         </p>
       </header>
 
@@ -129,20 +130,20 @@ function RootScreen({
         <button
           type="button"
           onClick={onLogin}
-          className="inline-flex min-h-[52px] items-center rounded-full bg-brand px-8 font-sans text-[19px] font-bold text-white transition active:scale-95 hover:bg-brand-hover"
+          className="inline-flex min-h-[56px] min-w-[150px] items-center justify-center rounded-full bg-sun px-8 font-sans text-[19px] font-bold text-ink transition hover:bg-sun-hover active:scale-[0.98]"
         >
           Log in
         </button>
         <button
           type="button"
           onClick={onSignUp}
-          className="inline-flex min-h-[52px] items-center rounded-full border-[1.5px] border-brand px-8 font-sans text-[19px] font-bold text-brand transition active:scale-95 hover:bg-brand/5"
+          className="inline-flex min-h-[56px] min-w-[150px] items-center justify-center rounded-full border-2 border-ink px-8 font-sans text-[19px] font-bold text-ink transition hover:bg-ink/5 active:scale-[0.98]"
         >
           Sign up
         </button>
       </div>
 
-      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="mt-2 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
         <GuestTile onPick={onGuest} />
         <AdminTile />
       </div>
@@ -163,52 +164,34 @@ function ClassPicker({
   onBack: () => void;
   onPick: (className: string) => void;
 }) {
-  const [selected, setSelected] = useState<string>(LEVEL_ORDER[0]);
-
-  function submit(e: React.FormEvent) {
-    e.preventDefault();
-    onPick(selected);
-  }
-
   return (
     <>
       <BackButton onClick={onBack} label="Back" />
       <header className="flex flex-col items-center gap-2 text-center">
-        <h1 className="font-heading text-[31px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
-          {mode === "login" ? "Pick your class" : "Pick your class to sign up"}
+        <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
+          {mode === "login" ? "Which class are you in?" : "Pick your class to sign up"}
         </h1>
         <p className="font-sans text-[18px] leading-relaxed text-ink-2">
-          Your profile is grouped by class.
+          Profiles are grouped by class.
         </p>
       </header>
 
-      <form
-        onSubmit={submit}
-        className="flex flex-col items-center gap-4"
-        aria-label="Pick a class"
+      <div
+        className="grid w-full grid-cols-2 gap-4 sm:grid-cols-4"
+        role="group"
+        aria-label="Class"
       >
-        <label className="flex flex-col items-center gap-2 font-sans text-[16px] text-ink-2">
-          Class
-          <select
-            value={selected}
-            onChange={(e) => setSelected(e.target.value)}
-            aria-label="Class"
-            className="min-h-[48px] w-[220px] rounded-full border border-line bg-surface px-5 text-center font-sans text-[19px] font-semibold text-ink"
+        {LEVEL_ORDER.map((level) => (
+          <button
+            key={level}
+            type="button"
+            onClick={() => onPick(level)}
+            className="flex min-h-[96px] items-center justify-center rounded-card border border-line bg-surface font-heading text-[32px] font-extrabold text-ink shadow-card transition hover:-translate-y-0.5 hover:border-ink-3 active:scale-[0.98]"
           >
-            {LEVEL_ORDER.map((level) => (
-              <option key={level} value={level}>
-                {level}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button
-          type="submit"
-          className="inline-flex min-h-[48px] items-center rounded-full bg-brand px-8 font-sans text-[18px] font-bold text-white transition active:scale-95 hover:bg-brand-hover"
-        >
-          Continue
-        </button>
-      </form>
+            {level}
+          </button>
+        ))}
+      </div>
     </>
   );
 }
@@ -236,7 +219,7 @@ function ProfileGrid({
     <>
       <BackButton onClick={onBack} label="Change class" />
       <header className="flex flex-col items-center gap-2 text-center">
-        <h1 className="font-heading text-[31px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
+        <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
           {className}
         </h1>
         <p className="font-sans text-[18px] leading-relaxed text-ink-2">
@@ -259,16 +242,16 @@ function ProfileGrid({
           <button
             type="button"
             onClick={onCreate}
-            className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-[18px] border-[1.5px] border-dashed border-line bg-transparent px-[18px] py-4 text-center transition active:scale-95 hover:bg-canvas"
+            className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-line bg-transparent px-[18px] py-4 text-center transition hover:border-ink-3 hover:bg-surface active:scale-[0.98]"
           >
             <span
-              className="flex size-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-line bg-canvas text-ink-3"
+              className="flex size-11 shrink-0 items-center justify-center rounded-full bg-sun text-ink"
               aria-hidden
             >
-              <Plus className="size-[18px]" />
+              <Plus className="size-5" />
             </span>
             <span className="flex min-w-0 flex-col items-center">
-              <span className="font-sans text-[18px] font-semibold text-brand">
+              <span className="font-sans text-[18px] font-bold text-ink">
                 Create account
               </span>
               <span className="font-sans text-[15px] text-ink-3">
@@ -304,10 +287,10 @@ function ProfileCard({
     <button
       type="button"
       onClick={onPick}
-      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-[18px] border border-line bg-surface px-[18px] py-4 text-center shadow-[0_1px_2px_rgba(0,0,0,.03)] transition active:scale-95 hover:bg-canvas"
+      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-card border border-line bg-surface px-[18px] py-4 text-center shadow-card transition hover:-translate-y-0.5 hover:shadow-lift active:scale-[0.98]"
     >
       <span
-        className={`flex size-10 shrink-0 items-center justify-center rounded-full font-heading text-[17px] font-bold text-white ${accent.bg}`}
+        className={`flex size-11 shrink-0 items-center justify-center rounded-full font-heading text-[18px] font-bold text-white ${accent.bg}`}
         aria-hidden
       >
         {student.display_name.slice(0, 1).toUpperCase()}
@@ -374,39 +357,40 @@ function PasswordStep({
       <BackButton onClick={onBack} label="Back" />
       <div className="flex flex-col items-center gap-3">
         <span
-          className={`flex size-10 shrink-0 items-center justify-center rounded-full font-heading text-[17px] font-bold text-white ${accent.bg}`}
+          className={`flex size-14 shrink-0 items-center justify-center rounded-full font-heading text-[24px] font-bold text-white ${accent.bg}`}
           aria-hidden
         >
           {student.display_name.slice(0, 1).toUpperCase()}
         </span>
-        <h1 className="font-heading text-[27px] font-extrabold tracking-[-0.01em] text-ink">
+        <h1 className="font-heading text-[30px] font-extrabold tracking-[-0.01em] text-ink">
           {student.display_name}
         </h1>
       </div>
 
       <form
         onSubmit={submit}
-        className="flex w-full flex-col items-center gap-4 rounded-[18px] border border-line bg-surface px-6 py-5"
+        className="flex w-full max-w-[400px] flex-col gap-4 rounded-card border border-line bg-surface p-6 text-left shadow-card"
         aria-label={`Log in as ${student.display_name}`}
       >
-        <label className="flex flex-col items-center gap-2 font-sans text-[16px] text-ink-2">
+        <label className="flex flex-col gap-2 font-sans text-[16px] font-bold text-ink-2">
           Password
           <PasswordField
             value={password}
             onChange={setPassword}
             autoComplete="current-password"
             inputRef={inputRef}
+            widthClassName="w-full"
           />
         </label>
         {error ? (
-          <p className="font-sans text-[16px] leading-relaxed text-ink-3">
+          <p role="alert" className="font-sans text-[16px] font-bold leading-relaxed text-bad">
             {error}
           </p>
         ) : null}
         <button
           type="submit"
           disabled={busy || password.length === 0}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
         >
           Log in
         </button>
@@ -466,20 +450,20 @@ function CreateAccountStep({
     <>
       <BackButton onClick={onBack} label="Back" />
       <header className="flex flex-col items-center gap-2 text-center">
-        <h1 className="font-heading text-[31px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
+        <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
           Create your account
         </h1>
         <p className="font-sans text-[18px] leading-relaxed text-ink-2">
-          Under {className}
+          You’ll join {className}.
         </p>
       </header>
 
       <form
         onSubmit={submit}
-        className="flex w-full flex-col items-center gap-4 rounded-[18px] border border-line bg-surface px-6 py-5"
+        className="flex w-full max-w-[400px] flex-col gap-4 rounded-card border border-line bg-surface p-6 text-left shadow-card"
         aria-label="Create a new profile"
       >
-        <label className="flex flex-col items-center gap-2 font-sans text-[16px] text-ink-2">
+        <label className="flex flex-col gap-2 font-sans text-[16px] font-bold text-ink-2">
           Your name
           <Input
             ref={nameRef}
@@ -487,28 +471,29 @@ function CreateAccountStep({
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="e.g. Aisha"
-            className="min-h-[44px] w-[260px] rounded-full border border-line bg-surface px-4 font-sans text-[19px] text-ink"
+            className="min-h-[44px] w-full rounded-full border border-line bg-surface px-4 font-sans text-[19px] font-normal text-ink"
           />
         </label>
-        <label className="flex flex-col items-center gap-2 font-sans text-[16px] text-ink-2">
+        <label className="flex flex-col gap-2 font-sans text-[16px] font-bold text-ink-2">
           Password
           <PasswordField
             value={password}
             onChange={setPassword}
             autoComplete="new-password"
+            widthClassName="w-full"
           />
         </label>
         {error ? (
-          <p className="font-sans text-[16px] leading-relaxed text-ink-3">
+          <p role="alert" className="font-sans text-[16px] font-bold leading-relaxed text-bad">
             {error}
           </p>
         ) : null}
         <button
           type="submit"
           disabled={busy}
-          className="inline-flex min-h-[44px] w-fit items-center rounded-[9999px] bg-brand px-6 text-[19px] text-white transition active:scale-95 hover:bg-brand-hover disabled:opacity-50"
+          className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98] disabled:opacity-50"
         >
-          Create account &amp; continue
+          Create account
         </button>
       </form>
     </>
@@ -524,9 +509,9 @@ function BackButton({ onClick, label }: { onClick: () => void; label: string }) 
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex min-h-[44px] w-fit items-center gap-2 rounded-[8px] px-1 font-sans text-[16px] font-semibold text-brand transition hover:underline"
+      className="inline-flex min-h-[44px] w-fit items-center gap-2 rounded-full px-2 font-sans text-[16px] font-bold text-ink-2 transition hover:text-ink"
     >
-      <ArrowLeft className="size-4" aria-hidden />
+      <ArrowLeft className="size-[18px]" aria-hidden />
       {label}
     </button>
   );
@@ -537,16 +522,16 @@ function GuestTile({ onPick }: { onPick: () => void }) {
     <button
       type="button"
       onClick={onPick}
-      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-[18px] border-[1.5px] border-dashed border-line bg-transparent px-[18px] py-4 text-center transition active:scale-95 hover:bg-canvas"
+      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-card border border-line bg-surface px-[18px] py-5 text-center transition hover:-translate-y-0.5 hover:shadow-card active:scale-[0.98]"
     >
       <span
-        className="flex size-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-line bg-canvas text-ink-3"
+        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-line-soft text-ink-2"
         aria-hidden
       >
-        <UserRound className="size-[18px]" />
+        <UserRound className="size-5" />
       </span>
       <span className="flex min-w-0 flex-col items-center">
-        <span className="font-sans text-[18px] font-semibold text-ink-2">
+        <span className="font-sans text-[18px] font-bold text-ink">
           Guest
         </span>
         <span className="font-sans text-[15px] text-ink-3">
@@ -564,16 +549,16 @@ function AdminTile() {
   return (
     <Link
       to="/settings"
-      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-[18px] border border-line bg-surface px-[18px] py-4 text-center shadow-[0_1px_2px_rgba(0,0,0,.03)] transition active:scale-95 hover:bg-canvas"
+      className="flex min-h-20 w-full flex-col items-center justify-center gap-2 rounded-card border border-line bg-surface px-[18px] py-5 text-center transition hover:-translate-y-0.5 hover:shadow-card active:scale-[0.98]"
     >
       <span
-        className="flex size-10 shrink-0 items-center justify-center rounded-full bg-side text-white"
+        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-side text-white"
         aria-hidden
       >
-        <Settings className="size-[18px]" />
+        <Settings className="size-5" />
       </span>
       <span className="flex min-w-0 flex-col items-center">
-        <span className="font-sans text-[18px] font-semibold text-ink">Admin</span>
+        <span className="font-sans text-[18px] font-bold text-ink">Teacher / admin</span>
         <span className="font-sans text-[15px] text-ink-3">
           PIN-protected settings
         </span>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- App icon source: `bun tauri icon src-tauri/icons/icon.svg` regenerates every PNG/ICO/ICNS here. Same shapes as public/favicon.svg and src/components/BrandMark.tsx. -->
+  <rect width="64" height="64" rx="16" fill="#fbc629"/>
+  <circle cx="32" cy="21.5" r="7" fill="#201c17"/>
+  <path d="M30.5 49V35.2C25.6 31.6 18.8 30.6 11.5 31.6v14c7.3-1 14.1 0 19 3.4z" fill="#201c17"/>
+  <path d="M33.5 49V35.2c4.9-3.6 11.7-4.6 19-3.6v14c-7.3-1-14.1 0-19 3.4z" fill="#201c17"/>
+</svg>

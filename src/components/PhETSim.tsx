@@ -32,6 +32,7 @@ export function PhETSim({ file }: { file: string }) {
 
   useEffect(() => {
     let cancelled = false
+    setState({ kind: "loading" })
     // Dev (Vite, incl. `bun tauri dev`): serve the bundled HTML from the
     // repo's content/sims/ via the same-origin `/__sim/<file>` middleware in
     // vite.config.ts. Same-origin → CSP `frame-src 'self'` covers it.
@@ -46,15 +47,21 @@ export function PhETSim({ file }: { file: string }) {
       return
     }
     void (async () => {
-      const { invoke, convertFileSrc } = await import("@tauri-apps/api/core")
-      const rel = `sims/${file}`
-      const abs = await invoke<string | null>("resolve_content_path", { rel })
-      if (cancelled) return
-      if (!abs) {
-        setState({ kind: "missing" })
-        return
+      try {
+        const { invoke, convertFileSrc } = await import("@tauri-apps/api/core")
+        const rel = `sims/${file}`
+        const abs = await invoke<string | null>("resolve_content_path", { rel })
+        if (cancelled) return
+        if (!abs) {
+          setState({ kind: "missing" })
+          return
+        }
+        setState({ kind: "ready", src: convertFileSrc(abs) })
+      } catch (err) {
+        // A rejected invoke used to leave "Loading simulation…" up forever.
+        console.error("[PhETSim] resolve_content_path failed:", err)
+        if (!cancelled) setState({ kind: "missing" })
       }
-      setState({ kind: "ready", src: convertFileSrc(abs) })
     })()
     return () => {
       cancelled = true
@@ -63,22 +70,33 @@ export function PhETSim({ file }: { file: string }) {
 
   if (state.kind === "loading") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-ink-3">
+      <div
+        role="status"
+        className="flex min-h-[420px] animate-pulse items-center justify-center rounded-card border border-line bg-surface font-sans text-[17px] text-ink-3"
+      >
         Loading simulation…
       </div>
     )
   }
   if (state.kind === "non-tauri") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-center text-ink-3">
-        PhET simulation — run under Tauri (`bun tauri dev`) to view.
+      <div className="flex min-h-[420px] items-center justify-center rounded-card border border-dashed border-line bg-surface px-6 text-center font-sans text-[17px] text-ink-3">
+        This simulation runs inside the Tusome app.
       </div>
     )
   }
   if (state.kind === "missing") {
     return (
-      <div className="flex min-h-[420px] items-center justify-center rounded-[8px] bg-canvas text-center text-ink-3">
-        Simulation file not found. Run `scripts/fetch-phet-sims.sh`.
+      <div
+        role="alert"
+        className="flex min-h-[420px] flex-col items-center justify-center gap-1 rounded-card border border-dashed border-line bg-surface px-6 text-center font-sans"
+      >
+        <p className="text-[18px] font-bold text-ink">
+          This simulation isn’t installed on this computer.
+        </p>
+        <p className="text-[16px] text-ink-3">
+          Ask your teacher to update Tusome’s content.
+        </p>
       </div>
     )
   }
@@ -86,7 +104,7 @@ export function PhETSim({ file }: { file: string }) {
     <iframe
       title="PhET simulation"
       src={state.src}
-      className="h-[70vh] w-full min-h-[420px] rounded-[8px] border-0 bg-white"
+      className="h-[70vh] min-h-[420px] w-full rounded-card border border-line bg-white"
       sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
     />
   )

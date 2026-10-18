@@ -11,7 +11,7 @@ export function ComingSoon({
   note?: string;
 }): JSX.Element {
   return (
-    <section className="flex flex-col gap-2 rounded-[18px] border border-line bg-surface p-6">
+    <section className="flex flex-col gap-2 rounded-card border border-line bg-surface p-6">
       <h2 className="font-heading text-[22px] font-bold tracking-[-0.01em] text-ink">
         {title}
       </h2>
