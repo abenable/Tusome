@@ -11,11 +11,11 @@
 
 import { useEffect, useMemo, useState, type JSX } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Pencil, Search, Trash2, Users } from "lucide-react";
+import { CalendarClock, Pencil, Search, Trash2, Users } from "lucide-react";
 
 import { loadPacksCached } from "@/content/loader";
 import type { PackT } from "@/content/schema";
-import { getAllProgress, hashPin, setStudentPassword } from "@/db/index";
+import { deleteClass, getAllProgress, hashPin, moveClass, setStudentPassword } from "@/db/index";
 import type { ProgressWithStudent, StudentRow } from "@/db/index";
 import { useStudent } from "@/lib/student-context";
 import { allTopics } from "@/lib/admin-stats";
@@ -261,6 +261,8 @@ function StudentsPage(): JSX.Element {
           </div>
         )}
       </SectionCard>
+
+      <NewYearCard students={students} onDone={refreshStudents} />
 
       {renaming ? (
         <RenameDialog
@@ -552,3 +554,90 @@ function ProgressDialog({
   );
 }
 
+// Start of a school year: every class moves up one (S1 → S2 … S3 → S4) and
+// S4 leavers are removed with their progress, so records aren't kept longer
+// than they're needed. Done top-down so no two classes ever merge.
+function NewYearCard({
+  students,
+  onDone,
+}: {
+  students: StudentRow[];
+  onDone: () => Promise<void>;
+}): JSX.Element {
+  const [confirming, setConfirming] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [done, setDone] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const count = (c: string) => students.filter((s) => s.class_label === c).length;
+
+  async function moveUp() {
+    setBusy(true);
+    setError(null);
+    try {
+      const left = await deleteClass("S4");
+      for (const [from, to] of [["S3", "S4"], ["S2", "S3"], ["S1", "S2"]]) await moveClass(from, to);
+      await onDone();
+      setDone(`Done. Every class moved up${left ? ` and ${left} S4 leaver${left === 1 ? " was" : "s were"} removed` : ""}.`);
+      setConfirming(false);
+    } catch (err) {
+      console.error("[Students] new year move failed:", err);
+      setError("Could not move the classes. Try again.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <SectionCard icon={CalendarClock} title="New school year" ariaLabel="Move classes up for a new school year">
+      <p className="max-w-[62ch] font-sans text-[18px] leading-relaxed text-ink-2">
+        At the start of a year, move every learner up a class in one go. S4 learners have finished, so
+        they're removed with their progress.
+      </p>
+      <p className="font-sans text-[16px] tabular-nums text-ink-3">
+        {LEVEL_ORDER.map((c) => `${c}: ${count(c)}`).join(" · ")}
+      </p>
+      {done ? (
+        <p role="status" className="font-sans text-[16px] font-bold text-good">
+          {done}
+        </p>
+      ) : null}
+      <Button
+        type="button"
+        variant="outline"
+        className="min-h-[48px] w-fit rounded-full px-6 text-[17px] font-bold"
+        onClick={() => {
+          setDone(null);
+          setConfirming(true);
+        }}
+      >
+        Move everyone up a class
+      </Button>
+      {confirming ? (
+        <Dialog open onOpenChange={(o) => { if (!o && !busy) setConfirming(false); }}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Move everyone up a class?</DialogTitle>
+              <DialogDescription>
+                S1 becomes S2, S2 becomes S3 and S3 becomes S4. The {count("S4")} learners in S4 are
+                removed with their progress. This can't be undone.
+              </DialogDescription>
+            </DialogHeader>
+            {error ? (
+              <p role="alert" className={ERROR_TEXT}>
+                {error}
+              </p>
+            ) : null}
+            <DialogFooter>
+              <Button type="button" variant="ghost" onClick={() => setConfirming(false)} disabled={busy}>
+                Cancel
+              </Button>
+              <Button type="button" disabled={busy} onClick={() => void moveUp()} className="rounded-full">
+                {busy ? "Moving…" : "Move classes up"}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      ) : null}
+    </SectionCard>
+  );
+}

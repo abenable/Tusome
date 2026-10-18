@@ -45,6 +45,8 @@ import {
 // Public types
 // ──────────────────────────────────────────────────────────────────────────
 
+const IDLE_SIGN_OUT_MS = 15 * 60 * 1000;
+
 export type StudentStatus = "loading" | "needs-pick" | "ready" | "db-error";
 
 export type StudentContextValue = {
@@ -101,7 +103,11 @@ export type ResolvedState = {
  *
  *   persisted === "guest"                       → Guest, ready
  *   persisted === null (or "" / unparsable)      → needs-pick
- *   persisted === "<id>" matching a real row   → that student, ready
+ *   persisted === "<id>" matching a real row   → that student, ready — unless
+ *                                                  they have a password: on a
+ *                                                  shared PC the next person
+ *                                                  must not open the app as
+ *                                                  them, so they sign in again
  *   persisted === "<id>" with no matching row  → needs-pick (the row was
  *                                                  deleted; force a deliberate
  *                                                  re-pick rather than silently
@@ -118,7 +124,7 @@ export function resolveInitialState(
     const id = Number(persisted);
     if (Number.isInteger(id)) {
       const match = students.find((s) => s.id === id);
-      if (match) {
+      if (match && !match.password_hash) {
         return { status: "ready", studentId: id, student: match };
       }
     }
@@ -253,6 +259,24 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
     setStudentId(null);
     setStatus("needs-pick");
   }, []);
+
+  // Sign a learner out after a while with no keyboard or mouse use, so the
+  // next person at a shared PC doesn't carry on as them. Guests have nothing
+  // to protect, and presenter mode is usually run as a guest.
+  useEffect(() => {
+    if (studentId === null) return;
+    let timer = setTimeout(() => void returnToPicker(), IDLE_SIGN_OUT_MS);
+    const reset = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => void returnToPicker(), IDLE_SIGN_OUT_MS);
+    };
+    const events = ["pointerdown", "keydown", "wheel"] as const;
+    for (const e of events) window.addEventListener(e, reset, { passive: true });
+    return () => {
+      clearTimeout(timer);
+      for (const e of events) window.removeEventListener(e, reset);
+    };
+  }, [studentId, returnToPicker]);
 
   const value = useMemo<StudentContextValue>(
     () => ({

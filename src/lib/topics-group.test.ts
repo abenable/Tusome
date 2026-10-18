@@ -1,67 +1,84 @@
 import { describe, it, expect } from "bun:test";
 
 import type { TopicT } from "@/content/schema";
-import { groupTopicsByLevelThenStrand } from "@/lib/topics-group";
+import {
+  currentTerm,
+  groupTopicsByLevelThenTerm,
+  topicsInTeachingOrder,
+} from "@/lib/topics-group";
 
-// Minimal TopicT builder — grouping only reads `id`, `title`, `level`, and
-// `strand`, so stub the rest. Casting through `unknown` keeps the test free of
-// Zod-shaped boilerplate without weakening the helper's real type signature.
+// Grouping only reads id, title, level, term and order, so stub the rest.
 function topic(
   id: string,
   level: TopicT["level"],
-  strand: string,
-  title = id,
+  term?: 1 | 2 | 3,
+  order?: number,
 ): TopicT {
   return {
     id,
-    title,
+    title: id,
     subject: "physics",
     level,
-    strand,
+    term,
+    order,
+    strand: "stub",
     subStrand: "stub",
     outcomes: ["stub"],
     body: [{ type: "text", text: "stub" }],
   } as unknown as TopicT;
 }
 
-describe("groupTopicsByLevelThenStrand", () => {
+describe("groupTopicsByLevelThenTerm", () => {
   it("returns [] for empty input", () => {
-    expect(groupTopicsByLevelThenStrand([])).toEqual([]);
+    expect(groupTopicsByLevelThenTerm([])).toEqual([]);
   });
 
   it("groups levels in S1..S4 order, skipping empty levels", () => {
-    const groups = groupTopicsByLevelThenStrand([
-      topic("a", "S1", "Motion"),
-      topic("b", "S4", "Waves"),
-      topic("c", "S2", "Optics"),
+    const groups = groupTopicsByLevelThenTerm([
+      topic("a", "S1", 1),
+      topic("b", "S4", 1),
+      topic("c", "S2", 1),
     ]);
     expect(groups.map((g) => g.level)).toEqual(["S1", "S2", "S4"]);
   });
 
-  it("groups by strand within a level, strands sorted alphabetically", () => {
-    const groups = groupTopicsByLevelThenStrand([
-      topic("a", "S2", "Waves"),
-      topic("b", "S2", "Motion"),
-      topic("c", "S2", "Motion"),
+  it("groups by term within a level, terms in order, untermed last", () => {
+    const [s2] = groupTopicsByLevelThenTerm([
+      topic("x", "S2"),
+      topic("c", "S2", 3),
+      topic("a", "S2", 1),
     ]);
-    expect(groups).toHaveLength(1);
-    const s2 = groups[0];
-    expect(s2.level).toBe("S2");
-    expect(s2.strands.map((s) => s.strand)).toEqual(["Motion", "Waves"]);
-    expect(s2.strands[0].topics.map((t) => t.id)).toEqual(["b", "c"]);
-    expect(s2.strands[1].topics.map((t) => t.id)).toEqual(["a"]);
+    expect(s2.terms.map((t) => t.label)).toEqual(["Term 1", "Term 3", "Other topics"]);
   });
 
-  it("places a topic under the correct level and strand", () => {
-    const groups = groupTopicsByLevelThenStrand([
-      topic("p", "S3", "Electricity"),
-      topic("q", "S1", "Matter"),
+  it("sorts a term's topics by order, then title", () => {
+    const [s1] = groupTopicsByLevelThenTerm([
+      topic("late", "S1", 2, 9),
+      topic("b", "S1", 2),
+      topic("early", "S1", 2, 4),
+      topic("a", "S1", 2),
     ]);
-    const s3 = groups.find((g) => g.level === "S3")!;
-    const elec = s3.strands.find((s) => s.strand === "Electricity")!;
-    expect(elec.topics.map((t) => t.id)).toEqual(["p"]);
-    const s1 = groups.find((g) => g.level === "S1")!;
-    const matter = s1.strands.find((s) => s.strand === "Matter")!;
-    expect(matter.topics.map((t) => t.id)).toEqual(["q"]);
+    expect(s1.terms[0].topics.map((t) => t.id)).toEqual(["early", "late", "a", "b"]);
+  });
+});
+
+describe("topicsInTeachingOrder", () => {
+  it("runs S1 term 1 to S4, term by term", () => {
+    const ids = topicsInTeachingOrder([
+      topic("s2t1", "S2", 1, 1),
+      topic("s1t3", "S1", 3, 9),
+      topic("s1t1", "S1", 1, 1),
+    ]).map((t) => t.id);
+    expect(ids).toEqual(["s1t1", "s1t3", "s2t1"]);
+  });
+});
+
+describe("currentTerm", () => {
+  it("maps months onto Uganda's three terms", () => {
+    expect(currentTerm(new Date(2026, 0, 15))).toBe(1);
+    expect(currentTerm(new Date(2026, 3, 30))).toBe(1);
+    expect(currentTerm(new Date(2026, 4, 25))).toBe(2);
+    expect(currentTerm(new Date(2026, 7, 21))).toBe(2);
+    expect(currentTerm(new Date(2026, 9, 18))).toBe(3);
   });
 });

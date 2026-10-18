@@ -13,7 +13,7 @@
 <br>
 
 **An offline desktop app for lower-secondary science and maths in Uganda.**<br>
-Lessons, PhET simulations and progress tracking that run on shared school computers with no internet.
+Every S1–S4 topic in the new curriculum, read-aloud, PhET simulations and a projector mode, on shared school computers with no internet.
 
 <br>
 
@@ -22,7 +22,7 @@ Lessons, PhET simulations and progress tracking that run on shared school comput
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-fbc629?style=flat-square&labelColor=201c17)](https://github.com/abenable/Tusome/releases/latest)
 ![Works offline](https://img.shields.io/badge/works-offline-fbc629?style=flat-square&labelColor=201c17)
 ![Curriculum](https://img.shields.io/badge/curriculum-Uganda%20CBC%20S1--S4-fbc629?style=flat-square&labelColor=201c17)
-![Topics](https://img.shields.io/badge/topics-75-fbc629?style=flat-square&labelColor=201c17)
+![Topics](https://img.shields.io/badge/topics-139-fbc629?style=flat-square&labelColor=201c17)
 ![Simulations](https://img.shields.io/badge/PhET%20simulations-43-fbc629?style=flat-square&labelColor=201c17)
 
 [![Tauri](https://img.shields.io/badge/Tauri-2-3c3730?style=flat-square&labelColor=201c17&logo=tauri&logoColor=24C8D8)](https://tauri.app)
@@ -58,8 +58,9 @@ student's progress on the machine, and is designed to be read off a projector
 at the back of a classroom. *Tusome* is Swahili for "let's read".
 
 > [!NOTE]
-> **Status: prototype.** Lesson content is draft, pending NCDC syllabus
-> sign-off and teacher review. See [Status and limitations](#status-and-limitations).
+> **Status: pilot-ready prototype.** All 139 topics follow the official NCDC
+> syllabi, with outcomes quoted verbatim, but the lessons are first drafts and
+> need review by Ugandan teachers. See [Status and limitations](#status-and-limitations).
 
 ## Features
 
@@ -67,48 +68,70 @@ at the back of a classroom. *Tusome* is Swahili for "let's read".
 <tr>
 <td width="50%" valign="top">
 
-### Offline by design
-Everything ships in the installer: lessons, simulations and fonts. No
-account, no network, no remote calls from the interface.
+### The whole syllabus, term by term
+All 139 S1–S4 topics in biology, chemistry, physics and maths, laid out the
+way the NCDC programme planner runs the year: class, then term. Each lesson
+has worked examples, activities with everyday materials and discussion prompts.
 
 </td>
 <td width="50%" valign="top">
+
+### Read aloud
+Any lesson can be read aloud, sentence by sentence with the sentence
+highlighted, at normal or slower speed. Equations and units are spoken
+properly ("density equals mass divided by volume").
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### Presenter mode
+One screen and sixty learners is the usual classroom, so every lesson opens
+as full-screen slides with large type. Arrow keys and clickers step through
+it; simulations fill the screen.
+
+</td>
+<td valign="top">
+
+### Computer labs
+Run each PC on its own, or make one PC the lab server so learners' progress
+follows them to any computer. Lab traffic is encrypted with a code the
+teacher types once per PC.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 ### 43 PhET simulations
 Interactive HTML5 sims from [PhET](https://phet.colorado.edu/), bundled and
 pinned to exact versions, plus a native TypeScript sim engine for custom ones.
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-### Lessons as content packs
-Topics are JSON packs with outcomes, text, LaTeX equations and images,
-validated on load. New content needs no code change.
-
-</td>
 <td valign="top">
 
 ### Made for shared machines
-Students pick their class and profile, with a password each. Guest mode lets
-anyone practise without saving.
+Learners pick their class and profile and sign in with a password, and are
+signed out after 15 idle minutes. Guest mode lets anyone practise without
+saving. No marks, no tests: learning without pressure.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-### Progress that means something
-Opening a topic records it; students mark it complete and move on to the
-next one. A dashboard shows where they stand in each subject.
+### A teacher area
+PIN-protected: a student register with password resets, a one-click move
+up a class for the new school year, and backups of every learner's progress.
 
 </td>
 <td valign="top">
 
-### A teacher area
-PIN-protected overview, student register with password resets, per-subject
-breakdowns and signed content updates over USB.
+### Updates that don't interrupt
+Each PC checks online after it starts and downloads new versions quietly.
+New versions bring new lessons. Nothing installs until someone presses
+**Restart to update**.
 
 </td>
 </tr>
@@ -166,7 +189,8 @@ script makes them reproducible, and release builds run it automatically.
 ```sh
 bun tauri build      # installers: .deb on Linux, .exe and .msi on Windows
 bun test             # frontend tests
-cd src-tauri && cargo test   # Rust tests, including update signing
+bun run validate:content     # check every content pack (CI runs this too)
+cd src-tauri && cargo test   # Rust tests, including update signing and lab mode
 ```
 
 <details>
@@ -197,8 +221,13 @@ Atkinson Hyperlegible Next, both self-hosted.
 ## Content packs
 
 A pack lives at `content/<subject>/<topic>/pack.json` and carries topic
-metadata, learning outcomes, body blocks and an optional simulation. The
-schema is in [`src/content/schema.ts`](src/content/schema.ts). A simulation
+metadata (including its `term`), learning outcomes quoted verbatim from the
+NCDC syllabus, body blocks and an optional simulation. Blocks are `text`,
+`heading`, `list`, `equation` (LaTeX plus a `speech` string for read-aloud),
+`example` (a worked example in steps), `callout` (`activity`, `think` or
+`remember`) and `image`. The schema is in
+[`src/content/schema.ts`](src/content/schema.ts); an app that meets a block
+type it doesn't know skips it rather than dropping the lesson. A simulation
 reference is one of:
 
 ```jsonc
@@ -212,9 +241,21 @@ upgrade one, bump its `version` and re-pin its `sha256`.
 
 ## Updates and signing
 
-Content updates arrive on a USB stick or, optionally, online. App updates
-download in the background and only install when a teacher presses
-**Restart and install** in Settings, so nothing interrupts a lesson.
+Each PC checks for a new version about 30 seconds after it starts (teachers
+can turn this off in Settings), downloads it in the background, and shows
+**Restart to update** in the sidebar. Nothing installs until someone presses
+it. New versions carry new lessons, so this is also how content reaches
+schools. A USB stick still works for PCs that never go online.
+
+For installed copies to find updates, two things must be true:
+
+1. **Releases are signed.** Add the signing key as repo secrets
+   `TAURI_SIGNING_PRIVATE_KEY` (the contents of `~/.tusome/tusome.key`) and
+   `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`. CI then signs every installer and
+   publishes `latest.json` with each tagged release.
+2. **Releases are public.** The app sends no credentials, so it can't read a
+   private repo's releases. Make this repo public, or publish releases to a
+   public one and change `endpoints` in `tauri.conf.json`.
 
 <details>
 <summary><b>How signing works</b></summary>
@@ -250,16 +291,18 @@ against the app's public key and installs cleanly into an empty folder.
 
 ## Status and limitations
 
-- **Content is draft.** Outcomes are placeholders pending the official NCDC
-  syllabus and teacher review.
-- **Online updates need a public release host.** The app sends no
-  credentials, so it can't download `latest.json` or `bundle.zip` from this
-  private repo. Make it public, or publish releases to a separate public repo
-  and update `CONTENT_BUNDLE_URL` in `updates.rs` and `endpoints` in
-  `tauri.conf.json`. USB updates work either way.
-- **CI builds are unsigned.** No signing secret is set, so CI installers
-  carry no updater signature. Sign releases locally, or add
-  `TAURI_SIGNING_PRIVATE_KEY` and its password as repo secrets.
+- **Lessons need teacher review.** They were drafted from the official NCDC
+  syllabi with AI assistance. Outcomes are verbatim and every calculation
+  was checked, but the explanations, local examples and facts need a pass by
+  Ugandan teachers before classroom use. There are no images yet.
+- **Online updates need setup.** See [Updates and signing](#updates-and-signing):
+  signing secrets and a public release host.
+- **Read-aloud voices depend on the PC.** Windows uses its installed voices
+  (British English if available). Ubuntu's webview has no speech, so Linux
+  uses speech-dispatcher, which sounds robotic.
+- **Lab mode needs the network allowed.** Windows asks once whether Tusome
+  may use the network on the lab server; choose Allow. Clients find the
+  server by broadcast, or by typing its address.
 - **Not yet tested on target hardware.** Performance, WebView2 availability
   and projector legibility still need checking on real school machines.
 - **PhET licence pending.** Sims are used under CC BY 4.0 for prototyping

@@ -9,6 +9,7 @@ import {
 
 import "./index.css";
 import { routeTree } from "./routeTree.gen";
+import { restoreTextSize } from "./components/SidebarTools";
 
 // Content packs are read from disk and are effectively immutable between
 // explicit updates (USB / admin), so cache them indefinitely and invalidate
@@ -68,3 +69,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     </QueryClientProvider>
   </React.StrictMode>,
 );
+
+void restoreTextSize();

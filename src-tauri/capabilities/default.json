@@ -12,6 +12,8 @@
     "dialog:default",
     "os:default",
     "process:default",
-    "dialog:allow-save"
+    "dialog:allow-save",
+    "core:window:allow-set-fullscreen",
+    "core:webview:allow-set-webview-zoom"
   ]
 }

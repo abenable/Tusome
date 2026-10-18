@@ -23,6 +23,7 @@ import {
   stagedAppUpdateVersion,
 } from "@/lib/updates";
 import { SectionCard } from "@/components/admin/primitives";
+import { LabCard, RecordsCard } from "@/components/admin/LabCard";
 import { PasswordField } from "@/components/PasswordField";
 
 export const Route = createFileRoute("/settings/system")({
@@ -33,6 +34,8 @@ function SystemPage(): JSX.Element {
   return (
     <div className="flex flex-col gap-6">
       <AboutCard />
+      <LabCard />
+      <RecordsCard />
       <PinCard />
       <UpdatesSection />
     </div>
@@ -225,9 +228,11 @@ function UpdatesSection(): JSX.Element {
       .catch(() => {});
     (async () => {
       const load = async (key: string): Promise<boolean> => (await getSetting(key)) === "1";
+      // App updates are on unless a teacher turned them off: each PC checks
+      // quietly after launch and offers "Restart to update" in the sidebar.
       const [c, a] = await Promise.all([
         load("updates_content_online"),
-        load("updates_app_online"),
+        getSetting("updates_app_online").then((v) => v !== "0"),
       ]);
       if (cancelled) return;
       setContentOnline(c);
@@ -354,8 +359,10 @@ function UpdatesSection(): JSX.Element {
           </p>
         ) : null}
         <p className="font-sans text-[18px] leading-relaxed text-ink-2">
-          Content updates arrive by USB. Online checks are off by default and only
-          run when a teacher turns them on.
+          When this PC is online, Tusome checks for a new version shortly after it
+          starts and downloads it quietly. New versions bring new lessons too.
+          Nothing installs until someone presses Restart to update. A USB stick
+          still works for PCs that never go online.
         </p>
 
         <div className="flex flex-col gap-3" role="group" aria-label="Update toggles">
@@ -373,7 +380,7 @@ function UpdatesSection(): JSX.Element {
             checked={appOnline}
             disabled={!togglesLoaded}
             label="Check for app updates online"
-            description="Downloads a new app version when you press Check online now. Nothing installs until you press Restart and install."
+            description="Checks after each launch, and when you press Check online now. Nothing installs until someone presses Restart to update."
             onChange={(v) => {
               setAppOnline(v);
               void persistToggle("updates_app_online", v);

@@ -8,6 +8,8 @@
  */
 import Database from "@tauri-apps/plugin-sql";
 
+import Q from "./queries.json";
+
 // ──────────────────────────────────────────────────────────────────────────
 // Connection / memoisation
 // ──────────────────────────────────────────────────────────────────────────
@@ -43,6 +45,52 @@ export function getDb(): Promise<Database> {
 }
 
 // ──────────────────────────────────────────────────────────────────────────
+// Lab mode — where student records live
+// ──────────────────────────────────────────────────────────────────────────
+//
+// Standalone (and a lab server) keep students and progress in this PC's
+// SQLite. A lab client sends those queries to the lab server instead, so a
+// learner's progress follows them to any PC in the lab (src-tauri/src/lab.rs).
+// Queries are named: every statement that may cross the network lives in
+// queries.json, which the Rust server reads too, so a client can only ask the
+// server to run one of these, never arbitrary SQL. Machine-local settings
+// (who's signed in on this PC) always stay local.
+
+export type QueryName = keyof typeof Q;
+
+let labClient: Promise<boolean> | null = null;
+
+/** True when this PC is a lab client (read once; changing mode restarts). */
+export function isLabClient(): Promise<boolean> {
+  labClient ??= (async () => {
+    if (!("__TAURI_INTERNALS__" in globalThis)) return false;
+    const { invoke } = await import("@tauri-apps/api/core");
+    const cfg = await invoke<{ mode: string }>("lab_config").catch(() => null);
+    return cfg?.mode === "client";
+  })();
+  return labClient;
+}
+
+async function select<T>(q: QueryName, params: unknown[] = []): Promise<T> {
+  if (await isLabClient()) {
+    const { invoke } = await import("@tauri-apps/api/core");
+    return invoke<T>("lab_query", { q, params, kind: "select" });
+  }
+  return (await getDb()).select<T>(Q[q], params);
+}
+
+async function execute(
+  q: QueryName,
+  params: unknown[] = [],
+): Promise<{ rowsAffected: number; lastInsertId?: number }> {
+  if (await isLabClient()) {
+    const { invoke } = await import("@tauri-apps/api/core");
+    return invoke("lab_query", { q, params, kind: "execute" });
+  }
+  return (await getDb()).execute(Q[q], params);
+}
+
+// ──────────────────────────────────────────────────────────────────────────
 // Row types — column names match 001_init.sql exactly (no aliasing).
 // ──────────────────────────────────────────────────────────────────────────
 
@@ -69,8 +117,7 @@ export interface ProgressRow {
 
 /** All students, oldest first (stable for the Phase-1 name picker). */
 export async function getStudents(): Promise<StudentRow[]> {
-  const db = await getDb();
-  return db.select<StudentRow[]>("SELECT * FROM students ORDER BY id");
+  return select<StudentRow[]>("students.all");
 }
 
 /**
@@ -91,19 +138,16 @@ export async function createStudent(
   classLabel?: string | null,
   passwordHash?: string | null,
 ): Promise<StudentRow> {
-  const db = await getDb();
-  const result = await db.execute(
-    "INSERT INTO students(display_name, class_label, password_hash) VALUES ($1, $2, $3)",
-    [displayName, classLabel ?? null, passwordHash ?? null],
-  );
+  const result = await execute("students.insert", [
+    displayName,
+    classLabel ?? null,
+    passwordHash ?? null,
+  ]);
   const id = result.lastInsertId;
   if (id === undefined || id === null) {
     throw new Error("createStudent: driver did not return lastInsertId");
   }
-  const rows = await db.select<StudentRow[]>(
-    "SELECT * FROM students WHERE id = $1",
-    [id],
-  );
+  const rows = await select<StudentRow[]>("students.byId", [id]);
   return rows[0];
 }
 
@@ -117,9 +161,8 @@ export async function verifyStudentPassword(
   id: number,
   password: string,
 ): Promise<boolean> {
-  const db = await getDb();
-  const rows = await db.select<Array<{ password_hash: string | null }>>(
-    "SELECT password_hash FROM students WHERE id = $1",
+  const rows = await select<Array<{ password_hash: string | null }>>(
+    "students.passwordHash",
     [id],
   );
   const stored = rows[0]?.password_hash;
@@ -140,17 +183,10 @@ export async function renameStudent(
   displayName: string,
   classLabel?: string | null,
 ): Promise<void> {
-  const db = await getDb();
   if (classLabel === undefined) {
-    await db.execute(
-      "UPDATE students SET display_name = $2 WHERE id = $1",
-      [id, displayName],
-    );
+    await execute("students.rename", [id, displayName]);
   } else {
-    await db.execute(
-      "UPDATE students SET display_name = $2, class_label = $3 WHERE id = $1",
-      [id, displayName, classLabel],
-    );
+    await execute("students.renameWithClass", [id, displayName, classLabel]);
   }
 }
 
@@ -163,11 +199,7 @@ export async function setStudentPassword(
   id: number,
   passwordHash: string,
 ): Promise<void> {
-  const db = await getDb();
-  await db.execute("UPDATE students SET password_hash = $2 WHERE id = $1", [
-    id,
-    passwordHash,
-  ]);
+  await execute("students.setPassword", [id, passwordHash]);
 }
 
 /**
@@ -175,8 +207,20 @@ export async function setStudentPassword(
  * ON DELETE CASCADE (001_init.sql), so a single DELETE here cascades to both.
  */
 export async function deleteStudent(id: number): Promise<void> {
-  const db = await getDb();
-  await db.execute("DELETE FROM students WHERE id = $1", [id]);
+  await execute("students.delete", [id]);
+}
+
+/**
+ * Start-of-year move: every student in `from` (e.g. "S1") goes to `to`
+ * ("S2"). Returns how many moved.
+ */
+export async function moveClass(from: string, to: string): Promise<number> {
+  return (await execute("students.moveClass", [from, to])).rowsAffected;
+}
+
+/** Remove a whole class (leavers), with their progress. Returns how many. */
+export async function deleteClass(classLabel: string): Promise<number> {
+  return (await execute("students.deleteClass", [classLabel])).rowsAffected;
 }
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -185,11 +229,7 @@ export async function deleteStudent(id: number): Promise<void> {
 
 /** A student's progress rows, most recently touched first. */
 export async function getProgress(studentId: number): Promise<ProgressRow[]> {
-  const db = await getDb();
-  return db.select<ProgressRow[]>(
-    "SELECT * FROM progress WHERE student_id = $1 ORDER BY updated_at DESC",
-    [studentId],
-  );
+  return select<ProgressRow[]>("progress.forStudent", [studentId]);
 }
 
 /**
@@ -207,16 +247,9 @@ export async function upsertProgress(
   topicId: string,
   state: string,
 ): Promise<void> {
-  const db = await getDb();
-  await db.execute(
-    "INSERT INTO progress(student_id, topic_id, state) VALUES ($1, $2, $3) " +
-      // Never downgrade: reopening a completed topic records the visit (bumps
-      // updated_at) but must not flip it back to "started".
-      "ON CONFLICT(student_id, topic_id) DO UPDATE SET " +
-      "state = CASE WHEN progress.state = 'completed' THEN 'completed' ELSE excluded.state END, " +
-      "updated_at = datetime('now')",
-    [studentId, topicId, state],
-  );
+  // Never downgrades: reopening a completed topic records the visit (bumps
+  // updated_at) but doesn't flip it back to "started". See queries.json.
+  await execute("progress.upsert", [studentId, topicId, state]);
 }
 
 /**
@@ -264,8 +297,18 @@ export function continueTopic(
 // settings — general key/value store (W1: admin flags, etc.)
 // ──────────────────────────────────────────────────────────────────────────
 
+// Settings a lab shares: the admin PIN, so a client's teacher area is guarded
+// by the same PIN as the server that holds the records. Everything else
+// (who's signed in, update preferences) belongs to the PC.
+const SHARED_SETTINGS = { admin_pin: ["adminPin.get", "adminPin.set"] } as const;
+
 /** Return the value for `key`, or null if no row exists. */
 export async function getSetting(key: string): Promise<string | null> {
+  if (key in SHARED_SETTINGS && (await isLabClient())) {
+    const [get] = SHARED_SETTINGS[key as keyof typeof SHARED_SETTINGS];
+    const rows = await select<Array<{ value: string }>>(get);
+    return rows[0]?.value ?? null;
+  }
   const db = await getDb();
   const rows = await db.select<Array<{ value: string }>>(
     "SELECT value FROM settings WHERE key = $1",
@@ -276,6 +319,11 @@ export async function getSetting(key: string): Promise<string | null> {
 
 /** Insert-or-update the value for `key`. */
 export async function setSetting(key: string, value: string): Promise<void> {
+  if (key in SHARED_SETTINGS && (await isLabClient())) {
+    const [, set] = SHARED_SETTINGS[key as keyof typeof SHARED_SETTINGS];
+    await execute(set, [value]);
+    return;
+  }
   const db = await getDb();
   await db.execute(
     "INSERT INTO settings(key, value) VALUES ($1, $2) " +
@@ -404,35 +452,18 @@ export interface ActivityRow {
 /** Every progress row, joined to its student, most recent first. One query
  *  backs all admin analytics (overview, per-student, per-class, per-subject). */
 export async function getAllProgress(): Promise<ProgressWithStudent[]> {
-  const db = await getDb();
-  return db.select<ProgressWithStudent[]>(
-    "SELECT p.student_id, p.topic_id, p.state, p.updated_at, " +
-      "s.display_name, s.class_label " +
-      "FROM progress p JOIN students s ON s.id = p.student_id " +
-      "ORDER BY p.updated_at DESC",
-  );
+  return select<ProgressWithStudent[]>("progress.all");
 }
 
 /** Distinct non-null class labels in use, alphabetical. */
 export async function listClassLabels(): Promise<string[]> {
-  const db = await getDb();
-  const rows = await db.select<Array<{ class_label: string }>>(
-    "SELECT DISTINCT class_label FROM students WHERE class_label IS NOT NULL " +
-      "ORDER BY class_label",
-  );
+  const rows = await select<Array<{ class_label: string }>>("students.classLabels");
   return rows.map((r) => r.class_label);
 }
 
 /** The most recent `limit` progress updates across all students. */
 export async function getRecentActivity(limit = 20): Promise<ActivityRow[]> {
-  const db = await getDb();
-  return db.select<ActivityRow[]>(
-    "SELECT p.student_id, s.display_name, s.class_label, p.topic_id, " +
-      "p.state, p.updated_at " +
-      "FROM progress p JOIN students s ON s.id = p.student_id " +
-      "ORDER BY p.updated_at DESC LIMIT $1",
-    [limit],
-  );
+  return select<ActivityRow[]>("progress.recent", [limit]);
 }
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -443,4 +474,5 @@ export async function getRecentActivity(limit = 20): Promise<ActivityRow[]> {
 export function _resetStateForTests(): void {
   dbPromise = null;
   seedStudentId = null;
+  labClient = null;
 }

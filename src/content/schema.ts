@@ -12,8 +12,7 @@
 // are resolved relative to it — never absolute paths, never remote URLs. The
 // `image` block enforces that with a `.refine`.
 //
-// No quiz: the quiz engine (question schema, seeded randomization, DB writes,
-// dashboards) was removed — the app isn't ready to ship quiz content yet. A
+// No quizzes or marks, by design: Tusome is for learning without pressure. A
 // topic is body + an optional sim only.
 
 import { z } from "zod";
@@ -55,6 +54,36 @@ const EquationBlock = z.object({
   // Either LaTeX or a plain math expression is accepted; the renderer decides.
   latex: z.string().optional(),
   expr: z.string().optional(),
+  // How read-aloud says it, e.g. "rho equals m over V". Without it the
+  // equation is skipped when reading aloud — raw LaTeX is unspeakable.
+  speech: z.string().optional(),
+});
+
+const HeadingBlock = z.object({
+  type: z.literal("heading"),
+  text: z.string(),
+});
+
+const ListBlock = z.object({
+  type: z.literal("list"),
+  items: z.array(z.string()).min(1),
+  ordered: z.boolean().optional(),
+});
+
+// A worked example: a problem and the steps to its answer.
+const ExampleBlock = z.object({
+  type: z.literal("example"),
+  title: z.string(),
+  steps: z.array(z.string()).min(1),
+});
+
+// A boxed aside. `activity` is something to do with everyday materials,
+// `think` a question to discuss (never marked), `remember` a key fact.
+const CalloutBlock = z.object({
+  type: z.literal("callout"),
+  kind: z.enum(["activity", "think", "remember"]),
+  title: z.string().optional(),
+  text: z.string(),
 });
 
 // Rejects anything that is not a relative path within the pack folder:
@@ -83,7 +112,33 @@ export const Block = z.discriminatedUnion("type", [
   TextBlock,
   ImageBlock,
   EquationBlock,
+  HeadingBlock,
+  ListBlock,
+  ExampleBlock,
+  CalloutBlock,
 ]);
+
+export const BLOCK_TYPES: ReadonlySet<string> = new Set(
+  Block.options.map((o) => o.shape.type.value),
+);
+
+// Packs reach schools by update long before the app does, so an older app
+// will meet block types it doesn't know. Drop those (the rest of the lesson
+// still shows) instead of failing the whole pack. A known type with bad
+// fields still fails — that's an authoring bug. `validate:content` rejects
+// unknown types, so a typo can't hide behind this.
+const Body = z.preprocess(
+  (v) =>
+    Array.isArray(v)
+      ? v.filter(
+          (b) =>
+            typeof b === "object" &&
+            b !== null &&
+            BLOCK_TYPES.has(String((b as { type?: unknown }).type)),
+        )
+      : v,
+  z.array(Block),
+);
 
 // ---------------------------------------------------------------------------
 // Topic
@@ -104,10 +159,13 @@ export const Topic = z.object({
   // whatever order the filesystem happens to list pack directories, which has
   // no relationship to teaching order.
   order: z.number().int().optional(),
+  // Term of the school year (1-3) the syllabus's programme planner puts this
+  // topic in. Optional so older packs still load; they list under "Other".
+  term: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
   // Verbatim NCDC learning outcomes — teachers cross-check against the
   // official document. Keep them as authored.
   outcomes: z.array(z.string()).min(1),
-  body: z.array(Block),
+  body: Body,
   sim: SimRef.optional(),
 });
 

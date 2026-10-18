@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Home, LayoutDashboard } from "lucide-react"
 import { StudentProvider, useStudent } from "@/lib/student-context"
 import { ProfilePicker } from "@/components/ProfilePicker"
 import { BrandMark } from "@/components/BrandMark"
+import { TextSizeButton, UpdateNotice } from "@/components/SidebarTools"
 import {
   SUBJECTS,
   SUBJECT_ACCENTS,
@@ -161,6 +162,11 @@ function Sidebar({
 
         <div className="mx-[6px] my-[18px] h-px bg-white/10" />
 
+        <UpdateNotice collapsed={collapsed} />
+        <div className="mb-2">
+          <TextSizeButton collapsed={collapsed} />
+        </div>
+
         {/* Profile tile — the design's bottom card, doubling as the switch-user
             control the old header carried. */}
         <button
@@ -236,16 +242,22 @@ function RootShell() {
   }
 
   if (status === "db-error") {
+    // A lab computer whose server is off gets its own explanation and a way
+    // to carry on alone (the lab's records stay safe on the server).
+    const labDown = dbError?.includes("lab server") ?? false
     return (
       <div className="flex min-h-screen items-center justify-center bg-canvas px-6">
         <div role="alert" className="flex max-w-[520px] flex-col items-start gap-4">
           <BrandMark />
           <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
-            Tusome couldn’t open its student records
+            {labDown
+              ? "Tusome can’t reach the lab server"
+              : "Tusome couldn’t open its student records"}
           </h1>
           <p className="font-sans text-[18px] leading-relaxed text-ink-2">
-            Try again. If it keeps happening, restart the computer, and if that
-            doesn’t help, call support and read them the message below.
+            {labDown
+              ? "Check that the lab server computer is switched on and Tusome is open on it, then try again."
+              : "Try again. If it keeps happening, restart the computer, and if that doesn’t help, call support and read them the message below."}
           </p>
           {dbError ? (
             <code className="max-w-full overflow-x-auto rounded-tile border border-line bg-surface px-3 py-2 font-mono text-[14px] text-ink-2">
@@ -259,6 +271,15 @@ function RootShell() {
           >
             Try again
           </button>
+          {labDown ? (
+            <button
+              type="button"
+              onClick={() => void switchToStandalone()}
+              className="inline-flex min-h-[48px] items-center rounded-full border border-line bg-surface px-6 font-sans text-[17px] font-bold text-ink transition hover:bg-canvas"
+            >
+              Use this computer on its own
+            </button>
+          ) : null}
         </div>
       </div>
     )
@@ -322,4 +343,11 @@ function RootShell() {
       </main>
     </div>
   )
+}
+
+async function switchToStandalone() {
+  const { invoke } = await import("@tauri-apps/api/core")
+  await invoke("save_lab_config", { config: { mode: "standalone", code: "", server: "" } })
+  const { relaunch } = await import("@tauri-apps/plugin-process")
+  await relaunch()
 }

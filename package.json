@@ -14,7 +14,7 @@
     "tsc": "tsc --noEmit",
     "test": "bun test",
     "test:watch": "bun test --watch",
-    "validate:content": "echo \"validate:content not implemented until Phase 2\" && exit 1"
+    "validate:content": "bun scripts/validate-content.ts"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

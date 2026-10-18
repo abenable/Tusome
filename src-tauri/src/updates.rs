@@ -750,7 +750,7 @@ pub fn scan_removable_roots() -> Vec<PathBuf> {
 // call the SAME `append_update_log` / `get_update_log` commands for
 // webview-initiated events, so both paths go through one table.
 // ──────────────────────────────────────────────────────────────────────────
-async fn get_pool(app: &AppHandle) -> Option<sqlx::Pool<sqlx::Sqlite>> {
+pub(crate) async fn get_pool(app: &AppHandle) -> Option<sqlx::Pool<sqlx::Sqlite>> {
     let instances = app.state::<tauri_plugin_sql::DbInstances>();
     let lock = instances.0.read().await;
     match lock.get("sqlite:tusome.db") {
@@ -1011,6 +1011,35 @@ pub async fn check_and_stage_app_update(
         Err(e) => {
             events.push(ev("app", "stage", "fail", format!("download: {e}")));
             Ok(finish(false, Some(target_version), events))
+        }
+    }
+}
+
+/// At startup, quietly look for an app update and download it, unless a
+/// teacher has turned online app updates off. Once it's downloaded the
+/// frontend shows "Restart to update" (event `app-update-staged`); nothing
+/// installs until someone presses it. Waits a little first so launch and the
+/// first lesson aren't slowed down.
+pub async fn background_app_update(app: &AppHandle) {
+    use tauri::Emitter;
+    tokio::time::sleep(Duration::from_secs(30)).await;
+    let Some(pool) = get_pool(app).await else {
+        return;
+    };
+    let off: Option<String> =
+        sqlx::query_scalar("SELECT value FROM settings WHERE key = 'updates_app_online'")
+            .fetch_optional(&pool)
+            .await
+            .ok()
+            .flatten();
+    if off.as_deref() == Some("0") {
+        return;
+    }
+    let staged = app.state::<StagedAppUpdate>();
+    if let Ok(r) = check_and_stage_app_update(app.clone(), staged).await {
+        persist_log_events(app, &r.events).await;
+        if r.staged {
+            let _ = app.emit("app-update-staged", r.target_version);
         }
     }
 }

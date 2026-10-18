@@ -10,7 +10,11 @@ import {
   type Subject,
 } from "@/lib/subjects"
 import { type TopicT } from "@/content/schema"
-import { groupTopicsByLevelThenStrand, LEVEL_ORDER } from "@/lib/topics-group"
+import {
+  currentTerm,
+  groupTopicsByLevelThenTerm,
+  LEVEL_ORDER,
+} from "@/lib/topics-group"
 import { EmptyState } from "@/components/EmptyState"
 import { TopicGroup, type TopicProgress } from "@/components/TopicGroup"
 import { getProgress, type ProgressRow } from "@/db/index"
@@ -74,7 +78,7 @@ function TopicList() {
   }, [studentId])
 
   const levels = useMemo(
-    () => groupTopicsByLevelThenStrand(topics),
+    () => groupTopicsByLevelThenTerm(topics),
     [topics],
   )
   const levelsWithTopics = useMemo(
@@ -93,7 +97,8 @@ function TopicList() {
       : (levels[0]?.level ?? LEVEL_ORDER[0])
 
   const activeGroup = levels.find((l) => l.level === activeLevel)
-  const shown = activeGroup?.strands.flatMap((s) => s.topics) ?? []
+  const shown = activeGroup?.terms.flatMap((t) => t.topics) ?? []
+  const nowTerm = currentTerm(new Date())
 
   const progressState = useMemo(() => {
     const byId = new Map(progress.map((r) => [r.topic_id, r.state]))
@@ -180,11 +185,12 @@ function TopicList() {
         </section>
       ) : (
         <div className="flex flex-col gap-8">
-          {activeGroup?.strands.map(({ strand, topics: strandTopics }) => (
+          {activeGroup?.terms.map(({ term, label, topics: termTopics }) => (
             <TopicGroup
-              key={strand}
-              heading={strand}
-              topics={strandTopics}
+              key={label}
+              heading={label}
+              current={term === nowTerm}
+              topics={termTopics}
               subject={subjectKey}
               progressOf={progressState}
               headingAs="h2"

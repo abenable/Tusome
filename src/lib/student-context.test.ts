@@ -44,6 +44,13 @@ describe("resolveInitialState — Guest default & persisted choice", () => {
     expect(state.student).toEqual(students[1]);
   });
 
+  it("persisted id of a student with a password → needs-pick (shared PCs: sign in again)", () => {
+    const withPassword = { ...row(2, "B"), password_hash: "aa:bb" };
+    const state = resolveInitialState([row(1, "A"), withPassword], "2");
+    expect(state.status).toBe("needs-pick");
+    expect(state.studentId).toBeNull();
+  });
+
   it("persisted id that no longer matches a row → needs-pick (deleted student forces a deliberate re-pick)", () => {
     const state = resolveInitialState([row(1, "A")], "99");
     expect(state.status).toBe("needs-pick");

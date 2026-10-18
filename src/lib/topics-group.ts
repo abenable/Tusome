@@ -1,68 +1,63 @@
-// Pure grouping logic for the topic-list page (and later for the dashboard).
+// Pure grouping logic for the topic-list page.
 //
-// Topics are grouped by level (S1..S4) and, within a level, by strand — the way
-// a teacher scanning the NCDC syllabus looks for a topic. Levels always render
-// in canonical order. Strands and the topics within them sort by each topic's
-// `order` (its position in the syllabus's own term-by-term programme planner)
-// so the on-screen sequence matches teaching order, not filesystem directory
-// order (which Rust's `fs::read_dir` — and therefore pack load order — never
-// guarantees). A strand's position is its lowest topic `order`; strands tie
-// (or a topic omits `order` entirely) fall back to alphabetical, so two packs
-// authored independently without `order` still produce a stable, if
-// syllabus-agnostic, on-screen order.
+// Topics are grouped by level (S1..S4), then by term (1..3) — the way the
+// NCDC programme planner lays out the school year, and the way a teacher
+// thinks about "what we're doing this term". Within a term, topics sort by
+// `order` (their position in the planner), falling back to title so packs
+// authored without `order` still render in a stable order. Topics with no
+// `term` go last under "Other topics".
 //
-// Kept pure (no React, no IO) so it can be unit-tested with bun:test and
-// reused outside the route component.
+// Kept pure (no React, no IO) so it can be unit-tested with bun:test.
 
 import type { TopicT } from "@/content/schema";
 
-export type StrandGroup = { strand: string; topics: TopicT[] };
-export type LevelGroup = { level: string; strands: StrandGroup[] };
+export type TermGroup = { term: 1 | 2 | 3 | null; label: string; topics: TopicT[] };
+export type LevelGroup = { level: string; terms: TermGroup[] };
 
 // Canonical lower-secondary level order. Keep this explicit rather than
 // sorting the strings lexicographically — "S10" would one day break the latter.
 export const LEVEL_ORDER = ["S1", "S2", "S3", "S4"] as const;
 
-/**
- * Group topics by level (S1..S4, in that order, skipping empty levels), then
- * within each level by strand (alphabetical). Returns `[]` for empty input.
- */
-export function groupTopicsByLevelThenStrand(topics: TopicT[]): LevelGroup[] {
-  if (topics.length === 0) return [];
+const TERM_ORDER = [1, 2, 3, null] as const;
 
-  const byLevel = new Map<string, TopicT[]>();
-  for (const t of topics) {
-    const bucket = byLevel.get(t.level);
-    if (bucket) bucket.push(t);
-    else byLevel.set(t.level, [t]);
-  }
-
+/** Group topics by level (S1..S4, skipping empty ones), then by term. */
+export function groupTopicsByLevelThenTerm(topics: TopicT[]): LevelGroup[] {
   const out: LevelGroup[] = [];
   for (const level of LEVEL_ORDER) {
-    const bucket = byLevel.get(level);
-    if (!bucket || bucket.length === 0) continue;
-
-    // Group by strand within this level.
-    const byStrand = new Map<string, TopicT[]>();
-    for (const t of bucket) {
-      const s = byStrand.get(t.strand);
-      if (s) s.push(t);
-      else byStrand.set(t.strand, [t]);
+    const inLevel = topics.filter((t) => t.level === level);
+    if (inLevel.length === 0) continue;
+    const terms: TermGroup[] = [];
+    for (const term of TERM_ORDER) {
+      const ts = inLevel
+        .filter((t) => (t.term ?? null) === term)
+        .sort(
+          (a, b) =>
+            (a.order ?? Infinity) - (b.order ?? Infinity) ||
+            a.title.localeCompare(b.title),
+        );
+      if (ts.length > 0) {
+        terms.push({ term, label: term ? `Term ${term}` : "Other topics", topics: ts });
+      }
     }
-
-    const strands: StrandGroup[] = [...byStrand.entries()]
-      .map(([strand, ts]) => ({
-        strand,
-        topics: [...ts].sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity)),
-      }))
-      .sort((a, b) => {
-        const orderOf = (s: StrandGroup) =>
-          Math.min(...s.topics.map((t) => t.order ?? Infinity));
-        return orderOf(a) - orderOf(b) || a.strand.localeCompare(b.strand);
-      });
-
-    out.push({ level, strands });
+    out.push({ level, terms });
   }
-
   return out;
+}
+
+/** Every topic in teaching order: S1 term 1 first, S4's last topic last. */
+export function topicsInTeachingOrder(topics: TopicT[]): TopicT[] {
+  return groupTopicsByLevelThenTerm(topics).flatMap((l) =>
+    l.terms.flatMap((t) => t.topics),
+  );
+}
+
+/**
+ * Which term a date falls in, roughly: Uganda's terms run Feb-Apr/May,
+ * late May-Aug and Sep-early Dec. January and the gaps between terms count
+ * as the term about to start.
+ */
+// ponytail: month-based; exact dates move every year (they'd ship as content if this ever needs to be exact).
+export function currentTerm(d: Date): 1 | 2 | 3 {
+  const m = d.getMonth(); // 0 = January
+  return m <= 3 ? 1 : m <= 7 ? 2 : 3;
 }

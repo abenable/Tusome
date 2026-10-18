@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { createFileRoute, Link, notFound } from "@tanstack/react-router"
-import { ArrowLeft, ArrowRight, Check, ImageIcon, Target } from "lucide-react"
-import katex from "katex"
-import "katex/dist/katex.min.css"
+import { ArrowLeft, ArrowRight, Check, Presentation, Target } from "lucide-react"
 
 import {
   SUBJECT_ACCENTS,
@@ -13,9 +11,14 @@ import {
 import { type BlockT, type TopicT } from "@/content/schema"
 import { SimCanvas } from "@/components/SimCanvas"
 import { PhETSim } from "@/components/PhETSim"
+import { LessonBlock } from "@/components/LessonBlock"
+import { ListenBar } from "@/components/ListenBar"
+import { Presenter } from "@/components/Presenter"
+import { useReadAloud } from "@/lib/read-aloud"
+import { topicChunks } from "@/lib/speech"
 import { getProgress, upsertProgress } from "@/db/index"
 import { useStudent } from "@/lib/student-context"
-import { groupTopicsByLevelThenStrand } from "@/lib/topics-group"
+import { topicsInTeachingOrder } from "@/lib/topics-group"
 
 // Cross-builder seam (content-author). See sibling $subject/index.tsx for the
 // rationale: importing defensively, try/catch at the call site.
@@ -41,10 +44,10 @@ export const Route = createFileRoute("/$subject/$topicId/")({
       // Ids are global, so a stale /chemistry/<physics-id> link would
       // otherwise render a physics lesson under a Chemistry header.
       const topic = found?.subject === params.subject ? found : null
-      // "Next" follows the same S1..S4 / strand order as the topic list.
-      const ordered = groupTopicsByLevelThenStrand(
+      // "Next" follows the same S1..S4 / term order as the topic list.
+      const ordered = topicsInTeachingOrder(
         topicsForSubject(packs, params.subject as TopicT["subject"]),
-      ).flatMap((l) => l.strands.flatMap((s) => s.topics))
+      )
       const i = topic ? ordered.findIndex((t) => t.id === topic.id) : -1
       return { topic, next: i >= 0 ? (ordered[i + 1] ?? null) : null }
     } catch {
@@ -60,6 +63,10 @@ function TopicView() {
   const { studentId } = useStudent()
   const [completed, setCompleted] = useState(false)
   const [saving, setSaving] = useState(false)
+  const [presenting, setPresenting] = useState(false)
+  const root = useRef<HTMLElement>(null)
+  const chunks = useMemo(() => (topic ? topicChunks(topic) : []), [topic])
+  const reader = useReadAloud(chunks)
 
   // Opening a topic records it as started (the upsert never downgrades a
   // completed one), and reads back whether it's already done. Guests save
@@ -117,7 +124,10 @@ function TopicView() {
   }
 
   return (
-    <article className="flex flex-col gap-10">
+    <article ref={root} className="flex flex-col gap-10">
+      {presenting ? (
+        <Presenter topic={topic} accent={accent} onClose={() => setPresenting(false)} />
+      ) : null}
       <div className="flex flex-col gap-4">
         <BackLink subject={subject} />
         <header className="flex max-w-[760px] flex-col gap-3">
@@ -134,8 +144,24 @@ function TopicView() {
             ) : null}
           </div>
           <h1 className="font-heading text-[44px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink">
-            {topic.title}
+            <span data-chunk="-1-0" className={reader.active === "-1-0" ? "bg-sun-tint" : undefined}>
+              {topic.title}
+            </span>
           </h1>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <ListenBar reader={reader} root={root} />
+            <button
+              type="button"
+              onClick={() => {
+                reader.stop()
+                setPresenting(true)
+              }}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-line bg-surface px-5 font-sans text-[16px] font-bold text-ink transition hover:bg-canvas active:scale-[0.98]"
+            >
+              <Presentation size={18} aria-hidden />
+              Present
+            </button>
+          </div>
         </header>
       </div>
 
@@ -162,77 +188,24 @@ function TopicView() {
                   aria-hidden
                   className={`mt-[4px] shrink-0 ${accent.text}`}
                 />
-                <span>{o}</span>
+                <span
+                  data-chunk={`-1-${i + 2}`}
+                  className={reader.active === `-1-${i + 2}` ? "bg-sun-tint" : undefined}
+                >
+                  {o}
+                </span>
               </li>
             ))}
           </ul>
         </section>
       )}
 
-      {/* Body blocks: text and equation render directly; image is a placeholder
-          for Phase 1 (resolution relative to the pack isn't wired here yet).
-          Text is held to a readable measure; equations may use the full
+      {/* Text is held to a readable measure; equations may use the full
           column and scroll sideways rather than spill out of it. */}
       <section className="flex max-w-[68ch] flex-col gap-5">
-        {topic.body.map((block: BlockT, i) => {
-          if (block.type === "text") {
-            return (
-              <p
-                key={i}
-                className="font-sans text-[19px] leading-[1.65] text-ink"
-              >
-                {block.text}
-              </p>
-            )
-          }
-          if (block.type === "equation") {
-            // `latex` → typeset with KaTeX; `expr` → plain readable math.
-            //
-            // KaTeX's output HTML is generated from a trusted pack math string,
-            // not arbitrary pack HTML — KaTeX only emits math markup (no
-            // script/links), and `throwOnError: false` renders bad TeX in red
-            // rather than throwing. This is the standard safe pattern for math
-            // typesetting; it is distinct from doc 07's "never
-            // dangerouslySetInnerHTML pack HTML" rule, which is about author
-            // content, not the math renderer.
-            if (block.latex) {
-              const html = katex.renderToString(block.latex, {
-                displayMode: true,
-                throwOnError: false,
-                output: "htmlAndMathml",
-              })
-              return (
-                <div
-                  key={i}
-                  className="max-w-full overflow-x-auto rounded-tile border border-line bg-surface px-6 py-2 text-[1.1em] text-ink"
-                  aria-label="equation"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              )
-            }
-            return (
-              <pre
-                key={i}
-                className="max-w-full overflow-x-auto rounded-tile border border-line bg-surface px-6 py-4 font-sans text-[20px] text-ink"
-                aria-label="equation"
-              >
-                {block.expr ?? ""}
-              </pre>
-            )
-          }
-          // image — placeholder for Phase 1
-          return (
-            <figure
-              key={i}
-              className="flex flex-col items-center gap-2 rounded-tile border border-dashed border-line bg-surface px-4 py-10 text-center"
-            >
-              <ImageIcon size={28} aria-hidden className="text-ink-3" />
-              <figcaption className="font-sans text-[16px] text-ink-3">
-                {block.alt}
-              </figcaption>
-            </figure>
-          )
-        })}
+        {topic.body.map((block: BlockT, i) => (
+          <LessonBlock key={i} block={block} i={i} accent={accent} active={reader.active} />
+        ))}
       </section>
 
       {/* Simulation host. Two kinds: a custom TS sim module (registry, rendered

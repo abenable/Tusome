@@ -41,6 +41,7 @@ use serde::Serialize;
 use tauri::Manager;
 use tauri_plugin_sql::{Builder, Migration, MigrationKind};
 
+pub mod lab;
 pub mod updates;
 
 #[derive(Serialize)]
@@ -91,6 +92,7 @@ pub fn run() {
                 .build(),
         )
         .manage(updates::StagedAppUpdate::default())
+        .manage(lab::LabState::default())
         .invoke_handler(tauri::generate_handler![
             read_content_packs,
             get_content_manifest_version,
@@ -101,10 +103,23 @@ pub fn run() {
             updates::staged_app_update_version,
             updates::install_staged_app_update,
             updates::append_update_log,
-            updates::get_update_log
+            updates::get_update_log,
+            speech_available,
+            speak,
+            stop_speaking,
+            lab::lab_config,
+            lab::save_lab_config,
+            lab::lab_query,
+            lab::lab_test,
+            lab::lab_find_servers,
+            lab::lab_this_pc,
+            backup_records,
+            restore_records
         ])
         .setup(|app| {
+            finish_restore(app.handle());
             seed_content(app.handle());
+            lab::start_if_server(app.handle());
             // Silent startup USB scan (docs/plan/07): never blocks launch, never
             // shows the student anything. Spawned on the async runtime so it can
             // wait for the webview to open the sql pool without holding up setup.
@@ -113,10 +128,108 @@ pub fn run() {
                 let r = updates::run_usb_scan(&handle).await;
                 updates::persist_log_events_when_ready(&handle, &r.events).await;
             });
+            let handle = app.handle().clone();
+            tauri::async_runtime::spawn(async move {
+                updates::background_app_update(&handle).await;
+            });
             Ok(())
         })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// Read-aloud on Linux. Ubuntu builds WebKitGTK without Web Speech, so the
+// frontend falls back to these: speech-dispatcher's `spd-say`, which Ubuntu
+// desktops ship. Windows never needs them (WebView2 has Web Speech).
+// `speak` returns when the text has been spoken, so the frontend can move its
+// highlight to the next sentence.
+// ──────────────────────────────────────────────────────────────────────────
+#[tauri::command]
+fn speech_available() -> bool {
+    cfg!(target_os = "linux")
+        && std::process::Command::new("spd-say")
+            .arg("--version")
+            .output()
+            .is_ok_and(|o| o.status.success())
+}
+
+#[tauri::command]
+async fn speak(text: String, rate: f64) -> Result<(), String> {
+    // spd-say's rate runs -100..100, 0 being normal; ours is 1.0 = normal.
+    let rate = (((rate - 1.0) * 100.0).round() as i32).clamp(-100, 100);
+    tauri::async_runtime::spawn_blocking(move || {
+        std::process::Command::new("spd-say")
+            .args([
+                "--wait",
+                "--language",
+                "en",
+                "--rate",
+                &rate.to_string(),
+                "--",
+            ])
+            .arg(&text)
+            .status()
+    })
+    .await
+    .map_err(|e| e.to_string())?
+    .map(|_| ())
+    .map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+fn stop_speaking() {
+    let _ = std::process::Command::new("spd-say")
+        .arg("--cancel")
+        .status();
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// Student records backup. `backup_records` writes a consistent copy of the
+// live database (VACUUM INTO) wherever the teacher chose, e.g. a USB stick.
+// `restore_records` can't swap the database while it's open, so it stages
+// the file and the next launch swaps it in before anything opens it.
+// ──────────────────────────────────────────────────────────────────────────
+const RESTORE_FILE: &str = "tusome.db.restore";
+
+#[tauri::command]
+async fn backup_records(app: tauri::AppHandle, dest: String) -> Result<(), String> {
+    let pool = updates::get_pool(&app)
+        .await
+        .ok_or("The records aren't open.")?;
+    let _ = fs::remove_file(&dest); // VACUUM INTO refuses to overwrite
+    sqlx::query("VACUUM INTO ?")
+        .bind(&dest)
+        .execute(&pool)
+        .await
+        .map(|_| ())
+        .map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+fn restore_records(app: tauri::AppHandle, src: String) -> Result<(), String> {
+    let bytes = fs::read(&src).map_err(|e| e.to_string())?;
+    if !bytes.starts_with(b"SQLite format 3\0") {
+        return Err("That file isn't a Tusome backup.".into());
+    }
+    let dir = app.path().app_config_dir().map_err(|e| e.to_string())?;
+    fs::write(dir.join(RESTORE_FILE), bytes).map_err(|e| e.to_string())
+}
+
+fn finish_restore(app: &tauri::AppHandle) {
+    let Ok(dir) = app.path().app_config_dir() else {
+        return;
+    };
+    let staged = dir.join(RESTORE_FILE);
+    if !staged.exists() {
+        return;
+    }
+    for stale in ["tusome.db-wal", "tusome.db-shm"] {
+        let _ = fs::remove_file(dir.join(stale));
+    }
+    if let Err(e) = fs::rename(&staged, dir.join("tusome.db")) {
+        eprintln!("[restore] couldn't swap in the backup: {e}");
+    }
 }
 
 // ──────────────────────────────────────────────────────────────────────────

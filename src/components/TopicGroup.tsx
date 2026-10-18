@@ -1,4 +1,4 @@
-// A strand's topics, rendered as the design's "learning path": a rail of
+// A term's topics, rendered as the design's "learning path": a rail of
 // status circles joined by a vertical line, each beside a topic card.
 //
 // Ported from TopicList.dc.html (claude.ai/design "UI design improvement
@@ -7,7 +7,7 @@
 // text in the badge beside it, so nothing depends on shape or colour alone.
 //
 // Heading level stays configurable (`headingAs`, default "h2") so the topic
-// list can keep a clean h1 (subject) → h2 (strand) outline.
+// list can keep a clean h1 (subject) → h2 (term) outline.
 
 import { Link } from "@tanstack/react-router";
 import { Check, ChevronRight } from "lucide-react";
@@ -28,6 +28,8 @@ export type TopicGroupProps = {
   /** Per-topic status. A topic missing from the map reads as not-started. */
   progressOf: (topicId: string) => TopicProgress;
   headingAs?: "h2" | "h3";
+  /** Marks the group as the term the school year is in now. */
+  current?: boolean;
 };
 
 const BADGE_TEXT: Record<TopicStatus, string> = {
@@ -42,14 +44,20 @@ export function TopicGroup({
   subject,
   progressOf,
   headingAs = "h2",
+  current = false,
 }: TopicGroupProps) {
   const Heading = headingAs;
   const accent = SUBJECT_ACCENTS[subject];
 
   return (
     <section className="flex flex-col gap-[14px]" aria-label={heading}>
-      <Heading className="font-heading text-[21px] font-bold tracking-[-0.01em] text-ink">
+      <Heading className="flex items-center gap-3 font-heading text-[21px] font-bold tracking-[-0.01em] text-ink">
         {heading}
+        {current ? (
+          <span className="rounded-full bg-sun px-3 py-0.5 font-sans text-[14px] font-bold tracking-normal text-ink">
+            This term
+          </span>
+        ) : null}
       </Heading>
       <ul className="flex flex-col gap-3">
         {topics.map((topic, i) => {
@@ -102,6 +110,9 @@ export function TopicGroup({
                 <div className="min-w-0 flex-1">
                   <span className="font-sans text-[20px] font-bold text-ink">
                     {topic.title}
+                  </span>
+                  <span className="mt-0.5 block font-sans text-[15px] text-ink-3">
+                    {topic.strand}
                   </span>
                   <div className="mt-[6px] flex flex-wrap items-center gap-[10px]">
                     <span

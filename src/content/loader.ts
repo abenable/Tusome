@@ -110,9 +110,9 @@ async function loadFromTauri(): Promise<RawFile[]> {
 //     access. This branch never runs under Tauri (isTauri() → the invoke path)
 //     or in `bun test` (the node:fs try succeeds, so the catch is unreached).
 //
-// The glob is statically analyzed by Vite at build time even though it sits in
-// the catch; the JSON it pulls in is small (a few KB of pack text) and is dead
-// in production, where the Rust command reads the seeded writable dir instead.
+// The glob is lazy and behind `import.meta.env.DEV`, so a production build
+// drops it entirely: the full content tree is over a megabyte, and parsing it
+// on every launch would slow old school PCs for a path the app never takes.
 async function loadFromRepo(): Promise<RawFile[]> {
   try {
     const fs = await import(/* @vite-ignore */ "node:fs/promises");
@@ -120,18 +120,19 @@ async function loadFromRepo(): Promise<RawFile[]> {
     await walk(repoContentDir(), fs, out);
     return out;
   } catch {
-    return loadFromViteGlob();
+    return import.meta.env.DEV ? loadFromViteGlob() : [];
   }
 }
 
-// Browser fallback: Vite bundles these pack.json files into the client.
-function loadFromViteGlob(): RawFile[] {
-  const mods = import.meta.glob("../../content/**/pack.json", {
-    eager: true,
+// Browser dev fallback: Vite serves each pack.json as a lazy module.
+async function loadFromViteGlob(): Promise<RawFile[]> {
+  const mods = import.meta.glob<string>("../../content/**/pack.json", {
     query: "?raw",
     import: "default",
-  }) as Record<string, string>;
-  return Object.entries(mods).map(([path, raw]) => ({ path, raw }));
+  });
+  return Promise.all(
+    Object.entries(mods).map(async ([path, load]) => ({ path, raw: await load() })),
+  );
 }
 
 async function walk(

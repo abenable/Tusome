@@ -40,6 +40,10 @@ sha2 = "0.10"
 zip = "0.6"
 sqlx = { version = "0.8", default-features = false, features = ["sqlite", "runtime-tokio"] }
 
+# Lab mode (src/lab.rs): ChaCha20-Poly1305 + PBKDF2 for LAN traffic. Already
+# in the tree via rustls, so no new crate is downloaded or compiled.
+ring = "0.17"
+
 # `tokio` (timer only) lets the startup USB scan wait for the DB pool; already
 # in the tree via tauri.
 tokio = { version = "1", features = ["time"] }
@@ -61,4 +65,6 @@ minisign = "0.9.1"
 tempfile = "3"
 # examples/make_bundle.rs decodes Tauri's base64-wrapped signing key.
 base64 = "0.22"
+# Async tests for the lab server's query runner (src/lab.rs).
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 
