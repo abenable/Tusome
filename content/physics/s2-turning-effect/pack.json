@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.turning-effect",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,8 +9,9 @@
       "subject": "physics",
       "level": "S2",
       "strand": "Mechanics and Properties of Matter",
-      "subStrand": "Turning effect of forces, centre of gravity and stability",
+      "subStrand": "Moments, centre of gravity and stability",
       "order": 2,
+      "term": 1,
       "outcomes": [
         "understand the turning effect of forces and its applications (u, s, v/a)",
         "understand and apply the concept of centre of gravity (u, s, v/a)"
@@ -18,32 +19,155 @@
       "body": [
         {
           "type": "text",
-          "text": "A force can turn an object about a pivot. The turning effect of a force is called its moment, and it depends on both the size of the force and its perpendicular distance from the pivot."
+          "text": "You use the turning effect of forces many times a day. You turn a door handle, open a bottle, pedal a bicycle and push a wheelbarrow. This topic explains how forces make objects turn, and why some objects fall over easily while others stay standing."
+        },
+        {
+          "type": "heading",
+          "text": "The moment of a force"
+        },
+        {
+          "type": "text",
+          "text": "A force can make an object turn about a fixed point. The fixed point is called the pivot or fulcrum. The turning effect of a force is called its moment."
+        },
+        {
+          "type": "text",
+          "text": "The moment depends on the size of the force and its perpendicular distance from the pivot. Perpendicular means at a right angle to the line of the force. A bigger force, or a force further from the pivot, gives a bigger moment."
         },
         {
           "type": "equation",
-          "latex": "\\text{moment} = \\text{force} \\times \\text{perpendicular distance from the pivot}"
+          "expr": "moment = force × perpendicular distance from the pivot",
+          "speech": "moment equals force times perpendicular distance from the pivot"
         },
         {
           "type": "text",
-          "text": "A see-saw (or beam balanced on a pivot) is balanced \u2014 in equilibrium \u2014 when the total clockwise moment equals the total anticlockwise moment. This is the principle of moments."
+          "text": "Force is in newtons and distance in metres, so a moment is measured in newton metres (N m). A clockwise moment turns an object the way the hands of a clock move. An anticlockwise moment turns it the opposite way."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A door handle is placed far from the hinges, so a small push gives a large moment.",
+            "A long spanner undoes a tight nut more easily than a short one.",
+            "A wheelbarrow lets one person lift a heavy load of bricks or sand.",
+            "A beam balance in the market compares the weights of two loads."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "The principle of moments"
         },
         {
           "type": "text",
-          "text": "Every object has a centre of gravity: the single point where its whole weight can be thought of as acting. An object is more stable \u2014 harder to tip over \u2014 when its centre of gravity is low and its base is wide. If the centre of gravity moves outside the base, the object topples over."
+          "text": "An object that is balanced and not turning is in equilibrium. The principle of moments states that when an object is in equilibrium, the sum of the clockwise moments about a point equals the sum of the anticlockwise moments about the same point."
+        },
+        {
+          "type": "equation",
+          "expr": "sum of clockwise moments = sum of anticlockwise moments",
+          "speech": "the sum of clockwise moments equals the sum of anticlockwise moments"
         },
         {
           "type": "text",
-          "text": "This is why buses, racing cars, and other vehicles are designed with a low centre of gravity and a wide wheelbase for stability."
+          "text": "This is why a heavy child must sit closer to the pivot of a see-saw than a light child."
+        },
+        {
+          "type": "example",
+          "title": "Balancing a see-saw",
+          "steps": [
+            "Nakato weighs 400 N and sits 1.5 m from the pivot of a see-saw. Kato weighs 500 N. How far from the pivot must he sit on the other side to balance her?",
+            "Anticlockwise moment = 400 × 1.5 = 600 N m",
+            "Clockwise moment = 500 × d",
+            "For balance, 500 × d = 600",
+            "d = 600 ÷ 500 = 1.2 m",
+            "Kato is heavier, so he sits closer to the pivot."
+          ]
         },
         {
           "type": "text",
-          "text": "Use the PhET Balancing Act simulation below. Place masses at different distances from the pivot on the see-saw and find the combinations that balance it."
+          "text": "In the next examples we take g = 10 N/kg, so a mass of 100 g has a weight of 1 N."
+        },
+        {
+          "type": "example",
+          "title": "Balancing a metre rule",
+          "steps": [
+            "A uniform metre rule balances on a knife edge at its 50 cm mark. A 100 g mass hangs at the 30 cm mark. Where must a 50 g mass hang to balance the rule?",
+            "The rule is pivoted at its middle, so its own weight has no moment.",
+            "The 100 g mass weighs 1 N. The 50 g mass weighs 0.5 N.",
+            "The 1 N weight is 50 − 30 = 20 cm = 0.2 m from the pivot.",
+            "Anticlockwise moment = 1 × 0.2 = 0.2 N m",
+            "Clockwise moment = 0.5 × d, so 0.5 × d = 0.2 and d = 0.4 m = 40 cm.",
+            "The 50 g mass hangs at the 50 + 40 = 90 cm mark."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Centre of gravity"
+        },
+        {
+          "type": "text",
+          "text": "Every particle of an object is pulled down by gravity. The centre of gravity is the point where the whole weight of the object seems to act. A uniform object has the same thickness and material all through. Its centre of gravity is at its middle. For a uniform metre rule, this is the 50 cm mark."
+        },
+        {
+          "type": "example",
+          "title": "Finding the mass of a metre rule",
+          "steps": [
+            "A uniform metre rule balances on a knife edge at its 40 cm mark when a 50 g mass hangs at its 10 cm mark. Find the mass of the rule.",
+            "The rule's weight W acts at its 50 cm mark, which is 10 cm = 0.1 m from the pivot.",
+            "The 50 g mass weighs 0.5 N and is 40 − 10 = 30 cm = 0.3 m from the pivot.",
+            "Anticlockwise moment = 0.5 × 0.3 = 0.15 N m",
+            "Clockwise moment = W × 0.1",
+            "W × 0.1 = 0.15, so W = 1.5 N",
+            "Mass = weight ÷ g = 1.5 ÷ 10 = 0.15 kg = 150 g"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A flat sheet of any shape is called a lamina. For an irregular lamina, you can find the centre of gravity with a plumb line. A plumb line is a thread with a small weight tied to its end. It always hangs straight down."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find the centre of gravity of Uganda",
+          "text": "Draw a map of Uganda on cardboard and cut it out. Make three small holes near different edges. Hang the card from a pin through one hole so it swings freely. Hang a plumb line from the same pin and draw along the thread. Repeat with the other holes. The lines cross at the centre of gravity. Check by balancing the card on a pencil tip at that point."
+        },
+        {
+          "type": "heading",
+          "text": "Stability"
+        },
+        {
+          "type": "text",
+          "text": "Stability is how hard it is to topple an object over. An object topples when the line straight down from its centre of gravity falls outside its base. You can see three kinds of equilibrium with a paper cone or a funnel."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stable equilibrium: a cone standing on its wide base. Tilt it a little and it falls back, because its centre of gravity rises as it tilts.",
+            "Unstable equilibrium: a cone balanced on its point. A tiny push makes it fall, because its centre of gravity drops.",
+            "Neutral equilibrium: a cone lying on its side. It rolls and stays where it stops, because its centre of gravity stays at the same height."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "An object is more stable when its centre of gravity is low and its base is wide. Racing cars are built low and wide. A three-legged stool stands firmly on an uneven floor. A bus or taxi with heavy luggage tied on its roof has a high centre of gravity, so it can overturn on a sharp bend."
+        },
+        {
+          "type": "text",
+          "text": "A woman carrying a jerrycan of water or a bunch of matooke on her head keeps the load right above her feet. This keeps the centre of gravity of her body and the load over her base."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Lorries carrying sugar cane or matooke are often loaded very high. What could the driver and the loaders do to make the lorry safer on the road from Masaka to Kampala?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Moment = force × perpendicular distance from the pivot, measured in N m. In equilibrium, clockwise moments equal anticlockwise moments. The centre of gravity is where the whole weight seems to act. A low centre of gravity and a wide base make an object stable."
         }
       ],
       "sim": {
         "phet": "balancing-act_en.html",
-        "caption": "PhET Balancing Act. Place masses at different distances from the pivot and find out what makes a see-saw balance. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Balancing Act. Place bricks at different distances on each side of the plank, then remove the supports to see if it balances. Try two bricks at 1 m on one side and one brick at 2 m on the other. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

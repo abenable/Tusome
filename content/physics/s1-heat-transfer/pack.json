@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.heat.transfer",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -10,7 +10,8 @@
       "level": "S1",
       "strand": "Heat",
       "subStrand": "Conduction, convection and radiation",
-      "order": 9,
+      "order": 10,
+      "term": 3,
       "outcomes": [
         "understand how heat energy is transferred and the rate at which transfer takes place (u, s)",
         "understand what is happening at particle level when conduction, convection, and radiation take place and their application (k, u, v/a)",
@@ -19,32 +20,144 @@
       "body": [
         {
           "type": "text",
-          "text": "Heat can move from one place to another by three processes: conduction, convection, and radiation."
+          "text": "Akello puts a saucepan of beans on a charcoal stove. Soon the whole pan is hot. Warm air rises from the stove and fills the kitchen. Standing nearby, she feels the stove's warmth on her face. These are three different ways in which heat moves."
+        },
+        {
+          "type": "heading",
+          "text": "Heat moves from hot to cold"
         },
         {
           "type": "text",
-          "text": "Conduction transfers heat through a material \u2014 mainly solids \u2014 as vibrating particles pass energy to their neighbours, without the particles themselves moving from place to place. Metals are good conductors of heat."
+          "text": "Heat is energy that moves from a hotter place to a colder place. It keeps flowing until both reach the same temperature. Heat moves by conduction, convection and radiation. The rate of heat transfer, meaning how fast the heat moves, depends on:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "the temperature difference: a bigger difference gives a faster flow",
+            "the material: heat passes through metal faster than through wood or plastic",
+            "the size and thickness: heat passes faster through a wide, thin wall"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Conduction"
         },
         {
           "type": "text",
-          "text": "Convection transfers heat through liquids and gases. A heated fluid expands, becomes less dense, and rises; cooler, denser fluid moves in to take its place. This sets up a convection current."
+          "text": "Conduction is the transfer of heat through a material without the material itself moving. It happens mainly in solids. The particles in a solid vibrate in fixed places. When one end is heated, its particles vibrate faster and knock into their neighbours. In this way energy passes along from particle to particle."
         },
         {
           "type": "text",
-          "text": "Radiation transfers heat as electromagnetic waves and needs no medium at all \u2014 it can travel through empty space. This is how heat from the Sun reaches the Earth."
+          "text": "Metals conduct heat best, because they contain free electrons. These tiny particles move through the whole metal and carry energy quickly. Good conductors, such as copper, aluminium and iron, let heat pass easily. Poor conductors, also called insulators, let heat pass slowly. Wood, plastic, cloth, grass and still air are insulators."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Saucepans are made of aluminium or steel to heat food quickly, but their handles are wood or plastic so they stay cool.",
+            "A grass-thatched roof keeps a house cool by day and warm at night, because grass and trapped air are insulators.",
+            "A cement floor feels colder to bare feet than a papyrus mat, because cement conducts heat away from your feet faster."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Which material conducts best?",
+          "text": "Collect a metal spoon, a plastic spoon and a wooden cooking stick of similar length. Press a small bead of candle wax near the top of each. Your teacher pours hot water from a flask into a cup, and you stand all three in it together. Watch which bead melts and slides first. Repeat with fresh wax to check the order."
+        },
+        {
+          "type": "heading",
+          "text": "Convection"
         },
         {
           "type": "text",
-          "text": "The greenhouse effect happens when gases in the atmosphere absorb heat radiated from the Earth's surface and re-radiate some of it back down, warming the surface further. A rise in the level of these gases is linked to global warming."
+          "text": "Convection is the transfer of heat by the movement of a liquid or a gas. Liquids and gases are called fluids because they flow. When part of a fluid is heated, its particles move faster and spread apart. That part expands, becomes less dense and rises. Cooler, denser fluid sinks to take its place, and is heated in turn. This circular flow is called a convection current."
         },
         {
           "type": "text",
-          "text": "Use the PhET Energy Forms and Changes simulation below. Heat different objects and watch thermal energy transfer between them."
+          "text": "Convection also shapes the weather. Near Lake Victoria, the land warms faster than the water by day. Warm air rises over the land, and cooler air blows in from the lake. This is a lake breeze. At night the land cools faster, so the breeze blows from the land to the lake."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "The heating coil of a kettle is at the bottom, but the cold part of a fridge is near the top. How does convection explain both choices?"
+        },
+        {
+          "type": "heading",
+          "text": "Radiation"
+        },
+        {
+          "type": "text",
+          "text": "Radiation is the transfer of heat by invisible waves called infrared waves. They travel outwards from a warm object in straight lines. Radiation needs no particles, so it can cross empty space. This is how heat from the Sun reaches the Earth."
+        },
+        {
+          "type": "text",
+          "text": "Hotter objects give out more radiation, and the surface matters too. Dull black surfaces are good absorbers, which means they take in radiation well. They are also good emitters, which means they give it out well. Shiny or white surfaces are poor absorbers and poor emitters. They reflect most of the radiation that falls on them."
+        },
+        {
+          "type": "list",
+          "items": [
+            "White clothes keep you cooler in the sun than dark clothes.",
+            "A house under new, shiny iron sheets heats up less than one under old, rusty sheets.",
+            "Solar water heaters have black pipes to absorb as much sunlight as possible."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Black and white bottles",
+          "text": "Wrap one plastic bottle in black paper and an identical bottle in white paper. Fill both with water from the same jerrycan. Leave them side by side in bright sunshine for 30 minutes. Then feel the water in each, or use a thermometer if your school has one. Which surface absorbed more radiation?"
+        },
+        {
+          "type": "heading",
+          "text": "How a vacuum flask keeps tea hot"
+        },
+        {
+          "type": "text",
+          "text": "A vacuum flask keeps hot drinks hot by reducing all three kinds of heat transfer."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Double glass wall: the gap between the walls is a vacuum, a space with almost no air. With no particles, heat cannot cross by conduction or convection.",
+            "Silvered surfaces: the walls facing the vacuum are shiny like a mirror. They reflect radiation back towards the tea.",
+            "Cork or plastic stopper: a poor conductor that also stops warm air escaping by convection.",
+            "Cork or rubber supports: they hold the glass and reduce conduction to the outer case."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "The greenhouse effect and global warming"
+        },
+        {
+          "type": "text",
+          "text": "Radiation from the Sun passes through the air and warms the ground. The warm ground then gives out infrared radiation. Some gases in the air absorb this radiation and send part of it back down. These are greenhouse gases, such as carbon dioxide, methane and water vapour."
+        },
+        {
+          "type": "text",
+          "text": "This trapping of heat is called the greenhouse effect. It is natural, and without it the Earth would be too cold for most life. Global warming is the slow rise in the Earth's average temperature. It happens because people add more greenhouse gases to the air. Burning petrol, diesel, charcoal and firewood releases carbon dioxide. Cutting down forests removes trees that take carbon dioxide out of the air."
+        },
+        {
+          "type": "text",
+          "text": "Uganda already feels the effects. The glaciers on the Rwenzori Mountains have shrunk greatly in the last hundred years. Rains have become harder to predict, with long dry spells in some places and floods in others. Planting trees, using solar energy and cooking on efficient stoves all help."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Which everyday activities in your home or school add greenhouse gases to the air? Which of them could be changed?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Heat flows from hot to cold. Conduction passes energy from particle to particle, mainly in solids. Convection carries heat by moving fluids. Radiation needs no medium. Greenhouse gases trap heat near the Earth's surface, and adding more of them causes global warming."
         }
       ],
       "sim": {
         "phet": "energy-forms-and-changes_en.html",
-        "caption": "PhET Energy Forms and Changes. Heat different objects and watch thermal energy transfer between them. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Energy Forms and Changes. On the Intro screen, heat the iron block on a burner, then place it on the cold brick and watch the energy chunks and thermometers as heat flows from the hotter object to the cooler one. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

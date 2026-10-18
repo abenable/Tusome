@@ -1,0 +1,217 @@
+{
+  "packId": "phy.s4.modern.nuclear",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.modern.nuclear",
+      "title": "Nuclear Processes",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Modern Physics",
+      "subStrand": "Radioactivity, fission and fusion",
+      "order": 6,
+      "term": 3,
+      "outcomes": [
+        "understand the processes of nuclear fission and fusion and the associated energy changes (u)",
+        "understand the spontaneous and random nature of nuclear decay and interpret decay data in terms of half-life (k, u, s)",
+        "know the applications of radioactivity and the dangers associated with exposure to radioactive materials. (k, u)",
+        "understand and appreciate that there are significant social, political, and environmental dimensions associated with use of nuclear power. (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "At the Uganda Cancer Institute in Kampala, radiation is used to destroy cancer cells. Nuclear power stations light whole cities, and the Sun shines because of nuclear reactions. Nuclear energy brings great benefits and serious dangers."
+        },
+        {
+          "type": "heading",
+          "text": "Radioactive decay"
+        },
+        {
+          "type": "text",
+          "text": "Some nuclei are unstable. To become more stable, they give out radiation and change into a different nucleus. This is radioactive decay. Decay is spontaneous: nothing outside causes it, and heating the material does not change it. It is also random: we cannot say when any one nucleus will decay, only what fraction of a large number will decay in a given time."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alpha (α) particles: 2 protons and 2 neutrons, the same as a helium nucleus. Charge +2. They are strongly ionising, which means they knock electrons off atoms they pass. A sheet of paper stops them.",
+            "Beta (β) particles: fast electrons that come from the nucleus when a neutron changes into a proton. Charge −1. They are less ionising and are stopped by a few millimetres of aluminium.",
+            "Gamma (γ) rays: electromagnetic waves of very high frequency, with no charge. They are weakly ionising but very penetrating. Thick lead or concrete reduces them."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Balancing nuclear equations"
+        },
+        {
+          "type": "text",
+          "text": "In a nuclear equation, the mass numbers on the two sides must add up to the same total. So must the atomic numbers. An alpha particle is written as helium-4, and a beta particle as an electron with mass number 0 and atomic number −1."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{238}_{92}\\mathrm{U} \\rightarrow {}^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He}",
+          "speech": "uranium 238, atomic number 92, decays to thorium 234, atomic number 90, plus an alpha particle, helium 4"
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{14}_{6}\\mathrm{C} \\rightarrow {}^{14}_{7}\\mathrm{N} + {}^{0}_{-1}\\mathrm{e}",
+          "speech": "carbon 14, atomic number 6, decays to nitrogen 14, atomic number 7, plus a beta particle"
+        },
+        {
+          "type": "example",
+          "title": "Checking an alpha decay",
+          "steps": [
+            "Uranium-238 (Z = 92) gives out an alpha particle. What does it become?",
+            "Mass number: 238 = A + 4, so A = 234",
+            "Atomic number: 92 = Z + 2, so Z = 90",
+            "The element with atomic number 90 is thorium, so the product is thorium-234."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Half-life"
+        },
+        {
+          "type": "text",
+          "text": "The activity of a source is the number of nuclei that decay each second. It falls as the unstable nuclei are used up. The half-life is the time taken for half of the radioactive nuclei in a sample to decay. It is also the time for the activity to fall to half. Each isotope has its own half-life: 8 days for iodine-131 and about 5700 years for carbon-14."
+        },
+        {
+          "type": "text",
+          "text": "To find a half-life from data, plot activity (or count rate) against time and draw a smooth curve. Read the time for the activity to fall from any value to half of it. Repeat from two or three starting points and take the average. Subtract the background count from each reading first."
+        },
+        {
+          "type": "example",
+          "title": "Half-life from count rates",
+          "steps": [
+            "A source gives 800 counts per minute. After 15 days it gives 100 counts per minute. Background radiation has already been subtracted.",
+            "800 → 400 → 200 → 100: the count rate has halved 3 times.",
+            "3 half-lives = 15 days",
+            "Half-life = 15 ÷ 3 = 5 days"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "How much is left?",
+          "steps": [
+            "A hospital has 64 mg of iodine-131, which has a half-life of 8 days. How much is left after 24 days?",
+            "Number of half-lives = 24 ÷ 8 = 3",
+            "64 → 32 → 16 → 8",
+            "8 mg of iodine-131 remains."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model decay with bottle tops",
+          "text": "Mark 100 bottle tops on one side. Shake them in a box and tip them out. Remove every top that lands marked side up: these have 'decayed'. Count the rest and repeat. Plot the number left against the number of throws and find how many throws halve the number. You cannot predict which top will decay next, yet the curve is smooth."
+        },
+        {
+          "type": "heading",
+          "text": "Background radiation"
+        },
+        {
+          "type": "text",
+          "text": "Background radiation is the low level of radiation around us all the time. It comes from rocks such as granite, radon gas from the ground, cosmic rays from space, and food and drink. Bananas and matooke contain a little radioactive potassium-40. Medical X-rays add a small amount. These everyday levels are usually low."
+        },
+        {
+          "type": "heading",
+          "text": "Fission and fusion"
+        },
+        {
+          "type": "text",
+          "text": "Nuclear fission is the splitting of a large nucleus into two smaller nuclei. When uranium-235 absorbs a slow neutron, it splits, giving out two or three more neutrons and a large amount of energy. These neutrons can split more uranium nuclei, causing a chain reaction."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{235}_{92}\\mathrm{U} + {}^{1}_{0}\\mathrm{n} \\rightarrow {}^{141}_{56}\\mathrm{Ba} + {}^{92}_{36}\\mathrm{Kr} + 3\\,{}^{1}_{0}\\mathrm{n}",
+          "speech": "uranium 235 plus a neutron gives barium 141 plus krypton 92 plus 3 neutrons"
+        },
+        {
+          "type": "text",
+          "text": "In a nuclear reactor, the chain reaction is controlled. Control rods of boron or cadmium absorb spare neutrons; pushing them in slows the reaction. A moderator, such as water or graphite, slows the neutrons so they can cause fission. A coolant carries the heat away to make steam, which turns turbines and generators."
+        },
+        {
+          "type": "text",
+          "text": "Nuclear fusion is the joining of two small nuclei to form a larger one. In the Sun, hydrogen nuclei fuse to make helium. Fusion needs temperatures of millions of degrees, so it is very hard to control on Earth."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{2}_{1}\\mathrm{H} + {}^{3}_{1}\\mathrm{H} \\rightarrow {}^{4}_{2}\\mathrm{He} + {}^{1}_{0}\\mathrm{n}",
+          "speech": "hydrogen 2 plus hydrogen 3 gives helium 4 plus a neutron"
+        },
+        {
+          "type": "text",
+          "text": "In both fission and fusion, the products have slightly less mass than the starting particles. The lost mass becomes energy, given by Einstein's equation, where c is the speed of light, 3 × 10⁸ m/s."
+        },
+        {
+          "type": "equation",
+          "latex": "E = mc^2",
+          "speech": "E equals m c squared"
+        },
+        {
+          "type": "example",
+          "title": "Energy from a tiny loss of mass",
+          "steps": [
+            "Find the energy released when 1 g of mass disappears in nuclear reactions.",
+            "m = 1 g = 0.001 kg",
+            "E = mc² = 0.001 × (3 × 10⁸)² = 0.001 × 9 × 10¹⁶",
+            "E = 9 × 10¹³ J. Burning about 3000 tonnes of coal gives the same energy."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Uses of radioactivity"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Medicine: gamma rays from cobalt-60 kill cancer cells, and iodine-131 is used to study and treat the thyroid gland.",
+            "Sterilising: gamma rays kill germs on syringes, bandages and some foods.",
+            "Industry: beta sources check the thickness of paper and plastic sheets, and tracers find leaks in underground pipes.",
+            "Smoke detectors use a weak alpha source.",
+            "Carbon dating: the amount of carbon-14 left in wood, bone or cloth shows how old it is."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Dangers and safety"
+        },
+        {
+          "type": "text",
+          "text": "Ionising radiation can damage living cells, causing burns, radiation sickness and cancer. Alpha sources are most dangerous if swallowed or breathed in. Workers handle sources with long tongs, use lead shielding, limit their time near sources and wear badges that record their dose."
+        },
+        {
+          "type": "text",
+          "text": "Radioactive waste from reactors contains isotopes with very long half-lives. Plutonium-239, for example, has a half-life of about 24 000 years, so it stays dangerous for many thousands of years. It must be sealed and stored safely for that long."
+        },
+        {
+          "type": "heading",
+          "text": "Nuclear power and society"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Advantages: a small amount of fuel gives a huge amount of energy, the station gives a steady supply day and night, and it releases no carbon dioxide while running.",
+            "Disadvantages: stations are very expensive to build and close down, the waste is dangerous for thousands of years, and accidents can spread radioactive material over wide areas.",
+            "Accidents: at Chernobyl in Ukraine (1986), a reactor exploded. At Fukushima in Japan (2011), an earthquake and tsunami damaged a power station. People were moved from large areas around both.",
+            "Weapons: the same science can make nuclear bombs. Treaties aim to stop their spread, and the International Atomic Energy Agency inspects nuclear sites.",
+            "In Uganda, the Atomic Energy Council controls the use of radioactive materials. The government has also announced plans for a nuclear power station."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Uganda has uranium deposits and a growing need for electricity. What questions should communities, scientists and the government discuss before a nuclear power station is built? Think about safety, cost, waste and the environment."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Radioactive decay is spontaneous and random. Alpha is stopped by paper, beta by aluminium, and gamma is reduced by thick lead. Half-life is the time for half the nuclei to decay, found from a decay graph. Fission splits heavy nuclei and fusion joins light ones; both turn a little mass into a lot of energy."
+        }
+      ]
+    }
+  ]
+}

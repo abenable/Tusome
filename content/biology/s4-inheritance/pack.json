@@ -1,0 +1,185 @@
+{
+  "packId": "bio.s4.genetics.inheritance",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.genetics.inheritance",
+      "title": "Inheritance",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Genetics",
+      "subStrand": "Meiosis and genetic crosses",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "understand the process of cell division and significance of meiosis (k, u)",
+        "understand the concept of inheritance using genetic diagrams (u, s)",
+        "understand and explain sex determination in humans (u, s)",
+        "understand and explain sex linkage in humans (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Children often look like their parents, and a calf looks like the bull and cow that produced it. The passing of characteristics from parents to offspring is called inheritance, or heredity. Genetics is the study of how it happens."
+        },
+        {
+          "type": "heading",
+          "text": "Chromosomes and genes"
+        },
+        {
+          "type": "text",
+          "text": "The nucleus of each cell holds thread-like structures called chromosomes. They are made of DNA, which carries the instructions for building and running the body. A gene is a short length of DNA that controls one characteristic, such as blood group."
+        },
+        {
+          "type": "text",
+          "text": "Human body cells have 46 chromosomes in 23 pairs, one of each pair from each parent. A cell with paired chromosomes is diploid. A cell with one chromosome from each pair is haploid."
+        },
+        {
+          "type": "heading",
+          "text": "Cell division and meiosis"
+        },
+        {
+          "type": "text",
+          "text": "Mitosis is cell division that makes two cells identical to the parent cell, each with 46 chromosomes. It is used for growth, repair and asexual reproduction."
+        },
+        {
+          "type": "text",
+          "text": "Meiosis is cell division that makes gametes. One cell divides twice to give four cells, each with 23 chromosomes. Its main stages are:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Before division, each chromosome copies itself, so it has two identical strands joined together.",
+            "First division: the chromosomes line up in their pairs across the middle of the cell. Partners may swap small pieces. One chromosome from each pair moves to each end, and the cell divides into two.",
+            "Second division: in each new cell, the chromosomes line up again. The two strands of each chromosome separate and move to opposite ends.",
+            "The cells divide again, giving four haploid cells. Each has a different mix of chromosomes."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "Meiosis matters for two reasons. First, it halves the chromosome number, so the zygote has the same number as the parents:"
+        },
+        {
+          "type": "equation",
+          "expr": "sperm (23 chromosomes) + ovum (23 chromosomes) → zygote (46 chromosomes)",
+          "speech": "a sperm with 23 chromosomes plus an ovum with 23 chromosomes gives a zygote with 46 chromosomes"
+        },
+        {
+          "type": "text",
+          "text": "Second, it shuffles the chromosomes, so every gamete is different. This is why brothers and sisters differ."
+        },
+        {
+          "type": "heading",
+          "text": "Words used in genetics"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Allele: one form of a gene. The gene for stem height in peas has a tall allele and a short allele.",
+            "Dominant allele: shows its effect even when only one copy is present. It is written as a capital letter, such as T.",
+            "Recessive allele: shows its effect only when two copies are present. It is written as a small letter, such as t.",
+            "Homozygous: having two identical alleles, such as TT or tt.",
+            "Heterozygous: having two different alleles, such as Tt.",
+            "Genotype: the alleles an organism has, such as Tt.",
+            "Phenotype: the characteristic that can be seen or measured, such as tall."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Genetic diagrams"
+        },
+        {
+          "type": "text",
+          "text": "A genetic diagram shows how alleles pass from parents to offspring. Gregor Mendel worked out these rules using garden peas in the 1860s. In peas, the allele for tall stems (T) is dominant over the allele for short stems (t)."
+        },
+        {
+          "type": "example",
+          "title": "Crossing a pure tall plant with a short plant",
+          "steps": [
+            "Parents' phenotypes: tall × short.",
+            "Parents' genotypes: TT × tt.",
+            "Gametes: the tall parent makes only T gametes. The short parent makes only t gametes.",
+            "Offspring: every zygote gets T from one parent and t from the other, so all are Tt.",
+            "Result: all the offspring are tall, because T is dominant. Each one carries a hidden short allele."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Crossing two of these offspring",
+          "steps": [
+            "Parents' genotypes: Tt × Tt.",
+            "Gametes: each parent makes half T gametes and half t gametes.",
+            "Possible combinations: T with T gives TT. T with t gives Tt. t with T gives Tt. t with t gives tt.",
+            "Genotype ratio: 1 TT : 2 Tt : 1 tt.",
+            "Phenotype ratio: 3 tall : 1 short. On average, one plant in four is short."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Not every pair of alleles is simply dominant and recessive. In incomplete dominance, the heterozygote is in between: crossing red and white flowers of some plants gives pink flowers. In co-dominance, both alleles show fully: a person with blood group AB shows both the A and the B allele."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Bead inheritance",
+          "text": "Work in pairs. Each partner puts one red bead and one white bead in a small bag or envelope. Red stands for a dominant allele R and white for a recessive allele r. Without looking, each partner picks one bead, and the two beads together are the offspring's genotype. Record it, put the beads back and repeat 40 times. Count the RR, Rr and rr offspring and compare the class totals with a 1 : 2 : 1 ratio."
+        },
+        {
+          "type": "heading",
+          "text": "Sex determination"
+        },
+        {
+          "type": "text",
+          "text": "One of the 23 pairs of chromosomes decides whether a person is male or female. These are the sex chromosomes. A female has two X chromosomes (XX). A male has one X and one smaller Y chromosome (XY)."
+        },
+        {
+          "type": "example",
+          "title": "How a baby's sex is decided",
+          "steps": [
+            "Parents: mother XX × father XY.",
+            "Gametes: every ovum carries an X. Half the sperm carry an X and half carry a Y.",
+            "Combinations: an X ovum with an X sperm gives XX, a girl. An X ovum with a Y sperm gives XY, a boy.",
+            "Result: 1 girl : 1 boy. Each pregnancy has an equal chance of being a girl or a boy.",
+            "The sperm, not the ovum, decides the baby's sex."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Some people believe that a mother decides whether her baby is a boy or a girl, and blame her for having only daughters. How would you explain the science to a neighbour who believes this, in a kind and respectful way?"
+        },
+        {
+          "type": "heading",
+          "text": "Sex linkage"
+        },
+        {
+          "type": "text",
+          "text": "Some genes are on the X chromosome but have no partner on the smaller Y chromosome. These genes are called sex-linked. Red-green colour blindness and haemophilia, in which blood does not clot properly, are caused by recessive alleles on the X chromosome."
+        },
+        {
+          "type": "text",
+          "text": "A female has two X chromosomes, so a normal allele on one can hide a faulty allele on the other. She is then a carrier, with normal health herself. A male has only one X, so a single faulty allele always shows. That is why these conditions are much more common in males."
+        },
+        {
+          "type": "example",
+          "title": "A carrier mother and a father with normal colour vision",
+          "steps": [
+            "Let N be the normal allele and n the colour blindness allele, both on the X chromosome.",
+            "Parents: mother XN Xn, a carrier with normal vision, × father XN Y, with normal vision.",
+            "Gametes: the mother gives XN or Xn. The father gives XN or Y.",
+            "Offspring: XN XN, a normal girl. XN Xn, a carrier girl. XN Y, a normal boy. Xn Y, a colour-blind boy.",
+            "Result: no daughter is colour blind, but each son has a 1 in 2 chance of being colour blind."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Genes on chromosomes carry characteristics from parents to offspring. Meiosis halves the chromosome number to make gametes and creates variation. Dominant alleles hide recessive ones, and genetic diagrams show expected ratios such as 3 : 1. Females are XX and males XY, so the sperm decides the sex. Sex-linked conditions such as colour blindness are more common in males."
+        }
+      ]
+    }
+  ]
+}

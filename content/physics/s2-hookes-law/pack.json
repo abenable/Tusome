@@ -1,44 +1,194 @@
 {
   "packId": "phy.s2.matter.hookes-law",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s2.matter.hookes-law",
-      "title": "Hooke's Law",
+      "title": "Mechanical Properties of Materials and Hooke's Law",
       "subject": "physics",
       "level": "S2",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Mechanical properties of materials; Hooke's law",
       "order": 5,
+      "term": 2,
       "outcomes": [
-        "understand how the mechanical properties of common materials can be utilised in physical structures (u, s, v/a)"
+        "understand how the mechanical properties of common materials can be utilised in physical structures (u, s, v/a)",
+        "understand that the tensile strength of materials is determined by the properties of the substances they are composed of (u)",
+        "understand that heating changes the structure and properties of some materials (u)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Materials have different mechanical properties: some are brittle (snap without bending), some are ductile (can be drawn into wires), some are malleable (can be hammered into shape), and some are elastic (return to their original shape after a stretching force is removed)."
+          "text": "Builders in Uganda choose materials with care. Iron sheets cover roofs, steel bars go inside concrete pillars, and clay is fired into bricks. Each choice depends on how the material behaves when it is pulled, squashed, bent or heated. These behaviours are called mechanical properties."
+        },
+        {
+          "type": "heading",
+          "text": "Mechanical properties of materials"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brittle: breaks suddenly without bending first, like glass, chalk or a clay pot.",
+            "Ductile: can be pulled into thin wires without breaking, like copper and aluminium.",
+            "Strong: needs a large force to break it, like steel or a nylon rope.",
+            "Hard: is not easily scratched or dented, like steel or a grinding stone.",
+            "Malleable: can be hammered or rolled into thin sheets without cracking, like iron for roofing sheets or aluminium for saucepans.",
+            "Flexible: bends easily without breaking, like bamboo, papyrus or rubber.",
+            "Elastic: returns to its original shape when the force is removed, like a rubber band or a spring.",
+            "Plastic: keeps its new shape when the force is removed, like wet clay or plasticine."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "For a spring or an elastic material, Hooke's law states that the extension is directly proportional to the force applied \u2014 as long as the elastic limit is not exceeded."
+          "text": "Engineers match the property to the job. Electric wires are copper because it is ductile and carries current well. Roofs use iron sheets because they are malleable, light and strong. Window glass lets light through, but it must be handled carefully because it is brittle."
+        },
+        {
+          "type": "heading",
+          "text": "Materials in structures"
+        },
+        {
+          "type": "text",
+          "text": "A stretching force puts a material in tension. A squashing force puts it in compression. When someone stands on a plank across a ditch, the plank bends. Its top surface is squashed, so it is in compression. Its bottom surface is stretched, so it is in tension."
+        },
+        {
+          "type": "text",
+          "text": "Concrete is very strong in compression but weak in tension, so a concrete beam cracks along its stretched side. Builders place steel bars in the concrete near that side. The steel takes the tension and the concrete takes the compression. This is reinforced concrete, used in pillars, beams, bridges and tall buildings."
+        },
+        {
+          "type": "text",
+          "text": "A hollow tube is stiffer than a solid rod made from the same amount of material. This is why bicycle frames, scaffolding poles and our long bones are hollow, and why bamboo is so strong for its weight."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a model bridge",
+          "text": "In groups, build a bridge across a 30 cm gap between two desks from straws, thin sticks or dry spaghetti, with tape. Load the middle with coins until it breaks. Note which parts bent, stretched or snapped, and compare which designs held the most."
+        },
+        {
+          "type": "heading",
+          "text": "Tensile strength"
+        },
+        {
+          "type": "text",
+          "text": "Tensile strength is the greatest stretching force a material can bear, for each unit of area, before it breaks. It depends on the particles the material is made of and how strongly they hold together."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In a metal, the particles sit in neat layers held by strong forces. The layers can slide over each other without separating, so metals are strong and ductile.",
+            "In glass, the particles are not in neat layers. A tiny scratch on the surface can spread right across, so glass snaps suddenly.",
+            "Rubber is made of long, tangled chains of particles. Pulling straightens the chains, and they coil back when released, so rubber is elastic."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Heating changes materials"
+        },
+        {
+          "type": "text",
+          "text": "Heating makes particles vibrate more strongly, so they can move into new positions. How fast the material then cools decides how the particles settle. This changes its properties."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Annealing: a blacksmith heats steel until it glows red, then lets it cool slowly. The steel becomes softer and less brittle, so it is easier to shape into a hoe.",
+            "Hardening and tempering: red-hot steel cooled quickly in water becomes very hard but brittle. Heating it again gently, called tempering, keeps it hard but makes it less likely to crack. This gives a panga a lasting edge.",
+            "Firing clay: soft clay heated in a kiln loses its water and its particles join together. It becomes hard, brittle pottery or bricks.",
+            "Plastics and glass soften when heated, so they can be moulded into jerrycans, basins and bottles."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Hooke's law"
+        },
+        {
+          "type": "text",
+          "text": "When you hang a load on a spring, it stretches. The increase in length is called the extension. Hooke's law states that the extension of a spring is directly proportional to the stretching force, provided the elastic limit is not exceeded."
         },
         {
           "type": "equation",
-          "latex": "F = k x"
+          "latex": "F = k x",
+          "speech": "F equals k x"
         },
         {
           "type": "text",
-          "text": "Here F is the stretching force, x is the extension, and k is the spring constant \u2014 a measure of how stiff the spring is. Beyond the elastic limit, a spring stretches permanently and no longer obeys Hooke's law."
+          "text": "F is the force in newtons, x is the extension in metres, and k is the spring constant in newtons per metre (N/m). A stiff spring has a large spring constant."
         },
         {
           "type": "text",
-          "text": "Use the PhET Hooke's Law simulation below. Hang different weights on a spring and see how the extension changes, and how the force-versus-extension graph relates to the spring constant."
+          "text": "A graph of load against extension is a straight line through the origin, up to the elastic limit. Beyond that point the line curves. The spring is then permanently stretched and does not return to its original length."
+        },
+        {
+          "type": "text",
+          "text": "Engineers use two more ideas. Stress is the force acting on each unit of cross-sectional area of a wire or bar. Strain is the extension divided by the original length. Strain has no units, because it compares two lengths."
+        },
+        {
+          "type": "equation",
+          "expr": "stress = force ÷ cross-sectional area",
+          "speech": "stress equals force divided by cross-sectional area"
+        },
+        {
+          "type": "equation",
+          "expr": "strain = extension ÷ original length",
+          "speech": "strain equals extension divided by original length"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Stretch a spring or rubber band",
+          "text": "Hang a spring or rubber band from a nail and tie a small plastic cup to it. Pour in water 100 cm³ at a time; each 100 cm³ weighs about 1 N. Measure the extension after each pour and plot load against extension. Compare the graph for a spring with the graph for a rubber band."
+        },
+        {
+          "type": "text",
+          "text": "In the examples we take g = 10 N/kg."
+        },
+        {
+          "type": "example",
+          "title": "Finding a spring constant",
+          "steps": [
+            "A spring is 20 cm long. A load of 2 N stretches it to 24 cm. Find the spring constant.",
+            "Extension = 24 − 20 = 4 cm = 0.04 m",
+            "k = F ÷ x = 2 ÷ 0.04",
+            "k = 50 N/m"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Predicting a new length",
+          "steps": [
+            "What is the length of the same spring when it holds a load of 3.5 N? Assume the elastic limit is not passed.",
+            "x = F ÷ k = 3.5 ÷ 50 = 0.07 m = 7 cm",
+            "New length = 20 + 7 = 27 cm"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Weighing a bag of beans",
+          "steps": [
+            "Kyomuhendo hangs a bag of beans on the same spring, and it stretches by 10 cm. Find the weight and mass of the bag.",
+            "x = 10 cm = 0.1 m",
+            "F = k × x = 50 × 0.1 = 5 N",
+            "Mass = weight ÷ g = 5 ÷ 10 = 0.5 kg"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A spring balance in the market works by stretching a spring. What might happen to its readings if traders often hang loads heavier than it was made for?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Materials can be brittle, ductile, strong, hard, malleable, flexible, elastic or plastic, and builders choose them to suit the job. Heating can change these properties. Hooke's law says extension is proportional to force, F = kx, up to the elastic limit."
         }
       ],
       "sim": {
         "phet": "hookes-law_en.html",
-        "caption": "PhET Hooke's Law. Stretch a spring with different forces and see how extension relates to force and the spring constant. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Hooke's Law. On the Intro screen, pull the spring with different forces and read the displacement. Check that doubling the force doubles the extension, then make the spring stiffer and compare. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

@@ -1,0 +1,201 @@
+{
+  "packId": "phy.s1.heat.temperature",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.heat.temperature",
+      "title": "Temperature Measurements",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Heat",
+      "subStrand": "Heat, temperature and thermometers",
+      "order": 9,
+      "term": 2,
+      "outcomes": [
+        "Understand the difference between heat and temperature (u)",
+        "Understand how temperature scales are established (u)",
+        "Calibrate a thermometer and use it to measure temperature (s, u)",
+        "Compare the qualities of thermometric liquids (u, s, v/a)",
+        "Describe the causes and effects of the daily variations in atmospheric temperature (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Early mornings in Kabale are cold enough for sweaters. Midday in Kasese can be very hot. When you have a fever, a health worker checks your temperature. This topic is about temperature and how we measure it."
+        },
+        {
+          "type": "heading",
+          "text": "Heat and temperature"
+        },
+        {
+          "type": "text",
+          "text": "Heat is a form of energy that flows from a hotter object to a colder one. Like all energy, it is measured in joules (J)."
+        },
+        {
+          "type": "text",
+          "text": "Temperature is a measure of how hot or cold something is. It is measured in degrees Celsius (°C) or in kelvin (K). When an object gains heat, its particles move faster and its temperature usually rises."
+        },
+        {
+          "type": "text",
+          "text": "Heat and temperature are not the same. A full saucepan of water and a cup of water can both be at 80 °C. The saucepan holds much more heat energy, because it has more water. It would melt more ice."
+        },
+        {
+          "type": "text",
+          "text": "Different materials also warm up at different rates. Give the same amount of heat to 1 kg of iron and 1 kg of water. The temperature of the iron rises about nine times as much."
+        },
+        {
+          "type": "heading",
+          "text": "How temperature scales are made"
+        },
+        {
+          "type": "text",
+          "text": "A thermometer is an instrument for measuring temperature. It uses a thermometric property, a property that changes steadily with temperature. In a liquid-in-glass thermometer, this is the length of the liquid thread, which grows as the liquid expands."
+        },
+        {
+          "type": "text",
+          "text": "To make a scale, we need two fixed points. A fixed point is a temperature that is always the same and is easy to produce again."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The lower fixed point, or ice point, is the temperature of pure melting ice. It is 0 °C.",
+            "The upper fixed point, or steam point, is the temperature of steam above pure water boiling at normal sea-level air pressure. It is 100 °C."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The gap between the two fixed points is divided into 100 equal parts. Each part is one degree Celsius."
+        },
+        {
+          "type": "text",
+          "text": "The Kelvin scale starts at absolute zero. This is the lowest possible temperature, about −273 °C. A change of 1 K is the same size as a change of 1 °C. To change a Celsius temperature to kelvin, add 273."
+        },
+        {
+          "type": "equation",
+          "latex": "T = \\theta + 273",
+          "speech": "T in kelvin equals theta in degrees Celsius plus two hundred and seventy-three"
+        },
+        {
+          "type": "text",
+          "text": "Here T is the temperature in kelvin and θ, the Greek letter theta, is the temperature in degrees Celsius."
+        },
+        {
+          "type": "example",
+          "title": "Change between Celsius and kelvin",
+          "steps": [
+            "Normal body temperature is about 37 °C.",
+            "T = θ + 273 = 37 + 273",
+            "T = 310 K",
+            "Water in a kettle is at 373 K.",
+            "θ = T − 273 = 373 − 273",
+            "θ = 100 °C, so the water is boiling."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Calibrating a thermometer"
+        },
+        {
+          "type": "text",
+          "text": "To calibrate a thermometer means to mark a scale on it. Place the bulb in melting ice and mark where the liquid stops. Then hold it in the steam above boiling water and mark the new level. Divide the gap between the marks into 100 equal parts."
+        },
+        {
+          "type": "text",
+          "text": "If a thermometer has no scale, measure the length of the liquid thread with a ruler instead. Let l₀ be the length at the ice point, l₁₀₀ the length at the steam point, and lθ the length at the unknown temperature."
+        },
+        {
+          "type": "equation",
+          "latex": "\\theta = \\frac{l_\\theta - l_0}{l_{100} - l_0} \\times 100",
+          "speech": "theta equals l theta minus l nought, divided by l one hundred minus l nought, all times one hundred"
+        },
+        {
+          "type": "example",
+          "title": "Find a temperature from lengths",
+          "steps": [
+            "On an unmarked thermometer, the liquid thread is 2.0 cm long in melting ice and 22.0 cm long in steam.",
+            "The gap between the fixed points is 22.0 − 2.0 = 20.0 cm. This stands for 100 °C.",
+            "In warm water, the thread is 9.0 cm long.",
+            "The thread is 9.0 − 2.0 = 7.0 cm above the ice point.",
+            "θ = (7.0 ÷ 20.0) × 100",
+            "θ = 35 °C"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a simple thermometer",
+          "text": "Fill a small plastic bottle to the top with water coloured with ink. Push a clear straw through a hole in the cap and seal around it with plasticine or candle wax. Stand the bottle in warm water and watch the level in the straw rise. Move it to cold water and watch the level fall. Mark the levels on a card behind the straw."
+        },
+        {
+          "type": "heading",
+          "text": "Mercury and alcohol"
+        },
+        {
+          "type": "text",
+          "text": "A thermometric liquid is the liquid inside a thermometer. Mercury and alcohol are the common ones."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mercury is shiny and easy to see. Alcohol is colourless, so a dye is added.",
+            "Mercury expands evenly, does not stick to glass, and responds quickly to heat.",
+            "Mercury freezes at −39 °C and boils at 357 °C, so it can measure high temperatures.",
+            "Alcohol freezes at about −114 °C and boils at about 78 °C, so it suits very cold places but not boiling water.",
+            "Alcohol expands more than mercury, so it shows small changes clearly.",
+            "Mercury is poisonous. Only an adult should clean up a broken mercury thermometer, never with bare hands."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A digital thermometer uses an electronic sensor and shows the reading as numbers. It is quick, easy to read and contains no mercury, but it needs a battery."
+        },
+        {
+          "type": "text",
+          "text": "A clinical thermometer measures body temperature. Its scale runs only from 35 °C to 42 °C, so each degree is easy to read. A narrow kink in the tube, called a constriction, holds the reading until it is shaken down."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A health centre must choose between mercury thermometers and digital thermometers. Which would you choose, and why?"
+        },
+        {
+          "type": "heading",
+          "text": "Daily changes in air temperature"
+        },
+        {
+          "type": "text",
+          "text": "The air temperature changes during the day. After sunrise, sunlight warms the ground, and the ground warms the air. The air is usually warmest in the early afternoon. At night the ground loses heat, so the air cools. It is coldest just before dawn."
+        },
+        {
+          "type": "text",
+          "text": "Clouds make a difference. On a cloudy day, less sunlight reaches the ground, so the day is cooler. On a cloudy night, the clouds hold heat in, so the night is warmer than a clear one."
+        },
+        {
+          "type": "text",
+          "text": "Height above sea level matters too. The air is cooler higher up. Kabale and the slopes of Mt Elgon are cooler than Kasese or the shores of Lake Albert, which are much lower."
+        },
+        {
+          "type": "text",
+          "text": "These changes affect daily life. Farmers dry coffee and maize in the hot afternoon sun. People wear warm clothes in the cold early morning. Tea and Arabica coffee grow well in the cooler highlands."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "How do the changes in temperature during the day affect when people in your area do hard work outdoors?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Heat is energy, measured in joules. Temperature tells how hot something is, measured in °C or K. A thermometer scale is set using the ice point (0 °C) and the steam point (100 °C). Mercury and alcohol each suit different jobs. Air temperature rises during the day and falls at night."
+        }
+      ],
+      "sim": {
+        "phet": "energy-forms-and-changes_en.html",
+        "caption": "PhET Energy Forms and Changes. On the Intro screen, drag a thermometer onto the iron block and another into the water, then heat both burners equally. Watch which temperature rises faster, even though both receive the same heat. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

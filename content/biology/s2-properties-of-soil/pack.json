@@ -1,0 +1,172 @@
+{
+  "packId": "bio.s2.soil.properties",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.soil.properties",
+      "title": "Physical and Chemical Properties of Soil",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Soil",
+      "subStrand": "Soil types, constituents and properties",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "identify the types of soil (u, v)",
+        "determine soil constituents and identify their properties (u, s)",
+        "understand that different soil samples have different properties: water retention, drainage, capillarity and pH; learners conduct experiments to investigate these properties (u, s)",
+        "carry out experiments to find the percentage of air, water and humus in a soil sample (u, s)",
+        "understand the importance of air and water in soil to other living organisms (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Brick makers dig clay from valley swamps. Farmers on the hills around Masaka grow coffee and matooke in dark, crumbly soil. Along the shores of Lake Victoria the ground is sandy. Soils differ, and the differences decide what grows well in each place."
+        },
+        {
+          "type": "heading",
+          "text": "What soil is made of"
+        },
+        {
+          "type": "text",
+          "text": "Soil forms very slowly as rocks break into smaller pieces. Heat, rain, wind, plant roots and living things all help to break the rocks. This breaking down is called weathering. Soil has six main constituents."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mineral particles: pieces of rock of different sizes, from gravel and sand to silt and clay.",
+            "Humus: dark material formed from dead plants and animals that have rotted. It holds water, supplies nutrients and sticks particles together into crumbs.",
+            "Water: it fills some of the spaces between particles and dissolves mineral salts.",
+            "Air: it fills the other spaces and supplies oxygen to roots and soil organisms.",
+            "Mineral salts: nutrients such as nitrates, phosphates and potassium, dissolved in the soil water.",
+            "Living organisms: earthworms, termites, bacteria, fungi and plant roots."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Types of soil"
+        },
+        {
+          "type": "text",
+          "text": "Soils are named after the particles they contain most. Sand particles are large, from about 0.05 mm to 2 mm across. Silt particles are smaller. Clay particles are tiny, less than 0.002 mm across."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sandy soil feels gritty and is usually light in colour. It has large air spaces, so water drains through quickly. It holds little water and few nutrients.",
+            "Clay soil feels smooth and sticky when wet and cracks when dry. It holds a lot of water but drains slowly, so it has little air and can become waterlogged. It is often rich in mineral salts.",
+            "Loam soil is a mixture of sand, silt and clay with plenty of humus. It is dark and crumbly. It holds enough water, drains well and has plenty of air. Loam is the best soil for most crops."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Separating soil particles",
+          "text": "Put two handfuls of soil into a clear plastic bottle. Fill the bottle three-quarters full with water, close it and shake it hard for one minute. Leave it to stand overnight. The heaviest particles settle first. You will see layers: gravel at the bottom, then sand, then silt, then clay on top. Humus floats on the water. Measure each layer with a ruler. Repeat with sandy soil, clay soil and garden loam, and compare the layers."
+        },
+        {
+          "type": "heading",
+          "text": "Properties of soil"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Water retention is the amount of water a soil holds. Clay holds the most and sand the least. Small particles have tiny spaces that hold water, and humus soaks up water like a sponge.",
+            "Drainage is how quickly water passes through a soil. Water drains fastest through sand and slowest through clay. Poor drainage leaves roots without air.",
+            "Capillarity is the rise of water upwards through the tiny spaces between soil particles, like paraffin rising up a lamp wick. Water rises highest in clay, but slowly. It brings water up from deep soil to roots in the dry season.",
+            "pH tells us how acidic or alkaline a soil is. A pH of 7 is neutral, below 7 is acidic and above 7 is alkaline. Most crops grow best in soil with a pH between 6 and 7. Farmers add lime to soil that is too acidic."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Comparing drainage and water retention",
+          "text": "Cut three plastic bottles in half. Turn each top half upside down into its bottom half to make a funnel, and plug the neck with cotton wool. Put equal amounts of dry sand, clay and loam into the three funnels. Pour 100 cm³ of water into each at the same time. Note how long each takes to start dripping. After 10 minutes, measure the water that has collected below. Keep the test fair: use the same amount of soil and water and the same time for each."
+        },
+        {
+          "type": "example",
+          "title": "Working out water retained",
+          "steps": [
+            "100 cm³ of water was poured onto each soil. After 10 minutes, the water collected was: sand 80 cm³, loam 55 cm³, clay 30 cm³.",
+            "Water retained = water poured in − water collected.",
+            "Sand: 100 − 80 = 20 cm³. Loam: 100 − 55 = 45 cm³. Clay: 100 − 30 = 70 cm³.",
+            "Clay retained the most water and sand the least. Sand drained best."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To test soil pH, shake a little soil with clean rain water and let it settle. Dip universal indicator paper into the clear liquid and match the colour to the chart. If there is no indicator paper, the purple juice from boiled red cabbage changes colour too: it turns pinkish in acid and greenish in alkali."
+        },
+        {
+          "type": "heading",
+          "text": "Percentage of water, humus and air"
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{percentage} = \\frac{\\text{part}}{\\text{whole sample}} \\times 100",
+          "speech": "percentage equals the part divided by the whole sample, times one hundred"
+        },
+        {
+          "type": "example",
+          "title": "Percentage of water",
+          "steps": [
+            "Weigh a tin, add fresh soil and weigh again. The fresh soil has a mass of 50 g.",
+            "Dry the soil gently, in the hot sun for two days or over a pan of boiling water, until its mass stops falling. The dry soil has a mass of 42 g.",
+            "Mass of water lost = 50 − 42 = 8 g.",
+            "Percentage of water = 8 ÷ 50 × 100 = 16%."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Percentage of humus",
+          "steps": [
+            "Take 40 g of the dry soil and heat it strongly in a metal tin over a charcoal stove, stirring, until it stops glowing and smoking. The humus burns away.",
+            "Cool and weigh it. The mass is now 37 g.",
+            "Mass of humus = 40 − 37 = 3 g.",
+            "Percentage of humus = 3 ÷ 40 × 100 = 7.5%."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Percentage of air",
+          "steps": [
+            "Press an open tin with a volume of 50 cm³ into the ground so it fills with undisturbed soil. Tip the soil into a measuring cylinder holding 100 cm³ of water and stir. Bubbles of air rise out.",
+            "Without air, the level would reach 100 + 50 = 150 cm³. The level actually reads 138 cm³.",
+            "Volume of air = 150 − 138 = 12 cm³.",
+            "Percentage of air = 12 ÷ 50 × 100 = 24%."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Heating soil strongly should be done outside, with the teacher watching. Let tins cool before you touch them."
+        },
+        {
+          "type": "heading",
+          "text": "Why air and water in soil matter"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Roots, earthworms and soil bacteria need oxygen from soil air to respire. In waterlogged soil, roots run short of oxygen and can die.",
+            "Some soil bacteria take nitrogen from soil air and make it into compounds that plants use.",
+            "Plants need soil water for photosynthesis and to keep their cells firm.",
+            "Water dissolves mineral salts so that roots can absorb them.",
+            "Seeds need water to germinate, and earthworms need moist soil to breathe through their skin.",
+            "Water and air help decomposers break down dead matter into humus."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Loam is called the best soil for farming, yet brick makers prefer clay. What makes a soil good depends on its use. Which properties matter to a farmer, and which matter to a brick maker?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Soil is made of mineral particles, humus, water, air, mineral salts and living organisms. Sandy soil drains fast and holds little water, clay holds much water but drains poorly, and loam balances both. Air and water in soil keep roots and soil organisms alive."
+        }
+      ]
+    }
+  ]
+}

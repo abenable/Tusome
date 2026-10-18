@@ -1,0 +1,181 @@
+{
+  "packId": "bio.s2.nutrition.green-plants",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.nutrition.green-plants",
+      "title": "Nutrition in Green Plants",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Nutrition in Plants and Animals",
+      "subStrand": "Photosynthesis and the leaf",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "understand the meaning of autotrophic and heterotrophic nutrition (k)",
+        "derive the meaning of the term photosynthesis and understand the process (u, s)",
+        "perform experiments to investigate the factors that affect the rate of photosynthesis (s, gs)",
+        "appreciate the structures and adaptations that enable a leaf to carry out the process of photosynthesis (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Every meal you eat can be traced back to a green plant. Posho comes from maize. Milk comes from cows that ate grass. Green plants are the starting point of almost all the food on Earth."
+        },
+        {
+          "type": "heading",
+          "text": "Autotrophic and heterotrophic nutrition"
+        },
+        {
+          "type": "text",
+          "text": "Autotrophic nutrition is making your own food from simple substances, using energy from light. Auto means self and troph means feeding. Organisms that do this, such as green plants and algae, are called autotrophs."
+        },
+        {
+          "type": "text",
+          "text": "Heterotrophic nutrition is obtaining food that other organisms have made. Hetero means other. Animals, fungi and most bacteria are heterotrophs. A goat eats grass, a mushroom feeds on dead matter, and a tapeworm feeds on a living host."
+        },
+        {
+          "type": "text",
+          "text": "Autotrophs are called producers. They provide food for all other living things, either directly or through the animals that eat them."
+        },
+        {
+          "type": "heading",
+          "text": "What photosynthesis is"
+        },
+        {
+          "type": "text",
+          "text": "The word photosynthesis comes from photo, meaning light, and synthesis, meaning putting together. Photosynthesis is the process by which green plants make glucose from carbon dioxide and water, using light energy trapped by chlorophyll. Oxygen is given off."
+        },
+        {
+          "type": "equation",
+          "expr": "carbon dioxide + water → glucose + oxygen (light energy, chlorophyll)",
+          "speech": "carbon dioxide plus water, using light energy and chlorophyll, gives glucose plus oxygen"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{6CO_2 + 6H_2O} \\xrightarrow{\\text{light, chlorophyll}} \\mathrm{C_6H_{12}O_6 + 6O_2}",
+          "speech": "six C O two plus six H two O, with light and chlorophyll, gives C six H twelve O six plus six O two"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Carbon dioxide enters the leaf from the air through tiny pores called stomata.",
+            "Water comes from the soil. It enters the roots and travels up the stem to the leaves.",
+            "Light comes from the sun.",
+            "Chlorophyll, inside the chloroplasts, traps the light energy."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Inside the chloroplast, the trapped light energy splits water into hydrogen and oxygen. The oxygen leaves the leaf through the stomata. The hydrogen joins with carbon dioxide to make glucose."
+        },
+        {
+          "type": "text",
+          "text": "The plant uses glucose for respiration, to release energy. It stores glucose as starch, as in cassava roots and maize grains. It also turns glucose into cellulose for cell walls, into oils, as in groundnuts, and, with nitrates from the soil, into proteins."
+        },
+        {
+          "type": "heading",
+          "text": "Testing a leaf for starch"
+        },
+        {
+          "type": "text",
+          "text": "Leaves store some of the glucose they make as starch. A starch test therefore shows whether a leaf has been photosynthesising. Before an experiment, the plant is kept in the dark for two days so it uses up its starch. This is called destarching."
+        },
+        {
+          "type": "example",
+          "title": "The starch test on a leaf",
+          "steps": [
+            "Pick a soft leaf, such as a bean leaf, that has been in sunlight for a few hours.",
+            "Dip it in boiling water for one minute. This kills the cells and softens the leaf.",
+            "Put out the flame. Put the leaf in a test tube of methylated spirit and stand the tube in the hot water. The spirit removes the green chlorophyll. Never heat spirit over a flame, because it catches fire easily.",
+            "When the leaf is pale, dip it in warm water to soften it again.",
+            "Spread it on a white saucer and add a few drops of iodine solution.",
+            "A blue-black colour shows starch is present. A brown colour shows no starch."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Factors that affect the rate of photosynthesis"
+        },
+        {
+          "type": "text",
+          "text": "The rate of photosynthesis means how fast it happens. Several factors affect it."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Light intensity: more light gives a faster rate, up to a point.",
+            "Carbon dioxide: more carbon dioxide gives a faster rate, up to a point. Air contains only about 0.04% carbon dioxide.",
+            "Temperature: photosynthesis is controlled by enzymes. Warmth speeds it up, but above about 40 °C the enzymes are damaged and the rate falls.",
+            "Water: when a plant is short of water, its stomata close and less carbon dioxide gets in.",
+            "Chlorophyll: only the green parts of a plant can photosynthesise."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The factor in shortest supply holds back the rate. On a cloudy morning, light is in short supply, so adding more carbon dioxide would make little difference."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Light is needed: cover part of a leaf on a destarched plant, on both sides, with a strip of dark paper held by paper clips. Leave the plant in sunlight for six hours, then test the leaf for starch. Only the uncovered part turns blue-black.",
+            "Chlorophyll is needed: draw a variegated leaf, one with green and yellow or white patches, such as a croton leaf. Test it for starch. Only the parts that were green turn blue-black.",
+            "Carbon dioxide is needed: if your school has the chemicals, seal one leaf of a destarched plant in a clear bag with sodium hydroxide, which absorbs carbon dioxide. Seal another leaf in a bag with water only. After a day in sunlight, only the second leaf contains starch."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Counting bubbles from a water plant",
+          "text": "Put a few stems of a green pond plant in a clear jar of water with a pinch of baking soda, which gives off carbon dioxide. Place the jar in bright sunlight and count the bubbles of oxygen rising from the cut stems in one minute. Then move it into the shade and count again. Keep everything else the same and record your results in a table."
+        },
+        {
+          "type": "heading",
+          "text": "How a leaf is adapted for photosynthesis"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The leaf blade is broad and flat, so it has a large surface to absorb light.",
+            "The leaf is thin, so carbon dioxide only has a short distance to reach the inner cells.",
+            "Leaves are arranged on the stem so that they do not shade each other.",
+            "A network of veins brings water to the cells, carries food away and supports the blade."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A thin slice cut across a leaf shows these layers, from the top down."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Waxy cuticle: a clear, waterproof layer that cuts down water loss and lets light through.",
+            "Upper epidermis: a single layer of clear cells with no chloroplasts. It protects the leaf and lets light pass.",
+            "Palisade layer: tall cells packed closely together, just under the upper surface. They contain many chloroplasts and carry out most of the photosynthesis.",
+            "Spongy layer: round, loosely packed cells with large air spaces between them. Gases spread easily through these spaces.",
+            "Veins: they contain xylem, which brings water, and phloem, which carries food away.",
+            "Lower epidermis: it has many stomata. Each stoma is a pore between two guard cells, which open it in light and close it in the dark."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A model leaf",
+          "text": "In groups, build a model of the inside of a leaf from local materials, such as a cut-open cardboard box. Use clear polythene for the cuticle, upright straws or rolled paper for palisade cells, sponge for the spongy layer, green peas for chloroplasts and two bean seeds for guard cells. Label each part and explain how it helps photosynthesis."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A farmer near Mbale grows tomatoes inside a greenhouse covered with clear plastic. What could she change inside the greenhouse to make her plants photosynthesise faster? What might stop each change from working?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Autotrophs make their own food; heterotrophs take in food made by others. In photosynthesis, green plants use light energy trapped by chlorophyll to make glucose from carbon dioxide and water, giving off oxygen. Light, carbon dioxide and temperature affect the rate, and the leaf's broad, thin shape and inner layers suit it to the job."
+        }
+      ]
+    }
+  ]
+}

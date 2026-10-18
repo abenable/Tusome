@@ -1,0 +1,178 @@
+{
+  "packId": "bio.s3.locomotion.mammals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.locomotion.mammals",
+      "title": "Locomotion in Mammals",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Locomotion in Animals",
+      "subStrand": "Skeleton, joints and muscles",
+      "order": 7,
+      "term": 3,
+      "outcomes": [
+        "understand the structure and functions of the skeleton in supporting the human body (k, u)",
+        "identify and describe the bones that form the two divisions of the human skeleton (k, u, s)",
+        "understand how the action of muscles on the skeleton causes movements in animals (u, s)",
+        "understand the causes, effects and preventive measures of muscle cramps (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A goat jumps onto a wall, and Mugisha climbs the stairs to his classroom. Locomotion is the movement of a whole organism from one place to another. In mammals, it depends on bones, joints, muscles and nerves working together."
+        },
+        {
+          "type": "heading",
+          "text": "Functions of the skeleton"
+        },
+        {
+          "type": "text",
+          "text": "The skeleton is the frame of bones inside the body. An adult human has 206 bones."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Support and framework: it gives the body its shape and holds organs in place. The leg bones carry the weight of the whole body.",
+            "Protection: the skull protects the brain. The ribs and breastbone protect the heart and lungs. The backbone protects the spinal cord.",
+            "Muscle attachment: muscles are joined to bones by strong cords called tendons. When muscles pull on bones, the body moves.",
+            "Making blood cells: red bone marrow inside bones such as the ribs, breastbone, backbone and the ends of the thigh bone makes red and white blood cells."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The two divisions of the skeleton"
+        },
+        {
+          "type": "text",
+          "text": "The axial skeleton runs along the middle, or axis, of the body."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Skull: the cranium encloses the brain, and the jaw bones hold the teeth.",
+            "Vertebral column (backbone): a chain of 33 small bones called vertebrae.",
+            "Ribs: 12 pairs of curved bones joined to the vertebrae at the back.",
+            "Sternum (breastbone): a flat bone at the front of the chest, where most ribs join."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The appendicular skeleton is made of the limbs and the girdles that join them to the axial skeleton."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pectoral (shoulder) girdle: the scapula, or shoulder blade, and the clavicle, or collar bone.",
+            "Arm: humerus in the upper arm; radius and ulna in the forearm; carpals in the wrist; metacarpals in the palm; phalanges in the fingers.",
+            "Pelvic (hip) girdle: two hip bones joined to the backbone. It carries the weight of the upper body.",
+            "Leg: femur, or thigh bone, the longest bone in the body; patella, or kneecap; tibia and fibula in the lower leg; tarsals in the ankle; metatarsals in the foot; phalanges in the toes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The vertebral column"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cervical region: 7 vertebrae in the neck.",
+            "Thoracic region: 12 vertebrae in the chest. Each joins a pair of ribs.",
+            "Lumbar region: 5 vertebrae in the lower back.",
+            "Sacral region: 5 vertebrae fused into one bone, the sacrum, which joins the pelvic girdle.",
+            "Caudal region: in humans, 4 tiny fused vertebrae called the coccyx. In cows and dogs, the caudal vertebrae form the tail."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A typical vertebra has a thick centrum, which carries weight. Behind it is the neural canal, which holds the spinal cord. A neural spine points backwards, and a transverse process sticks out on each side. Muscles attach to the neural spine and transverse processes. Smooth facets let neighbouring vertebrae move against each other."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cervical vertebrae are small, with a short neural spine and a hole in each transverse process for an artery. The first, the atlas, holds the skull and allows nodding. The second, the axis, has a peg that lets the head turn.",
+            "Thoracic vertebrae have a long neural spine pointing backwards and down, and facets where the ribs join.",
+            "Lumbar vertebrae have the largest centrum, because they carry the most weight. Their broad neural spine and wide transverse processes anchor the strong back muscles."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Joints"
+        },
+        {
+          "type": "text",
+          "text": "A joint is a place where bones meet. Fixed joints, like those between skull bones, do not move. The joints between vertebrae, cushioned by cartilage, move a little. Synovial joints move freely."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ball and socket joint: the round end of one bone fits into a cup in another. It moves in all directions and can rotate. Examples are the shoulder and hip.",
+            "Hinge joint: moves in one plane only, like a door. Examples are the elbow, knee and finger joints.",
+            "Pivot joint: one bone turns around another, as between the atlas and axis when you shake your head.",
+            "Gliding joint: flat surfaces slide over each other, as between the small bones of the wrist and ankle."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "In a synovial joint, smooth cartilage covers the ends of the bones. It reduces friction and absorbs shock. A synovial membrane makes synovial fluid, which oils the joint. Strong bands called ligaments join bone to bone and hold the joint together."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Joints and muscles in your own body",
+          "text": "In pairs, move your shoulder, elbow, wrist, hip, knee, ankle and neck in as many directions as you can. Record each joint, its type and its movements in a table. Then hold your partner's upper arm while they bend and straighten the elbow. Feel which muscle, front or back, becomes short and hard each time."
+        },
+        {
+          "type": "heading",
+          "text": "How muscles move bones"
+        },
+        {
+          "type": "text",
+          "text": "Muscles can only pull, by contracting and getting shorter. They cannot push. So muscles work in pairs that pull in opposite directions, called antagonistic pairs. When one contracts, the other relaxes. The biceps at the front of the upper arm and the triceps at the back are an antagonistic pair. Tendons attach the biceps to the scapula and the radius. They attach the triceps to the scapula, humerus and ulna."
+        },
+        {
+          "type": "list",
+          "items": [
+            "To bend the arm, the biceps contracts and the triceps relaxes. The forearm is pulled up. The biceps is a flexor, because it bends the joint.",
+            "To straighten the arm, the triceps contracts and the biceps relaxes. The forearm is pulled down. The triceps is an extensor, because it straightens the joint."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The bones act as levers and the joint is the pivot. Muscle pairs at the hip, knee and ankle work the same way, so mammals can walk, run and jump."
+        },
+        {
+          "type": "heading",
+          "text": "Muscle cramps"
+        },
+        {
+          "type": "text",
+          "text": "A cramp is a sudden, painful contraction of a muscle that does not relax on its own. It is common in the calf, thigh and foot."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Causes: losing a lot of water and salt in sweat, tired muscles, not warming up, and staying in one position for a long time.",
+            "Effects: sharp pain, a hard knot in the muscle, and being unable to use it for a short time. The muscle may feel sore for a day afterwards.",
+            "Prevention: drink enough water, especially on hot days. Warm up and stretch before exercise. Eat foods such as bananas, beans, groundnuts and green vegetables, which give minerals that muscles need. Increase training slowly."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "If a cramp starts, stop, gently stretch the muscle and massage it. For a calf cramp, straighten the leg and pull the toes up."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Footballers in a match on a hot afternoon sometimes fall with cramps near the end of the game. What could the team do before and during the match to prevent this?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The skeleton supports the body, protects organs, gives attachment to muscles and makes blood cells. The axial skeleton is the skull, vertebral column, ribs and sternum; the appendicular skeleton is the girdles and limbs. Muscles work in antagonistic pairs: the biceps bends the arm and the triceps straightens it. Drinking water, warming up and stretching help prevent cramps."
+        }
+      ]
+    }
+  ]
+}

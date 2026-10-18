@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.circle",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,30 +11,160 @@
       "strand": "Geometry and Measures",
       "subStrand": "Circle",
       "order": 8,
+      "term": 2,
       "outcomes": [
-        "Identify various parts of the circle. (k)",
-        "State and use the formulas for circumferences and area enclosed by a circle. (u)"
+        "identify various parts of the circle. (k)",
+        "state and use the formulas for circumferences and area enclosed by a circle. (u)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The main parts of a circle: the centre (the fixed middle point), the radius (distance from centre to the edge), the diameter (distance across through the centre, twice the radius), and the circumference (the distance all the way around the edge)."
+          "text": "Circles are all around us. A boda boda wheel, the top of a saucepan, a drum and the floor of a round hut are all circles. In this topic you learn the names of the parts of a circle. You also learn how to find the distance around a circle and the space inside it."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a circle"
         },
         {
           "type": "text",
-          "text": "For every circle, the circumference divided by the diameter gives the same constant, called pi (π ≈ 3.14159). This gives the circumference formula C = πd, or equivalently C = 2πr since d = 2r. The area enclosed by a circle is A = πr^2."
+          "text": "A circle is a set of points that are all the same distance from one fixed point. That fixed point is the centre. Each part of a circle has its own name."
         },
         {
-          "type": "equation",
-          "latex": "C = \\pi d = 2\\pi r, \\qquad A = \\pi r^2"
+          "type": "list",
+          "items": [
+            "Centre: the fixed point in the middle of the circle.",
+            "Radius: a straight line from the centre to the edge. The plural is radii.",
+            "Diameter: a straight line from edge to edge that passes through the centre.",
+            "Circumference: the distance all the way round the edge of the circle.",
+            "Chord: a straight line joining any two points on the edge. The diameter is the longest chord.",
+            "Arc: a part of the circumference. A small arc is a minor arc. A large arc is a major arc.",
+            "Sector: the region between two radii and an arc, shaped like a slice of cake.",
+            "Segment: the region between a chord and an arc.",
+            "Tangent: a straight line that touches the circle at one point only."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "A circular plate has a diameter of 28 cm, so its radius is 14 cm. Its circumference is C = π x 28 ≈ 87.96 cm, and the area it encloses is A = π x 14^2 = π x 196 ≈ 615.75 cm^2."
+          "text": "A diameter is made of two radii placed end to end. So the diameter is always twice the radius."
         },
         {
           "type": "equation",
-          "expr": "d=28cm, r=14cm:  C = π(28) ≈ 87.96 cm,   A = π(14)^2 ≈ 615.75 cm^2"
+          "latex": "d = 2r",
+          "speech": "d equals 2 r"
+        },
+        {
+          "type": "heading",
+          "text": "The number pi"
+        },
+        {
+          "type": "text",
+          "text": "Measure the circumference and the diameter of any circle. Then divide the circumference by the diameter. You always get a number a little more than 3. This number is the same for every circle, big or small."
+        },
+        {
+          "type": "text",
+          "text": "We call this number pi and write it with the Greek letter π. Its decimal never ends and never repeats. For calculations we use π ≈ 3.142 or π ≈ 22/7. Use 22/7 when a length is a multiple of 7, because the working becomes easier."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Discover pi",
+          "text": "In groups, collect at least five circular objects of different sizes, such as bottle tops, a cup, a plate, a saucepan lid and a drum. For each one, measure the diameter with a ruler. Wrap a piece of string once around the edge, mark it, and measure the string to get the circumference. Record your results in a table with columns for diameter, circumference, and circumference divided by diameter. Plot a graph of circumference against diameter. Describe the line you get and compare the last column across groups."
+        },
+        {
+          "type": "heading",
+          "text": "Circumference of a circle"
+        },
+        {
+          "type": "text",
+          "text": "Since circumference divided by diameter is π, the circumference is π times the diameter. Because the diameter is 2r, we can also write it using the radius."
+        },
+        {
+          "type": "equation",
+          "latex": "C = \\pi d = 2\\pi r",
+          "speech": "C equals pi d, which equals 2 pi r"
+        },
+        {
+          "type": "example",
+          "title": "How far does a boda boda wheel travel in one turn?",
+          "steps": [
+            "A boda boda wheel has a diameter of 56 cm. Use π = 22/7.",
+            "Circumference C = πd = 22/7 × 56.",
+            "56 ÷ 7 = 8, so C = 22 × 8 = 176 cm.",
+            "In one full turn, the wheel moves the boda boda forward 176 cm.",
+            "The rider travels 1.76 km from the stage to the market. 1.76 km = 176,000 cm.",
+            "Number of turns = 176,000 ÷ 176 = 1,000 turns."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the radius from the circumference",
+          "steps": [
+            "Atim walks once around the outside wall of a round hut. The distance is 22 m. Use π = 22/7.",
+            "C = 2πr, so r = C ÷ 2π.",
+            "2π = 2 × 22/7 = 44/7.",
+            "r = 22 ÷ 44/7 = 22 × 7/44 = 154/44 = 3.5 m.",
+            "The radius of the hut floor is 3.5 m, so its diameter is 7 m."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Area enclosed by a circle"
+        },
+        {
+          "type": "text",
+          "text": "Area is the amount of flat space inside a shape. To find the area of a circle, imagine cutting it into many thin sectors, like slices of a round cake. Arrange the slices in a row, pointing up and down in turn."
+        },
+        {
+          "type": "text",
+          "text": "The new shape is almost a rectangle. Its height is the radius r. Its length is half the circumference, which is πr. The more slices you cut, the closer it gets to a true rectangle. So the area is πr × r."
+        },
+        {
+          "type": "equation",
+          "latex": "A = \\frac{1}{2} \\times C \\times r = \\pi r^2",
+          "speech": "A equals one half times C times r, which equals pi r squared"
+        },
+        {
+          "type": "text",
+          "text": "Area is measured in square units, such as cm² or m². Circumference is a length, so it is measured in cm or m. Always check that your answer has the right unit."
+        },
+        {
+          "type": "example",
+          "title": "Cost of cementing a round floor",
+          "steps": [
+            "The round hut from the last example has a radius of 3.5 m. Mugisha wants to cement the floor.",
+            "Area A = πr² = 22/7 × 3.5 × 3.5.",
+            "22/7 × 3.5 = 11, so A = 11 × 3.5 = 38.5 m².",
+            "A builder charges UGX 25,000 per square metre.",
+            "Cost = 38.5 × 25,000 = UGX 962,500."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Area of a path around a flower bed",
+          "steps": [
+            "A school has a circular flower bed of radius 7 m. A path 1 m wide runs all the way round it. Use π = 22/7.",
+            "The outer edge of the path is a circle of radius 7 + 1 = 8 m.",
+            "Area of the large circle = π × 8² = 64π m².",
+            "Area of the flower bed = π × 7² = 49π m².",
+            "Area of the path = 64π − 49π = 15π m².",
+            "15 × 22/7 = 330/7 ≈ 47.1 m²."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A baker makes a round cake and wants to put it on a rectangular plate. What is the smallest plate that will hold it? How much of the plate stays uncovered, and does that matter?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Wheels, water tanks, saucepans and drums are often round. Why do you think people choose a circle for these things instead of a square?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The diameter is twice the radius: d = 2r. The circumference is C = πd = 2πr, and the area enclosed is A = πr². Use π ≈ 3.142 or 22/7, give lengths in cm or m, and give areas in square units."
         }
       ]
     }

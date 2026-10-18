@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.magnetism.magnets",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,34 +9,170 @@
       "subject": "physics",
       "level": "S2",
       "strand": "Magnetism",
-      "subStrand": "Magnets and magnetic field",
+      "subStrand": "Magnets and magnetic fields",
       "order": 7,
+      "term": 3,
       "outcomes": [
         "know that a small number of materials are magnetic, but most are not (k)",
+        "know how magnets can be made and destroyed (k, s)",
         "understand the behaviour of magnets and magnetic fields (u)",
         "know that the Earth is a magnet and how a compass is used to determine direction (k, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Only a small number of materials are magnetic \u2014 mainly iron, steel, cobalt, and nickel. Most materials, including copper, aluminium, wood, and plastic, are not magnetic at all."
+          "text": "Mugisha spills a box of pins and picks them all up with a small magnet. Fridge doors, radio speakers, bicycle dynamos and borehole pump motors all contain magnets. In this topic you will learn what magnets do and why."
+        },
+        {
+          "type": "heading",
+          "text": "Magnetic and non-magnetic materials"
         },
         {
           "type": "text",
-          "text": "Every magnet has a north pole and a south pole. Like poles repel each other; unlike poles attract. The space around a magnet where its magnetic effect can be detected is called its magnetic field, often shown using field lines running from the north pole to the south pole."
+          "text": "A magnet is an object that attracts iron and steel. A magnetic material is a material that a magnet attracts. Only a small number of materials are magnetic. Most are not."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Magnetic: iron, steel, nickel and cobalt.",
+            "Non-magnetic: copper, aluminium, zinc, wood, rubber, plastic, glass and paper."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "The Earth itself behaves like a giant magnet, with a magnetic field extending out into space. A compass needle is a small magnet that is free to turn \u2014 it lines up with the Earth's magnetic field, so its north pole points towards the Earth's magnetic north, letting it be used for navigation."
+          "text": "Look for the pattern. All the magnetic materials are metals, and steel is mostly iron. But not every metal is magnetic. Copper, aluminium and zinc are metals, yet a magnet does not attract them."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Sort with a magnet",
+          "text": "Collect a steel nail, a paper clip, a bottle top, a piece of copper wire, some aluminium foil, a rubber band and a piece of wood. Draw a table with two columns: magnetic and non-magnetic. Write down your prediction for each object. Then test each one with a magnet and record what happens. Compare the results with your predictions."
+        },
+        {
+          "type": "heading",
+          "text": "Poles and the law of magnetism"
         },
         {
           "type": "text",
-          "text": "Use the PhET Magnet and Compass simulation below. Move a compass around a bar magnet to explore its magnetic field, then find and flip the hidden bar magnet inside the Earth to see how it explains a compass needle's behaviour."
+          "text": "The force of a bar magnet is strongest near its two ends. These ends are called poles. If you dip a bar magnet in iron filings, most of the filings cling to the poles."
+        },
+        {
+          "type": "text",
+          "text": "Hang a bar magnet from a thread so that it can turn freely. It always comes to rest pointing north and south. The end that points north is called the north-seeking pole, or north pole (N). The other end is the south pole (S)."
+        },
+        {
+          "type": "text",
+          "text": "When two magnets are brought close, their poles push or pull on each other. This gives the law of magnetism: like poles repel and unlike poles attract. So a north pole repels another north pole, but it attracts a south pole."
+        },
+        {
+          "type": "text",
+          "text": "Repulsion is the only sure test for a magnet. A magnet attracts both ends of a plain iron bar, so attraction alone proves nothing. If the bar repels one pole of a known magnet, the bar must be a magnet itself."
+        },
+        {
+          "type": "heading",
+          "text": "Magnetic fields"
+        },
+        {
+          "type": "text",
+          "text": "A magnetic field is the space around a magnet where its force can be felt. We show a field with magnetic field lines. Each line shows the direction in which a small compass needle would point. The lines come out of the north pole and go into the south pole. They never cross each other."
+        },
+        {
+          "type": "text",
+          "text": "Where the lines are close together, the field is strong. Near the poles the lines crowd together. Far from the magnet they spread out, so the field is weaker there."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "See a magnetic field",
+          "text": "Lay a sheet of paper over a bar magnet. Sprinkle iron filings thinly over it and tap it gently. The filings line up along the field lines. Draw the pattern and add arrows from N to S. With no filings, put a small compass at many points around the magnet and mark where the needle points."
+        },
+        {
+          "type": "text",
+          "text": "You can compare the strength of magnets with a chain of pins. Hang a pin from one pole, then hang a second pin from the first, and so on. A stronger magnet holds a longer chain."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "If you broke a bar magnet in half, what would each half be like? How could you find out without breaking a magnet?"
+        },
+        {
+          "type": "heading",
+          "text": "Making magnets"
+        },
+        {
+          "type": "text",
+          "text": "Iron and steel contain tiny regions that behave like very small magnets. In an unmagnetised bar, these tiny magnets point in all directions, so their effects cancel. To magnetise a bar is to line them up so that they point the same way."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Single touch: stroke a steel needle about 30 times from end to end with one pole of a magnet. Always stroke in the same direction, lifting the magnet high between strokes.",
+            "Double touch: place opposite poles of two magnets at the middle of the bar. Stroke them outwards to the two ends together, then lift and repeat.",
+            "Electrical method: wind insulated wire around the bar to make a coil. Connect the coil to a battery for a few seconds, and the current magnetises the bar."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Soft iron is easy to magnetise, but it loses its magnetism as soon as the magnetising force is taken away. It is used for temporary magnets. Steel is harder to magnetise, but it keeps its magnetism. It is used for permanent magnets."
+        },
+        {
+          "type": "heading",
+          "text": "Destroying magnets"
+        },
+        {
+          "type": "text",
+          "text": "To demagnetise a magnet is to destroy its magnetism by jumbling its tiny magnets again. This can happen by:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "heating it strongly, for example in a fire",
+            "hammering it or dropping it many times",
+            "placing it in a coil that carries alternating current, then pulling it slowly out of the coil",
+            "storing it carelessly, for example with like poles side by side"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Bar magnets are stored in pairs, with unlike poles side by side. Small bars of soft iron called keepers are laid across the ends to help them stay strong."
+        },
+        {
+          "type": "heading",
+          "text": "The Earth as a magnet"
+        },
+        {
+          "type": "text",
+          "text": "The Earth behaves as if it had a huge bar magnet inside it. This is why a freely hanging magnet always settles pointing north and south."
+        },
+        {
+          "type": "text",
+          "text": "Here is a surprise. The north pole of a magnet points towards the Earth's far north. Unlike poles attract, so the Earth's magnetic pole in the far north must be a magnetic south pole."
+        },
+        {
+          "type": "text",
+          "text": "A compass is a small magnetised needle that turns freely on a pin. Its north pole always points north. To find a direction, hold the compass flat and turn it until the needle lines up with N on the dial. You can then read every other direction from the dial."
+        },
+        {
+          "type": "text",
+          "text": "Fishermen on Lake Victoria use a compass when mist hides the shore, and hikers use one on the cloudy Rwenzori Mountains. Keep a compass away from iron and magnets, which pull the needle off course."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Wasswa says that every metal is magnetic. How could you test his idea with a magnet and a few objects from home?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Only a few materials, such as iron, steel, nickel and cobalt, are magnetic. Like poles repel and unlike poles attract. Field lines run from north to south. Steel makes permanent magnets, and heating or hammering destroys magnetism. The Earth is a magnet, so a compass needle points north."
         }
       ],
       "sim": {
         "phet": "magnet-and-compass_en.html",
-        "caption": "PhET Magnet and Compass. Explore the field around a bar magnet and see how the Earth itself behaves as a magnet. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Magnet and Compass. Drag the compass around the bar magnet to trace its field, then flip the magnet's poles and watch the needle turn. Show the Earth to see how a magnet inside the planet explains a compass. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

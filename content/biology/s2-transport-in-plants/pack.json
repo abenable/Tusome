@@ -1,0 +1,190 @@
+{
+  "packId": "bio.s2.transport.plants",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.transport.plants",
+      "title": "Transport in Plants",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Transport in Plants and Animals",
+      "subStrand": "Diffusion, osmosis, active transport, transpiration and translocation",
+      "order": 6,
+      "term": 3,
+      "outcomes": [
+        "understand the importance and key methods of movement of materials into and out of cells (u)",
+        "investigate the different ways in which materials move into, though, and out of cells (s)",
+        "know how the root hair is adopted for absorption of water and mineral salts (u)",
+        "understand the processes of transpiration and translocation (u)",
+        "conduct experiments on and understand the factors that affect transpiration (s, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A bean plant wilts on a hot afternoon. Pour water on the soil, and by evening it stands up again. A tall eucalyptus tree lifts water from its roots to leaves many metres above the ground, with no pump. This topic explains how."
+        },
+        {
+          "type": "heading",
+          "text": "Moving materials into and out of cells"
+        },
+        {
+          "type": "text",
+          "text": "Every cell must take in water, oxygen, food and mineral salts, and get rid of wastes such as carbon dioxide. These substances cross the cell membrane in three main ways: diffusion, osmosis and active transport."
+        },
+        {
+          "type": "heading",
+          "text": "Diffusion"
+        },
+        {
+          "type": "text",
+          "text": "Diffusion is the movement of particles from a place where they are at a high concentration to a place where they are at a low concentration. It goes on until they are evenly spread. The cell does not use energy for it. The difference in concentration between two places is called the concentration gradient."
+        },
+        {
+          "type": "text",
+          "text": "The smell of frying onions spreads through a house by diffusion. In a leaf, carbon dioxide diffuses in through the stomata and oxygen diffuses out. Diffusion is faster when the concentration gradient is steeper, the temperature is higher, the surface is larger and the distance is shorter."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A tea bag in water",
+          "text": "In pairs, gently lower a tea bag into a clear glass of still, warm water. Do not stir. Watch for five minutes and describe how the colour spreads. Repeat with cold water and compare. Explain what you see using the word diffusion."
+        },
+        {
+          "type": "heading",
+          "text": "Osmosis"
+        },
+        {
+          "type": "text",
+          "text": "A partially permeable membrane lets small molecules, such as water, pass through but stops larger ones, such as sugar. Cell membranes are partially permeable. Osmosis is the movement of water molecules from a dilute solution to a more concentrated solution through a partially permeable membrane."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A plant cell in pure water takes in water by osmosis. Its vacuole swells and presses the cell against its wall, so the cell becomes firm, or turgid. Turgid cells hold up soft stems and leaves.",
+            "A plant cell in a strong salt or sugar solution loses water by osmosis. It becomes soft, or flaccid, and the plant wilts. If it loses a lot of water, the cytoplasm pulls away from the cell wall. This is called plasmolysis.",
+            "An animal cell has no cell wall. In pure water it may swell and burst; in a strong solution it shrinks."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Salting fish draws water out of the fish and out of any germs on it, so the fish keeps longer. Putting too much fertiliser close to roots can make a plant wilt, because water moves out of the roots into the soil."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Potato strips in salt water",
+          "text": "Cut three strips of raw Irish potato, each 5 cm long and the same thickness. Put one in plain water, one in water with one spoon of salt, and one in water with five spoons of salt. After one hour, measure each strip and feel how firm or soft it is. You can also soak a raw egg in vinegar for two days to dissolve its shell, then put it in water and watch it swell."
+        },
+        {
+          "type": "example",
+          "title": "Working out the change in a potato strip",
+          "steps": [
+            "A strip 50 mm long is left in plain water for one hour. It is now 53 mm long.",
+            "Change in length = 53 − 50 = 3 mm longer.",
+            "Percentage change = 3 ÷ 50 × 100 = 6% longer. Water entered the cells by osmosis.",
+            "Another 50 mm strip in strong salt water is now 46 mm long: 4 mm, or 8%, shorter. Water left the cells."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Active transport"
+        },
+        {
+          "type": "text",
+          "text": "Active transport is the movement of substances across a membrane from a low concentration to a high concentration, against the concentration gradient. It needs energy from respiration, so it happens only in living cells. Root hair cells use it to take in mineral salts such as nitrates from the soil, where they are scarce. In waterlogged soil there is little oxygen for respiration, so roots cannot take in mineral salts well."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diffusion: any small particles; high to low concentration; no energy needed.",
+            "Osmosis: water only, through a partially permeable membrane; dilute to concentrated solution; no energy needed.",
+            "Active transport: particles such as mineral salts; low to high concentration; energy needed."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Root hairs"
+        },
+        {
+          "type": "text",
+          "text": "A root hair is a long, thin outgrowth from one cell on the outside of a young root, near the tip. Root hairs are suited to absorbing water and mineral salts in these ways."
+        },
+        {
+          "type": "list",
+          "items": [
+            "They are long, thin and very many, so together they give a huge surface area.",
+            "They grow between soil particles, in close contact with the soil water.",
+            "Their walls are thin, so substances have only a short distance to travel.",
+            "Their cell sap is more concentrated than the soil water, so water enters by osmosis.",
+            "They have many mitochondria to release energy for the active transport of mineral salts."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Water then passes from cell to cell across the root by osmosis until it reaches the xylem. Xylem vessels are long, hollow, dead tubes with strong walls. They carry water and mineral salts up the stem to the leaves."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Seeing root hairs",
+          "text": "Place a few bean or maize seeds on wet cotton wool or cloth in a covered jar, and keep them moist for three or four days. Look at the young roots with a hand lens. The fuzzy white layer just behind each root tip is made of root hairs. Draw a root and label the root hairs."
+        },
+        {
+          "type": "heading",
+          "text": "Transpiration"
+        },
+        {
+          "type": "text",
+          "text": "Transpiration is the loss of water vapour from a plant, mainly through the stomata of the leaves. Water evaporates from the wet surfaces of cells inside the leaf. The water vapour then diffuses out through the stomata. The leaf cells replace this water from the xylem in the veins. This creates a pull that draws a column of water up the xylem, all the way from the roots. This flow of water is called the transpiration stream."
+        },
+        {
+          "type": "text",
+          "text": "Transpiration carries water and mineral salts up to the leaves. It cools the leaves, as sweat cools your skin. It also keeps cells supplied with water so they stay turgid."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Light: stomata open in light, so transpiration is faster in the day.",
+            "Temperature: warmth makes water evaporate and diffuse faster.",
+            "Wind: moving air carries water vapour away from the leaf, so more diffuses out.",
+            "Humidity: in damp air, transpiration is slower.",
+            "Soil water: when the soil is dry, the stomata close and transpiration slows."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Comparing transpiration",
+          "text": "Tie clear polythene bags over three similar leafy branches of a shrub: one in bright sun, one in shade, and one in a windy place. Tie each bag tightly around the stem. After two hours, compare the drops of water inside each bag, or shake the water into a measuring spoon. Then repeat with a branch that has had its leaves removed. Discuss what your results mean for a farmer moving seedlings from a nursery bed."
+        },
+        {
+          "type": "heading",
+          "text": "Translocation"
+        },
+        {
+          "type": "text",
+          "text": "Translocation is the movement of food made in the leaves, mainly sugar, to other parts of the plant. It travels in the phloem, which is made of living tubes called sieve tubes. Food can move up or down: to growing tips, flowers and fruits, or down to roots and stores. This is how starch reaches cassava roots and sweet potatoes, and how sugar reaches the stem of sugarcane."
+        },
+        {
+          "type": "text",
+          "text": "If a ring of bark is removed from a tree trunk, the phloem is cut but the xylem in the wood is not. The bark just above the ring swells, because food collects there. The leaves do not wilt, because water still rises in the xylem."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers often transplant cabbage seedlings in the evening or on a cloudy day, and some remove a few leaves first. How might this help the young plants survive?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Substances enter and leave cells by diffusion, osmosis and active transport. Root hairs give a large surface for absorbing water by osmosis and mineral salts by active transport. Transpiration pulls water up the xylem and is faster in light, heat and wind; translocation carries food in the phloem."
+        }
+      ],
+      "sim": {
+        "phet": "diffusion_en.html",
+        "caption": "Add particles to one side of the box, remove the divider and watch them spread until they are evenly mixed. Then raise the temperature and compare how fast they spread."
+      }
+    }
+  ]
+}

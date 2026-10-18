@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.circle-properties",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,169 @@
       "strand": "Geometry and Measures",
       "subStrand": "Circle",
       "order": 13,
+      "term": 3,
       "outcomes": [
-        "Identify arc, chord, sector and segment. (k)",
-        "Relate angles made by an arc at the circumference and centre. (u)",
-        "Determine the tangent, chord and angle properties of the circle. (u)",
-        "Determine and uses the properties of a cyclic quadrilateral. (u, s)",
-        "Find the length of the common chord for two intersecting circles. (u, s)",
-        "Calculate the area of sectors and segments. (u, s, v/a)"
+        "identify arc, chord, sector and segment. (k)",
+        "relate angles made by an arc at the circumference and centre. (u)",
+        "determine the tangent, chord and angle properties of the circle. (u)",
+        "determine and uses the properties of a cyclic quadrilateral. (u s)",
+        "find the length of the common chord for two intersecting circles. (u s)",
+        "calculate the area of sectors and segments. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Building on Senior 2's Circle topic: an arc is part of the circumference; a chord is a straight line joining two points on the circle; a sector is the pie-slice region between two radii and an arc; a segment is the region between a chord and an arc."
+          "text": "A bicycle wheel, a round water tank and a clock face are all circles. Builders and engineers use circle properties to measure and make things."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a circle"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An arc is part of the circumference, the curved edge of the circle.",
+            "A chord is a straight line joining two points on the circle. The longest chord is the diameter.",
+            "A sector is the region between two radii and an arc, shaped like a slice of a round cake.",
+            "A segment is the region between a chord and an arc."
+          ]
         },
         {
           "type": "text",
-          "text": "Key circle theorems: the angle at the centre is twice the angle at the circumference standing on the same arc. The angle in a semicircle is always 90°. A tangent to a circle is always perpendicular to the radius drawn to the point of contact. Opposite angles of a cyclic quadrilateral (a four-sided shape with all corners on the circle) always add up to 180°."
+          "text": "A chord divides a circle into a minor (smaller) and a major (larger) segment. Two radii divide it into a minor and a major sector."
         },
         {
-          "type": "equation",
-          "expr": "angle at centre = 2 x angle at circumference (same arc);   opposite angles of a cyclic quadrilateral sum to 180°"
+          "type": "heading",
+          "text": "Angles at the centre and at the circumference"
         },
         {
           "type": "text",
-          "text": "The area of a sector with angle θ (in degrees) and radius r is a fraction of the whole circle's area: (θ/360) x πr^2. A sector with radius 6 cm and angle 60° has area (60/360) x π x 6^2 = (1/6) x π x 36 = 6π ≈ 18.85 cm^2."
+          "text": "Take an arc AB of a circle with centre O. The angle the arc makes at the centre is angle AOB. The angle it makes at a point C on the rest of the circle is angle ACB. The angle at the centre is twice the angle at the circumference."
         },
         {
           "type": "equation",
-          "expr": "sector area = (60/360) x π(6)^2 = 6π ≈ 18.85 cm^2"
+          "latex": "\\angle AOB = 2 \\times \\angle ACB",
+          "speech": "angle AOB equals 2 times angle ACB"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Angles in the same segment are equal. Any two angles made by the same arc at the circumference are the same size.",
+            "The angle in a semicircle is 90°. If AB is a diameter, the angle at the centre is 180°, so the angle at the circumference is 90°."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Tangent and chord properties"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A tangent is a straight line that touches a circle at one point only. The tangent is perpendicular to the radius at that point, so they meet at 90°.",
+            "From a point outside a circle, two tangents can be drawn to the circle. These two tangents are equal in length.",
+            "A line from the centre that is perpendicular to a chord cuts the chord into two equal halves.",
+            "The angle between a tangent and a chord equals the angle in the alternate segment, on the other side of the chord."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cyclic quadrilaterals"
+        },
+        {
+          "type": "text",
+          "text": "A cyclic quadrilateral is a four-sided shape with all four corners on a circle. Its opposite angles add up to 180°. Also, an exterior angle equals the interior angle at the opposite corner."
+        },
+        {
+          "type": "equation",
+          "latex": "\\angle A + \\angle C = 180^\\circ",
+          "speech": "angle A plus angle C equals 180 degrees"
+        },
+        {
+          "type": "example",
+          "title": "Finding angles in a circle",
+          "steps": [
+            "A and C are points on a circle with centre O, and angle AOC = 140°. Point B is on the major arc and point D is on the minor arc. Find angle ABC and angle ADC.",
+            "Angle ABC stands on the minor arc AC, which makes 140° at the centre.",
+            "The angle at the circumference is half the angle at the centre: angle ABC = 140° ÷ 2 = 70°.",
+            "ABCD has all four corners on the circle, so it is a cyclic quadrilateral.",
+            "Opposite angles add up to 180°: angle ADC = 180° − 70° = 110°."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Measure angles in a circle",
+          "text": "Draw a large circle with a string tied to a pencil. Mark the centre O and a chord AB. Measure angle AOB with a protractor. Mark three points on the major arc and measure the angle each makes with A and B. Compare the angles. Next, push two pins into cardboard 8 cm apart. Slide the right-angled corner of a paper triangle so its two sides always touch the pins. Mark the corner many times and describe the shape the marks make."
+        },
+        {
+          "type": "heading",
+          "text": "The common chord of two intersecting circles"
+        },
+        {
+          "type": "text",
+          "text": "When two circles cross, the line joining the two meeting points is the common chord. The line joining the centres cuts it at right angles and into two equal halves. This makes right-angled triangles, so use Pythagoras' theorem."
+        },
+        {
+          "type": "example",
+          "title": "Length of a common chord",
+          "steps": [
+            "Two circles have radii 13 cm and 15 cm. Their centres A and B are 14 cm apart. Find the length of the common chord PQ.",
+            "Let PQ cross AB at M. M is the midpoint of PQ, and PM is perpendicular to AB.",
+            "Let AM = x, so MB = 14 − x. Let PM = h.",
+            "In triangle APM: x² + h² = 13² = 169. In triangle BPM: (14 − x)² + h² = 15² = 225.",
+            "Subtract the first equation from the second: (14 − x)² − x² = 56, so 196 − 28x = 56.",
+            "So 28x = 140 and x = 5.",
+            "h² = 169 − 25 = 144, so h = 12 cm.",
+            "The common chord PQ = 2 × 12 = 24 cm."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Arc length, sectors and segments"
+        },
+        {
+          "type": "text",
+          "text": "A sector with angle θ at the centre is the fraction θ/360 of the circle. Its arc and its area are that fraction of the circumference and of the area."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{arc length} = \\frac{\\theta}{360} \\times 2\\pi r",
+          "speech": "arc length equals theta over 360 times 2 pi r"
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{sector area} = \\frac{\\theta}{360} \\times \\pi r^2",
+          "speech": "sector area equals theta over 360 times pi r squared"
+        },
+        {
+          "type": "text",
+          "text": "A segment is a sector with a triangle removed. The triangle has two sides equal to the radius r, with angle θ between them. From trigonometry, its area is ½ab sin C, which here is ½r² sin θ."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{segment area} = \\frac{\\theta}{360} \\times \\pi r^2 - \\frac{1}{2} r^2 \\sin\\theta",
+          "speech": "segment area equals theta over 360 times pi r squared, minus one half r squared sine theta"
+        },
+        {
+          "type": "example",
+          "title": "A flower bed in Mbarara",
+          "steps": [
+            "Kyomuhendo makes a flower bed shaped like a sector of a circle. The radius is 7 m and the angle at the centre is 60°. A straight path joins the two ends of the arc. Use π = 22/7.",
+            "Arc length = 60/360 × 2 × 22/7 × 7 = 1/6 × 44 ≈ 7.33 m.",
+            "Sector area = 60/360 × 22/7 × 7² = 1/6 × 154 ≈ 25.67 m².",
+            "Triangle area = ½ × 7 × 7 × sin 60° = 24.5 × 0.866 ≈ 21.22 m².",
+            "The segment between the path and the arc has area 25.67 − 21.22 ≈ 4.45 m²."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why must a tangent meet the radius at 90°? What would happen to the line if the angle were smaller?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The angle at the centre is twice the angle at the circumference, and the angle in a semicircle is 90°. A tangent meets the radius at 90°, and opposite angles of a cyclic quadrilateral add up to 180°. Arc length and sector area are the fraction θ/360 of the whole circle; a segment is a sector minus a triangle of area ½r² sin θ."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.loci",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,28 +11,143 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Loci",
       "order": 4,
+      "term": 2,
       "outcomes": [
-        "Describe common types of loci. (k, u)",
-        "Construct loci involving points under given conditions. (u, s)",
-        "Construct intersecting loci. (u, s)",
-        "Construct loci involving inequalities. (u, s, v/a)"
+        "describe common types of loci. (k, u)",
+        "construct loci involving points under given conditions. (u, s)",
+        "construct intersecting loci. (u, s)",
+        "construct loci involving inequalities. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A locus (plural loci) is the set of all points that satisfy a given condition. The locus of points a fixed distance from a point is a circle; the locus of points equidistant from two fixed points is the perpendicular bisector of the line joining them; the locus of points equidistant from two lines is the angle bisector between them."
+          "text": "A goat tied to a peg by a 4 m rope can graze anywhere within 4 m of the peg. A district plans a new borehole the same distance from two villages. Both situations describe a set of points that obey a rule. In Senior 1 you met some simple loci. In this topic you will describe, construct and combine them, and use them to show regions."
+        },
+        {
+          "type": "heading",
+          "text": "What is a locus?"
         },
         {
           "type": "text",
-          "text": "A goat is tethered by a 3 m rope to the corner of a rectangular building. The locus of points the goat can reach is three-quarters of a circle of radius 3 m around that corner (the building blocks the rest), unless the rope is long enough to wrap around an adjacent corner, in which case a smaller circular arc extends around that second corner too."
+          "text": "A locus is the set of all points that obey a given rule. You can also think of it as the path traced by a point that moves according to the rule. The plural of locus is loci. A locus can be a line, a curve or a region."
+        },
+        {
+          "type": "heading",
+          "text": "Common types of loci"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Points at a fixed distance from a fixed point form a circle, centred on that point.",
+            "Points at a fixed distance from a straight line form two lines parallel to it, one on each side. Around a line segment of fixed length, the locus looks like a running track: two parallel lines joined by semicircles at the ends.",
+            "Points the same distance from two fixed points A and B form the perpendicular bisector of AB. This line passes through the midpoint of AB at right angles to it.",
+            "Points the same distance from two intersecting lines form the bisectors of the angles between the lines.",
+            "Points P where angle APB = 90° form a circle with AB as its diameter. This follows from the angle in a semicircle."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Constructing loci"
         },
         {
           "type": "text",
-          "text": "Where two loci must both be true at once (e.g. \"equidistant from points A and B\" AND \"5 cm from point C\"), the solution is the intersection of the two individual loci — draw both (a perpendicular bisector and a circle) and mark where they cross."
+          "text": "Use a sharp pencil, a ruler and a pair of compasses. Leave your construction arcs showing."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Perpendicular bisector of AB: open the compasses to more than half of AB. With the point on A, draw arcs above and below AB. Keep the same radius and repeat from B. Join the two points where the arcs cross.",
+            "Bisector of an angle: with the point on the vertex, draw an arc cutting both arms. From each of these two points draw arcs of equal radius that cross inside the angle. Join the vertex to the crossing point."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Loci on a coordinate grid"
         },
         {
           "type": "text",
-          "text": "A locus involving an inequality, such as \"less than 4 cm from point P\", is a region rather than a line — in this case, the inside of a circle of radius 4 cm centred at P, usually shown shaded with a dashed boundary since the boundary itself (exactly 4 cm) is excluded."
+          "text": "On a grid, a locus can be described by an equation. The distance from a point (x, y) to a point (a, b) comes from Pythagoras. So the locus of points at distance r from (a, b) is a circle with the equation below."
+        },
+        {
+          "type": "equation",
+          "latex": "(x - a)^2 + (y - b)^2 = r^2",
+          "speech": "x minus a, all squared, plus y minus b, all squared, equals r squared"
+        },
+        {
+          "type": "example",
+          "title": "The locus of P where AP = 5 units and A is (2, 3)",
+          "steps": [
+            "P is any point (x, y) that is 5 units from A.",
+            "By Pythagoras, AP² = (x − 2)² + (y − 3)².",
+            "AP = 5, so (x − 2)² + (y − 3)² = 25.",
+            "The locus is a circle with centre (2, 3) and radius 5."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "The perpendicular bisector of A(2, 3) and B(−4, 7)",
+          "steps": [
+            "Midpoint of AB = ((2 + (−4)) ÷ 2, (3 + 7) ÷ 2) = (−1, 5).",
+            "Gradient of AB = (7 − 3) ÷ (−4 − 2) = 4 ÷ (−6) = −2/3.",
+            "The perpendicular gradient is 3/2, because −2/3 × 3/2 = −1.",
+            "Using y − 5 = 3/2 (x + 1): y = 1.5x + 6.5, or 2y = 3x + 13.",
+            "Check with A and B: every point on this line is the same distance from both. Setting PA² = PB² and simplifying gives the same equation."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Intersecting loci"
+        },
+        {
+          "type": "text",
+          "text": "Sometimes a point must obey two rules at once. Construct both loci on the same diagram. The points that obey both rules are where the loci cross."
+        },
+        {
+          "type": "example",
+          "title": "Siting a borehole",
+          "steps": [
+            "Villages P and Q are 6 km apart. A borehole must be the same distance from both villages and exactly 5 km from P.",
+            "Draw PQ to scale, using 1 cm for 1 km, so PQ = 6 cm.",
+            "Rule 1: equidistant from P and Q. Construct the perpendicular bisector of PQ.",
+            "Rule 2: 5 km from P. Draw a circle of radius 5 cm centred on P.",
+            "The circle cuts the bisector at two points, one on each side of PQ. Either point is a possible site.",
+            "By Pythagoras, each site is √(5² − 3²) = 4 km from the midpoint of PQ."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Loci involving inequalities"
+        },
+        {
+          "type": "text",
+          "text": "Words such as \"less than\", \"at most\" or \"nearer to\" describe a region, not a line. Points less than 3 m from a peg lie inside a circle of radius 3 m. Points nearer to A than to B lie on A's side of the perpendicular bisector of AB. Draw the boundary first. Use a solid line if points on it are included and a broken line if they are not. Then shade to show the region clearly."
+        },
+        {
+          "type": "example",
+          "title": "A cow tied to a rail",
+          "steps": [
+            "Mugisha ties his cow with a 3 m rope to a ring that slides along a straight horizontal rail 4 m long.",
+            "Along the rail, the cow can reach 3 m on each side. This gives a rectangle 4 m long and 6 m wide.",
+            "Beyond each end of the rail, the cow can reach a semicircle of radius 3 m.",
+            "The two semicircles together make one full circle of radius 3 m.",
+            "Area = 4 × 6 + π × 3² = 24 + 28.27 = 52.3 m² to 1 decimal place."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A curve from folded paper",
+          "text": "Take a rectangular sheet of paper. Mark a dot about 3 cm from the middle of one long edge. Fold the paper so that the edge just touches the dot, and crease it firmly. Unfold, then fold again so that a different part of the edge touches the dot. Repeat twenty or more times. The creases outline a curve. Each point on this curve is the same distance from the dot as it is from the edge. Discuss what shape it is, and how you could prove it by adding axes and using algebra."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A goat is tied to one outside corner of a rectangular store with a rope. Sketch the area it can reach if the rope is shorter than both walls. How does the shape change if the rope is longer than one wall, or longer than both walls?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A locus is the set of points that obey a rule. A fixed distance from a point gives a circle; equidistant from two points gives the perpendicular bisector; equidistant from two lines gives the angle bisectors. Where two loci cross, both rules are obeyed. Words like \"less than\" or \"nearer to\" give a region, shown by shading."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.geometry.lines-and-planes-in-three-dimensions",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,27 +11,130 @@
       "strand": "Geometry and Measures",
       "subStrand": "3D geometry",
       "order": 5,
+      "term": 2,
       "outcomes": [
-        "Applies Pythagoras theorem in 3D to calculate the distance between two points. (u, s)",
-        "Finds the angle between a line and a plane. (u, s)",
-        "Finds the angle between two planes. (u, s)"
+        "applies Pythagoras theorem in 3D to calculate the distance between two points. (u s)",
+        "finds the angle between a line and a plane. (u s)",
+        "finds the angle between two planes. (u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Pythagoras' theorem (Senior 2) extends into three dimensions by applying it twice: once across the base, then again up to the top corner. A cuboid measures 3 m by 4 m by 12 m. The diagonal across the base is √(3^2+4^2) = √25 = 5 m; the space diagonal (corner to opposite corner) is √(5^2+12^2) = √169 = 13 m."
+          "text": "Rooms, boxes, roofs and telecom masts are three-dimensional (3D) shapes. A builder in Mbarara needs the length of a sloping roof beam. An engineer needs the angle a wire makes with the ground. This topic uses Pythagoras' theorem and trigonometry to solve problems like these in 3D."
+        },
+        {
+          "type": "heading",
+          "text": "Points, lines and planes"
+        },
+        {
+          "type": "text",
+          "text": "A plane is a flat surface that goes on in all directions, like a floor, a wall or a table top. A line can lie in a plane, cross it at one point, or be parallel to it. Two planes that are not parallel meet in a straight line, like the line where a wall meets the floor."
+        },
+        {
+          "type": "text",
+          "text": "In 3D problems, sketch the shape, pick out right-angled triangles and redraw each one flat before calculating."
+        },
+        {
+          "type": "heading",
+          "text": "Pythagoras' theorem in 3D"
+        },
+        {
+          "type": "text",
+          "text": "Take a cuboid with length a, width b and height c. The diagonal across the base has length √(a² + b²). The base diagonal, a vertical edge and the space diagonal form a right-angled triangle. So the space diagonal d, from one bottom corner to the opposite top corner, is:"
         },
         {
           "type": "equation",
-          "expr": "base diagonal = √(3^2+4^2) = 5 m;   space diagonal = √(5^2+12^2) = 13 m"
+          "latex": "d = \\sqrt{a^2 + b^2 + c^2}",
+          "speech": "d equals the square root of a squared plus b squared plus c squared"
+        },
+        {
+          "type": "example",
+          "title": "Across a classroom in Gulu",
+          "steps": [
+            "A classroom is 8 m long, 6 m wide and 3 m high. Find the distance from a bottom corner to the opposite top corner.",
+            "Base diagonal = √(8² + 6²) = √(64 + 36) = √100 = 10 m.",
+            "The base diagonal, a 3 m vertical edge and the space diagonal make a right-angled triangle.",
+            "Space diagonal = √(10² + 3²) = √109 ≈ 10.4 m.",
+            "Check in one step: √(8² + 6² + 3²) = √(64 + 36 + 9) = √109."
+          ]
         },
         {
           "type": "text",
-          "text": "A square-based pyramid has a square base of side 8 m and perpendicular height 3 m. To find the angle between a sloping edge and the base, first find the distance from the centre of the base to a corner: half the base diagonal = √(8^2+8^2)/2 = √128/2 ≈ 5.66 m. The angle θ between the edge and the base satisfies tan(θ) = height ÷ 5.66 = 3 ÷ 5.66, so θ ≈ 27.9°."
+          "text": "The same idea gives the distance between two points with coordinates in 3D. Find the change in x, in y and in z, then use Pythagoras."
+        },
+        {
+          "type": "equation",
+          "latex": "AB = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}",
+          "speech": "A B equals the square root of x 2 minus x 1 squared, plus y 2 minus y 1 squared, plus z 2 minus z 1 squared"
         },
         {
           "type": "text",
-          "text": "The angle between two planes (e.g. two sloping faces of a roof) is found by identifying the line where they would meet if extended, drawing a line in each plane perpendicular to that meeting line, and measuring the angle between those two perpendicular lines — this reduces a 3D angle problem to an ordinary right-angled-triangle calculation."
+          "text": "For A(1, 2, 3) and B(4, 6, 15), the changes are 3, 4 and 12. So AB = √(9 + 16 + 144) = √169 = 13 units."
+        },
+        {
+          "type": "heading",
+          "text": "The angle between a line and a plane"
+        },
+        {
+          "type": "text",
+          "text": "Suppose a line meets a plane at point P. From another point Q on the line, drop a perpendicular to the plane, meeting it at N. The line PN is the projection of PQ on the plane. It is like the shadow of PQ when the sun is directly overhead."
+        },
+        {
+          "type": "text",
+          "text": "The angle between the line and the plane is angle QPN. Triangle QPN has a right angle at N, so you can use sine, cosine or tangent to find it."
+        },
+        {
+          "type": "example",
+          "title": "A telecom mast near Mbale",
+          "steps": [
+            "A mast stands vertically on level ground. Four stays, each 10 m long, are fixed to the mast at the same height. Their lower ends are at the corners of a square, with the mast at the centre. Each stay makes 60° with the ground. Find the height at which the stays are fixed and the side of the square.",
+            "Take one stay. Its projection on the ground runs from its corner of the square to the foot of the mast.",
+            "Height = 10 sin 60° = 10 × 0.866 ≈ 8.66 m.",
+            "Distance from the corner to the foot of the mast = 10 cos 60° = 10 × 0.5 = 5 m.",
+            "This is half of a diagonal of the square, so the diagonal is 10 m.",
+            "A square of side s has diagonal s√2. So s = 10 ÷ √2 ≈ 7.07 m."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The angle between two planes"
+        },
+        {
+          "type": "text",
+          "text": "Two planes meet in a line called the line of intersection. To find the angle between them, choose a point on this line. In each plane, draw a line through that point perpendicular to the line of intersection. The angle between these two lines is the angle between the planes."
+        },
+        {
+          "type": "text",
+          "text": "Picture an exercise book standing half open on a desk. The spine is the line of intersection, and the angle between the covers is measured at right angles to it."
+        },
+        {
+          "type": "example",
+          "title": "The roof of a grain store",
+          "steps": [
+            "A roof is a square-based pyramid. Its base is 6 m by 6 m, and the top V is 4 m above the centre O of the base. Find the angle between a sloping face and the base.",
+            "The face and the base meet along a base edge AB. Let M be the midpoint of AB.",
+            "OM lies in the base and is perpendicular to AB. VM lies in the face and is also perpendicular to AB. So the angle we want is angle VMO.",
+            "OM = 6 ÷ 2 = 3 m and VO = 4 m, with a right angle at O.",
+            "tan(angle VMO) = 4 ÷ 3 ≈ 1.333, so angle VMO ≈ 53.1°.",
+            "For the angle between the sloping edge VA and the base, use angle VAO. OA is half the base diagonal: ½ × √(6² + 6²) ≈ 4.24 m.",
+            "tan(angle VAO) = 4 ÷ 4.24 ≈ 0.943, so angle VAO ≈ 43.3°."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a pyramid",
+          "text": "In groups, cut four equilateral triangles with sides of 10 cm and one 10 cm square from an old cereal box or manila paper. Tape them together to make a square-based pyramid. Use Pythagoras' theorem twice to work out its perpendicular height, then measure it with a ruler to check. Count the faces, edges and vertices of your pyramid and of other solids, such as a box or a triangular prism, and look for a rule that links the three numbers."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Lean a pencil on a desk and shine a torch straight down from above. Where does its shadow fall? How does the shadow help you see the angle between the pencil and the desk?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "In 3D, find right-angled triangles and redraw them flat. The space diagonal of a cuboid is √(a² + b² + c²). The angle between a line and a plane is the angle between the line and its projection on the plane. The angle between two planes is measured between two lines, one in each plane, both perpendicular to the line of intersection."
         }
       ]
     }

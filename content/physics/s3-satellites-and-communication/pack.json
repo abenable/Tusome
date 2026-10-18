@@ -1,0 +1,170 @@
+{
+  "packId": "phy.s3.space.satellites",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.space.satellites",
+      "title": "Satellites and Communication",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Earth and Space Physics",
+      "subStrand": "Artificial satellites and space exploration",
+      "order": 10,
+      "term": 3,
+      "outcomes": [
+        "understand what artificial satellites are and how we make use of them in research and in everyday life (u, s)",
+        "appreciate the importance of space exploration (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Look at the rooftops in any Ugandan town and you will see satellite dishes, all pointing the same way. A map on a phone shows exactly where you are standing. A weather forecast on the radio warns of heavy rain tomorrow. All of these depend on machines circling high above the Earth, called satellites."
+        },
+        {
+          "type": "heading",
+          "text": "What is a satellite?"
+        },
+        {
+          "type": "text",
+          "text": "A satellite is any object that moves in an orbit around a larger body. An orbit is the curved path one object follows around another. The Moon is a natural satellite of the Earth. An artificial satellite is a machine that people build and launch into orbit on a rocket. Thousands of artificial satellites now orbit the Earth."
+        },
+        {
+          "type": "heading",
+          "text": "How a satellite stays up"
+        },
+        {
+          "type": "text",
+          "text": "Gravity pulls a satellite towards the Earth all the time. But the satellite also moves sideways very fast. As it falls, the curved Earth drops away beneath it, so it keeps falling around the Earth without hitting it. A satellite close to the Earth must move at about 7.7 km every second. Satellites in higher orbits move more slowly and take longer to go round."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model an orbit",
+          "text": "Outside, away from other people, tie a bottle top or a small rubber to a strong string. Whirl it in a horizontal circle above your head. The pull of the string stands for gravity. What happens to the bottle top if you let go of the string? Try whirling it faster and slower and notice how hard the string pulls."
+        },
+        {
+          "type": "heading",
+          "text": "Types of orbit"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Low Earth orbit: a few hundred to about 2000 km up. A satellite here goes round in about 90 minutes. The International Space Station, the Hubble Space Telescope and many Earth-watching satellites use this orbit.",
+            "Polar orbit: a low orbit that passes over the North and South Poles. The Earth turns beneath the satellite, so it can photograph every part of the Earth's surface. It is used for weather, maps and watching crops, forests and floods.",
+            "Geostationary orbit: about 36 000 km above the equator. The satellite takes one day to go round, in the same direction as the Earth spins. So it stays above the same place and seems fixed in the sky. It is used for satellite television, communication and weather pictures."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Because a geostationary satellite stays in one place in the sky, a dish only needs to be pointed once. That is why all the dishes in a town face the same direction. Uganda lies on the equator, below the ring of geostationary satellites, so dishes here point much higher in the sky than dishes in countries far from the equator."
+        },
+        {
+          "type": "heading",
+          "text": "Satellites and communication"
+        },
+        {
+          "type": "text",
+          "text": "Communication satellites carry television, telephone and internet signals over long distances. A ground station sends a signal up to the satellite using microwaves. This is the uplink. The satellite receives the signal, strengthens it and sends it back down to a wide area. This is the downlink. Three geostationary satellites, evenly spaced, can cover almost the whole Earth."
+        },
+        {
+          "type": "example",
+          "title": "Delay on a satellite link",
+          "steps": [
+            "A geostationary satellite is 36 000 km above the ground. Microwaves travel at 3 × 10⁸ m/s.",
+            "The signal goes up and comes down: distance = 2 × 36 000 km = 72 000 km = 7.2 × 10⁷ m",
+            "time = distance ÷ speed = 7.2 × 10⁷ ÷ 3 × 10⁸",
+            "time = 0.24 s. This short delay can be noticed on long-distance calls and live TV interviews."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Navigation by GPS"
+        },
+        {
+          "type": "text",
+          "text": "The Global Positioning System (GPS) uses about 30 satellites, each about 20 000 km above the Earth. Every satellite sends out radio signals that carry the exact time. A phone or GPS receiver measures how long each signal took to arrive and works out its distance from each satellite. With signals from at least four satellites, it can calculate its position to within a few metres."
+        },
+        {
+          "type": "example",
+          "title": "Distance to a GPS satellite",
+          "steps": [
+            "A signal from a GPS satellite takes 0.068 s to reach a phone in Gulu. Radio waves travel at 3 × 10⁸ m/s.",
+            "distance = speed × time = 3 × 10⁸ × 0.068",
+            "distance = 2.04 × 10⁷ m, which is about 20 400 km"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "GPS helps drivers find addresses, surveyors mark land boundaries and farmers measure their fields."
+        },
+        {
+          "type": "heading",
+          "text": "Other uses of satellites"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Weather forecasting: pictures of clouds and storms help forecasters warn farmers and fishermen.",
+            "Watching the Earth: satellites track forest loss, crop health, drought and the water level of Lake Victoria.",
+            "Disasters: satellite images help rescuers after landslides on Mt Elgon or floods in the Kasese area.",
+            "Science: telescopes in orbit study the stars, and other satellites measure the Earth's climate."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Uganda launched its first satellite, PearlAfricaSat-1, in 2022. It is a small cube-shaped satellite built by Ugandan engineers working with partners in Japan. It collects data that can help with weather, land use, water and mapping."
+        },
+        {
+          "type": "heading",
+          "text": "Exploring space"
+        },
+        {
+          "type": "text",
+          "text": "The Hubble Space Telescope was launched in 1990 and orbits about 540 km above the Earth. Above the air, which blurs and blocks light, it takes very sharp photographs. Its pictures show distant galaxies, the birth of stars in nebulae and the remains of supernovae. They helped scientists work out that the universe is about 13.8 billion years old."
+        },
+        {
+          "type": "example",
+          "title": "Sunrises on the space station",
+          "steps": [
+            "The International Space Station goes round the Earth once every 92 minutes. How many orbits does it make in one day?",
+            "One day = 24 × 60 = 1440 minutes",
+            "Number of orbits = 1440 ÷ 92 ≈ 15.7",
+            "The crew sees about 16 sunrises and 16 sunsets every day."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The International Space Station (ISS) orbits about 400 km up. It was built by several countries working together, and astronauts have lived on it without a break since 2000. They carry out experiments in near-weightless conditions, on plants, medicines, materials and the human body. This work prepares people for journeys to the Moon and Mars."
+        },
+        {
+          "type": "list",
+          "items": [
+            "It improves life on Earth through better forecasts, communication and inventions such as improved solar cells and water filters.",
+            "It helps us understand the Earth's climate and protect the environment.",
+            "It answers big questions about how the universe began.",
+            "It brings countries together to work on shared projects.",
+            "It is very expensive, and old satellites and rocket parts leave dangerous space junk in orbit."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Space programmes cost a great deal of money. Should a country like Uganda spend money on satellites? What benefits could a Ugandan satellite bring to farmers, schools and hospitals?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "An artificial satellite is a machine launched into orbit, held there by gravity. Geostationary satellites orbit once a day above the equator and carry TV and communication signals. Low and polar orbit satellites watch the Earth, and GPS satellites help us find our position. Space exploration helps us understand the Earth and the universe."
+        }
+      ],
+      "sim": {
+        "phet": "gravity-and-orbits_en.html",
+        "caption": "PhET Gravity and Orbits (Model screen). Choose the Earth and space station system and watch the orbit. Then switch gravity off and see the station fly off in a straight line. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "packId": "bio.s2.transport.animals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.transport.animals",
+      "title": "Transport in Animals",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Transport in Plants and Animals",
+      "subStrand": "The heart, blood, blood vessels and the lymphatic system",
+      "order": 7,
+      "term": 3,
+      "outcomes": [
+        "understand the principle of the surface area to volume ratio (s)",
+        "know the need for a transport system, and identify the components involved in the transport system in mammals (k)",
+        "describe the structure of the heart and how it functions (u, s)",
+        "understand how structure of blood vessels are related to their function by comparing arteries, veins and capillaries (u, s)",
+        "identify the major functions of blood, and relate the functions to the components of blood (u, s)",
+        "understand the causes and prevention of diseases associated with the heart (high blood pressure, coronary heart disease and stroke) (u, v)",
+        "understand the importance of knowledge of blood groups for blood transfusion (k, u)",
+        "appreciate the role of blood in the defence of the human body (u)",
+        "know how immunity is weakened by various infections including HIV (k, u)",
+        "understand the process of the formation of lymph and its flow around the body (k, u)",
+        "appreciate the function of the lymphatic system in maintaining a healthy body (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "An Amoeba in a pond takes in oxygen straight through its surface. You cannot do that. Most of your cells are deep inside your body, far from the air. You need a transport system to carry substances to and from every cell."
+        },
+        {
+          "type": "heading",
+          "text": "Surface area to volume ratio"
+        },
+        {
+          "type": "text",
+          "text": "The surface area of an object is the total area of its outside. Its volume is the space it takes up. The surface area to volume ratio compares the two. As an object gets bigger, its volume grows faster than its surface area, so the ratio gets smaller."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{surface area of a cube} = 6l^2 \\qquad \\text{volume of a cube} = l^3",
+          "speech": "surface area of a cube equals six l squared; volume of a cube equals l cubed, where l is the length of one side"
+        },
+        {
+          "type": "example",
+          "title": "Comparing three cubes",
+          "steps": [
+            "Cube of side 1 cm: surface area = 6 × 1 × 1 = 6 cm². Volume = 1 × 1 × 1 = 1 cm³. Ratio = 6 : 1.",
+            "Cube of side 2 cm: surface area = 6 × 2 × 2 = 24 cm². Volume = 2 × 2 × 2 = 8 cm³. Ratio = 24 : 8 = 3 : 1.",
+            "Cube of side 4 cm: surface area = 6 × 4 × 4 = 96 cm². Volume = 4 × 4 × 4 = 64 cm³. Ratio = 96 : 64 = 1.5 : 1.",
+            "Each time the side doubles, the ratio halves. A large cube has much less surface for each cubic centimetre inside it."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A tiny organism has a large surface for its size, and no cell is far from the outside. Diffusion through its surface is enough. A large animal has a small surface for its size, and its inner cells are too far away for diffusion alone. It needs special surfaces, like the lungs, and a transport system."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Cassava cubes",
+          "text": "Cut cubes of raw cassava or Irish potato with sides of 1 cm, 2 cm and 3 cm. Calculate the surface area, volume and ratio of each. Then leave the cubes in water coloured with ink for 15 minutes. Cut each one in half and compare how much of the inside the colour has reached."
+        },
+        {
+          "type": "heading",
+          "text": "The circulatory system"
+        },
+        {
+          "type": "text",
+          "text": "The transport system carries oxygen from the lungs and digested food from the intestines to every cell. It removes carbon dioxide and urea. It also carries hormones, spreads heat and helps fight disease. In mammals it has three parts: the heart, which pumps; the blood vessels, which are the tubes; and the blood, which carries substances."
+        },
+        {
+          "type": "text",
+          "text": "Mammals have a double circulation. Blood passes through the heart twice on each full journey: once on its way to the lungs and back, and once on its way to the rest of the body and back."
+        },
+        {
+          "type": "heading",
+          "text": "The heart"
+        },
+        {
+          "type": "text",
+          "text": "The heart is about the size of your fist. It lies in the chest between the lungs. It is made of cardiac muscle, which contracts all your life without tiring. A wall called the septum divides it into a right side and a left side, so blood with oxygen and blood without oxygen do not mix."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Right atrium: receives blood with little oxygen from the body through the vena cava.",
+            "Right ventricle: pumps this blood to the lungs through the pulmonary artery.",
+            "Left atrium: receives blood rich in oxygen from the lungs through the pulmonary vein.",
+            "Left ventricle: pumps this blood to the whole body through the aorta. Its wall is the thickest, because it pumps blood the furthest."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Valves between the atria and ventricles, and at the start of the two arteries, stop blood from flowing backwards. Coronary arteries on the outside of the heart supply its own muscle with oxygen and food."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Blood from the veins fills the atria.",
+            "The atria contract and push blood into the ventricles.",
+            "The ventricles contract. The valves between atria and ventricles snap shut, and blood is forced out into the arteries.",
+            "The ventricles relax. The valves in the arteries close, so blood cannot flow back. The heart fills again."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The closing valves make the lub-dub sound of the heartbeat. An adult's heart beats about 70 times a minute at rest."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Pulse and heart sounds",
+          "text": "Find the pulse in your wrist or the side of your neck. Count the beats in 15 seconds and multiply by 4 to get beats per minute. For example, 18 beats in 15 seconds is 18 × 4 = 72 beats per minute. Skip or jump for one minute and count again. Then press one end of a cardboard tube or a rolled exercise book to a friend's chest and listen at the other end for the heart sounds."
+        },
+        {
+          "type": "heading",
+          "text": "Blood vessels"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Arteries carry blood away from the heart at high pressure. They have thick, muscular, stretchy walls and a narrow space inside. The stretch you feel as a pulse is an artery.",
+            "Veins carry blood back to the heart at low pressure. They have thinner walls, a wider space inside, and valves that stop blood flowing backwards. Body muscles squeeze the veins to help blood along.",
+            "Capillaries are tiny vessels that link arteries to veins. Their walls are only one cell thick, and they pass close to every cell. Oxygen and food diffuse out of them, and wastes diffuse in."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Blood and its functions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Plasma is the yellowish liquid part, mainly water. It carries dissolved food, carbon dioxide, urea, hormones and mineral salts. It also spreads heat around the body.",
+            "Red blood cells contain haemoglobin, which carries oxygen from the lungs to the cells. They have no nucleus and are made in the bone marrow.",
+            "White blood cells are larger and have a nucleus. They defend the body against germs.",
+            "Platelets are tiny pieces of cells. They help blood to clot at a wound."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Blood in defence"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Clotting: at a cut, platelets and proteins in the plasma form a mesh of threads that traps blood cells. This clot dries into a scab, which stops bleeding and keeps germs out.",
+            "Engulfing germs: some white blood cells, called phagocytes, move to an infected place, surround germs and digest them.",
+            "Antibodies: other white blood cells, called lymphocytes, make antibodies. These are proteins that attach to a particular germ and help destroy it."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "After an infection, some lymphocytes remember the germ and fight it faster next time. This protection is called immunity. Vaccines, such as those given to babies against measles and polio, give immunity without the illness."
+        },
+        {
+          "type": "text",
+          "text": "Some infections weaken immunity. HIV attacks the lymphocytes that control the body's defences. As their number falls, the body cannot fight other germs, and the person falls ill with infections such as tuberculosis and pneumonia. Without treatment this leads to AIDS. ARVs, taken every day, keep the virus low and the immune system strong. Malaria, measles, tuberculosis and malnutrition also weaken immunity."
+        },
+        {
+          "type": "heading",
+          "text": "Blood groups and transfusion"
+        },
+        {
+          "type": "text",
+          "text": "A blood transfusion gives blood from a healthy donor to a patient, for example after an accident, heavy bleeding in childbirth, or severe anaemia from malaria. In the ABO system there are four blood groups: A, B, AB and O. If a patient receives the wrong group, antibodies in their plasma make the donated red cells stick together in clumps. The clumps block blood vessels and can kill."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Group O can be given to people of any group, so it is called the universal donor.",
+            "Group AB can receive blood from any group, so it is called the universal recipient.",
+            "Group A can receive groups A and O. Group B can receive groups B and O."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Before a transfusion, health workers check the blood groups of the donor and patient. Donated blood is also tested for HIV, hepatitis and other infections."
+        },
+        {
+          "type": "heading",
+          "text": "Lymph and the lymphatic system"
+        },
+        {
+          "type": "text",
+          "text": "Blood pressure pushes some plasma out through capillary walls into the spaces between cells. This liquid is called tissue fluid. It bathes the cells, bringing them food and oxygen and taking away waste. Most of it returns to the capillaries. The rest drains into tiny lymph vessels and is then called lymph."
+        },
+        {
+          "type": "text",
+          "text": "Lymph vessels join into larger ones with valves. There is no pump: body muscles squeeze lymph along. On the way it passes through lymph nodes, and finally it empties into large veins near the neck."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The lymphatic system returns tissue fluid to the blood, so body parts do not swell.",
+            "Lymph nodes filter out germs. They contain lymphocytes that destroy them. This is why the glands in your neck may swell when you have an infection.",
+            "Lymph vessels in the villi absorb digested fats."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Diseases of the heart and blood vessels"
+        },
+        {
+          "type": "list",
+          "items": [
+            "High blood pressure: blood pushes too hard on the artery walls. It often has no signs, so it can damage the heart and kidneys unnoticed.",
+            "Coronary heart disease: fatty deposits build up in the coronary arteries and narrow them. Less blood reaches the heart muscle, causing chest pain or a heart attack.",
+            "Stroke: the blood supply to part of the brain is blocked by a clot or a burst vessel. Brain cells die, and the person may lose movement on one side or the ability to speak."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "These diseases are linked to a diet high in salt, fat and sugar, being overweight, smoking, too much alcohol, stress and lack of exercise. People can lower the risk by eating more fruit, vegetables and whole grains, using less salt, exercising regularly, not smoking and having their blood pressure checked."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Group O blood can be given to anyone in an emergency. Why do you think hospitals still check a patient's group whenever there is time? Why might they need a steady supply of donors of every group?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Large animals have a small surface area to volume ratio, so they need a transport system: the heart, blood vessels and blood. Arteries carry blood away from the heart, veins return it, and capillaries exchange substances with cells. Blood carries materials and defends the body, blood groups must match for transfusion, and the lymphatic system returns tissue fluid and filters out germs."
+        }
+      ]
+    }
+  ]
+}

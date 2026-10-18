@@ -1,0 +1,163 @@
+{
+  "packId": "phy.s4.modern.digital-electronics",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.modern.digital-electronics",
+      "title": "Digital Electronics",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Modern Physics",
+      "subStrand": "Potential dividers, logic gates and memory",
+      "order": 7,
+      "term": 3,
+      "outcomes": [
+        "understand how resistors are used to make potential dividers in control and logic circuits (u, s)",
+        "understand elementary logic and memory circuits that exploit devices such as bistable and astable switches, logic gates and resistors as potential dividers (u, s)",
+        "know that logic circuits are able to store and process binary information and that this can be exploited in an increasingly wide variety of digital instruments (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A phone stores photographs and messages. A street light switches on by itself at dusk. Inside each are circuits that make decisions and remember information: digital electronics."
+        },
+        {
+          "type": "heading",
+          "text": "Analogue and digital"
+        },
+        {
+          "type": "text",
+          "text": "An analogue signal can have any value within a range, like the temperature during a day. A digital signal has only two values: high (on), written as 1, and low (off), written as 0. In many circuits, high is about 5 V and low is about 0 V. Information written using only 0s and 1s is called binary. Each 0 or 1 is called a bit."
+        },
+        {
+          "type": "heading",
+          "text": "Potential dividers"
+        },
+        {
+          "type": "text",
+          "text": "A potential divider is two resistors connected in series across a supply. The supply voltage is shared between them in proportion to their resistances. The bigger resistor gets the bigger share. The output voltage is taken from across one of the resistors."
+        },
+        {
+          "type": "equation",
+          "latex": "V_{out} = V_{in} \\times \\frac{R_2}{R_1 + R_2}",
+          "speech": "V out equals V in times R 2 over R 1 plus R 2"
+        },
+        {
+          "type": "example",
+          "title": "A simple potential divider",
+          "steps": [
+            "A 2 kΩ resistor (R₁) and a 1 kΩ resistor (R₂) are connected in series across a 9 V battery. Find the voltage across R₂.",
+            "Vout = Vin × R₂ ÷ (R₁ + R₂) = 9 × 1 ÷ (2 + 1)",
+            "Vout = 3 V. The 2 kΩ resistor gets the other 6 V."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "If one resistor is a sensor, the output changes with the surroundings. An LDR has a high resistance in the dark and a low resistance in bright light. Put an LDR as R₂ and the output voltage rises as it gets dark. This rising voltage can switch on a transistor, which turns on a street light or a security light. A thermistor in the same place can switch on a fan or an alarm when the temperature changes."
+        },
+        {
+          "type": "example",
+          "title": "A light sensor circuit",
+          "steps": [
+            "A 10 kΩ resistor (R₁) and an LDR (R₂) are in series across 6 V. The output is taken across the LDR.",
+            "In daylight the LDR is 2 kΩ: Vout = 6 × 2 ÷ (10 + 2) = 1 V. This counts as low (0).",
+            "At night the LDR is 50 kΩ: Vout = 6 × 50 ÷ (10 + 50) = 5 V. This counts as high (1).",
+            "The high output at night can switch the light on."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A potentiometer, such as the volume control on a radio, is a potential divider in one part. Turning the knob moves a sliding contact along a resistance track, so the output voltage and the loudness change smoothly."
+        },
+        {
+          "type": "heading",
+          "text": "Logic gates"
+        },
+        {
+          "type": "text",
+          "text": "A logic gate is a small circuit with one or more inputs and one output. Each input and output is either 0 or 1. A truth table lists the output for every possible set of inputs. Here, A and B are the two inputs."
+        },
+        {
+          "type": "list",
+          "items": [
+            "AND gate: the output is 1 only if A and B are both 1. Truth table: 0 0 gives 0; 0 1 gives 0; 1 0 gives 0; 1 1 gives 1.",
+            "OR gate: the output is 1 if A or B, or both, are 1. Truth table: 0 0 gives 0; 0 1 gives 1; 1 0 gives 1; 1 1 gives 1.",
+            "NOT gate: has one input and gives the opposite. 0 gives 1, and 1 gives 0.",
+            "NAND gate (NOT AND): the opposite of AND. Truth table: 0 0 gives 1; 0 1 gives 1; 1 0 gives 1; 1 1 gives 0.",
+            "NOR gate (NOT OR): the opposite of OR. Truth table: 0 0 gives 1; 0 1 gives 0; 1 0 gives 0; 1 1 gives 0."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Logic gates make decisions in control circuits. A security light should come on only when it is dark AND someone moves nearby, so it uses an AND gate. An alarm should ring if a door OR a window is opened, so it uses an OR gate."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Switches as logic gates",
+          "text": "Build a circuit with two torch cells, a bulb and two switches in series. The bulb lights only when switch A and switch B are both closed: this is an AND gate. Now rebuild it with the two switches in parallel. Write a truth table for each circuit, using 1 for a closed switch or a lit bulb and 0 for open or dark. Which gate does the parallel circuit behave like?"
+        },
+        {
+          "type": "heading",
+          "text": "Memory: the bistable"
+        },
+        {
+          "type": "text",
+          "text": "A bistable has two stable states. It stays in whichever state it was last put in, so it remembers one bit. It can be made from two NOR gates. The output of each gate is wired back to one of the inputs of the other gate. The spare input of one gate is called Set (S) and the spare input of the other is called Reset (R). The output is called Q."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Make S = 1 for a moment: Q becomes 1.",
+            "Return S to 0: Q stays at 1. The circuit remembers.",
+            "Make R = 1 for a moment: Q becomes 0, and it stays at 0 when R returns to 0.",
+            "S and R are not made 1 at the same time."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "An astable is different. It has no stable state, so it switches between 0 and 1 again and again by itself. It produces a steady stream of pulses. Astables make warning lights flash and provide the clock pulses that keep watches and computers in step."
+        },
+        {
+          "type": "heading",
+          "text": "Counting in binary"
+        },
+        {
+          "type": "text",
+          "text": "In binary, each place value is twice the one to its right: 1, 2, 4, 8, 16 and so on. A chain of bistables can count pulses from an astable. Each bistable stores one bit of the count. Counting up from zero with three bits gives 000, 001, 010, 011, 100, 101, 110 and 111, which is 0 to 7."
+        },
+        {
+          "type": "example",
+          "title": "Changing between binary and denary",
+          "steps": [
+            "Change binary 1011 to an ordinary (denary) number.",
+            "Place values from the right are 1, 2, 4 and 8.",
+            "1011 = (1 × 8) + (0 × 4) + (1 × 2) + (1 × 1) = 8 + 0 + 2 + 1 = 11",
+            "Now change 13 to binary: 13 = 8 + 4 + 1, so it is 1101."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Digital instruments"
+        },
+        {
+          "type": "text",
+          "text": "Millions of logic gates and bistables on tiny silicon chips store and process binary information. Eight bits make a byte, which can hold 256 different values. A phone turns sounds, pictures and text into strings of bits, stores them and sends them as pulses. Calculators, digital watches, digital thermometers and shop scales work the same way. Digital signals can be copied and sent far without losing quality."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A poultry farmer wants a fan to switch on when the chicken house is hot, but only during the day. Which sensors and which logic gate would you use? How could a potential divider help?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A potential divider shares a voltage between two resistors: Vout = Vin × R₂ ÷ (R₁ + R₂). Logic gates (AND, OR, NOT, NAND, NOR) work with 0s and 1s and are described by truth tables. A bistable made from two NOR gates remembers one bit; an astable gives a stream of pulses. Digital devices store and process information in binary."
+        }
+      ]
+    }
+  ]
+}

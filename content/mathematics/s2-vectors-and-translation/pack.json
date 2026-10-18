@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.vectors-and-translation",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,146 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Vectors",
       "order": 2,
+      "term": 1,
       "outcomes": [
-        "Define translation with a vector. (k, u, s)",
-        "Identify scalars and vectors. (k, u)",
-        "Use vector notation. (k, s)",
-        "Represent vectors both single and combined geometrically. (u, s)"
+        "define translation with a vector. (k u s)",
+        "identify scalars and vectors. (k u)",
+        "use vector notation. (k s)",
+        "represent vectors both single and combined geometrically. (u s)"
       ],
       "body": [
         {
-          "type": "text",
-          "text": "A scalar is a quantity with size only, such as 5 kg or 20°C. A vector has both size (magnitude) and direction, such as \"3 km east\". A translation slides every point of a shape the same distance in the same direction without turning or resizing it — a vector describes exactly that slide."
+          "type": "heading",
+          "text": "Size and direction"
         },
         {
           "type": "text",
-          "text": "A column vector is written (a, b) stacked vertically, where a is the movement parallel to the x-axis (positive = right) and b is the movement parallel to the y-axis (positive = up). The vector that translates point (1, 2) to point (4, -1) is found by subtracting: (4-1, -1-2) = (3, -3)."
+          "text": "Akello asks a boda boda rider in Jinja for directions to the market. He says, 'Go 3 km east, then 2 km north.' The distance alone is not enough. Akello also needs to know which way to go. Many quantities in mathematics and science need both a size and a direction."
+        },
+        {
+          "type": "heading",
+          "text": "Scalars and vectors"
+        },
+        {
+          "type": "text",
+          "text": "A scalar is a quantity that has size only. The size of a quantity is called its magnitude. Mass, time, distance, speed, temperature and price are scalars. A bag of beans has a mass of 5 kg. It does not point anywhere."
+        },
+        {
+          "type": "text",
+          "text": "A vector is a quantity that has both magnitude and direction. Displacement, velocity and force are vectors. Displacement is distance in a stated direction, such as 4 km due west of Mbale. Velocity is speed in a stated direction."
+        },
+        {
+          "type": "heading",
+          "text": "Vector notation"
+        },
+        {
+          "type": "text",
+          "text": "On a grid, we draw a vector as a straight line with an arrow. The length shows the magnitude. The arrow shows the direction. A vector from point A to point B is written as AB with an arrow above it. In print, a single vector is often named with a bold small letter, such as a. In your exercise book, underline the letter instead."
+        },
+        {
+          "type": "text",
+          "text": "We also write a vector as a column vector. The top number is the movement parallel to the x-axis. The bottom number is the movement parallel to the y-axis. Positive numbers mean right or up. Negative numbers mean left or down."
         },
         {
           "type": "equation",
-          "expr": "(1, 2) -> (4, -1):  vector = (4-1, -1-2) = (3, -3)"
+          "latex": "\\mathbf{a} = \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}",
+          "speech": "vector a equals the column vector 3, minus 2"
         },
         {
           "type": "text",
-          "text": "Combining two translations means adding their column vectors component by component. Translating a point first by (2, 3) then by (-5, 1) has the same overall effect as one translation by (2+(-5), 3+1) = (-3, 4)."
+          "text": "This vector means 'move 3 units right and 2 units down'. Inside a sentence, this lesson writes a column vector on one line with the top number first, like this: vector (3, −2)."
+        },
+        {
+          "type": "heading",
+          "text": "Translation"
+        },
+        {
+          "type": "text",
+          "text": "A translation moves every point of a shape the same distance in the same direction. The shape slides. It does not turn, flip or change size. So the image is congruent to the object, which means it has exactly the same shape and size. A column vector describes a translation completely."
+        },
+        {
+          "type": "example",
+          "title": "Translate a triangle by a vector",
+          "steps": [
+            "Triangle ABC has A(1, 1), B(4, 1) and C(1, 3). Translate it by vector (3, −2).",
+            "Add 3 to each x-coordinate and subtract 2 from each y-coordinate.",
+            "A(1, 1) → A′(1 + 3, 1 − 2) = A′(4, −1).",
+            "B(4, 1) → B′(4 + 3, 1 − 2) = B′(7, −1).",
+            "C(1, 3) → C′(1 + 3, 3 − 2) = C′(4, 1).",
+            "Triangle A′B′C′ has the same side lengths and angles as triangle ABC. It faces the same way."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the vector of a translation, and undo it",
+          "steps": [
+            "A translation moves P(2, 5) to P′(−1, 7). Find the vector.",
+            "Change in x: −1 − 2 = −3.",
+            "Change in y: 7 − 5 = 2.",
+            "The vector is (−3, 2): 3 units left and 2 units up.",
+            "To move P′ back to P, reverse the movement: 3 units right and 2 units down.",
+            "So the vector that undoes the translation is (3, −2). It is the negative of the first vector."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Combining vectors"
+        },
+        {
+          "type": "text",
+          "text": "To add two column vectors, add the top numbers and add the bottom numbers. To show the sum on a grid, draw the first vector. From its arrow end, draw the second vector. The sum, called the resultant, goes straight from the start of the first vector to the end of the second. This is called adding vectors nose to tail."
         },
         {
           "type": "equation",
-          "expr": "(2, 3) + (-5, 1) = (-3, 4)"
+          "latex": "\\begin{pmatrix} a \\\\ b \\end{pmatrix} + \\begin{pmatrix} c \\\\ d \\end{pmatrix} = \\begin{pmatrix} a + c \\\\ b + d \\end{pmatrix}",
+          "speech": "the column vector a, b plus the column vector c, d equals the column vector a plus c, b plus d"
+        },
+        {
+          "type": "text",
+          "text": "Multiplying a vector by a number, such as 2, multiplies both of its numbers. The vector 2a points the same way as a and is twice as long. The vector −a has the same length as a but points the opposite way."
+        },
+        {
+          "type": "example",
+          "title": "Two walks become one",
+          "steps": [
+            "Kato walks from home along vector a = (4, 1), then along vector b = (−1, 3). Each unit is 1 km. East is right and north is up.",
+            "Resultant a + b = (4 + (−1), 1 + 3) = (3, 4).",
+            "So Kato ends 3 km east and 4 km north of home.",
+            "On a grid: draw a from home, draw b from the end of a, then join home to the final point. That line is the resultant."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Work with several vectors",
+          "steps": [
+            "Let a = (2, −1) and b = (−3, 4).",
+            "a + b = (2 − 3, −1 + 4) = (−1, 3).",
+            "a − b = (2 − (−3), −1 − 4) = (5, −5).",
+            "3a = (3 × 2, 3 × (−1)) = (6, −3).",
+            "2a + b = (4, −2) + (−3, 4) = (1, 2)."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Slide a card triangle",
+          "text": "Cut a small triangle from an old exercise book cover. Draw axes on squared paper and trace round the triangle. Slide it, without turning it, 4 squares right and 1 square down, and trace it again. Write the vector. Now make a second slide from the new position and record that vector too. Compare the two slides with one single slide from the first position to the last. Then find the slide that takes the triangle back to where it started."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Isabirye wants to swim straight across a river. The water flows at 1.5 metres per second, and he can swim at 2.5 metres per second. If he faces straight across, where will he land? Which way should he face, and how could a scale drawing of vectors help him decide?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A scalar has magnitude only; a vector has magnitude and direction. A column vector gives the movement along the x-axis on top and along the y-axis below. A translation slides every point by the same vector, so the image is congruent to the object; add vectors by adding their matching numbers, nose to tail on a grid."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "vector-addition_en.html",
+        "caption": "PhET Vector Addition. Drag vectors onto the grid, read their x and y components, and add two vectors to see the resultant drawn nose to tail. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
     }
   ]
 }

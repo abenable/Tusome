@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.similarities-and-enlargement",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,33 +11,158 @@
       "strand": "Geometry and Measures",
       "subStrand": "Similarity and enlargement",
       "order": 7,
+      "term": 2,
       "outcomes": [
-        "Identify similar figures. (u, s)",
-        "State and use the properties of similar figures. (k, u)",
-        "Define enlargement. (k)",
-        "State the properties of enlargement to construct objects and images. (k)",
-        "Understand and use the relationship between linear, area and volume scale factors. (u, s)"
+        "identify similar figures. (u s)",
+        "state and use the properties of similar figures. (k u)",
+        "define enlargement. (k)",
+        "state the properties of enlargement to construct objects and images. (k)",
+        "understand and use the relationship between linear, area and volume scale factors. (u s)"
       ],
       "body": [
         {
-          "type": "text",
-          "text": "Two figures are similar if one is an enlargement of the other: matching angles are equal, and matching sides are all in the same ratio (the scale factor). Enlargement is a transformation that makes a shape bigger or smaller from a fixed centre of enlargement, without changing its shape."
+          "type": "heading",
+          "text": "Same shape, different size"
         },
         {
           "type": "text",
-          "text": "Sara is 150 cm tall and casts a shadow 50 cm long. At the same time, a tree casts a shadow 210 cm long. Since Sara and the tree are both vertical and the sun's rays hit them at the same angle, Sara and her shadow form a triangle similar to the tree and its shadow. The scale factor is 210 ÷ 50 = 4.2, so the tree's height is 150 x 4.2 = 630 cm."
+          "text": "A passport photo and a large printed copy of it show the same face. A map of Uganda in an atlas and a map on the classroom wall show the same shape. Only the size changes. Shapes like these are called similar. In this topic we study similar figures and the transformation that makes them, called an enlargement."
+        },
+        {
+          "type": "heading",
+          "text": "Similar figures"
+        },
+        {
+          "type": "text",
+          "text": "Two figures are similar when one is an exact scaled copy of the other. Similar figures have two properties."
+        },
+        {
+          "type": "list",
+          "items": [
+            "All corresponding angles are equal. Corresponding means 'in matching positions'.",
+            "All corresponding sides are in the same ratio. Each side of the larger figure is the same number of times longer than its matching side."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "That number is called the scale factor, written k. If k = 1, the figures are the same size, and we call them congruent. All circles are similar, and so are all squares. Two rectangles are similar only if their sides are in the same ratio."
+        },
+        {
+          "type": "example",
+          "title": "Find missing sides of similar triangles",
+          "steps": [
+            "Triangle ABC has AB = 4 cm, BC = 6 cm and AC = 5 cm. Triangle PQR is similar to it, with PQ = 10 cm matching AB.",
+            "Scale factor k = PQ ÷ AB = 10 ÷ 4 = 2.5.",
+            "QR = 2.5 × BC = 2.5 × 6 = 15 cm.",
+            "PR = 2.5 × AC = 2.5 × 5 = 12.5 cm.",
+            "The angles of PQR are the same as the angles of ABC."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the height of a tree from shadows",
+          "steps": [
+            "Kyomuhendo is 1.5 m tall. At 4 p.m. her shadow is 2 m long. At the same time, the shadow of a mango tree is 12 m long.",
+            "The Sun's rays make the same angle with the ground for both, so the two triangles (height, shadow, ray) are similar.",
+            "Scale factor k = tree's shadow ÷ Kyomuhendo's shadow = 12 ÷ 2 = 6.",
+            "Height of tree = 6 × 1.5 = 9 m."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Enlargement"
+        },
+        {
+          "type": "text",
+          "text": "An enlargement is a transformation that changes the size of a shape but keeps its shape. The original shape is the object, and the new shape is the image. An enlargement is described by two things: a centre of enlargement and a scale factor."
+        },
+        {
+          "type": "text",
+          "text": "To enlarge a point, measure its distance from the centre. The image lies on the same straight line from the centre, k times as far away. If k is greater than 1, the image is bigger. If k is between 0 and 1, the image is smaller, but we still call it an enlargement."
         },
         {
           "type": "equation",
-          "expr": "scale factor = 210 ÷ 50 = 4.2;   tree height = 150 x 4.2 = 630 cm"
+          "latex": "\\text{distance from centre to image} = k \\times \\text{distance from centre to object}",
+          "speech": "distance from the centre to the image equals k times the distance from the centre to the object"
+        },
+        {
+          "type": "heading",
+          "text": "Properties of an enlargement"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The image is similar to the object.",
+            "Every length in the image is k times the matching length in the object.",
+            "Angles do not change, and parallel lines stay parallel.",
+            "Lines joining each object point to its image point all pass through the centre of enlargement."
+          ]
         },
         {
           "type": "text",
-          "text": "If the linear scale factor between two similar shapes is k, the area scale factor is k^2 and the volume scale factor is k^3 — because area involves two lengths multiplied together, and volume involves three. A model boat built at 1:20 scale (k = 1/20) needs 20^2 = 400 times less paint by area, and holds 20^3 = 8000 times less water by volume than the real boat."
+          "text": "The last property lets us find the centre of an enlargement. Join two or more object points to their image points with straight lines, and extend the lines. They meet at the centre. Divide an image length by its object length to find k."
+        },
+        {
+          "type": "example",
+          "title": "Enlarge a triangle on a grid",
+          "steps": [
+            "Triangle ABC has A(1, 1), B(3, 1) and C(1, 2). Enlarge it with centre (0, 0) and scale factor 3.",
+            "With the origin as centre, multiply each coordinate by 3.",
+            "A(1, 1) → A′(3, 3). B(3, 1) → B′(9, 3). C(1, 2) → C′(3, 6).",
+            "AB = 2 units and A′B′ = 6 units, so lengths are 3 times longer.",
+            "For a centre that is not the origin, use movement from the centre. Enlarge P(3, 5) with centre (1, 2) and k = 2.",
+            "From the centre to P is 2 right and 3 up. Double it: 4 right and 6 up. So P′ = (1 + 4, 2 + 6) = (5, 8)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Length, area and volume scale factors"
+        },
+        {
+          "type": "text",
+          "text": "When lengths are multiplied by k, areas are not multiplied by k. A square of side 1 cm enlarged by k = 2 becomes a square of side 2 cm. Its area changes from 1 cm² to 4 cm², which is 2² times as much. A cube of side 1 cm becomes a cube of side 2 cm, and its volume changes from 1 cm³ to 8 cm³, which is 2³ times as much."
         },
         {
           "type": "equation",
-          "expr": "linear scale factor k  ->  area scale factor k^2,  volume scale factor k^3"
+          "latex": "\\text{area scale factor} = k^2 \\qquad \\text{volume scale factor} = k^3",
+          "speech": "area scale factor equals k squared, and volume scale factor equals k cubed"
+        },
+        {
+          "type": "example",
+          "title": "Enlarge a photograph",
+          "steps": [
+            "A photo is 10 cm by 15 cm. It is enlarged to 25 cm by 37.5 cm.",
+            "Linear scale factor k = 25 ÷ 10 = 2.5.",
+            "Area scale factor = 2.5² = 6.25.",
+            "Original area = 10 × 15 = 150 cm². New area = 150 × 6.25 = 937.5 cm².",
+            "Check: 25 × 37.5 = 937.5 cm²."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Porridge in similar saucepans",
+          "steps": [
+            "Wasswa has a cylindrical saucepan of diameter 18 cm. It makes porridge for one person. The school cook has a similar saucepan of diameter 72 cm.",
+            "Linear scale factor k = 72 ÷ 18 = 4.",
+            "Volume scale factor = 4³ = 64.",
+            "The cook's saucepan holds 64 times as much, so it makes porridge for 64 people."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Shadows from a torch",
+          "text": "Cut a small triangle from card. Shine a torch or a phone light at a wall in a dim room. Hold the card between the light and the wall. Move the card closer to the light, then closer to the wall, and watch the shadow. Measure one side of the card and the matching side of its shadow, and work out the scale factor. Where is the centre of enlargement in this model?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Are all rectangles similar? Compare the cover of an exercise book with a classroom door. What would you measure to decide?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Similar figures have equal corresponding angles and corresponding sides in the same ratio k. An enlargement is fixed by its centre and scale factor; the image is similar to the object. If lengths are multiplied by k, areas are multiplied by k² and volumes by k³."
         }
       ]
     }

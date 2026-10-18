@@ -1,0 +1,169 @@
+{
+  "packId": "bio.s3.excretion.animals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.excretion.animals",
+      "title": "Excretion in Animals",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Excretion",
+      "subStrand": "Excretory organs and the kidney",
+      "order": 3,
+      "term": 1,
+      "outcomes": [
+        "appreciate the need to remove unwanted substances from the bodies of living organisms (u)",
+        "understand the process of excretion in humans, including the loss of waste products in sweat, urine and through breathing (k, u)",
+        "understand and explain how and why the human body reacts to raised levels of carbon dioxide (u, s)",
+        "identify the causes, symptoms and treatment of kidney failure (u)",
+        "understand the need for tests to determine the presence of glucose and protein in urine, and explain the significance of the tests (u, s, v)",
+        "recognise the need for proper disposal of human waste; e.g. urine (s, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "On a hot afternoon in Gulu, Atim's shirt is wet with sweat. Later she drinks a lot of water and visits the toilet. Sweating and passing urine both help her body get rid of waste. Excretion is the removal of waste products made by chemical reactions in the body's cells. All these reactions together are called metabolism."
+        },
+        {
+          "type": "heading",
+          "text": "Why wastes must be removed"
+        },
+        {
+          "type": "text",
+          "text": "Cells make wastes all the time, and some are poisonous if they build up. Too much carbon dioxide makes the blood acidic. Urea, made from broken-down proteins, is harmful at high levels. Extra water and salts upset the fluid around cells. Enzymes only work well when conditions stay steady."
+        },
+        {
+          "type": "text",
+          "text": "Excretion is not the same as egestion. Egestion is the removal of faeces, which are mostly undigested food that never entered the body's cells. All living things excrete. An amoeba loses wastes by diffusion. Plants give out carbon dioxide and oxygen through their stomata, and store some wastes in leaves and bark that later fall off."
+        },
+        {
+          "type": "heading",
+          "text": "Excretory organs in humans"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lungs: remove carbon dioxide and water vapour, which leave in the air we breathe out.",
+            "Kidneys: remove urea, extra water and extra salts as urine.",
+            "Skin: sweat glands remove water, salts and a little urea in sweat. Sweating also cools the body.",
+            "Liver: turns the extra amino acids from protein foods into urea. It also breaks down old red blood cells. Their coloured waste, called bile pigment, leaves in the faeces."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The urinary system"
+        },
+        {
+          "type": "text",
+          "text": "The two kidneys are bean-shaped organs at the back of the abdomen, one on each side of the backbone. Blood enters each kidney through a renal artery and leaves through a renal vein. Urine flows from each kidney down a tube called a ureter to the bladder, which stores it. Urine leaves the body through a tube called the urethra. A ring of muscle keeps the bladder closed until we choose to pass urine."
+        },
+        {
+          "type": "text",
+          "text": "A kidney cut lengthwise shows an outer cortex, an inner medulla and a space called the pelvis, where urine collects. Each kidney has about one million tiny filtering units called nephrons."
+        },
+        {
+          "type": "heading",
+          "text": "How the kidney makes urine"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Ultrafiltration: blood enters a knot of capillaries called the glomerulus at high pressure. Water, glucose, salts, amino acids and urea are squeezed out into a cup called the Bowman's capsule. Blood cells and large proteins are too big, so they stay in the blood. The liquid squeezed out is called the filtrate.",
+            "Selective reabsorption: the filtrate flows along a long coiled tubule. All the glucose, most of the water and the useful salts are taken back into the blood.",
+            "What is left is urine: water with urea and extra salts. It drains into the pelvis and down the ureter."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The kidneys also control how much water the body keeps. When you drink little, you make a small amount of dark urine. When you drink a lot, you make plenty of pale urine."
+        },
+        {
+          "type": "heading",
+          "text": "Carbon dioxide and breathing rate"
+        },
+        {
+          "type": "text",
+          "text": "During exercise, muscles respire faster and make more carbon dioxide, so its level in the blood rises. A part of the brain called the medulla oblongata detects this rise. It sends nerve impulses to the diaphragm and the muscles between the ribs. Breathing becomes faster and deeper, and the heart beats faster. The extra carbon dioxide is breathed out until the level is back to normal. This is why you keep panting after a race."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Measure your breathing rate",
+          "text": "Sit quietly for two minutes. A partner times one minute while you count your breaths. Then jog on the spot for two minutes. Sit down and count your breaths again straight away, and then every minute until the rate is back to normal. Record the results in a table and compare them across the class. Anyone with asthma or another health problem can be the timer instead."
+        },
+        {
+          "type": "heading",
+          "text": "Kidney failure"
+        },
+        {
+          "type": "text",
+          "text": "Kidney failure happens when the kidneys can no longer filter the blood well. Wastes and water build up in the body."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Causes: diabetes that is not controlled, high blood pressure, kidney infections, severe dehydration, poisons, injury, and long use of some medicines such as painkillers in large amounts.",
+            "Symptoms: passing little urine, swollen legs, ankles or face, tiredness, breathlessness, feeling sick, itching and confusion.",
+            "Treatment: treating the cause and eating less salt and protein. If the kidneys stop working, a dialysis machine filters the blood several times a week. A kidney transplant gives the person a healthy kidney from a donor."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Testing urine for glucose and protein"
+        },
+        {
+          "type": "text",
+          "text": "Healthy urine has no glucose and almost no protein. Health workers test urine because it shows how well the body is working."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Glucose in urine may be a sign of diabetes. The blood glucose level is so high that the kidneys cannot take it all back.",
+            "Protein in urine may show that the glomeruli are damaged, for example by kidney disease or high blood pressure. In pregnant women it can warn of a dangerous condition, so antenatal clinics test urine at each visit."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Clinics use paper strips that change colour when dipped in urine. In a laboratory, Benedict's solution turns from blue to green, yellow or brick-red when heated with glucose. Biuret solution turns from blue to purple when protein is present."
+        },
+        {
+          "type": "heading",
+          "text": "Disposing of human waste"
+        },
+        {
+          "type": "text",
+          "text": "Urine and faeces can carry germs that cause cholera, typhoid and bilharzia. These diseases spread when human waste reaches water or food."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use a toilet, pit latrine or urinal, and help keep it clean.",
+            "Never urinate in the open or near a borehole, stream or lake.",
+            "Wash your hands with soap and water after visiting the toilet.",
+            "Report broken or blocked toilets at school."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Urine can also be useful. It contains nitrogen, phosphorus and potassium, which plants need. Some ecological sanitation toilets collect urine separately. After storage for some weeks, it is mixed with water and used as a garden fertiliser."
+        },
+        {
+          "type": "text",
+          "text": "Fresh sweat has no smell. Bacteria on the skin break it down and make it smell. Bathing daily and wearing clean, washed clothes keep the body fresh."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Your school has many learners and a limited number of toilets. How could the school manage urine and other human waste so that the compound stays clean and healthy?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Excretion is the removal of waste products of metabolism. The lungs excrete carbon dioxide, the kidneys make urine containing urea, and the skin loses water and salts in sweat. The kidney filters blood by ultrafiltration and takes back useful substances by selective reabsorption. A rise in carbon dioxide in the blood makes us breathe faster and deeper."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "packId": "che.s1.matter.using-materials",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.matter.using-materials",
+      "title": "Using Materials",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Particle Nature of Matter",
+      "subStrand": "Natural and synthetic materials and polymers",
+      "order": 4,
+      "term": 1,
+      "outcomes": [
+        "know that materials used in everyday life can be classified into natural and synthetic group, and how this affects their use in everyday life (s,k)",
+        "understand how the physical properties of polymers determine uses in everyday life such as in building, as fabrics, fabricating utensils used in homes, etc. (k, u)",
+        "know about the molecular structures of materials and relate this to their use (k, u)",
+        "know that polymers are useful long chain molecules made by both natural and synthetic processes (k, u)",
+        "understand how the physical properties of polymers determine uses in everyday life such as in building, as fabrics, fabricating utensils used in homes, etc. (k, u)",
+        "know how common materials can pollute environment and which materials can be recycled (k)",
+        "understand that heating changes the structure and properties of some materials (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Look around your classroom. You may see wooden desks, iron roofing sheets, plastic chairs, glass windows and cotton uniforms. Each material was chosen because of what it can do. In this topic you will find out why materials behave as they do, and how we can use them without harming the environment."
+        },
+        {
+          "type": "heading",
+          "text": "Natural and synthetic materials"
+        },
+        {
+          "type": "text",
+          "text": "A natural material comes from plants, animals or the ground. A synthetic material is made in a factory by chemical reactions. Many synthetic materials are made from crude oil."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Natural: wood, cotton, sisal, silk, wool, natural rubber, starch, bark cloth and clay.",
+            "Synthetic: nylon, polyester, polythene, polystyrene, PVC and PTFE, the non-stick coating on some saucepans.",
+            "Glass is made in a factory by melting sand, so it is a manufactured material made from natural raw materials."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "This difference affects how we use them. Natural materials rot away in time, and some soak up water. Synthetic materials are often waterproof, strong and cheap, and they do not rot. That makes them useful, but it also means they stay in the environment for hundreds of years."
+        },
+        {
+          "type": "heading",
+          "text": "Physical properties"
+        },
+        {
+          "type": "text",
+          "text": "A physical property is something you can observe or measure without changing the substance into a new one."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tensile strength: how well a material resists being pulled apart. Ropes need it.",
+            "Compressive strength: how well it resists being squashed. Pillars and bricks need it.",
+            "Flexibility: how easily it bends without breaking.",
+            "Elasticity: whether it returns to its shape after stretching, like a rubber band.",
+            "Absorbency: how much water it soaks up. Towels need it, raincoats must not have it.",
+            "Insulation: how well it stops heat passing through. Thatch is a good insulator."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Test some materials",
+          "text": "Collect strips of cotton cloth, polythene, paper, sisal, nylon from an old sack, and a rubber band. Pull each one gently to compare tensile strength. Bend each to test flexibility. Put one drop of water on each and see which soak it up. Record your results in a table and look for patterns between natural and synthetic materials."
+        },
+        {
+          "type": "heading",
+          "text": "Polymers: long chain molecules"
+        },
+        {
+          "type": "text",
+          "text": "A molecule is a group of atoms joined together. A polymer is a very long chain molecule made by joining thousands of small molecules called monomers. Think of beads joined to make a long necklace."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Natural polymers: cellulose in wood, cotton, paper and sisal; starch in cassava and potatoes; protein in silk, wool and hair; natural rubber from rubber trees.",
+            "Synthetic polymers: polythene, PVC, polystyrene, nylon, polyester and PTFE."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Plants make cellulose and starch by joining sugar molecules. Factories make polythene by joining small molecules of a gas called ethene."
+        },
+        {
+          "type": "equation",
+          "expr": "many ethene molecules → polythene",
+          "speech": "many ethene molecules join to make polythene"
+        },
+        {
+          "type": "heading",
+          "text": "How structure decides use"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Long chains tangle together like cooked spaghetti. This makes polymers strong and flexible, good for ropes, bags and fabrics.",
+            "Chains that can slide and then spring back make a material elastic, like rubber.",
+            "Chains joined to each other by cross-links cannot move. The material is hard and stiff, like melamine plates and electric sockets.",
+            "Chains with no spaces for water do not absorb it, so polythene and PVC are waterproof."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Building: concrete for its compressive strength, PVC for water pipes, iron sheets and clay tiles for roofs, and thatch for keeping houses cool.",
+            "Fabrics: cotton absorbs sweat and feels cool. Nylon and polyester are strong, dry quickly and do not crease. Wool keeps you warm.",
+            "Home utensils: plastic basins and jerrycans are light and waterproof. Non-stick pans use PTFE because food does not stick to it."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Choose a material for a water tank",
+          "steps": [
+            "A tank must hold water without leaking, rusting or rotting.",
+            "Wood absorbs water and rots, so it is not suitable.",
+            "Plain iron rusts, so it would need painting often.",
+            "A thick plastic polymer is waterproof, strong, light and does not rust or rot.",
+            "So many tanks for rainwater harvesting are made of plastic."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Plan a fair test on cement strips",
+          "steps": [
+            "Question: how does the amount of cement change the strength of a strip?",
+            "Mix sand and cement in three ratios: 3 to 1, 5 to 1 and 8 to 1.",
+            "Add the same amount of water and fill moulds of the same size.",
+            "Let all the strips dry for one week in the same place.",
+            "Rest each strip across two bricks. Hang a bucket from the middle and add sand slowly until it breaks.",
+            "Record the mass of sand. More cement should give a stronger strip."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Heating changes some materials"
+        },
+        {
+          "type": "text",
+          "text": "Some polymers, such as polythene and PVC, soften when heated and can be moulded into new shapes. When they cool, they set again. Others, such as melamine, do not soften. They char and break down instead."
+        },
+        {
+          "type": "text",
+          "text": "Natural materials change too. Wood, paper and cotton char and burn. Clay heated in a kiln becomes a hard pot that can never turn back into soft clay. Heat has changed the structure of these materials for good."
+        },
+        {
+          "type": "text",
+          "text": "Burning plastics give off poisonous fumes. Never burn plastic rubbish. Any burning tests in class are done only by your teacher, in the open air."
+        },
+        {
+          "type": "heading",
+          "text": "Pollution and recycling"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Polythene bags and bottles block drains and cause flooding in towns. Cattle and goats die after eating them.",
+            "Plastics do not rot. They break into tiny pieces that end up in soil, lakes and fish.",
+            "Old phones, TVs and batteries contain poisonous metals such as lead and mercury.",
+            "Burning rubbish fills the air with smoke and harmful gases."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To recycle a material means to collect it and make it into something new. Paper, glass, metal cans and plastic bottles can all be recycled. Ink cartridges can be refilled. Old clothes can be reused or turned into rags. Broken clay pots and ordinary light bulbs are hard to recycle, and energy-saving bulbs contain mercury, so they need careful disposal."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Which roof keeps a house coolest?",
+          "text": "Place three small pieces of roofing in the sun: a piece of iron sheet, a clay tile and a bundle of thatch. Put a thermometer in the shade underneath each one. After 20 minutes, read each thermometer and record the results. Explain which material is the best insulator."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Polythene bags are cheap, light and useful, but they pollute. Should they be banned completely? What could people use instead?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Materials are natural or synthetic. Polymers are long chain molecules made by living things and by factories. Their structure decides properties such as strength, flexibility and waterproofing, and these decide their uses. Heating changes some materials for good. Many materials can be reused or recycled instead of polluting the environment."
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.states-of-matter",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -10,8 +10,10 @@
       "level": "S1",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Particle theory of matter",
-      "order": 3,
+      "order": 4,
+      "term": 2,
       "outcomes": [
+        "understand the meaning of matter (u)",
         "understand that atoms are the building blocks from which all matter is made; appreciate that the states of matter have different properties (k, u)",
         "understand how the particle theory of matter explains the properties of solids, liquids and gases, changes of state, and diffusion (u)",
         "understand the meaning and importance of plasma in physics (u, v/a)"
@@ -19,28 +21,146 @@
       "body": [
         {
           "type": "text",
-          "text": "All matter is made of tiny particles (atoms and molecules) that are always in motion. The three familiar states of matter \u2014 solid, liquid, and gas \u2014 differ in how tightly those particles are packed and how freely they can move."
+          "text": "Think about water in your home. It is a liquid in the jerrycan. It becomes steam above a saucepan of boiling water. It is solid ice in a cold drink from a shop fridge. The same substance can exist in different forms. In this topic you will learn why."
+        },
+        {
+          "type": "heading",
+          "text": "What is matter?"
         },
         {
           "type": "text",
-          "text": "In a solid, particles are packed closely in fixed positions and only vibrate, giving the solid a fixed shape and a fixed volume. In a liquid, particles are still close together but can slide past one another, so a liquid has a fixed volume but takes the shape of its container. In a gas, particles are far apart and move quickly in random directions, so a gas has no fixed shape or volume and spreads to fill any container."
+          "text": "Matter is anything that has mass and takes up space. Stones, water, cooking oil, air and our own bodies are all matter. Air is matter too. A balloon gets bigger when you blow into it, because the air takes up space."
         },
         {
           "type": "text",
-          "text": "Heating a substance gives its particles more energy and can change its state: melting turns a solid into a liquid, and boiling (or evaporation) turns a liquid into a gas. Cooling has the opposite effect: condensation turns a gas into a liquid, and freezing turns a liquid into a solid."
+          "text": "Some things are not matter. Light, heat and sound have no mass and take up no space. They are forms of energy."
+        },
+        {
+          "type": "heading",
+          "text": "Atoms: the building blocks of matter"
         },
         {
           "type": "text",
-          "text": "Plasma is often called the fourth state of matter. It forms when a gas is given enough energy that electrons are stripped away from its atoms, leaving a mix of charged particles. Plasma is found in stars \u2014 including the Sun \u2014 as well as in lightning and in neon or fluorescent lights."
+          "text": "All matter is made of atoms. An atom is a very tiny particle, far too small to see even with a school microscope. Atoms often join together in small groups called molecules. A water molecule, for example, is two hydrogen atoms joined to one oxygen atom."
         },
         {
           "type": "text",
-          "text": "Use the PhET States of Matter: Basics simulation below to compare how particles are arranged and how they move in a solid, a liquid, and a gas, and to see what happens as you heat or cool a substance."
+          "text": "Scientists describe the behaviour of these particles with the particle theory of matter, also called the kinetic theory. It has five main ideas."
+        },
+        {
+          "type": "list",
+          "items": [
+            "All matter is made of tiny particles.",
+            "The particles are always moving.",
+            "There are spaces between the particles.",
+            "The particles attract each other. The closer they are, the stronger the pull.",
+            "When a substance is heated, its particles move faster."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "Solids, liquids and gases"
+        },
+        {
+          "type": "text",
+          "text": "The three common states of matter are solid, liquid and gas. They have different properties because their particles are arranged differently and move differently."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Solid, such as a stone or a block of ice: particles are packed closely in a regular pattern. They only vibrate about fixed positions, and the forces between them are strong. So a solid has a fixed shape and a fixed volume. It cannot be poured or squashed.",
+            "Liquid, such as water or paraffin: particles are still close together, but they can slide past one another. So a liquid has a fixed volume but takes the shape of its container. It can be poured, but it is very hard to squash.",
+            "Gas, such as air or steam: particles are far apart and move quickly in all directions. The forces between them are very weak. So a gas has no fixed shape or volume. It spreads to fill any container and is easy to squash."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Squash it",
+          "text": "Use a plastic syringe with no needle. Pull the plunger back to fill it with air. Close the end tightly with your finger and push the plunger. Now fill the syringe with water and try again. Compare how far the plunger moves each time, and explain the difference using particles."
+        },
+        {
+          "type": "example",
+          "title": "Explain why a gas is easy to squash but a solid is not",
+          "steps": [
+            "Start with the particles. In a gas they are far apart, with large spaces between them.",
+            "When you push, the particles move closer into those spaces, so the gas takes up less room.",
+            "In a solid, the particles are already packed tightly together.",
+            "There is almost no space for them to move into, so the solid cannot be squashed."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Particle movement also explains diffusion. Diffusion is the way particles spread out from where there are many of them to where there are few. It happens because the particles are always moving. You will study it in the next topic."
+        },
+        {
+          "type": "heading",
+          "text": "Changes of state"
+        },
+        {
+          "type": "text",
+          "text": "Heating or cooling a substance can change its state. Melting changes a solid into a liquid. Boiling and evaporation change a liquid into a gas. Condensation changes a gas into a liquid. Freezing changes a liquid into a solid."
+        },
+        {
+          "type": "text",
+          "text": "During melting and boiling, a substance takes in heat. The particles need this energy to break away from the forces holding them together. During condensing and freezing, the substance gives out heat as the particles come closer together again."
+        },
+        {
+          "type": "text",
+          "text": "Pure ice melts at 0 °C, and pure water boils at 100 °C at sea level. Boiling happens at one fixed temperature, all through the liquid. Evaporation happens at any temperature, but only at the surface of the liquid. Wet clothes dry on a line by evaporation."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sweat evaporates from your skin and takes heat away, which cools your body.",
+            "Water evaporates from Lake Victoria, condenses into clouds and falls as rain. This is the water cycle.",
+            "Ice cools a drink because melting ice takes in heat from the drink.",
+            "Water in a clay pot stays cool because some of it seeps out and evaporates from the outside.",
+            "Ice lollies and ice cream are made by freezing a liquid mixture.",
+            "Dew forms on grass early in the morning when water vapour in the air condenses on cool leaves."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When water boils in a saucepan, bubbles form at the bottom and rise to the top. What do you think is inside those bubbles?"
+        },
+        {
+          "type": "heading",
+          "text": "Plasma: the fourth state of matter"
+        },
+        {
+          "type": "text",
+          "text": "If a gas is heated to a very high temperature, or a strong electric current passes through it, its atoms are torn apart. Electrons are pulled off the atoms, leaving a mixture of charged particles. This glowing mixture is called plasma. It is often called the fourth state of matter."
+        },
+        {
+          "type": "text",
+          "text": "Plasma behaves differently from an ordinary gas. It conducts electricity, and it usually gives out light."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In nature: the Sun and other stars are made of plasma. Most of the visible matter in the universe is plasma. A flash of lightning is plasma for a moment.",
+            "Made by people: the glowing gas inside fluorescent tubes and energy-saving bulbs, neon signs, and the bright arc used in electric welding."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Plasma matters in physics because it helps us understand how the Sun produces its energy. Scientists are also trying to control very hot plasma to produce clean electricity in the future. Plasma is used to cut metal in factories and to clean medical tools."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Matter is anything that has mass and takes up space. It is made of tiny moving particles. In solids the particles vibrate in fixed places, in liquids they slide past each other, and in gases they move freely far apart. Plasma, the fourth state, is a gas whose atoms have been broken into charged particles."
         }
       ],
       "sim": {
         "phet": "states-of-matter-basics_en.html",
-        "caption": "PhET States of Matter: Basics. Watch how particles behave in a solid, liquid, and gas, and heat or cool a substance to change its state. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET States of Matter: Basics. On the States screen, choose water and switch between solid, liquid and gas to compare how the molecules are arranged and how they move. Then add heat and watch the state change. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

@@ -1,0 +1,142 @@
+{
+  "packId": "che.s3.fuels.fossil-fuels",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.fuels.fossil-fuels",
+      "title": "Fossil Fuels",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Fuels and Energy",
+      "subStrand": "Origins and uses of fossil fuels",
+      "order": 5,
+      "term": 3,
+      "outcomes": [
+        "understand the types and origins of fossil fuels and why they can be used as sources of energy and useful materials. (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A lorry carrying diesel from Mombasa to Kampala, a boda boda filling up with petrol and a family cooking with bottled gas all depend on fossil fuels. A fuel is a substance that releases useful energy when it burns. Fossil fuels formed from the remains of plants and animals that lived millions of years ago."
+        },
+        {
+          "type": "heading",
+          "text": "Types of fossil fuels"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Coal: a black solid formed mainly from ancient plants.",
+            "Crude oil (petroleum): a thick liquid formed mainly from tiny sea and lake organisms called plankton.",
+            "Natural gas: a gas, mostly methane, often found above crude oil.",
+            "Peat: an early stage of coal. It forms in swamps, and there are peat deposits in south-western Uganda."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How fossil fuels formed"
+        },
+        {
+          "type": "text",
+          "text": "Coal began in huge swampy forests about 300 million years ago. When the plants died, they fell into the water and were buried by mud before they could rot completely. Layer upon layer built up. Over millions of years, heat and pressure from the layers above squeezed out water and gases. The plant remains slowly changed into peat, then soft brown coal, and finally hard black coal."
+        },
+        {
+          "type": "text",
+          "text": "Oil and gas formed from plankton that died and sank to the bottom of seas and lakes. Mud and sand covered them, cutting off oxygen. Over millions of years, heat and pressure changed them into oil and gas. These moved up through rocks with tiny spaces in them until a layer of solid rock trapped them. Uganda's oil, discovered near Lake Albert in 2006, formed in this way from the remains of ancient lake life."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model how fossil fuels form",
+          "text": "Cut a clear plastic bottle in half. In the bottom half, place a layer of leaves and grass, then a layer of soil or sand, then more leaves and more soil. Press each layer down firmly. In your group, discuss what the layers stand for, and what heat, pressure and millions of years would do to them. Draw and label a diagram of your model."
+        },
+        {
+          "type": "heading",
+          "text": "Why fossil fuels contain carbon"
+        },
+        {
+          "type": "text",
+          "text": "Living things are built from carbon compounds such as carbohydrates, proteins and fats. Fossil fuels are the changed remains of living things, so they are rich in carbon. Most of their compounds are hydrocarbons. A hydrocarbon is a compound of hydrogen and carbon only."
+        },
+        {
+          "type": "heading",
+          "text": "Fossil fuels as sources of energy"
+        },
+        {
+          "type": "text",
+          "text": "Millions of years ago, plants trapped energy from the Sun by photosynthesis. That energy is still stored in the chemical bonds of the fuel. When the fuel burns in oxygen, the energy is released as heat and light. Complete combustion of a hydrocarbon gives carbon dioxide and water."
+        },
+        {
+          "type": "equation",
+          "expr": "hydrocarbon + oxygen → carbon dioxide + water + energy",
+          "speech": "hydrocarbon plus oxygen gives carbon dioxide plus water plus energy"
+        },
+        {
+          "type": "example",
+          "title": "Balance the equation for burning methane",
+          "steps": [
+            "Unbalanced: CH₄ + O₂ → CO₂ + H₂O",
+            "Carbon: 1 atom on each side, so carbon is balanced.",
+            "Hydrogen: 4 atoms on the left and 2 on the right. Put 2 in front of H₂O: CH₄ + O₂ → CO₂ + 2H₂O",
+            "Oxygen: there are now 2 + 2 = 4 atoms on the right, so put 2 in front of O₂.",
+            "Balanced: CH₄ + 2O₂ → CO₂ + 2H₂O"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Bottled cooking gas is mainly butane. Its burning is shown by this balanced equation:"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2C_4H_{10} + 13O_2 \\rightarrow 8CO_2 + 10H_2O}",
+          "speech": "2 C 4 H 10 plus 13 O 2 gives 8 C O 2 plus 10 H 2 O"
+        },
+        {
+          "type": "example",
+          "title": "Heat from a gas cylinder",
+          "steps": [
+            "A full cooking gas cylinder holds 6 kg of butane. Burning butane gives about 50 kJ of heat per gram.",
+            "Mass in grams = 6 × 1000 = 6000 g",
+            "Heat = 6000 × 50 = 300 000 kJ",
+            "That is 300 megajoules, enough to cook family meals for several weeks."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "If there is too little air, burning is incomplete. It produces soot and carbon monoxide, a poisonous gas with no colour or smell. Never run a generator or a charcoal stove inside a closed room."
+        },
+        {
+          "type": "heading",
+          "text": "Fossil fuels as useful materials"
+        },
+        {
+          "type": "text",
+          "text": "Fossil fuels are also raw materials. Crude oil is used to make plastics, synthetic fibres, medicines, dyes, pesticides, detergents and fertilisers. Bitumen from crude oil covers our tarmac roads. Coal is heated to make coke, which is used to extract iron from its ore."
+        },
+        {
+          "type": "heading",
+          "text": "Non-renewable and unsustainable"
+        },
+        {
+          "type": "text",
+          "text": "Fossil fuels are non-renewable. They took millions of years to form, and we are using them much faster than new ones can form, so one day they will run out. Their use is also unsustainable because burning them releases carbon dioxide, which adds to global warming and climate change. Burning also releases sulphur dioxide, which causes acid rain, and smoke that harms our lungs."
+        },
+        {
+          "type": "text",
+          "text": "We can use fossil fuels more wisely. We can save fuel, keep engines well serviced, share transport and switch to renewable energy, such as hydropower from Jinja and Karuma, solar energy and biogas."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Uganda's oil will bring money and jobs, but burning fossil fuels adds to climate change. How should Uganda balance using its oil with protecting the environment for future generations?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Coal, crude oil and natural gas formed from the remains of ancient plants and animals under heat and pressure over millions of years. They contain carbon because living things are built from carbon compounds. They release energy when burned and are raw materials for many products, but they are non-renewable and their use harms the environment."
+        }
+      ]
+    }
+  ]
+}

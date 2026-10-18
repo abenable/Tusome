@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.composite-functions",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,147 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Functions",
       "order": 1,
+      "term": 1,
       "outcomes": [
-        "Understand and use function notation. (k, u, s)",
-        "Describe and understand a composite function. (k, u, s)",
-        "Work out the inverse of a function and recognise the graphical relationship between a function and its inverse. (k, u, s)"
+        "understand and use function notation. (k u s)",
+        "describe and understand a composite function. (k u s)",
+        "work out the inverse of a function and recognise the graphical relationship between a function and its inverse. (k u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Function notation f(x) means \"the rule f applied to x\". If f(x) = 6x, then f(3) = 6(3) = 18. A composite function g(f(x)), written gf(x), means apply f first, then apply g to the result."
+          "text": "A boda boda rider in Kampala works out a fare from the distance of a trip. On a rainy day, he then adds an extra charge. Each step is a rule that turns one number into another. In mathematics such a rule is called a function, and doing one rule after another gives a composite function."
+        },
+        {
+          "type": "heading",
+          "text": "Function notation"
         },
         {
           "type": "text",
-          "text": "Given f(x) = 6x and g(x) = x+5: gf(3) means apply f then g. f(3)=18, then g(18)=18+5=23. Note the order matters — fg(3) means apply g first: g(3)=3+5=8, then f(8)=6(8)=48. gf(3) ≠ fg(3), so composite functions are not generally interchangeable in order."
+          "text": "A function is a rule that gives exactly one output for each input. We write f(x), read as \"f of x\", for the output when the input is x. For example, f(x) = 6x means \"multiply the input by 6\"."
         },
         {
           "type": "equation",
-          "expr": "f(x)=6x, g(x)=x+5:  gf(3)=g(18)=23;   fg(3)=f(8)=48"
+          "latex": "f(x) = 6x, \\quad f(3) = 6 \\times 3 = 18",
+          "speech": "f of x equals 6x, so f of 3 equals 6 times 3, which is 18"
         },
         {
           "type": "text",
-          "text": "The inverse of a function f, written f⁻¹, undoes what f does: if f(3)=18, then f⁻¹(18)=3. For f(x)=6x, work out the inverse by writing y=6x, swapping x and y to get x=6y, then solving for y: y=x/6, so f⁻¹(x) = x/6. Checking: f⁻¹(f(3)) = f⁻¹(18) = 18/6 = 3, correct."
+          "text": "The set of inputs is called the domain. The set of outputs is called the range. You met these ideas in Senior 2 mappings and relations."
         },
         {
           "type": "text",
-          "text": "Graphically, a function and its inverse are mirror images of each other in the line y=x — reflecting the graph of f(x) in that line gives the graph of f⁻¹(x)."
+          "text": "A function does not have to be a formula. Suppose f(x) is the greatest prime number less than x. Then f(40) = 37 and f(29) = 23. Each input still gives exactly one output."
+        },
+        {
+          "type": "heading",
+          "text": "Composite functions"
+        },
+        {
+          "type": "text",
+          "text": "A composite function applies one function and then another. We write gf(x), or g(f(x)), to mean: first apply f to x, then apply g to the result. Always work from the inside out, so the function nearest to x acts first."
+        },
+        {
+          "type": "equation",
+          "latex": "gf(x) = g\\big(f(x)\\big)",
+          "speech": "g f of x equals g of f of x"
+        },
+        {
+          "type": "example",
+          "title": "The order matters",
+          "steps": [
+            "Let f(x) = 6x and g(x) = x + 5.",
+            "gf(3) = g(f(3)) = g(18) = 18 + 5 = 23.",
+            "fg(3) = f(g(3)) = f(8) = 6 × 8 = 48.",
+            "So gf(3) and fg(3) are different. The order of the functions matters.",
+            "For any x: gf(x) = g(6x) = 6x + 5.",
+            "And fg(x) = f(x + 5) = 6(x + 5) = 6x + 30."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The notation f²(x) means f(f(x)), so f is applied twice. It does not mean f(x) squared. With f(x) = 6x, f²(5) = f(30) = 180, and in general f²(x) = 36x."
+        },
+        {
+          "type": "example",
+          "title": "A rainy-day boda boda fare",
+          "steps": [
+            "A rider charges f(d) = 1,000 + 500d shillings for a trip of d km. On rainy days he raises any fare F by 20%, using the rule g(F) = 1.2F.",
+            "The rainy-day fare applies f first, then g, so it is gf(d).",
+            "gf(d) = g(1,000 + 500d) = 1.2 × (1,000 + 500d) = 1,200 + 600d.",
+            "For a 6 km trip from the taxi park to Ntinda: gf(6) = 1,200 + 600 × 6 = 4,800.",
+            "Check in two steps: f(6) = 1,000 + 3,000 = 4,000, and g(4,000) = 1.2 × 4,000 = 4,800. The rainy-day fare is UGX 4,800."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The inverse of a function"
+        },
+        {
+          "type": "text",
+          "text": "The inverse of a function undoes it. If f sends 3 to 18, the inverse sends 18 back to 3. We write the inverse as f⁻¹(x). Here the −1 is a label. It does not mean 1 divided by f(x)."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Write y = f(x).",
+            "Swap x and y.",
+            "Make y the subject.",
+            "Write the result as f⁻¹(x)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Inverse of a linear function",
+          "steps": [
+            "Find the inverse of f(x) = 2x + 3.",
+            "Write y = 2x + 3.",
+            "Swap x and y: x = 2y + 3.",
+            "Make y the subject: x − 3 = 2y, so y = (x − 3)/2.",
+            "So f⁻¹(x) = (x − 3)/2.",
+            "Check: f(4) = 2 × 4 + 3 = 11, and f⁻¹(11) = (11 − 3)/2 = 4. The inverse brings us back to the start."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Inverse of a composite function",
+          "steps": [
+            "Let f(x) = 2x³ and g(x) = x − 1. Find h(x) = f(g(x)) and its inverse.",
+            "h(x) = f(x − 1) = 2(x − 1)³.",
+            "Write y = 2(x − 1)³ and swap x and y: x = 2(y − 1)³.",
+            "Divide by 2: (y − 1)³ = x/2. Take the cube root: y − 1 = ∛(x/2).",
+            "So h⁻¹(x) = 1 + ∛(x/2).",
+            "Check: h(3) = 2 × 2³ = 16, and h⁻¹(16) = 1 + ∛8 = 1 + 2 = 3."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The graph of a function and its inverse"
+        },
+        {
+          "type": "text",
+          "text": "Draw y = f(x) and y = f⁻¹(x) on the same axes, using the same scale on both. Also draw the line y = x. The graph of the inverse is the reflection of the graph of f in the line y = x. This happens because finding the inverse swaps x and y, so each point (a, b) becomes (b, a)."
+        },
+        {
+          "type": "text",
+          "text": "Some functions have no inverse over their whole domain. For f(x) = x², both 3 and −3 give 9, so 9 cannot be sent back to a single number. If we use only x ≥ 0 as the domain, the inverse is √x. The range of f becomes the domain of f⁻¹."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Function machines",
+          "text": "In pairs, write f(x) = 6x on one card and g(x) = x + 5 on another, as two function machines. One partner chooses a number and passes it through f and then g. The other passes the same number through g and then f. Compare the results for several numbers. Then, on squared paper with the same scale on both axes, plot f(x) = 2x + 3 and f⁻¹(x) = (x − 3)/2 for x from −3 to 3. Draw the line y = x, fold the paper along it and see what happens to the two graphs."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Does every function have an inverse? Think about a rule that sends two different inputs to the same output, such as a boda boda fare rounded to the nearest 1,000 shillings."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "f(x) is the output of f when the input is x. gf(x) means apply f first, then g, and usually fg(x) is not the same as gf(x). To find f⁻¹, swap x and y and make y the subject. The graph of f⁻¹ is the reflection of the graph of f in the line y = x."
         }
       ]
     }

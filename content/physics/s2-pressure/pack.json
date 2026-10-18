@@ -1,46 +1,212 @@
 {
   "packId": "phy.s2.matter.pressure",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s2.matter.pressure",
-      "title": "Pressure in Fluids",
+      "title": "Pressure in Solids and Fluids",
       "subject": "physics",
       "level": "S2",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Pressure in solids and fluids",
       "order": 3,
+      "term": 2,
       "outcomes": [
         "understand that pressure is the result of a force applied over an area (u, s)",
         "understand the effect of depth on the pressure in a fluid and the implications of this (u, s)",
-        "understand the nature of the atmosphere and how atmospheric pressure is measured (u, s)"
+        "understand the nature of the atmosphere and how atmospheric pressure is measured (u, s)",
+        "know the structure of the atmosphere and the significance of the different layers (k, u, v/a)",
+        "understand the use of the Bernoulli effect in devices like aerofoils and Bunsen burner jets (u)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Pressure is the force acting on each unit of area. For the same force, a smaller area produces a bigger pressure \u2014 this is why a drawing pin has a sharp point, and why a tractor's wide tyres spread its weight to avoid sinking into soft ground."
+          "text": "Why does a sharp knife cut matooke easily while a blunt one squashes it? Why is the dam wall at Owen Falls thicker at the bottom? Why do your ears feel strange when a bus climbs the hills to Kabale? The answers all depend on pressure."
+        },
+        {
+          "type": "heading",
+          "text": "Pressure is force on an area"
+        },
+        {
+          "type": "text",
+          "text": "Pressure is the force acting on each unit of area. The same force gives a large pressure on a small area and a small pressure on a large area."
         },
         {
           "type": "equation",
-          "latex": "\\text{pressure} = \\frac{\\text{force}}{\\text{area}}"
+          "latex": "P = \\frac{F}{A}",
+          "speech": "pressure equals force divided by area"
         },
         {
           "type": "text",
-          "text": "In a fluid (a liquid or a gas), pressure increases with depth: the deeper you go, the greater the weight of fluid pressing down from above. This is why a dam wall is built thicker at the bottom than at the top, and why the pressure at the bottom of the sea is much higher than at the surface."
+          "text": "Force is in newtons (N) and area in square metres (m²). The unit of pressure is the newton per square metre (N/m²), also called the pascal (Pa)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Small area, large pressure: a drawing pin, a sharp knife and a nail push into things easily.",
+            "Large area, small pressure: tractors have wide back tyres so they do not sink in a wet garden.",
+            "A hippopotamus walks in mud more easily than a goat, because its wide feet spread its weight.",
+            "A wide strap on a heavy bag hurts your shoulder less than a thin one."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "The pressure of a drawing pin",
+          "steps": [
+            "Atim pushes a drawing pin with a force of 2 N. The area of the tip is 1 mm². Find the pressure at the tip.",
+            "Change the area to square metres: 1 mm² = 0.000001 m² = 1 × 10⁻⁶ m².",
+            "Pressure = force ÷ area = 2 ÷ 0.000001",
+            "Pressure = 2 000 000 Pa = 2 × 10⁶ Pa",
+            "The pin's head has an area of about 1 cm² = 0.0001 m², so the pressure on her thumb is only 2 ÷ 0.0001 = 20 000 Pa."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A box on the floor",
+          "steps": [
+            "A wooden box weighs 600 N. It measures 1.0 m by 0.5 m by 0.3 m. Find the least and greatest pressure it can exert on the floor.",
+            "Largest face: area = 1.0 × 0.5 = 0.5 m². Pressure = 600 ÷ 0.5 = 1200 Pa. This is the least pressure.",
+            "Smallest face: area = 0.5 × 0.3 = 0.15 m². Pressure = 600 ÷ 0.15 = 4000 Pa. This is the greatest pressure."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Pressure in liquids"
         },
         {
           "type": "text",
-          "text": "The atmosphere is the layer of air surrounding the Earth. Air has weight, so it exerts pressure \u2014 atmospheric pressure \u2014 which can be measured with a barometer. Atmospheric pressure decreases with altitude, which is why it becomes harder to breathe high up a mountain."
+          "text": "A liquid presses on the bottom and sides of its container and on anything inside it. Liquid pressure has these properties:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "It increases with depth, because there is more liquid above pushing down.",
+            "At any one depth, it acts equally in all directions.",
+            "At the same depth, it is greater in a denser liquid.",
+            "It does not depend on the shape or width of the container."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "Use the PhET Under Pressure simulation below. Change the depth and the liquid, and see how the pressure at different points changes."
+          "text": "The pressure p due to a liquid depends on the depth h in metres, the density ρ of the liquid in kg/m³, and the pull of gravity g. We take g = 10 N/kg."
+        },
+        {
+          "type": "equation",
+          "latex": "p = h \\rho g",
+          "speech": "p equals h rho g, which is depth times density times g"
+        },
+        {
+          "type": "text",
+          "text": "This is why dam walls, such as those at Owen Falls and Bujagali, are thicker at the bottom, where the water pressure is greatest. Water tanks stand on high towers so that water reaches the taps with enough pressure."
+        },
+        {
+          "type": "example",
+          "title": "Pressure under Lake Victoria",
+          "steps": [
+            "Find the pressure due to the water on a fishing net 10 m below the surface of Lake Victoria. The density of water is 1000 kg/m³.",
+            "p = h × ρ × g = 10 × 1000 × 10",
+            "p = 100 000 Pa = 1 × 10⁵ Pa",
+            "This is about the same as the pressure of the atmosphere at sea level."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Holes in a bottle",
+          "text": "Ask your teacher to make three small holes, one above the other, in the side of a tall plastic bottle. Cover the holes with tape and fill the bottle with water. Stand it in a basin and pull off the tape. Compare how far the water spurts from each hole, and discuss what this shows about pressure and depth."
+        },
+        {
+          "type": "text",
+          "text": "Pressure applied to a liquid in a closed system passes equally to all parts of it. Hydraulic machines use this. In a garage jack, a small force on a narrow piston gives a large force on a wide piston, which lifts a car."
+        },
+        {
+          "type": "heading",
+          "text": "Atmospheric pressure"
+        },
+        {
+          "type": "text",
+          "text": "The atmosphere is the layer of air around the Earth. Air has weight, so it presses on everything on the Earth's surface. This is atmospheric pressure. At sea level it is about 100 000 Pa. We do not feel it, because the pressure inside our bodies pushes outwards equally."
+        },
+        {
+          "type": "text",
+          "text": "Your teacher can show how strong it is. Swirl a little very hot water in a plastic bottle, pour it out and close the cap tightly. As the air inside cools, its pressure falls, and the air outside crushes the bottle."
+        },
+        {
+          "type": "text",
+          "text": "A barometer measures atmospheric pressure. In a mercury barometer, air pushes a column of mercury up a glass tube. At sea level the column is about 76 cm tall. An aneroid barometer uses a thin metal box that is squeezed more or less as the pressure changes. It has no liquid, so it is easy to carry."
+        },
+        {
+          "type": "text",
+          "text": "Atmospheric pressure falls as you go higher, because there is less air above you. It is about 88 000 Pa in Kampala, about 80 000 Pa in Kabale and about 60 000 Pa on top of Mt Elgon. The air is thinner too, so climbers breathe faster. Daily changes in air pressure also help forecasters predict rain."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Drinking straw: sucking lowers the air pressure inside the straw. Atmospheric pressure on the drink pushes it up.",
+            "Syringe: pulling the plunger lowers the pressure inside, so the air outside pushes the liquid in.",
+            "Siphon: a tube full of water carries water over the edge of a tank to a lower point, for example to empty a fish pond. Atmospheric pressure keeps it flowing."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Layers of the atmosphere"
+        },
+        {
+          "type": "text",
+          "text": "The atmosphere is divided into layers by the way its temperature changes with height. The air gets thinner as you go up."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Troposphere: from the ground to about 16 km above Uganda. It holds most of the air and all our weather. It gets colder as you go up.",
+            "Stratosphere: up to about 50 km. Its ozone layer absorbs harmful ultraviolet rays from the sun.",
+            "Mesosphere: up to about 85 km. It is the coldest layer. Small rocks from space burn up here as shooting stars.",
+            "Thermosphere: up to about 600 km. The air is very thin but very hot. Part of it reflects radio waves around the Earth.",
+            "Exosphere: the outer edge, where the air fades into space. Some satellites orbit here."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "The Bernoulli effect"
+        },
+        {
+          "type": "text",
+          "text": "When a fluid flows faster, its pressure falls. This is called the Bernoulli effect. A fluid is a liquid or a gas."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Aerofoil: an aeroplane wing is more curved on top. Air over the top moves faster, so the pressure above the wing is lower than below. This pushes the wing up with a force called lift.",
+            "Bunsen burner: gas leaves a narrow jet at high speed, so the pressure near the jet is low. Air is pushed in through the air hole and mixes with the gas.",
+            "Roofs in storms: fast wind over a roof lowers the pressure above it. The higher pressure inside the house can lift the iron sheets off."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Blow over a paper strip",
+          "text": "Hold one end of a strip of paper just below your bottom lip, so that the strip hangs down. Blow hard across the top of it. Watch what the paper does, and explain it using the Bernoulli effect."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Soda bottles have bumpy bottoms, and they are never filled right to the top. Discuss how pressure might explain both of these things."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Pressure = force ÷ area, measured in pascals. Liquid pressure, p = hρg, grows with depth and acts in all directions. Atmospheric pressure falls with height and is measured with a barometer. Fast-moving air has lower pressure, which gives aeroplane wings their lift."
         }
       ],
       "sim": {
         "phet": "under-pressure_en.html",
-        "caption": "PhET Under Pressure. Change depth and liquid density and see how fluid pressure changes. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Under Pressure. Move the pressure gauge deeper into the water and watch the reading rise, then change the fluid density and compare readings at the same depth. Turn the atmosphere off and on to see its share of the pressure. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

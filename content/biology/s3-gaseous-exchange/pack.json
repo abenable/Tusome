@@ -1,0 +1,160 @@
+{
+  "packId": "bio.s3.respiration.gaseous-exchange",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.respiration.gaseous-exchange",
+      "title": "Gaseous Exchange",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Respiration in Plants and Animals",
+      "subStrand": "Gas exchange surfaces and breathing",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "appreciate the need for a gaseous exchange system in a multicellular organisms (u)",
+        "identify adaptations of gas exchange surfaces (u)",
+        "understand the structure of the human respiratory system, and explain the mechanism of gaseous exchange in humans (u, s)",
+        "determine and understand the variation in the percentage composition of gases in inhaled and exhaled air (s, u)",
+        "understand the dangers of smoking and air pollution to gas exchange surfaces in the lungs (u, v/a)",
+        "know the causes, symptoms and treatment of diseases (bronchitis, emphysema, lung cancer, throat cancer, and chronic cough) associated with respiratory organs in humans (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Okello runs the 400 metres on sports day. At the finish line he is breathing hard. His muscles need extra oxygen and are making extra carbon dioxide. Gaseous exchange is the movement of oxygen into an organism and carbon dioxide out of it."
+        },
+        {
+          "type": "heading",
+          "text": "Why large organisms need a gas exchange system"
+        },
+        {
+          "type": "text",
+          "text": "An amoeba is a single cell. Oxygen diffuses straight into it across its cell membrane. Diffusion is the movement of particles from where there are many to where there are few. In a large organism, most cells are far from the air. Its surface is also small compared with its volume, so diffusion through the skin is too slow."
+        },
+        {
+          "type": "example",
+          "title": "Compare surface area to volume",
+          "steps": [
+            "Cube A has sides of 1 cm. Surface area = 6 × 1 × 1 = 6 cm². Volume = 1 cm³. Ratio = 6 ÷ 1 = 6.",
+            "Cube B has sides of 4 cm. Surface area = 6 × 4 × 4 = 96 cm². Volume = 64 cm³. Ratio = 96 ÷ 64 = 1.5.",
+            "The bigger cube has much less surface for each cm³ of its body. So large organisms need a special surface with a very large area."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Features of gas exchange surfaces"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A large surface area, so many gas particles cross at once.",
+            "Thin walls, often one cell thick, so gases travel a short distance.",
+            "A moist surface, because gases dissolve before entering cells.",
+            "A good blood supply to carry gases away quickly.",
+            "Ventilation, which means moving fresh air or water over the surface."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Insects take in air through small holes called spiracles. Branched tubes called tracheae carry it to every cell. A tilapia uses gills, which have thin filaments full of blood vessels. A frog also exchanges gases through its moist skin. A leaf takes in air through pores called stomata."
+        },
+        {
+          "type": "heading",
+          "text": "The human respiratory system"
+        },
+        {
+          "type": "text",
+          "text": "The lungs lie in the chest, or thorax, protected by the ribs. A dome-shaped sheet of muscle called the diaphragm lies below them. Air passes through these parts in order."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Nose: hairs and mucus trap dust and germs. The air is warmed and moistened.",
+            "Pharynx (throat) and larynx (voice box).",
+            "Trachea (windpipe): rings of cartilage hold it open. Tiny hairs called cilia sweep mucus and dirt away from the lungs.",
+            "Two bronchi, one to each lung, which divide into many bronchioles.",
+            "Alveoli: millions of tiny air sacs at the ends of the bronchioles."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Gaseous exchange happens in the alveoli. Together they have an area of about 70 m², bigger than a classroom floor. Each alveolus has a wall one cell thick, covered by tiny blood vessels called capillaries. Oxygen diffuses from the air into the blood. Carbon dioxide diffuses from the blood into the alveolus and is breathed out."
+        },
+        {
+          "type": "heading",
+          "text": "How we breathe in and out"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Breathing in: the intercostal muscles between the ribs contract and pull the ribs up and out. The diaphragm contracts and flattens. The chest gets bigger, so the pressure inside falls. Air rushes in.",
+            "Breathing out: the intercostal muscles relax and the ribs move down and in. The diaphragm relaxes and domes upwards. The chest gets smaller, so the pressure inside rises. Air is pushed out."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a model of the lungs",
+          "text": "Cut the bottom off a clear plastic bottle. Push a straw through a hole in the lid and tie a small balloon to its end inside the bottle. Seal around the straw with tape. Tie a piece of a large balloon or plastic bag over the open bottom. Pull this sheet down gently, then push it up, and watch the small balloon. Which part stands for the diaphragm, the lungs and the trachea? Then measure round your chest with string after breathing in deeply and after breathing out."
+        },
+        {
+          "type": "heading",
+          "text": "Inhaled and exhaled air"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oxygen: about 21% of inhaled air and 16% of exhaled air.",
+            "Carbon dioxide: about 0.04% of inhaled air and 4% of exhaled air.",
+            "Nitrogen: about 78% of both, because the body does not use it.",
+            "Water vapour: exhaled air is saturated, which means it holds as much as it can.",
+            "Exhaled air is also warmer, close to body temperature."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Breathe onto a cold mirror and a mist of water droplets forms. In a laboratory, exhaled air turns limewater milky faster than inhaled air, because it has more carbon dioxide."
+        },
+        {
+          "type": "heading",
+          "text": "Smoking, air pollution and the lungs"
+        },
+        {
+          "type": "text",
+          "text": "Tobacco smoke contains tar, nicotine and carbon monoxide. Tar is a sticky brown substance that coats the airways and alveoli. It stops the cilia working, so mucus and dirt collect in the lungs. Carbon monoxide takes the place of oxygen in the blood. Marijuana smoke harms the lungs in similar ways."
+        },
+        {
+          "type": "text",
+          "text": "Polluted air also damages the lungs. Examples are smoke from charcoal stoves in a closed kitchen, vehicle fumes, dust from murram roads and smoke from burning rubbish. Cooking where air moves freely helps protect the lungs."
+        },
+        {
+          "type": "heading",
+          "text": "Diseases of the respiratory organs"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bronchitis: the bronchi swell and make too much mucus. It is caused by smoking, infections and dust. Symptoms are a cough with mucus, wheezing and breathlessness. Treatment includes stopping smoking, rest, fluids and medicine from a health worker.",
+            "Emphysema: the walls of the alveoli break down, so the exchange surface shrinks. It is caused mainly by smoking and polluted air. Symptoms are breathlessness and tiredness. It has no cure, but stopping smoking, inhalers and oxygen help.",
+            "Lung cancer: lung cells divide out of control and form a growth called a tumour. Smoking is the main cause. Symptoms include a cough that will not go away, coughing blood, chest pain and weight loss. Surgery, radiotherapy and drugs work best when it is found early.",
+            "Throat cancer: a tumour forms in the throat or larynx, mainly caused by smoking and heavy drinking. Symptoms include a hoarse voice for weeks, difficulty in swallowing and a lump in the neck. Treatment is like that for lung cancer.",
+            "Chronic cough: a cough lasting more than eight weeks in adults. Causes include smoking, smoke from cooking fires, asthma and tuberculosis (TB). Treatment depends on the cause, so the person should visit a health centre and be tested."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many smokers start as teenagers, even though they know smoking is harmful. Why might this happen? What message on a poster would help a learner in your school decide never to start?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Large organisms need a gas exchange surface with a large area, thin walls, moisture and a good blood supply. In humans this is the alveoli. We breathe in when the ribs rise and the diaphragm flattens, making the chest bigger. Smoking and polluted air damage the lungs and cause diseases such as bronchitis, emphysema and lung cancer."
+        }
+      ]
+    }
+  ]
+}

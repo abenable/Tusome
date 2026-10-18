@@ -1,0 +1,229 @@
+{
+  "packId": "che.s2.reactivity.reactivity-series",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s2.reactivity.reactivity-series",
+      "title": "The Reactivity Series",
+      "subject": "chemistry",
+      "level": "S2",
+      "strand": "Order of Reactivity of Metals",
+      "subStrand": "Reactivity of metals, extraction and alloys",
+      "order": 5,
+      "term": 3,
+      "outcomes": [
+        "appreciate that metals vary in their chemical reactivity and can be arranged in a reactivity series (k, u, s)",
+        "understand that alloys are mixtures of a metal with other metals and/or non-metals and compare the properties of common metals with their alloys (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Gold is found in river sand in Busia and Mubende as shiny grains of pure metal. Copper at Kilembe had to be dug out as rock and heated in a furnace to get the metal. An iron hoe left in the rain soon rusts, but a gold ring stays bright for ever. Metals differ in how easily they react. In this topic you will put them in order."
+        },
+        {
+          "type": "heading",
+          "text": "What reactivity means"
+        },
+        {
+          "type": "text",
+          "text": "Reactivity is how easily a substance takes part in chemical reactions. A very reactive metal reacts quickly and strongly with water, air and acids. An unreactive metal reacts slowly, or not at all."
+        },
+        {
+          "type": "heading",
+          "text": "Metals and water"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Potassium and sodium react violently with cold water. They are stored under oil. Only a teacher should ever show this, using a tiny piece behind a safety screen.",
+            "Calcium reacts steadily with cold water. Bubbles of hydrogen are given off, and the water turns cloudy as calcium hydroxide forms.",
+            "Magnesium reacts very slowly with cold water but quickly with steam.",
+            "Zinc and iron react with steam when hot, but hardly at all with cold water.",
+            "Copper does not react with water or steam."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Ca + 2H_2O \\rightarrow Ca(OH)_2 + H_2}",
+          "speech": "calcium plus two water gives calcium hydroxide plus hydrogen"
+        },
+        {
+          "type": "heading",
+          "text": "Metals and dilute acid"
+        },
+        {
+          "type": "text",
+          "text": "Many metals react with dilute hydrochloric acid to make a salt and hydrogen gas. The faster the bubbles, the more reactive the metal. Hydrogen makes a squeaky pop when your teacher holds a lighted splint to it."
+        },
+        {
+          "type": "equation",
+          "expr": "metal + acid → salt + hydrogen",
+          "speech": "metal plus acid gives salt plus hydrogen"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Mg + 2HCl \\rightarrow MgCl_2 + H_2}",
+          "speech": "magnesium plus two hydrochloric acid gives magnesium chloride plus hydrogen"
+        },
+        {
+          "type": "example",
+          "title": "Put four metals in order from your results",
+          "steps": [
+            "Atim's group drops equal-sized pieces of four metals into tubes of the same dilute acid, supervised by the teacher.",
+            "They count bubbles for one minute: magnesium 45, zinc 18, iron 5, copper 0.",
+            "More bubbles mean a faster reaction, so a more reactive metal.",
+            "Order, most reactive first: magnesium, zinc, iron, copper.",
+            "To make the test fair, they used the same size of metal, the same volume of acid and the same temperature."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The reactivity series"
+        },
+        {
+          "type": "text",
+          "text": "When results like these are put together, the metals form a list called the reactivity series. Carbon and hydrogen are non-metals, but they are often placed in the list to help compare."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Potassium, K (most reactive)",
+            "Sodium, Na",
+            "Calcium, Ca",
+            "Magnesium, Mg",
+            "Aluminium, Al",
+            "(Carbon, C)",
+            "Zinc, Zn",
+            "Iron, Fe",
+            "Lead, Pb",
+            "(Hydrogen, H)",
+            "Copper, Cu",
+            "Silver, Ag",
+            "Gold, Au (least reactive)"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Metals below hydrogen, such as copper, silver and gold, do not give hydrogen with dilute acids."
+        },
+        {
+          "type": "heading",
+          "text": "Displacement: a more reactive metal pushes out a less reactive one"
+        },
+        {
+          "type": "text",
+          "text": "A more reactive metal can take the place of a less reactive metal in a compound. This is called displacement. Put an iron nail in blue copper(II) sulphate solution. A brown coat of copper forms on the nail and the blue colour fades. Iron is more reactive than copper, so it pushes the copper out."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Fe + CuSO_4 \\rightarrow FeSO_4 + Cu}",
+          "speech": "iron plus copper sulphate gives iron sulphate plus copper"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Copper-plate a nail",
+          "text": "Your teacher will give each group a little dilute copper(II) sulphate solution in a small jar. Do not touch the solution. Clean an iron nail with sandpaper, then hang it on a thread so that half of it is in the solution. After 15 minutes, lift it out and look at both halves. Write a word equation for the change. Wash your hands afterwards."
+        },
+        {
+          "type": "heading",
+          "text": "Why some metals are more reactive"
+        },
+        {
+          "type": "text",
+          "text": "Metals react by losing their outer electrons to form positive ions. The more easily a metal loses them, the more reactive it is."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sodium, 2,8,1, has only one outer electron to lose, so it reacts very easily.",
+            "Magnesium, 2,8,2, must lose two electrons, so it is less reactive than sodium.",
+            "Calcium, 2,8,8,2, also loses two electrons. Its outer electrons are in the fourth shell, further from the nucleus. They are held less tightly, so calcium is more reactive than magnesium.",
+            "Zinc, iron and copper have more complicated electron arrangements, which you will meet in later years. Their outer electrons are held more tightly, so they are less reactive."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Reactivity decides uses. Copper is used for water pipes and wires because it does not react with water. Gold is used for jewellery because it never tarnishes. Reactive metals such as sodium and calcium are never used to make objects."
+        },
+        {
+          "type": "heading",
+          "text": "Getting metals out of their ores"
+        },
+        {
+          "type": "text",
+          "text": "Most metals are found in rocks called ores, joined with oxygen, sulphur or other elements. The method used to get a metal out depends on its place in the reactivity series."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Metals below carbon, such as zinc, iron and copper: heat the ore with carbon. Carbon is more reactive, so it takes the oxygen away. Iron is made this way in a blast furnace.",
+            "Metals above carbon, such as potassium, sodium, magnesium and aluminium: they hold oxygen too tightly for carbon to remove it. Electricity is used instead, which costs more.",
+            "Gold, at the very bottom: it is so unreactive that it is found uncombined. Miners wash river sand in pans to collect it from alluvial deposits."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Your teacher may demonstrate this on a charcoal block. A little black copper(II) oxide is placed in a hollow in the block and heated strongly with a blowpipe flame. Pink-brown beads of copper appear."
+        },
+        {
+          "type": "equation",
+          "expr": "copper(II) oxide + carbon → copper + carbon dioxide",
+          "speech": "copper two oxide plus carbon gives copper plus carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2CuO + C \\rightarrow 2Cu + CO_2}",
+          "speech": "two copper oxide plus carbon gives two copper plus carbon dioxide"
+        },
+        {
+          "type": "example",
+          "title": "Choose a way to extract three metals",
+          "steps": [
+            "Aluminium is above carbon in the series. Carbon cannot remove its oxygen, so it must be extracted with electricity.",
+            "Zinc is below carbon. Heating zinc oxide with carbon will give zinc.",
+            "Gold is below hydrogen and is found uncombined. It can be separated from sand by panning, with no chemical reaction."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Alloys"
+        },
+        {
+          "type": "text",
+          "text": "An alloy is a mixture of a metal with other metals or with non-metals such as carbon. In a pure metal, the atoms are all the same size and sit in neat layers. The layers slide over each other easily, so pure metals are often soft. In an alloy, atoms of different sizes break up the layers. The layers cannot slide so easily, so the alloy is harder and stronger."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Steel, iron with a little carbon: much harder and stronger than pure iron. Used for hoes, pangas, nails and building rods.",
+            "Stainless steel, iron with chromium and nickel: does not rust. Used for spoons, saucepans and hospital tools.",
+            "Brass, copper with zinc: harder than copper, golden in colour and does not corrode easily. Used for padlocks, door handles and trumpets.",
+            "Bronze, copper with tin: hard and does not corrode. Used for medals and statues.",
+            "Solder, mostly tin: melts at a low temperature. Used to join wires in radios and phones.",
+            "Duralumin, aluminium with copper and magnesium: much stronger than pure aluminium but still light. Used in aircraft.",
+            "Jewellery gold is mixed with copper or silver, because pure gold is too soft to keep its shape."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Metals against alloys",
+          "text": "Collect an ordinary iron nail, a stainless steel spoon, a piece of galvanised wire and a brass key or screw. Put each in its own jar of salty water. Check them every two days for a week and record any rusting or colour change. Then use a magnet to test each object. Make a poster comparing the metals and alloys, and explain why each is used as it is."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Gold is rare and does not react, while iron is common and rusts. Yet the world uses far more iron than gold. Why?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Metals can be arranged in a reactivity series from potassium, the most reactive, to gold, the least. A more reactive metal displaces a less reactive one from its compounds. Metals below carbon can be extracted with carbon, and gold is found uncombined. Alloys are mixtures of a metal with other elements, and they are usually harder and stronger than the pure metal."
+        }
+      ]
+    }
+  ]
+}

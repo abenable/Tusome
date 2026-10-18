@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.business-mathematics",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,180 @@
       "strand": "Geometry and Measures",
       "subStrand": "Business arithmetic",
       "order": 6,
+      "term": 2,
       "outcomes": [
-        "Use a multiplier when calculating percentage change. (u, s)",
-        "Calculate compound interest. (u, s)",
-        "Understand and calculate depreciation and appreciation. (u, s)",
-        "Understand and convert local and foreign currencies. (u, s)",
-        "Understand and calculate hire purchase. (u)",
-        "Describe and determines Mortgage of assets. (u, s)",
-        "Calculate income tax given income tax bands. (u, v/a)"
+        "use a multiplier when calculating percentage change. (u s)",
+        "calculate compound interest. (u s)",
+        "understand and calculate depreciation and appreciation. (u s)",
+        "understand and convert local or foreign currencies. (u s)",
+        "understand and calculate hire purchase. (u)",
+        "describe and determines Mortgage of assets. (u s)",
+        "calculate income tax given income tax bands. (u, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A multiplier turns a percentage change into a single number to multiply by. A 20% increase uses multiplier 1.20 (100%+20%); a 20% decrease uses multiplier 0.80 (100%-20%). Ashok invests UGX 100 000 at 10% compound interest per year: after 1 year it is worth 100 000 x 1.10 = 110 000; after 2 years, 110 000 x 1.10 = 121 000 — each year's interest is calculated on the new total, not the original amount."
+          "text": "People in Uganda make money decisions every day. A family saves in a SACCO. A rider buys a motorcycle in instalments. A trader changes shillings before a trip to Nairobi. This topic shows how to work out such amounts and compare choices."
+        },
+        {
+          "type": "heading",
+          "text": "Percentage change with a multiplier"
+        },
+        {
+          "type": "text",
+          "text": "A multiplier is one number that makes a percentage change in a single step. For an increase of r%, the multiplier is 1 + r/100. For a decrease of r%, it is 1 − r/100. So a 5% increase uses 1.05, and a 20% decrease uses 0.8."
         },
         {
           "type": "equation",
-          "expr": "UGX 100 000 x 1.10 x 1.10 = UGX 121 000 after 2 years at 10% compound interest"
+          "expr": "new amount = original amount × multiplier",
+          "speech": "new amount equals original amount times multiplier"
+        },
+        {
+          "type": "example",
+          "title": "A price rises, then falls",
+          "steps": [
+            "A sack of maize flour costs UGX 32,000. Its price rises by 15%, then falls by 15%.",
+            "After the rise: 32,000 × 1.15 = UGX 36,800.",
+            "After the fall: 36,800 × 0.85 = UGX 31,280, which is less than at the start."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Compound interest"
         },
         {
           "type": "text",
-          "text": "Depreciation reduces an asset's value over time (e.g. a car losing value); appreciation increases it (e.g. land gaining value). Both use the same multiplier method, but depreciation's multiplier is below 1. A car worth UGX 20 000 000 depreciates by 15% per year: after 1 year it is worth 20 000 000 x 0.85 = UGX 17 000 000."
+          "text": "Interest is money paid for the use of money. The principal is the amount first saved or borrowed. Simple interest is paid on the principal only. Compound interest is paid on the principal plus the interest already earned, so each year's interest is worked out on a bigger amount."
+        },
+        {
+          "type": "equation",
+          "latex": "A = P\\left(1 + \\frac{r}{100}\\right)^{n}",
+          "speech": "A equals P times, 1 plus r over 100, all to the power n"
         },
         {
           "type": "text",
-          "text": "To convert currency, multiply by the exchange rate. If UGX 3 700 buys 1 US dollar, then UGX 500 000 converts to 500 000 ÷ 3 700 ≈ 135.14 US dollars. Hire purchase spreads the cost of an item over instalments, usually totalling more than the cash price because interest is included."
+          "text": "Here P is the principal, r is the interest rate per period, n is the number of periods, and A is the amount at the end."
+        },
+        {
+          "type": "example",
+          "title": "How long to double a saving?",
+          "steps": [
+            "Wasswa saves UGX 100,000 at 10% compound interest a year, and adds or takes out nothing.",
+            "Each year, multiply by 1.1.",
+            "Years 1 to 4: UGX 110,000; 121,000; 133,100; 146,410.",
+            "Years 5 to 8: UGX 161,051; 177,156; 194,872; 214,359, to the nearest shilling.",
+            "His money first passes UGX 200,000 after 8 years. Simple interest of UGX 10,000 a year would take 10 years."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Appreciation and depreciation"
+        },
+        {
+          "type": "text",
+          "text": "Appreciation is a rise in the value of an asset over time. Land in a growing town such as Mukono often appreciates, so its multiplier is bigger than 1. Depreciation is a fall in value over time. Motorcycles, phones and cars usually depreciate as they age. Both are often worked out as a fixed percentage each year."
+        },
+        {
+          "type": "equation",
+          "latex": "V = P\\left(1 - \\frac{r}{100}\\right)^{n}",
+          "speech": "V equals P times, 1 minus r over 100, all to the power n"
+        },
+        {
+          "type": "example",
+          "title": "The value of a boda boda",
+          "steps": [
+            "Mugisha buys a motorcycle for UGX 6,000,000. It depreciates by 20% each year. Find its value after 3 years.",
+            "The multiplier for each year is 1 − 0.20 = 0.8.",
+            "V = 6,000,000 × 0.8³ = 6,000,000 × 0.512 = UGX 3,072,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Changing currencies"
+        },
+        {
+          "type": "text",
+          "text": "An exchange rate tells you how much of one currency you get for another. A forex bureau buys foreign money at its buying rate and sells it at a higher selling rate. The difference is its profit. The rates below are made up for practice; real rates change every day."
+        },
+        {
+          "type": "example",
+          "title": "Shillings for a trip to Kenya",
+          "steps": [
+            "A bureau in Kampala buys Kenyan shillings (KES) at UGX 28 each and sells them at UGX 30 each.",
+            "Atim returns from Nairobi with KES 625. The bureau pays her 625 × 28 = UGX 17,500.",
+            "Opio takes UGX 60,000 to Kisumu. The bureau sells him 60,000 ÷ 30 = KES 2,000.",
+            "To get foreign money, divide by the selling rate. To change it back, multiply by the buying rate."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Hire purchase"
+        },
+        {
+          "type": "text",
+          "text": "Hire purchase is a way to buy goods by paying a deposit now and the rest in equal instalments. An instalment is one regular payment. You use the goods while you pay, but the total price is higher than the cash price. The extra is the cost of borrowing."
+        },
+        {
+          "type": "example",
+          "title": "Buying a motorcycle on hire purchase",
+          "steps": [
+            "A motorcycle costs UGX 7,200,000 cash. On hire purchase, Kato pays a deposit of UGX 1,800,000 and 18 monthly instalments of UGX 360,000.",
+            "Instalments = 18 × 360,000 = UGX 6,480,000.",
+            "Hire purchase price = 1,800,000 + 6,480,000 = UGX 8,280,000.",
+            "Extra cost = 8,280,000 − 7,200,000 = UGX 1,080,000, which is 15% of the cash price."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Mortgages"
+        },
+        {
+          "type": "text",
+          "text": "A mortgage is a long-term loan to buy land or a house. If the borrower stops paying, the lender can sell the property. A family that borrows UGX 100,000,000 and repays UGX 1,500,000 a month for 15 years pays 1,500,000 × 180 = UGX 270,000,000 in total."
+        },
+        {
+          "type": "heading",
+          "text": "Income tax"
+        },
+        {
+          "type": "text",
+          "text": "Income tax is money that workers pay to the government from what they earn. In Uganda the employer takes it from the salary and sends it to the Uganda Revenue Authority. Each band of income is taxed at its own rate. The bands below are simplified for practice and are not the official rates."
+        },
+        {
+          "type": "list",
+          "items": [
+            "First UGX 250,000 of monthly income: 0%",
+            "Next UGX 250,000 (from 250,001 to 500,000): 10%",
+            "Next UGX 500,000 (from 500,001 to 1,000,000): 20%",
+            "Everything above UGX 1,000,000: 30%"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Tax on a monthly salary",
+          "steps": [
+            "Namubiru earns UGX 1,400,000 a month.",
+            "First 250,000 at 0% = 0. Next 250,000 at 10% = UGX 25,000.",
+            "Next 500,000 at 20% = UGX 100,000.",
+            "The last 400,000 at 30% = UGX 120,000.",
+            "Total tax = 25,000 + 100,000 + 120,000 = UGX 245,000, so her take-home pay is UGX 1,155,000."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "How much does it cost to borrow?",
+          "text": "In groups, collect adverts or price tags that offer phones, solar panels or other goods on hire purchase. Work out each hire purchase price and its extra cost as a percentage of the cash price. Make a poster that explains what borrowing costs."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Which savings account is best: 1% compound interest paid every month, 3% every three months, 6% every six months, or 12% once a year? Why are the results close but not equal?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A multiplier makes a percentage change in one step. Compound interest and depreciation apply it once for each year. Hire purchase and mortgages cost more than cash because you pay for borrowing. Income tax is worked out band by band."
         }
       ]
     }

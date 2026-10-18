@@ -1,0 +1,155 @@
+{
+  "packId": "phy.s1.heat.expansion",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.heat.expansion",
+      "title": "Expansion of Solids, Liquids and Gases",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Heat",
+      "subStrand": "Thermal expansion",
+      "order": 11,
+      "term": 3,
+      "outcomes": [
+        "understand that substances expand on heating, and recognise some applications of expansion (u, s)",
+        "understand the effect and consequences of changes in heat on volume and density of water (u, s)",
+        "know about the anomalous expansion of water between 0 °C and 4 °C and its implications (u, k, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A jerrycan left full in the hot sun can bulge and leak. Electricity cables between poles hang lower in the afternoon than at dawn. Iron roofs make ticking sounds as they warm up in the morning. All of these happen because things get bigger when they are heated."
+        },
+        {
+          "type": "heading",
+          "text": "Why substances expand"
+        },
+        {
+          "type": "text",
+          "text": "Expansion is an increase in size. Contraction is a decrease in size. Most substances expand when they are heated and contract when they are cooled."
+        },
+        {
+          "type": "text",
+          "text": "The particle theory explains this. When a substance is heated, its particles gain energy. In a solid, the particles vibrate more strongly and push each other slightly further apart. In liquids and gases, the particles move faster and spread out. The particles themselves do not grow. Only the spaces between them get bigger."
+        },
+        {
+          "type": "text",
+          "text": "For the same rise in temperature, gases expand the most and solids the least. Gas particles are far apart and only weakly held. Solid particles are held tightly together."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "See things expand",
+          "text": "Stretch a balloon over the mouth of an empty plastic bottle. Stand the bottle in a basin of hot water from a flask. Watch the balloon fill up as the air inside expands. Move the bottle to cold water and watch the balloon shrink. Next, find a glass jar with a tight metal lid. Run hot water over the lid only, then try to open it again."
+        },
+        {
+          "type": "heading",
+          "text": "Expansion in everyday life"
+        },
+        {
+          "type": "text",
+          "text": "Expansion can cause damage, so engineers plan for it. It can also be put to good use."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Railway lines and bridges have small gaps, called expansion joints. The steel can expand on hot days without bending or cracking.",
+            "Power lines are hung loosely. On a cold night they contract, and if they were tight they could snap.",
+            "Concrete roads and floors are laid in sections, with gaps filled with soft tar.",
+            "A metal rim is heated so that it expands, then slipped onto a wooden cart wheel. As it cools, it contracts and grips the wheel tightly.",
+            "A tight metal lid on a glass jar loosens under hot water, because the metal expands more than the glass.",
+            "A bimetallic strip is made of two metals, such as brass and iron, fixed together. Brass expands more, so the strip bends when heated. It is used to switch an electric iron off when it is hot enough, and in fire alarms.",
+            "A liquid-in-glass thermometer works because the liquid expands up the tube as it warms."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Liquids expand more than solids. Never fill a jerrycan or bottle to the very top and leave it in the sun. Leave a space for the liquid to expand. Fuel tankers are not filled to the brim for the same reason."
+        },
+        {
+          "type": "text",
+          "text": "Gases expand even more. The air in car and boda boda tyres gets warmer on a long ride over a hot road, so the tyres become harder. This is why tyre pressure should be checked when the tyres are cool. A balloon left in strong sunshine may burst."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Tarmac roads can develop cracks and bumps after many hot days and cool nights. Why might this happen, and how could road builders reduce it?"
+        },
+        {
+          "type": "heading",
+          "text": "Expansion and density"
+        },
+        {
+          "type": "text",
+          "text": "Density is the mass in each unit of volume. When a substance is heated, its mass stays the same but its volume increases. So its density falls. When it cools, its density rises again."
+        },
+        {
+          "type": "equation",
+          "latex": "\\rho = \\frac{m}{V}",
+          "speech": "density, rho, equals mass divided by volume"
+        },
+        {
+          "type": "example",
+          "title": "Density of cooking oil before and after warming",
+          "steps": [
+            "A sample of cooking oil at 25 °C has a mass of 92 g and a volume of 100 cm³.",
+            "Density = mass ÷ volume = 92 ÷ 100 = 0.92 g/cm³",
+            "Namubiru warms the oil to 55 °C. Its volume becomes 102 cm³, but its mass is still 92 g.",
+            "Density = 92 ÷ 102 = 0.90 g/cm³, to 2 decimal places.",
+            "The oil has expanded, so its density has fallen."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "This is why hot water rises above cold water in a saucepan, and warm air rises above cool air. The warmer part is less dense, so it is pushed upwards. Rising warm air over hot ground helps to form clouds and winds."
+        },
+        {
+          "type": "heading",
+          "text": "The unusual behaviour of water"
+        },
+        {
+          "type": "text",
+          "text": "Water behaves differently from most liquids between 0 °C and 4 °C. This is called the anomalous expansion of water. Anomalous means unusual."
+        },
+        {
+          "type": "text",
+          "text": "When water above 4 °C cools, it contracts like other liquids. But when it cools from 4 °C to 0 °C, it expands. When it freezes into ice at 0 °C, it expands even more. So water is densest at 4 °C, and ice is less dense than water. This is why ice cubes float in a drink."
+        },
+        {
+          "type": "heading",
+          "text": "Why this matters"
+        },
+        {
+          "type": "text",
+          "text": "In very cold countries, lakes freeze from the top down. As the surface water cools to 4 °C, it becomes densest and sinks. Once all the water is at 4 °C, the surface water cools further. It is now less dense, so it stays on top and freezes into a layer of ice. Ice is a poor conductor of heat, so the water below stays at about 4 °C. Fish and plants survive the winter underneath."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Water pipes can burst in cold places when the water inside freezes and expands.",
+            "A glass bottle full of water can crack in a freezer.",
+            "Water that seeps into cracks in rocks freezes at night and expands, slowly breaking the rock apart. This happens high on the Rwenzori mountains and Mt Elgon, where nights fall below freezing."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Suppose ice were denser than water and sank to the bottom. What might happen to lakes and the fish in them in very cold countries?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Most substances expand on heating because their particles move further apart. Gases expand most and solids least. Heating lowers density, because the volume grows while the mass stays the same. Water is unusual: it expands as it cools from 4 °C to 0 °C, so it is densest at 4 °C and ice floats."
+        }
+      ],
+      "sim": {
+        "phet": "gas-properties_en.html",
+        "caption": "PhET Gas Properties. On the Ideal screen, pump some gas into the box, set Hold Constant to Pressure ↕V, then heat the gas. Watch the box grow wider as the gas expands. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

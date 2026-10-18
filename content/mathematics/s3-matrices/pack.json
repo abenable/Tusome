@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.data.matrices",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,33 +11,161 @@
       "strand": "Data and Probability",
       "subStrand": "Matrices",
       "order": 8,
+      "term": 2,
       "outcomes": [
-        "Define a matrix and state its order. (k)",
-        "Know when matrices can be added or multiplied. (u, s)",
-        "Find the determinant of a 2x2 matrix. (u, s)",
-        "Find the inverse of a 2x2 matrix and understands why it may not be possible to do so. (k, u, s)",
-        "Apply knowledge of matrices in solving problems from real life situation. (u, s, v/a)"
+        "define a matrix and states its order. (k)",
+        "know when matrices can be added or multiplied. (u s)",
+        "find the determinant of a 2 × 2 matrix. (u s)",
+        "find the inverse of a 2 × 2 matrix and understands why it may not be possible to do so. (k, u, s)",
+        "apply knowledge of matrices in solving problems from real life situation. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A matrix is a rectangular array of numbers arranged in rows and columns. Its order is rows x columns — a matrix with 2 rows and 2 columns is a 2x2 matrix. Matrices can only be added if they have the same order, by adding matching positions. Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second."
+          "text": "A shopkeeper in Kampala records the items each kiosk sells in rows and columns. A school timetable and a football league table look the same way. Such a table of numbers is called a matrix, and we can add and multiply whole matrices at once."
+        },
+        {
+          "type": "heading",
+          "text": "What a matrix is"
         },
         {
           "type": "text",
-          "text": "For A = [[2,-1],[3,0]] and B = [[1,2],[4,0]], the product AB is found by taking each row of A against each column of B: top-left = (2x1)+(-1x4) = -2, top-right = (2x2)+(-1x0) = 4, bottom-left = (3x1)+(0x4) = 3, bottom-right = (3x2)+(0x0) = 6, giving AB = [[-2,4],[3,6]]."
-        },
-        {
-          "type": "text",
-          "text": "The determinant of the 2x2 matrix [[a,b],[c,d]] is ad - bc. If the determinant is zero, the matrix has no inverse (it is called singular)."
+          "text": "A matrix is a rectangular array of numbers set out in rows and columns, inside brackets. Each number in it is an element. The order of a matrix is its number of rows by its number of columns, so a matrix with 2 rows and 3 columns has order 2 × 3. A square matrix has the same number of rows and columns."
         },
         {
           "type": "equation",
-          "latex": "A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}, \\;\\det A = ad-bc, \\; A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}"
+          "latex": "A = \\begin{pmatrix} 4 & 1 & 0 \\\\ 2 & 5 & 3 \\end{pmatrix}",
+          "speech": "A is the matrix with first row 4, 1, 0 and second row 2, 5, 3. Its order is 2 by 3"
+        },
+        {
+          "type": "heading",
+          "text": "Adding and subtracting matrices"
         },
         {
           "type": "text",
-          "text": "For A = [[2,0],[1,3]]: det(A) = (2x3)-(0x1) = 6. Since the determinant isn't zero, the inverse exists: A⁻¹ = (1/6) x [[3,0],[-1,2]]."
+          "text": "Two matrices can be added or subtracted only if they have the same order. Add or subtract the elements in matching positions. To multiply a matrix by a number, multiply every element by that number."
+        },
+        {
+          "type": "example",
+          "title": "Adding two weeks of sales",
+          "steps": [
+            "Nakato runs two kiosks. Each row is a kiosk; the columns are packets of milk and loaves of bread sold.",
+            "Week 1 has rows 30, 20 and 25, 15. Week 2 has rows 28, 22 and 31, 18.",
+            "Both have order 2 × 2, so add matching elements: 30 + 28 = 58, 20 + 22 = 42, 25 + 31 = 56, 15 + 18 = 33.",
+            "The total for two weeks has rows 58, 42 and 56, 33."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Multiplying matrices"
+        },
+        {
+          "type": "text",
+          "text": "Matrix A can be multiplied by matrix B, giving AB, only if the number of columns in A equals the number of rows in B. If A has order m × n and B has order n × p, then AB has order m × p. To find each element of AB, take a row of A and a column of B. Multiply the matching elements and add the results."
+        },
+        {
+          "type": "text",
+          "text": "Order matters. Usually AB is not equal to BA. Sometimes AB exists but BA does not exist at all."
+        },
+        {
+          "type": "example",
+          "title": "Total takings by matrix multiplication",
+          "steps": [
+            "Milk costs UGX 1,500 a packet and bread UGX 5,000 a loaf. Write the prices as a 2 × 1 column matrix.",
+            "Multiply the 2 × 2 sales matrix by the price matrix. The answer has order 2 × 1.",
+            "Row 1: 58 × 1,500 + 42 × 5,000 = 87,000 + 210,000 = 297,000.",
+            "Row 2: 56 × 1,500 + 33 × 5,000 = 84,000 + 165,000 = 249,000.",
+            "So kiosk 1 took UGX 297,000 and kiosk 2 took UGX 249,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The determinant of a 2 × 2 matrix"
+        },
+        {
+          "type": "text",
+          "text": "The determinant is a single number worked out from a square matrix. For a 2 × 2 matrix, multiply along the leading diagonal, from top left to bottom right. Then subtract the product of the other diagonal."
+        },
+        {
+          "type": "equation",
+          "latex": "A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}, \\quad \\det A = ad - bc",
+          "speech": "for the matrix A with rows a, b and c, d, the determinant of A equals a d minus b c"
+        },
+        {
+          "type": "heading",
+          "text": "The inverse of a 2 × 2 matrix"
+        },
+        {
+          "type": "text",
+          "text": "The identity matrix I has 1s on the leading diagonal and 0s everywhere else. Multiplying by I leaves a matrix unchanged, just as multiplying a number by 1 leaves it unchanged. The inverse of A, written A⁻¹, is the matrix for which AA⁻¹ = A⁻¹A = I."
+        },
+        {
+          "type": "equation",
+          "latex": "A^{-1} = \\frac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+          "speech": "A inverse equals 1 over, a d minus b c, times the matrix with rows d, minus b and minus c, a"
+        },
+        {
+          "type": "text",
+          "text": "In words: swap a and d, change the signs of b and c, then divide every element by the determinant."
+        },
+        {
+          "type": "example",
+          "title": "Find an inverse and check it",
+          "steps": [
+            "A has rows 4, 3 and 2, 2.",
+            "det A = 4 × 2 − 3 × 2 = 8 − 6 = 2.",
+            "Swap 4 and 2, change the signs of 3 and 2, and divide by 2: A⁻¹ has rows 1, −1.5 and −1, 2.",
+            "Check AA⁻¹: 4 × 1 + 3 × (−1) = 1, 4 × (−1.5) + 3 × 2 = 0, 2 × 1 + 2 × (−1) = 0 and 2 × (−1.5) + 2 × 2 = 1. The result is I."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "When there is no inverse"
+        },
+        {
+          "type": "text",
+          "text": "If ad − bc = 0, the formula would need division by 0, which is impossible. So a matrix with determinant 0 has no inverse. It is called a singular matrix. For example, the matrix with rows 2, 4 and 3, 6 has determinant 2 × 6 − 4 × 3 = 0. Its second row is just 1.5 times its first."
+        },
+        {
+          "type": "heading",
+          "text": "Using matrices to solve real problems"
+        },
+        {
+          "type": "text",
+          "text": "A pair of simultaneous equations can be written as one matrix equation. Multiplying both sides by the inverse matrix gives the answer."
+        },
+        {
+          "type": "example",
+          "title": "Prices of sugar and soap",
+          "steps": [
+            "Atim pays UGX 17,500 for 2 kg of sugar and 3 bars of soap. Kato pays UGX 22,500 for 4 kg of sugar and 1 bar. Let x be the price of 1 kg of sugar and y the price of a bar of soap.",
+            "So 2x + 3y = 17,500 and 4x + y = 22,500. The matrix of the left-hand sides has rows 2, 3 and 4, 1.",
+            "Its determinant is 2 × 1 − 3 × 4 = −10, so its inverse is −1/10 times the matrix with rows 1, −3 and −4, 2.",
+            "x = −1/10 × (1 × 17,500 − 3 × 22,500) = −1/10 × (−50,000) = 5,000.",
+            "y = −1/10 × (−4 × 17,500 + 2 × 22,500) = −1/10 × (−25,000) = 2,500.",
+            "Sugar costs UGX 5,000 per kg and soap UGX 2,500 a bar."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A transport matrix",
+          "text": "Count how many learners in two classes walk, cycle or ride a boda boda to school, and write a 2 × 3 matrix with one row per class. Write the cost of one trip as a 3 × 1 matrix, with 0 for walking and cycling. Multiply to find each class's daily transport spending."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "You can multiply a 2 × 3 matrix by a 3 × 1 matrix, but not a 3 × 1 matrix by a 2 × 3 matrix. Explain why, using rows and columns."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When the matrix of a pair of simultaneous equations has determinant 0, what might the graphs of the two lines look like?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The order of a matrix is rows × columns. Matrices of the same order can be added. AB exists only when A has as many columns as B has rows. The determinant of a 2 × 2 matrix is ad − bc, and a matrix with determinant 0 has no inverse."
         }
       ]
     }

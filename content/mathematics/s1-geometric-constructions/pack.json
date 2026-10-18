@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.geometric-construction-skills",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Geometry and Measures",
       "subStrand": "Constructions",
       "order": 5,
+      "term": 2,
       "outcomes": [
         "draw perpendicular and parallel lines. (k, s)",
         "construct perpendiculars, angle bisectors, mediators and parallel lines. (u, s)",
@@ -24,23 +25,159 @@
       "body": [
         {
           "type": "text",
-          "text": "Two lines are perpendicular if they meet at a right angle (90°), and parallel if they never meet, however far extended, because they point in exactly the same direction and stay the same distance apart. A pair of compasses and a ruler (with no measurements marked, just a straightedge) are the classic tools for constructing these accurately, rather than just sketching by eye."
+          "text": "Builders, carpenters and tailors need straight edges, right angles and equal lengths. A builder marking out the corners of a house uses strings and pegs to get right angles. In this topic you will learn to draw and construct accurate lines, angles and shapes."
+        },
+        {
+          "type": "heading",
+          "text": "Drawing and constructing"
         },
         {
           "type": "text",
-          "text": "To construct a 60° angle: draw a line and mark a point on it. Without changing the compass width, draw an arc centred on that point crossing the line, then, using the same width, draw a second arc centred where the first arc crosses the line. The line from the original point to where the two arcs intersect makes a 60° angle with the first line — this works because it builds an equilateral triangle, whose angles are always 60°. A 45° angle is then found by bisecting a constructed 90° angle."
+          "text": "Drawing uses a ruler, a protractor and a set square to measure. Constructing uses only a ruler (for straight lines) and a pair of compasses (for arcs). Constructions are more accurate because they do not depend on reading a scale. Always use a sharp pencil and leave your construction arcs showing."
         },
         {
           "type": "text",
-          "text": "A locus (plural: loci) is the set of all points that satisfy a given rule — the path traced out by a point as it moves under some condition. For example, the locus of points equidistant from a single fixed point is a circle centred on that point; the locus of points equidistant from two fixed points is the perpendicular bisector of the line joining them; the locus of points equidistant from two intersecting lines is their angle bisector."
+          "text": "Parallel lines are always the same distance apart and never meet, like the two edges of a ruler. Perpendicular lines meet at a right angle (90°), like the corner of a door frame. You can draw both with a ruler and a set square: slide the set square along the ruler to draw parallel lines."
+        },
+        {
+          "type": "heading",
+          "text": "Measuring lengths and angles"
         },
         {
           "type": "text",
-          "text": "These constructions connect directly to loci: a perpendicular bisector is drawn by finding two points equidistant from both ends of a line segment, and an angle bisector by finding points equidistant from both arms of an angle. Recognising a construction as \"the locus of points equidistant from...\" explains why the compass-and-straightedge method gives an exact answer rather than an estimate."
+          "text": "Measure lengths in centimetres and millimetres. Start from the 0 mark on the ruler, not the end of the ruler. To measure an angle, put the centre of the protractor on the vertex (the corner point). Line up the zero line with one arm of the angle. Read the scale that starts at 0 on that arm."
+        },
+        {
+          "type": "heading",
+          "text": "Basic constructions"
         },
         {
           "type": "text",
-          "text": "The same tools construct regular polygons and quadrilaterals precisely: a square from four equal sides at right angles, a rhombus from four equal sides with two pairs of parallel sides, and a parallelogram from two pairs of parallel, equal-length sides. Always measure and check lengths with a ruler and angles with a protractor once a construction is complete, to confirm the figure matches its definition."
+          "text": "A mediator, or perpendicular bisector, cuts a line segment into two equal halves at right angles. An angle bisector cuts an angle into two equal angles."
+        },
+        {
+          "type": "example",
+          "title": "Construct the perpendicular bisector of AB",
+          "steps": [
+            "Draw a line segment AB, 8 cm long.",
+            "Open the compasses to more than half of AB, for example 5 cm.",
+            "With the point on A, draw an arc above and below the line.",
+            "Keep the same radius. With the point on B, draw arcs that cross the first two arcs.",
+            "Label the crossing points P and Q.",
+            "Draw a straight line through P and Q. It meets AB at its midpoint, at 90°."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Bisect an angle",
+          "steps": [
+            "Draw any angle with vertex O.",
+            "With the point on O, draw an arc that cuts both arms. Label the cuts X and Y.",
+            "With the point on X, draw an arc inside the angle.",
+            "With the same radius and the point on Y, draw an arc that crosses the last one at Z.",
+            "Draw a line from O through Z. This line bisects the angle."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To construct a line through a point P parallel to a line AB, first construct a perpendicular from P to AB. Then construct a second perpendicular at P. Two lines that are both perpendicular to the same line are parallel."
+        },
+        {
+          "type": "heading",
+          "text": "Constructing special angles"
+        },
+        {
+          "type": "text",
+          "text": "A 60° angle comes from an equilateral triangle, where every angle is 60°. Bisecting angles you already have gives new ones."
+        },
+        {
+          "type": "example",
+          "title": "Construct angles of 60° and 45°",
+          "steps": [
+            "Draw a line and mark a point O on it.",
+            "With the point on O, draw a large arc that cuts the line at A.",
+            "With the same radius and the point on A, draw an arc that cuts the first arc at B.",
+            "Join O to B. Angle AOB = 60°.",
+            "For 45°, first construct a perpendicular at O, which gives 90°.",
+            "Then bisect the 90° angle. Each half is 45°."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\tfrac{1}{2}\\times 60^\\circ = 30^\\circ \\qquad \\tfrac{1}{2}\\times 90^\\circ = 45^\\circ",
+          "speech": "half of sixty degrees is thirty degrees, and half of ninety degrees is forty-five degrees"
+        },
+        {
+          "type": "text",
+          "text": "In the same way, 120° is two 60° angles side by side, and 22.5° is half of 45°."
+        },
+        {
+          "type": "heading",
+          "text": "Loci"
+        },
+        {
+          "type": "text",
+          "text": "A locus is the set of all points that obey a rule. The plural is loci. Many loci are lines and circles you can construct."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Points a fixed distance from a fixed point form a circle.",
+            "Points the same distance from two fixed points form the perpendicular bisector of the line joining them.",
+            "Points a fixed distance from a straight line form two lines parallel to it.",
+            "Points the same distance from two lines that meet form the bisector of the angle between them.",
+            "A point moving in one fixed direction traces a straight line."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "For example, a goat tied to a peg with a rope 3 m long can reach every point inside a circle of radius 3 m. Two boreholes are dug in a village. Every point the same distance from both lies on the perpendicular bisector of the line between them."
+        },
+        {
+          "type": "heading",
+          "text": "Constructing polygons and other figures"
+        },
+        {
+          "type": "text",
+          "text": "A polygon is a flat shape with straight sides, such as a triangle, square or hexagon. A regular polygon has all sides equal and all angles equal."
+        },
+        {
+          "type": "example",
+          "title": "Construct a triangle with sides 7 cm, 6 cm and 5 cm",
+          "steps": [
+            "Draw the longest side, AB = 7 cm.",
+            "Open the compasses to 6 cm. With the point on A, draw an arc above AB.",
+            "Open the compasses to 5 cm. With the point on B, draw an arc that crosses the first arc at C.",
+            "Join AC and BC. Measure them to check they are 6 cm and 5 cm."
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Square: draw one side, construct 90° at each end, and mark equal sides with the compasses.",
+            "Rectangle: as for the square, but the two pairs of sides have different lengths.",
+            "Rhombus: all four sides are equal; use the same compass radius from two corners to find the fourth corner.",
+            "Parallelogram: draw two sides at the given angle, then use arcs equal to the opposite sides to find the fourth corner.",
+            "Regular hexagon: draw a circle, then step the same radius six times around it and join the marks."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Loci on the school field",
+          "text": "Work outside in groups with a long string and some sticks or stones as markers. One learner holds the string at a fixed point while another walks keeping it tight; mark the path. Then place two stones and mark many points that are the same distance from both. Describe the shape of each locus and name it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When you step the radius of a circle around its edge, you get exactly six marks. Why six? What does this have to do with the 60° angle?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Constructions use only a ruler and compasses, and the arcs are left showing. Bisecting angles turns 60° into 30° and 90° into 45°. A locus is the set of points that obey a rule, such as a circle, a perpendicular bisector or an angle bisector."
         }
       ]
     }

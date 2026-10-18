@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.numbers.surds",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,154 @@
       "strand": "Numbers",
       "subStrand": "Surds",
       "order": 12,
+      "term": 3,
       "outcomes": [
-        "Use surds to represent roots that cannot be represented exactly as decimals. (k, u)",
-        "Manipulate and simplify expressions with surds. (u, s, v/a)"
+        "use surds to represent roots that cannot be represented exactly as decimals. (k, u)",
+        "manipulate and simplify expressions with surds. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A surd is a root, like √2 or √3, that cannot be simplified to a whole number or an exact terminating/recurring decimal — its decimal goes on forever without repeating. Leaving an answer as a surd (e.g. √2) is more exact than rounding it to a decimal (1.41421...)."
+          "text": "Opio has a square garden with sides of 1 m. He lays a path straight across it, from one corner to the opposite corner. By Pythagoras’ theorem, the path is √2 m long. A calculator shows 1.4142135… and the digits never stop. In this topic you learn how to work with numbers like √2 exactly, without rounding them."
+        },
+        {
+          "type": "heading",
+          "text": "What is a surd?"
         },
         {
           "type": "text",
-          "text": "To simplify a surd, look for a square factor inside the root and pull out its square root. √12 = √(4x3) = √4 x √3 = 2√3, because 4 is the largest perfect-square factor of 12."
+          "text": "The square root of a number is the number that multiplies by itself to give it. For example, √9 = 3 because 3 × 3 = 9. Some square roots are whole numbers or simple fractions, such as √25 = 5 and √(9/16) = 3/4."
+        },
+        {
+          "type": "text",
+          "text": "Other roots, such as √2, √3 and √5, cannot be written as a fraction. Their decimals go on forever with no repeating pattern. A surd is a root like this, which cannot be written exactly as a fraction or as a terminating or recurring decimal."
+        },
+        {
+          "type": "text",
+          "text": "A rounded decimal is never exact. For example, 1.414 × 1.414 = 1.999396, which is not 2. When we write √2, the value is exact. So we keep surds in our working and only round at the very end, if a decimal is needed."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find surds in paper and diagonals",
+          "text": "Draw a square of side 1 unit, a rectangle 2 units by 1 unit, and a rectangle 4 units by 3 units on squared paper. Use Pythagoras’ theorem to find the length of each diagonal. Which diagonals are surds and which are whole numbers? Then take a sheet of A4 paper, measure its long and short sides, and divide the long side by the short side. Fold the sheet in half and repeat. Compare your answers with √2 ≈ 1.414 and discuss what you notice."
+        },
+        {
+          "type": "heading",
+          "text": "Rules for surds"
+        },
+        {
+          "type": "text",
+          "text": "These rules work for any positive numbers a and b."
         },
         {
           "type": "equation",
-          "expr": "√12 = √(4x3) = √4 x √3 = 2√3"
-        },
-        {
-          "type": "text",
-          "text": "Surds combine like algebraic terms: only surds with the same number under the root can be added or subtracted directly. 2√3 + 5√3 = 7√3, but 2√3 + 5√2 cannot be simplified further since the numbers under the roots differ. Multiplying surds follows √a x √b = √(ab): √2 x √8 = √16 = 4."
+          "latex": "\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}",
+          "speech": "root a times root b equals root of a b"
         },
         {
           "type": "equation",
-          "expr": "2√3 + 5√3 = 7√3;      √2 x √8 = √16 = 4"
+          "latex": "\\frac{\\sqrt{a}}{\\sqrt{b}} = \\sqrt{\\frac{a}{b}}",
+          "speech": "root a over root b equals the root of a over b"
+        },
+        {
+          "type": "equation",
+          "latex": "\\sqrt{a} \\times \\sqrt{a} = a",
+          "speech": "root a times root a equals a"
         },
         {
           "type": "text",
-          "text": "A fraction with a surd in the denominator, like 1/√2, is usually rationalised by multiplying top and bottom by that surd: 1/√2 x √2/√2 = √2/2. This removes the surd from the denominator without changing the value of the fraction."
+          "text": "There is no such rule for adding. For example, √9 + √16 = 3 + 4 = 7, but √(9 + 16) = √25 = 5. So √a + √b is not the same as √(a + b)."
+        },
+        {
+          "type": "heading",
+          "text": "Simplifying surds"
+        },
+        {
+          "type": "text",
+          "text": "A perfect square is a number such as 4, 9, 16, 25 or 36, made by multiplying a whole number by itself. To simplify a surd, write the number under the root as a perfect square times another number. Use the largest perfect square you can find. Then take its square root outside."
+        },
+        {
+          "type": "example",
+          "title": "Simplify √12, √50 and √72",
+          "steps": [
+            "√12 = √(4 × 3) = √4 × √3 = 2√3.",
+            "√50 = √(25 × 2) = √25 × √2 = 5√2.",
+            "√72 = √(36 × 2) = √36 × √2 = 6√2.",
+            "For √72, using 9 × 8 or 4 × 18 would leave a root that can still be simplified. Always choose the largest perfect square factor.",
+            "If Opio’s garden had sides of 6 m, the diagonal path would be √(6² + 6²) = √72 = 6√2 m, which is about 8.49 m."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Adding and subtracting surds"
+        },
+        {
+          "type": "text",
+          "text": "Like surds have the same number under the root, such as 2√3 and 5√3. You add and subtract them just as you add like terms in algebra: 2x + 5x = 7x, so 2√3 + 5√3 = 7√3. Unlike surds, such as √2 and √3, cannot be combined. Sometimes you must simplify first to find like surds."
+        },
+        {
+          "type": "example",
+          "title": "Add and subtract surds",
+          "steps": [
+            "3√2 + 5√2 = 8√2.",
+            "√18 + √8: simplify each first. √18 = 3√2 and √8 = 2√2.",
+            "So √18 + √8 = 3√2 + 2√2 = 5√2.",
+            "√27 − √12: √27 = 3√3 and √12 = 2√3.",
+            "So √27 − √12 = 3√3 − 2√3 = √3."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Multiplying surds and expanding brackets"
+        },
+        {
+          "type": "text",
+          "text": "Multiply the whole numbers together and the surds together. Expand brackets in the same way as in algebra, multiplying every term in one bracket by every term in the other."
+        },
+        {
+          "type": "example",
+          "title": "Multiply surds",
+          "steps": [
+            "√3 × √12 = √36 = 6.",
+            "2√5 × 3√2 = (2 × 3) × √(5 × 2) = 6√10.",
+            "√2(3 + √2) = 3√2 + √2 × √2 = 3√2 + 2.",
+            "(2 + √3)(2 − √3) = 4 − 2√3 + 2√3 − 3.",
+            "The surd terms cancel, so (2 + √3)(2 − √3) = 4 − 3 = 1."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Rationalising the denominator"
+        },
+        {
+          "type": "text",
+          "text": "The denominator is the bottom of a fraction. It is usual to write a fraction without a surd in the denominator. This is called rationalising the denominator. Multiply the top and the bottom by the surd. The value does not change, because you are multiplying by 1."
+        },
+        {
+          "type": "example",
+          "title": "Rationalise 6/√3 and 1/√2",
+          "steps": [
+            "6/√3 = (6 × √3)/(√3 × √3) = 6√3/3.",
+            "6√3/3 = 2√3.",
+            "1/√2 = (1 × √2)/(√2 × √2) = √2/2.",
+            "Check with a calculator: 1 ÷ 1.4142… ≈ 0.7071, and 1.4142… ÷ 2 ≈ 0.7071. The two values match."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "How could you put 2√3, 3√2 and √10 in order of size without a calculator? Share your method with your group and compare it with other groups."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A carpenter cutting a diagonal brace for a square frame could write its length as 5√2 cm or as 7.07 cm. When is the exact surd more useful, and when is the decimal more useful?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A surd is a root that cannot be written exactly as a fraction or decimal, such as √2 or √5. Use √a × √b = √(ab) to simplify, taking out the largest perfect square. Only like surds can be added or subtracted, and to rationalise a denominator, multiply the top and bottom by the surd."
         }
       ]
     }

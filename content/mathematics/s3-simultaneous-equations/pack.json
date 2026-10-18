@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.algebra.simultaneous-equations",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,28 +11,143 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Simultaneous equations",
       "order": 10,
+      "term": 3,
       "outcomes": [
-        "Solves simultaneous equations using substitution. (u, s)",
-        "Solves simultaneous equations using elimination. (u, s)",
-        "Draws graphs of simultaneous equations and estimates the solution. (u, s)",
-        "Uses matrices to solve simultaneous equations. (u, s, v/a)"
+        "solves simultaneous equations using substitution. (u, s)",
+        "solves simultaneous equations using elimination. (u, s)",
+        "draws graphs of simultaneous equations and estimates the solution. (u, s)",
+        "uses matrices to solve simultaneous equations. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Simultaneous equations are two or more equations that share the same solution values. Elimination solves them by adding or subtracting the equations to remove one variable. Solve 7x + 3y = 32 and 3x + 12y = 78: multiply the first by 4 to get 28x + 12y = 128, then subtract the second: 25x = 50, so x = 2. Substituting back: 7(2)+3y=32, so 3y=18, y=6."
+          "text": "A shopkeeper in Kampala sells rice and sugar. Two customers buy different amounts and pay different totals. From their receipts alone, you can work out the price of each item. Two unknowns need two equations."
+        },
+        {
+          "type": "heading",
+          "text": "What are simultaneous equations?"
+        },
+        {
+          "type": "text",
+          "text": "Simultaneous equations are two equations with the same two unknowns that are true at the same time. One equation alone, such as x + y = 10, has many solutions. A second equation narrows these down to one pair of values that fits both."
+        },
+        {
+          "type": "text",
+          "text": "There are four ways to solve them: substitution, elimination, graphs and matrices."
+        },
+        {
+          "type": "heading",
+          "text": "Method 1: substitution"
+        },
+        {
+          "type": "text",
+          "text": "In substitution, make one letter the subject of one equation. Put that expression into the other equation. This leaves one equation with one unknown."
+        },
+        {
+          "type": "example",
+          "title": "The price of rice and sugar",
+          "steps": [
+            "Nakato buys 2 kg of rice and 3 kg of sugar for UGX 17,000. Okello buys 4 kg of rice and 1 kg of sugar for UGX 19,000. Find the price of 1 kg of each.",
+            "Let r be the price of 1 kg of rice and s the price of 1 kg of sugar, in shillings.",
+            "Nakato: 2r + 3s = 17,000. Okello: 4r + s = 19,000.",
+            "Make s the subject of Okello's equation: s = 19,000 − 4r.",
+            "Substitute this into Nakato's equation: 2r + 3(19,000 − 4r) = 17,000.",
+            "Expand: 2r + 57,000 − 12r = 17,000, so −10r = −40,000 and r = 4,000.",
+            "Then s = 19,000 − 4 × 4,000 = 3,000.",
+            "Rice costs UGX 4,000 per kg and sugar costs UGX 3,000 per kg. Check: 2 × 4,000 + 3 × 3,000 = 17,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Method 2: elimination"
+        },
+        {
+          "type": "text",
+          "text": "The number in front of a letter is its coefficient. In elimination, make the coefficient of one letter the same in both equations. Then subtract (or add) the equations so that letter disappears."
+        },
+        {
+          "type": "example",
+          "title": "Peanut butter and margarine",
+          "steps": [
+            "Maureen buys 3 tins of peanut butter and 5 tins of margarine for UGX 32,000. Zulaika buys 6 tins of peanut butter and 8 tins of margarine for UGX 59,000. Musisi buys one tin of each. How much does he pay?",
+            "Let x be the price of a tin of peanut butter and y the price of a tin of margarine.",
+            "Equation 1: 3x + 5y = 32,000. Equation 2: 6x + 8y = 59,000.",
+            "Multiply equation 1 by 2 so that both equations have 6x: 6x + 10y = 64,000.",
+            "Subtract equation 2: (6x + 10y) − (6x + 8y) = 64,000 − 59,000, so 2y = 5,000 and y = 2,500.",
+            "Substitute into equation 1: 3x + 12,500 = 32,000, so 3x = 19,500 and x = 6,500.",
+            "Peanut butter costs UGX 6,500 and margarine costs UGX 2,500. Musisi pays 6,500 + 2,500 = UGX 9,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Method 3: drawing graphs"
+        },
+        {
+          "type": "text",
+          "text": "Each linear equation gives a straight line on a graph. Every point on a line fits its equation. The point where two lines cross fits both equations, so its coordinates are the solution."
+        },
+        {
+          "type": "text",
+          "text": "For example, draw y = 2x − 3 and y = 7 on the same axes. They cross at (5, 7), so x = 5 and y = 7. A graph gives an estimate, because a crossing point can be hard to read exactly, so check by substituting."
+        },
+        {
+          "type": "text",
+          "text": "Parallel lines, such as x + y = 3 and x + y = 5, never cross, so there is no solution. Sometimes both equations give the same line, such as x + y = 3 and 2y = 6 − 2x, so every point on it fits. In both cases there is no unique solution."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Where do the lines cross?",
+          "text": "In pairs, draw axes from −5 to 8 on squared paper or in an exercise book. Plot y = 2x − 3 using three points, such as x = 0, 2 and 4. Draw y = 7 and read the crossing point. On new axes, draw 6x − 9y = 36 and 2x − 3y = 5. Discuss why this pair has no crossing point."
+        },
+        {
+          "type": "heading",
+          "text": "Method 4: using matrices"
+        },
+        {
+          "type": "text",
+          "text": "A pair of equations can be written as one matrix equation: the matrix of coefficients times a column of unknowns equals a column of totals."
         },
         {
           "type": "equation",
-          "expr": "7x+3y=32, 3x+12y=78:  (x4) 28x+12y=128, subtract -> 25x=50 -> x=2, y=6"
+          "latex": "\\begin{pmatrix} 3 & 2 \\\\ 1 & 2 \\end{pmatrix}\\begin{pmatrix} b \\\\ p \\end{pmatrix} = \\begin{pmatrix} 4000 \\\\ 2000 \\end{pmatrix}",
+          "speech": "the matrix 3, 2, 1, 2 times the column b, p equals the column 4000, 2000"
         },
         {
           "type": "text",
-          "text": "Substitution solves one equation for one variable, then substitutes that expression into the other equation. Solve x+y=-2 and 4x+2y=0: from the first, y=-2-x; substitute into the second: 4x+2(-2-x)=0, so 4x-4-2x=0, 2x=4, x=2, and y=-2-2=-4."
+          "text": "Multiply both sides by the inverse of the coefficient matrix to find the unknowns. For a 2 × 2 matrix with entries a, b, c and d, the inverse is:"
+        },
+        {
+          "type": "equation",
+          "latex": "A^{-1} = \\frac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+          "speech": "A inverse equals 1 over a d minus b c, times the matrix d, minus b, minus c, a"
         },
         {
           "type": "text",
-          "text": "Graphically, each equation is a straight line, and the solution is the point where the two lines cross. Using matrices, the system ax+by=e, cx+dy=f can be written [[a,b],[c,d]] x [[x],[y]] = [[e],[f]], and solved by multiplying both sides by the inverse of the coefficient matrix. If the two lines are parallel (no crossing point), the equations have no solution, and the coefficient matrix's determinant is zero."
+          "text": "The number ad − bc is the determinant. If the determinant is 0, there is no inverse. This happens exactly when the two lines are parallel or the same, so there is no unique solution."
+        },
+        {
+          "type": "example",
+          "title": "Books and pens by the matrix method",
+          "steps": [
+            "Kato buys 3 exercise books and 2 pens for UGX 4,000. Akello buys 1 exercise book and 2 pens for UGX 2,000. Let b be the price of a book and p the price of a pen.",
+            "The equations are 3b + 2p = 4,000 and b + 2p = 2,000. The matrix form is shown above.",
+            "Determinant = 3 × 2 − 2 × 1 = 6 − 2 = 4.",
+            "The inverse is one quarter of the matrix with rows 2, −2 and −1, 3.",
+            "b = (2 × 4,000 − 2 × 2,000) ÷ 4 = 4,000 ÷ 4 = 1,000.",
+            "p = (−1 × 4,000 + 3 × 2,000) ÷ 4 = 2,000 ÷ 4 = 500.",
+            "A book costs UGX 1,000 and a pen costs UGX 500. Check: 3 × 1,000 + 2 × 500 = 4,000."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Which method would you choose if one equation already says y = 3x + 1? Which would you choose for 7x + 3y = 32 and 3x + 12y = 78? Why?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Simultaneous equations are two equations that are true at the same time. Solve them by substitution, elimination, graphs or matrices. Parallel lines, or a determinant of 0, mean there is no unique solution. Always check your answer in both equations."
         }
       ]
     }

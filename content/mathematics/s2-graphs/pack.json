@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.data.graphs",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,154 @@
       "strand": "Data and Probability",
       "subStrand": "Graphs",
       "order": 3,
+      "term": 1,
       "outcomes": [
-        "Tabulate values from given relations. (u)",
-        "Plot and draw lines through given points. (u, s)",
-        "Choose and use appropriate scales. (u, s)",
-        "Draw, read and interpret the graph (e.g. Distance-Time and Speed-Time Graphs to estimate distance, speed and time). (u, s, v/a)"
+        "tabulate values from given relations. (u)",
+        "plot and draw lines through given points. (u, s)",
+        "choose and uses appropriate scales. (u, s)",
+        "draw, read and interpret the graph (e.g. Distance-Time and Speed-Time Graphs to estimate distance, speed and time). (u, s, v/a)"
       ],
       "body": [
         {
-          "type": "text",
-          "text": "To draw a graph from a relation, first tabulate values: choose several x values, work out the matching y values from the relation, then plot the points and join them. Pick a scale for each axis that fits the data on the grid and is easy to read (e.g. 1 square = 10 units, not 1 square = 7 units)."
+          "type": "heading",
+          "text": "Pictures of change"
         },
         {
           "type": "text",
-          "text": "A distance-time graph plots distance travelled (vertical axis) against time (horizontal axis). The steepness (gradient) of the line at any point is the speed at that moment: a steeper line means faster travel, a flat (horizontal) section means the object has stopped."
+          "text": "A night bus leaves Soroti at 20:30 and reaches Kampala at 04:00, stopping at towns on the way. A table of times tells the story in numbers. A graph tells it as a picture, so we can see at a glance where the bus moved fast and where it waited."
+        },
+        {
+          "type": "heading",
+          "text": "Making a table of values"
         },
         {
           "type": "text",
-          "text": "A cyclist travels 20 km in the first hour, rests for 30 minutes, then travels a further 15 km in 45 minutes. Reading the distance-time graph: speed for the first hour = 20 km ÷ 1 h = 20 km/h; during the rest, distance stays flat at 20 km; speed for the last section = 15 km ÷ 0.75 h = 20 km/h."
+          "text": "A relation such as y = 2x + 1 links each value of x to a value of y. To draw its graph, first make a table of values. Choose some values of x. Work out y for each one. Each pair of values gives a point (x, y)."
         },
         {
           "type": "equation",
-          "expr": "speed = distance ÷ time:  20 km ÷ 1 h = 20 km/h,   15 km ÷ 0.75 h = 20 km/h"
+          "latex": "y = 2x + 1",
+          "speech": "y equals 2x plus 1"
+        },
+        {
+          "type": "example",
+          "title": "Tabulate and plot y = 2x + 1",
+          "steps": [
+            "Choose x = −2, −1, 0, 1, 2, 3.",
+            "x = −2: y = 2 × (−2) + 1 = −3. x = −1: y = −2 + 1 = −1.",
+            "x = 0: y = 0 + 1 = 1. x = 1: y = 2 + 1 = 3.",
+            "x = 2: y = 4 + 1 = 5. x = 3: y = 6 + 1 = 7.",
+            "The points are (−2, −3), (−1, −1), (0, 1), (1, 3), (2, 5) and (3, 7).",
+            "Plot each point with a small cross. Join them with one straight line drawn with a ruler. Label the line y = 2x + 1."
+          ]
         },
         {
           "type": "text",
-          "text": "A speed-time graph plots speed against time instead. Here the gradient represents acceleration, and the area under the graph between two times gives the distance travelled in that interval."
+          "text": "If one point does not lie on the line with the others, check its value in the table. A relation of the form y = mx + c always gives a straight line."
+        },
+        {
+          "type": "heading",
+          "text": "Choosing a good scale"
+        },
+        {
+          "type": "text",
+          "text": "The scale tells us how many units each centimetre or each square on the paper stands for. A good scale makes the graph large and easy to read."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use a scale that makes the graph fill most of the paper.",
+            "Choose easy steps such as 1, 2, 5, 10 or 20 units for each centimetre. Avoid steps of 3 or 7, which are hard to read.",
+            "The two axes may have different scales.",
+            "Label each axis with the quantity and its unit, and give the graph a title."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Draw and use a temperature conversion graph",
+          "steps": [
+            "The rule for changing degrees Celsius (°C) to degrees Fahrenheit (°F) is F = 9C ÷ 5 + 32.",
+            "Table: 0 °C → 32 °F, 20 °C → 68 °F, 40 °C → 104 °F, 100 °C → 212 °F.",
+            "The paper is 16 cm wide and 24 cm tall. Across, let 1 cm stand for 10 °C, so 0 to 100 °C takes 10 cm. Up, let 1 cm stand for 10 °F, so 0 to 212 °F takes about 22 cm.",
+            "Plot the four points and join them with a straight line.",
+            "To change 30 °C, go up from 30 on the Celsius axis to the line, then across to the Fahrenheit axis. It reads 86 °F."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Distance–time graphs"
+        },
+        {
+          "type": "text",
+          "text": "A distance–time graph shows a journey. Time goes along the horizontal axis. Distance from the start goes up the vertical axis. A straight sloping line means steady speed. A steeper line means a higher speed. A horizontal line means the traveller has stopped, because time passes but the distance does not change."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{speed} = \\frac{\\text{distance}}{\\text{time}}",
+          "speech": "speed equals distance divided by time"
+        },
+        {
+          "type": "example",
+          "title": "The Soroti to Mbale part of the bus journey",
+          "steps": [
+            "The bus leaves Soroti at 20:30. It reaches Kumi, 50 km away, at 22:00. It waits and leaves at 22:15. It reaches Mbale, 56 km beyond Kumi, at 23:30.",
+            "Points to plot (time, distance from Soroti): (20:30, 0 km), (22:00, 50 km), (22:15, 50 km), (23:30, 106 km).",
+            "Soroti to Kumi: 50 km in 1 hour 30 minutes = 1.5 hours. Speed = 50 ÷ 1.5 ≈ 33.3 km/h.",
+            "At Kumi the line is flat for 15 minutes while the bus waits.",
+            "Kumi to Mbale: 56 km in 1 hour 15 minutes = 1.25 hours. Speed = 56 ÷ 1.25 = 44.8 km/h.",
+            "The Kumi to Mbale line is steeper, so the bus moved faster on that part."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Read a walk from a graph",
+          "steps": [
+            "Atim's graph rises from 0 km at 09:00 to 2 km at 09:30. It stays flat at 2 km until 10:30. It falls back to 0 km at 11:10.",
+            "She walked 2 km to her friend's house in 30 minutes. Speed = 2 ÷ 0.5 = 4 km/h.",
+            "She stayed there for 1 hour.",
+            "She walked home in 40 minutes, which is 40 ÷ 60 = 2/3 of an hour. Speed = 2 ÷ 2/3 = 3 km/h.",
+            "The line going home is less steep, so she walked back more slowly."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Speed–time graphs"
+        },
+        {
+          "type": "text",
+          "text": "A speed–time graph has time along the horizontal axis and speed up the vertical axis. A horizontal line now means steady speed, not stopping. A rising line means speeding up. The area under a speed–time graph gives the distance travelled."
+        },
+        {
+          "type": "example",
+          "title": "Find a distance from a speed–time graph",
+          "steps": [
+            "A taxi leaves a stage. Its speed rises steadily from 0 to 20 m/s in 10 seconds. It then moves at 20 m/s for 30 seconds.",
+            "The first part of the graph is a triangle with base 10 s and height 20 m/s. Area = ½ × 10 × 20 = 100 m.",
+            "The second part is a rectangle 30 s long and 20 m/s high. Area = 30 × 20 = 600 m.",
+            "Total distance = 100 + 600 = 700 m."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Walk a graph",
+          "text": "On the school compound, mark a straight 50 m path with a stick every 10 m. One learner walks slowly for 20 m, stands still for 10 seconds, then walks quickly to the end. Others use a watch or phone to record the time at each stick. Make a table, choose scales and draw the distance–time graph. Point to where the walker stopped and where the walker was fastest."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "What would a vertical line on a distance–time graph mean? Could a real journey ever make one? Why can the line on a distance–time graph never slope back to the left?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Make a table of values, choose clear scales, plot the points and join them carefully. On a distance–time graph, steeper means faster, a flat line means stopped, and speed = distance ÷ time. On a speed–time graph, a flat line means steady speed and the area underneath gives the distance travelled."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "graphing-lines_en.html",
+        "caption": "PhET Graphing Lines. Drag two points to build a straight line and watch its equation change, then compare a steep line with a gentle one. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
     }
   ]
 }

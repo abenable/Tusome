@@ -1,44 +1,141 @@
 {
   "packId": "phy.s1.matter.diffusion",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s1.matter.diffusion",
-      "title": "Diffusion",
+      "title": "Diffusion and Brownian Motion",
       "subject": "physics",
       "level": "S1",
       "strand": "Mechanics and Properties of Matter",
-      "subStrand": "Diffusion",
-      "order": 4,
+      "subStrand": "Particle theory of matter",
+      "order": 5,
+      "term": 2,
       "outcomes": [
         "apply the particle theory to explain diffusion and Brownian motion and their applications (s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. It happens because particles are always moving randomly, and over time this random motion spreads them out evenly."
+          "text": "When curry is cooking in the kitchen, you can smell it in every room of the house. You smell it even when the doors are closed and there is no wind. Nobody carried the smell to you. The particles of the smell spread out on their own. This spreading is called diffusion."
+        },
+        {
+          "type": "heading",
+          "text": "What is diffusion?"
         },
         {
           "type": "text",
-          "text": "Diffusion happens much faster in gases than in liquids. Gas particles are farther apart, move at higher speeds, and collide less often, so they spread out quickly. Liquid particles are closer together and collide much more, slowing their spread. Diffusion does not happen through a solid under normal conditions, because its particles are fixed in position."
+          "text": "Diffusion is the spreading of particles from a place where there are many of them to a place where there are few. The number of particles in a given space is called the concentration. So diffusion is movement from a high concentration to a low concentration."
         },
         {
           "type": "text",
-          "text": "A familiar example: the smell of food cooking spreads through a whole house even when there are no air currents. Scent particles diffuse outward from the kitchen, where their concentration is high, into the rest of the rooms, where it is lower."
+          "text": "Diffusion needs no stirring and no wind. It goes on until the particles are spread evenly. A drop of ink in a glass of still water slowly colours all the water. A spoonful of sugar at the bottom of a cup of tea slowly sweetens the whole cup, even without stirring."
+        },
+        {
+          "type": "heading",
+          "text": "How the particle theory explains diffusion"
         },
         {
           "type": "text",
-          "text": "The rate of diffusion is affected by temperature \u2014 heating a substance gives its particles more energy, so they move and diffuse faster \u2014 and by the mass of the particles, since lighter particles move faster than heavier ones at the same temperature and so diffuse more quickly."
+          "text": "The particles of liquids and gases are always moving in random directions. They bump into each other and change direction all the time. Where particles are crowded, more of them happen to move out than move in. So over time, they spread into the emptier space."
+        },
+        {
+          "type": "example",
+          "title": "Explain why the smell of cooking reaches every room",
+          "steps": [
+            "Cooking food releases particles of smell into the air in the kitchen.",
+            "Here the concentration of smell particles is high. In the other rooms it is low.",
+            "The smell particles and the air particles move randomly and collide with each other.",
+            "As they move, the smell particles spread out from the kitchen into the other rooms.",
+            "When enough particles reach your nose, you smell the food."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Diffusion in gases and in liquids"
         },
         {
           "type": "text",
-          "text": "Use the PhET Diffusion simulation below to compare how heavy and light particles spread through a container, and see how changing the temperature changes the rate of diffusion."
+          "text": "Diffusion is much faster in a gas than in a liquid. You smell perfume across a room within a minute or so. Ink takes many minutes to spread through a glass of still water. In a solid, diffusion is so slow that we do not notice it, because the particles stay in fixed positions."
+        },
+        {
+          "type": "example",
+          "title": "Explain why diffusion is faster in a gas than in a liquid",
+          "steps": [
+            "In a gas, the particles are far apart and move very fast.",
+            "A moving particle travels a long way before it hits another particle.",
+            "In a liquid, the particles are close together and move more slowly.",
+            "A moving particle keeps hitting its neighbours and changing direction.",
+            "So particles spread out much more quickly through a gas than through a liquid."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "What changes the rate of diffusion?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Temperature: heating gives particles more energy, so they move and spread faster.",
+            "Mass of the particles: light particles move faster than heavy ones at the same temperature, so they diffuse faster.",
+            "State: diffusion is fast in gases, slower in liquids, and very slow in solids.",
+            "Difference in concentration: the bigger the difference, the faster the spreading.",
+            "Distance: particles take longer to spread over a long distance than a short one."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Hot and cold",
+          "text": "Fill one clear glass with hot water from a flask and another with cold water. Let both stand until the water is still. Gently add one drop of ink or food colouring to each, without stirring. Watch the glasses after 1 minute, 5 minutes and 20 minutes. Record what you see and compare the two glasses."
+        },
+        {
+          "type": "heading",
+          "text": "Brownian motion"
+        },
+        {
+          "type": "text",
+          "text": "In 1827 a scientist named Robert Brown looked at tiny grains of pollen in water through a microscope. The grains kept moving in a jerky, zig-zag way. They never stopped. This movement is now called Brownian motion."
+        },
+        {
+          "type": "text",
+          "text": "Brownian motion is the constant, random movement of tiny visible particles in a liquid or a gas. Water and air molecules are far too small to see, but they move very fast. They hit the visible grain from all sides. At any moment, more hit one side than the other, so the grain is pushed this way and that."
+        },
+        {
+          "type": "text",
+          "text": "In a school laboratory, it can be seen by looking at smoke particles in air through a microscope. The smoke specks dance about. If the air is warmer, they move faster. Brownian motion was strong evidence that the particles of matter are real and always moving."
+        },
+        {
+          "type": "heading",
+          "text": "Uses of diffusion"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Breathing: oxygen diffuses from the air in your lungs into your blood, and carbon dioxide diffuses out.",
+            "Plants: carbon dioxide diffuses into leaves, and water vapour diffuses out. You will meet osmosis and transpiration in Biology.",
+            "Safety: cooking gas has a strong smell added to it. If it leaks, the smell diffuses through the room and warns people.",
+            "Food: salt diffuses into fish when it is salted for drying. Tea and coffee flavour spreads through hot water.",
+            "Mosquito repellents and air fresheners work because their particles diffuse through the room."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Once the ink has spread evenly through the glass, the water looks the same everywhere. Mugisha says the particles have stopped moving. Do you agree? What could you observe to check?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Diffusion is the spreading of particles from a high concentration to a low concentration, caused by their random motion. It is fastest in gases and faster at higher temperatures. Brownian motion is the jerky movement of tiny visible particles, caused by invisible moving molecules hitting them unevenly."
         }
       ],
       "sim": {
         "phet": "diffusion_en.html",
-        "caption": "PhET Diffusion. Compare how heavy and light gas particles spread through a container, and see how temperature changes the rate. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Diffusion. Put particles on one side of the divider, remove it, and watch them spread out. Then change the mass of the particles or the temperature and compare how quickly they mix. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.trigonometry-2",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,27 +11,173 @@
       "strand": "Geometry and Measures",
       "subStrand": "Trigonometry",
       "order": 7,
+      "term": 2,
       "outcomes": [
-        "Determine trigonometric ratios of angles greater than 90°. (u, s)",
-        "Use the graphs of trigonometric functions to determine values of sine, cosine and tangent for any angle. (u, s)",
-        "Apply sine and cosine rules to solve real life problems. (k, u, s)"
+        "determine trigonometric ratios of angles greater than 90°. (u s)",
+        "use the graphs of trigonometric functions to determine values of sine, cosine and tangent for any angle. (u s)",
+        "apply sine and cosine rules to solve real life problems. (k u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Trigonometric ratios extend beyond the 0°-90° range covered by right-angled triangles: sin(150°) = sin(30°) = 0.5, and cos(120°) = -cos(60°) = -0.5. The graphs of sine and cosine repeat every 360° and oscillate between -1 and 1, which is how a calculator or graph gives values for any angle, including negative and reflex angles."
+          "text": "Surveyors who plan roads between towns cannot always make a right angle. Clock hands open to angles bigger than 90°. In Trigonometry I you used sine, cosine and tangent in right-angled triangles. In this topic you will extend them to any angle, and use the sine and cosine rules to solve any triangle."
+        },
+        {
+          "type": "heading",
+          "text": "Angles bigger than 90°"
         },
         {
           "type": "text",
-          "text": "For triangles that are not right-angled, the sine rule relates each side to the sine of its opposite angle, and the cosine rule relates all three sides to one angle. The sine rule: a/sin(A) = b/sin(B) = c/sin(C). The cosine rule: c^2 = a^2 + b^2 - 2ab cos(C)."
+          "text": "Recall the unit circle. It is a circle of radius 1 with its centre at the origin. Turn a radius anticlockwise from the positive x-axis through an angle θ. The end of the radius is the point (cos θ, sin θ). This works for any angle, not just angles below 90°."
         },
         {
           "type": "equation",
-          "latex": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}, \\qquad c^2 = a^2 + b^2 - 2ab\\cos C"
+          "latex": "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}",
+          "speech": "tan theta equals sin theta over cos theta"
         },
         {
           "type": "text",
-          "text": "Two poles, 8.3 m and 11.5 m long, are placed with one end of each touching, and their far ends 4.7 m apart. Using the cosine rule to find the angle θ between the poles: 4.7^2 = 8.3^2 + 11.5^2 - 2(8.3)(11.5)cos(θ), so 22.09 = 68.89 + 132.25 - 190.9cos(θ), giving cos(θ) = (68.89+132.25-22.09)/190.9 ≈ 0.943, so θ ≈ 19.4°."
+          "text": "The axes split the circle into four quadrants. The signs of x and y in each quadrant give the signs of the ratios."
+        },
+        {
+          "type": "list",
+          "items": [
+            "First quadrant, 0° to 90°: sin, cos and tan are all positive.",
+            "Second quadrant, 90° to 180°: only sin is positive.",
+            "Third quadrant, 180° to 270°: only tan is positive.",
+            "Fourth quadrant, 270° to 360°: only cos is positive."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To find a ratio of a large angle, first find the acute angle it makes with the x-axis. Then use the quadrant to decide the sign. For an angle in the second quadrant, the acute angle is 180° − θ."
+        },
+        {
+          "type": "equation",
+          "latex": "\\sin(180^\\circ - \\theta) = \\sin\\theta",
+          "speech": "sin of, 180 degrees minus theta, equals sin theta"
+        },
+        {
+          "type": "equation",
+          "latex": "\\cos(180^\\circ - \\theta) = -\\cos\\theta",
+          "speech": "cos of, 180 degrees minus theta, equals minus cos theta"
+        },
+        {
+          "type": "example",
+          "title": "Find the ratios of 150°",
+          "steps": [
+            "150° lies in the second quadrant.",
+            "Its acute angle with the x-axis is 180° − 150° = 30°.",
+            "sin 150° = +sin 30° = 0.5.",
+            "cos 150° = −cos 30° = −0.866, to 3 decimal places.",
+            "tan 150° = −tan 30° = −0.577, to 3 decimal places.",
+            "Check each value on a calculator."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The graphs of sine, cosine and tangent"
+        },
+        {
+          "type": "text",
+          "text": "The graph of y = sin θ from 0° to 360° is a smooth wave. It rises from 0 to 1 at 90°, falls to −1 at 270° and returns to 0 at 360°. The graph of y = cos θ is the same wave moved 90° to the left, so it starts at 1. The graph of y = tan θ repeats every 180° and breaks at 90° and 270°, where cos θ = 0."
+        },
+        {
+          "type": "text",
+          "text": "The graphs show that one value of sine comes from two angles between 0° and 360°. A horizontal line at y = 0.5 cuts the sine wave at 30° and at 150°. In the same way, to solve cos θ = −0.5, a calculator gives 120°. Cosine is negative in the second and third quadrants, and the acute angle is 60°. So θ = 120° or θ = 180° + 60° = 240°."
+        },
+        {
+          "type": "heading",
+          "text": "The sine rule"
+        },
+        {
+          "type": "text",
+          "text": "The sine rule and the cosine rule work in any triangle, not only right-angled ones. Label the corners with capital letters A, B and C. The side opposite each corner gets the matching small letter a, b or c."
+        },
+        {
+          "type": "equation",
+          "latex": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}",
+          "speech": "a over sin A equals b over sin B equals c over sin C"
+        },
+        {
+          "type": "text",
+          "text": "Use the sine rule when you know one side and the angle opposite it, plus one other side or angle."
+        },
+        {
+          "type": "example",
+          "title": "Distance from a health centre to a village",
+          "steps": [
+            "Two health centres, P and Q, are 12 km apart on a straight road near Gulu. A village R is off the road. Angle RPQ = 48° and angle RQP = 65°. Find the distance PR.",
+            "Angle PRQ = 180° − 48° − 65° = 67°. PQ is opposite this angle, and PR is opposite the 65° angle.",
+            "By the sine rule, PR ÷ sin 65° = 12 ÷ sin 67°.",
+            "PR = 12 × sin 65° ÷ sin 67° = 12 × 0.9063 ÷ 0.9205.",
+            "PR = 11.8 km, to 1 decimal place."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The cosine rule"
+        },
+        {
+          "type": "text",
+          "text": "Use the cosine rule when you know two sides and the angle between them. It gives the third side."
+        },
+        {
+          "type": "equation",
+          "latex": "a^2 = b^2 + c^2 - 2bc\\cos A",
+          "speech": "a squared equals b squared plus c squared minus 2 b c cos A"
+        },
+        {
+          "type": "text",
+          "text": "When you know all three sides, rearrange the rule to find an angle."
+        },
+        {
+          "type": "equation",
+          "latex": "\\cos A = \\frac{b^2 + c^2 - a^2}{2bc}",
+          "speech": "cos A equals b squared plus c squared minus a squared, all over 2 b c"
+        },
+        {
+          "type": "example",
+          "title": "The ends of clock hands",
+          "steps": [
+            "The hour hand of a clock is 44 mm long and the minute hand is 57 mm long. The angle between them is 69°. Find the distance d between their ends.",
+            "d² = 44² + 57² − 2 × 44 × 57 × cos 69°.",
+            "d² = 1936 + 3249 − 5016 × 0.3584.",
+            "d² = 5185 − 1797.6 = 3387.4.",
+            "d = √3387.4 = 58.2 mm, to 1 decimal place."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "The angle between two poles",
+          "steps": [
+            "Opio lays two poles, 8.3 m and 11.5 m long, on the ground with one end of each touching. The other two ends are 4.7 m apart. Find the angle between the poles.",
+            "The angle we want is opposite the 4.7 m side.",
+            "cos θ = (8.3² + 11.5² − 4.7²) ÷ (2 × 8.3 × 11.5).",
+            "cos θ = (68.89 + 132.25 − 22.09) ÷ 190.9 = 179.05 ÷ 190.9 = 0.9379.",
+            "θ = cos⁻¹ 0.9379 = 20.3°, to 1 decimal place."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Clock hands and the cosine rule",
+          "text": "Cut two strips of card, 4.4 cm and 5.7 cm long, and pin them together at one end to make clock hands. Open them to 30°, 60°, 90°, 120° and 150° with a protractor, and measure the distance between the free ends each time. Compare with the cosine rule, and discuss why the values differ slightly."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "What happens to the cosine rule a² = b² + c² − 2bc cos A when angle A is 90°? What does this tell you about Pythagoras' theorem?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A calculator gives only one angle for sin⁻¹ 0.5, but the graph shows two angles between 0° and 360°. Why does the calculator choose the one it does?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "On the unit circle a point is (cos θ, sin θ), which defines the ratios for any angle. Use the quadrant to fix the sign, and the graphs to find every angle with a given ratio. The sine rule links each side with the sine of its opposite angle. The cosine rule finds a side from two sides and the angle between them, or an angle from three sides."
         }
       ]
     }

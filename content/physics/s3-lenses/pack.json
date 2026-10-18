@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.light.lenses",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Light",
       "subStrand": "Lenses and optical instruments",
       "order": 5,
+      "term": 2,
       "outcomes": [
         "know the properties of converging and diverging lenses, and how they are used in everyday life (k, u, s)",
         "understand how lenses are used in optical systems such as the magnifying glass, correcting sight in the human eye and in camera lenses (k, u, v/a)"
@@ -18,24 +19,164 @@
       "body": [
         {
           "type": "text",
-          "text": "A converging (convex) lens bulges outward and bends light rays inward, bringing parallel rays together at the focal point. A diverging (concave) lens curves inward and spreads light rays apart."
+          "text": "Spectacles, phone cameras and the magnifying glass of a watch repairer in the market all use lenses. A lens is a piece of clear glass or plastic with curved surfaces that refracts light to form an image."
+        },
+        {
+          "type": "heading",
+          "text": "Two kinds of lens"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A converging (convex) lens is thicker in the middle than at the edges. It bends parallel rays of light inwards so that they meet at a point.",
+            "A diverging (concave) lens is thinner in the middle than at the edges. It spreads parallel rays outwards, as if they came from a point behind the lens."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "A converging lens can form a magnified image, which is why it is used in magnifying glasses, cameras, and to correct long sight (where the eye cannot focus on near objects). A diverging lens is used to correct short sight (where the eye cannot focus on distant objects)."
+          "text": "Some words describe every lens. The principal axis is the straight line through the centre of the lens, at right angles to it. The optical centre is the middle point of the lens. The principal focus, F, is the point where rays parallel to the axis meet after a converging lens. For a diverging lens, it is the point they seem to come from. The focal length, f, is the distance from the optical centre to the principal focus."
         },
         {
           "type": "text",
-          "text": "The human eye itself contains a converging lens that focuses light onto the retina at the back of the eye, allowing us to see clearly."
+          "text": "A converging lens has a real focus, because light really passes through it. A diverging lens has a virtual focus. A fatter, more curved lens has a shorter focal length."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find the focal length of a lens",
+          "text": "Stand at the back of the classroom, facing a bright window. Hold a converging lens, such as a magnifying glass, in front of a sheet of white paper. Move the lens until a sharp, upside-down image of the window or a distant tree appears on the paper. Measure the distance from the lens to the paper. Because the object is far away, this is almost equal to the focal length. Repeat three times and take the average."
+        },
+        {
+          "type": "heading",
+          "text": "Drawing ray diagrams"
         },
         {
           "type": "text",
-          "text": "Use the PhET Geometric Optics: Basics simulation below (Lens screen). Move an object in front of a converging lens and watch how the image forms, and how it changes as you move the object or change the lens."
+          "text": "To find where an image forms, draw two of these three rays from the top of the object. Where they meet (or seem to meet) is the top of the image."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A ray parallel to the principal axis passes through F after a converging lens. After a diverging lens, it bends away as if it came from F.",
+            "A ray through the optical centre goes straight on without bending.",
+            "A ray through F on the way to a converging lens comes out parallel to the axis."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "A real image is formed where rays actually meet. It can be caught on a screen. A virtual image is formed where rays only seem to meet. It cannot be caught on a screen, but you can see it by looking through the lens."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Object far beyond 2F: the image is real, upside down (inverted) and smaller (diminished). This is how a camera and the eye work.",
+            "Object at 2F: the image is real, inverted and the same size, at 2F on the other side.",
+            "Object between F and 2F: the image is real, inverted and larger (magnified).",
+            "Object between F and the lens: the image is virtual, upright and magnified. This is a magnifying glass.",
+            "A diverging lens always gives a virtual, upright, diminished image."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Finding an image by scale drawing",
+          "steps": [
+            "An object 3 cm tall stands 30 cm from a converging lens of focal length 10 cm. Along the axis, use a scale of 1 cm on paper for 5 cm. Draw heights full size.",
+            "Draw the axis and the lens. Mark F at 2 cm and 2F at 4 cm on each side. Draw the object 3 cm tall, 6 cm from the lens.",
+            "Draw a ray from the top of the object parallel to the axis, then through F on the far side. Draw a second ray straight through the optical centre.",
+            "The rays cross 3 cm from the lens, which is 15 cm in real life. The image is 1.5 cm tall, inverted and real.",
+            "Magnification = image height ÷ object height = 1.5 ÷ 3 = 0.5. The image is half the size of the object."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{magnification} = \\frac{\\text{image height}}{\\text{object height}}",
+          "speech": "magnification equals image height divided by object height"
+        },
+        {
+          "type": "heading",
+          "text": "The magnifying glass"
+        },
+        {
+          "type": "text",
+          "text": "A magnifying glass is a converging lens held close to a small object, nearer than the principal focus. It forms a virtual, upright, magnified image. Microscopes and telescopes use two or more lenses together to see very small or very distant things."
+        },
+        {
+          "type": "example",
+          "title": "Magnification of a magnifying glass",
+          "steps": [
+            "Kyomuhendo looks at an ant 4 mm long through a magnifying glass. The image looks 12 mm long.",
+            "Magnification = image height ÷ object height = 12 ÷ 4",
+            "Magnification = 3. The ant looks three times bigger."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The human eye"
+        },
+        {
+          "type": "text",
+          "text": "The eye works like a living camera. Light enters through the cornea, the clear front window. The coloured iris changes the size of the pupil to control how much light gets in. The cornea and the lens focus light onto the retina at the back of the eye. The image on the retina is real, inverted and diminished. The optic nerve carries signals to the brain."
+        },
+        {
+          "type": "text",
+          "text": "The eye lens is flexible. Ciliary muscles change its shape so that both near and far objects can be focused. This is called accommodation. The lens becomes fatter for near objects and thinner for distant ones."
+        },
+        {
+          "type": "heading",
+          "text": "Correcting sight"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Short sight: near objects are clear but distant ones are blurred. The eye focuses light from far away in front of the retina. A diverging lens corrects it.",
+            "Long sight: distant objects are clear but near ones are blurred. The eye focuses light from near objects behind the retina. A converging lens corrects it.",
+            "As people grow older, the eye lens stiffens and near objects become hard to focus. Many older people need converging reading glasses."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Opticians describe a lens by its power in dioptres (D). Power is 1 divided by the focal length in metres. Converging lenses have positive power and diverging lenses have negative power."
+        },
+        {
+          "type": "equation",
+          "latex": "P = \\frac{1}{f}",
+          "speech": "P equals 1 over f, with f in metres"
+        },
+        {
+          "type": "example",
+          "title": "Power of a spectacle lens",
+          "steps": [
+            "Mugisha's reading glasses have converging lenses of focal length 50 cm.",
+            "f = 50 cm = 0.5 m",
+            "P = 1 ÷ f = 1 ÷ 0.5 = +2 D"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The camera"
+        },
+        {
+          "type": "text",
+          "text": "A camera has a converging lens that forms a real, inverted, diminished image on a light sensor (older cameras used film). To focus, the camera moves its lens nearer to or further from the sensor; the eye changes the shape of its lens instead. The aperture controls how much light enters, like the pupil. A shutter opens briefly to let the light in."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many learners struggle to read the chalkboard without knowing that their eyes need help. How could a school find out which learners need spectacles? Why does good eyesight matter for learning?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A converging lens brings parallel rays to a real focus; a diverging lens spreads them from a virtual focus. Short sight is corrected with a diverging lens and long sight with a converging lens. Cameras and eyes form real, inverted, diminished images; a magnifying glass forms a virtual, upright, magnified one."
         }
       ],
       "sim": {
         "phet": "geometric-optics-basics_en.html",
-        "caption": "PhET Geometric Optics: Basics (Lens screen). Move an object in front of a lens and watch how the image forms. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Geometric Optics: Basics (Lens screen). Move an object in front of a lens and watch how the image forms. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

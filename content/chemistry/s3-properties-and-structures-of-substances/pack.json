@@ -1,0 +1,148 @@
+{
+  "packId": "che.s3.substances.properties-structures",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.substances.properties-structures",
+      "title": "Properties and Structures of Substances",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Structures of Substances",
+      "subStrand": "Giant and simple structures",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "Understand the atomic, molecular and ionic structures of different materials / substances (u)",
+        "Understand that the different physical properties of materials ie density, appearrance, hardness, melting point depend on their atomicmolecular and ionic structures (u, g s)",
+        "Understand and appreciate how the properties of common materials relate to their uses (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Diamond is the hardest natural substance, yet the graphite in your pencil is soft enough to leave marks on paper. Both are pure carbon. Salt melts only in a very hot furnace, while candle wax melts near a small flame. The difference is structure: how the particles are arranged and how strongly they are held together."
+        },
+        {
+          "type": "heading",
+          "text": "Four kinds of structure"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Simple molecular: small molecules with weak forces between them, such as water, carbon dioxide, iodine and sugar.",
+            "Giant covalent (giant molecular): millions of atoms joined by covalent bonds in one huge network, such as diamond, graphite and silicon dioxide (sand).",
+            "Giant ionic: a regular lattice of positive and negative ions, such as sodium chloride and calcium oxide.",
+            "Giant metallic: a lattice of positive metal ions in a sea of moving electrons, such as copper, iron and aluminium."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Simple molecular substances"
+        },
+        {
+          "type": "text",
+          "text": "Inside each molecule, the atoms are held by strong covalent bonds. Between the molecules, the forces are weak. Little energy is needed to pull the molecules apart, so these substances have low melting and boiling points. Many are gases or liquids at room temperature. They are usually soft, have low density and do not conduct electricity."
+        },
+        {
+          "type": "heading",
+          "text": "Giant covalent substances"
+        },
+        {
+          "type": "text",
+          "text": "In diamond, each carbon atom is bonded to four others in a rigid network. To melt it, millions of strong covalent bonds must break. So diamond is extremely hard, with a very high melting point. It is used on the tips of drills and cutting tools."
+        },
+        {
+          "type": "text",
+          "text": "In graphite, each carbon atom bonds to three others, forming flat layers. The layers are held together weakly, so they slide over each other. This makes graphite soft and slippery, useful in pencils and as a lubricant. Each carbon atom also has one free electron, so graphite conducts electricity. Silicon dioxide, in sand and quartz, is hard with a high melting point."
+        },
+        {
+          "type": "heading",
+          "text": "Giant ionic substances"
+        },
+        {
+          "type": "text",
+          "text": "In sodium chloride, each Na⁺ ion is surrounded by six Cl⁻ ions, and each Cl⁻ ion by six Na⁺ ions. Strong forces act in all directions, so ionic substances have high melting points. They are hard but brittle: a sharp blow shifts the layers so that like charges meet and push apart, and the crystal shatters. They conduct electricity only when melted or dissolved, when the ions can move."
+        },
+        {
+          "type": "heading",
+          "text": "Giant metallic substances"
+        },
+        {
+          "type": "text",
+          "text": "In a metal, a sea of free electrons holds the positive ions together. The free electrons carry charge and heat, so metals are good conductors. The layers of ions can slide without breaking the bonding. This makes metals malleable, which means they can be hammered into sheets, and ductile, which means they can be drawn into wires. Most metals are shiny and dense, with high melting points."
+        },
+        {
+          "type": "heading",
+          "text": "Comparing physical properties"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Melting point: low for simple molecular substances; high for giant covalent, ionic and most metallic substances.",
+            "Hardness: simple molecular solids are soft; diamond is very hard; ionic crystals are hard but brittle; metals are hard but can bend.",
+            "Electrical conduction: metals and graphite conduct as solids; ionic substances conduct only when melted or dissolved; the others do not.",
+            "Appearance: metals are shiny; ionic substances form clear or white crystals; many molecular substances are gases or colourless liquids.",
+            "Density: metals are usually dense; simple molecular substances usually have low density."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Identify a structure from its properties",
+          "steps": [
+            "Substance X melts at 801 °C, is brittle, and conducts electricity only when dissolved in water.",
+            "A high melting point means strong forces throughout, so X has a giant structure.",
+            "It does not conduct as a solid, so it is not a metal or graphite.",
+            "It conducts when dissolved, so it contains ions that become free to move.",
+            "X has a giant ionic structure. Sodium chloride fits these facts."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Identify another structure",
+          "steps": [
+            "Substance Y is a grey-black solid that melts at 114 °C and does not conduct electricity.",
+            "A low melting point means weak forces between its particles.",
+            "It does not conduct, so it has no free ions or electrons.",
+            "Y has a simple molecular structure. Iodine fits these facts."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Properties decide uses"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Copper conducts electricity very well and is ductile, so it is drawn into electric wires.",
+            "Aluminium has a low density, does not rust and conducts well, so it is used for saucepans and for overhead power cables that carry electricity from the dams at Jinja.",
+            "Steel, made mostly of iron, is strong and cheap, so it is used for iron sheets, hoes and building frames.",
+            "Graphite is soft and conducts, so it is used in pencils and as the carbon rod in dry cells.",
+            "Diamond is very hard, so it is used in cutting and drilling tools.",
+            "Sodium chloride dissolves easily and is safe to eat, so it is used to season and preserve food. Uganda produces salt at Lake Katwe in Kasese.",
+            "Sand (silicon dioxide) is hard with a high melting point, so it is used in concrete and to make glass."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Sort household substances",
+          "text": "Collect safe samples: table salt, sugar, candle wax, a pencil lead, a piece of copper wire from an old cable, an iron nail and some sand. In groups, test hardness by gently scratching each with the nail, look closely at its appearance, and see which dissolve in water. Do not taste anything. Your teacher may show which samples conduct electricity using a torch battery, a bulb and wires. Record your results in a table and decide which structure each has."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "An electric cable has copper wires inside a plastic coating. Why is each material chosen for its job? What would happen if the cable were made the other way round?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Substances have simple molecular, giant covalent, giant ionic or giant metallic structures. Weak forces between molecules give low melting points, while giant structures have high melting points. Free electrons or free ions allow conduction, and these properties decide how each material is used."
+        }
+      ],
+      "sim": {
+        "phet": "states-of-matter_en.html",
+        "caption": "Choose neon, argon, oxygen and water, and heat each solid until it melts. Water needs the highest temperature, because the forces between its molecules are the strongest."
+      }
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "packId": "che.s2.carbon.environment",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s2.carbon.environment",
+      "title": "Carbon in the Environment",
+      "subject": "chemistry",
+      "level": "S2",
+      "strand": "Carbon in the Environment",
+      "subStrand": "Fuels, carbon dioxide, climate, hard water and allotropes",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "understand how and why carbon compounds are used as fuels (k, u)",
+        "know and appreciate the difference between renewable and non-renewable fuels and understand that non-renewable fuels are not sustainable (k, u)",
+        "know and appreciate the impact of burning carbon-based fuels on the environment (k, u)",
+        "understand the processes of making charcoal, but recognise that the use of charcoal as a fuel is cheap, efficient, and sustainable only if it is made from wood that can be regrown easily (u, s)",
+        "know and appreciate the physical properties and uses of carbon dioxide (k, u)",
+        "understand how the increase in carbon dioxide in the air can cause the atmosphere and the oceans to get warmer (u)",
+        "understand what greenhouse gases are, where they come from, and how they are affecting climate (u)",
+        "understand the origin of hard water in limestone areas and investigate how it can be softened (u, s)",
+        "understand how the properties and uses of the allotropes of carbon relate to their structures (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Sacks of charcoal line the roadside. Boda bodas run on petrol. A pencil writes with graphite. All of these contain carbon. Carbon moves through the air, rocks, fuels and living things, and it shapes our climate."
+        },
+        {
+          "type": "heading",
+          "text": "Carbon fuels"
+        },
+        {
+          "type": "text",
+          "text": "A fuel is a substance that burns to release heat. Most fuels used in Uganda contain carbon: firewood, charcoal, paraffin, petrol, diesel, cooking gas and biogas. Carbon compounds burn easily, release a lot of heat, and are easy to store and carry."
+        },
+        {
+          "type": "text",
+          "text": "When a carbon fuel burns in plenty of air, it joins with oxygen. The carbon becomes carbon dioxide, and any hydrogen becomes water."
+        },
+        {
+          "type": "equation",
+          "expr": "fuel + oxygen → carbon dioxide + water + heat",
+          "speech": "fuel plus oxygen gives carbon dioxide plus water plus heat"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O}",
+          "speech": "methane plus two oxygen gives carbon dioxide plus two water"
+        },
+        {
+          "type": "text",
+          "text": "Methane is the main gas in biogas and natural gas. With too little air, fuels burn incompletely. They make soot and carbon monoxide, a poisonous gas with no colour or smell. This is why a charcoal stove must never be used in a closed room."
+        },
+        {
+          "type": "heading",
+          "text": "Renewable and non-renewable fuels"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A renewable fuel can be replaced within a human lifetime. Firewood, charcoal from replanted trees, biogas and ethanol from sugar cane are renewable.",
+            "A non-renewable fuel takes millions of years to form, so once used it is gone. Coal, crude oil and natural gas are fossil fuels, formed from the remains of ancient plants and animals. Petrol, diesel and paraffin come from crude oil."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Sustainable means meeting our needs today without spoiling the chances of people in the future. Using non-renewable fuels is not sustainable, because the supply will run out."
+        },
+        {
+          "type": "example",
+          "title": "Estimate how long Uganda's oil might last",
+          "steps": [
+            "Uganda's oil near Lake Albert is estimated at about 1,400 million barrels that can be recovered.",
+            "Planned production is about 230,000 barrels a day.",
+            "Barrels per year = 230,000 × 365 ≈ 84 million.",
+            "Years = 1,400 million ÷ 84 million ≈ 17 years.",
+            "At that rate, the oil would last less than a lifetime."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Making charcoal"
+        },
+        {
+          "type": "text",
+          "text": "Charcoal is made by heating wood with very little air. In a traditional earth kiln, wood is stacked, covered with soil and lit. It smoulders for several days. With little oxygen, the wood cannot burn completely. Water, tar and gases are driven off, leaving almost pure carbon."
+        },
+        {
+          "type": "text",
+          "text": "Charcoal is cheap, light and burns hot without much smoke. But an earth kiln wastes most of the wood. Improved kilns, energy-saving stoves and briquettes made from waste such as maize cobs and coffee husks all help."
+        },
+        {
+          "type": "example",
+          "title": "Compare two ways of making charcoal",
+          "steps": [
+            "Mugisha's family uses 30 kg of charcoal a month.",
+            "An earth kiln needs about 10 kg of wood for each kilogram of charcoal: 30 × 10 = 300 kg of wood.",
+            "An improved kiln needs about 5 kg of wood per kilogram: 30 × 5 = 150 kg of wood.",
+            "The improved kiln saves 300 − 150 = 150 kg of wood every month."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Charcoal is only sustainable if the trees are replanted and can grow back quickly, or if it is made from waste. Otherwise forests disappear."
+        },
+        {
+          "type": "heading",
+          "text": "Burning fuels and the environment"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Carbon dioxide traps heat in the atmosphere.",
+            "Smoke and soot from cooking fires harm the lungs, especially of those who cook indoors and of small children.",
+            "Sulphur dioxide from diesel and coal forms acid rain.",
+            "Cutting trees for charcoal and firewood causes soil erosion, removes homes for wildlife and can reduce local rainfall."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Carbon dioxide"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A colourless gas with no smell.",
+            "Denser than air, so it sinks and can be poured from one container to another.",
+            "Slightly soluble in water, forming a weak acid. This gives soda its sharp taste.",
+            "It does not burn and does not let other things burn.",
+            "Solid carbon dioxide, called dry ice, turns straight into gas at −78 °C."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Your teacher may make carbon dioxide by adding dilute hydrochloric acid to limestone. The gas puts out a lighted splint and turns limewater milky. The limewater test shows the gas is carbon dioxide."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 + 2HCl \\rightarrow CaCl_2 + H_2O + CO_2}",
+          "speech": "calcium carbonate plus two hydrochloric acid gives calcium chloride plus water plus carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Ca(OH)_2 + CO_2 \\rightarrow CaCO_3 + H_2O}",
+          "speech": "calcium hydroxide, which is limewater, plus carbon dioxide gives calcium carbonate plus water"
+        },
+        {
+          "type": "text",
+          "text": "Uses: making drinks fizzy, putting out fires, keeping things frozen as dry ice, and making bread and mandazi rise. Plants use it to make food by photosynthesis."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make and test carbon dioxide safely",
+          "text": "Put three spoons of vinegar in a tall glass and add a spoon of baking soda. When the fizzing slows, tilt the glass slowly over a cup of limewater from your teacher, without pouring any liquid. The invisible gas sinks into the cup. Swirl the limewater and watch it turn milky. Your teacher may also show the gas putting out a candle flame."
+        },
+        {
+          "type": "heading",
+          "text": "Greenhouse gases and a warming Earth"
+        },
+        {
+          "type": "text",
+          "text": "Sunlight passes through the air and warms the ground. The warm ground gives off heat. Some gases in the air absorb this heat and send part of it back down. They work like the walls of a greenhouse, so they are called greenhouse gases. Without them, the Earth would be too cold for life."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Carbon dioxide: from burning fuels and from cutting down forests.",
+            "Methane: from cattle, rubbish dumps, swamps and rice fields.",
+            "Nitrous oxide: from fertilisers.",
+            "Water vapour: from evaporation."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Burning fuels has raised the carbon dioxide in the air by about half since the 1800s. More heat is trapped, so the air gets warmer. The oceans absorb much of this heat and warm up too. They also absorb carbon dioxide, which makes sea water more acidic."
+        },
+        {
+          "type": "text",
+          "text": "Climate is the usual weather of a place over many years. A warmer Earth changes it. Rains come at unexpected times. Droughts in Karamoja last longer. Heavy rain causes floods and landslides on Mount Elgon. The glaciers on the Rwenzori are shrinking fast. Air moves freely across borders, so this can only be controlled if all countries work together."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Uganda produces far less carbon dioxide per person than many richer countries, yet it feels the effects of climate change. Who should do the most to cut greenhouse gases, and why?"
+        },
+        {
+          "type": "heading",
+          "text": "Hard water"
+        },
+        {
+          "type": "text",
+          "text": "Rainwater dissolves a little carbon dioxide, which makes it weakly acidic. As it soaks through limestone, it slowly dissolves the rock. The water picks up calcium ions. Water that contains dissolved calcium or magnesium compounds is called hard water."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 + H_2O + CO_2 \\rightarrow Ca(HCO_3)_2}",
+          "speech": "calcium carbonate plus water plus carbon dioxide gives calcium hydrogencarbonate"
+        },
+        {
+          "type": "text",
+          "text": "Hard water does not lather well with soap. It forms a grey scum instead, wasting soap. It also leaves a white crust, called scale, inside kettles."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Boiling softens hard water that contains calcium hydrogencarbonate. The calcium comes out as calcium carbonate, which forms the scale in kettles.",
+            "Washing soda, sodium carbonate, softens all hard water. Its carbonate ions join with calcium ions to make calcium carbonate, which does not dissolve."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Ca^{2+} + CO_3^{2-} \\rightarrow CaCO_3}",
+          "speech": "a calcium ion plus a carbonate ion gives calcium carbonate"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Compare hard and soft water",
+          "text": "Put equal amounts of rainwater, tap water and borehole water into three bottles. Add three drops of liquid soap to each, close the lids and shake ten times. Measure the height of the lather in each bottle. Then add a pinch of washing soda to the water with the least lather, shake again and compare."
+        },
+        {
+          "type": "heading",
+          "text": "Allotropes of carbon"
+        },
+        {
+          "type": "text",
+          "text": "Allotropes are different forms of the same element in the same state. Diamond and graphite are both pure carbon. Their atoms are joined in different ways, so their properties are very different."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diamond: each carbon atom is strongly joined to four others in a rigid network. It is the hardest natural substance and does not conduct electricity. It is used for cutting tools, drill tips and jewellery.",
+            "Graphite: carbon atoms form flat layers, each atom joined to three others. The layers are held weakly and slide over each other. Some electrons can move, so graphite conducts electricity. It is used in pencils, as a lubricant and in batteries.",
+            "Graphene is a single layer of graphite, one atom thick. Carbon fibres are long thin strands of carbon. Both are very strong and light, and are used in electronics, bicycles and aircraft."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Carbon fuels burn to give carbon dioxide, water and heat. Fossil fuels are non-renewable and not sustainable. Charcoal is sustainable only if trees are regrown. Carbon dioxide is a dense, colourless gas that turns limewater milky. Extra greenhouse gases warm the air and oceans and change the climate. Hard water comes from limestone and can be softened. Diamond and graphite are allotropes of carbon with different structures and uses."
+        }
+      ]
+    }
+  ]
+}

@@ -1,40 +1,157 @@
 {
   "packId": "phy.s1.matter.friction",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s1.matter.friction",
-      "title": "Friction",
+      "title": "Friction and Molecular Forces",
       "subject": "physics",
       "level": "S1",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Effects of forces",
-      "order": 6,
+      "order": 8,
+      "term": 2,
       "outcomes": [
-        "understand the concept of friction in everyday life contexts (u)"
+        "understand the concept of friction in everyday life contexts (u)",
+        "understand the meaning of adhesion and cohesion as forms of molecular forces (u)",
+        "explain surface tension and capillarity in terms of adhesion and cohesion and their application (u, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Friction is a force that opposes relative motion (or attempted motion) between two surfaces in contact. It acts along the surfaces, in the direction opposite to the motion."
+          "text": "After heavy rain, a murram road becomes slippery. People walk carefully, and boda bodas slide. On a dry day the same road is easy to walk on. The difference is friction. In this topic you will also meet the forces that hold water together and make it climb up a lamp wick."
+        },
+        {
+          "type": "heading",
+          "text": "What is friction?"
         },
         {
           "type": "text",
-          "text": "Friction is not always unwanted. It lets us walk without slipping, lets tyres grip the road, and lets brakes stop a moving vehicle. But it also wastes energy as heat and wears surfaces down over time, for example in engine parts, shoe soles, and tyre tread."
+          "text": "Friction is a force that acts between two surfaces that touch. It opposes motion. It acts along the surfaces, in the opposite direction to the way an object moves or tries to move."
         },
         {
           "type": "text",
-          "text": "Friction can be reduced by smoothing or polishing surfaces, or by adding a lubricant such as oil or grease. It can be increased by roughening a surface, for example the tread pattern cut into a tyre."
+          "text": "Friction happens because no surface is perfectly smooth. Under a microscope, even polished metal is covered in tiny bumps. When two surfaces press together, the bumps catch on each other."
         },
         {
           "type": "text",
-          "text": "Use the PhET Friction simulation below. Rub the two surfaces together and watch how friction between them generates heat."
+          "text": "Try pushing a heavy box. At first it does not move, because friction grows to match your push. Friction can only grow so far. The largest friction force before the box starts to slide is called limiting friction. Once the box is sliding, friction is usually a little smaller. That is why it is harder to start a heavy load moving than to keep it moving."
+        },
+        {
+          "type": "heading",
+          "text": "What affects friction?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The type of surfaces: rough surfaces give more friction than smooth ones.",
+            "How hard the surfaces press together: a heavier object presses harder, so friction is greater.",
+            "Lubricants: a layer of oil or grease between the surfaces reduces friction a lot."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Investigating friction",
+          "text": "Tie a string around a brick or a heavy book. Attach a rubber band to the string and pull gently until the brick just starts to move. Measure how long the band has stretched with a ruler. Repeat on a desk top, a cement floor, a sack and some sand. Then put a second book on top. Finally, rest the brick on three round pencils as rollers and pull again. Compare the stretch each time."
+        },
+        {
+          "type": "heading",
+          "text": "Friction: a help and a nuisance"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Useful: we can walk without slipping, tyres grip the road, brakes stop bicycles and cars, nails stay in wood, and knots hold.",
+            "Useful: a pencil writes on paper because friction rubs off the graphite. On glossy plastic there is too little friction, so the pencil hardly marks.",
+            "A nuisance: friction wears away shoe soles and tyres. Over time a tyre becomes smoother and thinner.",
+            "A nuisance: in engines and machines, friction wastes energy as heat and noise."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "We reduce friction with oil on bicycle and motorcycle chains, with ball bearings in wheel hubs, and by smoothing surfaces. We increase it with deep tread on tyres and shoe soles, with rough grips on handles, and by spreading sand or ash on a slippery path. Tyre tread pushes water away on a wet road, so the rubber still grips. A worn, smooth tyre is dangerous in the rain."
+        },
+        {
+          "type": "example",
+          "title": "Explain why a heavy load is easier to move on rollers",
+          "steps": [
+            "When a load is dragged, its whole underside slides over the ground.",
+            "The bumps on the two surfaces catch on each other, so sliding friction is large.",
+            "Logs or pipes placed under the load roll instead of sliding.",
+            "Rolling surfaces do not scrape past each other, so friction is much smaller.",
+            "So a smaller push is needed. Fishermen use logs in this way to pull boats up onto the shore."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cohesion and adhesion"
+        },
+        {
+          "type": "text",
+          "text": "The particles of every substance attract each other. These pulls are called molecular forces. Cohesion is the force of attraction between particles of the same substance, such as water and water. Adhesion is the force of attraction between particles of different substances, such as water and glass."
+        },
+        {
+          "type": "text",
+          "text": "Rain falls on a cocoyam leaf and forms round beads that roll off. Here cohesion between the water particles is stronger than adhesion to the waxy leaf. On clean glass, water spreads out and wets it, because adhesion to the glass is stronger. Mercury forms round drops on glass, because its cohesion is very strong."
+        },
+        {
+          "type": "text",
+          "text": "In a measuring cylinder, water curves up at the edges where it touches the glass. This curve is called the meniscus. Water curves up because of adhesion. Mercury curves down because its cohesion is stronger than its adhesion to glass."
+        },
+        {
+          "type": "heading",
+          "text": "Surface tension"
+        },
+        {
+          "type": "text",
+          "text": "The surface of a liquid behaves like a thin, stretched skin. This is called surface tension. A particle deep in the water is pulled equally in all directions by its neighbours. A particle at the surface has no water above it, so cohesion pulls it sideways and down. The surface pulls itself tight."
+        },
+        {
+          "type": "text",
+          "text": "Surface tension lets small insects walk on a pond. It makes falling drops round. Soap lowers surface tension, so soapy water soaks into clothes and cleans them better. Oil also lowers it. When a thin layer of oil is sprayed on stagnant ponds, mosquito larvae can no longer hang from the surface to breathe, so fewer mosquitoes hatch."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "The skin on water",
+          "text": "Fill a bowl with clean water. Rest a dry steel paper clip on a small piece of tissue and lower it gently onto the water. The tissue soon sinks, but the clip stays on the surface. Now touch the water with a finger dipped in liquid soap and watch the clip. Next, sprinkle pepper or fine ash on fresh water and touch the middle with a soapy finger."
+        },
+        {
+          "type": "heading",
+          "text": "Capillarity"
+        },
+        {
+          "type": "text",
+          "text": "Capillarity is the rise or fall of a liquid in a very narrow tube. Water rises in a narrow glass tube. Adhesion pulls the water up the glass walls, and cohesion pulls the rest of the water up with it. The narrower the tube, the higher the water rises. Mercury falls in a narrow tube, because its cohesion is stronger than its adhesion."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Paraffin climbs up the wick of a tadooba lamp to the flame.",
+            "Water rises through tiny spaces in soil towards plant roots, and up narrow tubes in plant stems.",
+            "Towels, sponges and tissue soak up water through their tiny gaps.",
+            "Damp from the ground can rise up a brick wall. Builders lay a damp-proof course, a strip of polythene or felt, near the bottom of the wall to stop it."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Imagine that friction suddenly disappeared from the world for one day. What could you no longer do? What might become easier?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Friction opposes motion between surfaces in contact. It can be useful or a nuisance, and it can be reduced or increased. Cohesion is attraction between particles of the same substance, and adhesion is attraction between different substances. Cohesion causes surface tension. Adhesion and cohesion together cause capillarity."
         }
       ],
       "sim": {
         "phet": "friction_en.html",
-        "caption": "PhET Friction. Rub two surfaces together and see how friction between them generates heat. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Friction. Drag the top book across the bottom one and zoom in on the surfaces. Rub faster and watch the particles vibrate more and the temperature rise as friction turns movement into heat. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

@@ -1,0 +1,181 @@
+{
+  "packId": "bio.s4.interrelationships.humans-environment",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.interrelationships.humans-environment",
+      "title": "Humans and the Natural Environment",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Interrelationships",
+      "subStrand": "Natural resources, sustainability and pollution",
+      "order": 9,
+      "term": 3,
+      "outcomes": [
+        "understand there is a world-wide focus on sustainability and its importance (u)",
+        "know and give examples of natural resources found in Uganda (k, u)",
+        "appreciate and describe natural factors and human influences that may have an impact on ecosystems, and make suggestions about how to preserve the natural environment for all living things (u, s, v)",
+        "understand the sources, effects and control of air, land and water pollution (u, s, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Uganda is rich in natural resources. The Nile, Lake Victoria, fertile soils, forests and wildlife support millions of people. As the population grows, these resources come under pressure. This topic looks at how we can use them today and still leave enough for the future."
+        },
+        {
+          "type": "heading",
+          "text": "Sustainability and the global goals"
+        },
+        {
+          "type": "text",
+          "text": "Sustainability means meeting our needs today without spoiling the ability of future generations to meet theirs. A fisherman who catches only mature fish leaves young fish to grow and breed, so there will be fish next year."
+        },
+        {
+          "type": "text",
+          "text": "In 2015, the member countries of the United Nations, including Uganda, agreed on 17 Sustainable Development Goals (SDGs) to reach by 2030. They aim to end poverty and hunger, protect the planet and improve life for everyone. Goals closely linked to biology include Goal 2, Zero hunger; Goal 3, Good health and well-being; Goal 6, Clean water and sanitation; Goal 13, Climate action; Goal 14, Life below water; and Goal 15, Life on land."
+        },
+        {
+          "type": "text",
+          "text": "Countries must work together because problems such as climate change and polluted water cross borders. The Nile flows through many countries, and Lake Victoria is shared by Uganda, Kenya and Tanzania."
+        },
+        {
+          "type": "heading",
+          "text": "Natural resources in Uganda"
+        },
+        {
+          "type": "text",
+          "text": "A natural resource is anything in nature that people use to meet their needs."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Renewable resources can be replaced by nature if used carefully. Examples are sunlight, wind, water in lakes and rivers, forests, fish, wildlife, fertile soil and grassland.",
+            "Non-renewable resources took millions of years to form and cannot be replaced. Examples are oil around Lake Albert, limestone for cement at Tororo and Hima, copper and cobalt at Kilembe, gold, and iron ore."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Even renewable resources run out if they are used faster than they are replaced. Forests cut faster than they regrow, and fish caught before they breed, will disappear."
+        },
+        {
+          "type": "heading",
+          "text": "What changes ecosystems"
+        },
+        {
+          "type": "text",
+          "text": "Natural factors that change ecosystems include droughts, floods, landslides on the steep slopes of Mt Elgon, grass fires started by lightning, pests and diseases, and earthquakes in the Rwenzori region."
+        },
+        {
+          "type": "text",
+          "text": "Human activities can harm ecosystems:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Deforestation: cutting trees for charcoal, timber and farmland destroys habitats and causes soil erosion.",
+            "Draining wetlands for farms, factories and houses, as around Kampala, leads to floods and removes natural water filters.",
+            "Overfishing with small-meshed nets catches young fish before they can breed.",
+            "Introducing foreign species: Nile perch, put into Lake Victoria in the 1950s, ate many native cichlid fish, and hundreds of species died out or became rare. Water hyacinth, a foreign water weed, once covered large parts of the lake.",
+            "Poaching: hunting for meat, ivory and horn wiped out Uganda's wild rhinos by the early 1980s.",
+            "Overgrazing, sand mining and pollution also damage land and water."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Human activities can also protect ecosystems:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "National parks and forest reserves, such as Queen Elizabeth National Park and Mabira Forest Reserve, protect habitats. Rhinos are being bred again at Ziwa Rhino Sanctuary.",
+            "Tree planting, agroforestry and the restoration of wetlands.",
+            "Fishing rules, such as banning small nets and protecting breeding grounds.",
+            "Energy-saving stoves, biogas and solar power, which reduce the need for firewood and charcoal."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Pollution"
+        },
+        {
+          "type": "text",
+          "text": "Pollution is the release of harmful substances into the environment in amounts that damage living things. A substance that causes pollution is a pollutant."
+        },
+        {
+          "type": "text",
+          "text": "Air pollution:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sources: smoke from charcoal and firewood stoves, burning rubbish and plastics, vehicle exhaust in busy towns such as Kampala, factories, and dust from murram roads.",
+            "Effects: coughing, asthma and chest infections; acid rain; and global warming from extra carbon dioxide.",
+            "Control: servicing vehicles, cleaner fuels such as gas and biogas, chimneys in kitchens, never burning plastics, and planting trees."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Land pollution:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sources: plastic bags and bottles, broken glass, scrap metal, old phones and batteries, mining waste, and overuse of pesticides.",
+            "Effects: plastics block drains and cause flooding; animals choke on plastic bags; rubbish holds water where mosquitoes breed; chemicals poison soil organisms.",
+            "Control: reduce, reuse and recycle waste; compost food waste; use proper landfills; collect old electronics safely; and use fewer farm chemicals."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Water pollution:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sources: sewage and latrines near water, waste from factories and markets, oil from garages and boats, fertiliser washed off farms, and washing in rivers.",
+            "Effects: diseases such as cholera, typhoid and dysentery. Fertiliser makes algae and water weeds grow fast. When they die and rot, bacteria use up the oxygen in the water, and fish die.",
+            "Control: treating sewage and factory waste, building latrines away from water, and protecting wetlands that filter water. The National Environment Management Authority (NEMA) enforces the laws."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Reduce, reuse, recycle"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Food and garden waste, such as banana and cassava peels, can become compost, animal feed or cooking briquettes.",
+            "Plastic bottles can be reused for water or seedlings, or sold to recycling companies.",
+            "Paper can be reused, made into paper beads or recycled.",
+            "Metal cans and scrap can be sold to scrap dealers for melting and reuse.",
+            "Returnable glass soda bottles are cleaned and refilled."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "School waste audit",
+          "text": "For one day, collect the rubbish from your classroom or part of the compound into separate sacks: food waste, paper, plastic, metal, glass and other. Wear gloves, and leave sharp objects and sanitary waste for the school staff to handle. Count or weigh each type. Discuss which could be reduced, reused, recycled or composted. Then write a class plan for a more sustainable school, such as a compost pit, a tree nursery or a bottle collection point."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Some people have proposed clearing parts of Mabira forest to grow sugarcane, and others cut trees there for charcoal. Who benefits from keeping the forest, and who benefits from clearing it? How could everyone's needs be met?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Sustainability means using resources so that future generations can meet their needs too. Uganda has renewable resources such as forests, fish and water, and non-renewable ones such as oil and minerals. Human activities can harm or protect ecosystems. Air, land and water pollution can be reduced by cleaner fuels, proper waste disposal, recycling and protecting wetlands."
+        }
+      ]
+    }
+  ]
+}

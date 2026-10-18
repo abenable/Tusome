@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.light.refraction",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,30 +9,186 @@
       "subject": "physics",
       "level": "S3",
       "strand": "Light",
-      "subStrand": "Refraction, dispersion, and colour",
+      "subStrand": "Refraction, dispersion and colour",
       "order": 4,
+      "term": 1,
       "outcomes": [
         "understand that light may be refracted as it passes from one medium to another and that this has both consequences and uses (u, s, v/a)",
+        "understand the concept of refractive index (u, s)",
+        "understand the concept of total internal reflection(u)",
         "know that white light can be split into coloured light by refraction (k, s)",
-        "know that white light results from the superimposition of light of all colours of the visible spectrum (u, k)"
+        "know that white light results from the superimposition of light of all colours of the visible spectrum (u, k)",
+        "determine refractive index of glass (s, gs)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Refraction is the bending of light as it passes from one transparent medium into another \u2014 for example from air into glass or water \u2014 caused by a change in the speed of light between the two media. This is why a straight stick appears to bend at the point where it enters water."
+          "text": "Put a stick into a basin of water and it looks bent at the surface. After rain, a rainbow arches over the hills. A fisherman on Lake Victoria sees a fish, but it is not quite where it seems to be. All of these happen because light changes direction when it passes from one material into another."
+        },
+        {
+          "type": "heading",
+          "text": "What is refraction?"
         },
         {
           "type": "text",
-          "text": "White light, like sunlight, is actually a mixture of all the colours of the visible spectrum \u2014 red, orange, yellow, green, blue, indigo, and violet \u2014 superimposed together. Because each colour refracts by a slightly different amount, a glass prism can split (disperse) white light into its separate colours, spreading them out into a spectrum. A rainbow forms in a similar way, as sunlight is refracted and dispersed by tiny water droplets in the air."
+          "text": "Refraction is the bending of light as it passes from one medium (material) into another. It happens because light travels at different speeds in different media. Light is fastest in a vacuum and in air. It is slower in water and slower still in glass."
         },
         {
           "type": "text",
-          "text": "Use the PhET Bending Light simulation below (Prisms screen). Shine white light through a glass prism and watch it split into a spectrum of colours."
+          "text": "Draw a line at right angles to the surface where the ray enters. This line is called the normal. The angle between the incoming ray and the normal is the angle of incidence, i. The angle between the refracted ray and the normal is the angle of refraction, r."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Light entering a denser medium, such as from air into glass, slows down and bends towards the normal.",
+            "Light leaving a denser medium, such as from water into air, speeds up and bends away from the normal.",
+            "A ray that meets the surface along the normal passes straight through without bending."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Refraction has consequences. A stick looks bent in water. A pool or stream looks shallower than it really is, which can be dangerous for people who cannot swim. On a hot day, the road ahead seems wet: this mirage forms when light bends in hot air above the tarmac. Refraction also has uses: spectacles, cameras and microscopes all work by it."
+        },
+        {
+          "type": "heading",
+          "text": "Refractive index"
+        },
+        {
+          "type": "text",
+          "text": "The refractive index, n, of a material tells you how strongly it bends light. A larger refractive index means more bending. Water has a refractive index of about 1.33 and ordinary glass about 1.5. Snell's law links the angles."
+        },
+        {
+          "type": "equation",
+          "latex": "n = \\frac{\\sin i}{\\sin r}",
+          "speech": "n equals sine i divided by sine r"
+        },
+        {
+          "type": "text",
+          "text": "The refractive index also compares the speed of light in a vacuum (or air) with its speed in the material."
+        },
+        {
+          "type": "equation",
+          "latex": "n = \\frac{\\text{speed of light in air}}{\\text{speed of light in the material}}",
+          "speech": "n equals the speed of light in air divided by the speed of light in the material"
+        },
+        {
+          "type": "example",
+          "title": "Refractive index from angles",
+          "steps": [
+            "A ray of light enters a glass block with an angle of incidence of 40°. The angle of refraction is 25°.",
+            "sin 40° = 0.643 and sin 25° = 0.423",
+            "n = sin i ÷ sin r = 0.643 ÷ 0.423",
+            "n ≈ 1.52"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Speed of light in water",
+          "steps": [
+            "Light travels at 3.0 × 10⁸ m/s in air. Water has a refractive index of 1.33.",
+            "Speed in water = speed in air ÷ n = 3.0 × 10⁸ ÷ 1.33",
+            "Speed in water ≈ 2.3 × 10⁸ m/s"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find the refractive index of glass",
+          "text": "Place a glass block on white paper and draw round it. Draw a normal and a ray that meets the block at 20°. Stick two pins on this ray. Look through the opposite side and stick two more pins in line with the first two. Remove the block, join the points and measure the angle of refraction. Repeat for 30°, 40°, 50° and 60°. Plot sin i against sin r. The gradient of the straight line is the refractive index."
+        },
+        {
+          "type": "heading",
+          "text": "Total internal reflection"
+        },
+        {
+          "type": "text",
+          "text": "When light goes from glass or water into air, it bends away from the normal. As the angle of incidence grows, the refracted ray bends closer to the surface. At one angle, the refracted ray runs along the surface. This angle of incidence is called the critical angle, c."
+        },
+        {
+          "type": "text",
+          "text": "If the angle of incidence is bigger than the critical angle, no light leaves. All of it reflects back inside the denser medium. This is total internal reflection. It happens only when light travels from a denser medium towards a less dense one."
+        },
+        {
+          "type": "equation",
+          "latex": "\\sin c = \\frac{1}{n}",
+          "speech": "sine c equals 1 over n"
+        },
+        {
+          "type": "example",
+          "title": "Critical angle of glass",
+          "steps": [
+            "Glass has a refractive index of 1.5.",
+            "sin c = 1 ÷ n = 1 ÷ 1.5 = 0.667",
+            "c ≈ 42°",
+            "Light hitting the inside of the glass at more than 42° is totally internally reflected."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Prism periscopes and binoculars: right-angled glass prisms turn light through 90° by total internal reflection. They give brighter images than plane mirrors and never tarnish.",
+            "Optical fibres: thin glass threads carry light around bends by repeated total internal reflection. They carry internet and phone signals across Uganda and under the oceans.",
+            "Endoscopes: doctors use bundles of optical fibres to see inside the body without large cuts."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Dispersion: splitting white light"
+        },
+        {
+          "type": "text",
+          "text": "Shine a narrow beam of white light into a glass prism. A band of colours comes out: red, orange, yellow, green, blue, indigo and violet. This band is the visible spectrum. Splitting white light into its colours is called dispersion."
+        },
+        {
+          "type": "text",
+          "text": "Dispersion happens because each colour travels at a slightly different speed in glass. So each colour has a slightly different refractive index. Violet light slows the most and bends the most. Red light bends the least."
+        },
+        {
+          "type": "text",
+          "text": "A rainbow forms when sunlight enters raindrops. The light is refracted, dispersed, reflected inside the drop and refracted again as it leaves. You see a rainbow when the sun is behind you and rain is in front. The colours in a thin film of oil on a wet road also come from white light being split up, in this case by light reflecting off the top and bottom of the film."
+        },
+        {
+          "type": "heading",
+          "text": "White light is a mixture"
+        },
+        {
+          "type": "text",
+          "text": "If a second prism is placed upside down after the first, the colours join again into white light. White light is the superimposition (combination) of all the colours of the visible spectrum. A Newton's colour disc shows this too. A card painted with the seven colours looks almost white when it spins fast."
+        },
+        {
+          "type": "heading",
+          "text": "Why objects have colour"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An object looks red because it reflects red light and absorbs the other colours.",
+            "A white object reflects all colours. A black object absorbs all colours.",
+            "A colour filter lets through only its own colour and absorbs the rest. A red filter passes only red light.",
+            "A red shirt seen in blue light looks black, because there is no red light for it to reflect."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Red, green and blue are the primary colours of light. Mixing red and green light gives yellow. Green and blue give cyan, and red and blue give magenta. All three together give white. A television or phone screen is made of tiny dots of red, green and blue light. By changing the brightness of each dot, the screen shows every colour."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Look closely at a phone screen showing a yellow or white picture, using a drop of water on the screen as a magnifier. What colours do you see? Why does the screen not need a yellow dot?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Light bends towards the normal when it slows down and away from it when it speeds up. Refractive index n = sin i ÷ sin r. Beyond the critical angle, light is totally internally reflected. A prism disperses white light because each colour bends by a different amount."
         }
       ],
       "sim": {
         "phet": "bending-light_en.html",
-        "caption": "PhET Bending Light (Prisms screen). Shine white light through a prism and see it split into the colours of the spectrum. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Bending Light (Prisms screen). Shine white light through a prism and see it split into the colours of the spectrum. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

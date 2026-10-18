@@ -1,0 +1,215 @@
+{
+  "packId": "che.s3.carbon.life",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.carbon.life",
+      "title": "Carbon in Life",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Carbon in Life",
+      "subStrand": "Organic compounds, fuels, polymers and detergents",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "recognise that there is a diversity of carbon compounds in living things and materials derived from living things, and that these may be classified into groups (u, s)",
+        "understand that crude oil is a mixture of different alkanes which can be separated by fractional distillation; that these products are used in fuels and to make other useful products (k, u)",
+        "know and appreciate that natural gas deposits are found worldwide, that their main constituent is methane and that gas deposits are useful source of fuels and chemical feedstock (k, u)",
+        "appreciate that biogas is a carbon-based fuel useful for cooking and lighting (u, s)",
+        "know some common synthetic and natural polymers and how their properties relate to their uses (u, s)",
+        "understand and appreciate that alcohols form a group of compounds of which ethanol is a typical member and has many uses (u, s)",
+        "understand how ethanol is made naturally by fermentation of sugars and other organic substances, and be aware of the dangers of abuse of ethanol (u, s)",
+        "know the process of making soapy detergents from natural fats and oils and appreciate that soaps are effective in removing oily stains (u, s)",
+        "know that soapless detergents are made from crude oil and that soapless detergents are better cleaning agents in hard water than the soapy detergents but have a more deleterious effect on the environment (k, u, s)",
+        "understand how organic compounds can be grouped into homologous series, each of which has similarities in structure and properties (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The sugar in your tea, paraffin, a plastic jerrycan and a bar of soap all contain carbon. Carbon atoms join to each other in chains and rings, and to atoms such as hydrogen and oxygen. This gives millions of carbon compounds, called organic compounds because many first came from living things."
+        },
+        {
+          "type": "heading",
+          "text": "Carbon compounds come in families"
+        },
+        {
+          "type": "text",
+          "text": "Chemists sort organic compounds into families. A homologous series is a family with the same general formula and similar chemical properties. Each member differs from the next by one CH₂ group, and boiling point rises as the chain gets longer. A functional group is the group of atoms that gives a family its typical reactions."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alkanes: general formula CₙH₂ₙ₊₂, with only single bonds. Examples: methane (CH₄), ethane (C₂H₆), butane (C₄H₁₀).",
+            "Alkenes: general formula CₙH₂ₙ, with a carbon–carbon double bond (C=C). Examples: ethene (C₂H₄), propene (C₃H₆).",
+            "Alcohols: general formula CₙH₂ₙ₊₁OH, with an –OH group. Examples: methanol (CH₃OH), ethanol (C₂H₅OH).",
+            "Carboxylic acids: an –COOH group. Examples: methanoic acid (HCOOH), ethanoic acid (CH₃COOH, in vinegar), butanoic acid (C₃H₇COOH)."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The start of a name gives the number of carbon atoms: meth- is 1, eth- is 2, prop- is 3 and but- is 4. The ending gives the family: -ane, -ene, -ol or -oic acid. Alkanes hardly react except when they burn. Alkenes are more reactive because of their double bond."
+        },
+        {
+          "type": "example",
+          "title": "Classify compounds by their names",
+          "steps": [
+            "Sort ethanol, butane, ethene and methanoic acid into families.",
+            "Ethanol ends in -ol: an alcohol with 2 carbon atoms.",
+            "Butane ends in -ane: an alkane with 4 carbon atoms, C₄H₁₀.",
+            "Ethene ends in -ene: an alkene with 2 carbon atoms, C₂H₄.",
+            "Methanoic acid ends in -oic acid: a carboxylic acid with 1 carbon atom, HCOOH."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Use a general formula",
+          "steps": [
+            "Find the formula of pentane, the alkane with 5 carbon atoms.",
+            "Alkanes have the general formula CₙH₂ₙ₊₂, and here n = 5.",
+            "Number of hydrogen atoms = 2 × 5 + 2 = 12.",
+            "The formula of pentane is C₅H₁₂."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Crude oil and fractional distillation"
+        },
+        {
+          "type": "text",
+          "text": "Crude oil is a thick, dark liquid found in rocks underground, including around Lake Albert in Uganda. It is a mixture of many alkanes with different chain lengths. Fractional distillation separates it into useful parts called fractions."
+        },
+        {
+          "type": "text",
+          "text": "The crude oil is heated until most of it turns to vapour. The vapour rises up a tall column that is hot at the bottom and cooler at the top. Small molecules have low boiling points, so they condense near the top. Large molecules condense near the bottom."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Refinery gas (1 to 4 carbon atoms): bottled cooking gas.",
+            "Petrol (about 5 to 10 carbon atoms): fuel for cars and boda bodas.",
+            "Kerosene or paraffin (about 10 to 16): lamps, stoves and jet fuel.",
+            "Diesel (about 14 to 20): lorries, buses, tractors and generators.",
+            "Lubricating oil and wax (about 20 to 50): engine oil, candles and polish.",
+            "Bitumen (more than 50): tarmac for roads. Some fractions are also used to make plastics, medicines, dyes, pesticides, explosives and soapless detergents."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Natural gas and biogas"
+        },
+        {
+          "type": "text",
+          "text": "Natural gas is found in rocks all over the world, often above crude oil. Its main part is methane, CH₄. It is a fuel for cooking and making electricity, and a chemical feedstock: a raw material that factories turn into other chemicals, such as fertilisers and plastics."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O}",
+          "speech": "C H 4 plus 2 O 2 gives C O 2 plus 2 H 2 O"
+        },
+        {
+          "type": "text",
+          "text": "Biogas is a fuel gas made when bacteria break down cow dung or food waste without air. It is mostly methane, with some carbon dioxide. On many Ugandan farms, dung goes into a sealed tank called a digester, and the gas is piped to the kitchen for cooking and lighting. It is renewable, because new waste is made every day."
+        },
+        {
+          "type": "heading",
+          "text": "Natural and synthetic polymers"
+        },
+        {
+          "type": "text",
+          "text": "A polymer is a very long molecule made by joining many small molecules, called monomers. For example, thousands of ethene molecules join to form poly(ethene), usually called polythene."
+        },
+        {
+          "type": "equation",
+          "latex": "n\\,\\mathrm{CH_2{=}CH_2} \\rightarrow \\mathrm{[{-}CH_2{-}CH_2{-}]}_n",
+          "speech": "n molecules of ethene join to give polythene, a chain of n repeating C H 2 C H 2 units"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Natural polymers are made by living things: starch in cassava, cellulose in cotton and wood, and proteins in beans and silk.",
+            "Synthetic polymers are made in factories, mostly from crude oil: polythene, PVC and nylon.",
+            "Polythene is light, flexible and waterproof, so it is used for bags and jerrycans.",
+            "PVC is tough and does not rot, so it is used for water pipes.",
+            "Nylon is strong and forms thin threads, so it is used for ropes and fishing nets.",
+            "Cotton absorbs water, so it makes comfortable clothes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Alcohols and ethanol"
+        },
+        {
+          "type": "text",
+          "text": "Ethanol, C₂H₅OH, is the best-known alcohol. It is a colourless liquid that mixes with water and burns with a clean blue flame. It is used as a fuel, a solvent, in hand sanitiser and in alcoholic drinks."
+        },
+        {
+          "type": "text",
+          "text": "Ethanol is made naturally by fermentation: the breakdown of sugar by yeast, without air, to give ethanol and carbon dioxide. Yeast works best when warm, about 25 to 35 °C. Local brews are made this way from bananas, millet or sorghum. Some Ugandan sugar factories ferment molasses, the syrup left after making sugar, to produce ethanol."
+        },
+        {
+          "type": "equation",
+          "expr": "glucose → ethanol + carbon dioxide   (yeast, warm, no air)",
+          "speech": "glucose gives ethanol plus carbon dioxide, using yeast, in warm conditions, without air"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C_6H_{12}O_6 \\rightarrow 2C_2H_5OH + 2CO_2}",
+          "speech": "C 6 H 12 O 6 gives 2 C 2 H 5 O H plus 2 C O 2"
+        },
+        {
+          "type": "text",
+          "text": "Drinking too much alcohol is dangerous. Ethanol slows the brain, and drunk driving causes many accidents. Heavy drinking damages the liver and can lead to addiction. Illegal spirits may contain methanol, which can cause blindness and death."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Watch yeast ferment sugar",
+          "text": "Put warm (not hot) water, two spoons of sugar and one spoon of dry yeast in a small plastic bottle. Stretch a balloon over the mouth and leave it in a warm place. Check every 15 minutes as carbon dioxide from fermentation fills the balloon. Compare a bottle made with cold water."
+        },
+        {
+          "type": "heading",
+          "text": "Soapy and soapless detergents"
+        },
+        {
+          "type": "text",
+          "text": "A detergent helps water remove dirt and grease. Soap is a soapy detergent. It is made by boiling natural fats or oils, such as palm oil, with a strong alkali such as sodium hydroxide. This is called saponification. Salt is then added so that the soap separates out as a solid."
+        },
+        {
+          "type": "equation",
+          "expr": "fat or oil + sodium hydroxide → soap + glycerol",
+          "speech": "fat or oil plus sodium hydroxide gives soap plus glycerol"
+        },
+        {
+          "type": "text",
+          "text": "Each soap particle has a long tail that dissolves in oil and a charged head that dissolves in water. The tails stick into the grease and the heads stay in the water. Rubbing lifts the grease off in tiny droplets that rinse away."
+        },
+        {
+          "type": "text",
+          "text": "Soapless detergents, such as most washing powders, are made from crude oil products. Hard water contains calcium and magnesium ions, which react with soap to form scum. Soapless detergents form no scum, so they clean better in hard water. But some are not easily broken down. They cause foam on rivers, and added phosphates feed algae that use up the oxygen fish need."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Compare lather in soft and hard water",
+          "text": "Your teacher will demonstrate soap making, because sodium hydroxide burns skin. Pour rainwater (soft) into two clear bottles and borehole water (often hard) into two more. Add a little soap solution, made from shaved bar soap, to one bottle of each pair and a pinch of washing powder to the other. Shake each ten times and compare the lather and scum."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Uganda plans to refine some of its Lake Albert crude oil near Hoima. What benefits could this bring, and what must be done to protect the lake, its fish and the people who live nearby?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Organic compounds are grouped into homologous series such as alkanes, alkenes, alcohols and carboxylic acids. Crude oil is separated into fractions by fractional distillation, and natural gas and biogas are mainly methane. Ethanol is made by fermenting sugar. Soap is made from fats and alkali; soapless detergents clean better in hard water but can harm the environment."
+        }
+      ],
+      "sim": {
+        "phet": "build-a-molecule_en.html",
+        "caption": "Build methane, ethane and ethanol from carbon, hydrogen and oxygen atoms. Count how many bonds each carbon atom makes."
+      }
+    }
+  ]
+}

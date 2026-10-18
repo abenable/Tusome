@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.data.probability",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,166 @@
       "strand": "Data and Probability",
       "subStrand": "Probability",
       "order": 11,
+      "term": 3,
       "outcomes": [
-        "Understand the terms random, experiment, outcome, sample space, event and probability. (k, u)",
-        "Construct the probability space. (u, s)",
-        "Determine probabilities from experiments and real-life data. (u, s)",
-        "Differentiate between theoretical and experimental probabilities. (k, u, s)",
-        "Identify and understand mutually exclusive and independent events. (k, u)",
-        "Use probability trees to determine the probabilities of mutually exclusive and independent events. (u, s)",
-        "Use Venn diagrams to determine probabilities. (u, s, v/a)"
+        "understand the terms random, experiment, outcome, sample space, event and probability. (k, u)",
+        "construct the probability space. (u, s)",
+        "determine probabilities from experiments and real-life data. (u, s)",
+        "differentiate between theoretical and experimental probabilities. (k, u, s).",
+        "identify and understand mutually exclusive and independent events. (k, u)",
+        "use probability trees to determine the probabilities of mutually exclusive and independent events. (u, s)",
+        "use Venn diagrams to determine probabilities. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain). The sample space is the set of all possible outcomes of an experiment. Theoretical probability is calculated from the sample space (P(event) = favourable outcomes ÷ total outcomes); experimental probability comes from actually repeating a trial and recording results."
+          "text": "Will it rain in Mbale this afternoon? Will a boda boda be waiting at the stage? We often talk about how likely things are. Probability gives a number to how likely an event is, so we can compare chances and make better decisions."
+        },
+        {
+          "type": "heading",
+          "text": "Words we use in probability"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An experiment is an action whose result we cannot be sure of, such as tossing a coin or rolling a die.",
+            "An outcome is one possible result, such as getting a head.",
+            "The sample space is the set of all possible outcomes. For one die it is {1, 2, 3, 4, 5, 6}.",
+            "An event is one outcome or a group of outcomes, such as getting an even number.",
+            "Random means that nobody can control or predict the result, and each outcome has its fair chance.",
+            "Probability is a number from 0 to 1 that measures how likely an event is."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "On the probability scale, 0 means impossible and 1 means certain. An even chance, like a head on a fair coin, is 1/2 or 0.5. When all outcomes are equally likely, we use this rule:"
         },
         {
           "type": "equation",
-          "latex": "P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}"
+          "latex": "P(A) = \\frac{\\text{number of outcomes in } A}{\\text{total number of outcomes}}",
+          "speech": "the probability of A equals the number of outcomes in A divided by the total number of outcomes"
+        },
+        {
+          "type": "heading",
+          "text": "The probability space"
         },
         {
           "type": "text",
-          "text": "Two coins are tossed. The sample space is {HH, HT, TH, TT} — 4 equally likely outcomes. The theoretical probability of getting exactly one head is 2/4 = 0.5 (HT and TH). Events are mutually exclusive if they cannot both happen at once (e.g. getting HH and getting TT on the same toss); they are independent if one happening doesn't affect the chance of the other (e.g. the two coin tosses)."
+          "text": "A probability space, also called a possibility space, is a table or list of every outcome of an experiment. It is most useful when an experiment has two parts, such as rolling two dice."
         },
         {
           "type": "text",
-          "text": "A probability tree for two independent coin tosses shows each branch's probability (0.5) multiplied along the path to get the outcome's probability: P(HH) = 0.5 x 0.5 = 0.25. For mutually exclusive events, probabilities add: P(HH or TT) = 0.25 + 0.25 = 0.5. A Venn diagram works the same way as in Set Theory (Senior 2, Topic 13), with regions labelled by their probability instead of a count."
+          "text": "For two dice, draw a 6 by 6 grid. Write 1 to 6 along the top for the first die and 1 to 6 down the side for the second die. In each cell, write the sum of the two numbers. There are 6 × 6 = 36 equally likely outcomes."
+        },
+        {
+          "type": "example",
+          "title": "Rolling two dice",
+          "steps": [
+            "Find the probability that the sum of two fair dice is 7.",
+            "The grid has 36 outcomes in total.",
+            "The pairs that add up to 7 are (1, 6), (2, 5), (3, 4), (4, 3), (5, 2) and (6, 1). That is 6 outcomes.",
+            "P(sum is 7) = 6/36 = 1/6.",
+            "No other sum appears 6 times in the grid, so 7 is the most likely total."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Experimental and theoretical probability"
+        },
+        {
+          "type": "text",
+          "text": "Theoretical probability is worked out by reasoning, as we did with the dice. Experimental probability comes from repeating an experiment many times and counting. It is also called relative frequency."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{experimental probability} = \\frac{\\text{number of times the event happened}}{\\text{number of trials}}",
+          "speech": "experimental probability equals the number of times the event happened divided by the number of trials"
+        },
+        {
+          "type": "text",
+          "text": "Suppose Opio tosses a coin 100 times and gets 46 heads. The experimental probability of a head is 46/100 = 0.46. The theoretical probability is 0.5. As the number of trials grows, the experimental probability usually gets closer to the theoretical value."
+        },
+        {
+          "type": "text",
+          "text": "Real-life data works in the same way. If a boda boda stage records that 18 of its last 60 trips went to Nakawa, the probability that the next trip goes to Nakawa is about 18/60 = 0.3."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Toss a coin 100 times",
+          "text": "In pairs, take a coin and agree which side is the head. Toss it 100 times and record each result as H or T. After every 10 tosses, work out the proportion of heads so far. Plot the proportion of heads against the number of tosses and describe what happens. Then toss two coins together 100 times and count how often you get 0, 1 or 2 heads. Compare your counts with the possibility space HH, HT, TH, TT."
+        },
+        {
+          "type": "heading",
+          "text": "Mutually exclusive and independent events"
+        },
+        {
+          "type": "text",
+          "text": "Two events are mutually exclusive if they cannot happen at the same time. Rolling a 2 and rolling a 5 with one die are mutually exclusive. For mutually exclusive events, add the probabilities."
+        },
+        {
+          "type": "equation",
+          "latex": "P(A \\text{ or } B) = P(A) + P(B)",
+          "speech": "the probability of A or B equals the probability of A plus the probability of B"
+        },
+        {
+          "type": "text",
+          "text": "Two events are independent if one does not change the probability of the other. Tossing a coin and rolling a die are independent. For independent events, multiply the probabilities."
+        },
+        {
+          "type": "equation",
+          "latex": "P(A \\text{ and } B) = P(A) \\times P(B)",
+          "speech": "the probability of A and B equals the probability of A times the probability of B"
+        },
+        {
+          "type": "heading",
+          "text": "Tree diagrams"
+        },
+        {
+          "type": "text",
+          "text": "A tree diagram shows each stage of an experiment as a set of branches. Write the probability on each branch. Multiply along a path to find the probability of that path. When more than one path gives the event you want, add their probabilities."
+        },
+        {
+          "type": "example",
+          "title": "Rain on two days in Gulu",
+          "steps": [
+            "On any day in April, the probability of rain in Gulu is 0.6. Assume the days are independent. Find the probability that it rains on exactly one of two days.",
+            "Day 1 has two branches: Rain (0.6) and No rain (0.4). From each of these, Day 2 has the same two branches.",
+            "Path Rain then No rain: 0.6 × 0.4 = 0.24.",
+            "Path No rain then Rain: 0.4 × 0.6 = 0.24.",
+            "These two paths are mutually exclusive, so add them: 0.24 + 0.24 = 0.48.",
+            "Check: the four paths give 0.36, 0.24, 0.24 and 0.16, which add up to 1."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Venn diagrams"
+        },
+        {
+          "type": "text",
+          "text": "A Venn diagram shows sets as overlapping circles inside a rectangle. You met them in Senior 2 set theory. The numbers in each region help you find probabilities."
+        },
+        {
+          "type": "example",
+          "title": "Games in a class in Jinja",
+          "steps": [
+            "In a class of 40 learners, 22 play football, 15 play netball and 6 play both.",
+            "Draw two overlapping circles, F and N, inside a rectangle. Write 6 in the overlap.",
+            "Football only: 22 − 6 = 16. Netball only: 15 − 6 = 9.",
+            "Learners in at least one circle: 16 + 6 + 9 = 31. Neither: 40 − 31 = 9, written outside the circles.",
+            "P(a learner chosen at random plays neither game) = 9/40.",
+            "P(the learner plays exactly one game) = (16 + 9)/40 = 25/40 = 5/8."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "In one class, 30 learners each belong to one or two of three clubs. The Arts Club list has 15 names, the Science Club 12 and the Mathematics Club 13. How could you find how many learners are in two clubs without knowing which clubs they joined?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Probability is a number from 0 (impossible) to 1 (certain). For equally likely outcomes, P(event) = favourable outcomes ÷ total outcomes. Add probabilities for mutually exclusive events and multiply them for independent events. Possibility spaces, tree diagrams and Venn diagrams help you organise outcomes."
         }
       ]
     }

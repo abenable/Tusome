@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.waves.general",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,153 @@
       "strand": "Waves",
       "subStrand": "General wave properties",
       "order": 6,
+      "term": 2,
       "outcomes": [
         "understand that energy is transferred by waves, and these may be transverse or longitudinal (k, u)",
-        "know and use the relationship between velocity, frequency, and wavelength (k, s)"
+        "know and use the relationship between velocity, frequency, and wavelength (k, s)",
+        "understand the propagation, properties, and uses of electromagnetic waves, and that white light is a mixture of frequencies but that light from a laser is a single frequency (k, u, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A wave transfers energy from one place to another without transferring matter. Waves are described as transverse if the particles (or field) vibrate at right angles to the direction the wave travels \u2014 like a wave on a string \u2014 or longitudinal if the vibration is along the same direction as the wave travels, like sound."
+          "text": "Throw a stone into a still pond and ripples spread out in rings. A leaf floating on the water bobs up and down as the ripples pass, but it does not travel with them. The ripples carry energy across the pond, but the water itself stays where it is. Sound, light, radio and mobile phone signals all travel in a similar way, as waves."
+        },
+        {
+          "type": "heading",
+          "text": "Waves transfer energy"
         },
         {
           "type": "text",
-          "text": "Key features of a wave: amplitude (the maximum displacement from the rest position), wavelength (the distance between one point on the wave and the next identical point, such as crest to crest), frequency (the number of complete waves passing a point each second, measured in hertz, Hz), and period (the time taken for one complete wave)."
+          "text": "A wave is a disturbance that carries energy from one place to another without carrying matter with it. The particles of the medium (the material the wave travels through) only vibrate about a fixed position."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In a transverse wave, the particles vibrate at right angles to the direction the wave travels. Examples: water ripples, a wave on a rope, and all electromagnetic waves such as light.",
+            "In a longitudinal wave, the particles vibrate back and forth along the direction the wave travels. Sound is the main example. The wave is a series of compressions, where particles crowd together, and rarefactions, where they spread apart."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Mechanical waves, such as sound and water waves, need a medium to travel through. Electromagnetic waves can travel through empty space. A progressive wave travels outwards from its source. A stationary wave stays in one place, as on a plucked guitar string."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Waves on a spring and a rope",
+          "text": "Stretch a slinky spring, or a long, soft coil of wire, along the floor between two learners. Move one end quickly from side to side to send a transverse wave. Then push and pull the end along the spring to send a longitudinal wave. Tie a piece of wool to one coil and watch it. Does the wool travel along the spring, or only vibrate? Try the same with a long rope tied to a post."
+        },
+        {
+          "type": "heading",
+          "text": "Describing a wave"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Crest and trough: the highest and lowest points of a transverse wave.",
+            "Amplitude (A): the greatest distance a particle moves from its rest position. A bigger amplitude carries more energy.",
+            "Wavelength (λ, the Greek letter lambda): the distance between two neighbouring crests, or two neighbouring compressions. It is measured in metres.",
+            "Frequency (f): the number of complete waves passing a point each second. It is measured in hertz (Hz). 1 Hz means one wave per second.",
+            "Period (T): the time for one complete wave to pass. T = 1 ÷ f."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "The wave equation"
+        },
+        {
+          "type": "text",
+          "text": "In one second, f waves pass a point, and each wave is λ metres long. So the wave travels f × λ metres every second. This is its velocity (speed)."
         },
         {
           "type": "equation",
-          "latex": "v = f \\lambda"
+          "latex": "v = f\\lambda",
+          "speech": "v equals f times lambda"
+        },
+        {
+          "type": "example",
+          "title": "Ripples in a ripple tank",
+          "steps": [
+            "A dipper in a ripple tank makes 10 waves in 2 seconds. The distance between neighbouring crests is 3 cm.",
+            "Frequency f = 10 ÷ 2 = 5 Hz",
+            "Period T = 1 ÷ f = 1 ÷ 5 = 0.2 s",
+            "Speed v = fλ = 5 × 3 = 15 cm/s"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Wavelength of an FM radio station",
+          "steps": [
+            "An FM radio station broadcasts at 100 MHz (100 000 000 Hz). Radio waves travel at 3 × 10⁸ m/s.",
+            "λ = v ÷ f = 3 × 10⁸ ÷ 1 × 10⁸",
+            "λ = 3 m"
+          ]
         },
         {
           "type": "text",
-          "text": "The wave equation relates the speed (v), frequency (f), and wavelength (\u03bb, the Greek letter lambda) of a wave."
+          "text": "A ripple tank shows other wave properties. Waves reflect from a straight barrier. They slow down and their wavelength gets shorter when they pass into shallow water, which is refraction. They spread out after passing through a narrow gap, which is called diffraction."
+        },
+        {
+          "type": "heading",
+          "text": "Electromagnetic waves"
         },
         {
           "type": "text",
-          "text": "Use the PhET Wave on a String simulation below. Change the frequency and amplitude of the wave and see how the wave's shape and speed respond."
+          "text": "Electromagnetic waves are transverse waves of electric and magnetic energy. They need no medium, so they can cross empty space from the Sun to the Earth. In a vacuum, they all travel at the same speed, 3 × 10⁸ m/s. Together they make up the electromagnetic spectrum. Here it is in order of increasing frequency and decreasing wavelength."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Radio waves: radio and television broadcasting.",
+            "Microwaves: mobile phone networks, satellite TV, wifi and microwave ovens.",
+            "Infrared: felt as heat from a charcoal stove; used in TV remote controls and night-vision cameras.",
+            "Visible light: the only part our eyes detect; used for seeing and photography.",
+            "Ultraviolet (UV): kills germs; sunlight in clear plastic bottles can make drinking water safer; shows hidden marks on banknotes.",
+            "X-rays: show broken bones in hospitals and check luggage at Entebbe airport.",
+            "Gamma rays: kill cancer cells and sterilise medical equipment."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "X-rays and the dangers of high-frequency waves"
+        },
+        {
+          "type": "text",
+          "text": "X-rays are produced in an X-ray tube. Fast-moving electrons crash into a metal target, such as tungsten, and their energy is given out as X-rays. X-rays pass easily through skin and muscle but are stopped by bone, which is why bones show up on an X-ray picture."
+        },
+        {
+          "type": "text",
+          "text": "Higher frequencies carry more energy. Too much ultraviolet causes sunburn, damage to the eyes and skin cancer. People with albinism are most at risk and should protect their skin and eyes with long sleeves, hats and sunglasses. Welders must wear dark face shields. X-rays and gamma rays can damage living cells and cause cancer. That is why radiographers stand behind a screen and patients have only the X-rays they need."
+        },
+        {
+          "type": "heading",
+          "text": "White light and laser light"
+        },
+        {
+          "type": "text",
+          "text": "White light from the Sun or a bulb is a mixture of many frequencies. Each frequency is a different colour. The light spreads out in all directions."
+        },
+        {
+          "type": "text",
+          "text": "A laser gives light of a single frequency, so it is one pure colour. The beam is narrow and hardly spreads out, even over long distances. Lasers are used in supermarket barcode scanners, eye surgery, cutting metal, laser pointers and in sending signals along optical fibres. Never shine a laser into anyone's eyes: it can damage the retina."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Mobile phone masts, radio stations and microwave ovens all use electromagnetic waves. Why are radio waves and microwaves considered much safer than X-rays and gamma rays?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Waves carry energy, not matter. In transverse waves the vibrations are across the direction of travel; in longitudinal waves they are along it. Wave speed v = fλ. All electromagnetic waves travel at 3 × 10⁸ m/s in a vacuum, and higher frequencies carry more energy."
         }
       ],
       "sim": {
         "phet": "wave-on-a-string_en.html",
-        "caption": "PhET Wave on a String. Change frequency and amplitude and watch a transverse wave travel along a string. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Wave on a String. Change frequency and amplitude and watch a transverse wave travel along a string. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

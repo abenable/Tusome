@@ -1,0 +1,168 @@
+{
+  "packId": "bio.s4.genetics.variation-selection",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.genetics.variation-selection",
+      "title": "Variation and Selection",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Genetics",
+      "subStrand": "Variation, mutation and selection",
+      "order": 5,
+      "term": 2,
+      "outcomes": [
+        "appreciate that variation in organisms is due to external and internal factors, and that mutations can be beneficial, harmful or neutral (k, u)",
+        "identify diseases associated with genetic disorders; e.g. sickle cell anaemia, albinism, and Down’s syndrome (u, v)",
+        "understand the concept of natural selection as a mechanism of evolution (k, u)",
+        "understand the use of artificial selection in selective breeding (u, a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Look around your class. No two learners are exactly alike. Some are taller, some have darker skin, and some can roll their tongues. Even children of the same parents differ. Differences between members of the same species are called variation."
+        },
+        {
+          "type": "heading",
+          "text": "Types of variation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Continuous variation has a range of values with no clear groups, such as height, body mass and the length of maize cobs. Most individuals are near the middle of the range.",
+            "Discontinuous variation puts individuals into clear groups with nothing in between, such as blood groups A, B, AB and O, tongue rolling, and albinism."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Causes of variation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Internal (genetic) causes: the genes inherited from parents, the shuffling of chromosomes in meiosis, the chance meeting of a sperm and an ovum at fertilisation, and mutations.",
+            "External (environmental) causes: food, sunlight, water, soil, temperature, disease and exercise. A maize plant in fertile soil grows taller than an identical one in poor soil."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Many characteristics, such as height, depend on both genes and environment. Variation caused only by the environment is not passed on to offspring."
+        },
+        {
+          "type": "heading",
+          "text": "Mutations"
+        },
+        {
+          "type": "text",
+          "text": "A mutation is a sudden change in a gene, or in the number or structure of chromosomes. Mutations happen by chance when DNA is copied. Radiation such as X-rays, and some chemicals such as those in tobacco smoke, make them more likely. Mutations are the source of new alleles."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Beneficial mutations help an organism survive. Some malaria parasites carry mutations that let them survive certain drugs.",
+            "Harmful mutations reduce survival or cause disease, such as sickle cell anaemia.",
+            "Neutral mutations make no difference to survival, because they do not change how the body works."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A mutation can be harmful in one setting and helpful in another. A person with one sickle cell allele has sickle cell trait. They are usually healthy and are better protected against severe malaria. A person with two sickle cell alleles has sickle cell anaemia."
+        },
+        {
+          "type": "heading",
+          "text": "Genetic disorders"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sickle cell anaemia: a gene mutation changes haemoglobin, so red blood cells become stiff and sickle shaped. They block small blood vessels, causing pain, swollen hands and feet, infections and anaemia. A child has it only if both parents pass on the allele. Regular clinic care, folic acid, plenty of water and malaria prevention help people live well.",
+            "Albinism: a recessive allele stops the body making melanin, the dark pigment of skin, hair and eyes. People with albinism have very light skin and often weak eyesight. They burn easily and have a high risk of skin cancer, so sunscreen, hats, long sleeves and eye care protect them.",
+            "Down’s syndrome: an extra copy of chromosome 21 gives 47 chromosomes. It happens when chromosomes fail to separate properly in meiosis. It causes some learning difficulty and may cause heart problems. The chance rises as the mother gets older."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "People with genetic disorders did nothing to cause them, and these conditions cannot be caught like an infection. Beliefs that they come from curses are false. Everyone deserves respect and a full place in school and community life. Couples can find out their sickle cell status at a health centre."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Measure variation",
+          "text": "Measure the height of every learner in your class to the nearest centimetre. Group the results, such as 140 to 149 cm and 150 to 159 cm, and draw a bar chart. Then record how many learners can and cannot roll their tongues, and draw a second bar chart. Compare the shapes of the two charts. Which shows continuous variation, and which shows discontinuous variation?"
+        },
+        {
+          "type": "heading",
+          "text": "Natural selection"
+        },
+        {
+          "type": "text",
+          "text": "Charles Darwin explained how living things change over many generations. He called the process natural selection. It works in steps:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Organisms produce more offspring than can survive. A female Nile perch can lay millions of eggs.",
+            "The offspring vary.",
+            "They compete for food, space and mates, and face predators and disease.",
+            "Those with features best suited to the environment survive and reproduce more. This is called survival of the fittest.",
+            "They pass their useful alleles to their offspring.",
+            "Over many generations, the useful features become more common in the population."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "Evolution is the gradual change in a species over many generations, and natural selection is its main cause. Over a long time, populations can change so much that new species form. The hundreds of kinds of small cichlid fish in Lake Victoria are thought to have evolved from a few ancestors."
+        },
+        {
+          "type": "text",
+          "text": "Natural selection is happening today. Chloroquine was once Uganda's main malaria drug. A few malaria parasites had mutations that let them survive it. They multiplied, chloroquine stopped working, and doctors now use other drugs. Some mosquitoes are now resistant to insecticides in the same way."
+        },
+        {
+          "type": "text",
+          "text": "The Natural Selection simulation with this lesson lets you watch this process in a population of rabbits."
+        },
+        {
+          "type": "heading",
+          "text": "Artificial selection"
+        },
+        {
+          "type": "text",
+          "text": "In artificial selection, people choose which plants or animals breed. This is selective breeding. Breeders choose parents with useful features, cross them, keep the best offspring, and repeat for many generations."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ankole cattle survive heat and disease well, while Friesian cattle give a lot of milk. Crossing them gives cows that do both.",
+            "Chickens such as the Kuroiler were bred to grow fast and lay many eggs while still feeding around the home.",
+            "The National Agricultural Research Organisation (NARO) breeds cassava that resists cassava mosaic disease, and beans and maize that give high yields or resist drought."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Selective breeding gives higher yields and better food. But growing only a few varieties reduces genetic variety, so one new disease could harm many farms at once. Keeping some local varieties protects against this."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers once grew many local banana and bean varieties. Many now grow only a few improved ones. What might be gained, and what might be lost?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Variation is caused by genes and the environment, but only genetic variation is inherited. Mutations create new alleles and can be beneficial, harmful or neutral. Sickle cell anaemia, albinism and Down’s syndrome are genetic disorders. In natural selection, the best-suited individuals survive and breed, so species change over time. In artificial selection, people choose the parents."
+        }
+      ],
+      "sim": {
+        "phet": "natural-selection_en.html",
+        "caption": "Add a mate for the first rabbit, then add the brown fur mutation and turn on wolves. Switch between the equator and arctic environments and watch which fur colour becomes more common over the generations."
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "packId": "che.s4.consumables.nuclear-processes",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.consumables.nuclear-processes",
+      "title": "Nuclear Processes",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Consumable Chemicals",
+      "subStrand": "Radioactivity, fission and fusion",
+      "order": 6,
+      "term": 3,
+      "outcomes": [
+        "understand atomic structure, the processes of nuclear fission and fusion, the use we can make of them, and the dangers associated with them (k, u)",
+        "understand the spontaneous and random nature of nuclear decay and interpret decay data in terms of half-life (u, s)",
+        "understand and appreciate that there are significant social, political, and environmental dimensions associated with use of nuclear power (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The Sun shines because of nuclear reactions deep inside it. The Uganda Cancer Institute at Mulago uses radiation to treat cancer. Uganda also plans to build its first nuclear power station. All of these depend on changes inside the nucleus of an atom."
+        },
+        {
+          "type": "heading",
+          "text": "The nucleus and nuclides"
+        },
+        {
+          "type": "text",
+          "text": "An atom has a tiny nucleus of protons and neutrons, with electrons around it. A nuclide is one particular kind of nucleus, with a stated number of protons and neutrons. We write it with the mass number (nucleon number) at the top and the atomic number (proton number) at the bottom."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{12}_{6}\\mathrm{C} \\qquad {}^{14}_{6}\\mathrm{C}",
+          "speech": "carbon 12 and carbon 14, both with atomic number 6"
+        },
+        {
+          "type": "text",
+          "text": "Carbon-12 has 6 protons and 6 neutrons. Carbon-14 has 6 protons and 8 neutrons. They are isotopes of carbon. Some nuclides are unstable, because they have too many or too few neutrons. An unstable nucleus breaks down and gives out radiation. This is called radioactivity."
+        },
+        {
+          "type": "heading",
+          "text": "Types of radiation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alpha particles (α) are 2 protons and 2 neutrons, the same as a helium nucleus, with a charge of +2. They are stopped by a sheet of paper or a few centimetres of air, and they strongly ionise the atoms they hit.",
+            "Beta particles (β) are fast electrons, with a charge of −1, made when a neutron in the nucleus changes into a proton. They are stopped by a few millimetres of aluminium.",
+            "Gamma rays (γ) are electromagnetic waves with no mass and no charge. They are very penetrating and are reduced only by thick lead or concrete."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "In a nuclear equation, the mass numbers must balance on both sides, and so must the atomic numbers."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{238}_{92}\\mathrm{U} \\rightarrow {}^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He} \\qquad {}^{14}_{6}\\mathrm{C} \\rightarrow {}^{14}_{7}\\mathrm{N} + {}^{0}_{-1}\\mathrm{e}",
+          "speech": "Uranium 238 gives thorium 234 plus an alpha particle, helium 4. Carbon 14 gives nitrogen 14 plus a beta particle"
+        },
+        {
+          "type": "example",
+          "title": "Balance a nuclear equation",
+          "steps": [
+            "Radium-226, atomic number 88, gives out an alpha particle. What new nuclide forms?",
+            "An alpha particle has mass number 4 and atomic number 2.",
+            "New mass number = 226 − 4 = 222",
+            "New atomic number = 88 − 2 = 86, which is radon (Rn).",
+            "So radium-226 decays to radon-222 and an alpha particle."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Random decay and half-life"
+        },
+        {
+          "type": "text",
+          "text": "Radioactive decay is spontaneous: it happens on its own, and heating, pressure or chemical reactions cannot change its speed. It is also random: we cannot say which nucleus will decay next, or when. But in a sample with huge numbers of atoms, the overall pattern is predictable."
+        },
+        {
+          "type": "text",
+          "text": "The half-life of a radioactive isotope is the time taken for half of its nuclei to decay. Each isotope has its own half-life. Iodine-131 has a half-life of 8 days, carbon-14 about 5730 years, and uranium-238 about 4.5 billion years."
+        },
+        {
+          "type": "example",
+          "title": "Use a half-life",
+          "steps": [
+            "A sample contains 80 g of iodine-131, which has a half-life of 8 days. How much is left after 24 days?",
+            "Number of half-lives = 24 ÷ 8 = 3",
+            "80 g → 40 g → 20 g → 10 g",
+            "10 g of iodine-131 is left. The rest has decayed into a different element, xenon."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find a half-life from decay data",
+          "steps": [
+            "A detector measures the count rate of a sample: 400 counts per minute at the start, 200 after 10 minutes, 100 after 20 minutes and 50 after 30 minutes.",
+            "The count rate halves every 10 minutes.",
+            "So the half-life is 10 minutes.",
+            "On a graph of count rate against time, the curve falls steeply at first, then more slowly, and never quite reaches zero."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model half-life with bottle tops",
+          "text": "Each group needs 100 bottle tops. Shake them in a box and tip them out. Remove every top that lands face up, as if it has decayed, and count those left. Shake the remaining tops again and repeat until only a few are left. Plot the number left against the number of throws. About half are removed each time, like nuclei in one half-life. Notice that you can never predict which top will go next."
+        },
+        {
+          "type": "heading",
+          "text": "Nuclear fission and fusion"
+        },
+        {
+          "type": "text",
+          "text": "Nuclear fission is the splitting of a large nucleus, such as uranium-235, into two smaller nuclei after it absorbs a neutron. This releases a huge amount of energy and two or three more neutrons. These neutrons can split more uranium nuclei, causing a chain reaction. In a nuclear power station, the chain reaction is controlled, and the heat boils water to make steam that turns turbines."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{235}_{92}\\mathrm{U} + {}^{1}_{0}\\mathrm{n} \\rightarrow {}^{141}_{56}\\mathrm{Ba} + {}^{92}_{36}\\mathrm{Kr} + 3\\,{}^{1}_{0}\\mathrm{n} + \\text{energy}",
+          "speech": "uranium 235 plus a neutron gives barium 141 plus krypton 92 plus 3 neutrons plus energy"
+        },
+        {
+          "type": "text",
+          "text": "Nuclear fusion is the joining of two small nuclei to make a larger one. In the Sun, hydrogen nuclei fuse to form helium, releasing the energy that reaches us as light and heat. Fusion needs temperatures of millions of degrees, so it is not yet used in power stations."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{2}_{1}\\mathrm{H} + {}^{3}_{1}\\mathrm{H} \\rightarrow {}^{4}_{2}\\mathrm{He} + {}^{1}_{0}\\mathrm{n} + \\text{energy}",
+          "speech": "hydrogen 2 plus hydrogen 3 gives helium 4 plus a neutron plus energy"
+        },
+        {
+          "type": "heading",
+          "text": "Uses and dangers of radiation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Medicine: gamma rays from cobalt-60 kill cancer cells, and iodine-131 is used to treat the thyroid gland. Gamma rays also sterilise syringes and bandages.",
+            "Dating: carbon-14 is used to find the age of old bones, wood and cloth.",
+            "Industry: radiation finds leaks in underground pipes and checks the thickness of paper and metal sheets.",
+            "Energy: nuclear fission produces large amounts of electricity without releasing carbon dioxide."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Radiation can damage living cells. It can cause burns, radiation sickness and cancer, and it can harm unborn babies. People who work with radioactive materials keep their exposure time short, handle sources with tongs at a safe distance, and use shields such as lead aprons and concrete walls. They wear badges that record the radiation they receive, and they store sources in lead-lined containers marked with the radiation warning sign."
+        },
+        {
+          "type": "heading",
+          "text": "Nuclear power: social, political and environmental questions"
+        },
+        {
+          "type": "text",
+          "text": "Nuclear power gives large amounts of steady electricity from a small amount of fuel, and it does not release greenhouse gases. This is why Uganda is considering it to meet a growing demand for electricity."
+        },
+        {
+          "type": "text",
+          "text": "But nuclear power raises serious questions. Radioactive waste stays dangerous for thousands of years and must be stored safely. Accidents at Chernobyl in 1986 and Fukushima in 2011 spread radiation over wide areas and forced people to leave their homes. Power stations are very costly to build. Nuclear materials must be guarded so that they cannot be used for weapons, so countries accept inspections by the International Atomic Energy Agency. Communities near a planned site must be consulted and kept safe."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Should Uganda build a nuclear power station, or invest more in hydropower, solar energy and other renewable sources? Think about cost, safety, waste, jobs and the environment."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Unstable nuclei decay randomly and spontaneously, giving out alpha, beta or gamma radiation. The half-life is the time for half the nuclei in a sample to decay. Fission splits large nuclei and fusion joins small ones, and both release huge amounts of energy. Radiation is useful in medicine, industry and power, but it is dangerous and must be handled with strict safety rules."
+        }
+      ],
+      "sim": {
+        "phet": "build-an-atom_en.html",
+        "caption": "Build carbon-12 with 6 protons and 6 neutrons. Then add or remove neutrons and watch when the nucleus becomes unstable. Unstable nuclei are the radioactive ones."
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.angle-properties-of-geometric-figures",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,36 +11,174 @@
       "strand": "Geometry and Measures",
       "subStrand": "Angle properties",
       "order": 8,
+      "term": 2,
       "outcomes": [
         "identify different angles. (k)",
-        "solve problems involving angles at a point on a straight line, angles on a transversal and parallel lines. (k, u, s)",
-        "know and use the angle sum of a triangle. (k, u)",
-        "state and uses angle properties of polygons when solving problems. (u, s)"
+        "solve problems involving angles at a point on a straight line, angles on a transversal and parallel lines. (k u s)",
+        "know and use the angle sum of a triangle. (k u)",
+        "state and uses angle properties of polygons when solving problems. (u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Angles are classified by size: acute (less than 90°), right (exactly 90°), obtuse (between 90° and 180°), straight (exactly 180°), and reflex (between 180° and 360°). Angles on a straight line always add up to 180°, and angles at a point (all the way around) always add up to 360°."
+          "text": "Angles are all around us. A carpenter checks that the corner of a door frame is square. Two roads cross at a junction in Mbarara. In this topic you learn to name angles and to use simple rules to find angles you cannot measure."
+        },
+        {
+          "type": "heading",
+          "text": "Naming angles"
         },
         {
           "type": "text",
-          "text": "When a transversal crosses a pair of parallel lines, it creates equal pairs of angles: corresponding angles (same position at each crossing) are equal, and alternate angles (on opposite sides of the transversal, between the parallel lines) are equal. Angles on the same side of the transversal, between the parallel lines, are supplementary — they add up to 180°."
+          "text": "An angle is the amount of turn between two lines that meet at a point. The point is called the vertex. We measure angles in degrees (°) with a protractor. A full turn is 360°."
+        },
+        {
+          "type": "list",
+          "items": [
+            "An acute angle is less than 90°.",
+            "A right angle is exactly 90°. It is often marked with a small square.",
+            "An obtuse angle is more than 90° but less than 180°.",
+            "A straight angle is exactly 180°. It looks like a straight line.",
+            "A reflex angle is more than 180° but less than 360°."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Angles at a point and on a straight line"
         },
         {
           "type": "text",
-          "text": "The angles inside any triangle always add up to 180°. If a triangle has angles of 50° and 65°, the third angle is 180 - 50 - 65 = 65°."
+          "text": "Angles that meet at a point and fill the whole turn add up to 360°. Angles that sit side by side on a straight line add up to 180°. When two straight lines cross, they make two pairs of vertically opposite angles. Vertically opposite angles are equal."
         },
         {
           "type": "equation",
-          "expr": "180 - 50 - 65 = 65"
-        },
-        {
-          "type": "text",
-          "text": "This 180° fact extends to any polygon: split a polygon with n sides into (n-2) triangles from one vertex, and since each triangle contributes 180°, the interior angles of any polygon sum to (n-2) x 180°. For a pentagon (n=5): (5-2) x 180 = 540°. A regular polygon's exterior angles always sum to 360°, so a regular polygon with an exterior angle of 72° has 360 ÷ 72 = 5 sides."
+          "latex": "a + b = 180^\\circ",
+          "speech": "a plus b equals 180 degrees, for angles on a straight line"
         },
         {
           "type": "equation",
-          "latex": "\\text{interior angle sum} = (n-2) \\times 180^\\circ"
+          "latex": "a + b + c + d = 360^\\circ",
+          "speech": "a plus b plus c plus d equals 360 degrees, for angles at a point"
+        },
+        {
+          "type": "example",
+          "title": "Angles on a straight line",
+          "steps": [
+            "Two angles lie side by side on a straight line. One is x and the other is 2x + 30°. Find x.",
+            "Angles on a straight line add up to 180°, so x + 2x + 30 = 180.",
+            "Collect the x terms: 3x + 30 = 180.",
+            "Subtract 30 from both sides: 3x = 150.",
+            "Divide both sides by 3: x = 50°.",
+            "The two angles are 50° and 2 × 50 + 30 = 130°. Check: 50 + 130 = 180."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Parallel lines and a transversal"
+        },
+        {
+          "type": "text",
+          "text": "Parallel lines are lines that stay the same distance apart and never meet, like the two rails of a railway line. A transversal is a line that crosses two or more parallel lines, like a road crossing the railway. The transversal makes eight angles, and they come in equal pairs."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Corresponding angles are in matching positions at each crossing. They are equal. They sit inside an F shape.",
+            "Alternate angles are on opposite sides of the transversal, between the parallel lines. They are equal. They sit inside a Z shape.",
+            "Co-interior angles are on the same side of the transversal, between the parallel lines. They add up to 180°. They sit inside a C shape."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Finding angles on parallel lines",
+          "steps": [
+            "A transversal crosses two parallel lines. The angle above the top line, on the right of the transversal, is 65°.",
+            "The corresponding angle at the bottom line is in the same position, so it is also 65°.",
+            "The alternate angle is between the parallel lines on the other side of the transversal, so it is 65°.",
+            "The co-interior angle is between the lines on the same side. It is 180° − 65° = 115°."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The angle sum of a triangle"
+        },
+        {
+          "type": "text",
+          "text": "The three angles inside any triangle add up to 180°. To see why, draw a line through the top vertex that is parallel to the base. The two angles at the base are equal to two alternate angles at the top. Together with the top angle, they make a straight line, which is 180°."
+        },
+        {
+          "type": "equation",
+          "latex": "a + b + c = 180^\\circ",
+          "speech": "a plus b plus c equals 180 degrees, for the angles of a triangle"
+        },
+        {
+          "type": "text",
+          "text": "An exterior angle is made when one side of a triangle is extended. The exterior angle equals the sum of the two interior angles opposite it."
+        },
+        {
+          "type": "example",
+          "title": "Missing angles in triangles",
+          "steps": [
+            "A triangle has angles of 48° and 75°. Find the third angle.",
+            "Third angle = 180° − 48° − 75° = 57°.",
+            "An isosceles triangle has two equal base angles. Its top angle is 40°. Find each base angle.",
+            "The two base angles share 180° − 40° = 140°.",
+            "Each base angle is 140° ÷ 2 = 70°. Check: 40 + 70 + 70 = 180."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Angles in polygons"
+        },
+        {
+          "type": "text",
+          "text": "A polygon is a flat shape with straight sides. A polygon with n sides can be split into n − 2 triangles by drawing lines from one vertex. Each triangle gives 180°, so the interior angles add up to (n − 2) × 180°."
+        },
+        {
+          "type": "equation",
+          "latex": "S = (n - 2) \\times 180^\\circ",
+          "speech": "the sum of the interior angles equals n minus 2, times 180 degrees"
+        },
+        {
+          "type": "text",
+          "text": "If you walk all the way round a polygon, you turn through one full turn. So the exterior angles of any polygon add up to 360°. In a regular polygon all sides and angles are equal, so each exterior angle is 360° ÷ n. Each interior angle is 180° minus the exterior angle."
+        },
+        {
+          "type": "example",
+          "title": "Angles of a pentagon",
+          "steps": [
+            "Three interior angles of a pentagon are 110°, 100° and 120°. The other two are 3x and 2x. Find them.",
+            "A pentagon has 5 sides, so its angle sum is (5 − 2) × 180° = 540°.",
+            "110 + 100 + 120 + 3x + 2x = 540, so 330 + 5x = 540.",
+            "Subtract 330 from both sides: 5x = 210, so x = 42.",
+            "The angles are 3 × 42 = 126° and 2 × 42 = 84°. Check: 110 + 100 + 120 + 126 + 84 = 540."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A regular polygon",
+          "steps": [
+            "Each exterior angle of a regular polygon is 24°. How many sides does it have?",
+            "The exterior angles add up to 360°, so n = 360 ÷ 24 = 15 sides.",
+            "Each interior angle is 180° − 24° = 156°."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Tear the corners",
+          "text": "Cut a triangle of any shape from scrap paper. Mark its three corners a, b and c. Tear off the three corners and place them side by side so the points touch. What do the three angles make? Then draw a pentagon and a hexagon, split each into triangles from one corner, and count the triangles."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Can a triangle have two obtuse angles? Can it have two right angles? Explain your reasoning to your group."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Angles on a straight line add up to 180° and angles at a point add up to 360°. With parallel lines, corresponding and alternate angles are equal, and co-interior angles add up to 180°. A triangle's angles add up to 180°, a polygon's interior angles add up to (n − 2) × 180°, and its exterior angles add up to 360°."
         }
       ]
     }

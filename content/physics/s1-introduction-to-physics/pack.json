@@ -1,0 +1,194 @@
+{
+  "packId": "phy.s1.intro.introduction",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.intro.introduction",
+      "title": "Introduction to Physics",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Introduction",
+      "subStrand": "Physics and laboratory safety",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "understand the meaning of physics, its branches and why it is important to study Physics (u, v/a)",
+        "understand why it is important to follow the laboratory rules and regulations (u, v/a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "When rain falls on an iron roof, you hear it before you see it. A boda boda leans over as it turns a corner. A solar panel on a roof in Gulu charges a phone. Physics explains all of these. In this topic you will learn what physics is, why it matters, and how to work safely in a laboratory."
+        },
+        {
+          "type": "heading",
+          "text": "What physics is"
+        },
+        {
+          "type": "text",
+          "text": "Physics is the study of matter and energy and how they act on each other. Matter is anything that has mass and takes up space, such as water, air and stones. Energy is what makes things happen, such as heat, light and movement."
+        },
+        {
+          "type": "text",
+          "text": "Physicists ask questions about the world. Why does a stone fall? Why does a metal spoon get hot in tea? They answer by watching carefully, measuring and testing their ideas."
+        },
+        {
+          "type": "heading",
+          "text": "Branches of physics"
+        },
+        {
+          "type": "text",
+          "text": "Physics is a big subject, so it is divided into branches. Each branch studies one kind of matter or energy."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mechanics: forces and motion, such as a boda boda speeding up or a football in flight.",
+            "Heat: how hot things are and how heat moves, such as cooking on a charcoal stove.",
+            "Light, or optics: how we see, and how mirrors and lenses work, such as a torch or spectacles.",
+            "Waves and sound: how sound and other waves travel, such as drums at a wedding or a radio signal.",
+            "Electricity and magnetism: charges, currents and magnets, such as a solar panel lighting a bulb.",
+            "Modern physics: atoms and what is inside them, such as X-rays in a hospital.",
+            "Earth and space physics: the Earth, the Moon, the Sun and the stars."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Physics in nature"
+        },
+        {
+          "type": "text",
+          "text": "Physics explains many things we see in nature."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A rainbow forms when sunlight passes through raindrops and splits into colours.",
+            "Lightning is a huge spark of electricity between clouds and the ground.",
+            "Thunder is the sound made when lightning heats the air very quickly.",
+            "Water boils when it is heated enough for its particles to escape as steam."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Lake Victoria looks blue on a sunny day but grey on a cloudy day. What do you think causes the change?"
+        },
+        {
+          "type": "heading",
+          "text": "Why we study physics"
+        },
+        {
+          "type": "text",
+          "text": "Physics helps us understand the world and solve problems. It is the base of the other sciences. Chemists use physics to understand atoms. Biologists use it to explain how the eye sees and how blood flows."
+        },
+        {
+          "type": "text",
+          "text": "Physics is also behind many inventions. Phones, radios, solar panels, hospital scanners and the hydroelectric power stations on the Nile at Jinja and Karuma all came from physics."
+        },
+        {
+          "type": "text",
+          "text": "Many careers need physics, for example:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Engineers, who design roads, bridges, dams and machines.",
+            "Electricians and solar technicians.",
+            "Pilots and aircraft engineers.",
+            "Doctors, and radiographers who take X-ray pictures of the body.",
+            "Meteorologists, who forecast the weather.",
+            "Mechanics, who repair cars and boda bodas."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Some people made discoveries that changed physics. Isaac Newton described how forces make objects move. He also showed that gravity keeps the Moon in its path around the Earth. Marie Curie studied radioactivity, which is now used to treat cancer. She won two Nobel Prizes."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Think of a job you would like to do one day. How might physics help you in that job?"
+        },
+        {
+          "type": "heading",
+          "text": "Rules in the laboratory"
+        },
+        {
+          "type": "text",
+          "text": "A laboratory is a room for doing experiments. It has equipment and chemicals that can cause harm if they are used carelessly. Laboratory rules keep you and others safe. Each rule has a reason."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enter only when a teacher is present, so that help is near if something goes wrong.",
+            "Do not eat or drink in the laboratory, because food can pick up harmful chemicals.",
+            "Do not run or play, because you could knock over glass or hot liquids.",
+            "Read the instructions before you start, so you know what to do and what to avoid.",
+            "Tie back long hair and loose clothing when working near a flame.",
+            "Never taste or sniff a chemical, and report any broken glass at once.",
+            "Keep water away from electrical sockets.",
+            "Clean your bench and wash your hands when you finish."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Hazards and risks"
+        },
+        {
+          "type": "text",
+          "text": "A hazard is anything that can cause harm, such as a flame, hot water, broken glass or electricity. A risk is how likely the harm is to happen, and how bad it would be."
+        },
+        {
+          "type": "text",
+          "text": "Before an experiment, carry out a risk assessment. This means you list the hazards, think about who could be hurt, and decide how to make the work safe."
+        },
+        {
+          "type": "example",
+          "title": "A risk assessment for heating water",
+          "steps": [
+            "Task: heat water in a beaker over a small burner.",
+            "Hazards: the flame, the hot beaker and the boiling water.",
+            "Who could be hurt: the person heating and anyone nearby.",
+            "Ways to lower the risk: stand the beaker on a tripod, keep the bench clear, tie back hair, and hold the beaker with a folded cloth."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Containers of dangerous substances carry hazard symbols. These are warning pictures. A flame means the substance catches fire easily. A skull and crossbones means it is poisonous. Liquid dripping onto a hand means it is corrosive and can burn skin. A lightning bolt means there is a danger of electric shock."
+        },
+        {
+          "type": "heading",
+          "text": "If an accident happens"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stay calm and tell the teacher at once.",
+            "For a burn, cool the skin under cool running water for about 20 minutes.",
+            "For a chemical on the skin or in the eye, wash it away with plenty of clean water.",
+            "For a small fire, turn off the gas and cover the flame with a fire blanket or sand. Never pour water on burning oil or on an electrical fire.",
+            "Know where the first aid box, the fire extinguisher and the exits are."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a safety poster",
+          "text": "In groups, choose five laboratory rules. Draw a picture of each rule on manila paper or the back of an old calendar, and write its reason beside it. Add the four hazard symbols described above. Hang the posters near the laboratory door for the whole class to use."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Physics is the study of matter and energy and how they act on each other. Its branches include mechanics, heat, light, sound, electricity and magnetism. Laboratory rules exist to keep everyone safe, so follow them every time."
+        }
+      ]
+    }
+  ]
+}

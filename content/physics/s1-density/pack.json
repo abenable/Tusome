@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.density",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -10,45 +10,166 @@
       "level": "S1",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Density",
-      "order": 2,
+      "order": 3,
+      "term": 1,
       "outcomes": [
         "understand density and its application to floating and sinking (u)",
         "determine densities of substances and relate them to purity (u, s, gs)",
-        "appreciate that the accuracy of measurements may be improved by making several measurements and taking an average value (gs, v/a)"
+        "understand the global nature of ocean currents and how they are driven by changes in water density and temperature (u, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Density is the mass of a substance packed into each unit of volume. It tells you how tightly matter is packed into a space \u2014 a small, heavy block is denser than a large, light one of the same mass."
+          "text": "A 20-litre jerrycan full of water has a mass of about 20 kg. Fill the same jerrycan with petrol and its mass is only about 15 kg. The volume is the same, but the mass is different. The idea that explains this is density."
+        },
+        {
+          "type": "heading",
+          "text": "What density means"
+        },
+        {
+          "type": "text",
+          "text": "Density is the mass of a substance in each unit of its volume. It tells us how tightly the matter in a substance is packed. A block of iron and a block of wood of the same size have very different masses, because iron is much denser."
         },
         {
           "type": "equation",
-          "latex": "\\rho = \\frac{m}{V}"
+          "latex": "\\rho = \\frac{m}{V}",
+          "speech": "rho equals m over V. Density equals mass divided by volume."
         },
         {
           "type": "text",
-          "text": "Density is usually measured in grams per cubic centimetre (g/cm\u00b3) in the lab, or kilograms per cubic metre (kg/m\u00b3) as the SI unit."
+          "text": "The symbol ρ is the Greek letter rho. In the laboratory we often measure mass in grams and volume in cubic centimetres, so density is in grams per cubic centimetre (g/cm³). The SI unit is kilograms per cubic metre (kg/m³). A density of 1 g/cm³ is the same as 1000 kg/m³."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Petrol: about 0.74 g/cm³",
+            "Ice and cooking oil: about 0.92 g/cm³",
+            "Pure water: 1.0 g/cm³",
+            "Aluminium: 2.7 g/cm³",
+            "Iron: 7.9 g/cm³",
+            "Mercury: 13.6 g/cm³",
+            "Gold: 19.3 g/cm³"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Finding the density of a substance"
         },
         {
           "type": "text",
-          "text": "An object floats in a fluid if its density is less than the fluid's density, and sinks if its density is greater. This is why a piece of wood floats on water but a stone sinks \u2014 and why a solid lump of iron sinks while a hollow iron ship floats, because the ship's average density (metal plus the air inside) is less than water's."
+          "text": "To find a density, measure the mass and the volume, then divide. Use a balance for the mass. For a regular solid, measure its sides and calculate the volume. For an irregular solid, such as a stone, find its volume by displacement in a measuring cylinder. For a liquid, find the mass of a known volume."
+        },
+        {
+          "type": "example",
+          "title": "The density of a wooden block",
+          "steps": [
+            "A wooden block measures 5 cm by 4 cm by 2 cm. Its mass is 24 g.",
+            "Volume = length × width × height = 5 × 4 × 2 = 40 cm³.",
+            "Density = mass ÷ volume = 24 ÷ 40.",
+            "Density = 0.6 g/cm³. This is less than the density of water, so the block floats."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "The density of a stone",
+          "steps": [
+            "Okello finds that a stone has a mass of 75 g.",
+            "A measuring cylinder holds 50 cm³ of water. He lowers the stone in on a thread. The water rises to 80 cm³.",
+            "Volume of the stone = 80 − 50 = 30 cm³.",
+            "Density = 75 ÷ 30 = 2.5 g/cm³."
+          ]
         },
         {
           "type": "text",
-          "text": "Every pure substance has a fixed, known density. This makes density a useful test for purity: if a sample's measured density does not match the accepted value for that substance, it may have been diluted or contaminated \u2014 for example, checking whether fuel or cooking oil has been adulterated."
+          "text": "Another way to find the density of a liquid uses a density bottle. This is a small glass bottle that always holds exactly the same volume. You will not use one in this class, but its results are useful for calculations."
+        },
+        {
+          "type": "example",
+          "title": "The density of a liquid from a density bottle",
+          "steps": [
+            "An empty density bottle has a mass of 20 g. Full of water, its mass is 70 g. Full of paraffin, its mass is 60 g.",
+            "Mass of water = 70 − 20 = 50 g. Water has a density of 1 g/cm³, so the bottle holds 50 cm³.",
+            "Mass of paraffin = 60 − 20 = 40 g.",
+            "Density of paraffin = 40 ÷ 50 = 0.8 g/cm³."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Floating and sinking"
         },
         {
           "type": "text",
-          "text": "Because any single measurement of mass or volume can have a small error, repeating the measurement several times and taking the average gives a more accurate result."
+          "text": "An object floats in a liquid if its density is less than the density of the liquid. It sinks if its density is greater. Wood floats on water and a stone sinks. Ice floats because it is slightly less dense than water. Cooking oil floats on top of water in a basin for the same reason."
         },
         {
           "type": "text",
-          "text": "Use the PhET Density simulation below. Drop blocks of different materials into the water and see which float and which sink, then try the mystery blocks and work out what they might be made of from their density."
+          "text": "A steel ship floats even though steel is almost eight times denser than water. The ship is hollow and full of air, so the average density of the whole ship is less than that of water. You will study floating in more detail in Senior 2."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Float or sink",
+          "text": "Collect a stone, a piece of wood, a nail, a bottle top, a candle, an orange with its peel and a peeled orange. Predict which will float in a basin of water and write down your predictions. Test each one. Next, put a fresh egg in a glass of tap water. Stir in salt, one spoonful at a time, and watch what happens to the egg."
+        },
+        {
+          "type": "heading",
+          "text": "Density and purity"
+        },
+        {
+          "type": "text",
+          "text": "Every pure substance has its own fixed density at a given temperature. If a sample has a different density, something else has been mixed into it. Milk that has been mixed with water is less dense than pure milk. Dairy workers check milk with a lactometer, a floating instrument that reads its density. Petrol mixed with paraffin is denser than pure petrol."
+        },
+        {
+          "type": "example",
+          "title": "Is the ring pure gold?",
+          "steps": [
+            "Namubiru is offered a gold ring with a mass of 30 g.",
+            "By displacement, its volume is found to be 2.0 cm³.",
+            "Density = 30 ÷ 2.0 = 15 g/cm³.",
+            "Pure gold has a density of 19.3 g/cm³. The ring is less dense, so it is not pure gold. It contains other, lighter metals."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Every measurement has a small error. Repeating the mass and volume measurements several times and using the average gives a more reliable density."
+        },
+        {
+          "type": "heading",
+          "text": "Density and ocean currents"
+        },
+        {
+          "type": "text",
+          "text": "The density of water changes with temperature and with saltiness. Cold water is denser than warm water. Salty water is denser than fresh water. These small differences make water move."
+        },
+        {
+          "type": "text",
+          "text": "Near the North and South Poles, sea water becomes very cold and salty. It is dense, so it sinks to the ocean floor. It then flows slowly along the bottom towards the equator. Warm surface water flows towards the poles to take its place. This slow, worldwide flow links all the oceans. It is sometimes called the ocean conveyor belt."
+        },
+        {
+          "type": "text",
+          "text": "Ocean currents carry heat around the world, so they affect the weather in many countries. Uganda has no coast, but the temperature of the Indian Ocean affects how much rain falls here. Scientists are watching the North Atlantic Ocean closely. Climate change is warming it, and melting ice is adding fresh water. Both make the surface water less dense, so less of it sinks. This could slow the conveyor belt and change weather patterns far away."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A model ocean current",
+          "text": "Fill a clear plastic bottle or basin with tap water and let it stand still. In a cup, stir two spoonfuls of salt and a few drops of ink into a little water. Pour this salty water in very slowly at one side. Watch where the coloured water goes, and describe how it moves."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A boat floats higher in the salty water of the sea than in the fresh water of Lake Victoria. Why might that be?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Density is mass divided by volume, measured in g/cm³ or kg/m³. An object floats in a liquid if it is less dense than the liquid, and sinks if it is denser. Each pure substance has its own density, so density can test purity. Differences in the density of sea water drive ocean currents."
         }
       ],
       "sim": {
         "phet": "density_en.html",
-        "caption": "PhET Density. Compare blocks of different materials and sizes in water, and identify mystery blocks from their density. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Density. Drop blocks of different materials into the water to see which float and which sink. On the Mystery screen, measure a block's mass and volume and work out what it is made of. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

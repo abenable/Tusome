@@ -1,0 +1,213 @@
+{
+  "packId": "che.s2.acids.acids-alkalis",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s2.acids.acids-alkalis",
+      "title": "Acids and Alkalis",
+      "subject": "chemistry",
+      "level": "S2",
+      "strand": "Acids and Alkalis",
+      "subStrand": "Indicators, pH and neutralisation",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "recognise that locally available materials and substances are either acidic or alkaline (k)",
+        "understand the concept of pH as a measure of the strength of acids and alkalis (u)",
+        "understand the reaction between acids and alkalis (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Lemons and passion fruit taste sharp. Soap feels slippery. Ash from burnt banana peels is used to cook vegetables and to make soap. These everyday materials belong to two important groups of substances: acids and alkalis."
+        },
+        {
+          "type": "heading",
+          "text": "Acids"
+        },
+        {
+          "type": "text",
+          "text": "Acids are substances that taste sour and turn blue litmus paper red. Weak acids in food are safe to eat. Strong laboratory acids are corrosive, which means they burn skin and damage materials."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Citric acid: lemons, oranges and passion fruit.",
+            "Ethanoic acid: vinegar.",
+            "Lactic acid: sour milk and bongo.",
+            "Carbonic acid: soda and other fizzy drinks.",
+            "Methanoic acid: ant stings. Bee stings are also acidic.",
+            "Hydrochloric acid: in your stomach, where it helps digest food.",
+            "Laboratory acids: hydrochloric, sulphuric and nitric acids."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Bases and alkalis"
+        },
+        {
+          "type": "text",
+          "text": "A base is a substance that reacts with an acid and cancels it out. An alkali is a base that dissolves in water. Alkalis taste bitter, feel soapy and turn red litmus paper blue. Strong alkalis are corrosive too."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ash filtrate: the liquid that drips through wood ash or banana peel ash.",
+            "Soap, washing powder and toothpaste.",
+            "Baking soda dissolved in water.",
+            "Antacid tablets and milk of magnesia.",
+            "Slaked lime, calcium hydroxide, used by builders and farmers.",
+            "Household bleach and ammonia cleaners.",
+            "Laboratory alkalis: sodium hydroxide and potassium hydroxide."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Never taste or touch a substance to find out whether it is an acid or an alkali. Many are poisonous or corrosive. Chemists use indicators instead. If an acid or alkali gets on your skin, wash it with plenty of water."
+        },
+        {
+          "type": "heading",
+          "text": "Indicators"
+        },
+        {
+          "type": "text",
+          "text": "An indicator is a substance that shows by its colour whether something is acidic, alkaline or neutral. Neutral means neither acidic nor alkaline, like pure water."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Litmus: red in acids and blue in alkalis. In neutral solutions it does not change.",
+            "Universal indicator: shows a range of colours that tell you how acidic or alkaline something is.",
+            "Plant indicators: juice from red cabbage, purple bougainvillea or hibiscus flowers changes colour too. Red cabbage juice turns pink or red in acids, stays purple when neutral, and turns blue, green or yellow in alkalis."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make your own indicator",
+          "text": "Chop some red cabbage leaves or purple bougainvillea flowers. Ask an adult to pour hot water over them and leave them to soak for ten minutes. Strain off the coloured liquid. Pour a little into separate clear cups. Add a small amount of each test substance: lemon juice, vinegar, soda, tea, tap water, liquid soap, baking soda solution and ash water. Record the colour in a chart and sort the substances into acids, alkalis and neutral."
+        },
+        {
+          "type": "heading",
+          "text": "The pH scale"
+        },
+        {
+          "type": "text",
+          "text": "The pH scale measures how acidic or alkaline a solution is. It runs from 0 to 14."
+        },
+        {
+          "type": "list",
+          "items": [
+            "pH below 7: acidic. The lower the number, the stronger the acid.",
+            "pH 7: neutral.",
+            "pH above 7: alkaline. The higher the number, the stronger the alkali."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Universal indicator gives each pH a colour. It is red for strong acids, orange and yellow for weaker acids, green for neutral, blue for weak alkalis and purple for strong alkalis. Each shade on the colour chart matches a pH number."
+        },
+        {
+          "type": "list",
+          "items": [
+            "pH 1 to 2: stomach acid and lemon juice.",
+            "pH 3: vinegar and soda.",
+            "pH 5 to 6: black tea and rainwater.",
+            "pH 7: pure water.",
+            "pH 8 to 9: baking soda solution and toothpaste.",
+            "pH 10: soap solution.",
+            "pH 11 to 13: ammonia cleaner and bleach.",
+            "pH 14: sodium hydroxide solution."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the pH of a solution with universal indicator",
+          "steps": [
+            "Put a little of the solution in a clean test tube or cup.",
+            "Add two drops of universal indicator solution, or dip in a strip of universal indicator paper.",
+            "Hold the colour beside the colour chart in good light.",
+            "Akello's solution turns yellow-orange. The chart matches this to pH 4.",
+            "pH 4 is below 7, so the solution is a weak acid."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Soil pH matters to farmers. Most crops grow best in soil with a pH of about 6 to 7. Where soils are too acidic, farmers spread lime to raise the pH."
+        },
+        {
+          "type": "heading",
+          "text": "When acids meet alkalis"
+        },
+        {
+          "type": "text",
+          "text": "When an acid and an alkali are mixed in the right amounts, they cancel each other out. The solution becomes neutral. This reaction is called neutralisation. It always makes a salt and water."
+        },
+        {
+          "type": "equation",
+          "expr": "acid + alkali → salt + water",
+          "speech": "acid plus alkali gives salt plus water"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{HCl + NaOH \\rightarrow NaCl + H_2O}",
+          "speech": "hydrochloric acid plus sodium hydroxide gives sodium chloride plus water"
+        },
+        {
+          "type": "text",
+          "text": "Acids contain hydrogen ions, H⁺. Alkalis contain hydroxide ions, OH⁻. In neutralisation, these ions join to make water."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{H^+ + OH^- \\rightarrow H_2O}",
+          "speech": "a hydrogen ion plus a hydroxide ion gives water"
+        },
+        {
+          "type": "example",
+          "title": "How an antacid treats indigestion",
+          "steps": [
+            "Kato eats a large, spicy meal and his stomach makes too much hydrochloric acid.",
+            "He feels a burning pain called indigestion.",
+            "He chews an antacid tablet containing magnesium hydroxide, a base.",
+            "The base neutralises the extra acid, making magnesium chloride and water.",
+            "The pH in his stomach rises a little and the pain eases."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Mg(OH)_2 + 2HCl \\rightarrow MgCl_2 + 2H_2O}",
+          "speech": "magnesium hydroxide plus two hydrochloric acid gives magnesium chloride plus two water"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stings: a paste of baking soda, a weak base, can soothe an acidic bee or ant sting.",
+            "Teeth: bacteria in the mouth make acids from sugar. Toothpaste is slightly alkaline and helps neutralise them.",
+            "Farming: lime neutralises acidic soil."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Neutralise vinegar",
+          "text": "Put two spoons of vinegar in a clear cup and add a little of your cabbage indicator. Note the colour. Dissolve a spoon of baking soda in half a cup of water. Add the baking soda solution a few drops at a time, stirring after each addition. Stop when the colour turns purple. That is the neutral point. Count how many drops you needed and compare with other groups."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "People used ash water to make soap and to cook vegetables long before anyone knew about pH. How do you think they discovered these uses?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Acids turn blue litmus red and have a pH below 7. Alkalis turn red litmus blue and have a pH above 7. Neutral substances have a pH of 7. The further the pH is from 7, the stronger the acid or alkali. Acids and alkalis neutralise each other to form a salt and water."
+        }
+      ],
+      "sim": {
+        "phet": "acid-base-solutions_en.html",
+        "caption": "Test the solutions with the pH meter, the pH paper and the light bulb tester. Compare a strong acid with a weak acid, then a strong base with a weak base, and see how the pH changes."
+      }
+    }
+  ]
+}

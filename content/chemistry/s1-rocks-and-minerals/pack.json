@@ -1,0 +1,212 @@
+{
+  "packId": "che.s1.earth.rocks-minerals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.earth.rocks-minerals",
+      "title": "Rocks and Minerals",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Earth and Space",
+      "subStrand": "Types of rock, useful minerals and weathering",
+      "order": 9,
+      "term": 3,
+      "outcomes": [
+        "understand how igneous, sedimentary and metamorphic rocks are formed, that they are made up of minerals, and that some minerals are useful (k, u, s)",
+        "identify the physical properties of rocks and distinguish between the different types (s)",
+        "understand the process of weathering and how weathered rock particles form the basis of soil (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Copper comes from rocks dug at Kilembe. Cement comes from limestone near Tororo. Even the soil in your garden was once solid rock. In this topic you will learn how rocks form, what they are made of and how they break down into soil."
+        },
+        {
+          "type": "heading",
+          "text": "Minerals and rocks"
+        },
+        {
+          "type": "text",
+          "text": "A mineral is a natural solid substance with a fixed chemical make-up. Quartz, for example, is always silicon dioxide. A rock is a natural solid made of one or more minerals mixed together. So a rock is a mixture, and its minerals give it its properties."
+        },
+        {
+          "type": "heading",
+          "text": "Igneous rocks"
+        },
+        {
+          "type": "text",
+          "text": "Deep underground it is hot enough to melt rock. Melted rock is called magma. Igneous rocks form when magma cools and becomes solid."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Magma that cools slowly underground forms large crystals. Granite is an example.",
+            "Lava that pours out of a volcano cools quickly and forms tiny crystals. Basalt is an example. Mount Elgon and the volcanoes near Kisoro are made of rocks like this.",
+            "Igneous rocks are hard, with interlocking crystals. They have no layers and no fossils."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Sedimentary rocks"
+        },
+        {
+          "type": "text",
+          "text": "Rivers carry sand, mud and shells into lakes and seas. These bits, called sediment, settle in layers. Over millions of years, the layers above press down and natural minerals cement the grains together into rock."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sandstone forms from sand. Mudstone and shale form from mud.",
+            "Limestone forms mainly from shells and is made of calcium carbonate.",
+            "Sedimentary rocks have layers, are often softer, and may contain fossils."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Metamorphic rocks"
+        },
+        {
+          "type": "text",
+          "text": "Metamorphic means changed in form. Metamorphic rocks form when existing rocks are changed by great heat and pressure deep underground, without melting."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Limestone changes into marble. Marble is found in Karamoja.",
+            "Mudstone changes into slate, which splits into thin flat sheets.",
+            "Metamorphic rocks are hard, and their crystals are often lined up in bands."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Minerals in three common rocks"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Granite (igneous): quartz, feldspar and mica.",
+            "Sandstone (sedimentary): mostly quartz, with some feldspar and calcium carbonate holding the grains together.",
+            "Slate (metamorphic): mostly mica, quartz and clay minerals."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Quartz appears in all three. It is hard and does not dissolve or react easily, so it lasts a very long time. Most sand on lake shores is quartz."
+        },
+        {
+          "type": "heading",
+          "text": "Useful minerals"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Quartz sand: making glass and concrete.",
+            "Feldspar and kaolin clay: pottery, tiles and paper.",
+            "Mica: electrical insulation and paints.",
+            "Calcium carbonate in limestone and marble: cement, lime for acid soils, and chalk.",
+            "Copper ores from Kilembe: copper for electric wires.",
+            "Phosphate rock from Sukulu hills near Tororo: fertiliser.",
+            "Rock salt from Lake Katwe: food and salt licks for cattle.",
+            "Clay: bricks and cooking pots. Gold: jewellery and savings."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Telling rocks apart"
+        },
+        {
+          "type": "text",
+          "text": "We identify rocks by their physical properties: colour, grain size, crystals and layers. Scratch the rock with an iron nail to test hardness. Drop water on it to see if it is porous, meaning water soaks in. Drop vinegar on it. Rocks containing calcium carbonate fizz, giving off carbon dioxide."
+        },
+        {
+          "type": "equation",
+          "expr": "calcium carbonate + acid → salt + water + carbon dioxide",
+          "speech": "calcium carbonate plus acid gives a salt plus water plus carbon dioxide"
+        },
+        {
+          "type": "text",
+          "text": "A dichotomous key helps you name a rock. At each step you answer a question with yes or no. Each answer sends you to the next step until you reach a name."
+        },
+        {
+          "type": "example",
+          "title": "Use a key to name a rock",
+          "steps": [
+            "1. Does it fizz when vinegar is dropped on it? Yes: go to 2. No: go to 3.",
+            "2. Is it made of shiny, interlocking crystals? Yes: marble. No: limestone.",
+            "3. Does it split into thin, flat sheets? Yes: slate. No: go to 4.",
+            "4. Is it rough and gritty, with sand grains that rub off? Yes: sandstone. No: go to 5.",
+            "5. Are the crystals big enough to see easily? Yes: granite. No: basalt.",
+            "Opio's rock does not fizz and does not split. It is not gritty, and he can see large pink, white and black crystals. Following the key, it is granite."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Examine local rocks",
+          "text": "Collect five or six different rocks near your school or home. For each one, record its colour, grain size, whether you can see crystals or layers, whether an iron nail scratches it, whether a drop of water soaks in, and whether a drop of vinegar makes it fizz. Use your table to make your own dichotomous key and swap it with another group."
+        },
+        {
+          "type": "heading",
+          "text": "Weathering"
+        },
+        {
+          "type": "text",
+          "text": "Weathering is the breaking down of rocks into smaller pieces where they lie. It is caused by the weather, by water and by living things. Erosion is different. It means carrying the pieces away, by rivers, wind or rain."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Physical weathering: in hot, dry places such as Karamoja, rock heats up by day and cools at night. It expands and shrinks until its surface cracks and flakes off. On the high Rwenzori, water freezes in cracks and splits the rock.",
+            "Chemical weathering: rainwater has a little carbon dioxide dissolved in it, which makes it weakly acidic. It slowly dissolves limestone and changes feldspar into clay. Minerals are released and carried away in the water.",
+            "Biological weathering: roots grow into cracks and force them apart. Burrowing animals and tiny living things help break rock down too."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 + H_2O + CO_2 \\rightarrow Ca(HCO_3)_2}",
+          "speech": "calcium carbonate plus water plus carbon dioxide gives calcium hydrogencarbonate, which dissolves in water"
+        },
+        {
+          "type": "heading",
+          "text": "From rock to soil"
+        },
+        {
+          "type": "text",
+          "text": "Soil is a mixture of weathered rock particles, humus, air, water and living things. Humus is the dark remains of dead plants and animals. The rock particles may be large sand grains, medium silt or very fine clay."
+        },
+        {
+          "type": "text",
+          "text": "Weathering releases minerals such as potassium, calcium and phosphorus from rocks. Plants need these to grow. Soils formed from volcanic rock, such as those on Mount Elgon and around Kisoro, are rich in minerals and very fertile."
+        },
+        {
+          "type": "example",
+          "title": "Follow granite as it becomes soil",
+          "steps": [
+            "Granite on a hillside is heated by day and cooled at night. Cracks form.",
+            "Rainwater enters the cracks and slowly changes feldspar into soft clay.",
+            "Mica flakes and quartz grains are freed as the rock crumbles.",
+            "Plants grow, die and rot into humus, which mixes with the particles.",
+            "The result is soil: quartz sand, clay, humus and the minerals plants need."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model weathering in a bottle",
+          "text": "Break a piece of chalk or soft brick into a few pieces. Put them in a plastic bottle with some water and close it tightly. Shake the bottle hard for five minutes. Pour the contents through a cloth and look at the pieces and the cloudy water. Compare the pieces with an unshaken piece."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Coffee and bananas grow very well on the slopes of Mount Elgon. What part might the rocks under the mountain play in this?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Rocks are mixtures of minerals. Igneous rocks form from cooled magma, sedimentary rocks from layers of sediment, and metamorphic rocks from rocks changed by heat and pressure. Physical properties help us tell them apart. Weathering breaks rocks down, and the particles and minerals released form the basis of soil."
+        }
+      ]
+    }
+  ]
+}

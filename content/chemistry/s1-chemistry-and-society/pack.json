@@ -1,0 +1,206 @@
+{
+  "packId": "che.s1.intro.chemistry-society",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.intro.chemistry-society",
+      "title": "Chemistry and Society",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Introduction to Chemistry and Experimental Techniques",
+      "subStrand": "Chemistry in everyday life and the economy",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "know appropriate activities to explain the discrete nature of chemistry (k, u)",
+        "understand why chemistry is studied and how it overlaps with other subjects such as biology, physics, mathematics, and geology (k, u)",
+        "understand the importance of chemistry and relate knowledge of chemistry to relevant careers (u)",
+        "know the contribution of chemistry to the Ugandan economy (k)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Think about your morning. You may have washed with soap and brushed your teeth. Someone may have cooked breakfast on a charcoal stove. The water you drank may have been treated to make it safe. Each of these things depends on chemistry."
+        },
+        {
+          "type": "heading",
+          "text": "What is chemistry?"
+        },
+        {
+          "type": "text",
+          "text": "Chemistry is the study of substances. A substance is any kind of matter, such as water, salt, iron or sugar. Chemists ask what substances are made of, how they behave and how they change into new substances."
+        },
+        {
+          "type": "text",
+          "text": "Chemistry is a subject of its own. Biology studies living things and physics studies energy and forces. Chemistry focuses on substances and the changes they go through. It has its own methods, its own symbols and its own language."
+        },
+        {
+          "type": "text",
+          "text": "Chemists find things out by doing certain activities again and again. These activities are what make chemistry a science:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "observing: looking closely at colour, smell, texture and changes",
+            "measuring: finding mass, volume, temperature and time",
+            "classifying: putting substances into groups, such as metals and non-metals",
+            "experimenting: testing an idea in a fair and safe way",
+            "recording and explaining: writing down results and making sense of them"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Chemicals all around us"
+        },
+        {
+          "type": "text",
+          "text": "Everything around you is made of chemicals. A chemical is simply a substance with a fixed make-up. Some are dangerous, but most are safe and useful."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Medicines and cosmetics: paracetamol, oral rehydration salts, petroleum jelly and body lotion.",
+            "Plastics: jerrycans, basins, chairs and water pipes.",
+            "Food and drinks: salt, sugar, baking powder, cooking oil and soda.",
+            "Soaps and detergents: bar soap, washing powder and liquid soap.",
+            "Water treatment: chlorine and alum make water safe to drink.",
+            "Local chemistry: making soap from ash, smoking fish, brewing, dyeing bark cloth and collecting salt at Lake Katwe."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a chemistry mind-map",
+          "text": "Collect empty packets and labels from home: soap, toothpaste, a medicine box, salt, cooking oil or a fertiliser bag. In groups, write CHEMISTRY in the centre of a large sheet. Draw six branches: medicines and cosmetics, plastics, food and drinks, soaps, water treatment and local chemistry. Read each label and add the chemical names to the right branch."
+        },
+        {
+          "type": "heading",
+          "text": "Why we study chemistry"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To understand the world: why iron rusts, why food goes bad, why fires need air.",
+            "To use substances safely, such as fuels, cleaning products and farm chemicals.",
+            "To solve problems: clean water, more food, new medicines and less pollution.",
+            "To make good choices, such as which fertiliser to buy or how to store food."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How chemistry links with other subjects"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Biology: digestion, breathing and photosynthesis are chemical changes inside living things.",
+            "Physics: heat, electricity and the tiny particles that make up matter.",
+            "Mathematics: measuring, calculating amounts, and drawing tables and graphs.",
+            "Geology: rocks and minerals, such as copper ore at Kilembe and limestone near Tororo."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Careers that use chemistry"
+        },
+        {
+          "type": "text",
+          "text": "Many jobs need a good knowledge of chemistry. Here are some of them:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Doctor, nurse and veterinary doctor: they use medicines that act on the body.",
+            "Pharmacist: prepares and explains medicines.",
+            "Chemical engineer: designs factories that make cement, sugar, soap or fuel.",
+            "Agricultural officer and soil scientist: test soils and advise on fertilisers.",
+            "Water engineer: treats water for towns and checks that it is safe.",
+            "Mining engineer and geologist: find and extract minerals.",
+            "Laboratory technician, food scientist and teacher."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Which career on this list interests you most? What chemistry do you think that person uses every day?"
+        },
+        {
+          "type": "heading",
+          "text": "Chemistry and the Ugandan economy"
+        },
+        {
+          "type": "text",
+          "text": "The economy is all the ways a country makes, buys and sells goods and services. Many of Uganda's industries depend on chemistry."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Building: factories at Tororo and Hima heat limestone to make cement for houses, roads and bridges.",
+            "Mining: copper and cobalt ores have been mined at Kilembe in Kasese.",
+            "Salt: people harvest salt from Lake Katwe by letting the salty water evaporate.",
+            "Farming: fertilisers help farmers grow more maize, coffee and beans. Soil tests show what a field needs.",
+            "Medicines: a factory at Luzira in Kampala makes medicines for HIV and malaria.",
+            "Food and drinks: sugar factories at Kakira and Lugazi turn sugar cane juice into sugar.",
+            "Transport and energy: petrol, diesel, tyres and batteries are all products of chemistry. Uganda's oil near Lake Albert will need chemists to refine it."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "In a cement factory, heat breaks limestone down into new substances. Chemists write this change as a word equation and as a chemical equation."
+        },
+        {
+          "type": "equation",
+          "expr": "limestone → quicklime + carbon dioxide",
+          "speech": "limestone gives quicklime plus carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 \\rightarrow CaO + CO_2}",
+          "speech": "calcium carbonate gives calcium oxide plus carbon dioxide"
+        },
+        {
+          "type": "example",
+          "title": "Trace the chemistry in a bag of cement",
+          "steps": [
+            "Workers dig limestone from a quarry and crush it.",
+            "The crushed limestone is mixed with clay.",
+            "The mixture is heated in a kiln, a very hot oven, to about 1,450 °C.",
+            "The heat breaks limestone into quicklime and carbon dioxide. This is a chemical change.",
+            "The product is cooled and ground with a little gypsum to make cement.",
+            "Builders mix cement with sand, stones and water. It reacts with the water and sets hard.",
+            "Geologists, chemists, engineers and builders all use chemistry along the way."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Trace the chemistry in local soap",
+          "steps": [
+            "Banana peels or wood are burnt to ash.",
+            "Water is poured through the ash. The liquid that drips through is alkaline.",
+            "The alkaline liquid is boiled with oil or animal fat.",
+            "The oil reacts with the alkali to make soap. A new substance has formed.",
+            "Factories do the same thing with sodium hydroxide, a pure alkali, and palm oil.",
+            "The chemistry is the same. The factory controls amounts and temperature more carefully."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find out about a local industry",
+          "text": "In groups, choose one business near your school: a maize mill, a brick kiln, a bakery, a water works or a soap maker. Visit it with your teacher or ask someone who works there. Find out what raw materials go in, what products come out and what changes happen in between. Present your findings to the class."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Long before there were factories, people in Uganda made salt, soap, dyes and medicines from local materials. Was this chemistry? What did those people need to know?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Chemistry is the study of substances and how they change. It links closely with biology, physics, mathematics and geology. It supports careers in health, farming, industry and teaching. Industries across Uganda, from cement to medicines, depend on chemistry."
+        }
+      ]
+    }
+  ]
+}

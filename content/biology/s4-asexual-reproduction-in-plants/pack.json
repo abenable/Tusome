@@ -1,0 +1,154 @@
+{
+  "packId": "bio.s4.reproduction.asexual-plants",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.reproduction.asexual-plants",
+      "title": "Asexual Reproduction in Plants (Vegetative Reproduction)",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Reproduction in Organisms",
+      "subStrand": "Vegetative reproduction",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "know the meaning of asexual reproduction (k)",
+        "understand how plants reproduce asexually (u, s)",
+        "understand that asexual reproduction in plants has important commercial applications (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Walk through a farm in Uganda and you will see many crops that did not grow from seed. A farmer plants pieces of cassava stem, and each piece grows into a new plant. Banana farmers plant suckers taken from the base of an old plant. Sweet potato farmers plant short pieces of vine."
+        },
+        {
+          "type": "text",
+          "text": "In this topic you will learn how plants make new plants from their own parts. You will also see why farmers and large estates in Uganda use this method."
+        },
+        {
+          "type": "heading",
+          "text": "What is asexual reproduction?"
+        },
+        {
+          "type": "text",
+          "text": "Reproduction is the making of new individuals of the same kind. Asexual reproduction is reproduction that involves only one parent. No male and female sex cells (gametes) join together."
+        },
+        {
+          "type": "text",
+          "text": "The new plant grows from part of the parent by ordinary cell division, called mitosis. So each new plant has exactly the same genes as its parent. A group of genetically identical plants from one parent is called a clone."
+        },
+        {
+          "type": "text",
+          "text": "When a new plant grows from a stem, root, leaf or bud instead of a seed, we call it vegetative reproduction. When people do it on purpose, it is called vegetative propagation."
+        },
+        {
+          "type": "heading",
+          "text": "Natural methods of vegetative reproduction"
+        },
+        {
+          "type": "text",
+          "text": "Many plants have organs that store food and carry buds. A bud is a small growing point that can form a new shoot. When conditions are right, the buds grow into new plants using the stored food."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stem tubers: swollen underground stems with buds called eyes, such as Irish potatoes grown in Kabale.",
+            "Rhizomes: underground stems that grow sideways and send up new shoots, such as ginger and spear grass.",
+            "Bulbs: short stems with thick, fleshy leaves that store food, such as onion and garlic.",
+            "Corms: short, swollen, upright underground stems, such as cocoyam (taro).",
+            "Suckers: shoots that grow from buds at the base of a plant, such as banana and pineapple.",
+            "Runners (stolons): stems that grow along the ground and form roots at their nodes, such as strawberry and star grass.",
+            "Leaves: some leaves form small plantlets along their edges, such as Bryophyllum."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Artificial methods used by farmers"
+        },
+        {
+          "type": "text",
+          "text": "Farmers copy these natural methods to grow more of a crop they like. The main methods are listed below."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stem cuttings: a piece of stem with several buds is planted in moist soil. Roots and shoots grow from the nodes. Cassava, sugarcane, sweet potato, tea and clonal coffee are grown this way.",
+            "Layering: a low branch or runner is bent down and covered with soil while still joined to the parent. Once it forms roots, it is cut off. Strawberries are often layered.",
+            "Grafting: a shoot (the scion) from a plant with good fruit is joined to a rooted plant (the stock) of a related kind. The two grow together as one plant. Oranges, mangoes and avocados are often grafted.",
+            "Budding: a type of grafting that joins a single bud, instead of a whole shoot, to the stock. It is common with citrus.",
+            "Root cuttings: pieces of root are planted and grow new shoots, as in breadfruit.",
+            "Tissue culture: tiny pieces of a plant are grown on a special jelly with nutrients in a very clean laboratory. Thousands of disease-free plantlets can come from one parent. The National Agricultural Research Laboratories at Kawanda produce tissue-culture banana plantlets this way."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Planting cassava from stem cuttings",
+          "steps": [
+            "Choose mature stems from a healthy plant with no signs of cassava mosaic or brown streak disease.",
+            "Cut pieces about 20 to 25 cm long, each with five to seven nodes.",
+            "Plant each piece at a slant in moist soil, with about two-thirds of it buried.",
+            "Within about two weeks, roots grow from the buried nodes and shoots grow from the buds above the soil.",
+            "Every new plant is a clone of the parent, so it has the same yield, taste and disease resistance."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Grow new plants at school",
+          "text": "In groups, collect a cassava stem, a sweet potato vine, an onion bulb and a sprouting Irish potato. Plant each one in a tin or a cut jerrycan filled with moist soil. Water them every two days. After two to three weeks, gently dig up each plant. Draw where the roots and shoots grew from, and record your results in a table. Discuss why some pieces grew well and others did not."
+        },
+        {
+          "type": "heading",
+          "text": "Commercial uses in Uganda"
+        },
+        {
+          "type": "text",
+          "text": "Vegetative propagation is big business in Uganda. Sugar estates such as Kakira and Kinyara plant whole fields from pieces of sugarcane stem called setts. Tea estates in western Uganda raise tea bushes from cuttings. Farmers buy clonal coffee seedlings grown from cuttings of high-yielding robusta plants that resist coffee wilt disease. Fruit nurseries sell grafted orange and mango seedlings, and banana farmers buy tissue-culture plantlets."
+        },
+        {
+          "type": "text",
+          "text": "Advantages of vegetative propagation:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Every new plant has the same good qualities as the parent, such as high yield or sweet fruit.",
+            "The plants grow and mature faster than plants from seed, because they start with stored food.",
+            "Plants that make few or no good seeds, such as matooke, can still be grown.",
+            "Grafting lets a good fruit variety grow on a strong root system that resists disease or drought.",
+            "A whole field ripens at about the same time, which makes harvesting easier."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Disadvantages of vegetative propagation:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "All the plants are identical, so one disease can destroy a whole field.",
+            "Diseases such as cassava brown streak can be carried to new fields in infected cuttings.",
+            "No new varieties form, because there is no mixing of genes from two parents.",
+            "New plants grow close to the parent and compete with it for light, water and nutrients.",
+            "Planting materials such as cassava stems and banana suckers are bulky and hard to store and transport."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many farmers share cassava stems and banana suckers with their neighbours. How does this help a community? How could it spread disease, and how could sharing be made safer?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Asexual reproduction needs only one parent, and the offspring are identical to it. Plants reproduce vegetatively from stems, roots, leaves and buds. Farmers use cuttings, layering, grafting and tissue culture to grow many identical plants with good qualities, but identical crops can all be harmed by the same disease."
+        }
+      ]
+    }
+  ]
+}

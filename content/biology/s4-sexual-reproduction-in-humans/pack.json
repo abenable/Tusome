@@ -1,0 +1,224 @@
+{
+  "packId": "bio.s4.reproduction.sexual-humans",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.reproduction.sexual-humans",
+      "title": "Sexual Reproduction in Humans",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Reproduction in Organisms",
+      "subStrand": "Human reproduction and reproductive health",
+      "order": 3,
+      "term": 1,
+      "outcomes": [
+        "understand the structure and functions of male and female reproductive system in humans (k, u, s)",
+        "understand the changes that take place during the menstrual cycle (u)",
+        "relate male and female gametes (u)",
+        "appreciate the process of fertilization of an ovum and the developments of the zygote up to birth (u)",
+        "know the role of the placenta during pregnancy (k)",
+        "understand the importance of antenatal medical care (u, s)",
+        "understand aspects of care for the baby after birth (breast feeding, balanced diet, immunization, and hygiene) (u)",
+        "recognise the health risks/complications associated with early/teenage pregnancy and abortion (u, v)",
+        "identify the common birth control methods in Uganda and give the biological principle they employ and their effectiveness. (Note: the only method recommended for young people is abstinence) (u)",
+        "Identify and explain common issues associated with reproductive systems (u, s)",
+        "know the causes, signs and symptoms and understand the mode of transmission of named STIs (Syphilis, Gonorrhoea, Candida, Human Papilloma Virus [HPV], Hepatitis B, and HIV/AIDS). (k, u, v)",
+        "appreciate the preventive measures for the named STI’s. (Note: The ONLY preventive method recommended for young people is abstinence) (u)",
+        "identify the challenges faced by people living with HIV/AIDS and how to overcome them. (u, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Every person began life as one cell, formed when a sex cell from the father joined one from the mother. This topic covers how new life begins, caring for mothers and babies, and protecting your health. Discuss it with respect. For personal questions, talk to a teacher, school nurse, parent or health worker."
+        },
+        {
+          "type": "heading",
+          "text": "The reproductive systems"
+        },
+        {
+          "type": "text",
+          "text": "The male system makes sperm, the male gametes, and delivers them."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Testes: make sperm and the hormone testosterone. They hang in a bag of skin, the scrotum, which keeps them slightly cooler than the body.",
+            "Sperm ducts: carry sperm from the testes to the urethra.",
+            "Seminal vesicles and prostate gland: add a fluid that feeds the sperm and helps them swim. Sperm and fluid together are semen.",
+            "Urethra and penis: the urethra runs through the penis and carries urine or semen out of the body, never both at once."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The female system makes ova (egg cells), the female gametes, and protects the developing baby."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ovaries: release ova and make the hormones oestrogen and progesterone.",
+            "Oviducts (fallopian tubes): carry an ovum to the uterus. Fertilisation usually happens here.",
+            "Uterus (womb): a muscular organ with a soft lining rich in blood vessels, where a baby develops.",
+            "Cervix: a ring of muscle at the neck of the uterus, closed in pregnancy and wide at birth.",
+            "Vagina: a muscular tube to the outside that receives sperm and is the birth canal."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Sperm and ova compared"
+        },
+        {
+          "type": "text",
+          "text": "A sperm is tiny and swims with its tail. Its middle piece has many mitochondria to release energy, and its head holds the nucleus and enzymes for entering the ovum. An ovum is much larger, cannot move by itself, and stores food for the early embryo. Millions of sperm are made daily, but usually one ovum is released each month. Each gamete has 23 chromosomes, half the number in a body cell."
+        },
+        {
+          "type": "heading",
+          "text": "The menstrual cycle"
+        },
+        {
+          "type": "text",
+          "text": "From puberty, a monthly cycle of about 28 days prepares the uterus for a baby. It is often irregular in the first years. Hormones control it."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Days 1 to 5: the uterus lining breaks down and passes out with some blood. This is menstruation, or a period.",
+            "Days 6 to 13: FSH from the pituitary gland makes an egg ripen in the ovary. The ovary makes oestrogen, which rebuilds the uterus lining.",
+            "About day 14: a rise in LH from the pituitary gland causes ovulation, the release of a ripe ovum.",
+            "Days 15 to 28: the empty follicle (corpus luteum) makes progesterone, which keeps the lining thick. Without fertilisation, progesterone falls, the lining breaks down and a new cycle starts."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "From fertilisation to birth"
+        },
+        {
+          "type": "list",
+          "items": [
+            "During sexual intercourse, sperm are released into the vagina and swim to the oviducts. If one sperm enters an ovum and the nuclei join, fertilisation has happened. The new cell is a zygote.",
+            "The zygote divides as it moves down the oviduct. After about a week, the ball of cells sinks into the uterus lining. This is implantation, the start of pregnancy.",
+            "By 8 weeks the embryo has a beating heart and all its main organs have begun to form. It is now called a fetus. It floats in amniotic fluid, which cushions it.",
+            "After about 9 months, the uterus muscles contract, the cervix widens and the baby is pushed out through the vagina. The placenta follows as the afterbirth."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "The placenta"
+        },
+        {
+          "type": "text",
+          "text": "The placenta grows into the uterus wall and joins the fetus through the umbilical cord. The two bloods come close there but do not mix. Oxygen and nutrients pass to the fetus, and carbon dioxide and urea pass back to the mother. The placenta also makes hormones that keep the pregnancy going. It blocks many harmful substances, but alcohol, nicotine and some germs, including HIV and syphilis, can cross."
+        },
+        {
+          "type": "heading",
+          "text": "Caring for mother and baby"
+        },
+        {
+          "type": "text",
+          "text": "Antenatal care is health care during pregnancy. It should start early. Health workers check blood pressure and the baby's growth, and test for and treat anaemia, malaria, syphilis and HIV. They give iron and folic acid tablets and a tetanus vaccine, and help plan a safe delivery at a health facility."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Breastfeeding: only breast milk for the first six months, because it has the right nutrients and antibodies.",
+            "Balanced diet: from six months, add soft foods such as porridge, mashed matooke, beans, eggs and fruit.",
+            "Immunisation: follow the health centre schedule against measles, polio, tuberculosis, hepatitis B and other diseases.",
+            "Hygiene: wash hands before handling the baby or food, and keep the cord stump, bedding and cups clean."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Early pregnancy and abortion"
+        },
+        {
+          "type": "text",
+          "text": "A teenage girl's body is still growing. Her pelvis may be too narrow for birth, causing a long, blocked labour that can leave a fistula, a tear that leaks urine or faeces. Anaemia, early birth, a small baby and death of mother or baby are more likely. Many girls also leave school."
+        },
+        {
+          "type": "text",
+          "text": "Abortion is the ending of a pregnancy before the baby can survive. In Uganda it is restricted by law. Unsafe abortion can cause heavy bleeding, infection, damage to the uterus, infertility and death."
+        },
+        {
+          "type": "heading",
+          "text": "Birth control"
+        },
+        {
+          "type": "text",
+          "text": "Abstinence means not having sexual intercourse. It is the only method recommended for young people, and it fully prevents pregnancy and STIs. Methods used by adults in Uganda include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Condoms: a barrier that stops sperm reaching the ovum. Very effective if used correctly every time, and they reduce the spread of STIs.",
+            "The pill, injection and implant: hormones that stop ovulation. Very effective, but no protection against STIs.",
+            "Intrauterine device (IUD): placed in the uterus by a health worker to stop fertilisation. Very effective.",
+            "Natural methods: avoiding intercourse around ovulation. Less effective, because cycles vary.",
+            "Sterilisation: cutting or tying the sperm ducts or oviducts. Permanent and almost always effective."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Common reproductive health issues"
+        },
+        {
+          "type": "text",
+          "text": "Painful, irregular or heavy periods are common in young women. Wet dreams are normal in boys during puberty. Severe period pain, very heavy bleeding or erection problems should be checked by a health worker. Untreated STIs can cause infertility."
+        },
+        {
+          "type": "heading",
+          "text": "Sexually transmitted infections"
+        },
+        {
+          "type": "text",
+          "text": "Sexually transmitted infections (STIs) pass mainly through sexual contact. Some also spread through blood or from mother to baby."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Syphilis (bacterium): a painless sore on the private parts, then a rash. Untreated, it harms the heart and brain. Antibiotics cure it.",
+            "Gonorrhoea (bacterium): pain when passing urine and a discharge of pus, though many women have no signs. Antibiotics cure it.",
+            "Candida (a yeast, a kind of fungus): normally lives in the body, but overgrowth causes itching and a white discharge. Antifungal medicine treats it.",
+            "HPV, human papillomavirus (virus): can cause warts, and some types later cause cancer of the cervix. Uganda vaccinates girls at about 10 years old.",
+            "Hepatitis B (virus): attacks the liver, causing yellow eyes and tiredness. It also spreads through blood and at birth. A vaccine prevents it.",
+            "HIV, human immunodeficiency virus: destroys white blood cells that fight disease. It also spreads through blood, shared sharp objects and from mother to child. Untreated, it leads to AIDS, when the body gets many infections."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Abstinence is the only preventive method recommended for young people. It also helps not to share razors or needles, to get the HPV and hepatitis B vaccines, and to see a health worker quickly about any signs of an STI."
+        },
+        {
+          "type": "heading",
+          "text": "Living with HIV"
+        },
+        {
+          "type": "text",
+          "text": "With antiretroviral drugs (ARVs), free at government health centres, people living with HIV can live long, healthy lives. Many still face stigma, discrimination, loneliness and the burden of daily medicine. Respect and friendship help, and HIV does not spread by hugging or sharing meals. Counselling and support groups, such as those of The AIDS Support Organisation (TASO), help people cope."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Health posters",
+          "text": "In groups, make a poster for the school notice board on one topic: caring for a newborn, why antenatal care matters, or supporting a friend living with HIV. If possible, invite a health worker to answer questions the class has written down beforehand."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "In 1989 the Ugandan musician Philly Bongoley Lutaya told the public that he had HIV. His song Alone and Frightened describes how lonely this felt. How can a school make sure no one living with HIV feels alone?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Sperm are made in the testes and ova in the ovaries. Fertilisation forms a zygote that grows in the uterus, fed through the placenta. Antenatal care, breastfeeding and immunisation protect mothers and babies. Abstinence is the only method recommended for young people to avoid pregnancy and STIs."
+        }
+      ]
+    }
+  ]
+}

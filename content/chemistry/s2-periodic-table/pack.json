@@ -1,0 +1,204 @@
+{
+  "packId": "che.s2.periodic.periodic-table",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s2.periodic.periodic-table",
+      "title": "The Periodic Table",
+      "subject": "chemistry",
+      "level": "S2",
+      "strand": "The Periodic Table",
+      "subStrand": "Metals and non-metals, atomic structure and ions",
+      "order": 3,
+      "term": 1,
+      "outcomes": [
+        "understand that elements can be grouped into metals and non-metals and relate the physical properties of metals and non-metals to their uses (k, u, s)",
+        "know that the Periodic Table is a classification of elements according to their atomic or proton number (k)",
+        "relate the arrangement of electrons in the first 20 elements to their positions in the Periodic Table (u, s)",
+        "understand the relationship between the position of elements in groups and the charge on the ions that they form (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In a market, sellers of the same goods sit together, which makes things easy to find. Chemists arrange the elements in the same way, in a chart called the Periodic Table. Elements with similar properties sit close together."
+        },
+        {
+          "type": "heading",
+          "text": "Metals and non-metals"
+        },
+        {
+          "type": "text",
+          "text": "There are more than 110 known elements. Most of them are metals. The rest are non-metals."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Metals: shiny, and good conductors of heat and electricity. They are malleable, meaning they can be hammered into shape, and ductile, meaning they can be drawn into wires. Most are hard, dense and have high melting points. They ring when struck. All are solid at room temperature except mercury.",
+            "Non-metals: usually dull and poor conductors of heat and electricity. Solid non-metals are brittle and break when hammered. Most have low melting and boiling points, and many are gases. Graphite, a form of carbon, is unusual because it conducts electricity."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Each use matches a property:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Copper, mined at Kilembe: electric wires, because it conducts well and is ductile.",
+            "Aluminium: saucepans, because it conducts heat, is light and does not rust.",
+            "Iron: hoes, pangas and roofing sheets, because it is strong and cheap.",
+            "Gold and silver: jewellery, because they are shiny and do not tarnish easily.",
+            "Oxygen: breathing support in hospitals. Chlorine: killing germs in drinking water.",
+            "Argon: filling light bulbs, because it does not react."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Sort fifteen elements into metals and non-metals",
+          "steps": [
+            "Elements: iron, sulphur, copper, hydrogen, silver, aluminium, oxygen, chlorine, argon, sodium, magnesium, calcium, iodine, nitrogen, zinc.",
+            "Ask: is it shiny, and does it conduct electricity? Is it a gas at room temperature?",
+            "Metals: iron, copper, silver, aluminium, sodium, magnesium, calcium, zinc.",
+            "Non-metals: sulphur, hydrogen, oxygen, chlorine, argon, iodine, nitrogen."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Test which materials conduct",
+          "text": "Connect a torch battery, a small bulb and three wires in a circuit, leaving a gap between two bare wire ends. Touch both ends to different objects: an iron nail, copper wire, aluminium foil, a coin, a pencil lead, a piece of chalk, a plastic pen and a dry stick. If the bulb lights, the object conducts. Record your results and sort the materials into metals and non-metals."
+        },
+        {
+          "type": "heading",
+          "text": "Inside the atom"
+        },
+        {
+          "type": "text",
+          "text": "Every atom has a tiny centre called the nucleus. The nucleus contains protons, which have a positive charge, and neutrons, which have no charge. Electrons, with a negative charge, move around the nucleus in layers called shells."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Atomic number, or proton number: the number of protons in an atom. Every element has its own atomic number.",
+            "In a neutral atom, the number of electrons equals the number of protons.",
+            "Mass number: the number of protons plus the number of neutrons."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{23}_{11}\\mathrm{Na}",
+          "speech": "sodium, with mass number 23 and atomic number 11"
+        },
+        {
+          "type": "example",
+          "title": "Count the particles in a sodium atom",
+          "steps": [
+            "The atomic number of sodium is 11, so it has 11 protons.",
+            "A neutral atom has as many electrons as protons, so it has 11 electrons.",
+            "The mass number is 23.",
+            "Neutrons = mass number − atomic number = 23 − 11 = 12."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How the Periodic Table is arranged"
+        },
+        {
+          "type": "text",
+          "text": "In 1869, the Russian chemist Dmitri Mendeleev arranged the elements known at that time. He put them in order of mass, with similar elements in the same column. He left gaps for elements nobody had yet found and predicted their properties. When those elements were discovered, his predictions were close."
+        },
+        {
+          "type": "text",
+          "text": "Later, scientists found that atomic number gives a better order. Today the Periodic Table lists elements in order of atomic number. The rows are called periods. The columns are called groups. Metals are on the left and in the middle. Non-metals are on the right."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Group I: the alkali metals, such as sodium and potassium.",
+            "Group II: the alkaline earth metals, such as magnesium and calcium.",
+            "Group VII: the halogens, such as chlorine and iodine.",
+            "Group VIII, also called Group 0: the noble gases, such as helium and argon."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Electron arrangement and position"
+        },
+        {
+          "type": "text",
+          "text": "Electrons fill the shells in order, starting nearest the nucleus. For the first 20 elements, the first shell holds up to 2 electrons, the second up to 8 and the third up to 8. The next electrons go into the fourth shell."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Period 1: H 1, He 2.",
+            "Period 2: Li 2,1; Be 2,2; B 2,3; C 2,4; N 2,5; O 2,6; F 2,7; Ne 2,8.",
+            "Period 3: Na 2,8,1; Mg 2,8,2; Al 2,8,3; Si 2,8,4; P 2,8,5; S 2,8,6; Cl 2,8,7; Ar 2,8,8.",
+            "Period 4 begins: K 2,8,8,1; Ca 2,8,8,2."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Look for the pattern. The number of shells equals the period number. The number of electrons in the outer shell equals the group number. Noble gases have full outer shells."
+        },
+        {
+          "type": "example",
+          "title": "Find the position of sulphur",
+          "steps": [
+            "Sulphur has atomic number 16, so it has 16 electrons.",
+            "Fill the shells: 2 in the first, 8 in the second, 6 in the third. The arrangement is 2,8,6.",
+            "It has 3 shells, so sulphur is in Period 3.",
+            "It has 6 outer electrons, so sulphur is in Group VI."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Groups and the charges on ions"
+        },
+        {
+          "type": "text",
+          "text": "Atoms are most stable with a full outer shell, like the noble gases. Other atoms gain or lose electrons to get one. An atom that has gained or lost electrons is called an ion. It has a charge, because protons and electrons no longer balance."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Metals lose their outer electrons and form positive ions. Group I forms 1+ ions such as Na⁺, Group II forms 2+ ions such as Mg²⁺, and Group III forms 3+ ions such as Al³⁺.",
+            "Non-metals gain electrons and form negative ions. Group V forms 3− ions such as N³⁻, Group VI forms 2− ions such as O²⁻, and Group VII forms 1− ions such as Cl⁻.",
+            "Noble gases already have full shells, so they do not form ions."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Na \\rightarrow Na^+ + e^-}",
+          "speech": "a sodium atom loses one electron to become a sodium ion with a one plus charge"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Cl + e^- \\rightarrow Cl^-}",
+          "speech": "a chlorine atom gains one electron to become a chloride ion with a one minus charge"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Element cards",
+          "text": "These are the 13 most common elements in the Earth's crust, from most to least: oxygen, silicon, aluminium, iron, calcium, sodium, magnesium, potassium, titanium, hydrogen, phosphorus, sulphur and carbon. In groups, make one card for each element. Write its symbol, atomic number, electron arrangement and whether it is a metal or a non-metal. Iron and titanium have atomic numbers above 20, so write only their symbol and atomic number. Arrange the cards in the shape of the Periodic Table."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Mendeleev left gaps in his table for elements that nobody had ever seen. Why was this a bold thing to do? What would it have meant if those elements had never been found?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Elements are metals or non-metals, and their properties decide their uses. The Periodic Table lists elements in order of atomic number, in periods and groups. For the first 20 elements, the number of shells gives the period and the outer electrons give the group. Metals form positive ions and non-metals form negative ions, with a charge set by the group."
+        }
+      ],
+      "sim": {
+        "phet": "build-an-atom_en.html",
+        "caption": "Add protons, neutrons and electrons to build an atom. Watch how the element changes on the Periodic Table each time you add a proton, and see what happens to the charge when electrons and protons do not balance."
+      }
+    }
+  ]
+}

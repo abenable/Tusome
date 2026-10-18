@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.data.data-collection-and-display",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,36 +11,168 @@
       "strand": "Data and Probability",
       "subStrand": "Statistics",
       "order": 3,
+      "term": 1,
       "outcomes": [
-        "Understand mode, mean and median, as measures of location/central tendency and knows how to find them and when to use them. (k, u, s)",
-        "Understand range as a measure of dispersion/spread and how to find it. (k, u, s)",
-        "Draw and use frequency tables for ungrouped data. (u, s)",
-        "Draw and use frequency tables for grouped data. (u, s)",
-        "Estimate measures of location and dispersion for grouped data. (u, s)",
-        "Calculate the mean using an assumed mean. (u, s)",
-        "Draw a histogram with equal class intervals and use it to estimate the mode. (u, s)",
-        "Draw a cumulative frequency curve (ogive) and use it to estimate the median. (u, s, v/a)"
+        "understand mode, mean and median, as measures of location/central tendency and knows how to find them and when to use them. (k, u, s)",
+        "understand range as a measure of dispersion/spread and how to find it. (k, u, s)",
+        "draw and use frequency tables for ungrouped data. (u, s)",
+        "draw and use frequency tables for grouped data. (u, s)",
+        "estimate measures of location and dispersion for grouped data, (u, s)",
+        "calculate the mean using an assumed mean, (u, s)",
+        "draw a histogram with equal class intervals and uses it to estimate the mode. (u, s)",
+        "draw a cumulative frequency curve(ogive) and uses it to estimate the median. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The mean is the sum of all values divided by how many there are; the median is the middle value when the data is ordered; the mode is the most frequently occurring value. The range (highest value minus lowest value) measures how spread out the data is."
+          "text": "A farmer in Mbale weighs every bunch of matooke she harvests. A boda boda rider counts his trips each day. Lists of numbers like these are data. On their own they are hard to read. In this topic you will summarise data with a typical value and a measure of spread, and display it in tables and graphs."
+        },
+        {
+          "type": "heading",
+          "text": "Mean, median and mode"
         },
         {
           "type": "text",
-          "text": "For the data set 4, 7, 7, 9, 13: mean = (4+7+7+9+13) ÷ 5 = 40 ÷ 5 = 8; median (already ordered, middle value) = 7; mode (most frequent) = 7; range = 13 - 4 = 9."
+          "text": "A measure of central tendency, or average, is one value that represents the whole set. There are three."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The mode is the value that occurs most often. Use it for categories, such as the most popular shoe size in a shop.",
+            "The median is the middle value when the data is in order. Use it when a few values are very large or very small, such as salaries.",
+            "The mean is the total of all the values divided by how many there are. It uses every value, but one extreme value can pull it a long way."
+          ]
         },
         {
           "type": "equation",
-          "expr": "4,7,7,9,13:  mean=8, median=7, mode=7, range=9"
+          "latex": "\\bar{x} = \\frac{\\sum x}{n}",
+          "speech": "x bar, the mean, equals the sum of the values divided by n, the number of values"
+        },
+        {
+          "type": "heading",
+          "text": "Range: how spread out the data is"
         },
         {
           "type": "text",
-          "text": "When data is grouped into class intervals (e.g. 60-64, 65-69, 70-74 heights), the exact values are lost, so the mean is estimated using the midpoint of each class multiplied by its frequency. A cumulative frequency curve (ogive) plots running totals against the upper class boundary; reading across from half the total frequency and down to the horizontal axis estimates the median."
+          "text": "Two sets of data can have the same average but be spread out very differently. The range measures this spread, or dispersion. It is the largest value minus the smallest value."
+        },
+        {
+          "type": "example",
+          "title": "Opio's boda boda trips",
+          "steps": [
+            "Opio records his trips on 9 days: 12, 15, 9, 15, 20, 11, 15, 18, 14.",
+            "In order: 9, 11, 12, 14, 15, 15, 15, 18, 20.",
+            "Mode = 15, because it occurs three times.",
+            "Median = the 5th value of 9 = 15.",
+            "Mean = 129 ÷ 9 = 14.3 trips to 1 decimal place.",
+            "Range = 20 − 9 = 11 trips."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Frequency tables for ungrouped data"
         },
         {
           "type": "text",
-          "text": "A histogram with equal class widths shows frequency as bar height; the tallest bar's class contains the mode. Assumed mean speeds up mean calculations for large data sets: pick a value near the middle of the data (the assumed mean, A), work out how far each value deviates from A, average the deviations, and add that average back to A."
+          "text": "When values repeat, a frequency table is quicker than a list. The frequency, f, is how many times each value occurs. To find the mean, multiply each value by its frequency, add these products, and divide by the total frequency."
+        },
+        {
+          "type": "equation",
+          "latex": "\\bar{x} = \\frac{\\sum fx}{\\sum f}",
+          "speech": "x bar equals the sum of f times x, divided by the sum of f"
+        },
+        {
+          "type": "example",
+          "title": "Children in 20 households",
+          "steps": [
+            "Number of children x: 0, 1, 2, 3, 4, 5. Frequency f: 2, 4, 6, 4, 3, 1.",
+            "Total frequency Σf = 20.",
+            "Products fx: 0, 4, 12, 12, 12, 5, so Σfx = 45.",
+            "Mean = 45 ÷ 20 = 2.25 children.",
+            "Mode = 2, the value with the highest frequency.",
+            "Median: the 10th and 11th values. Running totals are 2, 6, 12, so both are 2. Median = 2."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Grouped data and the assumed mean"
+        },
+        {
+          "type": "text",
+          "text": "When there are many different values, we put them into classes of equal width, such as 10–14 kg. We then lose the exact values. So the mean, median, mode and range of grouped data are only estimates. For the mean, use the mid-point of each class to stand for every value in it."
+        },
+        {
+          "type": "text",
+          "text": "An assumed mean makes the arithmetic smaller. Choose a mid-point near the middle and call it A. Find each deviation d = x − A, then use the formula below."
+        },
+        {
+          "type": "equation",
+          "latex": "\\bar{x} = A + \\frac{\\sum fd}{\\sum f}, \\qquad d = x - A",
+          "speech": "x bar equals A plus the sum of f d over the sum of f, where d equals x minus A"
+        },
+        {
+          "type": "example",
+          "title": "Masses of 40 matooke bunches",
+          "steps": [
+            "Classes (kg): 10–14, 15–19, 20–24, 25–29, 30–34. Frequencies: 4, 9, 14, 8, 5. Total 40.",
+            "Mid-points x: 12, 17, 22, 27, 32. Take A = 22.",
+            "Deviations d: −10, −5, 0, 5, 10.",
+            "Products fd: −40, −45, 0, 40, 50, so Σfd = 5.",
+            "Estimated mean = 22 + 5 ÷ 40 = 22.125, about 22.1 kg.",
+            "Modal class = 20–24 kg. Estimated range = 34.5 − 9.5 = 25 kg, using the class boundaries."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Histograms and the mode"
+        },
+        {
+          "type": "text",
+          "text": "A histogram is a bar graph for grouped data. The bars touch, and the horizontal axis is a number scale using the class boundaries, such as 9.5, 14.5 and 19.5. With equal class widths, the height of each bar is the frequency. To estimate the mode, draw a line from the top right corner of the tallest bar to the top right corner of the bar before it. Draw another from the top left corner of the tallest bar to the top left corner of the bar after it. Where the lines cross, read down to the axis. The formula below gives the same value."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{mode} \\approx L + \\frac{d_1}{d_1 + d_2} \\times w",
+          "speech": "the mode is about L plus d one over d one plus d two, times w"
+        },
+        {
+          "type": "text",
+          "text": "Here L is the lower boundary of the modal class, w is the class width, d₁ is the modal frequency minus the one before, and d₂ is the modal frequency minus the one after. For the matooke: L = 19.5, w = 5, d₁ = 14 − 9 = 5, d₂ = 14 − 8 = 6. Mode ≈ 19.5 + (5 ÷ 11) × 5 = 21.8 kg."
+        },
+        {
+          "type": "heading",
+          "text": "Cumulative frequency and the median"
+        },
+        {
+          "type": "text",
+          "text": "Cumulative frequency is a running total of the frequencies. Plot each running total against the upper class boundary and join the points with a smooth curve. This curve is called an ogive. To estimate the median of n values, find n ÷ 2 on the cumulative frequency axis, go across to the curve, then down to read the value."
+        },
+        {
+          "type": "example",
+          "title": "Median mass from the ogive",
+          "steps": [
+            "Upper boundaries: 9.5, 14.5, 19.5, 24.5, 29.5, 34.5.",
+            "Cumulative frequencies: 0, 4, 13, 27, 35, 40.",
+            "Plot these points and join them with a smooth curve.",
+            "n ÷ 2 = 40 ÷ 2 = 20. The 20th bunch lies between 19.5 kg (13 bunches) and 24.5 kg (27 bunches).",
+            "Reading across from 20 and down gives a median of about 22 kg."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A line of heights",
+          "text": "Stand in a line in order of height, shortest to tallest. The difference between the tallest and the shortest learner is the range. Who is in the middle? That learner's height is the median. Measure and record every height in centimetres. Find the mean, median and mode from the raw data. Then group the heights into classes such as 140–149 cm, draw a histogram and an ogive, and estimate the mode and median. Compare the estimates with the exact values."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A company in Kampala pays 20 workers UGX 600,000 a month and its director UGX 15,000,000. Which average best describes what a typical worker earns? Which average would you choose for crop yields, or for shoe sizes? Give your reasons."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Mode is the most common value, median the middle value, and mean the total divided by the number of values. Range = largest − smallest. For grouped data use mid-points for the mean, a histogram for the mode, and an ogive for the median. These are estimates, because grouping hides the exact values."
         }
       ]
     }

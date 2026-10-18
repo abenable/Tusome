@@ -1,0 +1,242 @@
+{
+  "packId": "che.s3.equations.mole-concept",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.equations.mole-concept",
+      "title": "Formulae, Stoichiometry and Mole Concept",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Using Equations in Chemistry",
+      "subStrand": "Moles, formulae and equations",
+      "order": 3,
+      "term": 2,
+      "outcomes": [
+        "understand the concepts of relative atomic mass and relative molecular mass (k, u)",
+        "analyse the relationship between the number of moles and the number of particles (k, u)",
+        "analyse the relationship between the number of moles of a substance and its mass (k, u)",
+        "analyse the relationship between the number of moles of a gas and its volume (k, u)",
+        "synthesise chemical formulae (u)",
+        "interpret chemical equations (k, u)",
+        "practise scientific attitudes and values in investigating matter (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "At Nakasero market, traders do not count beans one by one. They measure them by the tin or by the kilogram. Chemists face the same problem with atoms, which are far too small and too many to count. They use a counting unit called the mole, and they count particles by weighing them."
+        },
+        {
+          "type": "heading",
+          "text": "Relative atomic mass and relative molecular mass"
+        },
+        {
+          "type": "text",
+          "text": "Atoms are too light to weigh one at a time, so we compare their masses with a standard atom, carbon-12. Relative atomic mass (Ar) is the average mass of an element's atoms compared with one-twelfth of the mass of a carbon-12 atom. For example, Ar of hydrogen is 1, oxygen is 16 and magnesium is 24."
+        },
+        {
+          "type": "text",
+          "text": "Relative molecular mass (Mr) is the sum of the relative atomic masses of all the atoms in a formula. For ionic compounds it is often called relative formula mass. Neither has units."
+        },
+        {
+          "type": "example",
+          "title": "Work out relative molecular masses",
+          "steps": [
+            "Use H = 1, C = 12, O = 16 and Ca = 40.",
+            "Water, H₂O: Mr = (2 × 1) + 16 = 18",
+            "Carbon dioxide, CO₂: Mr = 12 + (2 × 16) = 44",
+            "Calcium carbonate, CaCO₃: Mr = 40 + 12 + (3 × 16) = 100"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Moles and particles"
+        },
+        {
+          "type": "text",
+          "text": "A mole is the amount of substance that contains 6.02 × 10²³ particles. This number is called the Avogadro constant. The particles may be atoms, molecules or ions, so always say which one you mean."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{number of particles} = \\text{moles} \\times 6.02 \\times 10^{23}",
+          "speech": "number of particles equals number of moles times 6.02 times 10 to the power 23"
+        },
+        {
+          "type": "example",
+          "title": "Convert between moles and particles",
+          "steps": [
+            "How many molecules are in 2 moles of water?",
+            "Molecules = 2 × 6.02 × 10²³ = 1.204 × 10²⁴",
+            "How many moles are 3.01 × 10²³ atoms of iron?",
+            "Moles = 3.01 × 10²³ ÷ (6.02 × 10²³) = 0.5 mol"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Moles and mass"
+        },
+        {
+          "type": "text",
+          "text": "The molar mass is the mass of one mole of a substance. It is the Ar or Mr written in grams per mole (g/mol). One mole of carbon atoms has a mass of 12 g, and one mole of water has a mass of 18 g. Each contains 6.02 × 10²³ particles."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{moles} = \\frac{\\text{mass in g}}{\\text{molar mass in g/mol}}",
+          "speech": "number of moles equals mass in grams divided by molar mass in grams per mole"
+        },
+        {
+          "type": "example",
+          "title": "From mass to moles, and back",
+          "steps": [
+            "How many moles are in 36 g of water? (H₂O = 18 g/mol)",
+            "Moles = 36 ÷ 18 = 2 mol",
+            "What is the mass of 0.5 mol of sodium chloride? (Na = 23, Cl = 35.5)",
+            "Molar mass of NaCl = 23 + 35.5 = 58.5 g/mol",
+            "Mass = moles × molar mass = 0.5 × 58.5 = 29.25 g"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "From mass to number of molecules",
+          "steps": [
+            "How many molecules are in 4.4 g of carbon dioxide?",
+            "Molar mass of CO₂ = 44 g/mol",
+            "Moles = 4.4 ÷ 44 = 0.1 mol",
+            "Molecules = 0.1 × 6.02 × 10²³ = 6.02 × 10²² molecules"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Moles and gas volume"
+        },
+        {
+          "type": "text",
+          "text": "One mole of any gas takes up the same volume at the same temperature and pressure. This is the molar volume. At standard temperature and pressure (STP: 0 °C and 1 atmosphere) it is 22.4 dm³. At room temperature and pressure it is about 24 dm³."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{volume of gas} = \\text{moles} \\times \\text{molar volume}",
+          "speech": "volume of gas equals number of moles times molar volume"
+        },
+        {
+          "type": "example",
+          "title": "Work out gas volumes",
+          "steps": [
+            "What volume does 0.25 mol of carbon dioxide fill at STP?",
+            "Volume = 0.25 × 22.4 = 5.6 dm³",
+            "How many moles of oxygen are in 4.8 dm³ at room conditions?",
+            "Moles = 4.8 ÷ 24 = 0.2 mol"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Draw these links as a mind map with moles in the centre. To go from mass to particles or to gas volume, always pass through moles."
+        },
+        {
+          "type": "list",
+          "items": [
+            "mass ÷ molar mass = moles",
+            "moles × 6.02 × 10²³ = number of particles",
+            "moles × 22.4 dm³ (STP) or 24 dm³ (room conditions) = volume of gas"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Count by weighing",
+          "text": "Count out 100 dry beans and weigh them on a kitchen or market scale. Use your result to predict the mass of 500 beans. Weigh out that mass, then count to check. Repeat with maize grains. Discuss how this is like using molar mass to count atoms."
+        },
+        {
+          "type": "heading",
+          "text": "Writing chemical formulae"
+        },
+        {
+          "type": "text",
+          "text": "An ionic formula is built from the charges on its ions, so that the positive and negative charges balance. Common ions include Na⁺, K⁺, Ca²⁺, Mg²⁺, Al³⁺, Cl⁻, OH⁻, NO₃⁻, O²⁻, SO₄²⁻ and CO₃²⁻. Names follow IUPAC rules: the metal comes first, a single non-metal ends in -ide, and a Roman numeral shows a metal's charge, as in copper(II) oxide."
+        },
+        {
+          "type": "example",
+          "title": "Write the formula of aluminium sulphate",
+          "steps": [
+            "The ions are Al³⁺ and SO₄²⁻.",
+            "The smallest number that both 3 and 2 go into is 6.",
+            "Two Al³⁺ ions give +6, and three SO₄²⁻ ions give −6.",
+            "The formula is Al₂(SO₄)₃. The brackets show three whole sulphate groups."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Empirical and molecular formulae"
+        },
+        {
+          "type": "text",
+          "text": "The empirical formula is the simplest whole-number ratio of atoms in a compound. The molecular formula is the actual number of each kind of atom in one molecule. Ethene has the molecular formula C₂H₄ but the empirical formula CH₂."
+        },
+        {
+          "type": "example",
+          "title": "Empirical formula of magnesium oxide",
+          "steps": [
+            "Your teacher heats 2.4 g of magnesium ribbon in a crucible. It forms 4.0 g of magnesium oxide.",
+            "Mass of oxygen that combined = 4.0 − 2.4 = 1.6 g",
+            "Moles of Mg = 2.4 ÷ 24 = 0.1. Moles of O = 1.6 ÷ 16 = 0.1",
+            "Ratio Mg : O = 0.1 : 0.1 = 1 : 1",
+            "The empirical formula is MgO."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "From empirical to molecular formula",
+          "steps": [
+            "A compound has the empirical formula CH₂ and Mr = 56.",
+            "Mass of one CH₂ unit = 12 + (2 × 1) = 14",
+            "Number of units = 56 ÷ 14 = 4",
+            "The molecular formula is (CH₂)₄ = C₄H₈."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Interpreting chemical equations"
+        },
+        {
+          "type": "text",
+          "text": "Atoms are not created or destroyed in a reaction, so a balanced equation has the same number of each kind of atom on both sides. Balance an equation by changing the numbers in front of formulae, never the small numbers inside them. The numbers in front tell you how many moles react."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2Mg + O_2 \\rightarrow 2MgO}",
+          "speech": "2 M g plus O 2 gives 2 M g O"
+        },
+        {
+          "type": "text",
+          "text": "This equation reads: 2 moles of magnesium react with 1 mole of oxygen to give 2 moles of magnesium oxide. At Hima and Tororo, limestone (calcium carbonate) is heated to make lime (calcium oxide) for cement. The equation lets us work out how much lime forms."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 \\rightarrow CaO + CO_2}",
+          "speech": "C a C O 3 gives C a O plus C O 2"
+        },
+        {
+          "type": "example",
+          "title": "How much lime from limestone?",
+          "steps": [
+            "What mass of calcium oxide forms from 50 g of calcium carbonate? (Ca = 40, C = 12, O = 16)",
+            "Moles of CaCO₃ = 50 ÷ 100 = 0.5 mol",
+            "The equation shows 1 mol of CaCO₃ gives 1 mol of CaO, so 0.5 mol of CaO forms.",
+            "Molar mass of CaO = 40 + 16 = 56 g/mol, so mass = 0.5 × 56 = 28 g",
+            "The 0.5 mol of CO₂ given off fills 0.5 × 22.4 = 11.2 dm³ at STP."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Chemists all over the world use the same symbols, formulae and the mole. Why does this matter? Which attitudes, such as honest recording, patience and care with measurements, help scientists produce results that others can trust?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "One mole contains 6.02 × 10²³ particles and has a mass equal to the Ar or Mr in grams. One mole of any gas fills 22.4 dm³ at STP or about 24 dm³ at room conditions. Convert to moles first, then use the balanced equation to link reactants and products."
+        }
+      ]
+    }
+  ]
+}

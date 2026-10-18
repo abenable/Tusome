@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.trigonometry-1",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,32 +11,141 @@
       "strand": "Geometry and Measures",
       "subStrand": "Trigonometry",
       "order": 2,
+      "term": 1,
       "outcomes": [
-        "Derive sine, cosine and tangent functions from the unit circle. (k, u, s)",
-        "Read and use calculators to find values of trigonometric functions. (u, s)",
-        "Use sine, cosine and tangent in calculating lengths of sides and angles of right-angled triangles. (u)",
-        "Find angles of elevation and depression. (k, s)"
+        "derive sine, cosine and tangent functions from the unit circle. (k u s)",
+        "read and uses calculators to find values of trigonometric functions. (u s)",
+        "use sine, cosine and tangent in calculating lengths of sides and angles of right-angled triangles. (u)",
+        "find angles of elevation and depression. (k s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "In a right-angled triangle, for a chosen angle θ (not the right angle), the side opposite θ, the side adjacent to θ, and the hypotenuse (the longest side) define three ratios: sine, cosine and tangent."
+          "text": "How tall is the mobile phone mast near your school? How steep is the ramp at the health centre? You cannot climb the mast with a tape measure, but you can measure an angle and a distance on the ground. Trigonometry links the angles of a right-angled triangle to the lengths of its sides. In this topic you meet its three basic functions: sine, cosine and tangent."
         },
         {
-          "type": "equation",
-          "latex": "\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}, \\quad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}, \\quad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}"
-        },
-        {
-          "type": "text",
-          "text": "A ladder leans against a wall, making a 40° angle with the ground, and reaches 3 m up the wall. To find the ladder's length (the hypotenuse), use sine, since the wall height is opposite the 40° angle: sin(40°) = 3 ÷ length, so length = 3 ÷ sin(40°) ≈ 3 ÷ 0.643 ≈ 4.67 m."
-        },
-        {
-          "type": "equation",
-          "expr": "sin(40°) = 3/length  ->  length = 3 ÷ sin(40°) ≈ 4.67 m"
+          "type": "heading",
+          "text": "Sine, cosine and tangent from the unit circle"
         },
         {
           "type": "text",
-          "text": "An angle of elevation is measured upward from the horizontal (e.g. looking up at the top of a building); an angle of depression is measured downward from the horizontal (e.g. looking down at a boat from a cliff). From a lighthouse 50 m tall, the angle of depression to a boat 600 m away (measured horizontally) satisfies tan(θ) = 50 ÷ 600, so θ = tan⁻¹(50/600) ≈ 4.76°."
+          "text": "A unit circle is a circle of radius 1 with its centre at the origin (0, 0). Draw a radius from the centre to a point P on the circle. Let θ (theta) be the angle between this radius and the positive x-axis, measured anticlockwise. As θ changes, P moves round the circle and its coordinates (x, y) change."
+        },
+        {
+          "type": "text",
+          "text": "We give these coordinates names. The x-coordinate of P is the cosine of θ, written cos θ. The y-coordinate is the sine of θ, written sin θ. The tangent of θ, written tan θ, is y divided by x."
+        },
+        {
+          "type": "equation",
+          "latex": "\\cos\\theta = x, \\qquad \\sin\\theta = y, \\qquad \\tan\\theta = \\frac{y}{x} = \\frac{\\sin\\theta}{\\cos\\theta}",
+          "speech": "cos theta equals x, sin theta equals y, and tan theta equals y over x, which is sin theta over cos theta"
+        },
+        {
+          "type": "text",
+          "text": "At θ = 0°, P is at (1, 0), so cos 0° = 1 and sin 0° = 0. At θ = 90°, P is at (0, 1), so cos 90° = 0 and sin 90° = 1. At 30°, the y-coordinate is 0.5, so sin 30° = 0.5. At 45°, x and y are equal, about 0.71 each, so tan 45° = 1."
+        },
+        {
+          "type": "heading",
+          "text": "From the unit circle to any right-angled triangle"
+        },
+        {
+          "type": "text",
+          "text": "Drop a line from P straight down to the x-axis. You get a right-angled triangle with hypotenuse 1, height sin θ and base cos θ. A bigger triangle with the same angle is an enlargement of this one, so its sides are in the same ratio. Name the sides of a right-angled triangle from the angle θ: the hypotenuse is the longest side, opposite the right angle; the opposite side faces θ; the adjacent side is next to θ."
+        },
+        {
+          "type": "equation",
+          "latex": "\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}, \\quad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}, \\quad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}",
+          "speech": "sin theta equals opposite over hypotenuse, cos theta equals adjacent over hypotenuse, tan theta equals opposite over adjacent"
+        },
+        {
+          "type": "text",
+          "text": "Many learners remember these as SOH CAH TOA: Sine is Opposite over Hypotenuse, Cosine is Adjacent over Hypotenuse, Tangent is Opposite over Adjacent."
+        },
+        {
+          "type": "heading",
+          "text": "Using a calculator"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Check that the calculator is in degree mode. A small D or DEG shows on the screen.",
+            "To find a ratio, press sin, cos or tan, then the angle. For example, sin 35 gives 0.5736 to 4 decimal places.",
+            "To find an angle from a ratio, use the inverse function, usually SHIFT then sin, written sin⁻¹. For example, sin⁻¹(0.5) gives 30°.",
+            "Keep full calculator values while you work. Round only the final answer."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "Finding sides and angles in right-angled triangles"
+        },
+        {
+          "type": "text",
+          "text": "First label the sides from the angle you know or want. Then choose the ratio that uses the two sides in the question."
+        },
+        {
+          "type": "example",
+          "title": "How high does the ladder reach?",
+          "steps": [
+            "Kato leans a 6 m ladder against a wall. It makes an angle of 70° with the ground.",
+            "The ladder is the hypotenuse. The height up the wall is opposite the 70° angle.",
+            "sin 70° = height ÷ 6, so height = 6 × sin 70° = 6 × 0.9397 = 5.64 m.",
+            "The distance from the wall is adjacent: 6 × cos 70° = 6 × 0.3420 = 2.05 m."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the angle of a ramp",
+          "steps": [
+            "A ramp at a health centre in Masaka rises 0.5 m over a horizontal distance of 6 m.",
+            "We know the opposite (0.5 m) and the adjacent (6 m), so use tangent.",
+            "tan θ = 0.5 ÷ 6 = 0.0833.",
+            "θ = tan⁻¹(0.0833) = 4.8° to 1 decimal place."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Angles of elevation and depression"
+        },
+        {
+          "type": "text",
+          "text": "When you look up at an object, the angle between the horizontal and your line of sight is the angle of elevation. When you look down, the angle between the horizontal and your line of sight is the angle of depression. Both are measured from the horizontal, never from the vertical. The angle of depression from A to B equals the angle of elevation from B to A, because they are alternate angles between parallel horizontal lines."
+        },
+        {
+          "type": "example",
+          "title": "The height of a mast",
+          "steps": [
+            "Akello stands 40 m from the foot of a mobile phone mast in Lira. The angle of elevation of the top is 35°. Her eyes are 1.5 m above the ground.",
+            "The 40 m is adjacent to the angle. The height above her eyes, h, is opposite.",
+            "tan 35° = h ÷ 40, so h = 40 × 0.7002 = 28.0 m.",
+            "Height of the mast = 28.0 + 1.5 = 29.5 m."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Looking down from a balcony",
+          "steps": [
+            "From a balcony 45 m above a road in Kampala, Wasswa sees a boda boda. The angle of depression is 28°.",
+            "The angle of elevation from the boda boda up to Wasswa is also 28°.",
+            "The height, 45 m, is opposite this angle. The distance d along the ground is adjacent.",
+            "tan 28° = 45 ÷ d, so d = 45 ÷ 0.5317 = 84.6 m."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build your own trig table",
+          "text": "On graph paper, draw axes and a circle of radius 10 cm with its centre where the axes cross. Let 10 cm stand for 1 unit. With a protractor, draw radii at 0°, 15°, 30°, 45°, 60°, 75° and 90° from the positive x-axis. For each, measure x and y where the radius meets the circle and divide by 10. Record θ, x and y in a table, then work out y ÷ x. Compare your values with cos θ, sin θ and tan θ on a calculator. Plot x and y against θ on separate graphs."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Look at your table. Why can sin θ and cos θ never be bigger than 1, while tan θ keeps growing as θ gets close to 90°?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "On the unit circle, cos θ is the x-coordinate and sin θ is the y-coordinate of the point at angle θ, and tan θ = sin θ ÷ cos θ. In a right-angled triangle use SOH CAH TOA, and sin⁻¹, cos⁻¹ or tan⁻¹ to find an angle. Angles of elevation and depression are always measured from the horizontal."
         }
       ]
     }

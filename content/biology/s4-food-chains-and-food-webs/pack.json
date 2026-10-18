@@ -1,0 +1,153 @@
+{
+  "packId": "bio.s4.interrelationships.food-chains-webs",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.interrelationships.food-chains-webs",
+      "title": "Food Chains and Food Webs",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Interrelationships",
+      "subStrand": "Feeding relationships and the carbon cycle",
+      "order": 7,
+      "term": 2,
+      "outcomes": [
+        "understand the feeding relationships in an ecosystem, and express them using food chains, webs, and pyramids (k, u, s)",
+        "appreciate the organisms and processes involved in the carbon cycle, and its role in maintaining the carbon dioxide balance in the atmosphere (u, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Every living thing needs food for energy. A cow eats grass. A lion eats a kob. A family in Jinja eats tilapia from Lake Victoria. When we follow who eats what, we find that all the organisms in an ecosystem depend on one another."
+        },
+        {
+          "type": "heading",
+          "text": "Producers, consumers and decomposers"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Producers are green plants and algae. They make their own food by photosynthesis, using energy from sunlight. Every food chain begins with a producer.",
+            "Primary consumers (herbivores) eat producers. Examples are grasshoppers, cows and Uganda kob.",
+            "Secondary consumers eat primary consumers. Examples are frogs and lizards that eat insects.",
+            "Tertiary consumers eat secondary consumers. Examples are snakes and hawks. An animal that no other animal hunts, such as a lion, is a top consumer.",
+            "Decomposers are bacteria and fungi that feed on dead organisms and waste. They return nutrients to the soil and water for plants to use again."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Food chains"
+        },
+        {
+          "type": "text",
+          "text": "A food chain shows how energy passes from one organism to the next as each one is eaten. The arrows point from the food to the feeder, in the direction energy flows."
+        },
+        {
+          "type": "equation",
+          "expr": "grass → Uganda kob → lion",
+          "speech": "grass is eaten by Uganda kob, which is eaten by lion"
+        },
+        {
+          "type": "equation",
+          "expr": "phytoplankton → zooplankton → silver fish → Nile perch → humans",
+          "speech": "phytoplankton are eaten by zooplankton, which are eaten by silver fish, which are eaten by Nile perch, which are eaten by humans"
+        },
+        {
+          "type": "text",
+          "text": "Each feeding level in a chain is called a trophic level. Producers are on the first trophic level, primary consumers on the second, and so on. At each level, most of the energy is used for living, such as moving and keeping warm, and is lost as heat. Only about one tenth passes to the next level. This is why food chains rarely have more than four or five links."
+        },
+        {
+          "type": "heading",
+          "text": "Food webs"
+        },
+        {
+          "type": "text",
+          "text": "Most animals eat more than one kind of food, and most are eaten by more than one kind of predator. So the food chains in an ecosystem link together to form a food web."
+        },
+        {
+          "type": "text",
+          "text": "In the grasslands of Queen Elizabeth National Park, grass is eaten by Uganda kob, buffalo, grasshoppers and rats. Grasshoppers are eaten by birds and lizards. Rats are eaten by snakes and owls. Kob and buffalo are eaten by lions. Snakes are eaten by eagles."
+        },
+        {
+          "type": "text",
+          "text": "A food web shows that a change in one population affects many others. If a disease killed most of the grasshoppers, birds and lizards would have less food. They might eat more of other insects, or their numbers might fall."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a food web",
+          "text": "In groups, spend 20 minutes watching a garden, hedge or the school farm. List the plants and animals you see, and note what each animal eats. You can also ask farmers or use books. Write each name on a small card. Lay the cards on a desk and join each food to its feeders with string or chalk arrows pointing towards the feeder. Label each organism as a producer or a primary, secondary or tertiary consumer."
+        },
+        {
+          "type": "heading",
+          "text": "Pyramids of numbers"
+        },
+        {
+          "type": "text",
+          "text": "A pyramid of numbers shows how many organisms there are at each trophic level of a food chain. Each level is drawn as a horizontal bar. The longer the bar, the more organisms. Producers go at the bottom."
+        },
+        {
+          "type": "example",
+          "title": "Building a pyramid of numbers",
+          "steps": [
+            "A group counted the organisms in a patch of grassland near their school.",
+            "They found 2,000 grass plants, 200 grasshoppers, 15 lizards and 1 hawk that hunted there.",
+            "Sort them by trophic level. Level 1, producers: grass, 2,000. Level 2, primary consumers: grasshoppers, 200. Level 3, secondary consumers: lizards, 15. Level 4, tertiary consumer: hawk, 1.",
+            "Draw four bars, one on top of another, with the longest for grass at the bottom and the shortest for the hawk at the top. The bars need not be exactly to scale.",
+            "The shape is a pyramid. Numbers fall at each level because energy is lost at each step, so each level can support fewer animals. Animals higher up are also usually bigger, so each one needs more food."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Sometimes the pyramid has a different shape. One large mango tree can feed hundreds of caterpillars, which feed a few birds. The bar for the producer is then very short and the pyramid looks upside down. Parasites, such as many ticks on one cow, also turn the pyramid upside down."
+        },
+        {
+          "type": "heading",
+          "text": "The carbon cycle"
+        },
+        {
+          "type": "text",
+          "text": "Carbon is found in all living things, in sugars, proteins and fats. In the air, it exists as carbon dioxide gas. The carbon cycle is the movement of carbon between the air, living organisms, and the soil, rocks and water."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Photosynthesis: green plants and algae take in carbon dioxide and use it to make sugars. This removes carbon dioxide from the air.",
+            "Feeding: carbon in plants passes to animals that eat them, and then along food chains.",
+            "Respiration: plants, animals and decomposers break down food to release energy, giving out carbon dioxide.",
+            "Decomposition: bacteria and fungi break down dead organisms and waste, releasing carbon dioxide as they respire.",
+            "Fossil fuels: over millions of years, some dead organisms that did not decay became coal, oil and natural gas, which store carbon underground.",
+            "Combustion: burning wood, charcoal, petrol and other fuels releases carbon dioxide into the air."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "equation",
+          "expr": "carbon dioxide + water → glucose + oxygen (using light energy and chlorophyll)",
+          "speech": "carbon dioxide plus water gives glucose plus oxygen, using light energy and chlorophyll"
+        },
+        {
+          "type": "equation",
+          "expr": "glucose + oxygen → carbon dioxide + water + energy",
+          "speech": "glucose plus oxygen gives carbon dioxide plus water plus energy"
+        },
+        {
+          "type": "text",
+          "text": "When the cycle is balanced, photosynthesis removes about as much carbon dioxide as respiration and burning add. Today people burn large amounts of fuel and clear forests for farms and charcoal. This adds more carbon dioxide and leaves fewer trees to take it in. Carbon dioxide traps heat, so more of it causes global warming and climate change, including less reliable rains. Planting trees and protecting forests such as Mabira help keep the balance."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many homes in Uganda cook with charcoal. How does this affect the carbon cycle? What changes could families, schools and the government make?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Food chains begin with producers and pass energy to consumers, losing energy at each trophic level. Food chains link together into food webs. A pyramid of numbers shows how many organisms are at each level. In the carbon cycle, photosynthesis removes carbon dioxide from the air, while respiration, decay and burning return it."
+        }
+      ]
+    }
+  ]
+}

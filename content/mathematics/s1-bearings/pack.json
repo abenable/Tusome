@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.bearings",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,154 @@
       "strand": "Geometry and Measures",
       "subStrand": "Bearings",
       "order": 7,
+      "term": 2,
       "outcomes": [
         "know the compass points. (k)",
-        "describe the direction of a place from a given point using compass points. (u, s)",
-        "describe the bearing of a place from a given point. (k, s)",
-        "apply bearings in real life situations. (u, s)",
-        "choose and uses an appropriate scale to make an accurate drawing. (k, u)",
+        "describe the direction of a place from a given point using compass points. (u s)",
+        "describe the bearing of a place from a given point. (k s)",
+        "apply bearings in real life situations. (u s)",
+        "choose and uses an appropriate scale to make an accurate drawing. (k u)",
         "differentiate between a sketch and a scale drawing. (u, v)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The four main compass points are North, East, South and West, arranged clockwise around a circle. Between them sit North-East, South-East, South-West and North-West. Direction can be described using these points — for example, a village might lie North-East of a town."
+          "text": "Jinja is east of Kampala. Gulu is to the north and Masaka is to the south-west. Fishermen on Lake Victoria and pilots landing at Entebbe need more exact directions than this. They use bearings, which give a direction as an angle."
+        },
+        {
+          "type": "heading",
+          "text": "The compass points"
         },
         {
           "type": "text",
-          "text": "A bearing gives direction more precisely, as an angle measured clockwise from North, always written with three digits (e.g. 070°, not 70°). A bearing of 000° is due North, 090° is due East, 180° is due South, and 270° is due West."
+          "text": "A compass needle points to the north. The four main compass points are North (N), East (E), South (S) and West (W). Going clockwise from North, they come in the order N, E, S, W. There is 90° between each one and the next."
         },
         {
           "type": "text",
-          "text": "Henry's school is 4 km from his home on a bearing of 070°. The market is 1 km from the school on a bearing of 250°. Bearings 070° and 250° differ by exactly 180°, meaning the market lies back along the same line, on the opposite side of the school from home — so the market is 4 - 1 = 3 km from Henry's home, on the same bearing of 070°."
+          "text": "Halfway between the main points are North-East (NE), South-East (SE), South-West (SW) and North-West (NW). These eight points are 45° apart."
         },
         {
           "type": "text",
-          "text": "A scale drawing represents real distances at a fixed ratio — for example, 1 cm on paper representing 1 km on the ground — and every length and angle in it is accurate, so measurements can be taken directly from the drawing. A sketch, by contrast, is a rough diagram that shows the layout but is not drawn to scale, so no measurement can be trusted from it."
+          "text": "In the morning the sun rises roughly in the east. If you stand with your right hand towards the rising sun, you are facing north."
+        },
+        {
+          "type": "heading",
+          "text": "Describing direction with compass points"
         },
         {
           "type": "text",
-          "text": "To make an accurate scale drawing, choose a scale that fits the paper comfortably: a distance of 80 km at a scale of 1 cm to 10 km becomes a line 8 cm long. Too small a scale (e.g. 1 cm to 1 km for an 80 km distance) would need an 80 cm line that will not fit on an exercise book page, while too large a scale makes the drawing too small to measure accurately."
+          "text": "We say the direction of a place from a starting point. \"Jinja is east of Kampala\" means you start at Kampala and travel east to reach Jinja. We can also describe turns. A turn clockwise moves the same way as the hands of a clock. A turn anti-clockwise moves the other way."
+        },
+        {
+          "type": "example",
+          "title": "Angles of turn",
+          "steps": [
+            "Alex is facing North. He turns clockwise to face West.",
+            "Clockwise from North he passes East (90°), South (180°) and reaches West.",
+            "He turns through 3 × 90° = 270°.",
+            "If he had turned anti-clockwise from North to West, he would turn only 90°.",
+            "Facing North-West and turning to face South-East is a half turn of 180°, in either direction."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Bearings"
+        },
+        {
+          "type": "text",
+          "text": "A bearing is an angle measured clockwise from North. It is always written with three figures, from 000° to 360°. So an angle of 45° is written as the bearing 045°."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "North = 000°, East = 090°, South = 180°, West = 270°",
+            "North-East = 045°, South-East = 135°, South-West = 225°, North-West = 315°"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To find the bearing of B from A, draw a North line at A. Measure the angle clockwise from this North line round to the line AB."
+        },
+        {
+          "type": "text",
+          "text": "The back bearing is the bearing of A from B. It points the opposite way, so it differs from the first bearing by 180°."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{back bearing} = \\theta \\pm 180^\\circ",
+          "speech": "the back bearing equals theta plus or minus one hundred and eighty degrees"
+        },
+        {
+          "type": "text",
+          "text": "Add 180° if the bearing is less than 180°. Subtract 180° if it is 180° or more."
+        },
+        {
+          "type": "example",
+          "title": "Henry's journey to school and the market",
+          "steps": [
+            "Henry's school is 4 km from his home on a bearing of 070°.",
+            "The bearing of his home from the school is 070° + 180° = 250°.",
+            "The market is 1 km from the school on a bearing of 250°.",
+            "That is the same direction as the road back home.",
+            "So the market lies on the straight road between school and home, 4 − 1 = 3 km from home.",
+            "The bearing of the market from Henry's home is 070°."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Sketches and scale drawings"
+        },
+        {
+          "type": "text",
+          "text": "A sketch is a quick drawing that shows the general idea. The lengths and angles are not exact, but the parts are labelled. A scale drawing is an accurate drawing. Every length is the real length made smaller by the same amount, and every angle is measured exactly."
+        },
+        {
+          "type": "text",
+          "text": "A scale such as 1 cm to 20 km means every 1 cm on the drawing stands for 20 km in real life. Choose a scale that makes the drawing fit the page but stay large enough to measure. Always write the scale on the drawing."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{real distance} = \\text{drawing length} \\times \\text{scale}",
+          "speech": "real distance equals drawing length times the scale"
+        },
+        {
+          "type": "example",
+          "title": "Two boats leave Port Bell",
+          "steps": [
+            "Two boats leave Port Bell at the same time. Boat A sails 80 km on a bearing of 030°. Boat B sails 160 km on a bearing of 110°.",
+            "First make a sketch to see the shape. Then choose a scale. The longest distance is 160 km, so use 1 cm to 20 km.",
+            "Boat A: 80 ÷ 20 = 4 cm. Boat B: 160 ÷ 20 = 8 cm.",
+            "Mark Port Bell as P and draw a North line. Measure 30° clockwise and draw PA = 4 cm.",
+            "From the same North line, measure 110° clockwise and draw PB = 8 cm.",
+            "Join A to B and measure it. It should be about 8.3 cm.",
+            "Real distance AB = 8.3 × 20 ≈ 166 km.",
+            "Draw a North line at A and measure clockwise to AB. The bearing of B from A is about 138°."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Bearings in real life"
+        },
+        {
+          "type": "text",
+          "text": "Bearings are used by pilots, boat crews, surveyors who mark land boundaries, and people who plan roads. A clear bearing and distance let anyone find a place, even with no road or landmark nearby."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A scale drawing of your classroom",
+          "text": "In groups, measure the length and width of your classroom with a tape measure or a metre rule. Measure where the door, windows and teacher's table are. First make a sketch. Then choose a scale, such as 1 cm to 1 m, and make an accurate scale drawing. Use the sun or a compass to mark North on your drawing, and find the bearing of the door from the teacher's table."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why do you think bearings are always measured from North and written with three figures? What could go wrong if a boat crew on Lake Victoria used a different rule?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A bearing is measured clockwise from North and written with three figures, such as 045°. The back bearing differs by 180°. A scale drawing shows true lengths and angles at a stated scale, while a sketch only shows the idea."
         }
       ]
     }

@@ -1,33 +1,149 @@
 {
   "packId": "bio.s1.cells.structure",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "bio.s1.cells.structure",
-      "title": "Cell Structure",
+      "title": "Cells",
       "subject": "biology",
       "level": "S1",
-      "strand": "Cells",
-      "subStrand": "Plant and animal cells",
+      "strand": "Diversity of Living Things",
+      "subStrand": "Cell structure, specialised cells and levels of organisation",
+      "order": 2,
+      "term": 1,
       "outcomes": [
-        "State that the cell is the basic unit of life.",
-        "Identify the main parts of a plant cell and an animal cell.",
-        "Distinguish between plant and animal cells based on their structures.",
-        "State the functions of the nucleus, cell membrane, cytoplasm, cell wall and chloroplast."
+        "know that the basic unit of living organisms is a cell (k)",
+        "know and understand the structure and functions of a typical animal cell and plant cell (k, u, s)",
+        "understand the structure of specialized cells in terms of their functions in an organism (u)",
+        "understand levels of organization in organisms (cell, tissue, organ, system, organism) (u)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The cell is the basic unit of life. All living things are made of one or more cells. A cell has three main parts: the cell membrane, which controls what enters and leaves the cell; the cytoplasm, a jelly-like substance where chemical reactions happen; and the nucleus, which controls the cell's activities and contains genetic material."
+          "text": "A school building is made of many small bricks. In the same way, your body is made of tiny units called cells. A cell is the smallest part of an organism that can carry out the life processes. That is why the cell is called the basic unit of life."
         },
         {
           "type": "text",
-          "text": "Plant cells and animal cells share these three parts, but plant cells have extra structures. A plant cell has a cell wall made of cellulose outside the cell membrane, which gives the cell a fixed shape and supports it. Plant cells also contain chloroplasts, which contain the green pigment chlorophyll and use sunlight to make food by photosynthesis. Plant cells usually have a large permanent vacuole filled with cell sap."
+          "text": "Most cells are too small to see with the eyes alone. A microscope makes them look much bigger. Some organisms, like bacteria and Amoeba, are made of only one cell. Others, like a mango tree or a cow, are made of millions of cells."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of an animal cell"
         },
         {
           "type": "text",
-          "text": "Animal cells do not have a cell wall, chloroplasts, or a large permanent vacuole. Because they have no cell wall, animal cells can change shape. The differences in structure reflect the different ways plants and animals live and get their food."
+          "text": "Under a light microscope, a typical animal cell, such as a cell from the inside of your cheek, shows three main parts."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cell membrane: a thin layer around the cell. It controls which substances enter and leave the cell.",
+            "Cytoplasm: a jelly-like substance inside the membrane. Most of the cell's chemical reactions take place here.",
+            "Nucleus: a round body inside the cytoplasm. It controls the activities of the cell. It also carries the genetic material, the instructions that pass features from parents to young."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The cytoplasm also contains tiny structures called mitochondria, which release energy from food during respiration. They are too small to see clearly with a school microscope."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a plant cell"
+        },
+        {
+          "type": "text",
+          "text": "A plant cell, such as a cell from a leaf, also has a cell membrane, cytoplasm, a nucleus and mitochondria. It has three extra parts as well."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cell wall: a firm layer outside the cell membrane, made of a substance called cellulose. It gives the cell a fixed shape and supports it.",
+            "Chloroplasts: small green bodies in the cytoplasm. They contain chlorophyll, a green substance that traps light energy so the plant can make food. Chloroplasts are found in the green parts of a plant, such as leaves, but not in roots.",
+            "Large vacuole: a big space in the centre of the cell, filled with cell sap. Cell sap is a watery liquid containing sugars and salts. When the vacuole is full, it presses outwards and keeps the cell firm."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Comparing plant and animal cells"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Both have a cell membrane, cytoplasm, a nucleus and mitochondria.",
+            "Plant cells have a cellulose cell wall. Animal cells have no cell wall.",
+            "Plant cells in green parts have chloroplasts. Animal cells never have chloroplasts.",
+            "Plant cells have one large, permanent vacuole. Animal cells have only small vacuoles, or none.",
+            "Plant cells usually have a regular, box-like shape. Animal cells are often round or irregular and can change shape.",
+            "Plant cells store food as starch. Animal cells store food as glycogen and fat."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Looking at onion cells",
+          "text": "Peel the thin, clear skin from the inside of a piece of onion. Lay a small, flat piece on a glass slide. Add one drop of water, or a drop of iodine solution if you have it, which makes the nucleus easier to see. Look at it with a microscope. Draw a few cells and label the cell wall, cytoplasm and nucleus. If there is no microscope, cut a ripe tomato and look at the soft flesh with a hand lens. You will see tiny round bags; each one is a single cell."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a model cell",
+          "text": "In groups, make a model plant cell. Use a small box as the cell wall and line it with a clear polythene bag as the cell membrane. Fill the bag with cold porridge as the cytoplasm. Push in a bean seed as the nucleus and a few green peas as chloroplasts. Then make an animal cell with no box. Explain to the class which parts the animal cell lacks and why its shape can change."
+        },
+        {
+          "type": "heading",
+          "text": "Specialised cells"
+        },
+        {
+          "type": "text",
+          "text": "In large organisms, different cells do different jobs. A specialised cell has a special shape or special parts that suit its job. In other words, its structure suits its function."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Red blood cell: has no nucleus and is a disc pressed in on both sides. This leaves more room for haemoglobin, the substance that carries oxygen, and gives a large surface to take in oxygen.",
+            "Nerve cell: is very long and thin, with branches at its ends. It carries messages quickly from one part of the body to another.",
+            "Sperm cell: has a tail to swim to the egg, and many mitochondria to release energy for swimming.",
+            "Ciliated cell: has tiny hairs called cilia. In the windpipe, the cilia sweep mucus and trapped dust up and away from the lungs.",
+            "Root hair cell: has a long, thin outgrowth that reaches between soil particles. This gives a large surface to absorb water and mineral salts.",
+            "Palisade cell: is long and packed with chloroplasts. It lies near the upper surface of a leaf, where it traps a lot of light.",
+            "Guard cells: a pair of bean-shaped cells around each tiny pore in a leaf. They open and close the pore to control the movement of gases and water vapour."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Root hair cells have no chloroplasts, but palisade cells are full of them. Why do you think a plant puts chloroplasts in some cells and not in others?"
+        },
+        {
+          "type": "heading",
+          "text": "Levels of organisation"
+        },
+        {
+          "type": "text",
+          "text": "In a large organism, cells do not work alone. Similar cells group together, and the groups work together. Biologists describe five levels of organisation, from simple to complex."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Cell: the basic unit, for example a muscle cell.",
+            "Tissue: a group of similar cells doing the same job, for example muscle tissue.",
+            "Organ: a group of different tissues working together, for example the heart, which has muscle, nerve and blood tissues. In a plant, a leaf is an organ.",
+            "Organ system: a group of organs working together, for example the digestive system, which includes the mouth, stomach and intestines.",
+            "Organism: a complete living thing made of several organ systems working together, for example a person or a bean plant."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Systems working together",
+          "text": "In groups, choose one action: dancing, eating, or writing a story. List the organ systems that must work together for that action, such as the muscles, skeleton, nervous system, breathing system and blood system. Act out the action, with each member playing one system and saying what it does. Other groups suggest any system you have missed."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The cell is the basic unit of life. Plant and animal cells both have a cell membrane, cytoplasm and a nucleus; plant cells also have a cell wall, a large vacuole and, in green parts, chloroplasts. Specialised cells have structures that suit their jobs, and cells are organised into tissues, organs, organ systems and whole organisms."
         }
       ]
     }

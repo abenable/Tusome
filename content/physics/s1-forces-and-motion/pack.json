@@ -1,16 +1,17 @@
 {
   "packId": "phy.s1.matter.forces-and-motion",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s1.matter.forces-and-motion",
-      "title": "Balanced and Unbalanced Forces",
+      "title": "Forces and Their Effects",
       "subject": "physics",
       "level": "S1",
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Effects of forces",
-      "order": 5,
+      "order": 6,
+      "term": 2,
       "outcomes": [
         "know that a force is a push or a pull and that the unit of force is the Newton (k)",
         "know the effects of balanced and unbalanced forces on objects (k, s)"
@@ -18,24 +19,144 @@
       "body": [
         {
           "type": "text",
-          "text": "A force is a push or a pull that one object exerts on another. The SI unit of force is the newton (N)."
+          "text": "A boda boda rider pushes his motorcycle when it runs out of fuel. A farmer pulls a hoe through the soil. At sports day, two teams pull on a rope in a tug of war. A footballer kicks a ball into the net. Each of these needs a force."
+        },
+        {
+          "type": "heading",
+          "text": "What is a force?"
         },
         {
           "type": "text",
-          "text": "When two or more forces act on an object, they can be combined into a single resultant force that has the same overall effect. Forces acting in the same direction add together; forces acting in opposite directions subtract from each other."
+          "text": "A force is a push or a pull. We cannot see a force, but we can see what it does. The unit of force is the newton, named after the scientist Isaac Newton. Its symbol is N. The weight of a small orange is about 1 N."
         },
         {
           "type": "text",
-          "text": "When the forces acting on an object are balanced \u2014 their resultant is zero \u2014 the object's motion does not change: it stays at rest, or keeps moving at a constant speed in a straight line. When the forces are unbalanced \u2014 a non-zero resultant force acts \u2014 the object's motion changes: it speeds up, slows down, or changes direction."
+          "text": "We measure force with a spring balance, also called a force meter or newton meter. Inside it, a spring stretches more when the pull is bigger. A force always acts in a direction. In diagrams we draw a force as an arrow. The arrow points the way the force acts, and a longer arrow shows a bigger force."
+        },
+        {
+          "type": "heading",
+          "text": "Kinds of force"
         },
         {
           "type": "text",
-          "text": "Use the PhET Forces and Motion: Basics simulation below (Net Force screen). Apply pushes and pulls to the cart and watch how balanced and unbalanced forces change \u2014 or fail to change \u2014 its motion."
+          "text": "Some forces act only when objects touch. These are contact forces. Other forces act across a gap, without touching. These are non-contact forces."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Contact forces: a push or pull by hand, friction, air resistance, the tension in a stretched rope, and the upward push of water on a boat.",
+            "Non-contact forces: gravity, the force between magnets, and the force between electric charges."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "What forces can do"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Make a still object start moving.",
+            "Make a moving object speed up or slow down.",
+            "Stop a moving object.",
+            "Change the direction in which an object moves.",
+            "Change the shape of an object, for example squashing clay or stretching a rubber band.",
+            "Make an object turn, like a door on its hinges."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Forces around us",
+          "text": "Work in pairs with rubber bands, the spring from an old pen, a ball of clay, a magnet and some pins. Push, pull, squash, stretch and twist each object. For each one, write down the force you used and what it did. Sort your forces into contact and non-contact. Use a spring balance, if your school has one, to measure some pulls in newtons."
+        },
+        {
+          "type": "heading",
+          "text": "Balanced and unbalanced forces"
+        },
+        {
+          "type": "text",
+          "text": "Usually more than one force acts on an object. The resultant force is the single force that has the same effect as all the forces together. Forces in the same direction add up. Forces in opposite directions take away from each other."
+        },
+        {
+          "type": "text",
+          "text": "When the resultant force is zero, the forces are balanced. Balanced forces do not change how an object moves. An object at rest stays at rest. A moving object keeps moving at the same speed in a straight line."
+        },
+        {
+          "type": "text",
+          "text": "When the resultant force is not zero, the forces are unbalanced. Unbalanced forces change the motion. The object starts to move, speeds up, slows down or changes direction. It moves the way the resultant force points."
+        },
+        {
+          "type": "example",
+          "title": "A tug of war",
+          "steps": [
+            "Okello's team pulls the rope to the left with a force of 1200 N.",
+            "Atim's team pulls to the right with a force of 1000 N.",
+            "The forces act in opposite directions, so subtract: 1200 − 1000 = 200 N.",
+            "The resultant force is 200 N to the left. The forces are unbalanced, so the rope moves towards Okello's team.",
+            "If both teams pulled with 1000 N, the resultant would be 0 N. The forces would be balanced and the rope would not move."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Pushing a handcart",
+          "steps": [
+            "Kato pushes a loaded handcart forward with 150 N. Wasswa helps, pushing forward with 200 N.",
+            "Friction acts backwards on the cart with a force of 100 N.",
+            "Forward forces add up: 150 + 200 = 350 N.",
+            "Subtract the backward force: 350 − 100 = 250 N.",
+            "The resultant force is 250 N forward, so the cart speeds up."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Two forces at right angles"
+        },
+        {
+          "type": "text",
+          "text": "Sometimes two forces act at right angles to each other. For example, two people pull a log with ropes, one pulling east and the other north. The log moves in a direction between the two pulls. We can find the size of the resultant force by Pythagoras' theorem."
+        },
+        {
+          "type": "equation",
+          "latex": "R = \\sqrt{F_1^2 + F_2^2}",
+          "speech": "R equals the square root of F one squared plus F two squared"
+        },
+        {
+          "type": "example",
+          "title": "Forces of 30 N and 40 N at right angles",
+          "steps": [
+            "Opio pulls a log east with a force of 30 N. Akello pulls it north with a force of 40 N.",
+            "R² = 30² + 40² = 900 + 1600 = 2500.",
+            "R = √2500 = 50 N.",
+            "Check by scale drawing. Let 1 cm stand for 10 N. Draw a line 3 cm long to the east, then a line 4 cm long to the north from its end.",
+            "The line from the start to the end of the second line measures 5 cm. That stands for 50 N."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Forces of 5 N and 12 N at right angles",
+          "steps": [
+            "Two forces of 5 N and 12 N act on a box at right angles.",
+            "R² = 5² + 12² = 25 + 144 = 169.",
+            "R = √169 = 13 N.",
+            "Notice that the resultant, 13 N, is less than 5 + 12 = 17 N, because the forces do not act in the same direction."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A bus travels along the Kampala–Jinja road at a steady 60 km/h on a straight, flat stretch. Its engine pushes it forward the whole time. Are the forces on the bus balanced or unbalanced? Discuss your reasons."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A force is a push or a pull, measured in newtons (N). Forces can change an object's motion or shape. Balanced forces have a resultant of zero and do not change motion. Unbalanced forces change the motion in the direction of the resultant force."
         }
       ],
       "sim": {
         "phet": "forces-and-motion-basics_en.html",
-        "caption": "PhET Forces and Motion: Basics. Apply forces to a cart and see how balanced and unbalanced forces affect its motion. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Forces and Motion: Basics. On the Net Force screen, add pullers to each side of the cart and read the sum of the forces. Make the two sides equal, then unequal, and see when the cart moves. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

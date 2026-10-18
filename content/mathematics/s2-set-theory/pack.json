@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.data.set-theory",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,33 +11,161 @@
       "strand": "Data and Probability",
       "subStrand": "Sets",
       "order": 13,
+      "term": 3,
       "outcomes": [
-        "Describe a set and identify its elements. (k, u)",
-        "Identify different types of sets and their symbols (empty set, universal set, equal set, complement set, disjoint set, intersection set, union set, subset). (k)",
-        "Determine the number of elements in a set. (u, s)",
-        "Represent and show different operations on sets by shading the different regions in a Venn diagram. (k, u, s)",
-        "Apply sets in practical situations using two and three sets. (u, s, v/a)"
+        "describe a set and identifies elements of a set. (k, u)",
+        "identify different types of sets and their symbols (empty set, universal set, equal set, complement set, disjoint set, intersection set, union set, subset). (k)",
+        "determine the number of elements in a set. (u, s)",
+        "represent and show different operations on sets by shading the different regions in a Venn diagram. (k, u, s)",
+        "apply sets in practical situations using two and three sets. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A set is a well-defined collection of items, called elements. The universal set (U) contains everything under discussion; the empty set (∅) has no elements. The union of A and B (A∪B) contains everything in A or B or both; the intersection (A∩B) contains only what is in both. The number of elements in set A is written n(A)."
+          "text": "We sort things into groups every day. A school groups learners into classes and clubs. A trader groups her goods into fruits, vegetables and grains. In mathematics, a group like this is called a set."
+        },
+        {
+          "type": "heading",
+          "text": "Sets and elements"
         },
         {
           "type": "text",
-          "text": "A school club survey of 30 learners found 15 belong to the Arts Club (A) and 12 belong to the Science Club (S), with every learner belonging to at least one. Since n(A) + n(S) = 15 + 12 = 27 but there are only 30 learners with no overlap needed to reach 30, actually here overlap must be checked: if all 30 belong to at least one club, and 15+12=27 is less than 30, something is inconsistent — so in practice every survey like this must be checked against the total using n(A∪S) = n(A) + n(S) - n(A∩S)."
-        },
-        {
-          "type": "equation",
-          "latex": "n(A \\cup B) = n(A) + n(B) - n(A \\cap B)"
+          "text": "A set is a well-defined collection of objects. Well-defined means we can always tell whether an object belongs to the set or not. The objects in a set are called its elements or members. We name a set with a capital letter and write its elements inside curly brackets."
         },
         {
           "type": "text",
-          "text": "Given U = {1,2,3,4,5,6,7,8,9,10}, A = {even numbers} = {2,4,6,8,10}, B = {square numbers} = {1,4,9}. Then n(A) = 5 and n(B) = 3. The intersection A∩B = {4} (the only number that is both even and a perfect square in U), so n(A∩B) = 1, and n(A∪B) = 5 + 3 - 1 = 7."
+          "text": "For example, A = {Mbale, Gulu, Jinja} is a set of three towns. We can also describe a set in words, such as B = {even numbers less than 10}. Listing its elements gives B = {2, 4, 6, 8}."
+        },
+        {
+          "type": "text",
+          "text": "The symbol ∈ means is an element of. So 4 ∈ B, which we read as 4 is an element of B. The symbol ∉ means is not an element of, so 5 ∉ B."
+        },
+        {
+          "type": "heading",
+          "text": "The number of elements in a set"
+        },
+        {
+          "type": "text",
+          "text": "We write n(A) for the number of elements in set A. For A = {Mbale, Gulu, Jinja}, n(A) = 3. For B = {2, 4, 6, 8}, n(B) = 4."
+        },
+        {
+          "type": "heading",
+          "text": "Types of sets and their symbols"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Universal set, U: the set of all the elements being discussed.",
+            "Empty set, ∅ or { }: a set with no elements, such as the set of months with 32 days.",
+            "Equal sets: two sets with exactly the same elements. {1, 2, 3} = {3, 1, 2}.",
+            "Subset, ⊂: A ⊂ B means every element of A is also in B. {2, 4} ⊂ {1, 2, 3, 4}.",
+            "Complement, A′: the elements of U that are not in A.",
+            "Intersection, A ∩ B: the elements that are in both A and B.",
+            "Union, A ∪ B: the elements that are in A, or in B, or in both.",
+            "Disjoint sets: sets with no elements in common, so A ∩ B = ∅."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Even numbers and square numbers",
+          "steps": [
+            "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {even numbers} and B = {square numbers}.",
+            "List the elements: A = {2, 4, 6, 8, 10} and B = {1, 4, 9}. So n(A) = 5 and n(B) = 3.",
+            "A ∩ B = {4}, because 4 is the only number that is both even and square.",
+            "A ∪ B = {1, 2, 4, 6, 8, 9, 10}, so n(A ∪ B) = 7.",
+            "(A ∪ B)′ = {3, 5, 7}, the numbers in U that are in neither set."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Venn diagrams"
+        },
+        {
+          "type": "text",
+          "text": "A Venn diagram shows sets as pictures. A rectangle stands for the universal set. A circle inside it stands for each set. Where two circles overlap, the region shows the intersection. We shade regions to show the result of an operation."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A ∩ B: shade only the part where the circles overlap.",
+            "A ∪ B: shade the whole of both circles.",
+            "A′: shade everything inside the rectangle but outside circle A.",
+            "A ∩ B′: shade the part of circle A that is outside circle B.",
+            "Disjoint sets are drawn as two circles that do not touch.",
+            "If A ⊂ B, circle A is drawn completely inside circle B."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A Venn diagram on the ground",
+          "text": "Outside, use two long ropes or chalk lines to make two large overlapping circles inside a big rectangle. Label one circle W for learners who walk to school and the other S for learners who have a brother or sister in the school. Each learner stands in the correct region, or outside both circles. Count the people in each region and write the results in set notation, such as n(W ∩ S)."
+        },
+        {
+          "type": "heading",
+          "text": "Counting with two sets"
+        },
+        {
+          "type": "text",
+          "text": "If you add n(A) and n(B), the elements in the overlap are counted twice. So you must subtract them once."
         },
         {
           "type": "equation",
-          "expr": "A={2,4,6,8,10}, B={1,4,9}:  A∩B={4},  n(A∪B) = 5+3-1 = 7"
+          "latex": "n(A \\cup B) = n(A) + n(B) - n(A \\cap B)",
+          "speech": "n of A union B equals n of A plus n of B minus n of A intersection B"
+        },
+        {
+          "type": "example",
+          "title": "Football and netball",
+          "steps": [
+            "In an S2 class of 50 learners, 28 play football (F), 20 play netball (N) and 8 play both.",
+            "Only football = 28 − 8 = 20. Only netball = 20 − 8 = 12.",
+            "n(F ∪ N) = 28 + 20 − 8 = 40.",
+            "Learners who play neither game = 50 − 40 = 10."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Food at a wedding",
+          "steps": [
+            "Okello hosts a wedding with 300 guests. He serves chicken (C) and beef (B). 200 guests eat chicken, 130 eat only chicken, and 6 guests eat neither.",
+            "Guests who eat both = 200 − 130 = 70. So n(C ∩ B) = 70.",
+            "Guests who eat at least one = 300 − 6 = 294. So n(C ∪ B) = 294.",
+            "Guests who eat only beef = 294 − 200 = 94.",
+            "Guests who eat beef = 94 + 70 = 164."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Problems with three sets"
+        },
+        {
+          "type": "text",
+          "text": "With three sets, fill the Venn diagram from the centre outwards: first all three sets, then each pair, then each set on its own."
+        },
+        {
+          "type": "example",
+          "title": "Traders at a market",
+          "steps": [
+            "40 traders at a market in Mbale were asked what they sell: matooke (M), beans (B) or tomatoes (T). 20 sell matooke, 18 sell beans and 15 sell tomatoes. 8 sell matooke and beans, 6 sell beans and tomatoes, 7 sell matooke and tomatoes, and 3 sell all three.",
+            "Centre: 3 traders sell all three.",
+            "Matooke and beans only = 8 − 3 = 5. Beans and tomatoes only = 6 − 3 = 3. Matooke and tomatoes only = 7 − 3 = 4.",
+            "Matooke only = 20 − 5 − 4 − 3 = 8. Beans only = 18 − 5 − 3 − 3 = 7. Tomatoes only = 15 − 4 − 3 − 3 = 5.",
+            "Traders in at least one set = 8 + 7 + 5 + 5 + 3 + 4 + 3 = 35.",
+            "Traders who sell none of the three = 40 − 35 = 5."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Is {good footballers in our school} a set? Is {learners in our school who scored a goal this term} a set? Discuss why mathematicians insist that a set must be well-defined."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A set is a well-defined collection of elements, and n(A) is the number of elements in A. A ∩ B is what is in both sets, A ∪ B is what is in either, and A′ is everything in U outside A. For two sets, n(A ∪ B) = n(A) + n(B) − n(A ∩ B), and for three sets, fill the Venn diagram from the centre outwards."
         }
       ]
     }

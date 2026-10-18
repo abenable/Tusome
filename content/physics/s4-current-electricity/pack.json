@@ -1,0 +1,192 @@
+{
+  "packId": "phy.s4.electricity.current",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s4.electricity.current",
+      "title": "Introduction to Current Electricity",
+      "subject": "physics",
+      "level": "S4",
+      "strand": "Electricity",
+      "subStrand": "Cells, current and circuits",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "Understand what e.m.f is (u)",
+        "understand that cells convert chemical energy into electrical energy, producing current and also the force needed to create a flow of current in a circuit (u, s)",
+        "understand that electric cells are very useful but have their limitations (u, v/a)",
+        "understand the nature of electric current, its sources, what makes it flow around circuits and how and it is measured (u, s)",
+        "know that some materials are electrical conductors and other are insulators (k)",
+        "recognise, understand and apply knowledge of series and parallel circuits (k, u, s, v/a)",
+        "appreciate that circuits may be represented as circuit diagrams consisting of an agreed set of symbols to represent components (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A torch, a radio, a phone and a solar lamp all need electricity. Some take it from cells (batteries), others from a solar panel or the mains. In every case, electric charge flows around a complete path. This topic explains what makes the charge flow and how circuits are built."
+        },
+        {
+          "type": "heading",
+          "text": "Electric current"
+        },
+        {
+          "type": "text",
+          "text": "Electric current is the rate of flow of electric charge. In metal wires, the moving charges are tiny negative particles called electrons. In liquids called electrolytes, such as the acid in a car battery or salty water, the moving charges are ions. Ions are atoms that have gained or lost electrons."
+        },
+        {
+          "type": "text",
+          "text": "Charge, Q, is measured in coulombs (C). Current, I, is measured in amperes (A), often called amps. A current of 1 A means 1 coulomb of charge passes a point every second."
+        },
+        {
+          "type": "equation",
+          "latex": "I = \\frac{Q}{t}",
+          "speech": "I equals Q over t"
+        },
+        {
+          "type": "example",
+          "title": "Finding a current",
+          "steps": [
+            "360 C of charge passes through a bulb in 2 minutes. Find the current.",
+            "t = 2 × 60 = 120 s",
+            "I = Q ÷ t = 360 ÷ 120",
+            "I = 3 A"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "By agreement, we say conventional current flows from the positive terminal of a cell, round the circuit, to the negative terminal. Electrons actually move the other way, from negative to positive. Current flows only when there is a complete path, called a closed circuit."
+        },
+        {
+          "type": "heading",
+          "text": "Cells and electromotive force"
+        },
+        {
+          "type": "text",
+          "text": "A cell converts chemical energy into electrical energy. A simple cell has two different metals, such as copper and zinc, standing in an acid. A chemical reaction pushes electrons out of the zinc, round the circuit and back to the copper. Two or more cells joined together make a battery."
+        },
+        {
+          "type": "text",
+          "text": "The electromotive force (e.m.f.) of a cell is the energy it gives to each coulomb of charge that it drives round a complete circuit. E.m.f. is measured in volts (V). One volt means one joule of energy for each coulomb. A torch cell has an e.m.f. of 1.5 V, so it gives 1.5 J to every coulomb."
+        },
+        {
+          "type": "equation",
+          "latex": "E = \\frac{W}{Q}",
+          "speech": "E equals W over Q, energy divided by charge"
+        },
+        {
+          "type": "example",
+          "title": "Energy from a battery",
+          "steps": [
+            "A radio battery has an e.m.f. of 9 V. It drives 200 C of charge round the circuit.",
+            "W = E × Q = 9 × 200",
+            "W = 1800 J of chemical energy is changed into electrical energy."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A lemon cell",
+          "text": "Push a clean copper coin or a piece of copper wire and a galvanised (zinc-coated) nail into a lemon or an orange, about 2 cm apart. Connect them to a voltmeter, or link three or four fruit cells in a row to light a small LED. Try different fruits, or salty water in a cup. Which gives the largest voltage?"
+        },
+        {
+          "type": "heading",
+          "text": "Uses and limits of cells"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Primary cells, such as dry torch cells, cannot be recharged. They are thrown away when used up.",
+            "Secondary cells can be recharged. Lead-acid batteries power cars and store energy from solar panels. Lithium-ion cells power phones and laptops, and are a recent advance: light, small and long-lasting.",
+            "Cells are portable and safe, so they suit torches, clocks, radios, remote controls and phones.",
+            "Cells store only a small amount of energy. They are not suitable for cookers, flat irons, water heaters or water pumps, which need large power for long times.",
+            "Cells run down, cost more per unit of energy than mains electricity, and contain chemicals that pollute soil and water if thrown away carelessly."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Other sources of e.m.f. include generators in power stations, bicycle dynamos, solar cells that turn light into electricity, and thermocouples that turn heat into electricity."
+        },
+        {
+          "type": "heading",
+          "text": "Conductors and insulators"
+        },
+        {
+          "type": "text",
+          "text": "A conductor lets electric current flow through it easily. Metals such as copper, aluminium and iron are good conductors, and so is graphite, the 'lead' in a pencil. An insulator does not let current flow. Plastic, rubber, dry wood, glass, dry cardboard and wool are insulators. Wires are made of copper covered in plastic, so current flows along the wire but not into your hand."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Test for conductors",
+          "text": "Make a circuit with two torch cells, a torch bulb and three wires, leaving a gap between two wire ends. Touch the two ends to different objects: a nail, a coin, a pencil lead, a rubber band, a plastic ruler, a piece of wood, aluminium foil, cardboard and a wool thread. Sort the objects into conductors (the bulb lights) and insulators (it does not)."
+        },
+        {
+          "type": "heading",
+          "text": "Circuit diagrams and measuring current"
+        },
+        {
+          "type": "text",
+          "text": "Engineers everywhere draw circuits using the same set of symbols, so anyone can read them."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cell: a long thin line (positive) beside a short thick line (negative). A battery is two or more cells side by side.",
+            "Switch: a break in the line with a short hinged line across it.",
+            "Bulb (lamp): a circle with a cross inside.",
+            "Resistor: a small rectangle. A variable resistor has an arrow across it.",
+            "Ammeter: a circle with the letter A. Voltmeter: a circle with the letter V.",
+            "Wires are straight lines. A dot shows where wires join."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "An ammeter measures current. It is connected in series, so the current flows through it. A voltmeter measures potential difference (voltage) and is connected in parallel, across the component."
+        },
+        {
+          "type": "heading",
+          "text": "Series and parallel circuits"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In a series circuit, components are joined one after another in a single loop. The same current flows through every part. The voltages across the components add up to the supply voltage. If one bulb breaks, all the bulbs go out.",
+            "In a parallel circuit, components are on separate branches. Each branch has the full supply voltage across it. The branch currents add up to the total current. If one bulb breaks, the others stay on."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Adding more cells in series raises the voltage, so more current flows and a bulb glows brighter. Adding more bulbs in series makes them all dimmer. Homes are wired in parallel. Each appliance gets the full 240 V of the mains and can be switched on and off by itself."
+        },
+        {
+          "type": "example",
+          "title": "Currents in a parallel circuit",
+          "steps": [
+            "Two bulbs are connected in parallel to a battery. The ammeter next to the battery reads 1.2 A. The ammeter in the first branch reads 0.5 A.",
+            "Total current = current in branch 1 + current in branch 2",
+            "1.2 = 0.5 + I₂",
+            "Current in branch 2, I₂ = 0.7 A"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Old strings of decorative lights went completely dark when one bulb failed. Were the bulbs in series or in parallel? Why are the lights and sockets in a house never wired in series?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Current is the rate of flow of charge, I = Q ÷ t, measured in amperes with an ammeter in series. The e.m.f. of a cell is the energy it gives each coulomb of charge. In series the current is the same everywhere; in parallel each branch has the full voltage and the branch currents add up."
+        }
+      ],
+      "sim": {
+        "phet": "circuit-construction-kit-dc_en.html",
+        "caption": "PhET Circuit Construction Kit: DC. Test everyday objects such as a coin, an eraser and a pencil to see which conduct, then build series and parallel circuits with bulbs and measure the current with an ammeter. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

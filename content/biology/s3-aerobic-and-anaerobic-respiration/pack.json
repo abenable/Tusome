@@ -1,0 +1,205 @@
+{
+  "packId": "bio.s3.respiration.aerobic-anaerobic",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.respiration.aerobic-anaerobic",
+      "title": "Aerobic and Anaerobic Respiration",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Respiration in Plants and Animals",
+      "subStrand": "Releasing energy from food",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "appreciate the importance of the process of respiration (both aerobic and anaerobic) (u)",
+        "understand and outline the process and site of aerobic respiration (u)",
+        "appreciate the relationship between plants and animals in relation to aerobic respiration and photosynthesis (s, gs)",
+        "understand circumstances in which organisms including humans use anaerobic respiration (u)",
+        "understand and outline the process of anaerobic respiration (u)",
+        "carry out investigations to find the products of anaerobic respiration in plants and animals (s)",
+        "understand some applications of anaerobic respiration in everyday life (u)",
+        "compare aerobic with anaerobic respiration (s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Nakato's aunt mixes flour, sugar, water and yeast to make mandazi. She leaves the dough in a warm place, and an hour later it has risen. Tiny yeast cells have been respiring and giving off gas. Respiration is the process in living cells that breaks down food to release energy. Every living cell respires, all the time."
+        },
+        {
+          "type": "heading",
+          "text": "Why respiration matters"
+        },
+        {
+          "type": "text",
+          "text": "Foods such as matooke, posho and beans store chemical energy. Respiration releases this energy in a form cells can use. Cells use it to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "make muscles contract, so the body can move",
+            "build new cells for growth and repair",
+            "make proteins and other large molecules",
+            "move substances across cell membranes",
+            "send nerve impulses",
+            "keep the body warm in mammals and birds"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "If respiration stops, cells run out of energy within minutes. Brain cells are among the first to die without oxygen."
+        },
+        {
+          "type": "heading",
+          "text": "Aerobic respiration"
+        },
+        {
+          "type": "text",
+          "text": "Aerobic respiration is respiration that uses oxygen. It breaks glucose down completely and releases a lot of energy. Glucose is a simple sugar that comes from digested food."
+        },
+        {
+          "type": "equation",
+          "expr": "glucose + oxygen → carbon dioxide + water + energy",
+          "speech": "glucose plus oxygen gives carbon dioxide plus water plus energy"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O} + \\text{energy}",
+          "speech": "C 6 H 12 O 6 plus 6 O 2 gives 6 C O 2 plus 6 H 2 O plus energy"
+        },
+        {
+          "type": "text",
+          "text": "Aerobic respiration begins in the cytoplasm and is completed in the mitochondria. Mitochondria are tiny structures in the cytoplasm of plant and animal cells. Cells that use a lot of energy, such as muscle cells, have many of them."
+        },
+        {
+          "type": "text",
+          "text": "The process happens in many small steps, each controlled by an enzyme. First, glucose is split into two smaller molecules in the cytoplasm. These enter the mitochondria, where oxygen is used to break them down to carbon dioxide and water. The energy released is stored in a molecule called ATP, which carries it to wherever the cell needs it. Some energy escapes as heat."
+        },
+        {
+          "type": "heading",
+          "text": "Respiration and photosynthesis"
+        },
+        {
+          "type": "text",
+          "text": "Photosynthesis is the process by which green plants use light energy to make glucose from carbon dioxide and water."
+        },
+        {
+          "type": "equation",
+          "expr": "carbon dioxide + water → glucose + oxygen (light energy is needed)",
+          "speech": "carbon dioxide plus water gives glucose plus oxygen, using light energy"
+        },
+        {
+          "type": "text",
+          "text": "The products of photosynthesis are the raw materials for respiration. The products of respiration are the raw materials for photosynthesis. Animals depend on plants for food and oxygen. Plants use the carbon dioxide given out by animals. In this way carbon and oxygen are recycled in nature."
+        },
+        {
+          "type": "text",
+          "text": "Plants respire too, day and night. In bright light they photosynthesise faster than they respire, so they give out oxygen overall. At night they only respire."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Hold a class debate: ‘Plants and animals can live and survive entirely independent of each other.’ Think about food, oxygen, carbon dioxide, pollination and seed dispersal."
+        },
+        {
+          "type": "heading",
+          "text": "Respiration without oxygen"
+        },
+        {
+          "type": "text",
+          "text": "Anaerobic respiration is respiration without oxygen. Glucose is only partly broken down, so much less energy is released. It happens in the cytoplasm only. Organisms use it in these situations:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Human muscles during hard exercise, such as a sprint or a football match, when the blood cannot bring oxygen fast enough.",
+            "Yeast in bread dough or a brewing pot, where the oxygen soon runs out.",
+            "Plant roots in waterlogged soil, for example after floods or in rice fields.",
+            "Seeds starting to germinate, before air can pass through the seed coat.",
+            "Bacteria living without air, in mud, pit latrines and biogas tanks."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "In animals, including humans, glucose is broken down to lactic acid."
+        },
+        {
+          "type": "equation",
+          "expr": "glucose → lactic acid + a little energy",
+          "speech": "glucose gives lactic acid plus a little energy"
+        },
+        {
+          "type": "text",
+          "text": "Lactic acid builds up in the muscles and makes them tired and painful. This is called muscle fatigue. After exercise you keep breathing fast to take in extra oxygen, which breaks down the lactic acid. This extra oxygen is called the oxygen debt."
+        },
+        {
+          "type": "text",
+          "text": "In plants and yeast, glucose is broken down to ethanol, a kind of alcohol, and carbon dioxide. This is called fermentation."
+        },
+        {
+          "type": "equation",
+          "expr": "glucose → ethanol + carbon dioxide + a little energy",
+          "speech": "glucose gives ethanol plus carbon dioxide plus a little energy"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C_6H_{12}O_6 \\rightarrow 2C_2H_5OH + 2CO_2} + \\text{energy}",
+          "speech": "C 6 H 12 O 6 gives 2 C 2 H 5 O H plus 2 C O 2 plus energy"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Yeast and sugar in a bottle",
+          "text": "Pour about 200 ml of warm water, as warm as bath water, into each of two plastic bottles. Add one teaspoon of dry baker's yeast to each. Add two teaspoons of sugar to the first bottle only. Stretch a balloon over the mouth of each bottle and leave them in a warm place for 30 to 60 minutes. Compare the balloons, then smell the liquid in each bottle. Which gas filled the balloon? What does the smell tell you? Why was the second bottle needed?"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Clench your fists",
+          "text": "Raise one arm above your head and let the other hang by your side. Clench and open both fists as fast as you can for one minute. Which hand tires first? Discuss why the raised hand gets less blood, and so less oxygen."
+        },
+        {
+          "type": "heading",
+          "text": "Uses of anaerobic respiration"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Baking: carbon dioxide from yeast makes bread and mandazi dough rise.",
+            "Brewing: yeast ferments sugars from bananas, millet or sorghum to make alcoholic drinks.",
+            "Dairy: bacteria turn milk sugar into lactic acid to make yoghurt and sour milk.",
+            "Biogas: microorganisms break down cow dung without air to make methane gas for cooking.",
+            "Silage: tightly packed grass ferments into moist cattle feed for the dry season.",
+            "Sewage treatment: bacteria break down human waste."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Comparing the two types"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oxygen: aerobic respiration needs it; anaerobic respiration does not.",
+            "Site: aerobic happens in the cytoplasm and mitochondria; anaerobic in the cytoplasm only.",
+            "Products: aerobic gives carbon dioxide and water. Anaerobic gives lactic acid in animals, or ethanol and carbon dioxide in plants and yeast.",
+            "Energy: aerobic releases many times more energy from each glucose molecule.",
+            "Glucose: aerobic breaks it down completely; anaerobic leaves energy locked in lactic acid or ethanol.",
+            "Time: in humans, aerobic respiration can go on for hours; anaerobic only for a short time."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "What happens if the food a person eats contains more energy than the body needs? Where does the extra energy go, and how might it affect health?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Respiration releases energy from food in every living cell. Aerobic respiration uses oxygen, finishes in the mitochondria and releases a lot of energy. Anaerobic respiration needs no oxygen and releases little energy. It makes lactic acid in muscles, and ethanol and carbon dioxide in yeast and plants."
+        }
+      ]
+    }
+  ]
+}

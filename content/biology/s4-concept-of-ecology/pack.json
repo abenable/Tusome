@@ -1,0 +1,105 @@
+{
+  "packId": "bio.s4.interrelationships.ecology",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.interrelationships.ecology",
+      "title": "Concept of Ecology",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Interrelationships",
+      "subStrand": "Habitats, communities and ecosystems",
+      "order": 6,
+      "term": 2,
+      "outcomes": [
+        "know the meaning of the term ecology (k)",
+        "understand the concepts of communities, habitats and ecosystems (s, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Uganda has many different natural places. Think of the open waters of Lake Victoria, the papyrus swamps on its shores, the tall trees of Mabira forest and the grasslands of Queen Elizabeth National Park. In each place, plants, animals and microorganisms live together and depend on their surroundings."
+        },
+        {
+          "type": "heading",
+          "text": "What is ecology?"
+        },
+        {
+          "type": "text",
+          "text": "Ecology is the study of how living organisms relate to each other and to their environment. The environment is everything around an organism. It includes non-living things such as water, soil and air, and living things such as plants, animals and microorganisms."
+        },
+        {
+          "type": "heading",
+          "text": "Key terms"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Habitat: the place where an organism lives. The habitat of the shoebill is a papyrus swamp, such as Mabamba Bay near Entebbe.",
+            "Population: all the organisms of one species living in one area at the same time, such as all the Uganda kob in Queen Elizabeth National Park.",
+            "Community: all the populations of different species living and interacting in one area, such as the trees, monkeys, birds, insects and fungi of Mabira forest.",
+            "Ecosystem: a community together with its non-living environment, working as one unit. In Lake Victoria, the fish, algae, water plants and birds interact with the water, light, temperature and dissolved gases."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Parts of an ecosystem"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Biotic (living) components: producers, consumers and decomposers. Producers, such as green plants and algae, make food by photosynthesis. Consumers are animals that eat other organisms. Decomposers, such as bacteria and fungi, break down dead matter.",
+            "Abiotic (non-living) components: sunlight, temperature, water, rainfall, wind, soil, air, humidity and the acidity (pH) of soil or water."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The two groups affect each other. Rainfall and soil decide which plants grow in a place, and the plants decide which animals can live there. Plants in turn change the soil, shade the ground and add oxygen to the air."
+        },
+        {
+          "type": "heading",
+          "text": "Some ecosystems of Uganda"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lake Victoria: a freshwater lake where tiny floating algae (phytoplankton) are the main producers. It supports Nile perch, tilapia, silver fish and many water birds.",
+            "Papyrus swamps, such as Mabamba Bay and Lutembe Bay: waterlogged ground dominated by tall papyrus. They shelter shoebills, sitatunga antelope, frogs and young fish. Wetlands also filter water and reduce floods.",
+            "Tropical rainforest, such as Mabira and Budongo: high rainfall and tall trees. Their crowns form a closed canopy over several layers of smaller plants. They are home to monkeys, many birds and insects, and chimpanzees in Budongo.",
+            "Savanna grassland, such as Queen Elizabeth National Park: grasses with scattered trees and a dry season. Grazers such as Uganda kob, buffalo and elephants are hunted by lions and leopards.",
+            "Mountains, such as the Rwenzori and Mt Elgon: temperature falls with height, so forest gives way to bamboo, then heath and moorland. The highest Rwenzori peaks have snow and glaciers.",
+            "Farmland, such as a banana plantation or a maize garden: an ecosystem where people choose the main plants."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Dominant organisms"
+        },
+        {
+          "type": "text",
+          "text": "In most ecosystems, one or a few species are the most common or the largest. These are the dominant organisms. They shape the conditions and decide which other organisms can live there. In a papyrus swamp, papyrus is dominant: it shades the water and gives shelter and nesting sites. In a savanna, grasses are dominant and feed the grazers. In Mabira, the tall trees create the shade and damp air that other forest plants need."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Study your school ecosystem",
+          "text": "In groups, use string and four sticks to mark out a square of about 2 m by 2 m in the school compound, such as a patch of grass or the edge of a hedge. List all the living things you find, including small animals under stones and leaves. Use a stick to turn stones, not bare hands. List the non-living factors, and note whether the area is sunny or shady, wet or dry. Name the dominant plant. Put back any stones you moved, then share your lists to build a class table."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When a wetland near a town is drained to build houses, which living and non-living parts of the ecosystem change? Who in the community might be affected?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Ecology is the study of how organisms relate to each other and to their environment. A habitat is where an organism lives, a community is all the populations in one area, and an ecosystem is a community together with its non-living environment. Dominant organisms shape the conditions for the rest of the ecosystem."
+        }
+      ]
+    }
+  ]
+}

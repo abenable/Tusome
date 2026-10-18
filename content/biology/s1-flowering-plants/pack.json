@@ -1,0 +1,167 @@
+{
+  "packId": "bio.s1.diversity.flowering-plants",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s1.diversity.flowering-plants",
+      "title": "Flowering Plants",
+      "subject": "biology",
+      "level": "S1",
+      "strand": "Diversity of Living Things",
+      "subStrand": "Parts of flowering plants and their functions",
+      "order": 5,
+      "term": 3,
+      "outcomes": [
+        "know the external parts of a typical flowering plant (k, u)",
+        "understand how the structures of monocotyledonous and dicotyledonous roots, stems, leaves, flowers, and fruits suit their functions (u)",
+        "Classify leaves (a)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In many Ugandan gardens, maize and beans grow side by side. Both are flowering plants, but they look very different. Maize is a monocot and beans are a dicot. In this topic you will learn the parts of a flowering plant and how each part suits its job."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a flowering plant"
+        },
+        {
+          "type": "text",
+          "text": "A flowering plant has two systems. The root system grows below the ground. The shoot system grows above the ground and is made of the stem, leaves, buds, flowers and fruits."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Roots hold the plant in the soil and absorb water and mineral salts. Some store food, like cassava and sweet potato.",
+            "The stem holds leaves up to the light and flowers up where insects can reach them. It carries water and food.",
+            "Leaves make food by photosynthesis. Each has a stalk, the petiole, and a flat blade, the lamina. A leaf joins the stem at a node.",
+            "Buds are young shoots that grow into new stems, branches or flowers.",
+            "Flowers make seeds, and fruits protect the seeds and help to scatter them."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Monocots and dicots"
+        },
+        {
+          "type": "text",
+          "text": "A cotyledon is a seed leaf, the first leaf inside a seed. Monocots have one cotyledon; a maize grain does not split into halves. Dicots have two; a soaked bean seed splits into two halves. The two groups also differ in other ways."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Roots: monocots have fibrous roots, many thin roots of similar size growing from the base of the stem, as in maize, grass and onion. Dicots have a tap root, one main root with side branches, as in beans and mango.",
+            "Stems: monocot stems usually do not branch or become woody. Many dicot stems branch, and some become thick and woody, like a jackfruit tree.",
+            "Leaves: monocot leaves are long and narrow, with parallel veins, and the leaf base often wraps around the stem. Dicot leaves are usually broad, with a network of veins, and have a petiole.",
+            "Flowers: monocot flower parts are usually in threes. Dicot flower parts are usually in fours or fives; a hibiscus has five petals. Grasses and maize have small, dull flowers, while many dicots, like beans, have bright ones."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How structure suits function"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fibrous roots spread widely near the surface. They absorb rain water quickly and bind the topsoil, which helps stop it washing away.",
+            "A tap root grows deep. It reaches water far down in the dry season and anchors tall plants such as trees.",
+            "Woody dicot stems get thicker every year, so they can support large trees. Tubes inside the stem carry water and food.",
+            "Leaves are broad and thin. A broad blade traps a lot of light, and a thin blade lets gases reach every cell quickly. Veins carry water in and food out, and support the blade.",
+            "The narrow leaves of grasses keep growing from the base, so they recover after animals graze them."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a flower"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Receptacle: the swollen tip of the flower stalk, which holds the other parts.",
+            "Sepals: the green, leaf-like outer parts. They protect the flower when it is a bud.",
+            "Petals: often brightly coloured and scented. They attract insects, and many have sweet nectar at their base.",
+            "Stamens: the male parts. Each has a thin stalk, the filament, and an anther at the top, which makes pollen grains.",
+            "Carpel: the female part. The sticky stigma at the top receives pollen. The style is the stalk below it. The ovary at the base contains ovules, which become seeds after fertilisation."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Flowers pollinated by insects, like hibiscus and beans, have large, bright petals, scent and nectar. Their pollen is sticky, so it clings to insects. Flowers pollinated by wind, like maize, have small, dull flowers with no scent. Maize has hanging anthers in the tassel that release light, dry pollen. Its long, feathery stigmas, the silk, catch pollen from the air."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Taking a flower apart",
+          "text": "In pairs, take a large flower such as hibiscus. Look at it with a hand lens. Gently remove the parts from the outside inwards: sepals, petals, stamens, then the carpel. Lay them in rows on white paper and count each part. Draw and label each one. Then look at a maize tassel and maize silk, and list how they differ from the hibiscus."
+        },
+        {
+          "type": "heading",
+          "text": "Fruits and seeds"
+        },
+        {
+          "type": "text",
+          "text": "After fertilisation, the ovary becomes the fruit and the ovules become seeds. A fruit has two scars: one where it joined the stalk and one where the style was. A seed has one scar, the hilum, where it joined the fruit. Next to the hilum is a tiny hole, the micropyle, which lets water in. Inside a bean seed are two cotyledons, a young root (radicle) and a young shoot (plumule)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Juicy fruits, like mango and guava, are eaten by animals, which drop the seeds far away.",
+            "Dry bean pods split open and throw their seeds.",
+            "Winged or hairy seeds, like those of the Nile tulip tree, are carried by wind.",
+            "Hooked fruits, like blackjack, stick to animal fur and clothes."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A bean seed and a tomato",
+          "text": "Soak a bean seed in water overnight. Look at its outside with a hand lens and find the hilum and micropyle. Peel off the seed coat and split the seed open. Find the two cotyledons, the radicle and the plumule. Then look at a tomato and find its two scars. Cut it open and look at the seeds inside. Write down how the bean seed and the tomato are similar and how they differ."
+        },
+        {
+          "type": "heading",
+          "text": "Classifying leaves"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A simple leaf has one undivided blade, like a mango or hibiscus leaf.",
+            "A compound leaf has a blade divided into separate leaflets on one stalk. A bean leaf has three leaflets. A jacaranda leaf has many small leaflets. A bud grows at the base of a whole leaf, never at the base of a leaflet.",
+            "Monocot leaves have parallel veins, like maize and grass.",
+            "Dicot leaves have net veins, like beans and mango.",
+            "Leaf edges may be smooth, like mango, or toothed, like hibiscus."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A key to four leaves",
+          "steps": [
+            "The leaves are from maize, bean, mango and jacaranda.",
+            "Step 1a: Blade divided into leaflets. Go to step 2.",
+            "Step 1b: Blade not divided. Go to step 3.",
+            "Step 2a: Three leaflets. Bean.",
+            "Step 2b: Many small leaflets. Jacaranda.",
+            "Step 3a: Veins parallel. Maize.",
+            "Step 3b: Veins form a network. Mango."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Leaf key",
+          "text": "In groups, collect four leaves from the school compound: one simple, one compound, one monocot and one dicot. Record the features of each. Make a dichotomous key for the four leaves, then swap leaves and keys with another group to test it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers often plant maize and beans together in the same garden. How might their different root systems help them share the soil?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A flowering plant has a root system and a shoot system of stem, leaves, buds, flowers and fruits. Monocots have one seed leaf, fibrous roots and parallel veins; dicots have two seed leaves, a tap root and net veins. Leaves can be classified as simple or compound and by their veins and edges."
+        }
+      ]
+    }
+  ]
+}

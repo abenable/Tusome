@@ -1,0 +1,146 @@
+{
+  "packId": "bio.s1.diversity.insects",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s1.diversity.insects",
+      "title": "Insects",
+      "subject": "biology",
+      "level": "S1",
+      "strand": "Diversity of Living Things",
+      "subStrand": "Features, keys, effects and control of common insects",
+      "order": 4,
+      "term": 3,
+      "outcomes": [
+        "identify the observable external features of a housefly, cockroach, mosquito, termite, bee, and butterfly (No details of mouth parts required) (k, s)",
+        "construct a dichotomous key (s)",
+        "appreciate the useful and harmful effects of a housefly, cockroach, mosquito, bee, and butterfly (u) (v)",
+        "know the different methods of controlling the harmful stages of a housefly, cockroach, mosquito, and butterfly (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Insects are everywhere in Uganda. Bees visit coffee flowers, termites build tall mounds, and mosquitoes bite at night. Some insects help us and some harm us. Insects are the largest class of the arthropods."
+        },
+        {
+          "type": "heading",
+          "text": "Features of all insects"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The body has three parts: head, thorax and abdomen.",
+            "The head has one pair of antennae for touch and smell, a pair of compound eyes made of many small units, and mouthparts.",
+            "The thorax has three pairs of jointed legs and, in most adults, one or two pairs of wings.",
+            "The abdomen has segments and small breathing holes called spiracles along its sides.",
+            "A hard outer covering, the exoskeleton, protects the body."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Six common insects"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Housefly: grey with dark stripes on the thorax. It has one pair of clear wings. The second pair is replaced by two tiny knobs called halteres, which help it balance in flight. It has large red-brown eyes, short antennae and a hairy body, with sticky pads on its feet.",
+            "Mosquito: a thin body with long, thin legs. It has one pair of narrow wings with scales, plus halteres. It has long, thin mouthparts. Males have bushy, feathery antennae. An Anopheles mosquito rests with its body at an angle to the wall; a Culex mosquito rests with its body parallel to it.",
+            "Cockroach: a flat, shiny brown body. Its long antennae are often longer than the body. The head is hidden under a shield. It has two pairs of wings; the front pair is hard and leathery. Its legs are spiny.",
+            "Termite: a soft, pale body with bead-like antennae. It has a thick waist, unlike an ant. Workers and soldiers have no wings. The flying termites that come out after rain have two pairs of equal wings, which they shed after landing.",
+            "Bee: a hairy body with a narrow waist. It has two pairs of clear wings. Its back legs carry pollen baskets. Female worker bees have a sting at the tip of the abdomen.",
+            "Butterfly: two pairs of large wings covered with coloured scales. Its antennae are thin with a knob at the tip. It rests with its wings held upright over its back. It feeds through a long tube that coils under the head."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Observing insects",
+          "text": "Collect dead insects, such as houseflies, a cockroach, termites, a bee and a butterfly. Never handle live bees. Place each insect on white paper and look at it with a hand lens. Make a table to record the number of wings, the type of antennae, the colour, hairs and leg features of each insect. Draw one insect and label its head, thorax, abdomen, antennae, eyes, wings and legs. Wash your hands afterwards."
+        },
+        {
+          "type": "heading",
+          "text": "Life cycles"
+        },
+        {
+          "type": "text",
+          "text": "Insects change form as they grow. This change is called metamorphosis. In complete metamorphosis there are four stages: egg, larva, pupa and adult. Houseflies, mosquitoes, bees and butterflies develop this way. In incomplete metamorphosis there are three stages: egg, nymph and adult. A nymph looks like a small adult without wings. Cockroaches and termites develop this way."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Housefly: egg to adult in about 1 to 2 weeks in warm weather. The larvae, called maggots, live in rubbish, dung and rotting food.",
+            "Mosquito: egg to adult in about 1 to 2 weeks. Eggs, larvae and pupae all live in still water.",
+            "Bee: a worker bee takes about 3 weeks from egg to adult.",
+            "Butterfly: egg to adult in about 4 to 6 weeks. The larva is a caterpillar.",
+            "Cockroach: egg to adult takes several months."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Dichotomous keys"
+        },
+        {
+          "type": "text",
+          "text": "A dichotomous key helps you identify an organism. Dichotomous means dividing into two. At each step there are two opposite statements about one feature you can see, such as wings, legs or antennae. You choose the statement that fits. It leads you to the next step or to the name."
+        },
+        {
+          "type": "example",
+          "title": "A key to four insects",
+          "steps": [
+            "Step 1a: Has two pairs of wings. Go to step 2.",
+            "Step 1b: Has one pair of wings. Go to step 3.",
+            "Step 2a: Wings covered with coloured scales. Butterfly.",
+            "Step 2b: Wings clear; body hairy. Bee.",
+            "Step 3a: Legs long and thin; mouthparts long and thin. Mosquito.",
+            "Step 3b: Legs short with sticky pads; body hairy. Housefly.",
+            "Using the key: an insect has one pair of wings and long, thin legs. Step 1b sends you to step 3, and step 3a gives mosquito."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make your own key",
+          "text": "In pairs, use your observation table to make a dichotomous key for a cockroach, a termite, a bee and a housefly. Swap keys with another pair. Use their key to identify each insect. If the key does not work, suggest how to improve it."
+        },
+        {
+          "type": "heading",
+          "text": "Useful and harmful effects"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Housefly: it carries germs of cholera, typhoid and dysentery from faeces and rubbish to food on its hairy legs and body. Its maggots help break down dung and dead matter.",
+            "Mosquito: the female Anopheles spreads malaria, and other mosquitoes spread diseases such as yellow fever and elephantiasis. Its bites disturb sleep. Its larvae are food for fish.",
+            "Cockroach: it spoils food with germs and droppings and gives a bad smell. It also helps break down dead plant and animal matter and is food for lizards and birds.",
+            "Bee: it pollinates crops such as coffee, beans and sunflower, and it makes honey and beeswax that people sell. Its sting is painful and can be dangerous, especially when many bees sting at once.",
+            "Butterfly: the adult pollinates flowers and its beauty attracts tourists. Its caterpillars eat the leaves of crops such as cabbages and citrus trees."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Suppose every mosquito in Uganda disappeared tomorrow. What good changes might happen? Could anything bad happen to other living things?"
+        },
+        {
+          "type": "heading",
+          "text": "Controlling harmful stages"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Housefly: cover food, keep the compound clean, burn or bury rubbish, keep latrine lids closed, and use fly traps or sprays. Removing rubbish and dung destroys the places where maggots grow.",
+            "Mosquito: sleep under a treated mosquito net and spray houses to kill adults. Drain still water, cover water containers, and remove old tins, tyres and pots where larvae grow. Pouring oil on still water stops larvae from breathing at the surface. Fish such as tilapia in ponds eat the larvae.",
+            "Cockroach: keep kitchens and stores clean, store food in closed containers, seal cracks in walls, destroy egg cases, and use sprays or baits.",
+            "Butterfly: pick caterpillars and egg clusters off crops by hand, spray with insecticide or neem extract, and allow birds that eat caterpillars to live near the garden."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Insects have three body parts, three pairs of legs and one pair of antennae. A dichotomous key uses pairs of statements about visible features to identify organisms. Some insects, like bees, are useful; others, like mosquitoes and houseflies, spread disease, and we control them by attacking the stage of the life cycle where they breed or feed."
+        }
+      ]
+    }
+  ]
+}

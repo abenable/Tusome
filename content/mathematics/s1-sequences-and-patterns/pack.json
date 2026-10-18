@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.sequence-and-patterns",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,37 +11,156 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Sequences",
       "order": 6,
+      "term": 2,
       "outcomes": [
         "recognise and generate number patterns. (k, u)",
         "explain how to generate a sequence. (u)",
         "use number machines to generate a sequence. (k, s)",
-        "describe a general rule when a pattern is given. (k, s)",
+        "describe a general rule when a pattern is given. (k, u, s)",
         "determine terms in a sequence. (u, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A sequence is a list of numbers, called terms, that follow a rule. In 2, 5, 8, 11, ..., each term is found by adding 3 to the term before it — spotting that fixed step is the key to recognising and continuing a pattern."
+          "text": "Patterns are all around us. Bricks in a wall are laid in rows that repeat. The seats in each row of a stadium may increase by the same number. A learner who saves the same amount each week sees her savings grow in a pattern. Seeing the rule behind a pattern lets you predict what comes next."
+        },
+        {
+          "type": "heading",
+          "text": "Number patterns and sequences"
         },
         {
           "type": "text",
-          "text": "A number machine generates a sequence by applying one or more operations to each input in turn. A machine that does \"x3 then -2\" turns the inputs 1, 2, 3, 4, 5 into the sequence 1, 4, 7, 10, 13 — because 1x3-2=1, 2x3-2=4, 3x3-2=7, and so on."
+          "text": "A sequence is a list of numbers in a set order that follows a rule. Each number in the list is called a term. The first term is written T₁, the second T₂, and so on."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Even numbers: 2, 4, 6, 8, … (add 2 each time)",
+            "Odd numbers: 1, 3, 5, 7, … (add 2 each time)",
+            "Square numbers: 1, 4, 9, 16, 25, … (1 × 1, 2 × 2, 3 × 3, …)",
+            "Triangle numbers: 1, 3, 6, 10, 15, … (add 2, then 3, then 4, …)",
+            "Doubling: 1, 2, 4, 8, 16, … (multiply by 2 each time)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Explaining how a sequence is made"
+        },
+        {
+          "type": "text",
+          "text": "A term-to-term rule tells you how to get from one term to the next. The first few terms are not always enough to know the rule. A sequence that begins 2, 4, … can continue in many ways."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "2, 4, 6, 8, 10, … add 2 each time.",
+            "2, 4, 8, 16, 32, … double each time.",
+            "2, 4, 7, 11, 16, … add 2, then 3, then 4, and so on."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "So when you describe a sequence, always say the rule in words as well as listing the terms."
+        },
+        {
+          "type": "heading",
+          "text": "Number machines"
+        },
+        {
+          "type": "text",
+          "text": "A number machine takes an input number, does one or more operations to it, and gives an output. A double machine does two operations, one after the other. If you feed in 1, 2, 3, 4, 5, … the outputs form a sequence."
+        },
+        {
+          "type": "example",
+          "title": "Use the machine \"× 3, then − 2\"",
+          "steps": [
+            "Input 1: 1 × 3 = 3, then 3 − 2 = 1.",
+            "Input 2: 2 × 3 = 6, then 6 − 2 = 4.",
+            "Input 3: 3 × 3 = 9, then 9 − 2 = 7.",
+            "Input 4: 4 × 3 = 12, then 12 − 2 = 10.",
+            "Input 5: 5 × 3 = 15, then 15 − 2 = 13.",
+            "The sequence is 1, 4, 7, 10, 13, … Each term is 3 more than the last."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Notice that the number we multiply by in the machine is the same as the gap between the terms. This is the key to finding a general rule."
+        },
+        {
+          "type": "heading",
+          "text": "The general rule"
+        },
+        {
+          "type": "text",
+          "text": "A general rule, or nth term, tells you any term from its position n. If the gap between terms is always the same number d, the sequence is called linear. Its nth term has the form dn + c."
         },
         {
           "type": "equation",
-          "expr": "input n  ->  x3  ->  -2  ->  output (3n - 2)"
+          "latex": "T_n = dn + c",
+          "speech": "T n equals d times n plus c"
+        },
+        {
+          "type": "example",
+          "title": "Find the nth term of 5, 8, 11, 14, 17, …",
+          "steps": [
+            "The gap between terms is 3, so d = 3. The rule starts 3n.",
+            "When n = 1, 3n = 3. But the first term is 5.",
+            "5 − 3 = 2, so we must add 2.",
+            "The nth term is Tₙ = 3n + 2.",
+            "Check: when n = 4, 3 × 4 + 2 = 14. This matches the fourth term."
+          ]
         },
         {
           "type": "text",
-          "text": "That machine gives a general rule for the nth term: 3n - 2, where n is the term's position (1st, 2nd, 3rd, ...). Once a rule is known, any term can be found directly without listing every term before it. The 20th term of this sequence is 3(20) - 2 = 58."
+          "text": "Some patterns are not linear. In the sequence 1, 1/4, 1/9, 1/16, 1/25, … the denominators are the square numbers. So the nth term is 1/n²."
         },
         {
-          "type": "equation",
-          "latex": "n^{th} \\text{ term} = 3n - 2 \\;\\Rightarrow\\; 20^{th} \\text{ term} = 3(20) - 2 = 58"
+          "type": "heading",
+          "text": "Finding any term"
         },
         {
           "type": "text",
-          "text": "To find the nth-term rule for a sequence with a constant step, use the step as the multiplier of n, then adjust by a constant so the first term matches. For 2, 5, 8, 11 (step +3), start with 3n; when n=1, 3n=3, but the first term is 2, one less, so the rule is 3n - 1."
+          "text": "Once you know the general rule, you can find a term far along the sequence without listing them all. You can also work backwards to find the position of a given term."
+        },
+        {
+          "type": "example",
+          "title": "Kato's weekly savings",
+          "steps": [
+            "Kato saves UGX 2,000 in week 1, UGX 2,500 in week 2, UGX 3,000 in week 3, and so on.",
+            "The gap is 500, so the rule starts 500n.",
+            "When n = 1, 500n = 500. The first term is 2,000, and 2,000 − 500 = 1,500.",
+            "The nth term is 500n + 1,500.",
+            "Week 20: 500 × 20 + 1,500 = 10,000 + 1,500 = UGX 11,500.",
+            "In which week does he save UGX 8,000? Solve 500n + 1,500 = 8,000, so 500n = 6,500 and n = 13. It is week 13."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A matchstick pattern",
+          "steps": [
+            "Matchsticks are used to make a row of squares. One square needs 4 sticks, two squares need 7, three squares need 10.",
+            "The gap is 3, because each new square shares one side with the last one.",
+            "When n = 1, 3n = 3, and 4 − 3 = 1. The rule is 3n + 1.",
+            "For 25 squares: 3 × 25 + 1 = 76 matchsticks."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Patterns on a number square",
+          "text": "Make a 1 to 100 number square in your exercise book, with ten numbers in each row. Shade all the multiples of 3 and describe the pattern you see. Then try the multiples of 5, 9 and 10. Sulai wants his shaded multiples to make vertical lines. Find as many sets of multiples as you can that would do this."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Sharon wants to shade some multiples on a 1 to 100 square to make a pattern of horizontal lines. Can she do this? Discuss your reasons with your group."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A sequence follows a rule. A term-to-term rule gets the next term from the last one. For a linear sequence with a constant gap d, the nth term is dn + c, and you can use it to find any term or the position of a term."
         }
       ]
     }

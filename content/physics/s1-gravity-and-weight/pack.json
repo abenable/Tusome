@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.gravity-and-weight",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Effects of forces",
       "order": 7,
+      "term": 2,
       "outcomes": [
         "understand the existence of the force of gravity and distinguish between mass and weight (u)",
         "appreciate that the weight of a body depends on the size of the force of gravity acting upon it (k, u, v/a)"
@@ -18,28 +19,139 @@
       "body": [
         {
           "type": "text",
-          "text": "Gravity is a force of attraction that exists between any two masses. The Earth's gravity pulls objects near it towards the Earth's centre."
+          "text": "A ripe mango falls from its tree to the ground. Rain falls from the clouds. Streams run down the slopes of Mt Elgon. A ball kicked high into the air always comes back down. All of these happen because of the same force: gravity."
+        },
+        {
+          "type": "heading",
+          "text": "The force of gravity"
         },
         {
           "type": "text",
-          "text": "Mass is the amount of matter in an object, measured in kilograms (kg); it does not change with location. Weight is the force of gravity acting on that mass, measured in newtons (N), and it depends on the size of the gravitational force acting on the object."
+          "text": "Gravity is a force of attraction between any two objects that have mass. It is a non-contact force, so it acts across empty space. Between everyday objects, such as two books, the pull is far too small to notice. When one of the objects is very large, like the Earth, the pull is strong."
+        },
+        {
+          "type": "text",
+          "text": "The Earth pulls every object towards its centre. That is why \"down\" means towards the centre of the Earth, wherever you are on its surface. The pull of gravity is bigger when the masses are bigger. It gets weaker as the objects get further apart."
+        },
+        {
+          "type": "text",
+          "text": "Gravity also works on a much bigger scale. The Earth's gravity keeps the Moon moving around the Earth. The Sun's gravity keeps the Earth and the other planets moving around the Sun. The Moon's gravity is weaker than the Earth's because the Moon has much less mass."
+        },
+        {
+          "type": "heading",
+          "text": "Mass and weight are different"
+        },
+        {
+          "type": "text",
+          "text": "In everyday talk, people use \"weight\" to mean how heavy something is. In physics, mass and weight mean different things."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mass is the amount of matter in an object. It is measured in kilograms (kg) with a beam balance. An object's mass is the same everywhere.",
+            "Weight is the force of gravity pulling on an object. It is a force, so it is measured in newtons (N) with a spring balance. An object's weight changes if the pull of gravity changes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Weight and mass are linked by a simple equation."
         },
         {
           "type": "equation",
-          "latex": "W = m g"
+          "latex": "W = mg",
+          "speech": "W equals m times g. Weight equals mass times the gravitational field strength."
         },
         {
           "type": "text",
-          "text": "Because the Moon has far less mass than the Earth, it pulls objects with a much smaller gravitational force. An object's weight on the Moon is only about one-sixth of its weight on Earth, even though the object's mass has not changed at all."
+          "text": "Here g is the gravitational field strength. It tells us how hard gravity pulls on each kilogram. On Earth, g is about 10 newtons per kilogram (10 N/kg). A more exact value is 9.8 N/kg, but we use 10 N/kg to keep calculations simple."
+        },
+        {
+          "type": "example",
+          "title": "The weight of a learner",
+          "steps": [
+            "Atim has a mass of 45 kg. Take g = 10 N/kg.",
+            "W = m × g = 45 × 10.",
+            "W = 450 N. Atim's weight on Earth is 450 N."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "The mass of a jerrycan of water",
+          "steps": [
+            "A full jerrycan of water has a weight of 200 N. Take g = 10 N/kg.",
+            "W = m × g, so m = W ÷ g.",
+            "m = 200 ÷ 10 = 20 kg."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a force meter",
+          "text": "Hang a rubber band from a nail or a hook, with a ruler standing behind it. Tie a small polythene bag to the bottom of the band. Use a syringe or measuring cylinder to pour 100 cm³ of water into the bag. This water has a mass of 100 g, so its weight is 1 N. Mark where the bottom of the band reaches. Add 100 cm³ more at a time and mark 2 N, 3 N and so on. Then hang a pen or a small mango in the empty bag and read off its weight."
+        },
+        {
+          "type": "heading",
+          "text": "Weight depends on the pull of gravity"
         },
         {
           "type": "text",
-          "text": "Use the PhET Gravity Force Lab: Basics simulation below. Change the mass of the two objects and the distance between them, and see how the gravitational force between them changes."
+          "text": "The strength of gravity is not the same everywhere. A planet or moon with more mass pulls harder, so g is bigger there. Your mass stays the same wherever you go, but your weight changes with g."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Moon: about 1.6 N/kg, roughly one-sixth of the Earth's value",
+            "Mars: about 3.7 N/kg",
+            "Earth: about 10 N/kg",
+            "Jupiter: about 25 N/kg"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "An astronaut on the Moon",
+          "steps": [
+            "An astronaut has a mass of 70 kg.",
+            "On Earth: W = 70 × 10 = 700 N.",
+            "On the Moon, g = 1.6 N/kg: W = 70 × 1.6 = 112 N.",
+            "The astronaut's weight on the Moon is much smaller, but the mass is still 70 kg. There is just as much matter in the body."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Even on Earth, g changes very slightly. It is a little smaller on top of a high mountain, because you are further from the centre of the Earth. It is also a little smaller at the equator than at the poles. Uganda is on the equator and high above sea level, so you weigh very slightly less here. The difference is less than one per cent."
+        },
+        {
+          "type": "heading",
+          "text": "Gravity at work"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Water supply: water flows downhill, so tanks on high stands or hillsides can supply taps below without a pump. Many towns near Mt Elgon get water from gravity flow schemes.",
+            "Irrigation: farmers lead water from a higher river or tank down channels to their crops.",
+            "Electricity: at dams on the Nile, such as Bujagali and Karuma, falling water turns turbines.",
+            "Building: a builder hangs a weight on a string, called a plumb line, to check that a wall is upright.",
+            "Farming: when grain is winnowed, the heavy grain falls straight down while the wind carries the light chaff away.",
+            "Roads: heavy lorries have a large weight that can damage roads, so their weight is checked at weighbridges."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Imagine taking a heavy sack of maize to the Moon. Would it be easier to lift there? Would it be easier to stop if it were sliding towards you across the ground? Discuss what changes and what stays the same."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Gravity is a force of attraction between masses. Mass is the amount of matter in an object, in kilograms, and it never changes. Weight is the pull of gravity on that mass, in newtons. W = mg, with g about 10 N/kg on Earth and 1.6 N/kg on the Moon."
         }
       ],
       "sim": {
         "phet": "gravity-force-lab-basics_en.html",
-        "caption": "PhET Gravity Force Lab: Basics. Change mass and distance and see how the gravitational force between two objects changes. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Gravity Force Lab: Basics. Change the masses of the two spheres and the distance between them, and watch the force of gravity change. Notice that the pulls on the two spheres are always equal in size. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

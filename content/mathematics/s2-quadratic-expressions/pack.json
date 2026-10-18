@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.quadratic-expressions",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,160 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Quadratic expressions",
       "order": 6,
+      "term": 2,
       "outcomes": [
-        "Recognise equivalent quadratic expressions. (k, u, s)",
-        "Expand algebraic expressions. (k, s)",
-        "Identify perfect squares. (u)",
-        "Factorise quadratic expressions. (u, s)",
-        "Solve quadratic equations where the quadratic expression can be factorised. (k, s)"
+        "recognise equivalent quadratic expressions. (k u s)",
+        "expand algebraic expressions. (k s)",
+        "identify perfect squares. (u)",
+        "factorise quadratic expressions. (u s)",
+        "solve quadratic equations where the quadratic expression can be factorised. (k s)"
       ],
       "body": [
         {
+          "type": "heading",
+          "text": "Expressions with x squared"
+        },
+        {
           "type": "text",
-          "text": "To expand (x+3)(x+4), multiply every term in the first bracket by every term in the second: x*x + x*4 + 3*x + 3*4 = x^2 + 4x + 3x + 12 = x^2 + 7x + 12. Notice the coefficient of x (7) is the sum of 3 and 4, and the constant (12) is their product — this pattern is the key to factorising."
+          "text": "Namubiru plans a rectangular vegetable garden in Masaka. It is x + 3 metres long and x + 2 metres wide, so its area is (x + 3)(x + 2) square metres. Multiplying out the brackets gives x² + 5x + 6. An expression like this, where the highest power of x is 2, is called a quadratic expression."
+        },
+        {
+          "type": "heading",
+          "text": "Expanding brackets"
+        },
+        {
+          "type": "text",
+          "text": "To expand means to multiply out the brackets. For one bracket, multiply each term inside by the term outside: 3(x + 4) = 3x + 12. For two brackets, multiply each term in the first bracket by each term in the second. Then collect like terms, which have the same letter and power."
+        },
+        {
+          "type": "text",
+          "text": "A rectangle helps. Split a rectangle of length x + 3 and width x + 2 into four parts. The parts have areas x², 3x, 2x and 6. Together they make x² + 5x + 6."
         },
         {
           "type": "equation",
-          "expr": "(x+3)(x+4) = x^2 + 4x + 3x + 12 = x^2 + 7x + 12"
+          "latex": "(x + a)(x + b) = x^2 + (a + b)x + ab",
+          "speech": "x plus a, times x plus b, equals x squared plus a plus b times x, plus a b"
+        },
+        {
+          "type": "example",
+          "title": "Expand two pairs of brackets",
+          "steps": [
+            "(x + 3)(x + 5) = x × x + x × 5 + 3 × x + 3 × 5.",
+            "= x² + 5x + 3x + 15 = x² + 8x + 15.",
+            "(2x − 1)(x + 4) = 2x × x + 2x × 4 − 1 × x − 1 × 4.",
+            "= 2x² + 8x − x − 4 = 2x² + 7x − 4."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Equivalent expressions"
         },
         {
           "type": "text",
-          "text": "To factorise x^2 + 7x + 12, find two numbers that multiply to give 12 (the constant) and add to give 7 (the coefficient of x): 3 and 4 work, since 3x4=12 and 3+4=7. So x^2 + 7x + 12 = (x+3)(x+4)."
+          "text": "Two expressions are equivalent when they give the same value for every value of x. (x + 3)(x + 5) and x² + 8x + 15 are equivalent: one is in brackets and one is expanded. Substituting a number is a quick check. When x = 2, (2 + 3)(2 + 5) = 35, and 4 + 16 + 15 = 35."
+        },
+        {
+          "type": "heading",
+          "text": "Perfect squares and the difference of two squares"
         },
         {
           "type": "text",
-          "text": "A perfect square like (x+5)^2 expands to x^2 + 10x + 25 — the middle term is always twice the product of x and the constant. To solve a factorisable quadratic equation, factorise it and use the fact that if two things multiply to give zero, one of them must be zero. Solve x^2 - 5x + 6 = 0: this factorises to (x-2)(x-3) = 0, so x=2 or x=3."
+          "text": "A perfect square is an expression that is a bracket multiplied by itself. Its last term is a square number, and its middle term is twice the product of x and that square root."
         },
         {
           "type": "equation",
-          "expr": "x^2 - 5x + 6 = 0   ->   (x-2)(x-3) = 0   ->   x = 2  or  x = 3"
+          "latex": "(x + a)^2 = x^2 + 2ax + a^2",
+          "speech": "x plus a, all squared, equals x squared plus 2 a x plus a squared"
+        },
+        {
+          "type": "equation",
+          "latex": "x^2 - a^2 = (x + a)(x - a)",
+          "speech": "x squared minus a squared equals x plus a, times x minus a"
+        },
+        {
+          "type": "example",
+          "title": "Spot perfect squares and use the difference of two squares",
+          "steps": [
+            "x² + 6x + 9: 9 = 3² and 6x = 2 × 3 × x. So it is the perfect square (x + 3)².",
+            "x² − 8x + 16: 16 = 4² and −8x = 2 × (−4) × x. So it is (x − 4)².",
+            "x² + 6x + 8: 8 is not a square number, so this is not a perfect square.",
+            "Evaluate 101² − 99² without squaring: (101 + 99)(101 − 99) = 200 × 2 = 400."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Factorising"
+        },
+        {
+          "type": "text",
+          "text": "Factorising is the reverse of expanding. We write the expression as a product of brackets. Always look first for a common factor: 3x² + 6x = 3x(x + 2)."
+        },
+        {
+          "type": "text",
+          "text": "For x² + bx + c, find two numbers that multiply to give c and add to give b. Those two numbers go into the brackets."
+        },
+        {
+          "type": "example",
+          "title": "Factorise three quadratic expressions",
+          "steps": [
+            "x² + 7x + 12: we need two numbers that multiply to 12 and add to 7. These are 3 and 4. So x² + 7x + 12 = (x + 3)(x + 4).",
+            "x² − 2x − 15: we need a product of −15 and a sum of −2. These are −5 and 3. So x² − 2x − 15 = (x − 5)(x + 3).",
+            "Check by expanding: (x − 5)(x + 3) = x² + 3x − 5x − 15 = x² − 2x − 15.",
+            "2x² + 7x + 3: multiply 2 by 3 to get 6. Find two numbers with product 6 and sum 7: 6 and 1.",
+            "Split the middle term: 2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving quadratic equations by factorising"
+        },
+        {
+          "type": "text",
+          "text": "If two numbers multiply to give zero, at least one of them must be zero. So when (x − 3)(x − 7) = 0, either x − 3 = 0 or x − 7 = 0. A quadratic equation usually has two solutions."
+        },
+        {
+          "type": "example",
+          "title": "The sum is 10 and the product is 21",
+          "steps": [
+            "The sum of two numbers is 10 and their product is 21. Let one number be x. The other is 10 − x.",
+            "Product: x(10 − x) = 21, so 10x − x² = 21.",
+            "Rearrange so one side is zero: x² − 10x + 21 = 0.",
+            "Factorise: (x − 3)(x − 7) = 0.",
+            "So x = 3 or x = 7. The two numbers are 3 and 7. Check: 3 + 7 = 10 and 3 × 7 = 21."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the size of a garden",
+          "steps": [
+            "A rectangular garden in Mbarara is 3 m longer than it is wide. Its area is 40 m². Let the width be x metres.",
+            "Area: x(x + 3) = 40, so x² + 3x − 40 = 0.",
+            "Two numbers with product −40 and sum 3 are 8 and −5. So (x + 8)(x − 5) = 0.",
+            "x = −8 or x = 5. A width cannot be negative, so x = 5.",
+            "The garden is 5 m wide and 8 m long. Check: 5 × 8 = 40 m²."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build rectangles from tiles",
+          "text": "Cut tiles from an old cardboard box. Make large squares of side x, long strips of length x and width 1, and small squares of side 1. To show x² + 5x + 6, take one large square, five strips and six small squares. Arrange all the tiles into one rectangle. Measure its two sides in terms of x. Try again with x² + 4x + 4. What is special about the shape this time?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "x² − 4 can be factorised as (x + 2)(x − 2), but x² + 4 cannot be factorised using whole numbers. What makes the difference between the two?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "To expand, multiply every term in one bracket by every term in the other. To factorise x² + bx + c, find two numbers that multiply to c and add to b. Learn (x + a)² = x² + 2ax + a² and x² − a² = (x + a)(x − a). To solve a quadratic equation, make one side zero, factorise, then set each bracket equal to zero."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "graphing-quadratics_en.html",
+        "caption": "PhET Graphing Quadratics. Set a = 1, b = −10 and c = 21 to draw y = x² − 10x + 21, then see where the curve crosses the x-axis and compare those points with the solutions you found by factorising. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
     }
   ]
 }

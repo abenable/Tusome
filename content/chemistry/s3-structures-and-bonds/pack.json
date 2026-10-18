@@ -1,0 +1,189 @@
+{
+  "packId": "che.s3.structures-bonds.atoms-bonding",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.structures-bonds.atoms-bonding",
+      "title": "Structures and Bonds",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Structures and Bonds",
+      "subStrand": "Atomic structure and chemical bonding",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "understand that atoms are the building blocks from which all matter is made (u)",
+        "understand the terms: ‘element’, ‘atom’, ‘molecule,’ and ‘compound’, and appreciate how they are related (u)",
+        "understand how atoms of different elements differ in their subatomic structure (u)",
+        "appreciate that atoms are made up of subatomic particles and know the properties of these particles (k, u)",
+        "understand the terms relative atomic mass, proton number, nucleon number and isotopes (u, s)",
+        "understand and appreciate that the atoms of elements join together to form compounds (u, s)",
+        "understand the processes involved in the formation of ionic, covalent and metallic bonds (u)",
+        "recognise the difference in the physical properties of ionic and covalent compounds and relate them to their bonding (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Everything around you, from the red murram on a road to the air you breathe, is made of tiny particles called atoms. Atoms are the building blocks of all matter. They are far too small to see, even with a microscope. About ten million atoms in a row would stretch only one millimetre."
+        },
+        {
+          "type": "heading",
+          "text": "Element, atom, molecule and compound"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An atom is the smallest particle of an element that can take part in a chemical reaction.",
+            "An element is a substance made of only one kind of atom. Iron, copper, gold, oxygen and chlorine are elements.",
+            "A molecule is two or more atoms joined together. The atoms may be the same, as in oxygen (O₂), or different, as in water (H₂O).",
+            "A compound is a substance made of two or more different elements chemically joined. Water, carbon dioxide, sodium chloride and copper(II) oxide are compounds."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "So atoms make up elements, and atoms of different elements join to form compounds. Some compounds, such as water and carbon dioxide, are made of molecules. Others, such as sodium chloride, are made of ions."
+        },
+        {
+          "type": "heading",
+          "text": "Inside the atom"
+        },
+        {
+          "type": "text",
+          "text": "An atom has a tiny centre called the nucleus. The nucleus contains protons and neutrons. Electrons move around the nucleus in energy levels called shells. Protons, neutrons and electrons are called subatomic particles."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Proton: in the nucleus, relative mass 1, relative charge +1.",
+            "Neutron: in the nucleus, relative mass 1, no charge.",
+            "Electron: in the shells, relative mass about 1/1840, relative charge −1."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "An atom has equal numbers of protons and electrons, so it has no overall charge. Atoms of different elements have different numbers of protons. Every carbon atom has 6 protons, and every oxygen atom has 8."
+        },
+        {
+          "type": "heading",
+          "text": "Proton number, nucleon number and isotopes"
+        },
+        {
+          "type": "text",
+          "text": "The proton number (atomic number, Z) is the number of protons in an atom. The nucleon number (mass number, A) is the total number of protons and neutrons. We write an atom of element X with A at the top and Z at the bottom."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{A}_{Z}\\mathrm{X} \\qquad {}^{23}_{11}\\mathrm{Na}",
+          "speech": "X with nucleon number A at the top and proton number Z at the bottom. For example, sodium 23, with proton number 11"
+        },
+        {
+          "type": "example",
+          "title": "Find the particles in a sodium atom",
+          "steps": [
+            "Sodium has proton number 11 and nucleon number 23.",
+            "Proton number = 11, so there are 11 protons.",
+            "The atom is neutral, so there are also 11 electrons.",
+            "Neutrons = nucleon number − proton number = 23 − 11 = 12."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. Chlorine has two isotopes, chlorine-35 and chlorine-37. Both have 17 protons, but chlorine-35 has 18 neutrons and chlorine-37 has 20. Isotopes react in the same way, because they have the same number of electrons."
+        },
+        {
+          "type": "text",
+          "text": "The relative atomic mass (Ar) of an element is the average mass of its atoms compared with one-twelfth of the mass of a carbon-12 atom. It takes into account each isotope and how common it is."
+        },
+        {
+          "type": "example",
+          "title": "Relative atomic mass of chlorine",
+          "steps": [
+            "Natural chlorine is 75% chlorine-35 and 25% chlorine-37.",
+            "Average mass = (75 × 35 + 25 × 37) ÷ 100",
+            "= (2625 + 925) ÷ 100",
+            "= 3550 ÷ 100 = 35.5",
+            "The relative atomic mass of chlorine is 35.5."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Electron arrangement"
+        },
+        {
+          "type": "text",
+          "text": "Electrons fill the shells from the inside out. For the first 20 elements, the first shell holds up to 2 electrons, and the second and third shells hold up to 8 each. Sodium, with 11 electrons, is 2,8,1. Chlorine, with 17, is 2,8,7. Calcium, with 20, is 2,8,8,2."
+        },
+        {
+          "type": "text",
+          "text": "Electrons in the outer shell are called valency electrons, and they decide how an atom reacts. The noble gases, such as neon (2,8) and argon (2,8,8), have full outer shells. They are very stable and hardly react. Other atoms react so that they reach a full outer shell like a noble gas."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model atoms with local materials",
+          "text": "Draw circles for the nucleus and shells on a sheet of paper. Use beans for protons, maize grains for neutrons and small stones for electrons. Build carbon (6 protons, 6 neutrons, electrons 2,4) and sodium (11 protons, 12 neutrons, electrons 2,8,1). Then move one electron from your sodium model to a chlorine model (2,8,7) made by another group. Say what charge each atom now has."
+        },
+        {
+          "type": "heading",
+          "text": "How atoms join: chemical bonds"
+        },
+        {
+          "type": "text",
+          "text": "A chemical bond is a force that holds atoms together. When atoms of different elements bond, a compound forms. There are three main types of bond."
+        },
+        {
+          "type": "text",
+          "text": "Ionic bonding happens between a metal and a non-metal. The metal atom gives its outer electrons to the non-metal atom. Both become ions: charged particles with full outer shells. Sodium loses one electron to become Na⁺ (2,8). Chlorine gains it to become Cl⁻ (2,8,8). The strong attraction between opposite charges is the ionic bond."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Na \\rightarrow Na^+ + e^-} \\qquad \\mathrm{Cl + e^- \\rightarrow Cl^-}",
+          "speech": "N a gives N a plus and an electron. C l plus an electron gives C l minus"
+        },
+        {
+          "type": "text",
+          "text": "Covalent bonding happens between non-metal atoms. The atoms share pairs of electrons, so each one gets a full outer shell. In hydrogen, H₂, two atoms share one pair. In water, the oxygen atom shares one pair with each hydrogen atom. In methane, CH₄, carbon shares one pair with each of four hydrogen atoms."
+        },
+        {
+          "type": "text",
+          "text": "Metallic bonding holds metal atoms together. Each atom releases its outer electrons, which move freely through a regular lattice of positive ions. This sea of moving electrons holds the ions together. It also lets metals conduct electricity, which is why copper is used for electric wires."
+        },
+        {
+          "type": "heading",
+          "text": "Properties of ionic and covalent compounds"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ionic compounds, such as sodium chloride, form hard crystals with high melting points. Sodium chloride melts at 801 °C. Many dissolve in water. They conduct electricity when melted or dissolved, because the ions can then move.",
+            "Simple covalent compounds, such as water, methane and carbon dioxide, have low melting and boiling points. Many are gases or liquids at room temperature. They do not conduct electricity, because they have no ions."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "These differences come from bonding. In an ionic crystal, every ion is strongly attracted to many neighbours, so a lot of energy is needed to separate them. In a covalent substance, the bonds inside each molecule are strong, but the forces between molecules are weak and easy to overcome."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Table salt and sugar are both white crystals that dissolve in water. Salt water conducts electricity, but sugar water does not. What might this tell you about how each one is bonded?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Scientists once believed that atoms could not be split into anything smaller. Why is it good that scientific ideas can change when new evidence appears?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Atoms have protons and neutrons in a nucleus, with electrons in shells around it. Isotopes have the same proton number but different nucleon numbers. Atoms join by ionic bonds (electron transfer), covalent bonds (electron sharing) or metallic bonds (a sea of electrons), and the type of bond explains a substance's properties."
+        }
+      ],
+      "sim": {
+        "phet": "build-an-atom_en.html",
+        "caption": "Add protons, neutrons and electrons to build a carbon atom, then add one more neutron to make an isotope. Watch how the element, nucleon number and charge change."
+      }
+    }
+  ]
+}

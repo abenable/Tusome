@@ -1,0 +1,158 @@
+{
+  "packId": "bio.s2.soil.erosion-conservation",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.soil.erosion-conservation",
+      "title": "Soil Erosion and Conservation",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Soil",
+      "subStrand": "Soil fertility, erosion, conservation and the nitrogen cycle",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "know the features of fertile soil (k)",
+        "understand the process of and factors leading to soil erosion (u)",
+        "understand the causes of reduced soil fertility and describe methods of soil conservation (u, v)",
+        "understand the importance of microorganisms in the nitrogen and other cycles that keep soil fertile (u)",
+        "outline the processes involved in the nitrogen cycle (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "After a heavy storm, brown water rushes down the roads and into the streams. The brown colour is soil being carried away. It is usually the topsoil, the top layer that is richest in humus and nutrients. Losing it means poorer harvests."
+        },
+        {
+          "type": "heading",
+          "text": "Features of fertile soil"
+        },
+        {
+          "type": "text",
+          "text": "A fertile soil is one that can support healthy plant growth year after year. It has these features."
+        },
+        {
+          "type": "list",
+          "items": [
+            "It has plenty of humus.",
+            "It contains all the mineral salts plants need, in the right amounts.",
+            "It holds enough water but also drains well.",
+            "It has enough air for roots and soil organisms.",
+            "It has a suitable pH, about 6 to 7 for most crops.",
+            "It is deep enough for roots to spread.",
+            "It has many useful organisms, such as earthworms and bacteria.",
+            "It is free from pests, diseases and harmful chemicals."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Soil erosion"
+        },
+        {
+          "type": "text",
+          "text": "Soil erosion is the removal of topsoil from one place to another by water, wind or people and animals. It happens in three steps. First, raindrops or wind break soil particles loose. Next, running water or wind carries them away. Finally, the particles are dropped somewhere else, often in rivers, swamps and lakes."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Splash erosion: raindrops hit bare soil and throw particles into the air.",
+            "Sheet erosion: a thin layer of soil is washed evenly off a gentle slope.",
+            "Rill erosion: running water cuts small channels into the soil.",
+            "Gully erosion: the channels grow into deep, wide ditches that can swallow roads and gardens.",
+            "Wind erosion: strong winds blow dry, loose soil away, mainly in dry areas such as Karamoja."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Erosion is worse where there is heavy rain, steep slopes and bare soil. People make it worse by cutting down trees, burning bushes, overgrazing and digging up and down a slope instead of across it. Erosion lowers crop yields, fills rivers and lakes with mud that harms fish, and can cause landslides on steep hills such as Mt Elgon."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Rain on bare and covered soil",
+          "text": "Fill two shallow boxes or cut-open jerrycans with the same soil. Leave one bare and cover the other with grass or dry banana leaves. Tilt both at the same angle, with a container at the lower end of each. Using a tin with holes punched in its base, pour the same amount of water onto each from the same height. Compare how much water and soil runs off each one. Discuss what this tells you about bare gardens."
+        },
+        {
+          "type": "heading",
+          "text": "Causes of reduced soil fertility"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Erosion removes the fertile topsoil.",
+            "Leaching: rain water washes dissolved mineral salts down, below the reach of roots. This happens most in sandy soils.",
+            "Growing the same crop on the same land every season uses up the same nutrients.",
+            "Burning bushes and crop remains destroys humus and kills soil organisms.",
+            "Overgrazing leaves the soil bare and packs it hard.",
+            "Waterlogging drives air out of the soil.",
+            "Using too much of some fertilisers can make the soil too acidic."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Soil conservation"
+        },
+        {
+          "type": "text",
+          "text": "Soil conservation means protecting soil from erosion and keeping it fertile. The best method depends on the land and the climate."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lake Victoria basin: heavy rain falls on gentle slopes farmed for bananas and coffee. Farmers spread mulch of dry grass and banana leaves, plant cover crops such as sweet potatoes and beans, add manure and compost, and dig trenches to slow running water.",
+            "Kigezi highlands: steep hills are farmed by many people. Farmers build terraces, which are steps cut into the hillside. They also dig and plant along the contours, grow strips of grass across the slope and plant trees on hilltops.",
+            "Karamoja region: the land is dry and windy, and many cattle graze it. People control grazing, plant trees as windbreaks, avoid bush burning and harvest rain water in valley tanks."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Other methods used everywhere include crop rotation, which means growing different crops on the same land in turn, and leaving land to rest for a season."
+        },
+        {
+          "type": "heading",
+          "text": "Microorganisms and soil fertility"
+        },
+        {
+          "type": "text",
+          "text": "Decomposers are organisms that feed on dead plants and animals and break them down. Most decomposers are bacteria and fungi, helped by earthworms and termites. Decay turns dead matter into humus and releases mineral salts that plants can absorb again. Decomposers also give off carbon dioxide when they respire, which plants use to make food. Without decomposers, nutrients would stay locked up in dead bodies."
+        },
+        {
+          "type": "heading",
+          "text": "The nitrogen cycle"
+        },
+        {
+          "type": "text",
+          "text": "Plants need nitrogen to make proteins. Air is about 78% nitrogen gas, but plants cannot use the gas. They absorb nitrogen from the soil as nitrates. The nitrogen cycle is the way nitrogen moves between the air, the soil and living things."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Nitrogen fixation: some bacteria change nitrogen gas into nitrogen compounds. Rhizobium lives in small swellings, called root nodules, on the roots of legumes such as beans, groundnuts and soya. Other bacteria fix nitrogen in the soil. Lightning also fixes a little nitrogen, which rain brings down.",
+            "Feeding: plants absorb nitrates and make proteins. Animals get proteins by eating plants or other animals.",
+            "Decay: when organisms die, or animals pass out urine and dung, decomposers break down the proteins into ammonium compounds.",
+            "Nitrification: nitrifying bacteria change ammonium compounds into nitrites and then into nitrates. They need oxygen, so this happens best in well-aired soil.",
+            "Denitrification: in waterlogged soil, denitrifying bacteria change nitrates back into nitrogen gas, which returns to the air. This makes the soil less fertile."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Looking for root nodules",
+          "text": "Carefully dig up a bean or groundnut plant with plenty of soil around its roots. Wash the soil away gently in a bucket of water. Use a hand lens to find the small round swellings on the roots. Cut one open. A pink or red colour inside shows that the bacteria are fixing nitrogen. Draw the roots and nodules."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers in Kigezi have built terraces for many years, but farmers in Karamoja rarely do. Why might the same method suit one region and not the other?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Fertile soil has humus, mineral salts, water, air and living organisms. Erosion removes topsoil, and is reduced by keeping soil covered, terracing, contour farming and planting trees. Bacteria in the nitrogen cycle fix nitrogen, make nitrates and release nitrogen back to the air."
+        }
+      ]
+    }
+  ]
+}

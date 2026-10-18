@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.algebra.ratio-and-proportion",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,32 +11,150 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Ratio and proportion",
       "order": 5,
+      "term": 2,
       "outcomes": [
-        "Understand and apply equivalent ratios. (u, s)",
-        "Understand and apply direct and inverse proportional reasoning. (u, s)",
-        "Understand and apply ratio, proportion and scale. (k, u, s)",
-        "Draw and interpret the line of best fit when looking for a relationship in bivariate data on a scatter graph. (u, s)"
+        "understand and apply equivalent ratios. (u s)",
+        "understand and apply direct and inverse proportional reasoning. (u s)",
+        "understand and apply ratio, proportion and scale. (k u s)",
+        "draw and interpret the line of best fit when looking for a relationship in bivariate data on a scatter graph. (u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Two quantities are in direct proportion if their ratio stays constant — as one doubles, so does the other (y ∝ x). A recipe needs 400 g of flour for 8 cakes. For 20 cakes: 400 ÷ 8 = 50 g per cake, so 20 cakes need 50 x 20 = 1000 g of flour."
+          "text": "A cook mixes rice and water in a fixed ratio. A poultry farmer buys more feed for more birds. A map shrinks real distances by a fixed amount. This topic uses ratio and proportion to compare and scale quantities, and to find patterns in data."
         },
         {
-          "type": "equation",
-          "expr": "400g ÷ 8 cakes = 50 g/cake;   20 cakes need 50 x 20 = 1000 g"
-        },
-        {
-          "type": "text",
-          "text": "Two quantities are in inverse proportion if one increases as the other decreases in a way that keeps their product constant (y ∝ 1/x). A rectangle has area 36 square units: as the width increases, the length must decrease to keep length x width = 36 — if width doubles, length halves."
-        },
-        {
-          "type": "equation",
-          "latex": "y \\propto x \\;\\text{(direct)} \\qquad y \\propto \\frac{1}{x} \\;\\text{(inverse)}"
+          "type": "heading",
+          "text": "Ratios and equivalent ratios"
         },
         {
           "type": "text",
-          "text": "A scatter graph plots pairs of related measurements (e.g. height and mass) as points. A line of best fit is a single straight line drawn through the middle of the scattered points, roughly balancing points above and below it, used to estimate values and describe the trend (e.g. taller people tending to be heavier)."
+          "text": "A ratio compares quantities of the same kind. If a class has 30 girls and 40 boys, the ratio of girls to boys is 30 : 40. Equivalent ratios compare in the same way. You make them by multiplying or dividing every part by the same number, so 30 : 40, 3 : 4 and 6 : 8 are equivalent. A ratio is in its simplest form when its parts have no common factor except 1."
+        },
+        {
+          "type": "example",
+          "title": "Is 12 : 15 equivalent to 3 : 4?",
+          "steps": [
+            "Simon says that 12 : 15 is equivalent to 3 : 4. The highest common factor of 12 and 15 is 3, and 12 ÷ 3 = 4, 15 ÷ 3 = 5.",
+            "So 12 : 15 in its simplest form is 4 : 5, which is not 3 : 4. Simon is not correct.",
+            "A diagram shows it: 12 : 15 is 4 blue squares for every 5 red, not 3 blue for every 4 red."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Share money in a ratio",
+          "steps": [
+            "Okello and Akello share UGX 84,000 in the ratio 3 : 4.",
+            "There are 3 + 4 = 7 parts, so one part = 84,000 ÷ 7 = UGX 12,000.",
+            "Okello gets 3 × 12,000 = UGX 36,000 and Akello gets 4 × 12,000 = UGX 48,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Direct proportion"
+        },
+        {
+          "type": "text",
+          "text": "Two quantities are in direct proportion when they grow at the same rate. If one doubles, the other doubles, so their ratio stays the same. We write y ∝ x, which means y = kx. The fixed number k is called the constant of proportion. The graph is a straight line through the origin with gradient k."
+        },
+        {
+          "type": "equation",
+          "latex": "y = kx",
+          "speech": "y equals k x"
+        },
+        {
+          "type": "example",
+          "title": "Flour for cakes",
+          "steps": [
+            "Namubiru needs 400 g of flour to bake 8 cakes. How much flour does she need for 20 cakes, and how many cakes can she bake with 750 g?",
+            "Flour for one cake = 400 ÷ 8 = 50 g.",
+            "Flour for 20 cakes = 20 × 50 = 1000 g, which is 1 kg.",
+            "Cakes from 750 g = 750 ÷ 50 = 15 cakes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Inverse proportion"
+        },
+        {
+          "type": "text",
+          "text": "Two quantities are in inverse proportion when one increases as the other decreases at the same rate. If one doubles, the other halves, so their product stays the same. We write y ∝ 1/x, which means y = k/x. A rectangle of area 36 square units can be 4 by 9, 6 by 6 or 12 by 3. The graph of y = 36/x is a curve that nears both axes but never touches them."
+        },
+        {
+          "type": "equation",
+          "latex": "y = \\frac{k}{x}",
+          "speech": "y equals k over x"
+        },
+        {
+          "type": "example",
+          "title": "Workers digging a trench",
+          "steps": [
+            "Six workers take 10 days to dig a trench for water pipes in Mbarara. How long would 15 workers take at the same rate?",
+            "More workers means fewer days, so this is inverse proportion.",
+            "Total work = 6 × 10 = 60 worker-days.",
+            "Days for 15 workers = 60 ÷ 15 = 4 days."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Scale on maps and plans"
+        },
+        {
+          "type": "text",
+          "text": "A scale is a ratio that links a length on a map or plan to the real length. A scale of 1 : 50,000 means 1 cm on the map stands for 50,000 cm, or 500 m, on the ground."
+        },
+        {
+          "type": "example",
+          "title": "Distance from a map",
+          "steps": [
+            "On a map with scale 1 : 250,000, Kampala and Jinja are 28 cm apart.",
+            "28 cm on the map stands for 28 × 250,000 = 7,000,000 cm on the ground.",
+            "7,000,000 cm = 70,000 m = 70 km.",
+            "The towns are about 70 km apart in a straight line. The road is longer because it bends."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Scatter graphs and the line of best fit"
+        },
+        {
+          "type": "text",
+          "text": "Bivariate data have two values for each person or object, such as height and handspan. Plot each pair as a point on a scatter graph. If the points lie roughly along a line, the quantities are related. This is called correlation. It is positive when both increase together, and negative when one increases as the other decreases."
+        },
+        {
+          "type": "text",
+          "text": "A line of best fit is a straight line through the middle of the points, with about as many points above it as below. A good method is to draw it through the mean point: the mean of the x values and the mean of the y values."
+        },
+        {
+          "type": "example",
+          "title": "Estimate a handspan from a line of best fit",
+          "steps": [
+            "Kyomuhendo's class measured height h and handspan s, in cm. Her line of best fit passes through (150, 18) and (170, 21).",
+            "Gradient = (21 − 18) ÷ (170 − 150) = 3 ÷ 20 = 0.15.",
+            "Write s = 0.15h + c. Using (150, 18): 18 = 22.5 + c, so c = −4.5.",
+            "The line is s = 0.15h − 4.5.",
+            "For a learner 160 cm tall: s = 0.15 × 160 − 4.5 = 24 − 4.5 = 19.5. Her handspan is likely to be about 19.5 cm."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Estimates inside the range of the data are fairly reliable. Estimates far outside it, such as for a baby, may be wrong because the pattern may not continue."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Handspan and height",
+          "text": "In groups, measure each person's height against a wall and their handspan from thumb tip to little finger tip. Plot a scatter graph on squared paper and draw a line of best fit through the mean point. Use it to estimate a visitor's handspan from their height, then measure to compare."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Plot some rectangles of area 36 square units, with sides x and y. How is this graph different from the graph of flour against cakes? What happens to y as x becomes very large?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Equivalent ratios come from multiplying or dividing every part by the same number. In direct proportion the ratio stays the same; in inverse proportion the product stays the same. A scale is the ratio of map length to real length. A line of best fit shows the trend on a scatter graph."
         }
       ]
     }

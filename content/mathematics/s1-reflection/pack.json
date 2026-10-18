@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.reflection",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,143 @@
       "strand": "Geometry and Measures",
       "subStrand": "Transformations",
       "order": 10,
+      "term": 3,
       "outcomes": [
         "identify lines of symmetry for different figures. (k)",
-        "reflect shapes and objects. (u, s)",
+        "reflect shapes and objects. (u s)",
         "apply reflection in the Cartesian plane. (u, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A shape has a line of symmetry if it can be folded along that line so the two halves match exactly. A square has four lines of symmetry (two through opposite corners, two through the midpoints of opposite sides); a circle has infinitely many, through its centre; a scalene triangle, with three different side lengths, has none."
+          "text": "On a calm morning, the trees along the shore of Lake Victoria appear upside down in the water. When you look in a mirror, you see a copy of yourself facing back at you. Both are reflections. Many patterns on baskets, mats and kitenge cloth are also built from reflections. In this topic you learn to find lines of symmetry and to reflect shapes, including on a coordinate grid."
+        },
+        {
+          "type": "heading",
+          "text": "Lines of symmetry"
         },
         {
           "type": "text",
-          "text": "Reflection is a transformation that flips a shape across a line, called the mirror line, to produce an image. Every point of the image is the same perpendicular distance from the mirror line as the matching point on the original shape, on the opposite side — as if the mirror line were a real mirror."
+          "text": "A line of symmetry divides a shape into two halves that are mirror images of each other. If you fold the shape along this line, the two halves fit exactly on top of each other. A shape can have no line of symmetry, one line, or many lines."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A rectangle has 2 lines of symmetry, one across and one down the middle.",
+            "A square has 4 lines of symmetry: two through the middles of opposite sides and two along the diagonals.",
+            "An isosceles triangle has 1 line of symmetry. An equilateral triangle has 3.",
+            "A regular hexagon has 6 lines of symmetry.",
+            "A circle has an unlimited number of lines of symmetry. Any line through the centre works.",
+            "The capital letter A has one vertical line of symmetry. B has one horizontal line. H has two. F has none."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "What a reflection does"
         },
         {
           "type": "text",
-          "text": "On the Cartesian plane, reflecting in the y-axis (x = 0) keeps the y-coordinate the same and reverses the sign of the x-coordinate: (x, y) becomes (-x, y). Reflecting in the x-axis (y = 0) does the opposite: (x, y) becomes (x, -y). Reflecting in the line y = x swaps the coordinates: (x, y) becomes (y, x)."
+          "text": "A reflection is a transformation that flips a shape over a line called the mirror line. The shape you start with is the object. The shape you get is the image. We name the image points with a dash, so the image of point A is A′, said A dash."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The image is the same shape and size as the object. We say they are congruent.",
+            "Each point of the image is the same distance from the mirror line as the matching point of the object, but on the other side.",
+            "The line joining a point to its image crosses the mirror line at right angles.",
+            "The image is turned the other way round. This is called lateral inversion. Your right hand looks like a left hand in a mirror.",
+            "Points that lie on the mirror line do not move."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Reflecting a flag shape on squared paper",
+          "steps": [
+            "Nakato draws a small flag shape on squared paper. A vertical mirror line runs down the page.",
+            "The top of the flag pole is 3 squares to the left of the mirror line. Count 3 squares to the right of the line, along the same row, and mark the image point.",
+            "The tip of the flag is 5 squares to the left of the line. Mark its image 5 squares to the right, on the same row.",
+            "Repeat for every corner of the shape. Always count straight across, at right angles to the mirror line.",
+            "Join the image points in the same order as the object. The image flag points the opposite way."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Reflection in the Cartesian plane"
+        },
+        {
+          "type": "text",
+          "text": "On a coordinate grid, reflections in the axes and in the diagonal lines follow simple rules. Learn to see the pattern rather than memorise it. Plot a few points and their images to check each rule."
         },
         {
           "type": "equation",
-          "expr": "reflect (3, 4) in the x-axis: (3, 4) -> (3, -4)"
+          "latex": "\\text{x-axis: } (x, y) \\rightarrow (x, -y)",
+          "speech": "reflection in the x-axis: x, y maps to x, negative y"
         },
         {
-          "type": "text",
-          "text": "A triangle with vertices A(1, 2), B(-1, 1) and C(-4, 3) is reflected to give image points A'(2, 1), B'(1, -1) and C'(3, -4). Comparing original to image, each coordinate pair has been swapped — (x, y) has become (y, x) — so the mirror line is y = x."
+          "type": "equation",
+          "latex": "\\text{y-axis: } (x, y) \\rightarrow (-x, y)",
+          "speech": "reflection in the y-axis: x, y maps to negative x, y"
+        },
+        {
+          "type": "equation",
+          "latex": "y = x\\text{: } (x, y) \\rightarrow (y, x)",
+          "speech": "reflection in the line y equals x: x, y maps to y, x"
+        },
+        {
+          "type": "equation",
+          "latex": "y = -x\\text{: } (x, y) \\rightarrow (-y, -x)",
+          "speech": "reflection in the line y equals negative x: x, y maps to negative y, negative x"
+        },
+        {
+          "type": "example",
+          "title": "Reflecting a triangle in each axis",
+          "steps": [
+            "Triangle ABC has vertices A(1, 2), B(4, 2) and C(4, 5).",
+            "In the x-axis, keep each x-coordinate and change the sign of each y-coordinate.",
+            "The image is A′(1, −2), B′(4, −2) and C′(4, −5). It lies below the x-axis.",
+            "In the y-axis, change the sign of each x-coordinate and keep each y-coordinate.",
+            "The image is A′(−1, 2), B′(−4, 2) and C′(−4, 5). It lies to the left of the y-axis."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Finding the mirror line",
+          "steps": [
+            "An object has points A(1, 2), B(−1, 1) and C(−4, 3). After a reflection the image has points A′(2, 1), B′(1, −1) and C′(3, −4).",
+            "Compare each point with its image. In every case the two coordinates have swapped places.",
+            "Swapping coordinates is the rule for reflection in the line y = x.",
+            "Check with a midpoint. The midpoint of A and A′ is (1.5, 1.5). Its x and y are equal, so it lies on y = x.",
+            "The mirror line is y = x."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Reflecting in the line x = 2",
+          "steps": [
+            "Reflect the point P(5, 1) in the vertical line x = 2.",
+            "P is 5 − 2 = 3 units to the right of the mirror line.",
+            "The image must be 3 units to the left of the line, so its x-coordinate is 2 − 3 = −1.",
+            "The y-coordinate does not change for a vertical mirror line.",
+            "The image is P′(−1, 1)."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Mirrors and ink blots",
+          "text": "Write the capital letters of the alphabet in large print. Stand a small mirror on each letter to find its lines of symmetry, then repeat for the digits 0 to 9. Next, fold a sheet of paper in half, open it, and drop a little ink or paint on one side of the fold. Press the halves together and open again. Mark the fold as the mirror line and check that matching points are the same distance from it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Look at the name of your school written in capital letters. Which letters would look the same in a mirror held beside them? Which would look the same in a mirror held below them? Why is the word AMBULANCE often written back to front on the front of an ambulance?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A line of symmetry splits a shape into two mirror-image halves. In a reflection, the image is congruent to the object, laterally inverted, and each point is the same distance from the mirror line as its object point. In the x-axis (x, y) becomes (x, −y); in the y-axis it becomes (−x, y); in y = x it becomes (y, x); in y = −x it becomes (−y, −x)."
         }
       ]
     }

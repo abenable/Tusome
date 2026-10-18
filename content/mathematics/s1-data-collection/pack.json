@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.data.data-collection-and-presentation",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,30 +11,142 @@
       "strand": "Data and Probability",
       "subStrand": "Data collection",
       "order": 9,
+      "term": 2,
       "outcomes": [
-        "understand the differences between types of data. (k, u)",
+        "understand the differences between types of data. (k u)",
         "collect and represents simple data from the local environment using tally chart, bar chart (bars do not touch), pie chart and line graph. (k, u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Data can be qualitative (describing a quality, like favourite colour or type of shop) or quantitative (a number, like height or number of siblings). Quantitative data can be further split into discrete data, which can only take exact, separate values (like the number of learners in a class — never 22.5), and continuous data, which can take any value in a range (like height or time)."
+          "text": "A head teacher counts how many learners come to school each day. A trader at Nakasero market writes down how many bunches of matooke she sells. A weather station in Gulu records the rainfall every month. All of them are collecting data. In this topic you learn to collect data and show it clearly so that others can understand it."
+        },
+        {
+          "type": "heading",
+          "text": "Types of data"
         },
         {
           "type": "text",
-          "text": "A tally chart records data as it is collected, using a mark for each item and grouping every fifth mark across the previous four (|||| ) to make counting easy afterwards."
+          "text": "Data are facts or numbers collected to answer a question. There are two main types of data."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Qualitative data are words or categories, not numbers. Examples are favourite fruit, colour of uniform, or the way a learner travels to school.",
+            "Quantitative data are numbers. Examples are the number of brothers and sisters a learner has, or the height of a learner."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "A bar chart displays discrete or qualitative data as separate bars, one per category, with a gap between each bar to show the categories are distinct — this is different from a histogram, where continuous data is shown with touching bars because the categories flow into each other."
+          "text": "Quantitative data can be split again. Discrete data are counted, so they can only take certain values, usually whole numbers. The number of goats on a farm is discrete. You cannot have 3.5 goats. Continuous data are measured, so they can take any value in a range. Height, mass, time and temperature are continuous. A learner can be 152.4 cm tall."
+        },
+        {
+          "type": "heading",
+          "text": "Collecting data"
         },
         {
           "type": "text",
-          "text": "A pie chart shows how a total is divided into categories, using the size of each slice to represent its share. A line graph plots points connected by straight lines, and is best for showing how a continuous quantity changes over time, such as rainfall recorded each month."
+          "text": "Always start with a question. For example: how do S1 learners travel to school? Then decide how to collect the data. You can ask people questions, count things you observe, or measure things. Data you collect yourself are called primary data. Data you take from books, newspapers or reports are called secondary data."
+        },
+        {
+          "type": "heading",
+          "text": "Tally charts and frequency"
         },
         {
           "type": "text",
-          "text": "Choosing the right chart depends on the data and the question being asked: a bar chart compares separate categories, a pie chart shows proportions of a whole, and a line graph shows a trend over time. Collecting data for a clear purpose — such as testing whether most learners in a class walk to school — makes it easier to decide which of these will present the findings most clearly."
+          "text": "A tally chart helps you count as you collect. For each item you draw one short stroke beside its category. The fifth stroke is drawn across the first four. This makes bundles of five that are easy to count. The total for each category is called its frequency."
+        },
+        {
+          "type": "example",
+          "title": "Making a tally chart",
+          "steps": [
+            "Okello asked 30 learners in S1 how they travel to school. The answers were walk, boda boda, bicycle or taxi.",
+            "He went through the answers one at a time and drew a stroke beside the right category, crossing every fifth stroke.",
+            "Walk: two bundles of five and four single strokes. Frequency 14.",
+            "Boda boda: one bundle of five and two single strokes. Frequency 7.",
+            "Bicycle: one bundle of five. Frequency 5.",
+            "Taxi: four single strokes. Frequency 4.",
+            "Check the total: 14 + 7 + 5 + 4 = 30, which is the number of learners asked."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Bar charts"
+        },
+        {
+          "type": "text",
+          "text": "A bar chart shows each category as a bar. The height of the bar shows the frequency. All bars have the same width. For categories like these, leave equal gaps so that the bars do not touch. Give the chart a title, label both axes, and choose a scale that fits your paper. For Okello's data, 1 cm could stand for 2 learners, so the bar for walking would be 7 cm tall."
+        },
+        {
+          "type": "heading",
+          "text": "Pie charts"
+        },
+        {
+          "type": "text",
+          "text": "A pie chart is a circle divided into sectors, like slices of a round cake. The whole circle stands for all the data. A full circle is 360°, so each category gets a share of 360° that matches its share of the total."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{angle} = \\frac{\\text{frequency}}{\\text{total}} \\times 360^\\circ",
+          "speech": "angle equals frequency over total, times 360 degrees"
+        },
+        {
+          "type": "example",
+          "title": "Drawing a pie chart",
+          "steps": [
+            "Use Okello's data. The total is 30 learners.",
+            "Walk: 14 ÷ 30 × 360° = 168°.",
+            "Boda boda: 7 ÷ 30 × 360° = 84°.",
+            "Bicycle: 5 ÷ 30 × 360° = 60°.",
+            "Taxi: 4 ÷ 30 × 360° = 48°.",
+            "Check: 168 + 84 + 60 + 48 = 360°.",
+            "Draw a circle and one radius. Measure each angle with a protractor, starting from the last line you drew. Label each sector."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Line graphs"
+        },
+        {
+          "type": "text",
+          "text": "A line graph shows how something changes over time. Time goes on the horizontal axis. The quantity being measured goes on the vertical axis. You plot a point for each reading and join the points with straight lines."
+        },
+        {
+          "type": "example",
+          "title": "Temperature during a school day",
+          "steps": [
+            "Atim read a thermometer outside her classroom every two hours. At 08:00 it was 18 °C, at 10:00 it was 22 °C, at 12:00 it was 26 °C, at 14:00 it was 28 °C and at 16:00 it was 25 °C.",
+            "Put time on the horizontal axis, with 2 cm for every two hours.",
+            "Put temperature on the vertical axis, with 1 cm for every 2 °C. Start the scale at 16 °C and show a small zigzag break near zero.",
+            "Plot the five points and join them with straight lines using a ruler.",
+            "The graph rises until 14:00 and then falls. The hottest reading was 28 °C at 14:00.",
+            "The temperature at 11:00 can be estimated from the line. It is about halfway between 22 °C and 26 °C, so about 24 °C."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Choosing a way to show data"
+        },
+        {
+          "type": "text",
+          "text": "Each display has strengths and limits. A bar chart makes it easy to compare frequencies. A pie chart shows each category as a share of the whole, but it hides the actual numbers. A line graph shows a trend over time, but it does not suit categories such as favourite fruit."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Whose feet are longer",
+          "text": "Mukasa said most S1 learners have feet about 15 cm long. Aminah said most have shorter feet. In groups, measure the length of each learner's bare foot to the nearest centimetre using a ruler or tape measure. Record the lengths in a tally chart. Show the results in a bar chart. Use your chart to decide who was right, and explain your decision to the class."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A newspaper wants to show how many people in a district use solar panels, paraffin lamps and grid electricity. Would you choose a bar chart or a pie chart? What would each one show well, and what would it hide?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Qualitative data are words or categories; quantitative data are numbers, either counted (discrete) or measured (continuous). A tally chart records data as you collect it. Bar charts compare frequencies with separate bars, pie charts share 360° in proportion to frequency, and line graphs show change over time."
         }
       ]
     }

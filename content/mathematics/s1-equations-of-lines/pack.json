@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.equations-of-lines",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Linear graphs",
       "order": 11,
+      "term": 3,
       "outcomes": [
         "form linear equations with given points. (k, s)",
         "draw the graph of a line given its equation. (u, s)"
@@ -18,31 +19,135 @@
       "body": [
         {
           "type": "text",
-          "text": "A straight line's equation is usually written y = mx + c, where m is the gradient (how steep the line is) and c is the y-intercept (where the line crosses the y-axis, when x = 0)."
+          "text": "A boda boda rider in Masaka charges a fixed amount to start a trip, then the same amount for every extra kilometre. If you plot the fare against the distance, the points lie on a straight line. In this topic you learn to find the equation of a straight line from points on it, and to draw a line when you are given its equation."
+        },
+        {
+          "type": "heading",
+          "text": "Points that follow a rule"
         },
         {
           "type": "text",
-          "text": "To draw the graph of y = 2x + 1, make a table of values: choose a few x values, work out the matching y, then plot the points. When x = 0, y = 1; when x = 1, y = 3; when x = 2, y = 5. Plotting (0, 1), (1, 3) and (2, 5) and joining them with a ruler gives the straight line."
+          "text": "Look at the points (0, 1), (1, 3), (2, 5) and (3, 7). Each time x goes up by 1, y goes up by 2. When x is 0, y is 1. So each y-value is double the x-value, plus 1. We write this rule as an equation: y = 2x + 1. Every point on the line fits this equation, and every point that fits the equation lies on the line."
+        },
+        {
+          "type": "heading",
+          "text": "The equation y = mx + c"
+        },
+        {
+          "type": "text",
+          "text": "Any straight line that is not vertical can be written in the form y = mx + c. The two numbers m and c tell you everything about the line."
         },
         {
           "type": "equation",
-          "expr": "y = 2x + 1:  x=0 -> y=1,  x=1 -> y=3,  x=2 -> y=5"
+          "latex": "y = mx + c",
+          "speech": "y equals m x plus c"
+        },
+        {
+          "type": "list",
+          "items": [
+            "m is the gradient. The gradient measures how steep the line is. It tells you how much y changes when x increases by 1.",
+            "c is the y-intercept. This is the y-value where the line crosses the y-axis, where x = 0.",
+            "If m is positive, the line slopes upwards from left to right. If m is negative, it slopes downwards.",
+            "Lines with the same gradient are parallel. A bigger gradient gives a steeper line."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "The gradient can also be found from two points already known to be on the line, without an equation to start from: gradient = (change in y) ÷ (change in x). A line through (0, -3) and (2, 1) has gradient (1 - (-3)) ÷ (2 - 0) = 4 ÷ 2 = 2. Since the line crosses the y-axis at (0, -3), c = -3, giving the equation y = 2x - 3."
+          "text": "To find the gradient from two points, divide the change in y by the change in x."
         },
         {
           "type": "equation",
-          "latex": "m = \\frac{1-(-3)}{2-0} = \\frac{4}{2} = 2 \\;\\Rightarrow\\; y = 2x - 3"
+          "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+          "speech": "m equals y 2 minus y 1, over x 2 minus x 1"
+        },
+        {
+          "type": "heading",
+          "text": "Special lines"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A horizontal line has gradient 0. Its equation is y = b, for example y = 3. Every point on it has y-coordinate 3.",
+            "A vertical line has the equation x = a, for example x = −2. Every point on it has x-coordinate −2.",
+            "The line y = x passes through (0, 0), (1, 1) and (2, 2).",
+            "The line y = −x passes through (0, 0), (1, −1) and (−2, 2)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Forming the equation from two points"
+        },
+        {
+          "type": "example",
+          "title": "The line through (1, 3) and (3, 7)",
+          "steps": [
+            "Find the gradient: m = (7 − 3) ÷ (3 − 1) = 4 ÷ 2 = 2.",
+            "So the equation is y = 2x + c. We still need c.",
+            "Substitute one of the points. Using (1, 3): 3 = 2 × 1 + c, so 3 = 2 + c.",
+            "Subtract 2 from both sides: c = 1.",
+            "The equation is y = 2x + 1.",
+            "Check with the other point: 2 × 3 + 1 = 7. It fits."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A line with a negative gradient",
+          "steps": [
+            "Find the equation of the line through (0, 5) and (2, 1).",
+            "Gradient: m = (1 − 5) ÷ (2 − 0) = −4 ÷ 2 = −2.",
+            "The point (0, 5) is on the y-axis, so the y-intercept is c = 5.",
+            "The equation is y = −2x + 5.",
+            "Check with (2, 1): −2 × 2 + 5 = −4 + 5 = 1. It fits."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Drawing a line from its equation"
         },
         {
           "type": "text",
-          "text": "Lines with the same gradient are parallel — they never meet, because they rise at exactly the same rate. A steeper line has a larger gradient (ignoring sign); a line that slopes downward left-to-right has a negative gradient."
+          "text": "To draw a line, make a table of values. Choose a few x-values, work out y for each, then plot the points and join them with a ruler. Two points are enough to fix a line, but a third point is a useful check."
         },
         {
-          "type": "text",
-          "text": "Use the PhET Graphing Lines simulation below to build lines from two points, from a point and a slope, or from the y = mx + c form, and see immediately how changing m or c changes the line."
+          "type": "example",
+          "title": "Drawing y = 3x − 2",
+          "steps": [
+            "Choose x-values from −1 to 3.",
+            "When x = −1, y = 3 × (−1) − 2 = −5. When x = 0, y = −2. When x = 1, y = 1.",
+            "When x = 2, y = 4. When x = 3, y = 7.",
+            "Draw axes with x from −1 to 3 and y from −5 to 7. Choose a scale that fits your paper, such as 1 cm for 1 unit.",
+            "Plot (−1, −5), (0, −2), (1, 1), (2, 4) and (3, 7). They should lie in a straight line.",
+            "Join them with a ruler and label the line y = 3x − 2. It crosses the y-axis at −2, as c tells us."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Boda boda fares",
+          "steps": [
+            "Opio charges UGX 2,000 to start a trip and UGX 1,000 for each kilometre. The fare in shillings is F = 1000d + 2000, where d is the distance in kilometres.",
+            "Table: d = 0 gives F = 2,000; d = 1 gives 3,000; d = 2 gives 4,000; d = 3 gives 5,000; d = 4 gives 6,000; d = 5 gives 7,000.",
+            "Plot distance on the horizontal axis and fare on the vertical axis, then join the points.",
+            "The gradient, 1,000, is the cost of each extra kilometre. The intercept, 2,000, is the starting charge.",
+            "Read the graph at d = 3.5. The fare is UGX 5,500. Check: 1000 × 3.5 + 2000 = 5,500."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Four in a line",
+          "text": "In pairs, draw a coordinate grid from −5 to 5 on both axes. Take turns to plot points, each player using a different colour. The first to get four points in a straight line wins the round. Record the coordinates of each winning line and work out its equation. Then use the simulation to try different values of m and c and watch how the line moves."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "How many different straight lines pass through the point (1, 1)? Write down the equations of some of them. What do all their equations have in common?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A straight line has an equation y = mx + c, where m is the gradient and c is the y-intercept. Find m by dividing the change in y by the change in x, then substitute a point to find c. To draw a line, make a table of values, plot at least three points and join them with a ruler."
         }
       ],
       "sim": {

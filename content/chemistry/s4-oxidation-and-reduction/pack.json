@@ -1,0 +1,176 @@
+{
+  "packId": "che.s4.redox.oxidation-reduction",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.redox.oxidation-reduction",
+      "title": "Oxidation and Reduction Reactions",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Redox Reactions",
+      "subStrand": "Oxidation, reduction and electrolysis",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "understand the processes of oxidation and reduction and their importance in the chemical industry (u, s)",
+        "explain redox reactions in terms of electron transfer (u)",
+        "understand the changes that take place during the electrolysis of some compounds (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A cut avocado turns brown, and an old iron sheet rusts. Charcoal burns in a stove. At Kilembe in Kasese, copper was once extracted from rock. All of these changes involve oxidation and reduction. Because the two always happen together, we call them redox reactions."
+        },
+        {
+          "type": "heading",
+          "text": "Oxygen and hydrogen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oxidation is the gain of oxygen or the loss of hydrogen.",
+            "Reduction is the loss of oxygen or the gain of hydrogen."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "When hydrogen is passed over hot copper(II) oxide, the copper(II) oxide loses oxygen and is reduced to copper. The hydrogen gains oxygen and is oxidised to water. A substance that removes oxygen from another, like hydrogen here, is a reducing agent. A substance that gives oxygen, like copper(II) oxide here, is an oxidising agent."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CuO + H_2 \\rightarrow Cu + H_2O}",
+          "speech": "C u O plus H 2 gives C u plus H 2 O"
+        },
+        {
+          "type": "heading",
+          "text": "Redox and electron transfer"
+        },
+        {
+          "type": "text",
+          "text": "Many redox reactions involve no oxygen at all, so chemists also use a wider definition based on electrons. Oxidation is the loss of electrons. Reduction is the gain of electrons. A helpful memory aid is OIL RIG: Oxidation Is Loss, Reduction Is Gain."
+        },
+        {
+          "type": "text",
+          "text": "When sodium burns in chlorine, each sodium atom loses one electron and is oxidised. Each chlorine atom gains one electron and is reduced. A half equation shows just one of these changes."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Na \\rightarrow Na^+ + e^-} \\qquad \\mathrm{Cl_2 + 2e^- \\rightarrow 2Cl^-}",
+          "speech": "N a gives N a plus and an electron, which is oxidation. C l 2 plus 2 electrons gives 2 C l minus, which is reduction"
+        },
+        {
+          "type": "example",
+          "title": "Iron in copper(II) sulphate solution",
+          "steps": [
+            "An iron nail is placed in blue copper(II) sulphate solution. A brown coat of copper forms on the nail, and the blue colour fades.",
+            "Ionic equation: Fe + Cu²⁺ → Fe²⁺ + Cu",
+            "Each iron atom loses 2 electrons: Fe → Fe²⁺ + 2e⁻. Iron is oxidised.",
+            "Each copper ion gains 2 electrons: Cu²⁺ + 2e⁻ → Cu. Copper ions are reduced.",
+            "Iron is the reducing agent, and copper(II) ions are the oxidising agent."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Oxidation numbers"
+        },
+        {
+          "type": "text",
+          "text": "An oxidation number shows how many electrons an atom has lost, gained or shared unevenly. A rise in oxidation number is oxidation. A fall is reduction. These rules help:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An uncombined element has oxidation number 0, as in Fe, O₂ and Cl₂.",
+            "A simple ion has an oxidation number equal to its charge: Na⁺ is +1 and O²⁻ is −2.",
+            "In compounds, oxygen is usually −2 and hydrogen is usually +1.",
+            "In a neutral compound the oxidation numbers add up to 0. In an ion they add up to the charge on the ion."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Oxidation number of sulphur in sulphuric acid",
+          "steps": [
+            "The formula is H₂SO₄. Let the oxidation number of sulphur be x.",
+            "Hydrogen: 2 × (+1) = +2. Oxygen: 4 × (−2) = −8.",
+            "The total must be 0: +2 + x − 8 = 0",
+            "x = +6, so sulphur has oxidation number +6."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Use oxidation numbers to spot redox",
+          "steps": [
+            "Reaction: CuO + H₂ → Cu + H₂O",
+            "Copper changes from +2 in CuO to 0 in Cu. Its oxidation number falls, so copper is reduced.",
+            "Hydrogen changes from 0 in H₂ to +1 in H₂O. Its oxidation number rises, so hydrogen is oxidised.",
+            "Both changes happen together, so this is a redox reaction."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Redox in industry and in Uganda"
+        },
+        {
+          "type": "text",
+          "text": "Most metals are found in rocks as oxides or sulphides, called ores. Getting a metal from its ore is a reduction. Uganda has copper and cobalt ores at Kilembe in Kasese, iron ore at Muko in south-western Uganda, tin ore in Ntungamo and Isingiro, and gold in Busia and Mubende. Mining and metal extraction bring jobs and export income."
+        },
+        {
+          "type": "text",
+          "text": "In a blast furnace, carbon monoxide reduces iron(III) oxide to iron. Redox reactions are also used to make sulphuric acid and chlorine, to charge car batteries and to release energy from fuels. Rusting and food going bad are unwanted oxidation, so we paint iron and seal food in packets."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Fe_2O_3 + 3CO \\rightarrow 2Fe + 3CO_2}",
+          "speech": "F e 2 O 3 plus 3 C O gives 2 F e plus 3 C O 2"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Watch oxidation happen",
+          "text": "Set up three jars, each with a clean iron nail: one dry with a lid, one half full of tap water, and one with salty water. Check them every day for a week and record where rust forms fastest. Also cut an avocado or a banana in half. Squeeze lemon juice onto one half and leave the other plain. Compare the colour after an hour and discuss which half was oxidised more."
+        },
+        {
+          "type": "heading",
+          "text": "Electrolysis"
+        },
+        {
+          "type": "text",
+          "text": "Electrolysis is the breaking down of a compound by passing an electric current through it when it is melted or dissolved in water. The liquid that conducts and is broken down is the electrolyte. It conducts because its ions are free to move. The current enters through two rods called electrodes. The positive electrode is the anode, and the negative electrode is the cathode."
+        },
+        {
+          "type": "text",
+          "text": "Positive ions (cations) move to the cathode and gain electrons, so they are reduced. Negative ions (anions) move to the anode and lose electrons, so they are oxidised. Electrolysis is a redox process driven by electricity."
+        },
+        {
+          "type": "text",
+          "text": "Your teacher will demonstrate the electrolysis of copper(II) sulphate solution, using carbon electrodes and a battery. The solution contains Cu²⁺, H⁺, SO₄²⁻ and OH⁻ ions. Copper ions are discharged at the cathode, which becomes coated with pink-brown copper. Hydroxide ions are discharged at the anode, where bubbles of oxygen form. The blue colour slowly fades as the copper ions are removed."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{cathode: } \\mathrm{Cu^{2+} + 2e^- \\rightarrow Cu} \\qquad \\text{anode: } \\mathrm{4OH^- \\rightarrow 2H_2O + O_2 + 4e^-}",
+          "speech": "At the cathode, C u 2 plus and 2 electrons give C u. At the anode, 4 O H minus give 2 H 2 O plus O 2 plus 4 electrons"
+        },
+        {
+          "type": "text",
+          "text": "In the electrolysis of dilute sulphuric acid with carbon electrodes, hydrogen ions are discharged at the cathode as hydrogen gas. Oxygen is given off at the anode. The volume of hydrogen is twice the volume of oxygen, so the overall change is the splitting of water."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{cathode: } \\mathrm{2H^+ + 2e^- \\rightarrow H_2}",
+          "speech": "At the cathode, 2 H plus and 2 electrons give H 2"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Mining at Kilembe brought jobs to Kasese but also left waste that polluted rivers. How can mining companies, the government and local people work together so that metal extraction benefits everyone?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Oxidation is gain of oxygen, loss of hydrogen or loss of electrons. Reduction is the opposite, and the two always happen together. In electrolysis, cations are reduced at the cathode and anions are oxidised at the anode. Redox reactions are used to extract metals, make chemicals and release energy from fuels."
+        }
+      ]
+    }
+  ]
+}

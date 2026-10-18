@@ -1,0 +1,224 @@
+{
+  "packId": "che.s1.intro.experimental-chemistry",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.intro.experimental-chemistry",
+      "title": "Experimental Chemistry",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Introduction to Chemistry and Experimental Techniques",
+      "subStrand": "Safety, apparatus, the scientific method and purification",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "know laboratory rules and regulations and understand the importance of risk assessment in order to work safely. Know action required in the event of an accident (k)",
+        "know and use laboratory equipment (such as burettes, pipettes, measuring cylinders, thermometers, the Bunsen burner, and balance) appropriately for measuring time, temperature, mass, and volume (s, k)",
+        "understand the scientific method to carry out investigations and the importance of risk assessment to keep self and others safe (u)",
+        "know how to purify a mixture, given information about the substances involved (s, k)",
+        "know how to identify substances and their purity by using their melting and boiling points (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Chemists learn by testing ideas. They collect evidence, look for patterns and explain what they see. To do this well, you must work safely, measure carefully and follow a clear method."
+        },
+        {
+          "type": "heading",
+          "text": "Rules for working safely"
+        },
+        {
+          "type": "text",
+          "text": "Every rule in a laboratory has a reason. Chemicals can burn the skin or poison the body. Glass breaks, and flames and hot water burn."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enter the laboratory only when a teacher is present.",
+            "Never eat, drink or taste anything in the laboratory. Chemicals may be poisonous.",
+            "Wear safety goggles when heating or mixing chemicals. Tie back long hair.",
+            "Read every label. Learn the hazard signs for flammable, corrosive and toxic.",
+            "Never point a test tube that is being heated at anyone.",
+            "Report every accident and breakage to your teacher at once.",
+            "Wash your hands when you finish."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Risk assessment"
+        },
+        {
+          "type": "text",
+          "text": "A hazard is anything that could cause harm, such as a flame or an acid. A risk assessment means thinking ahead: what could go wrong, and how can we make it safer?"
+        },
+        {
+          "type": "example",
+          "title": "A risk assessment for heating water in a beaker",
+          "steps": [
+            "Hazards: the flame, the hot water and the hot glass.",
+            "Risks: a burn from the beaker, or a scald if it falls over.",
+            "Stand the beaker on a wire gauze on a tripod.",
+            "Stand up while heating, so you can move away quickly.",
+            "Let the beaker cool, then lift it with tongs.",
+            "Keep paper and plastic away from the flame."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "What to do if there is an accident"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tell your teacher straight away.",
+            "Chemical on the skin: wash it with plenty of running water for at least 10 minutes.",
+            "Chemical in the eye: rinse the eye with clean running water for at least 10 minutes, then get medical help.",
+            "Burn or scald: cool it under cold running water for at least 10 minutes.",
+            "Small fire on the bench: your teacher will smother it with a fire blanket or sand, or use a fire extinguisher.",
+            "Clothes on fire: stop, drop to the ground and roll to put out the flames."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A fire needs fuel, heat and oxygen. Take away any one and the fire goes out. A fire blanket or sand works by cutting off the air."
+        },
+        {
+          "type": "heading",
+          "text": "Apparatus for measuring"
+        },
+        {
+          "type": "text",
+          "text": "Apparatus is the equipment used in experiments."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Time: a stopwatch or stop clock, in seconds (s).",
+            "Temperature: a thermometer, in degrees Celsius (°C). Read it at eye level with the bulb still in the liquid.",
+            "Mass: a balance, in grams (g) or kilograms (kg). Set it to zero before you add anything.",
+            "Volume, roughly: a measuring cylinder, in cubic centimetres (cm³).",
+            "Volume, exactly: a pipette delivers one fixed volume, such as 25.0 cm³.",
+            "Volume, any amount: a burette lets out liquid through a tap and reads to 0.1 cm³.",
+            "Heating: a Bunsen burner. Your teacher will demonstrate how to light it safely."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The surface of water in a narrow tube curves downwards. This curve is called the meniscus. Always read the scale at the bottom of the meniscus, with your eye level with it."
+        },
+        {
+          "type": "text",
+          "text": "With its air hole closed, a Bunsen burner gives a yellow, sooty flame. With the air hole open, the flame is blue and much hotter. The blue flame is used for heating."
+        },
+        {
+          "type": "example",
+          "title": "Find the volume let out of a burette",
+          "steps": [
+            "A burette reads 2.5 cm³ at the start.",
+            "After some liquid runs out, it reads 24.3 cm³.",
+            "Volume used = final reading − first reading.",
+            "Volume used = 24.3 − 2.5 = 21.8 cm³."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The scientific method"
+        },
+        {
+          "type": "text",
+          "text": "The scientific method is a step-by-step way of finding things out. Scientists everywhere use it, so they can check each other's work."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Ask a question, such as: does salt dissolve faster in hot water?",
+            "Make a prediction, or hypothesis, based on what you already know.",
+            "Plan: choose apparatus, think about risks and decide what to measure.",
+            "Make it a fair test: change only one thing and keep everything else the same.",
+            "Carry out the experiment and record results in a table.",
+            "Look for patterns and decide whether your prediction was right.",
+            "Compare results with other groups and explain any differences."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Purifying mixtures"
+        },
+        {
+          "type": "text",
+          "text": "A mixture contains two or more substances that are not joined together. To purify means to get one substance on its own. The method depends on how the substances differ."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Magnet: pulls iron filings out of a mixture with sulphur.",
+            "Dissolving, filtering and crystallising: separates salt from sand.",
+            "Simple distillation: collects pure water from salty water by boiling it and cooling the steam.",
+            "Fractional distillation: separates liquids with different boiling points, such as the parts of crude oil, the gases in liquid air, and ethanol from fermented sugar cane juice.",
+            "Paper chromatography: separates the dyes in an ink."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Separate salt from sand",
+          "steps": [
+            "Information: salt dissolves in water. Sand does not.",
+            "Stir the mixture in warm water until the salt dissolves.",
+            "Filter it. The sand stays in the filter paper as the residue.",
+            "The salty water that passes through is the filtrate.",
+            "Leave the filtrate in the sun, or warm it gently, until salt crystals form."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Separate the colours in ink",
+          "text": "Cut a strip from a coffee filter or kitchen paper. Draw a pencil line 2 cm from the bottom and put a dot of felt-tip pen ink on it. Hang the strip in a cup with 1 cm of water, keeping the dot above the water. Watch the water rise and carry the dyes up the paper. One dot that splits into several colours shows the ink is a mixture. The finished strip is called a chromatogram."
+        },
+        {
+          "type": "text",
+          "text": "Colourless spots cannot be seen on the paper. Chemists then spray it with a locating agent, a chemical that makes the spots show up."
+        },
+        {
+          "type": "heading",
+          "text": "Melting points, boiling points and purity"
+        },
+        {
+          "type": "text",
+          "text": "A pure substance contains only one substance. It melts and boils at fixed temperatures. Pure water melts at 0 °C and boils at 100 °C at sea level."
+        },
+        {
+          "type": "text",
+          "text": "Impurities change these values. An impure solid melts lower, and over a range of temperatures. An impure liquid boils higher. So melting and boiling points help us identify a substance and check its purity."
+        },
+        {
+          "type": "example",
+          "title": "Which sample is pure?",
+          "steps": [
+            "Pure naphthalene melts at exactly 80 °C.",
+            "Sample A melts sharply at 80 °C.",
+            "Sample B starts to melt at 74 °C and has fully melted at 78 °C.",
+            "Sample A melts at the correct, fixed temperature, so it is pure naphthalene.",
+            "Sample B melts too low and over a range, so it contains impurities."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Kampala is about 1,200 m above sea level, and water there boils at about 96 °C. Does this mean the water is impure? What else could change the boiling point?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Follow the laboratory rules and think about risks before every experiment. Use the right apparatus for time, temperature, mass and volume. Choose a separation method from the properties of the substances. A pure substance has a fixed melting point and boiling point."
+        }
+      ],
+      "sim": {
+        "phet": "density_en.html",
+        "caption": "Open the Mystery screen. Use the scale to find each block's mass and the water level to find its volume, then use these measurements to identify what the block is made of."
+      }
+    }
+  ]
+}

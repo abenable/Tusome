@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.linear-programming",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,27 +11,137 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Linear programming",
       "order": 3,
+      "term": 1,
       "outcomes": [
-        "Form linear inequalities based on real life situations. (u, s)",
-        "Represent the inequalities on the graph and identifies the required region. (u, s)",
-        "Find and interpret the optimum solution of a set of linear inequalities in two unknowns. (u, s, v/a)"
+        "form linear inequalities based on real life situations. (u, s)",
+        "represent the inequalities on the graph and identifies the required region. (u, s)",
+        "find and interpret the optimum solution of a set of linear inequalities in two unknowns. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Linear programming turns a real-world limits problem into a set of linear inequalities, graphs the region that satisfies all of them (the feasible region), then finds the best (optimum) point within that region. A farmer has 32 acres for corn (x acres) and soybean (y acres): x >= 0, y >= 0, x+y <= 32 are the basic constraints, plus any cost or storage limits given."
+          "text": "Kyomuhendo runs a small tailoring business in Kampala. She makes shirts and dresses. She has only so many hours in a week, and she can only sell so many items. How many of each should she make to earn the most profit? Linear programming is a method for answering questions like this. We write the limits as inequalities, draw them on a graph, and search the graph for the best plan."
+        },
+        {
+          "type": "heading",
+          "text": "Forming inequalities from real-life situations"
         },
         {
           "type": "text",
-          "text": "Each constraint is graphed as a boundary line, with the unwanted side shaded out, leaving the feasible region where every inequality holds at once. The optimum solution (maximum profit or minimum cost) always occurs at a corner (vertex) of the feasible region — so instead of testing every point inside, only the corners need to be checked."
+          "text": "First choose letters for the unknown quantities, and say clearly what each one means. Then turn each limit, called a constraint, into an inequality. Watch the words carefully."
+        },
+        {
+          "type": "list",
+          "items": [
+            "\"at least\" or \"no fewer than\" means ≥",
+            "\"at most\" or \"not more than\" means ≤",
+            "\"more than\" means >, and \"fewer than\" or \"less than\" means <",
+            "Numbers of items cannot be negative, so x ≥ 0 and y ≥ 0."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Books and pens",
+          "steps": [
+            "Atim buys x exercise books at UGX 1,500 each and y pens at UGX 1,000 each. She has UGX 15,000. She needs at least 4 books and at least 4 pens.",
+            "Money: 1,500x + 1,000y ≤ 15,000. Dividing by 500 gives 3x + 2y ≤ 30.",
+            "Books: x ≥ 4.",
+            "Pens: y ≥ 4.",
+            "Whole-number pairs that fit all three include (4, 9), (6, 6) and (7, 4). There are 14 such pairs in all."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Showing the inequalities on a graph"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Replace the inequality sign with = and draw that boundary line. Finding where it crosses each axis gives two points quickly.",
+            "Use a solid line for ≤ or ≥, because points on the line are allowed. Use a broken line for < or >.",
+            "Test a point not on the line, such as (0, 0). If it fits the inequality, the wanted side is the side containing that point.",
+            "Shade out the unwanted side of every line. The region left clear is the feasible region. Every point in it satisfies all the constraints."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "Finding the optimum solution"
         },
         {
           "type": "text",
-          "text": "A mother buys x notebooks at UGX 600 each and y pens at UGX 800 each, with at least 4 notebooks and 4 pens, and at most UGX 8000 to spend. The constraints are: x>=4, y>=4, 600x+800y<=8000. Testing the corners of the resulting feasible region for the combination that uses the budget most fully identifies the optimum purchase."
+          "text": "The quantity we want to make as large or as small as possible is called the objective function, such as profit or cost. The best value is called the optimum. For a straight-line objective, the optimum always lies at a corner, or vertex, of the feasible region. So we find the vertices and work out the objective at each one. Another way is to draw a profit line and slide it parallel across the region with a ruler. The last point it touches is the optimum."
+        },
+        {
+          "type": "example",
+          "title": "Kyomuhendo's shirts and dresses",
+          "steps": [
+            "Let x be the number of shirts and y the number of dresses she makes in a week.",
+            "A shirt takes 2 hours and a dress 5 hours. She has at most 50 hours: 2x + 5y ≤ 50.",
+            "She can sell at most 16 items a week: x + y ≤ 16.",
+            "A customer has ordered at least 2 dresses: y ≥ 2. Also x ≥ 0.",
+            "Profit is UGX 6,000 on a shirt and UGX 12,000 on a dress: P = 6,000x + 12,000y.",
+            "Draw 2x + 5y = 50 through (25, 0) and (0, 10). Draw x + y = 16 through (16, 0) and (0, 16). Draw y = 2. Shade out the unwanted sides.",
+            "The feasible region has vertices (0, 2), (14, 2), (10, 6) and (0, 10). The point (10, 6) is where 2x + 5y = 50 meets x + y = 16.",
+            "Profit at each vertex: (0, 2) gives 24,000; (14, 2) gives 108,000; (10, 6) gives 132,000; (0, 10) gives 120,000.",
+            "She should make 10 shirts and 6 dresses. Her maximum weekly profit is UGX 132,000."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "In short, Kyomuhendo's problem is to make the profit P as large as possible, subject to these constraints."
         },
         {
           "type": "equation",
-          "expr": "x >= 4,  y >= 4,  600x + 800y <= 8000"
+          "latex": "2x + 5y \\le 50, \\quad x + y \\le 16, \\quad y \\ge 2, \\quad x \\ge 0",
+          "speech": "2 x plus 5 y is less than or equal to 50; x plus y is less than or equal to 16; y is at least 2; and x is at least 0"
+        },
+        {
+          "type": "equation",
+          "latex": "P = 6000x + 12000y",
+          "speech": "P equals 6000 x plus 12000 y"
+        },
+        {
+          "type": "heading",
+          "text": "Making a cost as small as possible"
+        },
+        {
+          "type": "text",
+          "text": "Some problems ask for the lowest cost instead. The method is the same. The constraints often use ≥, so the feasible region lies above the lines and is open on one side. The minimum is at one of its corners."
+        },
+        {
+          "type": "example",
+          "title": "Wasswa's two bakeries",
+          "steps": [
+            "Wasswa runs two bakeries in Kampala. Bakery A bakes 16 trays of bread and 20 trays of buns a day, and costs UGX 100,000 a day to run. Bakery B bakes 12 trays of bread and 20 trays of buns a day, and costs UGX 80,000 a day.",
+            "A school orders 96 trays of bread and 140 trays of buns. Let a and b be the days each bakery runs.",
+            "Bread: 16a + 12b ≥ 96, which simplifies to 4a + 3b ≥ 24.",
+            "Buns: 20a + 20b ≥ 140, which simplifies to a + b ≥ 7. Also a ≥ 0 and b ≥ 0.",
+            "Cost: C = 100,000a + 80,000b.",
+            "The corners of the region are (0, 8), (3, 4) and (7, 0).",
+            "Costs: (0, 8) gives 640,000; (3, 4) gives 620,000; (7, 0) gives 700,000.",
+            "Run bakery A for 3 days and bakery B for 4 days. The minimum cost is UGX 620,000."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Always interpret the answer in words. Check that it makes sense in the real situation. If the items must be whole numbers and a vertex is not, test the whole-number points inside the region close to that vertex."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Plan a business",
+          "text": "In pairs, choose a small business you know, such as a juice stall, a chapati stand or a tailoring shop. Pick two products. Decide on sensible limits: money for materials, hours of work, space, or how many you can sell. Write the constraints and a profit for each product. Draw the graph on squared paper and find the best plan. Then swap problems with another pair and solve theirs."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Imagine sliding a profit line across the feasible region. Why does it always leave the region at a corner, or along a whole edge? What would it mean for the business if two corners gave the same profit?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Define the variables, then write one inequality for each constraint. Draw each boundary line, shade out the unwanted side, and find the vertices of the feasible region. Work out the objective at each vertex: the largest gives the maximum and the smallest gives the minimum. State the answer in words."
         }
       ]
     }

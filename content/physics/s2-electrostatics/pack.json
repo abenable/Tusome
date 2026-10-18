@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.electricity.electrostatics",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,30 +11,166 @@
       "strand": "Electricity",
       "subStrand": "Electrostatics",
       "order": 8,
+      "term": 3,
       "outcomes": [
-        "understand everyday effects of static electricity and explain them in terms of the build-up and transfer of electrical charge (u, s)"
+        "understand everyday effects of static electricity and explain them in terms of the build-up and transfer of electrical charge (u, s)",
+        "apply knowledge of electrostatic charge to explain the operation of devices like lightening conductors (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Rubbing certain materials together can transfer electrons from one surface to the other. The surface that gains electrons becomes negatively charged; the surface that loses electrons becomes positively charged. This build-up of charge on an insulator is called static electricity."
+          "text": "On a dry day, Atim pulls off her jumper and hears small crackles. A plastic comb run through dry hair can pick up bits of paper. In the rainy season, lightning flashes over Lake Victoria. All of these come from static electricity."
+        },
+        {
+          "type": "heading",
+          "text": "Charges in atoms"
         },
         {
           "type": "text",
-          "text": "A charged object can attract light, uncharged objects \u2014 such as small bits of paper \u2014 because it induces an opposite charge on the near side of the object. Like charges repel each other, and opposite charges attract."
+          "text": "All matter is made of atoms. The centre of an atom, the nucleus, contains protons, which carry a positive charge. Tiny particles called electrons move around the nucleus. Electrons carry a negative charge."
         },
         {
           "type": "text",
-          "text": "Lightning is a large-scale example of static electricity. Friction between moving bodies of air and ice particles inside a storm cloud builds up a huge charge. When the charge becomes great enough, it discharges suddenly as a lightning strike \u2014 either within the cloud, between clouds, or to the ground."
+          "text": "A normal atom has equal numbers of protons and electrons, so it is neutral, with no overall charge. Only electrons can move from one object to another. Static electricity is charge that builds up on an object and stays there."
+        },
+        {
+          "type": "heading",
+          "text": "Charging by rubbing"
         },
         {
           "type": "text",
-          "text": "Use the PhET Balloons and Static Electricity simulation below. Rub a balloon against the sweater and see how it becomes charged, then see how it interacts with the wall and with a neutral object."
+          "text": "When two different materials are rubbed together, electrons move from one to the other. The material that gains electrons becomes negatively charged. The material that loses electrons becomes positively charged. For example, rub a plastic pen with a dry woollen cloth. Electrons move from the cloth to the pen, so the pen becomes negative and the cloth positive."
+        },
+        {
+          "type": "heading",
+          "text": "Like charges repel, unlike charges attract"
+        },
+        {
+          "type": "text",
+          "text": "Charged objects push or pull on each other. Like charges repel: two negative charges push apart, and so do two positive charges. Unlike charges attract: a positive and a negative charge pull together."
+        },
+        {
+          "type": "text",
+          "text": "A charged object also attracts small neutral objects, such as bits of paper. A negative pen pushes the electrons in the paper slightly away. The near side of the paper is left positive, so it is pulled towards the pen."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make static charge",
+          "text": "Rub a plastic pen or comb with a dry woollen or nylon cloth for 20 seconds. Hold it just above tiny bits of paper and watch them jump up. Next, rub two balloons on dry hair and hang them side by side from threads. Do they move apart or come together? Work on a dry day, because damp air lets charge leak away."
+        },
+        {
+          "type": "heading",
+          "text": "Conductors, insulators and earthing"
+        },
+        {
+          "type": "text",
+          "text": "A conductor is a material that lets charge flow through it easily. Metals, the human body and damp ground are conductors. An insulator does not let charge flow easily. Plastic, rubber, dry wood, glass and dry air are insulators. Static charge builds up on insulators, because it cannot flow away."
+        },
+        {
+          "type": "text",
+          "text": "Earthing means joining a charged object to the ground with a conductor. The charge flows away and the object becomes neutral."
+        },
+        {
+          "type": "heading",
+          "text": "Charging by contact and by induction"
+        },
+        {
+          "type": "text",
+          "text": "In charging by contact, a charged object touches a neutral conductor. Some charge spreads onto the conductor, which gets the same type of charge. Charging by induction means charging an object without touching it. Here is how to charge a metal can by induction:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Stand the can on a dry plastic cup to insulate it.",
+            "Bring a negatively charged pen near one side. It repels electrons in the can to the far side.",
+            "Touch the far side with your finger. Those electrons flow through you to the ground.",
+            "Take your finger away while the pen is still near.",
+            "Take the pen away. The can now has too few electrons, so it is positively charged."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "The gold-leaf electroscope"
+        },
+        {
+          "type": "text",
+          "text": "A gold-leaf electroscope is an instrument that detects charge. A metal cap is joined to a metal rod, and a very thin leaf of gold or aluminium hangs from the bottom of the rod. The rod passes through an insulating plug into a glass-sided case, which keeps out draughts."
+        },
+        {
+          "type": "text",
+          "text": "When charge reaches the cap, it spreads to the rod and the leaf. They get the same charge, so the leaf is repelled and rises. A bigger charge makes the leaf rise further. Touching the cap earths the electroscope, and the leaf falls."
+        },
+        {
+          "type": "heading",
+          "text": "Static electricity in everyday life"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dust sticks to television and computer screens, because the screens become charged.",
+            "A fuel tanker becomes charged as it moves and as fuel rubs through its pipes. A spark could set the fuel on fire, so the tanker is joined to the ground by a metal cable before fuel is pumped."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Lightning"
+        },
+        {
+          "type": "text",
+          "text": "Lightning is a giant spark of static electricity. Inside a tall storm cloud, strong air currents carry water drops and bits of ice up and down. They rub together and charge builds up. The bottom of the cloud usually becomes negative, and it induces a positive charge on the ground below."
+        },
+        {
+          "type": "text",
+          "text": "When the charge grows large enough, a huge current flashes through the air between the cloud and the ground. The air heats so fast that it expands with a loud bang, which we hear as thunder."
+        },
+        {
+          "type": "text",
+          "text": "Uganda has some of the highest rates of lightning in the world, especially around Lake Victoria and in western districts such as Kasese. Each year lightning kills people and cattle and damages buildings."
+        },
+        {
+          "type": "heading",
+          "text": "How a lightning conductor works"
+        },
+        {
+          "type": "text",
+          "text": "A lightning conductor protects a tall building. A pointed metal rod is fixed above the highest part of the roof. A thick copper strip runs from the rod down the outside wall to a metal plate buried in damp ground."
+        },
+        {
+          "type": "text",
+          "text": "Charge gathers strongly at sharp points. The negative cloud induces a large positive charge on the pointed rod. This charges the air around the point, and the charged air cancels some of the cloud's charge. This is called point action, and it makes a strike less likely. If lightning does strike, the copper strip carries the current safely to the ground instead of through the building."
+        },
+        {
+          "type": "text",
+          "text": "Stay safe in a thunderstorm:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Go inside a building or a car with a metal roof as soon as you hear thunder.",
+            "Do not shelter under a lone tall tree.",
+            "Get out of the lake and away from open fields and hilltops.",
+            "Keep away from metal fences, poles and wires.",
+            "If you are caught in the open, crouch low with your feet together."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why might a lone tall tree in an open field be one of the most dangerous places to stand during a storm?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Rubbing moves electrons from one material to another. The material that gains electrons becomes negative and the one that loses them becomes positive. Like charges repel and unlike charges attract. Earthing lets charge flow safely away. A lightning conductor uses point action and a thick copper strip to protect a building."
         }
       ],
       "sim": {
         "phet": "balloons-and-static-electricity_en.html",
-        "caption": "PhET Balloons and Static Electricity. Rub a balloon on a sweater and see how the charge it picks up attracts other objects. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Balloons and Static Electricity. Rub the balloon on the sweater and count the charges that move, then bring it near the wall. Add a second balloon to see like charges repel. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

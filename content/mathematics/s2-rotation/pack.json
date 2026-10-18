@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.rotation",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,33 +11,180 @@
       "strand": "Geometry and Measures",
       "subStrand": "Transformations",
       "order": 9,
+      "term": 2,
       "outcomes": [
-        "Identify the order of rotational symmetry of plane figures. (k, u, s)",
-        "Distinguish between clockwise and anti-clockwise rotation. (k, u)",
-        "State properties of rotation as a transformation including congruence. (k, u)",
-        "Determine the centre and angle of rotation. (u, s)",
-        "Apply properties of rotation in the Cartesian plane. (u, s, v/a)"
+        "identify the order of rotational symmetry of plane figures. (k u s)",
+        "distinguish between clockwise and anti-clock wise rotation. (k u)",
+        "state properties of rotation as a transformation including congruence. (k u)",
+        "determine the centre and angle of rotation. (u s)",
+        "apply properties of rotation in the Cartesian plane. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The order of rotational symmetry of a shape is the number of times it looks exactly the same during one full 360° turn. An equilateral triangle has order 3 (it matches its original outline every 120°); a square has order 4; a shape with no repeat until the full 360° turn has order 1 (no rotational symmetry)."
+          "text": "Many things turn about a fixed point. The hands of a clock turn about the middle of the clock face. A door turns about its hinges. The wheel of a boda boda turns about its axle. In mathematics, turning a shape about a fixed point is called a rotation."
+        },
+        {
+          "type": "heading",
+          "text": "Rotational symmetry"
         },
         {
           "type": "text",
-          "text": "A rotation is described completely by three things: the centre of rotation (the fixed point everything turns around), the angle of rotation, and the direction (clockwise or anti-clockwise). Rotation is a congruent transformation — the image is exactly the same size and shape as the object, just turned."
+          "text": "Some shapes look exactly the same after a part of a full turn. We say they have rotational symmetry. The order of rotational symmetry is the number of times a shape fits onto its own outline during one full turn of 360°."
+        },
+        {
+          "type": "list",
+          "items": [
+            "An equilateral triangle fits its outline 3 times, so it has order 3.",
+            "A square has order 4. A rectangle has order 2.",
+            "A regular hexagon has order 6. Any regular polygon with n sides has order n.",
+            "The capital letters H, N, S and Z have order 2.",
+            "A shape that only fits its outline after the full 360° turn has order 1. We say it has no rotational symmetry."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Turn a card polygon",
+          "text": "Cut a regular polygon, such as a square or an equilateral triangle, from an old cardboard box. Mark one corner with a dot. Place it on paper and draw around it to make an outline. Hold the centre with a pencil point and turn the card slowly. Count how many times it fits exactly inside the outline before the dot returns to its start. Repeat for other regular polygons, and then for capital letters cut from card."
+        },
+        {
+          "type": "heading",
+          "text": "Clockwise and anti-clockwise"
         },
         {
           "type": "text",
-          "text": "Rotate the point (3, 1) by 90° anti-clockwise about the origin (0, 0). The rule for a 90° anti-clockwise rotation about the origin is (x, y) -> (-y, x). Applying it: (3, 1) -> (-1, 3)."
+          "text": "A rotation can go in two directions. Clockwise is the direction in which the hands of a clock move. Anti-clockwise is the opposite direction. A turn of 90° clockwise ends in the same place as a turn of 270° anti-clockwise."
+        },
+        {
+          "type": "heading",
+          "text": "Describing a rotation"
+        },
+        {
+          "type": "text",
+          "text": "The shape before the turn is the object. The shape after the turn is the image. To describe a rotation fully, you must give three facts."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The centre of rotation: the fixed point about which the shape turns.",
+            "The angle of rotation: how far the shape turns, such as 90° or 180°.",
+            "The direction: clockwise or anti-clockwise. A turn of 180° is the same in both directions."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "Properties of rotation"
+        },
+        {
+          "type": "text",
+          "text": "A transformation is a rule that moves or changes a shape. Rotation is a transformation with these properties."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The image is congruent to the object. Congruent means exactly the same size and shape.",
+            "All lengths and all angles stay the same.",
+            "Every point turns through the same angle, in the same direction.",
+            "Each point stays the same distance from the centre of rotation.",
+            "The centre of rotation is the only point that does not move.",
+            "The shape is turned, not flipped over. A reflection flips a shape, but a rotation does not."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Rotation in the Cartesian plane"
+        },
+        {
+          "type": "text",
+          "text": "When the centre of rotation is the origin (0, 0), simple rules give the coordinates of the image."
         },
         {
           "type": "equation",
-          "expr": "90° anti-clockwise about origin: (x, y) -> (-y, x);   (3, 1) -> (-1, 3)"
+          "latex": "90^\\circ \\text{ anti-clockwise: } (x, y) \\rightarrow (-y, x)",
+          "speech": "For a 90 degree anti-clockwise turn, the point x, y goes to negative y, x"
+        },
+        {
+          "type": "equation",
+          "latex": "90^\\circ \\text{ clockwise: } (x, y) \\rightarrow (y, -x)",
+          "speech": "For a 90 degree clockwise turn, the point x, y goes to y, negative x"
+        },
+        {
+          "type": "equation",
+          "latex": "180^\\circ: (x, y) \\rightarrow (-x, -y)",
+          "speech": "For a 180 degree turn, the point x, y goes to negative x, negative y"
+        },
+        {
+          "type": "example",
+          "title": "Rotate a triangle 90° clockwise about the origin",
+          "steps": [
+            "Triangle PQR has vertices P(−2, 1), Q(0, 2) and R(1, 2).",
+            "For 90° clockwise about (0, 0), use the rule (x, y) → (y, −x).",
+            "P(−2, 1) → P′(1, 2).",
+            "Q(0, 2) → Q′(2, 0).",
+            "R(1, 2) → R′(2, −1).",
+            "Plot both triangles. The image is the same size and shape, turned a quarter turn clockwise."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Rotate a point about a centre that is not the origin",
+          "steps": [
+            "Rotate the point A(5, 2) through 90° anti-clockwise about the centre C(2, 1).",
+            "Find how far A is from C: (5 − 2, 2 − 1) = (3, 1).",
+            "Turn this through 90° anti-clockwise with (x, y) → (−y, x): (3, 1) → (−1, 3).",
+            "Add the centre back on: (−1 + 2, 3 + 1) = (1, 4).",
+            "The image is A′(1, 4)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Finding the centre and angle of rotation"
         },
         {
           "type": "text",
-          "text": "To find the centre of rotation between an object and its image, join a point on the object to its matching point on the image, construct the perpendicular bisector of that line, and repeat for a second pair of points — the two perpendicular bisectors cross at the centre of rotation."
+          "text": "Sometimes you are given an object and its image and must find the rotation. Every point is the same distance from the centre before and after the turn. So the centre lies on the perpendicular bisector of the line joining any point to its image. The perpendicular bisector is the line that cuts a line segment in half at a right angle."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Join one point A to its image A′. Construct the perpendicular bisector of AA′ with a ruler and compasses.",
+            "Join a second point B to its image B′. Construct the perpendicular bisector of BB′.",
+            "The two bisectors cross at the centre of rotation, O.",
+            "Join O to A and O to A′. Measure the angle AOA′ with a protractor. This is the angle of rotation.",
+            "Look at the way A moves to A′ to decide whether the turn is clockwise or anti-clockwise."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "example",
+          "title": "Find the centre of a half turn",
+          "steps": [
+            "Triangle ABC has A(1, 2), B(3, 2) and C(3, 5). Its image has A′(5, 4), B′(3, 4) and C′(3, 1).",
+            "Each image point is on the opposite side, so this looks like a half turn of 180°.",
+            "For a half turn, the centre is the midpoint of each point and its image.",
+            "Midpoint of AA′ = ((1 + 5) ÷ 2, (2 + 4) ÷ 2) = (3, 3).",
+            "Check with B and B′: ((3 + 3) ÷ 2, (2 + 4) ÷ 2) = (3, 3). Check with C and C′: ((3 + 3) ÷ 2, (5 + 1) ÷ 2) = (3, 3).",
+            "All three give the same point. The rotation is 180° about the centre (3, 3)."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A reflection and a rotation both give an image that is congruent to the object. If you are shown only the object and the image, how could you tell which transformation was used?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "The word SWIMS, written in capital letters, reads the same after a half turn. Look at signs and labels around your school. Which letters and logos have rotational symmetry, and why might designers choose them?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A rotation is described by its centre, its angle and its direction. The image is congruent to the object, and only the centre stays still. About the origin, 90° anti-clockwise sends (x, y) to (−y, x), 90° clockwise sends it to (y, −x), and 180° sends it to (−x, −y)."
         }
       ]
     }

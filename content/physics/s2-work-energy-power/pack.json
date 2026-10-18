@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.work-energy-power",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,44 +11,246 @@
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Work, energy and power",
       "order": 1,
+      "term": 1,
       "outcomes": [
+        "know that the sun is our major source of energy, and the different forms of energy (k)",
         "know that energy can be changed from one form into another and understand the law of conservation of energy (k, u)",
+        "understand the positive and negative effects of solar energy (u)",
+        "understand the difference between renewable and non-renewable energy resources with respect to Uganda. (u, v/a)",
         "know and use the relationship between work done, force, and distance moved, and time taken (k, s)",
-        "understand that an object may have energy due to its motion or its position and change between kinetic and positional potential energy (u, s)"
+        "understand that an object may have energy due to its motion or its position and change between kinetic and positional potential energy (u, s)",
+        "know the mathematical relationship between positional potential energy and kinetic energy, and use it in calculations (k, u, s, gs)",
+        "understand the meaning of machines and explain how simple machines simplify work (u, s)",
+        "understand the principles behind the operation of simple machines (u, s, gs)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Work is done when a force moves an object through a distance in the direction of the force. Work done is measured in joules (J)."
+          "text": "The sun warms the land and grows our matooke, maize and trees. The Nile turns machines at Bujagali and Karuma to make electricity. All of this depends on energy. This topic links energy to work, power and machines."
+        },
+        {
+          "type": "heading",
+          "text": "The sun and the forms of energy"
+        },
+        {
+          "type": "text",
+          "text": "Energy is the ability to do work. It is measured in joules (J). The sun is our major source of energy. Plants use sunlight to make food, and animals eat plants. Firewood and oil store energy that came from the sun long ago."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kinetic energy: the energy of a moving object, such as a boda boda.",
+            "Potential energy: stored energy, such as water behind a dam.",
+            "Chemical energy: stored in food, firewood, charcoal, petrol and batteries.",
+            "Heat, light and sound energy: from a charcoal stove, the sun or a drum.",
+            "Electrical energy: carried by an electric current along wires.",
+            "Nuclear energy: stored in the centres of atoms. It powers the sun."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Energy changes and the conservation of energy"
+        },
+        {
+          "type": "text",
+          "text": "Energy can change from one form into another. This is called an energy transformation. At Bujagali, water high up has potential energy. As it falls, this becomes kinetic energy. The moving water turns turbines, and generators change this into electrical energy."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A diesel generator: chemical energy in the diesel becomes kinetic energy in the engine, then electrical energy, then light and heat in the bulbs.",
+            "A jackfruit falling from a tree: potential energy becomes kinetic energy, then sound and heat when it hits the ground.",
+            "A torch: chemical energy in the battery becomes electrical energy, then light and heat."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The law of conservation of energy states that energy cannot be created or destroyed. It can only change from one form into another, so the total stays the same. When a machine seems to lose energy, the energy has usually become heat or sound."
+        },
+        {
+          "type": "heading",
+          "text": "Solar energy: good and bad effects"
+        },
+        {
+          "type": "text",
+          "text": "Uganda lies on the equator, so it gets strong sunshine all year. Solar panels change light into electrical energy for homes, schools and health centres far from the power lines."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Positive effects: sunshine drives rain and wind, grows crops, dries coffee and cassava, and gives free electricity through solar panels.",
+            "Negative effects: too much sun burns the skin, harms the eyes, dries up crops and water sources in a drought, and spoils food."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Renewable and non-renewable energy in Uganda"
+        },
+        {
+          "type": "text",
+          "text": "A renewable energy resource is replaced by nature and will not run out. A non-renewable energy resource is used up faster than it forms, so one day it will run out."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Renewable: hydroelectric power from the Nile at Owen Falls, Bujagali and Karuma; solar; wind; biogas from cow dung; and geothermal heat from hot springs in western Uganda.",
+            "Non-renewable: petroleum found in the Albertine region near Lake Albert, and the diesel and petrol we buy from other countries."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Firewood and charcoal are renewable only if trees are replanted as fast as they are cut. Otherwise the forests disappear."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Your school wants to stop cooking with firewood. Which energy resource would suit it best? What would the school gain and what would it cost to change?"
+        },
+        {
+          "type": "heading",
+          "text": "Work and power"
+        },
+        {
+          "type": "text",
+          "text": "In physics, work is done when a force moves an object in the direction of the force. If you push a wall and it does not move, you do no work on it. Work is measured in joules. One joule is the work done when a force of 1 N moves an object 1 m."
         },
         {
           "type": "equation",
-          "latex": "\\text{work done} = \\text{force} \\times \\text{distance moved}"
+          "expr": "work done = force × distance moved in the direction of the force",
+          "speech": "work done equals force times distance moved in the direction of the force"
         },
         {
           "type": "text",
-          "text": "Power is the rate at which work is done \u2014 how quickly energy is transferred \u2014 measured in watts (W)."
+          "text": "Power is the rate of doing work. It tells us how fast energy is changed from one form to another. Power is measured in watts (W). One watt is one joule of work done each second."
         },
         {
           "type": "equation",
-          "latex": "\\text{power} = \\frac{\\text{work done}}{\\text{time taken}}"
+          "latex": "P = \\frac{W}{t}",
+          "speech": "power equals work done divided by time taken"
+        },
+        {
+          "type": "example",
+          "title": "Lifting a load",
+          "steps": [
+            "A learner lifts a weight of 800 N through a height of 10 m in 48 s. Find the work done and the power developed.",
+            "Work done = force × distance = 800 × 10",
+            "Work done = 8000 J",
+            "Power = work done ÷ time taken = 8000 ÷ 48",
+            "Power ≈ 167 W"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Kinetic and potential energy"
         },
         {
           "type": "text",
-          "text": "An object can have energy because of its motion (kinetic energy) or because of its position, for example its height above the ground (positional, or gravitational potential, energy). The law of conservation of energy says energy cannot be created or destroyed, only changed from one form into another."
+          "text": "Kinetic energy (KE) is the energy an object has because it is moving. It depends on the mass m in kilograms and the speed v in metres per second."
+        },
+        {
+          "type": "equation",
+          "latex": "KE = \\frac{1}{2} m v^2",
+          "speech": "kinetic energy equals one half m v squared"
         },
         {
           "type": "text",
-          "text": "A swinging pendulum is a good example of this. At the highest point of its swing, the pendulum bob is momentarily still and has maximum potential energy and no kinetic energy. As it swings down, potential energy converts into kinetic energy, and the bob has maximum kinetic energy \u2014 and moves fastest \u2014 at the lowest point of the swing. As it swings back up the other side, kinetic energy converts back into potential energy."
+          "text": "Potential energy (PE) is the energy an object has because of its position. Here it means its height above the ground. It depends on the mass m, the height h in metres and the pull of gravity g. In this topic we take g = 10 N/kg."
+        },
+        {
+          "type": "equation",
+          "latex": "PE = m g h",
+          "speech": "potential energy equals m g h"
         },
         {
           "type": "text",
-          "text": "Use the PhET Pendulum Lab simulation below. Release the pendulum from different heights and watch how kinetic and potential energy trade off as it swings."
+          "text": "When an object falls, its potential energy changes into kinetic energy. If air resistance is small, the PE lost equals the KE gained."
+        },
+        {
+          "type": "example",
+          "title": "A falling brick",
+          "steps": [
+            "A brick of mass 0.5 kg falls from the top of a wall 20 m high. Ignore air resistance. Find its kinetic energy and speed just before it hits the ground.",
+            "PE at the top = mgh = 0.5 × 10 × 20 = 100 J",
+            "All this PE becomes KE, so the KE at the ground = 100 J.",
+            "KE = ½mv², so 100 = ½ × 0.5 × v²",
+            "100 = 0.25 × v², so v² = 100 ÷ 0.25 = 400",
+            "v = √400 = 20 m/s"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A swinging pendulum shows this change both ways. At the highest point the bob stops for a moment, with the most PE and no KE. At the lowest point it moves fastest, with the most KE. Air resistance turns a little energy into heat, so the swings slowly get smaller."
+        },
+        {
+          "type": "heading",
+          "text": "Machines"
+        },
+        {
+          "type": "text",
+          "text": "A machine is a device that makes work easier. It lets a small force, called the effort, overcome a large force, called the load. Many machines turn about a fixed point called the fulcrum. A machine does not reduce the work needed. It lets us use a smaller force over a longer distance."
+        },
+        {
+          "type": "list",
+          "items": [
+            "First-class lever: the fulcrum is between the effort and the load. Examples are a crowbar, a pair of scissors, pliers and a see-saw.",
+            "Second-class lever: the load is between the fulcrum and the effort. Examples are a wheelbarrow, a bottle opener and a nutcracker.",
+            "Third-class lever: the effort is between the fulcrum and the load. Examples are a pair of tongs, a hoe or spade lifting soil, and the human forearm."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Other simple machines include the pulley, a wheel with a rope for lifting water from a well. The inclined plane is a ramp, such as a plank for rolling a drum onto a lorry. The wheel and axle is found in a steering wheel, and the screw in a car jack."
+        },
+        {
+          "type": "equation",
+          "expr": "mechanical advantage (MA) = load ÷ effort",
+          "speech": "mechanical advantage equals load divided by effort"
+        },
+        {
+          "type": "equation",
+          "expr": "velocity ratio (VR) = distance moved by effort ÷ distance moved by load",
+          "speech": "velocity ratio equals distance moved by the effort divided by distance moved by the load"
+        },
+        {
+          "type": "equation",
+          "expr": "efficiency = work output ÷ work input × 100% = MA ÷ VR × 100%",
+          "speech": "efficiency equals work output divided by work input times one hundred percent, which is the same as M A divided by V R times one hundred percent"
+        },
+        {
+          "type": "text",
+          "text": "MA and VR have no units, because each compares two forces or two distances. No real machine is 100% efficient. Some work is always wasted against friction, and some is used to lift moving parts such as a pulley block. Oiling moving parts and using lighter parts raise the efficiency."
+        },
+        {
+          "type": "example",
+          "title": "A pulley system",
+          "steps": [
+            "Mugisha uses a pulley system to lift a load of 600 N with an effort of 250 N. The effort moves 3 m while the load rises 1 m. Find the MA, VR and efficiency.",
+            "MA = load ÷ effort = 600 ÷ 250 = 2.4",
+            "VR = effort distance ÷ load distance = 3 ÷ 1 = 3",
+            "Efficiency = MA ÷ VR × 100% = 2.4 ÷ 3 × 100% = 80%",
+            "Check with work: output = 600 × 1 = 600 J and input = 250 × 3 = 750 J. 600 ÷ 750 × 100% = 80%."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Lift it or ramp it",
+          "text": "Hang a brick from a spring balance, or from a rubber band beside a ruler, and lift it straight up 30 cm. Note the force or stretch. Now pull the brick slowly up a plank resting on books 30 cm high. Note the force and the plank's length. Compare the forces, the distances and the work done each way."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Energy is measured in joules. It changes form but is never created or destroyed. Work = force × distance, and power = work ÷ time. PE = mgh and KE = ½mv². Machines let a small effort move a large load, but no machine is 100% efficient."
         }
       ],
       "sim": {
         "phet": "pendulum-lab_en.html",
-        "caption": "PhET Pendulum Lab. Swing a pendulum and watch kinetic and potential energy change into each other. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Pendulum Lab. On the Energy screen, pull the bob to one side and let it go, then watch the bar graph as potential energy changes into kinetic energy and back. Add some friction and see the total energy slowly turn into heat. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

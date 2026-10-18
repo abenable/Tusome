@@ -1,0 +1,222 @@
+{
+  "packId": "bio.s1.diversity.classification",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s1.diversity.classification",
+      "title": "Classification",
+      "subject": "biology",
+      "level": "S1",
+      "strand": "Diversity of Living Things",
+      "subStrand": "Classification, the five kingdoms and viruses",
+      "order": 3,
+      "term": 2,
+      "outcomes": [
+        "understand the concept of classification of organisms at different levels (u)",
+        "understand that each organism has a Latin name consisting of the genus followed by the species (u)",
+        "identify three characteristics (cell structure, cell organization, and mode of feeding) of organisms in kingdom Monera, kingdom Protoctista and kingdom Fungi (u)",
+        "know examples of organisms belonging to kingdom Monera, kingdom Protoctista and kingdom Fungi (k)",
+        "understand the value of microorganisms in food-making processes (u)",
+        "identify three characteristics (cell structure, mode of feeding, and photosynthetic pigment) of organisms in kingdom plantae (u)",
+        "know examples of organisms from each of the following categories: vascular & non-vascular, angiosperms & gymnosperms, monocots & dicots in kingdom Plantae (No drawings required) (k)",
+        "identify three characteristics (cell structure, mode of feeding, and body system) for organisms in kingdom Animalia (u)",
+        "know examples of organisms belonging to the following phyla: Platyhelminthes, Nematoda, Annelida and Mollusca (No characteristics required)",
+        "identify and describe the common observable characteristics and give examples of organisms from phyla Arthropoda including its classes (No drawings required) (u)",
+        "Identify and describe the common observable characteristics (types of teeth, temperature regulation, habitat, reproduction, and gas exchange) and give examples of organisms from the phylum Chordata and its classes. No details of the reproduction process should be given (u)",
+        "understand that viruses have characteristics similar to other living organisms, and key differences (u)",
+        "understand the symptoms, transmission and prevention of the following viruses; HIV, Ebola, hepatitis, and Cassava mosaic (u, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "At the market, sellers sort their goods into groups. Tomatoes go in one pile, onions in another, and dried fish somewhere else. This makes things easy to find. Biologists sort the millions of kinds of living things in the same way. Classification is the sorting of living things into groups based on their similarities."
+        },
+        {
+          "type": "heading",
+          "text": "Levels of classification"
+        },
+        {
+          "type": "text",
+          "text": "Living things are sorted into large groups, and each large group is split into smaller ones. There are seven main levels, from largest to smallest."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Kingdom",
+            "Phylum",
+            "Class",
+            "Order",
+            "Family",
+            "Genus",
+            "Species"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Uganda's local government works in a similar way: districts are split into counties, sub-counties, parishes and villages. A district has many people; a village has a few who know each other well. In the same way, a kingdom has many kinds of organisms with only a few shared features. A species is a group of organisms so alike that they can breed together and produce young that can also breed."
+        },
+        {
+          "type": "text",
+          "text": "For example, humans belong to kingdom Animalia, phylum Chordata, class Mammalia, order Primates, family Hominidae, genus Homo and species sapiens."
+        },
+        {
+          "type": "heading",
+          "text": "Scientific names"
+        },
+        {
+          "type": "text",
+          "text": "Common names cause confusion. One plant may have different names in Luganda, Runyankore, Lusoga and English. To solve this, every organism has a scientific name in Latin that is used all over the world. It has two parts, so it is called the binomial system."
+        },
+        {
+          "type": "text",
+          "text": "The first part is the genus and starts with a capital letter. The second part is the species and starts with a small letter. In print the name is written in italics; by hand, each part is underlined separately. Examples: human, Homo sapiens; maize, Zea mays; mango, Mangifera indica; Nile perch, Lates niloticus; bean, Phaseolus vulgaris."
+        },
+        {
+          "type": "heading",
+          "text": "The five kingdoms"
+        },
+        {
+          "type": "text",
+          "text": "All cellular living things are placed in five kingdoms. Three features help us decide the kingdom: the cell structure, whether the organism has one cell or many, and how it feeds."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kingdom Monera (bacteria): one cell with no true nucleus; the genetic material lies loose in the cytoplasm. Most feed on living or dead material, but a few make their own food. Examples: Lactobacillus, which turns milk into yoghurt; Rhizobium, which lives in bean roots; the bacteria that cause cholera and typhoid.",
+            "Kingdom Protoctista: cells with a true nucleus; most have one cell, but some have many. Some feed like animals, others have chloroplasts and make food like plants. Examples: Amoeba, Plasmodium (which causes malaria), Euglena, and Spirogyra, the green threads in ponds.",
+            "Kingdom Fungi: cells with a true nucleus and a cell wall made of chitin, not cellulose. Yeast has one cell; mushrooms and moulds are made of fine threads called hyphae. Fungi have no chlorophyll. They release digestive juices onto dead or living material and absorb the food. Examples: mushrooms, yeast, bread mould and the fungus that causes ringworm."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Microorganisms in food making"
+        },
+        {
+          "type": "text",
+          "text": "A microorganism is a living thing too small to see without a microscope. Many bacteria and fungi help us make food."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Yoghurt: bacteria such as Lactobacillus feed on the sugar in warm milk and make an acid. The acid makes the milk thick and sour.",
+            "Cheese: bacteria sour the milk, and it is then made to form solid lumps called curds. Some cheeses are ripened with fungi.",
+            "Bread: yeast feeds on sugar in the dough and gives off carbon dioxide gas. The bubbles of gas make the dough rise.",
+            "Alcohol: yeast changes the sugar in ripe bananas, millet or sorghum into alcohol and carbon dioxide. This is how local brews are made."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Conditions for making yoghurt",
+          "text": "Your teacher boils some fresh milk and lets it cool until it feels warm, not hot. Pour equal amounts into three clean cups with covers. Stir one spoon of plain shop yoghurt into cups A and B. Add nothing to cup C. Keep A and C in a warm place, and keep B in a cold place, such as a clay pot of water. After 8 hours, look at and smell each cup, but do not taste them. Write down which cups became yoghurt and explain why."
+        },
+        {
+          "type": "heading",
+          "text": "Kingdom Plantae"
+        },
+        {
+          "type": "text",
+          "text": "Plants have many cells, each with a true nucleus and a cellulose cell wall. They contain the green pigment chlorophyll, so they make their own food by photosynthesis. Plants are grouped like this."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Non-vascular plants have no tubes for carrying water and food. They are small and grow in damp places. Example: mosses on wet walls and tree trunks.",
+            "Vascular plants have tubes that carry water and food. Examples: ferns, pine trees and all flowering plants.",
+            "Gymnosperms are vascular plants whose seeds form in cones and are not enclosed in a fruit. Examples: pine, cypress and podo.",
+            "Angiosperms are flowering plants whose seeds are enclosed in a fruit. Examples: mango, beans and maize.",
+            "Monocots are flowering plants with one seed leaf. Examples: maize, rice, sugarcane, banana and grasses.",
+            "Dicots are flowering plants with two seed leaves. Examples: beans, groundnuts, mango, cassava and hibiscus."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Kingdom Animalia"
+        },
+        {
+          "type": "text",
+          "text": "Animals have many cells, each with a true nucleus but no cell wall. They cannot make their own food, so they eat other organisms. Most have body systems, such as a nervous system and a digestive system."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Phylum Platyhelminthes (flatworms): tapeworm, liver fluke, planaria.",
+            "Phylum Nematoda (roundworms): Ascaris, hookworm.",
+            "Phylum Annelida (segmented worms): earthworm, leech.",
+            "Phylum Mollusca (soft-bodied animals, many with shells): snail, slug."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Phylum Arthropoda is the largest phylum. Arthropods have jointed legs, a body divided into segments, and a hard outer covering called an exoskeleton. Its main classes are listed below."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Insects: three body parts, three pairs of legs, one pair of antennae, usually wings. Examples: housefly, bee, grasshopper.",
+            "Arachnids: two body parts, four pairs of legs, no antennae and no wings. Examples: spider, tick, scorpion.",
+            "Crustaceans: two body parts, five or more pairs of legs, two pairs of antennae; most live in water. Examples: crab, prawn.",
+            "Centipedes: long, flat body with many segments and one pair of legs on each segment. They move fast and hunt other animals.",
+            "Millipedes: long, round body with many segments and two pairs of legs on most segments. They move slowly and feed on dead plant matter."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Phylum Chordata includes the vertebrates, which are animals with a backbone. It has five main classes."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fish: live in water and breathe with gills. Their skin has scales. Their body temperature changes with the surroundings. Most lay eggs in water. Their teeth, if any, are all alike. Examples: tilapia, Nile perch, mudfish.",
+            "Amphibians: adults live on land and in water. Tadpoles breathe with gills; adults use lungs and moist skin. Their body temperature changes with the surroundings. They lay eggs in water and have small, similar teeth or none. Examples: frog, toad.",
+            "Reptiles: mostly live on land and breathe with lungs. Their skin is dry and scaly. Their body temperature changes with the surroundings. Most lay eggs with leathery shells on land. Their teeth, if any, are all alike. Examples: lizard, snake, crocodile, tortoise.",
+            "Birds: breathe with lungs and have feathers. They keep a constant body temperature. They lay eggs with hard shells. They have a beak and no teeth. Examples: hen, crested crane, weaver bird.",
+            "Mammals: mostly live on land and breathe with lungs. They have hair or fur and keep a constant body temperature. Most give birth to live young and feed them on milk. Their teeth are of different types: incisors, canines, premolars and molars. Examples: human, goat, bat, Uganda kob."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Sorting living things",
+          "text": "In groups, find or draw ten organisms from around the school, such as an ant, a spider, an earthworm, a snail, a mushroom, moss, grass, a bean plant, a lizard and a bird. Sort them into kingdoms. Then sort the animals into phyla and classes. Write the feature you used for each choice. Compare your groups with another group and discuss any differences."
+        },
+        {
+          "type": "heading",
+          "text": "Viruses"
+        },
+        {
+          "type": "text",
+          "text": "Viruses are much smaller than bacteria and are not made of cells. A virus is only genetic material inside a coat of protein. For this reason viruses are not placed in any of the five kingdoms."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Like living things, viruses contain genetic material, reproduce, and change over time.",
+            "Unlike living things, viruses do not feed, respire, excrete or grow. They can reproduce only inside the living cells of a host. Outside a cell they do nothing, and some can even be stored as crystals."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "HIV attacks the white blood cells that defend the body, so the person often falls sick with other infections and loses weight. It spreads through unprotected sex, infected blood, shared needles or razor blades, and from mother to baby. Prevention: avoid unprotected sex, never share sharp objects, and screen blood. Medicines called ARVs do not cure HIV, but they keep a person healthy.",
+            "Ebola causes high fever, weakness, vomiting, diarrhoea and sometimes bleeding. It spreads through the body fluids of a sick or dead person, or of infected animals such as fruit bats and monkeys. Prevention: avoid body fluids without protection, leave burials to trained teams, wash hands with soap and report cases quickly.",
+            "Hepatitis viruses attack the liver, causing yellow eyes and skin, tiredness and dark urine. Hepatitis A spreads through dirty food and water; hepatitis B through blood, unprotected sex and from mother to baby. Prevention: vaccination, safe water, not sharing sharp objects and screening blood.",
+            "Cassava mosaic virus makes cassava leaves yellow, twisted and patchy, and the roots small. It spreads through whiteflies and through cuttings from sick plants. Farmers prevent it by planting clean cuttings and resistant varieties, and by uprooting and burning sick plants."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Some people say viruses are on the border between living and non-living things. Which characteristics of living things do viruses show, and which do they lack? Where would you place them?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Classification sorts organisms into seven levels, from kingdom to species, and each organism has a two-part Latin name: genus then species. Cellular organisms belong to five kingdoms: Monera, Protoctista, Fungi, Plantae and Animalia. Viruses are not cells and reproduce only inside living cells."
+        }
+      ]
+    }
+  ]
+}

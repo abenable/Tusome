@@ -1,0 +1,180 @@
+{
+  "packId": "che.s1.matter.states-of-matter",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.matter.states-of-matter",
+      "title": "States and Changes of States of Matter",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Particle Nature of Matter",
+      "subStrand": "Kinetic theory and changes of state",
+      "order": 3,
+      "term": 1,
+      "outcomes": [
+        "understand that matter is anything which occupies space and has mass and can exist in a solid, liquid, gas, and plasma form (u)",
+        "understand that solids, liquids, and gases have different properties including shape, pouring, and compressing (u, s)",
+        "know the kinetic theory of matter and use it to explain particle arrangement, inter-particle forces, movement of particles and the properties of solids, liquids, and gases (k, u)",
+        "understand that a change from one state to another involves either heat gain or heat loss (u, s)",
+        "appreciate the cooling effect of evaporation and how this contributes to maintaining constant body temperature (k, u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Ice in a cool box melts. Water in a saucepan boils away as steam. Wet clothes dry in the sun. In this topic you will use the idea of tiny moving particles to explain these changes."
+        },
+        {
+          "type": "heading",
+          "text": "What is matter?"
+        },
+        {
+          "type": "text",
+          "text": "Matter is anything that takes up space and has mass. Stones, water, air and your body are all matter. Light and sound are not matter, because they have no mass."
+        },
+        {
+          "type": "text",
+          "text": "Matter exists in four states: solid, liquid, gas and plasma. Plasma is a very hot gas whose particles carry electric charge. It is found in lightning, in the Sun and inside fluorescent tube lights."
+        },
+        {
+          "type": "heading",
+          "text": "Properties of solids, liquids and gases"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Solids, such as stone and wood, have a fixed shape and volume. They cannot be poured and are very hard to compress, or squash.",
+            "Liquids, such as water and cooking oil, have a fixed volume but take the shape of their container. They pour easily but are very hard to compress.",
+            "Gases, such as air and steam, spread out to fill any container. They are easy to compress, which is how a pump squeezes air into a tyre."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The kinetic theory of matter"
+        },
+        {
+          "type": "text",
+          "text": "The kinetic theory says that all matter is made of tiny particles that are always moving. Kinetic means to do with movement. The hotter a substance is, the faster its particles move. Forces of attraction pull the particles towards each other."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In a solid, particles are packed closely in a regular pattern. Strong forces hold them in place, so they can only vibrate. This is why a solid keeps its shape.",
+            "In a liquid, particles are still close together but not in a pattern. The forces are weaker, so particles slide past each other. This is why a liquid flows.",
+            "In a gas, particles are far apart and move fast in all directions. The forces between them are very weak. The large spaces are why a gas is easy to compress."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Gas particles hit the walls of their container all the time. Each hit is a tiny push. Millions of pushes together make gas pressure, which keeps a ball or a tyre firm."
+        },
+        {
+          "type": "heading",
+          "text": "Evidence that particles move"
+        },
+        {
+          "type": "text",
+          "text": "When mandazi are frying, you can smell them from far away. Particles from the food spread through the air to your nose. This spreading of particles from where there are many to where there are few is called diffusion."
+        },
+        {
+          "type": "text",
+          "text": "Diffusion is fastest in gases, slower in liquids and very slow in solids. Gas particles move fast and have lots of space to move into."
+        },
+        {
+          "type": "text",
+          "text": "Your teacher may demonstrate diffusion with two gases, ammonia and hydrogen chloride, entering opposite ends of a long glass tube. A white ring forms where they meet. It forms nearer the hydrogen chloride end, because the lighter ammonia particles move faster."
+        },
+        {
+          "type": "text",
+          "text": "Dust in a beam of sunlight moves about in a jerky, random way. Air particles, too small to see, keep hitting the dust from all sides. This random movement is called Brownian motion."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Diffusion in hot and cold water",
+          "text": "Fill one clear cup with cold water and another with warm water. Let them stand until the water is still. Gently drop a few grains of food colour, or a tea bag, into each cup at the same time. Do not stir. Watch the colour spread for five minutes and record what you see. Explain the difference using particles."
+        },
+        {
+          "type": "heading",
+          "text": "Changes of state"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Melting: solid to liquid, such as ice to water.",
+            "Freezing: liquid to solid, such as water to ice in a freezer.",
+            "Evaporation and boiling: liquid to gas. Evaporation happens at the surface at any temperature. Boiling happens all through the liquid at the boiling point.",
+            "Condensation: gas to liquid, such as steam forming drops on a saucepan lid.",
+            "Sublimation: solid straight to gas, with no liquid in between. Iodine and the naphthalene in mothballs do this."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Heat gain and heat loss"
+        },
+        {
+          "type": "text",
+          "text": "Melting, evaporating, boiling and sublimation take in heat. The energy helps particles break free from the forces holding them together. Freezing and condensing give out heat, as particles come closer and the forces pull them together again."
+        },
+        {
+          "type": "text",
+          "text": "While a substance melts or boils, its temperature stays the same. The heat goes into separating the particles."
+        },
+        {
+          "type": "example",
+          "title": "Follow the temperature of ice as it is heated",
+          "steps": [
+            "Ice from a freezer starts at −10 °C. Heat it steadily in a beaker.",
+            "The ice warms up until it reaches 0 °C.",
+            "The temperature stays at 0 °C while the ice melts. Heat is breaking the solid apart.",
+            "When all the ice has melted, the water warms from 0 °C up to its boiling point.",
+            "The temperature stays at the boiling point while the water boils away. At sea level this is 100 °C.",
+            "Plot temperature against time and you get flat parts at each change of state."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Explain how rain forms",
+          "steps": [
+            "The sun heats water in Lake Victoria. Fast-moving particles escape from the surface. This is evaporation.",
+            "The water vapour rises with warm air and cools high in the sky.",
+            "The particles slow down and come together into tiny droplets. This is condensation, and it gives out heat.",
+            "The droplets form clouds. When they join into bigger drops, they fall as rain."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The cooling effect of evaporation"
+        },
+        {
+          "type": "text",
+          "text": "Particles in a liquid move at different speeds. The fastest ones escape from the surface, so the liquid left behind is cooler. Evaporation takes heat from whatever the liquid is touching."
+        },
+        {
+          "type": "text",
+          "text": "Your body uses this to stay at about 37 °C. On a hot day, or when you run, you sweat. As the sweat evaporates, it takes heat from your skin and cools you down. The same idea keeps water cool in a clay pot. Water seeps through the clay and evaporates from the outside."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Feel evaporation cooling",
+          "text": "Wet the back of one hand with water and leave the other dry. Blow gently across both hands. Which feels cooler? If your school has two thermometers, wrap wet cotton wool around one bulb and leave the other dry. Fan both for two minutes and compare the readings."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Sweat cools you well on a dry, windy day. On a hot, humid day near the lake you can feel sticky and hot. Why might sweating work less well when the air is already full of water vapour?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Matter has mass and takes up space. It exists as solid, liquid, gas or plasma. Kinetic theory explains states using particles that move faster when heated. Melting, boiling and evaporation take in heat. Freezing and condensing give it out. Evaporation cools, which is how sweating keeps the body at a steady temperature."
+        }
+      ],
+      "sim": {
+        "phet": "states-of-matter-basics_en.html",
+        "caption": "Choose water on the States screen and switch between solid, liquid and gas. Then use the heater on the Phase Changes screen and watch how the particles move faster as the temperature rises."
+      }
+    }
+  ]
+}

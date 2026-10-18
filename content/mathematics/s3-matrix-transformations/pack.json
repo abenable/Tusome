@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.matrix-transformations",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,168 @@
       "strand": "Geometry and Measures",
       "subStrand": "Transformations",
       "order": 9,
+      "term": 2,
       "outcomes": [
-        "Identify transformation matrices for reflection, rotation and enlargement. (k, u, s)",
-        "Determine the image given the object and transformation matrix, on a coordinate grid. (u, s)",
-        "Identify the matrix of transformation when the object and its image are given. (u, s)",
-        "Determine the inverse of a transformation matrix. (u)",
-        "Use the inverse matrix to find the object when the image is given. (u, s)",
-        "Identify the relationship between area scale factor and determinant of the transformation matrix. (u)",
-        "Determines a single matrix for successive transformations. (u, v/a)"
+        "identify transformation matrices for reflection, rotation and enlargement. (k u s)",
+        "determine the image given the object and transformation matrix, on a coordinate grid. (u s)",
+        "identify the matrix of transformation when the object and its image are given. (u s)",
+        "determine the inverse of a transformation matrix. (u)",
+        "use the inverse matrix to find the object when the image is given. (u s)",
+        "identify the relationship between area scale factor and determinant of the transformation matrix. (u)",
+        "determines a single matrix for successive transformations. (u, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A 2x2 matrix can represent a geometric transformation: multiplying it by a point's column vector (x, y) gives the transformed point. A 90° anti-clockwise rotation about the origin has matrix [[0,-1],[1,0]]; a reflection in the line y=x has matrix [[0,1],[1,0]]."
+          "text": "On a kitenge cloth the same shape appears again and again, flipped, turned or made bigger. Computers draw such patterns using matrices. Earlier you reflected, rotated and enlarged shapes by drawing. Now you will do it with 2 × 2 matrices."
+        },
+        {
+          "type": "heading",
+          "text": "How a matrix moves a point"
         },
         {
           "type": "text",
-          "text": "Apply the rotation matrix [[0,-1],[1,0]] to the point (3, 2): new x = 0(3)+(-1)(2) = -2, new y = 1(3)+0(2) = 3. So (3,2) maps to (-2,3), matching the 90° anti-clockwise rule (x,y)->(-y,x)."
+          "text": "A transformation moves or changes a shape on a grid. Many transformations that keep the origin fixed can be written as a 2 × 2 matrix. To find the image of a point (x, y), write the point as a column vector. Then multiply it by the matrix, with the matrix on the left."
         },
         {
           "type": "equation",
-          "expr": "[[0,-1],[1,0]] applied to (3,2):  x'=0(3)-1(2)=-2, y'=1(3)+0(2)=3  ->  (-2,3)"
+          "latex": "\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} ax + by \\\\ cx + dy \\end{pmatrix}",
+          "speech": "the matrix a, b, c, d times the column x, y equals the column a x plus b y, c x plus d y"
         },
         {
           "type": "text",
-          "text": "The determinant of a transformation matrix equals its area scale factor: a matrix with determinant 4 makes any shape's area 4 times larger. A negative determinant means the transformation also flips (reverses) the shape's orientation. To reverse a transformation, apply the inverse matrix to the image to recover the original object — for a transformation matrix M, applying M⁻¹ undoes it."
+          "text": "The quickest way to find a matrix uses the unit points I(1, 0) and J(0, 1). The image of I becomes the first column of the matrix. The image of J becomes the second column."
+        },
+        {
+          "type": "heading",
+          "text": "Matrices for reflection, rotation and enlargement"
         },
         {
           "type": "text",
-          "text": "Two transformations applied one after another (first A, then B) combine into a single matrix BA (multiply in that order — B on the left, since it acts last). This single combined matrix maps the original object straight to the final image in one step."
+          "text": "Each matrix below is written by its rows. Check each one by finding where it sends I and J."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reflection in the x-axis: rows 1, 0 and 0, −1.",
+            "Reflection in the y-axis: rows −1, 0 and 0, 1.",
+            "Reflection in the line y = x: rows 0, 1 and 1, 0.",
+            "Reflection in the line y = −x, also written x + y = 0: rows 0, −1 and −1, 0.",
+            "Rotation of 90° anticlockwise about the origin: I goes to (0, 1) and J goes to (−1, 0). Rows 0, −1 and 1, 0.",
+            "Rotation of 180° about the origin: rows −1, 0 and 0, −1.",
+            "Rotation of 90° clockwise about the origin: rows 0, 1 and −1, 0.",
+            "Enlargement with centre the origin and scale factor k: rows k, 0 and 0, k."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "For a rotation anticlockwise through any angle θ about the origin, the matrix is:"
+        },
+        {
+          "type": "equation",
+          "latex": "\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}",
+          "speech": "the matrix with rows cos theta, minus sin theta and sin theta, cos theta"
+        },
+        {
+          "type": "heading",
+          "text": "Finding the image of a shape"
+        },
+        {
+          "type": "example",
+          "title": "Rotate a triangle through 90° anticlockwise",
+          "steps": [
+            "Triangle T1 has corners (1, 1), (5, 1) and (5, 3).",
+            "Write the corners as the columns of a 2 × 3 matrix: rows 1, 5, 5 and 1, 1, 3.",
+            "The rotation matrix has rows 0, −1 and 1, 0.",
+            "Top row of the answer: 0 × x + (−1) × y = −y, giving −1, −1, −3.",
+            "Bottom row of the answer: 1 × x + 0 × y = x, giving 1, 5, 5.",
+            "The image has corners (−1, 1), (−1, 5) and (−3, 5)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Finding the matrix from an object and its image"
+        },
+        {
+          "type": "example",
+          "title": "Find the matrix that maps a square",
+          "steps": [
+            "Square OABC has O(0, 0), A(3, 0), B(3, 3) and C(0, 3). Its image has O fixed, A′(4, 2), B′(6, 6) and C′(2, 4).",
+            "Let the matrix have rows a, b and c, d. It sends A(3, 0) to (3a, 3c) = (4, 2), so a = 4/3 and c = 2/3.",
+            "It sends C(0, 3) to (3b, 3d) = (2, 4), so b = 2/3 and d = 4/3.",
+            "The matrix is one third of the matrix with rows 4, 2 and 2, 4.",
+            "Check with B(3, 3): (3a + 3b, 3c + 3d) = (4 + 2, 2 + 4) = (6, 6), which is B′."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Determinant and area scale factor"
+        },
+        {
+          "type": "text",
+          "text": "The determinant tells you how the area changes. The area scale factor is the size of the determinant, ignoring any minus sign. A negative determinant means the shape has been flipped over, as in a reflection. A determinant of 0 squashes the shape onto a line."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{area of image} = |\\det M| \\times \\text{area of object}",
+          "speech": "area of image equals the size of the determinant of M, times area of object"
+        },
+        {
+          "type": "text",
+          "text": "In the square example, det M = (4/3)(4/3) − (2/3)(2/3) = 16/9 − 4/9 = 4/3. The square has area 3 × 3 = 9 square units. So the image has area 9 × 4/3 = 12 square units."
+        },
+        {
+          "type": "heading",
+          "text": "The inverse matrix undoes a transformation"
+        },
+        {
+          "type": "text",
+          "text": "If M maps an object onto its image, the inverse matrix M⁻¹ maps the image back onto the object. Find it with the inverse formula from the Matrices topic."
+        },
+        {
+          "type": "example",
+          "title": "Find the object from its image",
+          "steps": [
+            "The matrix M has rows 2, 1 and 1, 1. A point P is mapped onto P′(7, 4). Find P.",
+            "det M = 2 × 1 − 1 × 1 = 1.",
+            "M⁻¹ has rows 1, −1 and −1, 2.",
+            "P = M⁻¹ × (7, 4) = (1 × 7 − 1 × 4, −1 × 7 + 2 × 4) = (3, 1).",
+            "Check: M × (3, 1) = (2 × 3 + 1, 3 + 1) = (7, 4). So P is (3, 1)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Successive transformations"
+        },
+        {
+          "type": "text",
+          "text": "Carrying out one transformation and then another is called a successive transformation. If A is done first and then B, the single matrix is BA. The matrix next to the point acts first, so read the product from right to left. In general AB and BA are different, so the order matters."
+        },
+        {
+          "type": "example",
+          "title": "Reflect, then rotate",
+          "steps": [
+            "A is reflection in the x-axis, with rows 1, 0 and 0, −1. B is rotation of 90° anticlockwise, with rows 0, −1 and 1, 0.",
+            "A first, then B: BA has rows 0, 1 and 1, 0. This is reflection in the line y = x.",
+            "B first, then A: AB has rows 0, −1 and −1, 0. This is reflection in the line y = −x.",
+            "The two orders give different single transformations."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Matrices from triangles",
+          "text": "On grid paper, plot triangles T1 (1, 1), (5, 1), (5, 3); T3 (−1, 1), (−5, 1), (−5, 3); and T4 (−1, −1), (−5, −1), (−5, −3). In pairs, describe a single transformation that maps T3 onto T1, and one that maps T4 onto T3. Find where each sends I(1, 0) and J(0, 1), write its matrix, then find the matrix that undoes it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A reflection matrix has determinant −1 and a rotation matrix has determinant +1. Both keep the area the same. What does the sign of the determinant tell you about the shape?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The images of I(1, 0) and J(0, 1) give the two columns of a transformation matrix. Multiply the matrix by a point to find its image, and use the inverse matrix to find the object. The size of the determinant is the area scale factor. For A followed by B, use the single matrix BA."
         }
       ]
     }

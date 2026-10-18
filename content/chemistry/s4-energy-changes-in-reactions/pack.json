@@ -1,0 +1,159 @@
+{
+  "packId": "che.s4.thermochemistry.energy-changes",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.thermochemistry.energy-changes",
+      "title": "Energy Changes during Chemical Reactions",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Thermochemistry",
+      "subStrand": "Exothermic and endothermic reactions",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "recognise and appreciate the difference between endothermic and exothermic reactions and understand that substances store chemical energy in their bonds (k, u)",
+        "understand and appreciate the importance of exothermic and endothermic reactions in our everyday lives (u, s)",
+        "recognise that the burning of fuels is an exothermic process producing useful energy (u, s)",
+        "understand the concept of heat of reaction and interpret energy profiles of chemical reactions (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "When you light a charcoal stove, the burning charcoal gives out heat for cooking. When you mix vinegar with baking soda, the mixture feels slightly colder. Every chemical reaction involves an energy change, usually seen as heat given out or taken in."
+        },
+        {
+          "type": "heading",
+          "text": "Chemical energy is stored in bonds"
+        },
+        {
+          "type": "text",
+          "text": "Substances store chemical energy in the bonds between their atoms. In a reaction, the bonds in the reactants break and new bonds form in the products. Breaking bonds takes in energy. Making bonds gives out energy. Whether a reaction gets hotter or colder depends on which of these is bigger."
+        },
+        {
+          "type": "heading",
+          "text": "Exothermic and endothermic reactions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An exothermic reaction gives out heat to the surroundings, so the temperature rises. More energy is released by making new bonds than is taken in to break the old ones. Examples are burning fuels, respiration, neutralisation and adding water to quicklime.",
+            "An endothermic reaction takes in heat from the surroundings, so the temperature falls. More energy is needed to break bonds than is released by making new ones. Examples are photosynthesis, heating limestone to make lime, and the reaction of vinegar with baking soda."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Dissolving is a physical change, but it also involves energy. Sodium hydroxide warms water as it dissolves, while ammonium nitrate cools it."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Feel energy changes",
+          "text": "Put some vinegar in a plastic cup and measure its temperature, or feel the cup. Stir in a spoon of baking soda and measure again. Next, soak a small pad of steel wool in vinegar for one minute, squeeze it out, and wrap it around the bulb of a thermometer in a closed jar. Read the temperature every minute for five minutes as the iron rusts. Decide which change is endothermic and which is exothermic. Your teacher will demonstrate dissolving sodium hydroxide, because it burns skin."
+        },
+        {
+          "type": "heading",
+          "text": "Energy changes in everyday life"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Burning wood, charcoal, paraffin and gas gives heat for cooking and light for homes.",
+            "Respiration in our cells is exothermic. It releases energy from food to keep us warm and let us move.",
+            "Photosynthesis is endothermic. Plants take in light energy to make glucose. This energy then passes along food chains, from grass to cows to people, and some is lost as heat at each step.",
+            "Fermentation is exothermic, so a tank of fermenting banana juice becomes warm.",
+            "Cement gives out heat as it sets, so large concrete works must be kept cool.",
+            "Instant cold packs for sports injuries use an endothermic change. Some hand warmers use the exothermic rusting of iron powder."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O}",
+          "speech": "C 6 H 12 O 6 plus 6 O 2 gives 6 C O 2 plus 6 H 2 O. This is respiration, and it releases energy"
+        },
+        {
+          "type": "heading",
+          "text": "Burning fuels"
+        },
+        {
+          "type": "text",
+          "text": "Combustion is the reaction of a fuel with oxygen. It is always exothermic, which is why fuels are useful. The chemical energy in the fuel changes into heat and light. Ethanol, for example, burns with a clean blue flame."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C_2H_5OH + 3O_2 \\rightarrow 2CO_2 + 3H_2O} \\qquad \\Delta H = -1367\\ \\mathrm{kJ\\,mol^{-1}}",
+          "speech": "C 2 H 5 O H plus 3 O 2 gives 2 C O 2 plus 3 H 2 O. Delta H equals minus 1367 kilojoules per mole"
+        },
+        {
+          "type": "text",
+          "text": "We can compare fuels by using them to heat water. The heat taken in by the water is found with this formula, where m is the mass of water, c is its specific heat capacity (4.2 J/g °C) and ΔT is the temperature rise."
+        },
+        {
+          "type": "equation",
+          "latex": "Q = m \\times c \\times \\Delta T",
+          "speech": "Q equals m times c times delta T"
+        },
+        {
+          "type": "example",
+          "title": "Heat from burning groundnuts",
+          "steps": [
+            "Nakato burns some groundnuts under a can holding 200 g of water. The temperature rises from 25 °C to 55 °C, a rise of 30 °C.",
+            "Heat taken in = 200 × 4.2 × 30 = 25 200 J = 25.2 kJ",
+            "The groundnuts lost 1.2 g of mass, so heat per gram = 25.2 ÷ 1.2 = 21 kJ/g.",
+            "Some heat escapes to the air, so the true value is higher, about 24 kJ/g."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Heat of reaction and energy profiles"
+        },
+        {
+          "type": "text",
+          "text": "The heat of reaction, ΔH (said delta H), is the heat given out or taken in when the amounts shown in the equation react. It is measured in kilojoules per mole (kJ/mol). For an exothermic reaction ΔH is negative, because the chemicals lose energy. For an endothermic reaction ΔH is positive."
+        },
+        {
+          "type": "equation",
+          "latex": "\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}",
+          "speech": "delta H equals the energy of the products minus the energy of the reactants"
+        },
+        {
+          "type": "text",
+          "text": "An energy profile diagram shows how energy changes as a reaction happens. Energy is on the vertical axis, and the progress of the reaction runs along the bottom."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Exothermic profile: the products line is lower than the reactants line. The drop is ΔH, which is negative.",
+            "Endothermic profile: the products line is higher than the reactants line. The rise is ΔH, which is positive.",
+            "In both, the line first climbs a hump. The height from the reactants to the top of the hump is the activation energy, the energy needed to start the reaction. This is why paper needs a match before it will burn."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Read an energy profile",
+          "steps": [
+            "In an energy profile, the reactants are at 100 kJ, the top of the hump is at 180 kJ, and the products are at 40 kJ.",
+            "Activation energy = 180 − 100 = 80 kJ",
+            "ΔH = energy of products − energy of reactants = 40 − 100 = −60 kJ",
+            "ΔH is negative, so the reaction is exothermic."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Charcoal, firewood, gas and electricity are all used for cooking in Uganda. Apart from the heat each gives, what else should a family think about when choosing a fuel, such as cost, smoke, safety and the effect on forests?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Substances store chemical energy in their bonds. Exothermic reactions, such as burning and respiration, give out heat and have a negative ΔH. Endothermic reactions, such as photosynthesis and decomposing limestone, take in heat and have a positive ΔH. Energy profiles show ΔH and the activation energy needed to start a reaction."
+        }
+      ],
+      "sim": {
+        "phet": "energy-forms-and-changes_en.html",
+        "caption": "On the Systems screen, choose the cyclist and turn on the energy symbols. Watch chemical energy from the cyclist's food change into movement and heat."
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.space.solar-system",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,36 +11,188 @@
       "strand": "Earth and Space Physics",
       "subStrand": "The solar system",
       "order": 9,
+      "term": 3,
       "outcomes": [
         "know the relative sizes, positions, and motions of the earth, sun and moon (k, u)",
         "understand how day and night occur and demonstrate the phases of the moon (u, s)",
-        "know the components of the solar system and their positions (k)"
+        "understand the roles of the sun, earth and moon in explaining time, seasons, eclipses, and ocean tides (k, u, gs)",
+        "know the components of the solar system and their positions (k)",
+        "know the main characteristics of the inner and outer planets in the solar system (k)",
+        "understand the various views about the origin and structure of the universe (k, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "The Earth orbits the Sun once every year, spinning on its own axis once approximately every 24 hours. The Moon orbits the Earth roughly once a month."
+          "text": "Every morning the Sun rises in the east, and every evening it sets in the west. Some nights the Moon is a thin curve, and some nights a full circle. These patterns come from the way the Earth, Moon and Sun move."
+        },
+        {
+          "type": "heading",
+          "text": "The Sun, the Earth and the Moon"
         },
         {
           "type": "text",
-          "text": "Day and night happen because the Earth spins on its axis: the side facing the Sun experiences day, while the side facing away experiences night. As the Earth keeps turning, every location passes in and out of sunlight."
+          "text": "The Sun is a star, a huge ball of very hot gas that gives out its own light. Its diameter is about 109 times the Earth's. The Moon's diameter is about one quarter of the Earth's. The Moon gives out no light of its own. We see it because it reflects sunlight."
         },
         {
           "type": "text",
-          "text": "The Moon does not produce its own light \u2014 we see it because it reflects sunlight. As the Moon orbits the Earth, we see different amounts of its sunlit side, which is why the Moon appears to change shape over about a month \u2014 from new moon, through crescent, half, and full moon, and back again. These are the phases of the Moon."
+          "text": "The Earth is about 150 million km from the Sun. The Moon is about 384 000 km from the Earth."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Rotation: the Earth spins on its axis, an imaginary line through the North and South Poles, once every 24 hours.",
+            "Revolution: the Earth travels round the Sun once in about 365¼ days. The extra quarter days add up, so every fourth year is a leap year of 366 days.",
+            "The Moon orbits the Earth once in about 27.3 days. It also spins once in that time, so the same side always faces us."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Day and night"
         },
         {
           "type": "text",
-          "text": "The solar system consists of the Sun at its centre, the eight planets that orbit it (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune), their moons, and smaller bodies including asteroids and comets."
+          "text": "At any moment, the half of the Earth facing the Sun has day and the other half has night. As the Earth spins from west to east, each place turns into sunlight and then out of it. Uganda lies on the equator, so day and night here are each close to 12 hours long all year."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model day and night",
+          "text": "Push a stick through an orange to make an axis, and mark Uganda near the middle. In a dark room, one learner shines a torch at the orange. Another turns it slowly from west to east. Watch the mark move from night into morning, midday, evening and night again."
+        },
+        {
+          "type": "heading",
+          "text": "Phases of the Moon"
         },
         {
           "type": "text",
-          "text": "Use the PhET My Solar System simulation below to build your own simplified model of the Sun, Earth, and Moon, and explore how changing their masses, speeds, and starting positions affects their orbits."
+          "text": "Half of the Moon is always lit by the Sun. As the Moon travels round the Earth, we see different amounts of that lit half. These changing shapes are the phases of the Moon."
+        },
+        {
+          "type": "list",
+          "items": [
+            "New moon: the Moon is between the Earth and the Sun, with its lit side facing away. We cannot see it.",
+            "Crescent, then first quarter: a thin curve grows until half the face is lit.",
+            "Full moon: the Earth is between the Sun and the Moon, and we see the whole lit face.",
+            "The lit part then shrinks through last quarter and crescent back to new moon."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "One cycle of phases takes about 29.5 days."
+        },
+        {
+          "type": "heading",
+          "text": "Time, seasons, eclipses and tides"
+        },
+        {
+          "type": "text",
+          "text": "Our units of time come from these motions. A day is one spin of the Earth, a month is roughly one cycle of phases, and a year is one orbit of the Sun. Because the Earth spins, noon reaches different places at different times, so countries use time zones."
+        },
+        {
+          "type": "text",
+          "text": "The Earth's axis is tilted at about 23.5°. When the northern half leans towards the Sun, it gets stronger sunlight and longer days, so it has summer while the southern half has winter. These seasons are strong in places far from the equator, such as Europe."
+        },
+        {
+          "type": "text",
+          "text": "Near the equator the midday Sun is high all year, so temperatures change little. Uganda's seasons are wet and dry, not hot and cold. Belts of rain move north and south across the equator during the year, so much of Uganda has two rainy seasons, around March to May and September to November."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Solar eclipse: the Moon passes between the Sun and the Earth, and its shadow falls on part of the Earth. It can only happen at new moon. In November 2013 a total eclipse of the Sun was seen in northern Uganda.",
+            "Lunar eclipse: the Earth passes between the Sun and the Moon, and its shadow falls on the Moon. It can only happen at full moon."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Never look straight at the Sun, even during an eclipse, because it can damage your eyes for life."
+        },
+        {
+          "type": "text",
+          "text": "Tides are the regular rise and fall of the sea. The Moon's gravity pulls the oceans into a bulge on the side facing the Moon, with a second bulge on the far side. As the Earth spins, most coasts get two high tides a day. Tides are highest at new and full moon, when the Sun and Moon pull in line."
+        },
+        {
+          "type": "heading",
+          "text": "The parts of the solar system"
+        },
+        {
+          "type": "text",
+          "text": "The solar system is the Sun and everything that travels round it. The Sun holds more than 99% of its mass, and its gravity keeps everything in orbit."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Planets: in order from the Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.",
+            "Dwarf planets: smaller round bodies, such as Pluto and Ceres.",
+            "Moons: natural satellites of planets. The Earth has one, while Jupiter and Saturn have dozens.",
+            "Asteroids: rocky bodies, mostly in the asteroid belt between Mars and Jupiter.",
+            "Comets: lumps of ice and dust that grow glowing tails near the Sun.",
+            "Meteoroids: small rocks. One that reaches the ground is a meteorite. In 1992 a meteorite showered stones on Mbale."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Make a scale model of the planets",
+          "steps": [
+            "Choose a scale: 1 cm stands for 10 million km.",
+            "Earth is 150 million km from the Sun: 150 ÷ 10 = 15 cm.",
+            "Mars is about 228 million km away: 228 ÷ 10 ≈ 23 cm.",
+            "Jupiter is about 778 million km away: 778 ÷ 10 ≈ 78 cm.",
+            "Neptune is about 4 500 million km away: 4 500 ÷ 10 = 450 cm, or 4.5 m.",
+            "The inner planets fit within 23 cm of the Sun, but the outer planets spread over metres."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Inner and outer planets"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Inner planets (Mercury, Venus, Earth, Mars): small, made of rock and metal, with solid surfaces, few or no moons and short years. Venus is the hottest, because its thick carbon dioxide air traps heat.",
+            "Outer planets (Jupiter, Saturn, Uranus, Neptune): huge, made mostly of gas and ice, with no solid surface. They are cold, have rings and many moons, and take many years to orbit. Jupiter is the largest planet."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The Earth is the only planet known to support life. It is at the right distance from the Sun for liquid water. Its air contains oxygen and shields us from harmful radiation."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "What do you think would happen to the Earth's water and living things if the Earth were as close to the Sun as Venus is?"
+        },
+        {
+          "type": "heading",
+          "text": "Views about the universe"
+        },
+        {
+          "type": "text",
+          "text": "The universe is everything that exists. Stars gather in huge groups called galaxies. Our Sun is one of billions of stars in the Milky Way galaxy, and there are billions of galaxies."
+        },
+        {
+          "type": "text",
+          "text": "Long ago, many people believed the Sun went round the Earth. In 1543 Nicolaus Copernicus argued that the planets go round the Sun. Most scientists today accept the Big Bang theory. It says the universe began about 13.8 billion years ago from a very hot, dense state and has been expanding ever since. Many cultures and faiths have their own accounts of how the world began, and these deserve respect."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "How is a scientific idea about the universe tested? Why might scientists change their ideas when new evidence appears?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The Earth spins once a day, giving day and night, and orbits the Sun once a year. The Moon orbits the Earth, showing phases and causing tides and eclipses. The solar system has eight planets: four small rocky inner planets and four giant outer planets."
         }
       ],
       "sim": {
         "phet": "my-solar-system_en.html",
-        "caption": "PhET My Solar System. Build a model solar system and see how mass, speed, and position affect the orbits of the bodies in it. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET My Solar System. Start with a sun and one planet, press play and watch the orbit. Then make the planet start faster or slower and see how its path changes. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

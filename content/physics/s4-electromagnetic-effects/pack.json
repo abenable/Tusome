@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.magnetism.electromagnetic-effects",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,34 +9,156 @@
       "subject": "physics",
       "level": "S4",
       "strand": "Magnetism",
-      "subStrand": "Electromagnetic effects",
-      "order": 2,
+      "subStrand": "Electromagnets, motors, a.c. and transformers",
+      "order": 3,
+      "term": 1,
       "outcomes": [
+        "investigate the behaviour of magnets and magnetic fields (s)",
         "understand that a current carrying conductor produces a magnetic field that can be detected. (u, s)",
         "understand the application of electromagnets in devices such as motors, bells, and generators (u, s)",
-        "understand the difference between a.c. and d.c (u)"
+        "understand the difference between a.c. and d.c (u)",
+        "know how a.c. and d.c. can be interconverted using rectifiers and inverters (k)",
+        "understand the action and applications of transformers (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Whenever an electric current flows through a conductor, it produces a magnetic field around it. This effect can be strengthened by winding the conductor into a coil, and further strengthened by placing an iron core inside the coil \u2014 the result is called an electromagnet."
+          "text": "A school bell rings, a fan turns, a loudspeaker plays music and a power station on the Nile sends electricity to the whole country. All of these depend on one link: electricity and magnetism are closely connected. An electric current makes a magnetic field, and a moving magnet can make a current."
+        },
+        {
+          "type": "heading",
+          "text": "Magnets and magnetic fields"
         },
         {
           "type": "text",
-          "text": "The strength of an electromagnet increases with the number of turns of wire in the coil and with the size of the current flowing through it. Unlike a permanent magnet, an electromagnet can be switched on and off, and its strength can be varied \u2014 which is why electromagnets, not permanent magnets, are used in devices such as electric bells, relays, and electric motors."
+          "text": "Every magnet has a north pole and a south pole. Like poles repel and unlike poles attract. A magnetic field is the region around a magnet where a magnetic material, such as iron, feels a force. We show the field with lines that run from the north pole to the south pole. The lines are closest together where the field is strongest. You can plot them with a small compass or by sprinkling iron filings on paper over a magnet."
+        },
+        {
+          "type": "heading",
+          "text": "The magnetic field of a current"
         },
         {
           "type": "text",
-          "text": "Direct current (d.c.) flows in one direction only, the kind produced by a battery or cell. Alternating current (a.c.) regularly reverses direction, the kind supplied to homes from the mains \u2014 most household appliances use a.c."
+          "text": "In 1820, Hans Christian Oersted noticed that a compass needle moved when a current flowed in a nearby wire. A current-carrying conductor produces a magnetic field around it."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Around a straight wire, the field lines are circles centred on the wire. The right-hand grip rule gives their direction: grip the wire with your right hand, thumb pointing along the current, and your fingers curl the way the field goes.",
+            "A long coil of wire, called a solenoid, gives a field like a bar magnet's, with a north pole at one end and a south pole at the other.",
+            "Putting a soft iron core inside the solenoid makes an electromagnet. It is a strong magnet that can be switched on and off."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "Use the PhET Magnets and Electromagnets simulation below. Build an electromagnet by wrapping a coil around an iron core, then change the number of turns and the current to see how the magnet's strength changes."
+          "text": "An electromagnet is stronger with more turns of wire, a larger current, or an iron core. Soft iron is used because it loses its magnetism as soon as the current stops."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make an electromagnet",
+          "text": "Wind 20 turns of thin insulated copper wire around a large iron nail. Scrape the insulation off the ends and connect them briefly to a torch cell. Count how many paper clips the nail picks up. Repeat with 40 and 60 turns. Plot the number of clips against the number of turns. Disconnect between tests, because the wire warms up."
+        },
+        {
+          "type": "heading",
+          "text": "Uses of electromagnets"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Electric bell: an electromagnet pulls an iron arm so the hammer strikes the gong. This breaks the circuit, the arm springs back and the circuit closes again. This repeats many times a second.",
+            "Relay: a small current in an electromagnet closes a switch in a second circuit that carries a large current, such as the starter motor in a car.",
+            "Loudspeaker and telephone earpiece: a changing current in a coil makes it move in and out next to a magnet. The coil drives a cone or a thin disc, which makes sound waves.",
+            "d.c. motor: a coil carrying current sits between the poles of a magnet. The field of the current and the field of the magnet push on the two sides of the coil in opposite directions, so it turns. A split-ring commutator reverses the current every half turn so the coil keeps turning the same way."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A generator does the opposite of a motor. When a coil turns in a magnetic field, or a magnet moves near a coil, a current is induced (produced) in the coil. This is electromagnetic induction. Moving faster, using a stronger magnet or adding more turns gives a bigger current. Generators at Nalubaale, Bujagali, Isimba and Karuma are turned by water from the Nile. A bicycle dynamo works the same way."
+        },
+        {
+          "type": "heading",
+          "text": "a.c. and d.c."
+        },
+        {
+          "type": "text",
+          "text": "Direct current (d.c.) flows in one direction only. Cells, batteries and solar panels give d.c. Alternating current (a.c.) keeps reversing its direction. The mains supply in Uganda is a.c. at 240 V. It changes direction 100 times a second, making 50 complete cycles each second, so its frequency is 50 Hz."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Appliances that run directly on a.c.: kettles, flat irons, filament bulbs and cookers.",
+            "Appliances that need d.c. inside: phones, laptops, radios and televisions. They contain circuits that change the mains a.c. into d.c.",
+            "A simple d.c. motor with a permanent magnet will not turn on a.c. The push on the coil reverses 100 times a second, so the coil only buzzes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A rectifier changes a.c. into d.c. It uses diodes, which let current pass one way only. Every phone charger contains one. An inverter changes d.c. into a.c. A solar home system uses an inverter to change the d.c. stored in its battery into 240 V a.c., so it can run a television or a fridge."
+        },
+        {
+          "type": "heading",
+          "text": "Transformers"
+        },
+        {
+          "type": "text",
+          "text": "A transformer changes the voltage of an a.c. supply. It has two coils of insulated wire, the primary and the secondary, wound on a soft iron core. The a.c. in the primary coil makes a magnetic field that keeps changing. The iron core carries this changing field to the secondary coil, where it induces an alternating voltage. A transformer does not work on steady d.c., because the field would not change."
+        },
+        {
+          "type": "equation",
+          "latex": "\\frac{V_s}{V_p} = \\frac{N_s}{N_p}",
+          "speech": "V s over V p equals N s over N p"
+        },
+        {
+          "type": "text",
+          "text": "Here V is voltage and N is the number of turns, with p for primary and s for secondary. A step-up transformer has more turns on the secondary and raises the voltage. A step-down transformer has fewer turns on the secondary and lowers it."
+        },
+        {
+          "type": "example",
+          "title": "A step-down transformer",
+          "steps": [
+            "A transformer changes 240 V mains to 12 V for a lamp. The primary coil has 2000 turns. How many turns does the secondary need?",
+            "Vs ÷ Vp = Ns ÷ Np, so Ns = Np × Vs ÷ Vp",
+            "Ns = 2000 × 12 ÷ 240",
+            "Ns = 100 turns"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "No transformer is 100 percent efficient. Some energy is lost as heat in the resistance of the coils, and in currents induced in the iron core itself, called eddy currents. Some is lost in magnetising the core back and forth, and some field lines miss the secondary coil. Engineers reduce these losses with thick copper wire, a core made of thin insulated sheets (laminations) of soft iron, and coils wound on top of each other."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{efficiency} = \\frac{\\text{output power}}{\\text{input power}} \\times 100\\%",
+          "speech": "efficiency equals output power divided by input power, times 100 percent"
+        },
+        {
+          "type": "example",
+          "title": "Efficiency of a transformer",
+          "steps": [
+            "A transformer takes 0.5 A from the 240 V mains. Its secondary gives 9 A at 12 V.",
+            "Input power = V × I = 240 × 0.5 = 120 W",
+            "Output power = 12 × 9 = 108 W",
+            "Efficiency = 108 ÷ 120 × 100% = 90%"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A transformer gets warm when it is working. Where does this heat come from, and why does it matter for big transformers at power stations and substations?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A current produces a magnetic field; an iron core turns a coil into an electromagnet. Motors, bells, relays and loudspeakers use electromagnets, and generators use induction. a.c. reverses direction, d.c. does not; rectifiers change a.c. to d.c. and inverters change d.c. to a.c. A transformer changes a.c. voltage: Vs ÷ Vp = Ns ÷ Np."
         }
       ],
       "sim": {
         "phet": "magnets-and-electromagnets_en.html",
-        "caption": "PhET Magnets and Electromagnets. Build an electromagnet and see how coil turns and current affect its strength. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Magnets and Electromagnets. Build an electromagnet and see how coil turns and current affect its strength. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

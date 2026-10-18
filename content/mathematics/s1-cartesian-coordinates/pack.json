@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.cartesian-coordinates",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Numbers",
       "subStrand": "Cartesian coordinates",
       "order": 4,
+      "term": 1,
       "outcomes": [
         "draw and label the Cartesian plane. (k, s)",
         "identify the x– and y-axis. (k)",
@@ -21,23 +22,128 @@
       "body": [
         {
           "type": "text",
-          "text": "The Cartesian plane is formed by two number lines crossing at right angles at a point called the origin, (0, 0). The horizontal line is the x-axis and the vertical line is the y-axis. Every point on the plane is described by an ordered pair (x, y), where x tells how far to move along the x-axis and y tells how far to move along the y-axis."
+          "text": "When a visitor asks for your seat in class, you might say \"row 3, desk 5\". Two numbers are enough to find one place. Maps of Kampala, seating plans for a school assembly and computer screens all use this idea. In mathematics we use a grid called the Cartesian plane."
+        },
+        {
+          "type": "heading",
+          "text": "The Cartesian plane"
         },
         {
           "type": "text",
-          "text": "To plot the point (3, 2): start at the origin, move 3 units right along the x-axis, then 2 units up parallel to the y-axis. To plot (-4, 1): move 4 units left, then 1 unit up. A negative x moves left, a negative y moves down."
+          "text": "The Cartesian plane is made from two number lines that cross at right angles. The horizontal line is the x-axis. The vertical line is the y-axis. They cross at the origin, the point (0, 0)."
         },
         {
           "type": "text",
-          "text": "Shapes can be completed on a coordinate grid using symmetry and known properties. A square has three vertices at (2, 1), (6, 1) and (6, 5). Since all sides of a square are equal and meet at right angles, the fourth vertex must be directly above (2, 1) at the same height as (6, 5), giving (2, 5)."
+          "text": "On the x-axis, numbers to the right of the origin are positive and numbers to the left are negative. On the y-axis, numbers above the origin are positive and numbers below are negative. The axes divide the plane into four parts called quadrants."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Draw a horizontal line across the page and a vertical line up the page, crossing near the middle.",
+            "Mark equal steps along each line, for example one step for every 1 cm.",
+            "Number the steps: 1, 2, 3 to the right and up; −1, −2, −3 to the left and down.",
+            "Write x at the right end of the horizontal axis and y at the top of the vertical axis.",
+            "Label the origin O."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Reading and plotting points"
+        },
+        {
+          "type": "text",
+          "text": "Every point has two coordinates, written in brackets as (x, y). The x-coordinate comes first and tells you how far to move across. The y-coordinate comes second and tells you how far to move up or down. A helpful saying is \"along the corridor, then up the stairs\"."
         },
         {
           "type": "equation",
-          "expr": "(2, 1), (6, 1), (6, 5)  ->  fourth vertex (2, 5)"
+          "latex": "P = (x,\\ y)",
+          "speech": "the point P has coordinates x comma y"
+        },
+        {
+          "type": "example",
+          "title": "Plot the points A(3, 2), B(−2, 4), C(−3, −1) and D(2, −3)",
+          "steps": [
+            "A(3, 2): start at the origin, move 3 to the right, then 2 up. A is in the first quadrant.",
+            "B(−2, 4): move 2 to the left, then 4 up. B is in the second quadrant.",
+            "C(−3, −1): move 3 to the left, then 1 down. C is in the third quadrant.",
+            "D(2, −3): move 2 to the right, then 3 down. D is in the fourth quadrant.",
+            "Mark each point with a small cross and write its letter beside it."
+          ]
         },
         {
           "type": "text",
-          "text": "When plotting real data — for example the height and age of several learners — the scale on each axis should be chosen so the data fills most of the grid without being cramped or spread too thin. If ages range from 11 to 16, a scale where each square represents 1 year suits the x-axis; if heights range from 100 cm to 180 cm, each square representing 10 cm suits the y-axis better than 1 cm, which would make the graph far too tall."
+          "text": "To read a point, do the same in reverse. Drop a line from the point straight down or up to the x-axis and read the number. Then go across to the y-axis and read the number there. A point on the x-axis always has y = 0, and a point on the y-axis always has x = 0."
+        },
+        {
+          "type": "heading",
+          "text": "Completing shapes on a grid"
+        },
+        {
+          "type": "text",
+          "text": "If you know some corners of a shape, its properties help you find the rest. In a rectangle, opposite sides are equal and parallel, and all corners are right angles. In a parallelogram, opposite sides are equal and parallel."
+        },
+        {
+          "type": "example",
+          "title": "Find the fourth corner of a rectangle",
+          "steps": [
+            "Three corners of rectangle PQRS are P(−3, 1), Q(2, 1) and R(2, 4).",
+            "P and Q have the same y-coordinate, so PQ is a horizontal side.",
+            "Q and R have the same x-coordinate, so QR is a vertical side 3 units long.",
+            "S must be 3 units above P, so S has the same x-coordinate as P and the same y-coordinate as R.",
+            "S = (−3, 4)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the fourth corner of a parallelogram",
+          "steps": [
+            "Three corners of parallelogram ABCD are A(0, 0), B(4, 0) and C(5, 3).",
+            "To go from B to C, you move 1 to the right and 3 up.",
+            "AD must be parallel and equal to BC, so make the same move from A.",
+            "Start at A(0, 0), move 1 right and 3 up.",
+            "D = (1, 3)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Choosing a scale for data"
+        },
+        {
+          "type": "text",
+          "text": "Bivariate data means two measurements taken for each person or thing, such as the age and height of each learner. Each pair of measurements becomes one point. A graph of these points is called a scatter graph."
+        },
+        {
+          "type": "text",
+          "text": "A scale tells you how much each step on an axis stands for. Choose a scale that is easy to read, such as 1, 2, 5 or 10 units per centimetre. The graph should fill most of the page. If the values do not start near zero, start the axis at a sensible value and show a small zigzag at the start of the axis."
+        },
+        {
+          "type": "example",
+          "title": "Choose scales for ages and heights",
+          "steps": [
+            "Kyomuhendo measures five children. Their ages are from 5 to 15 years and their heights are from 100 cm to 180 cm.",
+            "The page is about 18 cm wide and 24 cm tall.",
+            "Ages cover 10 years. A scale of 1 cm for 1 year uses 10 cm across the page. That fits well.",
+            "Heights cover 80 cm. A scale of 2 cm for every 10 cm of height uses 16 cm up the page.",
+            "Start the height axis at 100 cm with a zigzag, and number it 100, 110, 120 and so on up to 180.",
+            "Plot each child as a point (age, height)."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Four in a line",
+          "text": "Play in pairs on a coordinate grid drawn from −5 to 5 on both axes. Take turns to call out a point, such as (2, −3), and plot it in your own colour. Write down each point you call. The first player to get four points in a straight line wins the round. Afterwards, look at the coordinates of your four points. What do you notice?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Two corners of a square are at (2, 1) and (6, 3). Where could the other two corners be? Discuss in your group. How many different squares can you find?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The x-axis is horizontal and the y-axis is vertical. They meet at the origin (0, 0). A point is written (x, y): across first, then up or down. Choose a scale that is easy to read and fills the page."
         }
       ]
     }

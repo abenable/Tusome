@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.time-and-time-tables",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,151 @@
       "strand": "Geometry and Measures",
       "subStrand": "Time",
       "order": 14,
+      "term": 3,
       "outcomes": [
-        "identify and use units of time. (k, u, s)",
-        "use and interpret different representations of time. (u, s)",
+        "identify and use units of time. (k u s)",
+        "use and interpret different representations of time. (u s)",
         "apply the understanding of time in a range of relevant real-life contexts. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Time is measured in seconds, minutes (60 seconds), hours (60 minutes), days (24 hours), weeks (7 days), months and years (12 months, about 365 days). Converting between units means multiplying or dividing by the right conversion factor — 2.5 hours = 2.5 x 60 = 150 minutes."
+          "text": "Your school day runs by the clock. The bell rings for the first lesson, for break and for lunch. Buses leave Soroti and arrive in Kampala at set times. Farmers plan planting around the rainy seasons. In this topic you learn to change between units of time, read the 12-hour and 24-hour clocks, and use timetables to plan."
+        },
+        {
+          "type": "heading",
+          "text": "Units of time"
+        },
+        {
+          "type": "list",
+          "items": [
+            "60 seconds = 1 minute",
+            "60 minutes = 1 hour",
+            "24 hours = 1 day",
+            "7 days = 1 week",
+            "12 months = 1 year",
+            "365 days = 1 year, or 366 days in a leap year",
+            "10 years = 1 decade, and 100 years = 1 century"
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "The 12-hour clock uses am (before midday) and pm (after midday), so times need am/pm to be unambiguous. The 24-hour clock avoids this by counting hours from 00:00 (midnight) to 23:59, so 3:45 pm on the 12-hour clock is written 15:45 on the 24-hour clock — add 12 to any pm hour."
+          "text": "In a leap year, February has 29 days instead of 28. A year is a leap year if its number can be divided exactly by 4, such as 2024 and 2028. Century years are different: they must divide exactly by 400. So 2000 was a leap year, but 1900 was not."
         },
         {
-          "type": "equation",
-          "expr": "3:45 pm = 15:45 (24-hour clock)"
+          "type": "example",
+          "title": "Changing units of time",
+          "steps": [
+            "Change 3 hours 25 minutes into minutes.",
+            "3 hours = 3 × 60 = 180 minutes.",
+            "180 + 25 = 205 minutes.",
+            "Change 500 minutes into hours and minutes.",
+            "500 ÷ 60 = 8 remainder 20, because 8 × 60 = 480.",
+            "500 minutes = 8 hours 20 minutes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The 12-hour and 24-hour clocks"
         },
         {
           "type": "text",
-          "text": "Timetables (like bus or train schedules) list arrival and departure times, often on the 24-hour clock, to plan a journey. A bus leaves Kampala at 04:00 and arrives in Soroti at 20:30. The journey time is found by subtracting: from 04:00 to 20:30 is 16 hours 30 minutes."
+          "text": "The 12-hour clock counts from 1 to 12 twice a day. Times from midnight to noon are a.m. Times from noon to midnight are p.m. The 24-hour clock counts the hours from 0 to 23, so it needs no a.m. or p.m. It is always written with four digits. Bus timetables, flight times and phones often use it."
+        },
+        {
+          "type": "list",
+          "items": [
+            "8:05 a.m. is 08:05.",
+            "12:00 noon is 12:00.",
+            "2:45 p.m. is 14:45, because 2 + 12 = 14.",
+            "11:30 p.m. is 23:30.",
+            "12:30 a.m., just after midnight, is 00:30.",
+            "Midnight is 00:00 at the start of a day. Some timetables write it as 24:00 at the end of a day."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "When a journey crosses midnight, add 24 hours to the later time before subtracting. A bus departs at 22:00 and arrives at 03:15 the next day: treat the arrival as 27:15, so the journey takes 27:15 - 22:00 = 5 hours 15 minutes."
+          "text": "To change a p.m. time to the 24-hour clock, add 12 to the hours. To change back, subtract 12 from any hour greater than 12."
         },
         {
-          "type": "equation",
-          "expr": "27:15 - 22:00 = 5 hours 15 minutes"
+          "type": "heading",
+          "text": "Finding a length of time"
+        },
+        {
+          "type": "text",
+          "text": "To find how long something takes, count on from the start time to the next whole hour, then to the finish time. Add the parts together. This avoids mistakes caused by 60 minutes in an hour."
+        },
+        {
+          "type": "example",
+          "title": "Time spent in lessons",
+          "steps": [
+            "At Mugisha's school, the day runs from 08:00 to 16:00. There are nine lessons of 40 minutes each, a break and a lunch break.",
+            "Time in school = 16:00 − 08:00 = 8 hours.",
+            "Time in lessons = 9 × 40 = 360 minutes = 6 hours.",
+            "Time not in lessons = 8 − 6 = 2 hours, for break, lunch and moving between rooms.",
+            "Fraction of the school day spent in lessons = 6 ÷ 8 = 3/4."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Reading a timetable"
+        },
+        {
+          "type": "text",
+          "text": "A timetable lists places and the times of arrival and departure at each. Here is a night bus from Soroti to Kampala."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Soroti: departs 20:30",
+            "Kumi: arrives 22:00, departs 22:15",
+            "Mbale: arrives 23:30, departs 24:00",
+            "Iganga: arrives 01:30, departs 01:45",
+            "Jinja: arrives 02:05, departs 02:55",
+            "Kampala: arrives 04:00"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "The whole journey",
+          "steps": [
+            "Find how long the journey takes from Soroti to Kampala.",
+            "From 20:30 to midnight is 3 hours 30 minutes.",
+            "From midnight to 04:00 is 4 hours.",
+            "Total = 3 h 30 min + 4 h = 7 hours 30 minutes, which is 7.5 hours.",
+            "Time waiting at stations: Kumi 15 min, Mbale 30 min, Iganga 15 min, Jinja 50 min.",
+            "Total waiting = 15 + 30 + 15 + 50 = 110 minutes = 1 hour 50 minutes."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Catching the bus at Kumi",
+          "steps": [
+            "Rona lives in Kumi and wants to travel to Mbale. It takes her 40 minutes to walk to the bus station.",
+            "The bus departs Kumi at 22:15.",
+            "Count back 40 minutes: 22:15 − 15 minutes = 22:00, then 22:00 − 25 minutes = 21:35.",
+            "Rona must leave home by 21:35 at the latest. A few minutes earlier is safer.",
+            "The bus arrives in Mbale at 23:30. On the 12-hour clock this is 11:30 p.m."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Plan a journey and count a million seconds",
+          "text": "In groups, plan a day trip from your school to a nearby town or place of interest. Write a detailed itinerary using the 24-hour clock: when you leave, how long each part of the journey takes, how long you stay and when you return. Then use a calculator to find how many days and hours one million seconds is. Use a calendar to work out the date one million seconds from now."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Look at a calendar for this year. How many months start on the same day of the week as January? Would the answer be the same next year, or in a leap year? Discuss why."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "There are 60 seconds in a minute, 60 minutes in an hour and 24 hours in a day. The 24-hour clock uses four digits and needs no a.m. or p.m.; add 12 to the hours for p.m. times. To find a length of time, count on to the next whole hour and then to the finish time."
         }
       ]
     }

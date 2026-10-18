@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.number-bases",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Numbers",
       "subStrand": "Number bases",
       "order": 1,
+      "term": 1,
       "outcomes": [
         "identify numbers in any base using abacus. (k)",
         "convert numbers from one base to another. (u)",
@@ -20,27 +21,177 @@
       "body": [
         {
           "type": "text",
-          "text": "Every number we write uses place value: in the number 342 (base ten), the 3 is worth 3 hundreds, the 4 is worth 4 tens, and the 2 is worth 2 units, because base ten uses powers of ten (100, 10, 1) as its place values. A number in base b uses powers of b instead — the digits allowed run from 0 up to b-1. Base two (binary) only uses the digits 0 and 1; base eight (octal) uses 0 to 7."
+          "text": "We count in tens because we have ten fingers. Not every count works that way. Time is counted in groups of 60 seconds and 60 minutes. Phones and computers count with only two digits, 0 and 1. In this topic you will work with numbers in bases other than ten."
+        },
+        {
+          "type": "heading",
+          "text": "Place value in base ten"
         },
         {
           "type": "text",
-          "text": "To convert a base-ten number to another base, repeatedly divide by the new base and record the remainders. Reading the remainders from last to first gives the digits in the new base. Convert 23 (base ten) to base two: 23 ÷ 2 = 11 remainder 1; 11 ÷ 2 = 5 remainder 1; 5 ÷ 2 = 2 remainder 1; 2 ÷ 2 = 1 remainder 0; 1 ÷ 2 = 0 remainder 1. Reading the remainders bottom to top gives 10111."
+          "text": "The base of a number system is the size of the group we count in. In base ten, each place is worth ten times the place to its right: units, tens, hundreds, thousands."
+        },
+        {
+          "type": "text",
+          "text": "In 342, the 3 stands for 3 hundreds, the 4 for 4 tens and the 2 for 2 units. This idea is called place value."
         },
         {
           "type": "equation",
-          "expr": "23 (base ten)  ->  10111 (base two)"
+          "latex": "342 = 3\\times10^2 + 4\\times10^1 + 2\\times10^0",
+          "speech": "three hundred and forty-two equals three times ten squared, plus four times ten to the power one, plus two times ten to the power zero"
+        },
+        {
+          "type": "heading",
+          "text": "Place value in other bases"
         },
         {
           "type": "text",
-          "text": "To convert the other way, multiply each digit by its place value (a power of the base) and add the results. Check 10111 in base two: (1 x 16) + (0 x 8) + (1 x 4) + (1 x 2) + (1 x 1) = 16 + 0 + 4 + 2 + 1 = 23, which matches the number we started with."
+          "text": "In base five, we group in fives. The places are units, fives, twenty-fives, one hundred and twenty-fives, and so on. Each place is worth five times the place to its right."
         },
         {
           "type": "text",
-          "text": "Once numbers are in the same base, the four operations work exactly as in base ten, except a carry happens whenever a column reaches the value of the base rather than ten. Add 111 (base two) and 11 (base two): 111 + 011 = 1010 in base two — the units column gives 1+1=2, which is written as 0 with 1 carried, and so on, just as a base-ten carry happens at 10."
+          "text": "A base uses only the digits from 0 up to one less than the base. Base five uses 0 to 4. Base two, also called binary, uses only 0 and 1. Base eight uses 0 to 7."
         },
         {
-          "type": "equation",
-          "expr": "111 + 011 = 1010 (all in base two)"
+          "type": "text",
+          "text": "We show the base with a small number written low on the right. So 213 in base five is written 213₅. We read it as \"two one three base five\", not \"two hundred and thirteen\"."
+        },
+        {
+          "type": "heading",
+          "text": "Showing numbers on an abacus"
+        },
+        {
+          "type": "text",
+          "text": "An abacus is a counting frame with upright spikes. Each spike stands for one place value, with the units on the right. Beads on a spike show the digit in that place."
+        },
+        {
+          "type": "text",
+          "text": "In base five, a spike holds at most 4 beads. A fifth bead means you remove all five and put one bead on the next spike to the left. To show 213₅, put 2, 1 and 3 beads on the twenty-fives, fives and units spikes."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make an abacus",
+          "text": "Push four sticks upright into a lump of clay or a sweet potato. Label them from the right: units, fives, twenty-fives, one hundred and twenty-fives. Use beads or bottle tops with a hole as counters. Show 14, 23 and 58 in base five. Then relabel the sticks for base two and show 13."
+        },
+        {
+          "type": "heading",
+          "text": "Converting to base ten"
+        },
+        {
+          "type": "text",
+          "text": "To change a number from any base to base ten, multiply each digit by its place value. Then add the results."
+        },
+        {
+          "type": "example",
+          "title": "Convert 213₅ to base ten",
+          "steps": [
+            "Write the place values above the digits: 25, 5, 1.",
+            "The digits are 2, 1 and 3.",
+            "Multiply: 2 × 25 = 50, 1 × 5 = 5, 3 × 1 = 3.",
+            "Add: 50 + 5 + 3 = 58.",
+            "So 213₅ = 58 in base ten."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Converting from base ten"
+        },
+        {
+          "type": "text",
+          "text": "To change from base ten to another base, divide by the new base again and again. Write down each remainder. Stop when the answer is 0, then read the remainders from the bottom up."
+        },
+        {
+          "type": "example",
+          "title": "Convert 45 to base two",
+          "steps": [
+            "45 ÷ 2 = 22 remainder 1",
+            "22 ÷ 2 = 11 remainder 0",
+            "11 ÷ 2 = 5 remainder 1",
+            "5 ÷ 2 = 2 remainder 1",
+            "2 ÷ 2 = 1 remainder 0",
+            "1 ÷ 2 = 0 remainder 1",
+            "Read the remainders from the bottom up: 45 = 101101₂.",
+            "Check: 32 + 8 + 4 + 1 = 45."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To change between two bases that are not ten, change to base ten first, then to the new base."
+        },
+        {
+          "type": "example",
+          "title": "Convert 32₄ to base five",
+          "steps": [
+            "Change to base ten: 3 × 4 + 2 = 14.",
+            "Divide by 5: 14 ÷ 5 = 2 remainder 4.",
+            "Divide again: 2 ÷ 5 = 0 remainder 2.",
+            "Read from the bottom up: 32₄ = 24₅.",
+            "Check: 2 × 5 + 4 = 14."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Adding and subtracting in other bases"
+        },
+        {
+          "type": "text",
+          "text": "Add and subtract column by column, starting with the units, as in base ten. The only difference is the carrying and borrowing. In base five you carry when a column reaches 5, and when you borrow you borrow 5, not 10."
+        },
+        {
+          "type": "example",
+          "title": "Add 34₅ and 23₅",
+          "steps": [
+            "Units column: 4 + 3 = 7. Seven is one five and 2 units. Write 2 and carry 1.",
+            "Fives column: 3 + 2 + 1 = 6. Six is one five and 1 left. Write 1 and carry 1.",
+            "Twenty-fives column: write the carried 1.",
+            "So 34₅ + 23₅ = 112₅.",
+            "Check in base ten: 34₅ = 19 and 23₅ = 13. 19 + 13 = 32, and 112₅ = 25 + 5 + 2 = 32."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Subtract 14₅ from 42₅",
+          "steps": [
+            "Units column: 2 − 4 cannot be done. Borrow one five from the fives column.",
+            "The units become 2 + 5 = 7. Now 7 − 4 = 3.",
+            "Fives column: 4 − 1 = 3 are left. Then 3 − 1 = 2.",
+            "So 42₅ − 14₅ = 23₅.",
+            "Check: 22 − 9 = 13, and 23₅ = 10 + 3 = 13."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Multiplying and dividing in other bases"
+        },
+        {
+          "type": "text",
+          "text": "Multiply column by column and carry groups of the base. For division, it is often easier to change both numbers to base ten, divide, and change the answer back."
+        },
+        {
+          "type": "example",
+          "title": "Multiply 23₄ by 3₄",
+          "steps": [
+            "Units: 3 × 3 = 9. Nine is two fours and 1 unit. Write 1 and carry 2.",
+            "Fours: 2 × 3 = 6, then 6 + 2 = 8. Eight is two fours and 0 left. Write 0 and carry 2.",
+            "Write the carried 2 in the next place.",
+            "So 23₄ × 3₄ = 201₄.",
+            "Check: 23₄ = 11 and 11 × 3 = 33. Also 201₄ = 32 + 0 + 1 = 33."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "For example, 110₂ ÷ 11₂ becomes 6 ÷ 3 = 2 in base ten. Then 2 = 10₂, so the answer is 10₂."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Imagine a cartoon world where people use only eight digits, 0 to 7. How would they write the number of days in a month? What would their times tables look like?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A base is the size of the groups you count in. Its digits run from 0 to one less than the base. To reach base ten, multiply digits by place values and add. To leave base ten, divide repeatedly and read the remainders upwards."
         }
       ]
     }

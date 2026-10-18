@@ -1,0 +1,194 @@
+{
+  "packId": "bio.s3.growth-development.development",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.growth-development.development",
+      "title": "Development in Plants and Animals",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Growth and Development in Plants and Animals",
+      "subStrand": "Specialised cells, metamorphosis and human development",
+      "order": 9,
+      "term": 3,
+      "outcomes": [
+        "understand the need for differentiation of cells as multicellular plants and animals grow (u)",
+        "understand the process of secondary growth of stems in dicotyledonous plants (u)",
+        "know the meaning of the term metamorphosis, and compare complete and incomplete metamorphosis (k, u, s)",
+        "know the stages of development in an insect (k)",
+        "understand the lifecycles of a housefly, cockroach, mosquito, bee, and butterfly (u)",
+        "recognise and compare the main characteristics of stages of human development from birth to adulthood, including the developmental stages of a child (physical, behavioural, and cognitive) (k, s)",
+        "understand the physical, physiological, psychological, (emotional) and behavioural changes associated with adolescence and puberty; highlight the associated myths (u, s, v)",
+        "understand and be able to cope with changes related to secondary sexual characteristics at puberty (u, s, v)",
+        "understand various features related to the process of aging (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Think of a baby, a ten-year-old and a grandparent in your family. Each of them began life as a single cell. Development is the process by which an organism changes in form and becomes more complex as it grows."
+        },
+        {
+          "type": "heading",
+          "text": "Why cells become specialised"
+        },
+        {
+          "type": "text",
+          "text": "A fertilised egg divides many times by mitosis. At first the cells look alike. Then they change shape and structure so that each type does one job well. This is called cell differentiation. A large organism needs it because no single cell can do every job well. Similar cells form tissues, and tissues form organs."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Red blood cells have no nucleus and are full of haemoglobin, so they carry a lot of oxygen.",
+            "Root hair cells have a long, thin extension that absorbs water from the soil."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Secondary growth in dicot stems"
+        },
+        {
+          "type": "text",
+          "text": "Growth in length at the tips of shoots and roots is primary growth. Growth in thickness, as in mango and jackfruit trees, is secondary growth. Monocots such as maize usually have none."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "In a young dicot stem, the vascular bundles form a ring. In each bundle, a layer of dividing cells called cambium lies between the xylem and phloem.",
+            "Cambium also forms between the bundles, making a complete ring.",
+            "The cambium divides. New cells on the inside become secondary xylem, and new cells on the outside become secondary phloem.",
+            "Much more xylem is made than phloem. Over the years, layers of xylem build up to form wood. Where wet and dry seasons differ, these layers show as growth rings.",
+            "As the stem widens, a cork cambium near the surface makes cork, which forms the protective bark. Small openings in the bark, called lenticels, let gases in and out."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Metamorphosis in insects"
+        },
+        {
+          "type": "text",
+          "text": "An insect's hard outer skeleton cannot stretch, so the insect sheds it to grow. This is called moulting. Metamorphosis is a change in body form as an animal develops from young to adult."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Complete metamorphosis has four stages: egg, larva, pupa and adult. The larva looks completely different from the adult. Inside the pupa, the body is rebuilt into the adult form. Examples are the housefly, mosquito, bee and butterfly.",
+            "Incomplete metamorphosis has three stages: egg, nymph and adult. The nymph looks like a small adult without wings. It moults several times until it becomes a winged adult. Examples are the cockroach and grasshopper."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Five insect life cycles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Housefly: eggs are laid in rubbish, dung or rotting food. They hatch within a day into legless larvae called maggots. After about five days each maggot forms a brown pupa, and the adult emerges a few days later. Houseflies spread cholera and typhoid.",
+            "Mosquito: eggs are laid on still water, such as puddles and old tins. The larvae, called wrigglers, live in the water and breathe at the surface. They become comma-shaped pupae that do not feed. The adult emerges onto the water surface. Female Anopheles mosquitoes spread malaria.",
+            "Bee: the queen lays one egg in each wax cell of the comb. Worker bees feed the larvae. The cell is sealed, the larva becomes a pupa, and later the adult bites its way out.",
+            "Butterfly: eggs are laid on leaves, for example of orange trees. The larva, called a caterpillar, eats leaves and moults several times. It then forms a pupa, called a chrysalis, from which the adult emerges.",
+            "Cockroach: eggs develop inside a hard brown case. Nymphs hatch looking like small wingless cockroaches. They moult many times over several months, and the adult has wings."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Watch a caterpillar change",
+          "text": "Find a caterpillar on an orange or lemon tree. Put it in a clear jar with leaves from the same tree, and cover the top with cloth held by a rubber band. Add fresh leaves every day. Record and draw the changes you see. When the adult butterfly or moth comes out, release it outdoors."
+        },
+        {
+          "type": "heading",
+          "text": "Stages of human development"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Infancy, birth to about 2 years: very fast growth. The baby learns to sit, crawl and walk, knows familiar faces and says its first words.",
+            "Early childhood, about 2 to 6 years: the child runs and climbs, speaks in sentences, asks many questions and begins to play with others.",
+            "Later childhood, about 6 to 12 years: growth is steady. The child learns to read, write and count, makes friends and follows rules.",
+            "Adolescence, about 10 to 19 years: puberty brings a growth spurt and body changes. Young people begin to think about ideas and form their own views.",
+            "Adulthood: growth in height stops, and the person takes on responsibilities such as work and family."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Each stage brings physical, behavioural and cognitive changes, which means changes in the body, in actions and in thinking."
+        },
+        {
+          "type": "heading",
+          "text": "Adolescence and puberty"
+        },
+        {
+          "type": "text",
+          "text": "Puberty is the time when the body becomes sexually mature. Sex hormones cause it. It usually starts between about 8 and 13 years in girls and 9 and 14 years in boys. Everyone has their own timing."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Physical changes in both: a growth spurt, hair under the arms and around the private parts, more sweat and oilier skin, which can cause pimples. Girls' breasts develop and hips widen. Boys' voices deepen, shoulders broaden and facial hair grows.",
+            "Physiological changes: in girls, the ovaries start releasing eggs and menstruation begins. Menstruation is the monthly loss of blood and the lining of the uterus. In boys, the testes start making sperm, and some boys have wet dreams, which are a release of semen during sleep.",
+            "Emotional changes: moods can change quickly. Young people may feel shy about their bodies or begin to feel attracted to others.",
+            "Behavioural changes: wanting more independence and privacy, and spending more time with friends."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Myths and facts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Myth: a girl cannot become pregnant the first time she has sex. Fact: pregnancy can happen whenever sperm meets an egg, including the first time.",
+            "Myth: a girl should not bathe or go to school during menstruation. Fact: menstruation is normal and healthy. Bathing keeps her clean, and she can do all her usual activities.",
+            "Myth: wet dreams make a boy weak or sick. Fact: wet dreams are a normal part of growing up and do no harm.",
+            "Myth: having sex clears pimples. Fact: pimples come from oily skin caused by hormones, and most clear with time and gentle washing."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Coping with changes at puberty"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bathe daily and change into clean underwear every day.",
+            "Change sanitary pads regularly. Wrap used pads and put them in a covered bin or the school incinerator. Wash reusable pads and dry them in the sun.",
+            "Eat a balanced diet, exercise and sleep enough.",
+            "Talk about worries with a parent, the senior woman or senior man teacher, or a health worker.",
+            "Do not tease classmates about their bodies or the timing of their changes.",
+            "Make choices that protect your health. Delaying sex protects young people from pregnancy and from infections such as HIV."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Ageing"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The skin becomes thinner and wrinkled, and hair turns grey or thins.",
+            "Bones weaken, joints stiffen and muscles lose strength.",
+            "Eyesight and hearing weaken, and reactions slow down.",
+            "In women, menstruation stops at around 45 to 55 years. This is called menopause.",
+            "Illnesses such as high blood pressure and arthritis become more common."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Staying active, eating well and avoiding smoking and alcohol help people age in good health. Older people carry knowledge that their communities value."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Puberty starts at different ages for different people. How can classmates support each other through these changes, and help to stop the myths from spreading?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Cell differentiation lets cells specialise and share the work of a multicellular organism. Dicot stems grow thicker by secondary growth from the cambium. Insects develop by complete metamorphosis (egg, larva, pupa, adult) or incomplete metamorphosis (egg, nymph, adult). Puberty and ageing bring normal changes to the body, feelings and behaviour."
+        }
+      ]
+    }
+  ]
+}

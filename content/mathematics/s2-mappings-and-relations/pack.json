@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.mappings-and-relations",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,158 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Relations and functions",
       "order": 1,
+      "term": 1,
       "outcomes": [
-        "Use arrow diagrams/mappings to represent relations and functions. (k, u)",
-        "Identify domain and range of a mapping. (k, u)",
-        "Describe and distinguish between function and non-function mapping. (u, s)"
+        "Use arrow diagrams/mappings to represent relations and functions. (k u)",
+        "identify domain and range of a mapping (k u)",
+        "describe and distinguish between function and non-function mapping (u s)"
       ],
       "body": [
         {
-          "type": "text",
-          "text": "A mapping connects each member of one set (the domain) to a member of another set (the range) using an arrow diagram. The set of starting values is the domain; the set of values they map to is the range."
+          "type": "heading",
+          "text": "Linking two sets"
         },
         {
           "type": "text",
-          "text": "Consider the mapping \"add 3\" from the set {5, 7, 8, 10} to another set. Applying the rule: 5 -> 8, 7 -> 10, 8 -> 11, 10 -> 13. The domain is {5, 7, 8, 10} and the range is {8, 10, 11, 13}."
+          "text": "Every learner in a class has a home district. Okello comes from Gulu, Nakato from Masaka and Mugisha from Mbarara. When we pair each learner with a district, we form a relation. A relation is a rule that links members of one set to members of another set."
+        },
+        {
+          "type": "text",
+          "text": "Relations are all around us. Each boda boda stage has a fare. Each day of the week has a timetable. Each number has a square. Mathematics gives us clear ways to show these links and to study them."
+        },
+        {
+          "type": "heading",
+          "text": "Arrow diagrams"
+        },
+        {
+          "type": "text",
+          "text": "An arrow diagram, also called a mapping diagram, shows a relation as a picture. Draw two ovals side by side. Write the members of the first set in the left oval. Write the members of the second set in the right oval. Then draw an arrow from each member on the left to every member it is linked to on the right."
+        },
+        {
+          "type": "text",
+          "text": "When an arrow goes from a to b, we say that a maps to b. We call b the image of a."
+        },
+        {
+          "type": "example",
+          "title": "Draw an arrow diagram for boda boda fares",
+          "steps": [
+            "From a stage in Kampala town, a boda boda ride costs UGX 3,000 to Wandegeya, UGX 5,000 to Nakawa, UGX 5,000 to Ntinda and UGX 7,000 to Kireka.",
+            "Left oval (places): Wandegeya, Nakawa, Ntinda, Kireka.",
+            "Right oval (fares in UGX): 3,000, 5,000, 7,000.",
+            "Arrows: Wandegeya → 3,000, Nakawa → 5,000, Ntinda → 5,000, Kireka → 7,000.",
+            "Two arrows meet at 5,000, because two places have the same fare."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Domain and range"
+        },
+        {
+          "type": "text",
+          "text": "The first set, where the arrows start, is called the domain. The second set is called the codomain. The range is the set of members of the codomain that receive at least one arrow. The range can be smaller than the codomain."
+        },
+        {
+          "type": "text",
+          "text": "In the boda boda example, the domain is {Wandegeya, Nakawa, Ntinda, Kireka}. The range is {3,000, 5,000, 7,000}."
+        },
+        {
+          "type": "example",
+          "title": "Find the range from a rule",
+          "steps": [
+            "A mapping uses the rule 'multiply by 3, then subtract 1'. The domain is {1, 2, 3, 4}.",
+            "1 maps to 3 × 1 − 1 = 2.",
+            "2 maps to 3 × 2 − 1 = 5.",
+            "3 maps to 3 × 3 − 1 = 8.",
+            "4 maps to 3 × 4 − 1 = 11.",
+            "Domain = {1, 2, 3, 4}. Range = {2, 5, 8, 11}."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Four types of mapping"
+        },
+        {
+          "type": "text",
+          "text": "We can sort mappings by the way the arrows behave."
+        },
+        {
+          "type": "list",
+          "items": [
+            "One-to-one: each member of the domain has one image, and no two members share an image. Example: each learner and their admission number.",
+            "Many-to-one: two or more members of the domain share the same image. Example: places and boda boda fares.",
+            "One-to-many: one member of the domain maps to two or more images. Example: a parent and their children.",
+            "Many-to-many: some members have several images, and some images come from several members. Example: learners and the clubs they belong to."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Functions and non-functions"
+        },
+        {
+          "type": "text",
+          "text": "A function is a mapping in which every member of the domain has exactly one image. No member is left without an arrow. No member has two arrows. So one-to-one and many-to-one mappings are functions. One-to-many and many-to-many mappings are not functions."
+        },
+        {
+          "type": "text",
+          "text": "We name a function with a letter such as f. We can write its rule in two ways, and both mean the same thing."
         },
         {
           "type": "equation",
-          "expr": "domain {5, 7, 8, 10}  --(add 3)-->  range {8, 10, 11, 13}"
+          "latex": "f: x \\mapsto 3x - 1",
+          "speech": "f maps x to 3x minus 1"
+        },
+        {
+          "type": "equation",
+          "latex": "f(x) = 3x - 1",
+          "speech": "f of x equals 3x minus 1"
         },
         {
           "type": "text",
-          "text": "A mapping is a function only if every member of the domain maps to exactly one member of the range. \"Add 3\" is a function, because each input gives a single output. A mapping where one input arrows to two different outputs (for example, both 4 and -4 mapping from 16 under \"square root\") is not a function — it is a one-to-many relation."
+          "text": "To find f(4), put 4 in place of x. So f(4) = 3 × 4 − 1 = 11. We read f(4) as 'f of 4'."
         },
         {
-          "type": "text",
-          "text": "Mappings can be one-to-one (each domain value has its own range value, e.g. \"add 3\"), many-to-one (several domain values share a range value, e.g. \"square\", since both 2 and -2 map to 4), or one-to-many (not a function). Checking which is which comes down to counting how many arrows leave and arrive at each point."
+          "type": "example",
+          "title": "Decide whether a mapping is a function",
+          "steps": [
+            "Domain = {2, 3, 5}. Codomain = {6, 9, 10, 15}. The rule is 'is a factor of'.",
+            "2 is a factor of 6 and 10, so 2 has two arrows.",
+            "3 is a factor of 6, 9 and 15, so 3 has three arrows.",
+            "5 is a factor of 10 and 15, so 5 has two arrows.",
+            "Members of the domain have more than one image, and 6 receives arrows from both 2 and 3. This is a many-to-many mapping.",
+            "So the mapping is not a function. Its range is {6, 9, 10, 15}."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Work backwards from an image",
+          "steps": [
+            "A function is given by g(x) = 2x + 5. Which input has the image 17?",
+            "Write the equation 2x + 5 = 17.",
+            "Subtract 5 from both sides: 2x = 12.",
+            "Divide both sides by 2: x = 6.",
+            "Check: g(6) = 2 × 6 + 5 = 12 + 5 = 17. So 6 maps to 17."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Map your group",
+          "text": "Work in groups of four. List the members of your group. Draw an arrow diagram for each of these relations: learner → home district, learner → month of birth, and learner → favourite foods (matooke, rice, posho, beans, cassava and so on). Each learner may choose as many foods as they like. Write the domain and range of each diagram. Decide which diagrams show functions, and explain your reasons to another group."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "The relation 'person → their mother' links each person to one mother. The relation 'mother → her children' goes the other way. Is either of them a function? What happens to a mapping when we turn all its arrows round?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Think about a price list in a shop at Owino market. Why would customers be confused if one item mapped to two different prices? Why is nobody confused when two items have the same price?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A relation links members of one set to members of another, and an arrow diagram shows it. The domain is the set of inputs, and the range is the set of images actually reached. A mapping is a function only when every member of the domain has exactly one image, so one-to-one and many-to-one mappings are functions."
         }
       ]
     }

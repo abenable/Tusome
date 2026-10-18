@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.flotation",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,149 @@
       "strand": "Mechanics and Properties of Matter",
       "subStrand": "Pressure in solids and fluids",
       "order": 4,
+      "term": 2,
       "outcomes": [
         "understand the concept of sinking and flotation in terms of forces acting on a body submerged in a fluid (u)",
-        "understand and apply the Archimedes' Principle in different situations (u, s, v/a)"
+        "understand and apply the Archimedes’ Principle in different situations (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "When an object is placed in a fluid, the fluid pushes up on it with a force called upthrust (or buoyant force). This is why objects feel lighter when submerged in water than they do in air."
+          "text": "On Lake Victoria, fishermen paddle wooden canoes, and large ferries carry people and lorries to Kalangala. A stone dropped from a ferry sinks at once, yet the ferry is made of heavy steel and floats. This topic explains why some things float and others sink."
+        },
+        {
+          "type": "heading",
+          "text": "Upthrust"
         },
         {
           "type": "text",
-          "text": "Archimedes' Principle states that the upthrust on a submerged object equals the weight of the fluid it displaces."
+          "text": "A fluid is a liquid or a gas. When an object is put in a fluid, the fluid pushes up on it. This upward force is called upthrust."
         },
         {
           "type": "text",
-          "text": "An object floats when the upthrust it experiences is enough to support its whole weight. It sinks when even fully submerged, the upthrust is still less than its weight."
+          "text": "Upthrust happens because fluid pressure increases with depth. The bottom of the object is deeper than its top, so the fluid pushes harder on the bottom than on the top. The difference is an upward force."
         },
         {
           "type": "text",
-          "text": "A solid lump of steel sinks, but a steel ship floats. This is because the ship's shape is mostly hollow, filled with air \u2014 so its overall (average) density, taking the whole hull and the air inside into account, is less than the density of water, even though steel itself is much denser than water."
+          "text": "Because of upthrust, an object seems to weigh less in water than in air. This is why a big stone feels lighter under water. The weight it seems to lose is called its apparent loss in weight. It equals the upthrust."
+        },
+        {
+          "type": "equation",
+          "expr": "upthrust = weight in air − weight in fluid",
+          "speech": "upthrust equals weight in air minus weight in the fluid"
+        },
+        {
+          "type": "heading",
+          "text": "Sinking and floating"
         },
         {
           "type": "text",
-          "text": "Use the PhET Buoyancy: Basics simulation below. Place different blocks in the water and see how their weight compares with the upthrust acting on them, and whether they float or sink."
+          "text": "Two forces act on an object in a fluid. Its weight pulls it down and the upthrust pushes it up."
+        },
+        {
+          "type": "list",
+          "items": [
+            "If the weight is greater than the upthrust, the object sinks.",
+            "If the weight equals the upthrust, the object floats.",
+            "If the upthrust is greater than the weight, the object rises until enough of it is out of the fluid for the two forces to balance."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "This links to density. An object denser than the fluid sinks, and an object less dense than the fluid floats. Wood, at about 600 kg/m³, floats on water, at 1000 kg/m³. A stone, at about 2500 kg/m³, sinks."
+        },
+        {
+          "type": "heading",
+          "text": "Archimedes' Principle"
+        },
+        {
+          "type": "text",
+          "text": "Archimedes was a Greek scientist who lived over 2000 years ago. Archimedes' Principle states that when an object is wholly or partly immersed in a fluid, the upthrust on it equals the weight of the fluid it displaces. To displace means to push aside."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Weigh a stone in water",
+          "text": "Hang a stone from a spring balance and note its weight in air. Fill a container to the brim with water and stand it in a dish. Lower the stone into the water and note the new reading. Pour the water that spilled into the dish into a measuring cylinder or a marked bottle. Each 1 cm³ of water has a mass of 1 g. Compare the weight of the spilled water with the stone's loss in weight."
+        },
+        {
+          "type": "text",
+          "text": "In the examples we take g = 10 N/kg and the density of water as 1000 kg/m³."
+        },
+        {
+          "type": "example",
+          "title": "The density of a stone",
+          "steps": [
+            "A stone weighs 6 N in air and 4 N when fully under water. Find the upthrust, the volume of the stone and its density.",
+            "Upthrust = 6 − 4 = 2 N",
+            "By Archimedes' Principle, the water displaced weighs 2 N, so its mass is 2 ÷ 10 = 0.2 kg.",
+            "Volume of water displaced = mass ÷ density = 0.2 ÷ 1000 = 0.0002 m³",
+            "The stone is fully under water, so its volume is also 0.0002 m³.",
+            "Mass of stone = 6 ÷ 10 = 0.6 kg",
+            "Density of stone = 0.6 ÷ 0.0002 = 3000 kg/m³"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The law of flotation"
+        },
+        {
+          "type": "text",
+          "text": "The law of flotation states that a floating object displaces its own weight of the fluid in which it floats. When a boat is loaded, it sinks deeper. It stops when it displaces enough extra water to balance the extra weight."
+        },
+        {
+          "type": "example",
+          "title": "A floating block of wood",
+          "steps": [
+            "A block of wood has a mass of 0.3 kg and a volume of 500 cm³. It floats in water. How much water does it displace, and what fraction of it is under water?",
+            "Weight of block = 0.3 × 10 = 3 N, so the upthrust is 3 N.",
+            "The water displaced weighs 3 N, so its mass is 0.3 kg = 300 g.",
+            "Each 1 g of water has a volume of 1 cm³, so 300 cm³ of water is displaced.",
+            "Fraction under water = 300 ÷ 500 = 3/5. Three fifths of the block is below the surface."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A loaded fishing boat",
+          "steps": [
+            "A fishing boat has a mass of 150 kg. Two fishermen with a total mass of 130 kg go out in it and catch 70 kg of fish. What volume of water does the loaded boat displace?",
+            "Total mass = 150 + 130 + 70 = 350 kg",
+            "Weight = 350 × 10 = 3500 N, so the boat displaces 3500 N of water.",
+            "Mass of water displaced = 3500 ÷ 10 = 350 kg",
+            "Volume of water displaced = 350 ÷ 1000 = 0.35 m³"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Using flotation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ships: a steel ship is hollow and full of air. Its average density is less than that of water, and its wide shape displaces a large weight of water.",
+            "Overloading: a boat can only sink so far before water comes over its sides. An overloaded boat or ferry can sink in rough water, so its safe load must be respected.",
+            "Plimsoll line: a mark painted on the side of a ship shows how deep it may safely sit in the water. Ships float higher in salty sea water, which is denser than lake water.",
+            "Swimming: filling your lungs with air lowers your average density and helps you float. A life jacket does the same.",
+            "Hot-air balloons: the hot air inside is less dense than the cold air around it, so the upthrust from the air lifts the balloon.",
+            "Hydrometer: a weighted glass tube that floats upright. It sinks deeper in a less dense liquid, so it can measure the density of milk or fuel."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many boat accidents on Ugandan lakes happen when boats carry too many people or too much cargo in bad weather. Using what you know about flotation, discuss what boat owners and passengers could do to stay safe."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Upthrust is the upward push of a fluid on an object. By Archimedes' Principle, it equals the weight of fluid displaced. An object floats when the upthrust equals its weight, and a floating object displaces its own weight of fluid."
         }
       ],
       "sim": {
         "phet": "buoyancy-basics_en.html",
-        "caption": "PhET Buoyancy: Basics. Compare an object's weight with the upthrust from the fluid, and see why it floats or sinks. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Buoyancy: Basics. Drop blocks of different materials into the pool and compare the weight and buoyant force arrows on each. Change the fluid and see a block that sinks in one liquid float in another. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

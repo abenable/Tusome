@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.modern.atomic-models",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,37 +9,170 @@
       "subject": "physics",
       "level": "S4",
       "strand": "Modern Physics",
-      "subStrand": "Atomic models",
-      "order": 4,
+      "subStrand": "Atomic structure and electron emission",
+      "order": 5,
+      "term": 2,
       "outcomes": [
         "understand the structure of an atom in terms of a positive nucleus and negative electrons (u)",
-        "understand the terms: atomic number, mass number, and isotopes, and use them to represent different nuclides (k, u)"
+        "understand the terms: atomic number, mass number, and isotopes, and use them to represent different nuclides (k, u)",
+        "understand the methods by which electrons are ejected from /matter atoms and how these electrons are useful (u, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "An atom has a small, dense, positively charged nucleus at its centre, made up of protons (positively charged) and neutrons (no charge). Much lighter, negatively charged electrons occupy the much larger space around the nucleus."
+          "text": "Everything around you, from a jerrycan of water to the air you breathe, is made of atoms. Atoms are far too small to see, even with a light microscope. So how do we know what is inside them? Scientists built models, tested them with experiments and improved them. In this topic you will follow that story and see how electrons can be freed from atoms and put to work."
+        },
+        {
+          "type": "heading",
+          "text": "Models of the atom"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dalton's model (about 1803): atoms are tiny, solid balls that cannot be split. Atoms of one element are all the same.",
+            "Thomson's model (1897): after discovering the electron, Thomson pictured the atom as a ball of positive charge with negative electrons dotted through it, like seeds in a passion fruit.",
+            "Rutherford's model (1911): the atom has a tiny, dense, positive nucleus at its centre. Electrons move around it, and most of the atom is empty space.",
+            "Bohr's model (1913): electrons move around the nucleus only in fixed orbits called shells or energy levels."
+          ],
+          "ordered": true
         },
         {
           "type": "text",
-          "text": "The atomic number of an element is the number of protons in its nucleus \u2014 it defines which element the atom is. In a neutral atom, the number of electrons equals the number of protons, so the positive and negative charges balance out."
+          "text": "Rutherford's team fired alpha particles, which are small and positive, at a very thin sheet of gold foil. Most went straight through. A few bent through large angles, and about 1 in 8000 bounced back towards the source. The atom must be mostly empty space, so most particles pass through. All its positive charge and nearly all its mass must sit in a tiny nucleus, which repels the few particles that come close."
+        },
+        {
+          "type": "heading",
+          "text": "Inside the atom"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Protons are in the nucleus. Each has a charge of +1 and a mass of about 1 unit.",
+            "Neutrons are also in the nucleus. They have no charge and a mass of about 1 unit.",
+            "Electrons move around the nucleus. Each has a charge of −1 and almost no mass, about 1/1840 of a proton."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "The mass number is the total number of protons and neutrons in the nucleus. Atoms of the same element (same atomic number) can have different numbers of neutrons, and so different mass numbers \u2014 these are called isotopes of that element."
+          "text": "Protons and neutrons together are called nucleons. A neutral atom has the same number of electrons as protons, so its charges balance."
+        },
+        {
+          "type": "heading",
+          "text": "Atomic number, mass number and nuclides"
         },
         {
           "type": "text",
-          "text": "This model of the atom \u2014 a tiny, dense positive nucleus surrounded by orbiting electrons \u2014 was proposed by Ernest Rutherford, replacing an earlier model by J. J. Thomson in which an atom was imagined as a more uniform sphere of positive charge with electrons scattered through it, sometimes called the 'plum pudding' model."
+          "text": "The atomic number, Z, is the number of protons in the nucleus. It decides which element the atom is. Every carbon atom has 6 protons. The mass number, A, is the total number of protons and neutrons. So the number of neutrons is A − Z."
         },
         {
           "type": "text",
-          "text": "Use the PhET Build an Atom simulation below. Add protons, neutrons, and electrons to build different atoms, and see how the atomic number, mass number, and charge change as you do."
+          "text": "A nuclide is one particular type of nucleus, with a stated number of protons and neutrons. We write a nuclide with its chemical symbol X, the mass number at the top left and the atomic number at the bottom left."
+        },
+        {
+          "type": "equation",
+          "latex": "{}^{A}_{Z}\\mathrm{X} \\qquad {}^{23}_{11}\\mathrm{Na}",
+          "speech": "X with mass number A and atomic number Z. For example, sodium 23, with atomic number 11"
+        },
+        {
+          "type": "example",
+          "title": "Particles in a sodium atom",
+          "steps": [
+            "Sodium-23 has Z = 11 and A = 23.",
+            "Protons = Z = 11",
+            "Neutrons = A − Z = 23 − 11 = 12",
+            "Electrons in a neutral atom = protons = 11"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Isotopes"
+        },
+        {
+          "type": "text",
+          "text": "Isotopes are atoms of the same element with different numbers of neutrons. They have the same atomic number but different mass numbers. They behave the same in chemical reactions, because they have the same number of electrons."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hydrogen has three isotopes: hydrogen-1 (no neutrons), hydrogen-2 or deuterium (1 neutron) and hydrogen-3 or tritium (2 neutrons).",
+            "Carbon-12 has 6 neutrons and carbon-14 has 8. Carbon-14 is used to find the age of old wood and bones.",
+            "Uranium-235 and uranium-238 both have 92 protons. Uranium-235 is the fuel in nuclear power stations."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Average mass of chlorine atoms",
+          "steps": [
+            "Chlorine is a mixture of two isotopes: 75 percent chlorine-35 and 25 percent chlorine-37.",
+            "Average mass = (75 × 35 + 25 × 37) ÷ 100",
+            "Average mass = (2625 + 925) ÷ 100 = 35.5",
+            "This is why the relative atomic mass of chlorine is 35.5, not a whole number."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Model a nucleus",
+          "text": "Use beans for protons and maize grains for neutrons, and small stones for electrons. In groups, build models of helium-4, carbon-12, carbon-14 and sodium-23 on a sheet of paper. Draw the nucleus as a small circle in the middle and the shells as rings around it. Compare your two carbon models. What is the same, and what is different?"
+        },
+        {
+          "type": "heading",
+          "text": "Freeing electrons from atoms"
+        },
+        {
+          "type": "text",
+          "text": "Electrons are held in atoms by the attraction of the nucleus. If they are given enough energy, some escape from the surface of a material. There are two main ways to do this."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Thermionic emission: a metal is heated until some of its electrons have enough energy to escape from its surface. A hot filament in a vacuum tube releases electrons this way.",
+            "Photoelectric emission: light of high enough frequency, such as ultraviolet, shines on a metal surface and knocks electrons out of it. Light below a certain frequency frees no electrons, however bright it is."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Photoelectric cells are used in light meters, automatic doors and burglar alarms that react when a beam of light is broken."
+        },
+        {
+          "type": "heading",
+          "text": "Cathode rays and X-rays"
+        },
+        {
+          "type": "text",
+          "text": "In a cathode ray tube, electrons from a hot cathode (the negative electrode) are pulled towards a positive anode at high speed. This stream of fast electrons is called cathode rays. Cathode rays travel in straight lines, carry negative charge and are bent by electric and magnetic fields. They make some materials glow when they hit them. Old television sets used cathode rays to draw pictures on the screen."
+        },
+        {
+          "type": "text",
+          "text": "In an X-ray tube, very fast electrons crash into a metal target, such as tungsten. Most of their energy becomes heat, but a small part becomes X-rays."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cathode rays are particles (electrons). X-rays are electromagnetic waves.",
+            "Cathode rays carry negative charge and are bent by electric and magnetic fields. X-rays have no charge and are not bent.",
+            "Cathode rays are stopped by thin metal or a few centimetres of air. X-rays pass through skin, muscle, paper and thin metal.",
+            "X-rays are used in hospitals to see broken bones and at airports to check luggage. Cathode rays were used in old TVs, and in electron microscopes that show tiny objects."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Dalton's model was replaced, but it was not useless. Why do scientists keep using a model until a better one explains more of what they observe? Is today's model of the atom the final one?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "An atom has a tiny positive nucleus of protons and neutrons, with negative electrons around it. Atomic number Z counts protons; mass number A counts protons plus neutrons. Isotopes have the same Z but different A. Electrons can be freed by heating (thermionic emission) or by light (photoelectric emission)."
         }
       ],
       "sim": {
         "phet": "build-an-atom_en.html",
-        "caption": "PhET Build an Atom. Add protons, neutrons, and electrons and see the atomic number, mass number, and charge of the atom you build. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Build an Atom. Add protons, neutrons, and electrons and see the atomic number, mass number, and charge of the atom you build. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

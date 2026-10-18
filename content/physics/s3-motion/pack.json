@@ -1,62 +1,213 @@
 {
   "packId": "phy.s3.matter.motion",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s3.matter.motion",
-      "title": "Speed, Velocity and Newton's Laws",
+      "title": "Linear and Non-linear Motion",
       "subject": "physics",
       "level": "S3",
       "strand": "Mechanics and Properties of Matter",
-      "subStrand": "Linear and non-linear motion",
+      "subStrand": "Speed, acceleration and circular motion",
       "order": 1,
+      "term": 1,
       "outcomes": [
         "understand and apply the relationship between speed, distance, and time (u, s)",
         "understand the terms: linear motion, speed, average speed, acceleration, and be able to investigate resistance to motion (u, s)",
-        "understand and apply Newton's laws of motion (u, s, v/a)"
+        "know and use the equations of motion (u, s)",
+        "understand the acceleration of bodies moving in a circle and the effect of gravity and air resistance on moving bodies (u, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Speed tells you how fast something moves \u2014 the distance travelled per unit of time."
+          "text": "A boda boda weaves through Kampala traffic. A stone dropped from a bridge over the Nile falls faster and faster. In this topic you will describe motion like this with numbers, graphs and equations."
+        },
+        {
+          "type": "heading",
+          "text": "Speed, distance and time"
+        },
+        {
+          "type": "text",
+          "text": "Speed is the distance an object travels in each unit of time. The SI unit of speed is the metre per second (m/s). On roads we often use kilometres per hour (km/h)."
         },
         {
           "type": "equation",
-          "latex": "\\text{speed} = \\frac{\\text{distance}}{\\text{time}}"
+          "latex": "\\text{speed} = \\frac{\\text{distance}}{\\text{time}}",
+          "speech": "speed equals distance divided by time"
         },
         {
           "type": "text",
-          "text": "Velocity is speed in a stated direction. Acceleration is the rate at which velocity changes \u2014 how quickly an object speeds up, slows down, or changes direction."
+          "text": "A vehicle rarely keeps the same speed for a whole journey. It slows at junctions and speeds up on open road. Average speed is the total distance travelled divided by the total time taken."
+        },
+        {
+          "type": "example",
+          "title": "Average speed of a bus",
+          "steps": [
+            "A bus travels 270 km from Kampala to Mbarara in 4.5 hours.",
+            "Average speed = total distance ÷ total time = 270 km ÷ 4.5 h",
+            "Average speed = 60 km/h",
+            "To change km/h to m/s, multiply by 1000 and divide by 3600: 60 × 1000 ÷ 3600 ≈ 16.7 m/s"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Linear motion and acceleration"
+        },
+        {
+          "type": "text",
+          "text": "Linear motion is motion in a straight line. Velocity is speed in a stated direction. An object has uniform velocity if it covers equal distances in equal times along a straight line."
+        },
+        {
+          "type": "text",
+          "text": "Acceleration is the rate of change of velocity. It tells you how quickly an object speeds up. If the velocity falls, the object is decelerating and the acceleration is negative. The unit of acceleration is the metre per second squared (m/s²)."
         },
         {
           "type": "equation",
-          "latex": "\\text{acceleration} = \\frac{\\text{change in velocity}}{\\text{time taken}}"
+          "latex": "a = \\frac{v - u}{t}",
+          "speech": "a equals v minus u, all over t"
         },
         {
           "type": "text",
-          "text": "On a distance-time graph, the gradient (slope) at any point gives the speed at that instant \u2014 a steeper line means a faster speed, and a flat (horizontal) line means the object is stationary. On a velocity-time graph, the gradient gives the acceleration."
+          "text": "Here u is the initial (starting) velocity, v is the final velocity and t is the time taken."
+        },
+        {
+          "type": "example",
+          "title": "Acceleration of a boda boda",
+          "steps": [
+            "A boda boda starts from rest and reaches 15 m/s in 5 s.",
+            "u = 0 m/s, v = 15 m/s, t = 5 s",
+            "a = (v − u) ÷ t = (15 − 0) ÷ 5",
+            "a = 3 m/s². The speed rises by 3 m/s every second."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Motion graphs"
+        },
+        {
+          "type": "list",
+          "items": [
+            "On a distance–time graph, the gradient (slope) is the speed.",
+            "A straight sloping line means steady speed. A steeper line means a higher speed.",
+            "A horizontal line on a distance–time graph means the object is not moving.",
+            "On a velocity–time graph, the gradient is the acceleration.",
+            "A horizontal line on a velocity–time graph means steady velocity.",
+            "The area under a velocity–time graph is the distance travelled."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "Newton's first law says an object stays at rest, or keeps moving at constant velocity, unless a resultant (unbalanced) force acts on it. Newton's second law relates the resultant force on an object to its mass and acceleration."
+          "text": "In the laboratory, a ticker timer measures short time intervals. It prints 50 dots on a paper tape every second, so the time between two dots is 0.02 s. Dots that get further and further apart show that the trolley is accelerating."
+        },
+        {
+          "type": "heading",
+          "text": "Equations of motion"
+        },
+        {
+          "type": "text",
+          "text": "When an object moves in a straight line with uniform (steady) acceleration, four equations link u, v, a, t and the displacement s. You do not need to derive them. Pick the one that contains what you know and what you want."
         },
         {
           "type": "equation",
-          "latex": "F = m a"
+          "latex": "v = u + at",
+          "speech": "v equals u plus a t"
+        },
+        {
+          "type": "equation",
+          "latex": "s = ut + \\tfrac{1}{2}at^2",
+          "speech": "s equals u t plus one half a t squared"
+        },
+        {
+          "type": "equation",
+          "latex": "v^2 = u^2 + 2as",
+          "speech": "v squared equals u squared plus 2 a s"
+        },
+        {
+          "type": "equation",
+          "latex": "s = \\tfrac{1}{2}(u + v)t",
+          "speech": "s equals one half of u plus v, times t"
+        },
+        {
+          "type": "example",
+          "title": "Braking distance of a car",
+          "steps": [
+            "A car moving at 20 m/s brakes with a deceleration of 5 m/s² until it stops. How far does it travel while braking?",
+            "u = 20 m/s, v = 0, a = −5 m/s² (negative because it slows down)",
+            "Use v² = u² + 2as: 0 = 20² + 2 × (−5) × s",
+            "0 = 400 − 10s, so s = 40 m",
+            "At double the speed, 40 m/s, the braking distance is 160 m, four times as long. This is why speed limits near schools matter."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Gravity, air resistance and falling"
         },
         {
           "type": "text",
-          "text": "Newton's third law says that whenever one object exerts a force on a second object, the second object exerts an equal and opposite force back on the first \u2014 forces always come in equal, opposite pairs."
+          "text": "Near the Earth's surface, gravity makes all falling objects accelerate at about 10 m/s² when air resistance is small. This is the acceleration due to gravity, g. A more exact value is 9.8 m/s²."
+        },
+        {
+          "type": "example",
+          "title": "A stone dropped from a bridge",
+          "steps": [
+            "Opio drops a stone from a bridge. It hits the water after 2 s. Take g = 10 m/s² and ignore air resistance.",
+            "u = 0, a = 10 m/s², t = 2 s",
+            "Speed on hitting the water: v = u + at = 0 + 10 × 2 = 20 m/s",
+            "Height of the bridge: s = ut + ½at² = 0 + ½ × 10 × 2² = 20 m"
+          ]
         },
         {
           "type": "text",
-          "text": "Use the PhET Forces and Motion: Basics simulation below (Motion screen). Push the object with different forces and watch its position, velocity, and acceleration graphs as it moves."
+          "text": "Resistance to motion is any force that opposes movement. Friction acts between surfaces that touch. Drag (air resistance) acts on objects moving through air, water or oil. A thick (viscous) fluid such as honey gives a large drag."
+        },
+        {
+          "type": "text",
+          "text": "When an object falls through a fluid, the drag grows as it speeds up. Soon the drag balances its weight. The object then falls at a steady speed called its terminal velocity. Its distance–time graph curves upwards at first, then becomes a straight line."
+        },
+        {
+          "type": "text",
+          "text": "Shape changes the drag. A streamlined shape is smooth and pointed, so a fluid flows past it easily. Birds, fish and aeroplanes are streamlined. A parachute does the opposite. Its large area gives a big drag and a slow, safe terminal velocity."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Falling through oil",
+          "text": "Fill a tall, clear plastic bottle with cooking oil. Drop in a small marble or a smooth round stone. Watch it speed up at first and then fall steadily. Time how long it takes to reach the bottom. Now try a flat stone of similar size, and then repeat both in water. Discuss how the fluid and the shape change the motion."
+        },
+        {
+          "type": "heading",
+          "text": "Motion in a circle"
+        },
+        {
+          "type": "text",
+          "text": "Non-linear motion is motion along a curved path. Think of a stone whirled on a string, or a boda boda going round a roundabout. Even at a steady speed, the direction keeps changing. A change in direction is a change in velocity. So an object moving in a circle is always accelerating."
+        },
+        {
+          "type": "text",
+          "text": "The acceleration points towards the centre of the circle. A force towards the centre, called the centripetal force, causes it. For the stone, the string pulls inwards. For the boda boda, friction between the tyres and the road does the job. For the Moon, Earth's gravity provides the force. If the force stops, the object moves off in a straight line, along a tangent to the circle."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why is it dangerous for a boda boda to go round a roundabout fast on a wet or sandy road? What provides the force towards the centre, and what happens if that force is too small?"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Measure your speed",
+          "text": "Mark out 50 m on the school field. Time classmates walking, running and cycling over it with a phone stopwatch. Use the average of three runs for each, then work out the speeds in m/s."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Speed = distance ÷ time, and acceleration = change in velocity ÷ time. On a velocity–time graph, the gradient is acceleration and the area underneath is distance. An object moving in a circle accelerates towards the centre, even when its speed is steady."
         }
       ],
       "sim": {
         "phet": "forces-and-motion-basics_en.html",
-        "caption": "PhET Forces and Motion: Basics (Motion screen). Apply a force and watch position, velocity, and acceleration change over time. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Forces and Motion: Basics (Motion screen). Apply a force and watch position, velocity, and acceleration change over time. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

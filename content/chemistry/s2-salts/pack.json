@@ -1,0 +1,197 @@
+{
+  "packId": "che.s2.acids.salts",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s2.acids.salts",
+      "title": "Salts",
+      "subject": "chemistry",
+      "level": "S2",
+      "strand": "Acids and Alkalis",
+      "subStrand": "Preparing salts and their uses",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "be familiar with, and be able to carry out neutralisation reactions to prepare salts (k, u, s)",
+        "Know and appreciate the uses of common salts in everyday life (k, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "When people say salt, they usually mean the salt on food, harvested at Lake Katwe or made in factories. To a chemist, that is just one salt among many. Baking soda, chalk, Epsom salts and many fertilisers are salts too. In this topic you will learn how salts are made and how we use them."
+        },
+        {
+          "type": "heading",
+          "text": "What is a salt?"
+        },
+        {
+          "type": "text",
+          "text": "A salt is a compound made when an acid reacts with a base. The hydrogen in the acid is replaced by a metal, or by ammonium. Every salt has a two-part name. The first part comes from the metal. The second part comes from the acid."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hydrochloric acid makes chlorides, such as sodium chloride.",
+            "Sulphuric acid makes sulphates, such as magnesium sulphate.",
+            "Nitric acid makes nitrates, such as potassium nitrate.",
+            "Carbonic acid makes carbonates, such as calcium carbonate.",
+            "Ethanoic acid, in vinegar, makes ethanoates, such as sodium ethanoate."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Three neutralisation reactions that make salts"
+        },
+        {
+          "type": "text",
+          "text": "Neutralisation is a reaction between an acid and a base. Salts can be made by neutralising an acid with an alkali, with a metal oxide, or with a carbonate."
+        },
+        {
+          "type": "equation",
+          "expr": "acid + alkali → salt + water",
+          "speech": "acid plus alkali gives salt plus water"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{HNO_3 + KOH \\rightarrow KNO_3 + H_2O}",
+          "speech": "nitric acid plus potassium hydroxide gives potassium nitrate plus water"
+        },
+        {
+          "type": "equation",
+          "expr": "acid + metal oxide → salt + water",
+          "speech": "acid plus metal oxide gives salt plus water"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{H_2SO_4 + MgO \\rightarrow MgSO_4 + H_2O}",
+          "speech": "sulphuric acid plus magnesium oxide gives magnesium sulphate plus water"
+        },
+        {
+          "type": "equation",
+          "expr": "acid + carbonate → salt + water + carbon dioxide",
+          "speech": "acid plus carbonate gives salt plus water plus carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CH_3COOH + NaHCO_3 \\rightarrow CH_3COONa + H_2O + CO_2}",
+          "speech": "ethanoic acid plus sodium hydrogencarbonate gives sodium ethanoate plus water plus carbon dioxide"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Blow up a balloon with a reaction",
+          "text": "Half-fill a small plastic water bottle with vinegar. Use a paper funnel to put a spoon of baking soda inside a balloon. Stretch the neck of the balloon over the mouth of the bottle, letting it hang to one side. Then lift the balloon so the baking soda falls into the vinegar. Watch and record what happens. Write a word equation for the reaction."
+        },
+        {
+          "type": "heading",
+          "text": "Preparing a salt: magnesium sulphate"
+        },
+        {
+          "type": "text",
+          "text": "This preparation uses dilute sulphuric acid and heat, so your teacher will demonstrate it or supervise closely. Wear safety goggles."
+        },
+        {
+          "type": "example",
+          "title": "Make magnesium sulphate crystals",
+          "steps": [
+            "Warm 50 cm³ of dilute sulphuric acid in a beaker to about 60 °C.",
+            "Add magnesium oxide powder one spatula at a time, stirring well.",
+            "Keep adding until some powder stays undissolved. This extra base makes sure all the acid has been used up.",
+            "Filter the mixture. The left-over magnesium oxide stays in the filter paper as the residue.",
+            "The clear liquid that passes through, the filtrate, is magnesium sulphate solution.",
+            "Heat the filtrate gently until about half of the water has evaporated, then leave it to cool.",
+            "Crystals of magnesium sulphate form. Dry them between filter papers."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Writing formulae of salts"
+        },
+        {
+          "type": "text",
+          "text": "A salt is made of positive ions from the metal and negative ions from the acid. An ion is an atom or group of atoms with an electric charge. In a salt, the positive and negative charges must balance."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sodium ion Na⁺, potassium ion K⁺, calcium ion Ca²⁺.",
+            "Chloride ion Cl⁻, nitrate ion NO₃⁻, carbonate ion CO₃²⁻."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Work out the formulae of four salts",
+          "steps": [
+            "Sodium chloride: Na⁺ and Cl⁻. One plus balances one minus, so the formula is NaCl.",
+            "Potassium nitrate: K⁺ and NO₃⁻. One of each balances, so the formula is KNO₃.",
+            "Calcium carbonate: Ca²⁺ and CO₃²⁻. Two plus balances two minus, so the formula is CaCO₃.",
+            "Potassium carbonate: K⁺ and CO₃²⁻. Two K⁺ ions are needed to balance one CO₃²⁻, so the formula is K₂CO₃."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Knowing the formula helps us see how a salt might have been made. Sodium chloride can be made from hydrochloric acid and sodium hydroxide. Calcium carbonate forms when carbon dioxide reacts with calcium hydroxide."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Ca(OH)_2 + CO_2 \\rightarrow CaCO_3 + H_2O}",
+          "speech": "calcium hydroxide plus carbon dioxide gives calcium carbonate plus water"
+        },
+        {
+          "type": "heading",
+          "text": "Soluble and insoluble salts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "All sodium, potassium and ammonium salts are soluble. Sodium chloride, sodium nitrate and potassium carbonate all dissolve.",
+            "All nitrates are soluble.",
+            "Most chlorides are soluble. Lead(II) chloride is insoluble in cold water but dissolves in hot water.",
+            "Most sulphates are soluble, such as blue copper(II) sulphate. Barium sulphate is insoluble.",
+            "Most carbonates are insoluble, such as calcium carbonate. Sodium and potassium carbonates are the main exceptions."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "An insoluble salt can be made by mixing two solutions. The insoluble salt forms as a solid that clouds the liquid. This solid is called a precipitate, and the method is called precipitation."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Which salts dissolve?",
+          "text": "Collect small samples of table salt, baking soda, Epsom salts from a pharmacy, and crushed chalk. Put the same volume of water into four clear cups. Add one level spoon of each salt to its own cup and stir 20 times. Record whether each salt dissolves fully, partly or not at all. Explain why you used the same amounts each time."
+        },
+        {
+          "type": "heading",
+          "text": "Uses of common salts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sodium chloride: flavouring and preserving food, such as salted fish. Salt licks for cattle. Making chlorine and sodium hydroxide in industry.",
+            "Sodium hydrogencarbonate, or baking soda: makes cakes and mandazi rise by giving off carbon dioxide. Also used in antacids.",
+            "Calcium carbonate: making cement at Tororo and Hima, lime for acid soils, chalk and toothpaste.",
+            "Potassium nitrate: fertiliser and preserving meat.",
+            "Potassium carbonate: making soap and glass. Potash from wood ash is mostly potassium carbonate.",
+            "Ammonium chloride: in dry cells for torches and radios, and in some fertilisers.",
+            "Copper(II) sulphate: sprayed on coffee and potatoes to kill fungus diseases.",
+            "Barium sulphate: an X-ray meal that shows up the stomach. It is safe because it does not dissolve.",
+            "Sodium phosphate: in some detergents and processed foods.",
+            "Lead(II) chloride: few everyday uses, because lead compounds are poisonous."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Workers at Lake Katwe spend long hours in salty water collecting salt. How could chemistry help make their work safer and their salt cleaner?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A salt forms when an acid is neutralised by an alkali, a metal oxide or a carbonate. Its name comes from the metal and the acid. Soluble salts are made with an excess of base, then filtering and crystallising. Salts are used in food, farming, building, medicine and industry."
+        }
+      ]
+    }
+  ]
+}

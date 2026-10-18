@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.linear-equations",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,28 +11,156 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Linear equations",
       "order": 12,
+      "term": 3,
       "outcomes": [
-        "Solve linear equations in one variable using the balance method.",
-        "Solve linear equations involving brackets and fractions.",
-        "Form and solve linear equations from word problems.",
-        "Verify the solution of a linear equation by substitution."
+        "use letters to represent numbers. (u)",
+        "write statements in algebraic form. (u)",
+        "simplify algebraic expressions. (u s)",
+        "evaluate algebraic expressions by substituting numerical values. (u s)",
+        "manipulate simple algebraic equations in one variable and solve them. (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A linear equation in one variable is an equation such as 2x + 3 = 11, where the highest power of the variable is 1. Solving the equation means finding the value of the variable that makes both sides equal."
+          "text": "At the market, Namubiru knows that 3 kg of beans cost UGX 10,500, but she does not yet know the price of 1 kg. In mathematics we use a letter to stand for an unknown number like this. Then we can write rules, simplify them and solve them. This topic builds the algebra you need to solve equations in one unknown."
+        },
+        {
+          "type": "heading",
+          "text": "Letters stand for numbers"
         },
         {
           "type": "text",
-          "text": "Use the balance method: whatever you do to one side of the equation, do the same to the other side. The aim is to get the variable on its own. First undo addition or subtraction, then undo multiplication or division. For 2x + 3 = 11: subtract 3 from both sides to get 2x = 8, then divide both sides by 2 to get x = 4."
+          "text": "A letter that stands for a number is called a variable. If one kilogram of beans costs b shillings, then 3 kg cost 3 × b shillings. In algebra we leave out the × sign and write 3b. We write the number before the letter."
+        },
+        {
+          "type": "list",
+          "items": [
+            "3 × b is written 3b.",
+            "a × b is written ab.",
+            "b × b is written b², said b squared.",
+            "a ÷ 2 is written as a fraction, a over 2.",
+            "1 × x is written simply as x."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Writing statements in algebra"
+        },
+        {
+          "type": "text",
+          "text": "An expression is a group of numbers, letters and operations, such as 2n + 5. It has no equals sign. Words can be turned into expressions. Think of a number n, double it and add 5: the result is 2n + 5. A number machine that multiplies by 3 and then subtracts 2 turns an input x into 3x − 2."
+        },
+        {
+          "type": "example",
+          "title": "Mangoes shared among friends",
+          "steps": [
+            "Nakato has x mangoes. Okello has 4 more than Nakato. Akello has twice as many as Okello. Write the total number of mangoes in algebra.",
+            "Okello has x + 4 mangoes.",
+            "Akello has twice that, which is 2(x + 4) = 2x + 8.",
+            "Total = x + (x + 4) + (2x + 8).",
+            "Total = 4x + 12 mangoes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Simplifying expressions"
+        },
+        {
+          "type": "text",
+          "text": "Like terms have exactly the same letters, with the same powers. 5a and 2a are like terms. 5a and 2b are not. To simplify, collect the like terms and combine their numbers. To remove a bracket, multiply every term inside it by the number outside."
+        },
+        {
+          "type": "example",
+          "title": "Collecting like terms and removing brackets",
+          "steps": [
+            "Simplify 5a + 3b − 2a + b.",
+            "Group the a terms and the b terms: 5a − 2a + 3b + b.",
+            "The answer is 3a + 4b.",
+            "Simplify 4(x + 2) − 3(x − 1).",
+            "Remove the brackets: 4x + 8 − 3x + 3. Note that −3 × −1 = +3.",
+            "Collect like terms: x + 11."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Substituting values"
+        },
+        {
+          "type": "text",
+          "text": "To evaluate an expression, replace each letter with its value and work it out. Use brackets around negative numbers and follow the order of operations."
+        },
+        {
+          "type": "example",
+          "title": "Evaluating when a = 3 and b = −2",
+          "steps": [
+            "2a + 5b = 2 × 3 + 5 × (−2) = 6 − 10 = −4.",
+            "a² − b = 3² − (−2) = 9 + 2 = 11.",
+            "3ab = 3 × 3 × (−2) = −18."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving equations with the balance method"
+        },
+        {
+          "type": "text",
+          "text": "An equation says that two expressions are equal, such as 3p − 2 = 13. Think of it as a balance with the same weight on each side. If you add, subtract, multiply or divide on one side, you must do the same on the other side. Then the balance stays level. The aim is to get the letter on its own. The value you find is the solution."
         },
         {
           "type": "equation",
-          "expr": "2x + 3 = 11   ->   2x = 8   ->   x = 4"
+          "latex": "3p - 2 = 13 \\;\\Rightarrow\\; 3p = 15 \\;\\Rightarrow\\; p = 5",
+          "speech": "3p minus 2 equals 13, so 3p equals 15, so p equals 5"
         },
         {
-          "type": "text",
-          "text": "Always check the answer by substituting it back into the original equation. For x = 4: 2(4) + 3 = 8 + 3 = 11, which matches the right side, so the solution is correct."
+          "type": "example",
+          "title": "Unknowns on both sides",
+          "steps": [
+            "Solve 2x + 1 = 3x − 2.",
+            "Subtract 2x from both sides: 1 = x − 2.",
+            "Add 2 to both sides: 3 = x, so x = 3.",
+            "Check by substituting: left side 2 × 3 + 1 = 7, right side 3 × 3 − 2 = 7. Both sides are equal."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Yusuf's number puzzle",
+          "steps": [
+            "Yusuf thinks of a number b. He adds 6, multiplies the sum by 4, then subtracts twice his original number. The result is 32.",
+            "Write the equation: 4(b + 6) − 2b = 32.",
+            "Remove the bracket: 4b + 24 − 2b = 32.",
+            "Collect like terms: 2b + 24 = 32.",
+            "Subtract 24 from both sides: 2b = 8. Divide both sides by 2: b = 4.",
+            "Check: 4 + 6 = 10, then 10 × 4 = 40, then 40 − 8 = 32."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Buying books for the library",
+          "steps": [
+            "A school buys 30 books for UGX 10,800. Some cost UGX 400 each and the rest cost UGX 300 each. How many of each were bought?",
+            "Let x be the number of UGX 400 books. Then 30 − x books cost UGX 300 each.",
+            "Total cost: 400x + 300(30 − x) = 10,800.",
+            "Remove the bracket: 400x + 9,000 − 300x = 10,800, so 100x + 9,000 = 10,800.",
+            "Subtract 9,000 from both sides: 100x = 1,800, so x = 18.",
+            "The school bought 18 books at UGX 400 and 12 books at UGX 300. Check: 7,200 + 3,600 = 10,800."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Triangle and number puzzles",
+          "text": "In groups, draw a triangle with sides labelled x cm, 2x cm and 5 cm. Its perimeter is 26 cm. Write an equation for the perimeter and solve it. Then draw the triangle accurately with a ruler and measure its sides to check. Next, each learner writes a short think-of-a-number puzzle. Swap with a partner, who writes the puzzle as an equation and solves it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Picture a beam balance with three stones on each side. What happens if you take one stone off only the left side? How does this explain why we must always do the same thing to both sides of an equation?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A letter can stand for an unknown number. Simplify by collecting like terms and multiplying out brackets. Substitute values carefully, using brackets for negative numbers. Solve an equation by doing the same operation to both sides until the letter is alone, then check the solution in the original equation."
         }
       ]
     }

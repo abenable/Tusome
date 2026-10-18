@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.equations-and-inequalities",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,31 +11,144 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Equations and inequalities",
       "order": 2,
+      "term": 1,
       "outcomes": [
-        "Build formula from word statements. (u, s)",
-        "Re-write a given formula by changing the subject. (u, s)",
-        "Solve equations and inequalities, representing the solutions on a number line or graphically as appropriate. (k, u, s)"
+        "build formula from word statements. (u s)",
+        "re-write a given formula by changing the subject. (u s)",
+        "solve equations and inequalities, representing the solutions on a number line or graphically as appropriate. (k u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Turning a word problem into a formula means naming the unknowns and writing their relationship as an equation. Ruth is r years old; Bayo is one year older than Ruth, so Bayo's age = r+1. John's age is 3 times Bayo's age, so John's age = 3(r+1) = 3r+3."
+          "text": "Market traders, farmers and builders turn everyday problems into formulae. A formula gives an answer quickly for any numbers. This topic builds formulae, rearranges them, and solves equations and inequalities."
         },
         {
-          "type": "equation",
-          "expr": "Ruth = r,  Bayo = r+1,  John = 3(r+1) = 3r+3"
-        },
-        {
-          "type": "text",
-          "text": "Changing the subject of a formula means rearranging it to isolate a different variable, using the same balance method as solving equations. Given the formula v = u + at (final velocity), rearrange to make t the subject: subtract u from both sides to get v-u = at, then divide both sides by a to get t = (v-u)/a."
-        },
-        {
-          "type": "equation",
-          "expr": "v = u + at   ->   v - u = at   ->   t = (v-u)/a"
+          "type": "heading",
+          "text": "Building a formula from words"
         },
         {
           "type": "text",
-          "text": "This year's work extends inequalities (Senior 2, Topic 5) to quadratics. Solve x^2 - 5x + 6 <= 0: first solve the equation x^2-5x+6=0 to get x=2 and x=3 (the graph's roots), then check the sign of the parabola between and outside these roots — since it opens upward, the expression is negative (≤0) between the roots, so the solution is 2 <= x <= 3."
+          "text": "A formula is a rule written with letters that shows how quantities are related. To build one, choose a letter for each unknown quantity. Then write each sentence as an expression or an equation."
+        },
+        {
+          "type": "example",
+          "title": "The ages of three friends",
+          "steps": [
+            "Atim, Kato and Opio were all born on Independence Day, 9 October, in different years. Atim is one year older than Kato. Opio's age is 3 times Atim's age. In 6 years' time, Opio will be twice as old as Atim. Find their ages.",
+            "Let Kato be k years old. Then Atim is k + 1, and Opio is 3(k + 1) = 3k + 3.",
+            "In 6 years' time, Opio will be 3k + 9 and Atim will be k + 7.",
+            "Opio will be twice Atim's age, so 3k + 9 = 2(k + 7).",
+            "Expand the bracket: 3k + 9 = 2k + 14, so k = 5.",
+            "Kato is 5, Atim is 6 and Opio is 18.",
+            "Check: in 6 years Opio will be 24 and Atim will be 12, and 24 = 2 × 12."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Changing the subject of a formula"
+        },
+        {
+          "type": "text",
+          "text": "The subject of a formula is the letter on its own on one side. To change the subject, undo the operations around the letter you want, in reverse order, doing the same to both sides."
+        },
+        {
+          "type": "example",
+          "title": "Distance from a boda boda fare",
+          "steps": [
+            "A boda boda fare in Mbale is F = 1,500 + 700d shillings, where d is the distance in km. Make d the subject, then find d when Akello pays UGX 5,000.",
+            "Subtract 1,500 from both sides: F − 1,500 = 700d.",
+            "Divide both sides by 700: d = (F − 1,500)/700.",
+            "When F = 5,000: d = (5,000 − 1,500)/700 = 3,500/700 = 5.",
+            "Akello travelled 5 km."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "When the letter you want is squared, take the square root as the last step. For the area of a circle:"
+        },
+        {
+          "type": "equation",
+          "latex": "A = \\pi r^2 \\;\\Rightarrow\\; r = \\sqrt{\\frac{A}{\\pi}}",
+          "speech": "A equals pi r squared, so r equals the square root of A over pi"
+        },
+        {
+          "type": "heading",
+          "text": "Solving linear inequalities"
+        },
+        {
+          "type": "text",
+          "text": "An inequality compares two quantities using <, >, ≤ or ≥. Solve it like an equation, with one extra rule. When you multiply or divide both sides by a negative number, reverse the inequality sign."
+        },
+        {
+          "type": "text",
+          "text": "On a number line, an open circle shows a value that is not included, for < or >. A filled circle shows a value that is included, for ≤ or ≥."
+        },
+        {
+          "type": "example",
+          "title": "A linear inequality",
+          "steps": [
+            "Solve 5 − 2x < 11 and show the solution on a number line.",
+            "Subtract 5 from both sides: −2x < 6.",
+            "Divide both sides by −2 and reverse the sign: x > −3.",
+            "On the number line, draw an open circle at −3 and an arrow pointing to the right."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solving quadratic inequalities"
+        },
+        {
+          "type": "text",
+          "text": "A quadratic inequality has an x² term, such as x² − x − 6 < 0. First solve the equation x² − x − 6 = 0. Its solutions are the critical values. Then decide which parts of the number line make the inequality true."
+        },
+        {
+          "type": "equation",
+          "latex": "x^2 - x - 6 = (x - 3)(x + 2)",
+          "speech": "x squared minus x minus 6 equals x minus 3, times x plus 2"
+        },
+        {
+          "type": "example",
+          "title": "A quadratic inequality",
+          "steps": [
+            "Solve x² − x − 6 < 0.",
+            "Factorise: (x − 3)(x + 2) < 0. The critical values are x = 3 and x = −2.",
+            "These split the number line into three parts: x < −2, −2 < x < 3, and x > 3.",
+            "Test one value in each part. x = −3 gives (−6)(−1) = 6, which is positive. x = 0 gives (−3)(2) = −6, which is negative. x = 4 gives (1)(6) = 6, which is positive.",
+            "We want the product to be negative, so the solution is −2 < x < 3.",
+            "On the number line, draw open circles at −2 and 3 and shade the part between them."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The graph of y = x² − x − 6 is a U-shaped curve called a parabola. It lies below the x-axis between −2 and 3, which matches the answer."
+        },
+        {
+          "type": "heading",
+          "text": "Inequalities on a graph"
+        },
+        {
+          "type": "text",
+          "text": "An inequality in x and y describes a region of the graph. Draw the boundary line or curve first. Use a solid line for ≤ or ≥, and a broken line for < or >. Test a point such as (0, 0) to decide which side to keep. Many textbooks shade out the unwanted region."
+        },
+        {
+          "type": "text",
+          "text": "For example, take y ≤ 4 − x² and y > 2x − 4. The parabola y = 4 − x² has its top at (0, 4) and crosses the x-axis at −2 and 2. Draw it as a solid curve. The line y = 2x − 4 passes through (0, −4) and (2, 0). Draw it as a broken line. The curve and line meet at (2, 0) and (−4, −12). The point (0, 0) fits both inequalities, so the wanted region is the one between them that contains the origin."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Think of a number",
+          "text": "In pairs, one learner thinks of a number, adds 5, multiplies the sum by 3 and says only the result. The partner writes an equation such as 3(n + 5) = 27 and solves it to find the starting number. Swap roles. Then lay a skipping rope on the floor as a number line and mark −2 and 3 with stones. Stand at different whole numbers and work out whether x² − x − 6 is positive or negative there."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why does the inequality sign turn round when you divide by a negative number? Try multiplying both sides of 2 < 5 by −1."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Build a formula by choosing letters and writing each sentence in symbols. Change the subject by undoing operations in reverse order. Solve inequalities like equations, but reverse the sign when multiplying or dividing by a negative number. For a quadratic inequality, find the critical values first, then test each part of the number line."
         }
       ]
     }

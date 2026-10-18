@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.inequalities-and-regions",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,37 +11,153 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Inequalities",
       "order": 5,
+      "term": 2,
       "outcomes": [
-        "Identify and use inequality symbols. (k, s)",
-        "Illustrate inequalities on the number line. (u, s)",
-        "Solve linear inequalities in one unknown. (u, s)",
-        "Represent linear inequalities graphically. (k, u, s)",
-        "Form simple linear inequalities for regions on a graph. (u, s)"
+        "identify and use inequality symbols. (k s)",
+        "illustrate inequalities on the number lines. (u s)",
+        "solve linear inequalities in one unknown. (u s)",
+        "represent linear inequalities graphically. (k u s)",
+        "form simple linear inequalities for regions on a graph. (u s)"
       ],
       "body": [
         {
-          "type": "text",
-          "text": "The inequality symbols are: > (greater than), < (less than), >= (greater than or equal to), and <= (less than or equal to). On a number line, a filled (solid) circle marks a value that is included (>= or <=), and an open circle marks a value that is excluded (> or <)."
+          "type": "heading",
+          "text": "More than, less than"
         },
         {
           "type": "text",
-          "text": "Linear inequalities in one unknown solve like equations, with one key difference: multiplying or dividing both sides by a negative number reverses the inequality sign. Solve 2x + 3 < 11: subtract 3 from both sides to get 2x < 8, then divide both sides by 2 to get x < 4."
+          "text": "A commuter taxi in Kampala is meant to carry no more than 14 passengers. A bag of cement must weigh at least 50 kg. Neither statement gives one exact number. Each describes a range of allowed numbers. An inequality is a statement that one quantity is bigger or smaller than another."
+        },
+        {
+          "type": "heading",
+          "text": "Inequality symbols"
+        },
+        {
+          "type": "list",
+          "items": [
+            "< means 'is less than'. 3 < 8.",
+            "> means 'is greater than'. 8 > 3.",
+            "≤ means 'is less than or equal to'.",
+            "≥ means 'is greater than or equal to'."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The open end of the symbol always faces the bigger number. If p is the number of passengers in the taxi, then p ≤ 14. If m is the mass of a bag of cement in kilograms, then m ≥ 50."
+        },
+        {
+          "type": "heading",
+          "text": "Inequalities on a number line"
+        },
+        {
+          "type": "text",
+          "text": "Draw a number line and mark the boundary number with a circle. Use an open, empty circle for < or >, because the boundary number is not included. Use a filled circle for ≤ or ≥, because the boundary number is included. Then draw an arrow along the line in the direction of the allowed numbers."
+        },
+        {
+          "type": "text",
+          "text": "For x > 2, draw an open circle at 2 and an arrow to the right. For −1 ≤ x < 4, draw a filled circle at −1, an open circle at 4, and a line joining them."
+        },
+        {
+          "type": "heading",
+          "text": "Solving linear inequalities"
+        },
+        {
+          "type": "text",
+          "text": "We solve an inequality in almost the same way as an equation. We may add or subtract the same number on both sides. We may multiply or divide both sides by the same positive number. There is one extra rule: when we multiply or divide both sides by a negative number, we must reverse the inequality sign."
+        },
+        {
+          "type": "example",
+          "title": "Solve 2x + 7 < x + 10",
+          "steps": [
+            "Subtract x from both sides: x + 7 < 10.",
+            "Subtract 7 from both sides: x < 3.",
+            "On a number line: an open circle at 3 and an arrow to the left.",
+            "Check with x = 2: 2 × 2 + 7 = 11 and 2 + 10 = 12. 11 < 12 is true."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Solve 5 − 3x ≥ 11, where the sign turns round",
+          "steps": [
+            "Subtract 5 from both sides: −3x ≥ 6.",
+            "Divide both sides by −3. Dividing by a negative number reverses the sign: x ≤ −2.",
+            "Check with x = −3: 5 − 3 × (−3) = 5 + 9 = 14. 14 ≥ 11 is true."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Solve a double inequality and list the integers",
+          "steps": [
+            "Solve −1 < 2x + 3 ≤ 9.",
+            "Subtract 3 from all three parts: −4 < 2x ≤ 6.",
+            "Divide all three parts by 2: −2 < x ≤ 3.",
+            "The integers that satisfy this are −1, 0, 1, 2 and 3. Note that −2 is not included, but 3 is."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Form and solve an inequality from a story",
+          "steps": [
+            "Okello has UGX 20,000. He buys a mathematical set for UGX 6,500 and some pens at UGX 1,500 each. How many pens can he buy?",
+            "Let n be the number of pens. The total cost must not be more than his money.",
+            "6,500 + 1,500n ≤ 20,000.",
+            "Subtract 6,500 from both sides: 1,500n ≤ 13,500.",
+            "Divide both sides by 1,500: n ≤ 9.",
+            "Okello can buy at most 9 pens."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Inequalities on a graph"
+        },
+        {
+          "type": "text",
+          "text": "An inequality in x and y describes a region of the Cartesian plane. A region is an area of the graph. First draw the boundary line by replacing the inequality sign with =. Draw a solid line for ≤ or ≥, because points on the line are included. Draw a broken (dashed) line for < or >, because points on the line are not included."
+        },
+        {
+          "type": "text",
+          "text": "Next, decide which side of the line is wanted. Choose a test point that is not on the line, often (0, 0). If the test point makes the inequality true, its side is wanted. Many Ugandan textbooks shade the unwanted region, so that the wanted region stays clear. Always say which way you have shaded."
         },
         {
           "type": "equation",
-          "expr": "2x + 3 < 11   ->   2x < 8   ->   x < 4"
+          "latex": "y < 2x + 1",
+          "speech": "y is less than 2x plus 1"
         },
         {
           "type": "text",
-          "text": "Solve -3x + 2 <= 14: subtract 2 to get -3x <= 12, then divide by -3 — since -3 is negative, the inequality flips — giving x >= -4."
+          "text": "For y < 2x + 1, draw the line y = 2x + 1 as a broken line. Test (0, 0): 0 < 2 × 0 + 1 gives 0 < 1, which is true. So the side containing the origin is the wanted region."
         },
         {
-          "type": "equation",
-          "expr": "-3x + 2 <= 14   ->   -3x <= 12   ->   x >= -4   (sign flips on dividing by a negative)"
+          "type": "heading",
+          "text": "Describing a region with inequalities"
         },
         {
-          "type": "text",
-          "text": "On a coordinate grid, an inequality like y > x + 1 defines a region rather than a single line. Draw the boundary line y = x + 1 (dashed, since y = x+1 itself is not included because the inequality is strict), then shade the side of the line where y is greater than x + 1 — check with a test point such as (0, 0): since 0 is not greater than 0+1=1, (0,0) is on the excluded side."
+          "type": "example",
+          "title": "Find the inequalities for a triangular region",
+          "steps": [
+            "A region is a triangle with corners at (0, 0), (4, 0) and (0, 4). Its edges are included.",
+            "The left edge lies on the y-axis, the line x = 0. The region is to its right, so x ≥ 0.",
+            "The bottom edge lies on the x-axis, the line y = 0. The region is above it, so y ≥ 0.",
+            "The sloping edge joins (4, 0) and (0, 4). Each point on it has x + y = 4.",
+            "Test a point inside, such as (1, 1): 1 + 1 = 2, which is less than 4. So x + y ≤ 4.",
+            "The region is described by x ≥ 0, y ≥ 0 and x + y ≤ 4."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Foxes and chickens",
+          "text": "Draw a large coordinate grid on the floor with chalk, or on a sheet of paper. One group places bottle tops as chickens at chosen points. The other group builds fences to protect them. Each fence is a straight line given as an inequality, such as x ≥ 1 or y < 5. The chickens must all lie inside the fenced region. Swap roles and try to use as few fences as possible."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Start with 2 < 5, which is true. Multiply both sides by −1. Is −2 < −5 still true? Mark both numbers on a number line. Why does multiplying by a negative number turn the inequality sign round?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Use an open circle for < and >, and a filled circle for ≤ and ≥. Solve inequalities like equations, but reverse the sign when you multiply or divide by a negative number. On a graph, draw a solid boundary for ≤ or ≥ and a broken one for < or >, and use a test point to find the wanted region."
         }
       ]
     }

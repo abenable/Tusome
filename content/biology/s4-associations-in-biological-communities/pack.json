@@ -1,0 +1,174 @@
+{
+  "packId": "bio.s4.interrelationships.associations",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.interrelationships.associations",
+      "title": "Associations in Biological Communities",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Interrelationships",
+      "subStrand": "Competition, predation, symbiosis and parasites",
+      "order": 8,
+      "term": 3,
+      "outcomes": [
+        "know what competition is and describe how organisms compete in nature (k, u)",
+        "differentiate prey from predators and describe a predator-prey relationship (u, s)",
+        "understand symbiosis, mutualism, commensalism and parasitism and appreciate their roles in an ecosystem (k, u)",
+        "recognise the role of parasites and vectors in the transmission of common diseases (malaria, bilharzia, nagana, and sleeping sickness) (k, u, v)",
+        "know the adaptations of parasites to their mode of life (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Organisms in a habitat do not live alone. Some compete for food, some hunt others, some help each other and some live off others. These relationships are called associations."
+        },
+        {
+          "type": "heading",
+          "text": "Competition"
+        },
+        {
+          "type": "text",
+          "text": "Competition happens when organisms need the same resource and there is not enough for all of them. Plants compete for light, water, nutrients and space. Animals compete for food, water, shelter, territory and mates."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Competition within one species: maize sown too close together competes for light and nutrients, so the plants grow thin with small cobs. Male Uganda kob fight for small patches of ground where females come to mate.",
+            "Competition between different species: weeds such as spear grass take water and nutrients from beans. In Queen Elizabeth National Park, lions and spotted hyenas hunt the same prey and sometimes steal each other's kills."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "The stronger competitor gets more of the resource, so it survives and reproduces better. The weaker one may die, move away or switch to another resource. Farmers reduce competition by weeding, spacing crops and removing extra seedlings."
+        },
+        {
+          "type": "heading",
+          "text": "Predators and prey"
+        },
+        {
+          "type": "text",
+          "text": "A predator is an animal that hunts, kills and eats other animals. The animal that is eaten is its prey. Examples are lions and Uganda kob, owls and rats, chameleons and grasshoppers, and ladybirds and the aphids on bean plants."
+        },
+        {
+          "type": "list",
+          "items": [
+            "When prey are plentiful, predators have lots of food, so more of them survive and breed.",
+            "As predators increase, they eat more prey, so the prey population falls.",
+            "With less food, many predators starve or fail to breed, so the predator population falls.",
+            "With fewer predators, more prey survive, and the prey population rises again."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "On a graph, both populations rise and fall in waves. The predator peak comes a little after the prey peak, and there are usually fewer predators than prey. In this way predators keep prey numbers in check."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Plot a predator-prey graph",
+          "text": "These made-up counts show rats and owls on a farm over eight years. Rats: 100, 200, 350, 300, 150, 100, 180, 320. Owls: 5, 6, 9, 13, 12, 7, 5, 7. In pairs, draw a graph with years along the bottom. Plot the rats on one line and the owls on another, using a different scale on the right-hand side for owls. Describe the pattern, and explain why the owl peak comes after the rat peak."
+        },
+        {
+          "type": "heading",
+          "text": "Symbiosis"
+        },
+        {
+          "type": "text",
+          "text": "Symbiosis is a close relationship in which two different species live together for a long time. There are three main kinds."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mutualism: both partners benefit. Bacteria in the root nodules of beans and groundnuts turn nitrogen from the air into a form the plant can use, and the plant gives them sugars. Microorganisms in the stomach of a cow digest the cellulose in grass, and get food and a home in return.",
+            "Commensalism: one partner benefits and the other is neither helped nor harmed. Cattle egrets follow grazing cattle and catch the insects the cattle disturb. Orchids and ferns grow on high branches of trees in Mabira forest to reach light, without taking food from the tree.",
+            "Parasitism: one partner, the parasite, lives on or in the other, the host, and feeds on it, causing harm. Ticks on cattle, tapeworms in the human gut, and witchweed (Striga) on the roots of maize and sorghum are parasites."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Parasites that live on the outside of a host, such as ticks, lice and fleas, are ectoparasites. Those that live inside, such as tapeworms, are endoparasites."
+        },
+        {
+          "type": "text",
+          "text": "These associations matter in an ecosystem. Mutualism helps nutrients cycle and supports crops such as beans. Predators and parasites stop populations from growing too large."
+        },
+        {
+          "type": "heading",
+          "text": "Parasites, vectors and disease"
+        },
+        {
+          "type": "text",
+          "text": "A vector is an organism that carries a disease-causing parasite from one host to another. Several serious diseases in Uganda spread this way."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Malaria: caused by a tiny parasite called Plasmodium and carried by the female Anopheles mosquito. She passes the parasite into a person when she bites to feed on blood. Prevention: sleep under treated nets, clear stagnant water where mosquitoes breed, and get early testing and treatment.",
+            "Bilharzia (schistosomiasis): caused by a small worm called Schistosoma. Freshwater snails carry part of its life cycle. Young worms from the snails enter the skin of people who wade or wash in infested water, such as along parts of Lake Victoria and Lake Albert. Prevention: use latrines so worm eggs do not reach the water, avoid infested water, and take the treatment given in mass campaigns.",
+            "Sleeping sickness: caused by a parasite called Trypanosoma, carried by the tsetse fly. It causes fever, then damages the nervous system, causing confusion and extreme sleepiness.",
+            "Nagana: a similar disease of cattle, also caused by trypanosomes carried by tsetse flies. Infected cattle become thin and weak, give less milk and may die."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Tsetse flies are controlled with traps made of blue and black cloth, by clearing bushes near homes and grazing land, and by spraying cattle. Sick people and animals must also be treated."
+        },
+        {
+          "type": "heading",
+          "text": "How parasites are adapted"
+        },
+        {
+          "type": "text",
+          "text": "Ticks are ectoparasites of cattle, goats and dogs. They are adapted in these ways:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "mouthparts with backward-pointing teeth that pierce the skin and hold on tightly",
+            "saliva that stops the host's blood from clotting while they feed",
+            "a flat, tough body that is hard to scratch off, and that stretches to hold a large blood meal",
+            "the ability to sense a host's body heat and to survive months without food",
+            "females lay thousands of eggs, so some young are likely to find a host"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Tapeworms are endoparasites of the human gut. People get them by eating undercooked beef or pork that is infected. They are adapted in these ways:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "hooks and suckers on the head (scolex) that grip the gut wall",
+            "a thick outer covering that protects them from digestive enzymes",
+            "no gut of their own; they absorb digested food through their whole body surface",
+            "a long, flat body with a large surface area for absorption",
+            "they can respire without oxygen, which is scarce in the gut",
+            "each segment has male and female organs and makes huge numbers of eggs"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Cooking meat well, inspecting meat at slaughterhouses and using latrines all prevent tapeworm infection."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Some farmers kill all the owls, snakes and hawks near their farms. How might this affect the numbers of rats and other pests? What would you advise them?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Organisms compete for limited resources such as food, light and space. Predator and prey numbers rise and fall together, with the predator peak coming later. In mutualism both partners benefit, in commensalism one benefits without harm, and in parasitism the parasite harms its host. Vectors such as mosquitoes and tsetse flies spread diseases including malaria, sleeping sickness and nagana."
+        }
+      ]
+    }
+  ]
+}

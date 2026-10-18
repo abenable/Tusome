@@ -1,0 +1,147 @@
+{
+  "packId": "bio.s3.coordination.chemical",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.coordination.chemical",
+      "title": "Chemical Coordination in Humans",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Coordination in Animals",
+      "subStrand": "Hormones and the endocrine system",
+      "order": 4,
+      "term": 2,
+      "outcomes": [
+        "differentiate between hormones and enzymes (u)",
+        "know and understand the effects of various hormones in the human body (k, u)",
+        "know and describe the causes and symptoms of common hormonal disorders/diseases (diabetes, goitre and osteoporosis) in humans (k, u)",
+        "appreciate the role of diet in managing hormonal disorders/diseases in humans (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Kato is walking home in the evening when a dog barks loudly behind him. His heart pounds, he breathes fast and he runs faster than he thought he could. A chemical called adrenaline caused these changes. Coordination is the way the parts of the body work together. Humans have two coordination systems. The nervous system uses nerve impulses. The endocrine system uses hormones."
+        },
+        {
+          "type": "heading",
+          "text": "What a hormone is"
+        },
+        {
+          "type": "text",
+          "text": "A hormone is a chemical messenger. It is made by an endocrine gland and released straight into the blood. The blood carries it all around the body, but only certain organs respond to it. These are its target organs. Endocrine glands have no tubes, or ducts, to carry their products, so they are also called ductless glands."
+        },
+        {
+          "type": "heading",
+          "text": "Hormones and enzymes compared"
+        },
+        {
+          "type": "text",
+          "text": "Hormones and enzymes are both made by the body, and both are needed only in small amounts. But they differ in many ways."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Where made: hormones in endocrine glands; enzymes in all living cells.",
+            "How they travel: hormones in the blood; enzymes stay in cells or pass along ducts, for example into the gut.",
+            "Job: hormones carry messages that change how target organs work; enzymes speed up chemical reactions.",
+            "Where they act: hormones often act far from where they are made; enzymes act where they are made or close by.",
+            "After use: hormones are broken down, mostly in the liver; enzymes are not changed by the reaction and can be used again.",
+            "Chemical nature: all enzymes are proteins; some hormones are proteins and others are not."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The main glands and their hormones"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pituitary gland, at the base of the brain: makes growth hormone, which makes bones and muscles grow. It also makes hormones that control other glands, so it is called the master gland.",
+            "Thyroid gland, in the neck: makes thyroxine, which controls how fast cells use energy. This is called the rate of metabolism. Thyroxine also helps children grow and their brains develop. The gland needs iodine to make it.",
+            "Adrenal glands, on top of the kidneys: make adrenaline at times of fear, danger or excitement. Adrenaline makes the heart and breathing faster and releases glucose into the blood. The body is ready to fight or run.",
+            "Pancreas, below the stomach: small groups of cells in it make insulin, which lowers blood glucose. Insulin makes the liver and muscles store extra glucose. The pancreas also makes glucagon, which raises blood glucose when it falls too low.",
+            "Ovaries, in females: make oestrogen and progesterone, which control the menstrual cycle.",
+            "Testes, in males: make testosterone, which controls the making of sperm."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Hormone role play",
+          "text": "Make three sets of cards. One set names glands, one names hormones and one names target organs. Each learner takes a card. Each gland finds its hormone. The hormone then walks through the classroom, which stands for the bloodstream, to find its target organ. Each group tells the class what the hormone does when it arrives."
+        },
+        {
+          "type": "heading",
+          "text": "Hormones at adolescence"
+        },
+        {
+          "type": "text",
+          "text": "Adolescence is the time between childhood and adulthood. At puberty, the pituitary gland signals the ovaries or testes to make more sex hormones. These hormones cause changes called secondary sexual characteristics."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In girls, oestrogen makes the breasts develop and the hips widen, and menstruation (monthly periods) begins.",
+            "In boys, testosterone deepens the voice, makes hair grow on the face and builds muscle. The testes begin to make sperm.",
+            "In both, there is a growth spurt, and hair grows under the arms and around the private parts. The skin becomes oilier, which can cause pimples."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "These changes are normal. They begin at different ages in different people."
+        },
+        {
+          "type": "heading",
+          "text": "Common hormonal disorders"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diabetes: the blood glucose level stays too high. In type 1 diabetes the pancreas makes little or no insulin. It often starts in childhood. In type 2 diabetes the body's cells stop responding well to insulin. It is linked to being overweight, sugary food, lack of exercise and family history. Symptoms include passing a lot of urine, great thirst, tiredness, weight loss, blurred vision and slow-healing wounds.",
+            "Goitre: the thyroid gland swells, forming a lump at the front of the neck. The usual cause is too little iodine in the diet. Without iodine the gland cannot make enough thyroxine, so it grows larger. Symptoms include the swelling, tiredness and sometimes difficulty in swallowing or breathing.",
+            "Osteoporosis: the bones become thin, weak and easy to break. A common cause is the fall in oestrogen in women after their periods stop, at around 50 years. Low testosterone in men, too little calcium and vitamin D, little exercise and smoking add to the risk. Often there are no symptoms until a bone breaks. Other signs are back pain, loss of height and a bent back."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Diet and hormonal disorders"
+        },
+        {
+          "type": "text",
+          "text": "Good food choices, together with medicine from a health worker, help people manage these conditions."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diabetes: eat regular meals and do not skip them. Choose high-fibre foods such as millet, sorghum, beans, peas and vegetables. Keep portions of matooke, posho, cassava and rice moderate. Cut down on sodas, sweets and white bread. Stay active.",
+            "Goitre: cook with iodised salt. Most salt sold in Uganda has iodine added. Fish and eggs also give some iodine.",
+            "Osteoporosis: eat calcium-rich foods such as milk, yoghurt, small fish like mukene eaten with their bones, beans and dark green vegetables such as dodo. Some time in sunlight helps the skin make vitamin D. Walking and exercise keep bones strong."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "A one-day meal plan for a person with diabetes",
+          "steps": [
+            "Breakfast: millet porridge with little or no sugar, a boiled egg and a slice of pawpaw.",
+            "Mid-morning: a small handful of groundnuts.",
+            "Lunch: a small portion of matooke with beans and a large helping of cabbage or dodo.",
+            "Afternoon: an orange or a guava.",
+            "Supper: a small portion of brown rice or posho, fish or chicken stew, and green vegetables.",
+            "Drinks: water through the day instead of soda or sweetened juice."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "More people in Ugandan towns have type 2 diabetes now than in the past. What changes in the way people eat, travel and work might explain this?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Hormones are chemical messengers made by endocrine glands and carried in the blood to target organs. Enzymes, by contrast, speed up chemical reactions. Insulin controls blood glucose, thyroxine needs iodine, and sex hormones cause the changes of puberty. Diabetes, goitre and osteoporosis are hormonal disorders that a good diet helps to prevent or manage."
+        }
+      ]
+    }
+  ]
+}

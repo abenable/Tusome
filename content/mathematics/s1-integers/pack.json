@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.working-with-integers",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,6 +11,7 @@
       "strand": "Numbers",
       "subStrand": "Integers",
       "order": 2,
+      "term": 1,
       "outcomes": [
         "identify, read and write natural numbers as numerals and words in million, billion and trillion. (u s)",
         "differentiate between natural numbers and whole numbers/integers. (u)",
@@ -25,31 +26,207 @@
       "body": [
         {
           "type": "text",
-          "text": "Natural numbers (1, 2, 3, ...) are the counting numbers. Whole numbers add zero (0, 1, 2, 3, ...). Integers extend further to include negative numbers (..., -2, -1, 0, 1, 2, ...) — these are directed numbers, because the sign shows a direction: above or below zero, such as a temperature, or above or below sea level."
+          "text": "Uganda has more than 45 million people, and its national budget is counted in trillions of shillings. At night, the Rwenzori peaks drop below 0 °C. This topic deals with very large numbers and numbers below zero."
+        },
+        {
+          "type": "heading",
+          "text": "Reading and writing large numbers"
         },
         {
           "type": "text",
-          "text": "For example, a temperature of -5°C is 5 degrees below zero, and an altitude of -100 m means 100 metres below sea level. Directed numbers combine by moving along a number line: -5 + 3 means starting at -5 and moving 3 to the right, landing on -2."
+          "text": "Large numbers are easier to read when the digits are grouped in threes from the right."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "One thousand = 1,000 (3 zeros)",
+            "One million = 1,000,000 (6 zeros)",
+            "One billion = 1,000,000,000 (9 zeros)",
+            "One trillion = 1,000,000,000,000 (12 zeros)"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Write 3,405,020,718 in words",
+          "steps": [
+            "Split into groups of three: 3 | 405 | 020 | 718.",
+            "Name the groups from the left: billions, millions, thousands, units.",
+            "3 billion, 405 million, 20 thousand, 718.",
+            "In words: three billion, four hundred and five million, twenty thousand, seven hundred and eighteen."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Natural numbers, whole numbers and integers"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Natural numbers are the counting numbers: 1, 2, 3, 4, …",
+            "Whole numbers are the natural numbers and zero: 0, 1, 2, 3, …",
+            "Integers are the whole numbers and their negatives: …, −3, −2, −1, 0, 1, 2, 3, …"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Directed numbers"
         },
         {
           "type": "text",
-          "text": "When a calculation mixes operations, follow the hierarchy of operations (BODMAS): Brackets, then Of/Orders (powers), then Division and Multiplication (left to right), then Addition and Subtraction (left to right). Work out 3 + 4 x (6 - 2): first the bracket gives 6 - 2 = 4, then the multiplication gives 4 x 4 = 16, then the addition gives 3 + 16 = 19."
+          "text": "A directed number has a sign that shows its direction from zero. Positive numbers lie to the right of zero on a number line, and negative numbers to the left. Numbers get bigger as you move right."
+        },
+        {
+          "type": "text",
+          "text": "A temperature of −3 °C is 3 degrees below freezing. A basement in a Kampala building may be floor −1. A trader who owes UGX 20,000 can write her balance as −20,000."
+        },
+        {
+          "type": "heading",
+          "text": "Working with integers"
+        },
+        {
+          "type": "text",
+          "text": "Adding a positive number moves you right on the number line. Adding a negative number moves you left. Subtracting a negative number is the same as adding a positive number."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Same signs multiplied or divided give a positive answer: (−4) × (−3) = 12.",
+            "Different signs multiplied or divided give a negative answer: (−12) ÷ 3 = −4."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Temperature on Mt Rwenzori",
+          "steps": [
+            "At 5 a.m. the temperature near a peak is −4 °C. By noon it has risen by 9 °C.",
+            "Start at −4 on the number line and move 9 to the right.",
+            "−4 + 9 = 5, so the noon temperature is 5 °C."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "With several operations, follow the order called BODMAS: Brackets, Of, Division and Multiplication, then Addition and Subtraction. Work from left to right within each level."
+        },
+        {
+          "type": "example",
+          "title": "Work out −3 + 4 × (−2) − (6 − 10) ÷ 2",
+          "steps": [
+            "Brackets first: 6 − 10 = −4.",
+            "Division and multiplication: 4 × (−2) = −8 and (−4) ÷ 2 = −2.",
+            "The calculation is now −3 + (−8) − (−2).",
+            "Adding −8 means subtracting 8. Subtracting −2 means adding 2.",
+            "−3 − 8 + 2 = −9."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Even, odd, prime and composite numbers"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "An even number can be divided by 2 exactly: 2, 4, 6, 8, …",
+            "An odd number leaves a remainder of 1 when divided by 2: 1, 3, 5, 7, …",
+            "A prime number has exactly two factors, 1 and itself: 2, 3, 5, 7, 11, 13, …",
+            "A composite number has more than two factors: 4, 6, 8, 9, 10, …"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A factor of a number divides into it exactly. The number 1 is neither prime nor composite. The number 2 is the only even prime."
+        },
+        {
+          "type": "heading",
+          "text": "Prime factorisation"
+        },
+        {
+          "type": "text",
+          "text": "Prime factorisation means writing a number as a product of primes. Divide by the smallest prime that works until you reach 1."
+        },
+        {
+          "type": "example",
+          "title": "Find the prime factorisation of 360",
+          "steps": [
+            "360 ÷ 2 = 180, then 180 ÷ 2 = 90, then 90 ÷ 2 = 45.",
+            "45 ÷ 3 = 15, then 15 ÷ 3 = 5.",
+            "5 ÷ 5 = 1.",
+            "So 360 = 2 × 2 × 2 × 3 × 3 × 5."
+          ]
         },
         {
           "type": "equation",
-          "expr": "3 + 4 x (6 - 2) = 3 + 4 x 4 = 3 + 16 = 19"
+          "latex": "360 = 2^3 \\times 3^2 \\times 5",
+          "speech": "three hundred and sixty equals two cubed times three squared times five"
+        },
+        {
+          "type": "heading",
+          "text": "HCF and LCM"
         },
         {
           "type": "text",
-          "text": "A prime number has exactly two factors: 1 and itself (2, 3, 5, 7, 11, ...). A composite number has more than two factors. Every composite number can be broken down into a unique product of prime factors — for 60: 60 = 2 x 30 = 2 x 2 x 15 = 2 x 2 x 3 x 5, so 60 = 2² x 3 x 5."
+          "text": "The highest common factor (HCF) is the biggest number that divides exactly into two or more numbers. The lowest common multiple (LCM) is the smallest number they all divide into. Using prime factors, the HCF takes each shared prime with its lowest power. The LCM takes every prime with its highest power."
         },
         {
-          "type": "equation",
-          "latex": "60 = 2^2 \\times 3 \\times 5"
+          "type": "example",
+          "title": "Packing fruit and timing buses",
+          "steps": [
+            "Nakato has 24 mangoes and 36 oranges. She wants to make identical bags with no fruit left over. What is the largest number of bags?",
+            "24 = 2³ × 3 and 36 = 2² × 3².",
+            "HCF = 2² × 3 = 12. She can make 12 bags, each with 2 mangoes and 3 oranges.",
+            "A bus to Jinja leaves the park every 24 minutes. A bus to Masaka leaves every 36 minutes. Both leave at 8:00 a.m.",
+            "LCM = 2³ × 3² = 72. They next leave together 72 minutes later, at 9:12 a.m."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Divisibility tests"
         },
         {
           "type": "text",
-          "text": "The Highest Common Factor (HCF) of two numbers is the largest number that divides both exactly; the Lowest Common Multiple (LCM) is the smallest number that both divide into exactly. Using prime factors, the HCF takes the lowest power of each shared prime, and the LCM takes the highest power of every prime that appears. For 60 = 2² x 3 x 5 and 42 = 2 x 3 x 7: HCF = 2 x 3 = 6, and LCM = 2² x 3 x 5 x 7 = 420."
+          "text": "A divisibility test tells you whether a number divides exactly, without doing the division."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "By 2: the last digit is even.",
+            "By 3: the sum of the digits divides by 3.",
+            "By 4: the last two digits form a number that divides by 4.",
+            "By 5: the last digit is 0 or 5.",
+            "By 6: the number passes the tests for 2 and 3.",
+            "By 9: the sum of the digits divides by 9.",
+            "By 10: the last digit is 0."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Test 7,452",
+          "steps": [
+            "Digit sum: 7 + 4 + 5 + 2 = 18. This divides by 3 and 9, so 7,452 does too.",
+            "The last digit is even, so it divides by 2, and therefore by 6.",
+            "The last two digits make 52 = 4 × 13, so it divides by 4.",
+            "It does not end in 0 or 5, so it does not divide by 5 or 10."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Four 4s",
+          "text": "In groups, use exactly four 4s and any operations to make each whole number from 1 to 20. For example, (4 + 4 × 4) ÷ 4 = 5. Check that each calculation follows the order of operations."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "List the factors of each number from 1 to 30. Which numbers have an odd number of factors? What do they have in common?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Integers are the whole numbers and their negatives. Same signs give a positive product or quotient; different signs give a negative one. Use BODMAS for the order of operations, and use prime factors to find the HCF and LCM."
         }
       ]
     }

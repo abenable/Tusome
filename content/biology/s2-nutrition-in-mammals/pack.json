@@ -1,0 +1,189 @@
+{
+  "packId": "bio.s2.nutrition.mammals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.nutrition.mammals",
+      "title": "Nutrition in Mammals",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Nutrition in Plants and Animals",
+      "subStrand": "Enzymes, teeth, digestion and absorption",
+      "order": 5,
+      "term": 2,
+      "outcomes": [
+        "understand the role of enzymes in influencing life processes; and appreciate that the working of enzymes may be affected by different factors (No details of lock and key mechanism required) (u, s)",
+        "conduct experiments on and explain the effects of pH and temperature on enzyme activity (s, gs)",
+        "understand the effect of pH and temperature on enzyme activity (u)",
+        "know and identify different types of mammalian teeth, and relate their structure and position in the jaw to diet (k, u, s)",
+        "understand the importance of oral hygiene, and describe good practice in caring for teeth and gums in humans (u, v)",
+        "appreciate the structure of the different parts of the mammalian alimentary canal, and its role in the digestion of food (k, u)",
+        "understand how the end products of digestion are absorbed and assimilated (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A cow chews grass for hours and a dog cracks a bone. Mammals are heterotrophs: they get their food from plants or other animals. Most food is made of large molecules that the body cannot use straight away. It must first be broken down."
+        },
+        {
+          "type": "heading",
+          "text": "Enzymes"
+        },
+        {
+          "type": "text",
+          "text": "Enzymes are proteins that speed up chemical reactions in living things without being used up. They are called biological catalysts. Each enzyme acts on only one kind of substance. Without enzymes, the reactions in cells would be far too slow to keep us alive. They control digestion, respiration and many other life processes."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Amylase, from the salivary glands and the pancreas, breaks starch into a sugar called maltose.",
+            "Proteases, such as pepsin in the stomach, break proteins into amino acids.",
+            "Lipase, from the pancreas, breaks fats and oils into fatty acids and glycerol.",
+            "Maltase, in the small intestine, breaks maltose into glucose."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Temperature, pH and enzymes"
+        },
+        {
+          "type": "text",
+          "text": "As the temperature rises, enzymes work faster, up to their best temperature, called the optimum. For human enzymes this is about 37 °C, our body temperature. Above the optimum, the enzyme changes shape and stops working. It is denatured, and the damage is permanent. Cold does not destroy enzymes; it only slows them, which is one reason food keeps longer in a fridge."
+        },
+        {
+          "type": "text",
+          "text": "Each enzyme also has an optimum pH. Pepsin works best in the strong acid of the stomach, about pH 2. Salivary amylase works best near neutral, about pH 7. The enzymes in the small intestine work best in slightly alkaline conditions, about pH 8. Far from its optimum pH, an enzyme stops working."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Saliva and starch",
+          "text": "Chew a piece of plain bread or boiled cassava for two minutes. It starts to taste sweet, because amylase in saliva turns starch into sugar. To test this further, stir a pinch of cassava flour into hot water and let it cool. Pour equal amounts into four cups. Each person uses only their own saliva. Add saliva to cup A and keep it in warm water; add saliva to cup B and keep it in cold water; add boiled and cooled saliva to cup C; add saliva and a few drops of lemon juice to cup D and keep it warm. After 10 minutes, put a drop from each cup on a white saucer and add dilute iodine. Where the starch has gone, the amylase has worked."
+        },
+        {
+          "type": "heading",
+          "text": "Mammalian teeth"
+        },
+        {
+          "type": "text",
+          "text": "A tooth has a crown above the gum and a root fixed in the jawbone. The crown is covered with enamel, the hardest substance in the body. Under the enamel is dentine, which is like bone. In the centre is the pulp cavity, which holds blood vessels and nerves. Cement and fibres hold the root in its socket."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Incisors are at the front. They are chisel-shaped, with sharp edges for cutting and biting.",
+            "Canines are next to the incisors. They are long and pointed, for gripping and tearing.",
+            "Premolars are behind the canines. They are broad, with ridges called cusps, for grinding and chewing.",
+            "Molars are at the back. They are the largest teeth, with several cusps for crushing and grinding."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Herbivores, such as cows and goats, have no upper incisors or canines, but a hard pad instead. The lower incisors cut grass against the pad. A gap, the diastema, lets the tongue move grass about. Broad, ridged molars grind the grass as the jaw moves from side to side. A goat's formula is i 0/3, c 0/1, pm 3/3, m 3/3, giving 32 teeth.",
+            "Carnivores, such as dogs and lions, have long, sharp canines to kill prey and tear meat. Large, blade-like cheek teeth slice meat and crack bones as the jaw moves up and down.",
+            "Omnivores, such as humans and pigs, eat both plants and animals. They have all four types of teeth, of medium size, for cutting and grinding."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A dental formula shows the number of each type of tooth in one half of the upper jaw, over the same half of the lower jaw. Multiply the total by 2 to get the number of teeth in the whole mouth."
+        },
+        {
+          "type": "equation",
+          "latex": "i\\,\\tfrac{2}{2}\\;\\; c\\,\\tfrac{1}{1}\\;\\; pm\\,\\tfrac{2}{2}\\;\\; m\\,\\tfrac{3}{3} = 32",
+          "speech": "Adult human: incisors two over two, canines one over one, premolars two over two, molars three over three, thirty-two teeth in all"
+        },
+        {
+          "type": "example",
+          "title": "Writing the dental formula of a dog",
+          "steps": [
+            "Count the teeth in one half of the upper jaw: 3 incisors, 1 canine, 4 premolars, 2 molars.",
+            "Count the same half of the lower jaw: 3 incisors, 1 canine, 4 premolars, 3 molars.",
+            "Write each pair as upper over lower: i 3/3, c 1/1, pm 4/4, m 2/3.",
+            "Teeth in one half = 3 + 1 + 4 + 2 in the upper jaw, plus 3 + 1 + 4 + 3 in the lower jaw = 10 + 11 = 21.",
+            "Total teeth = 21 × 2 = 42."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Caring for teeth and gums"
+        },
+        {
+          "type": "text",
+          "text": "Plaque is a sticky layer of food and bacteria that forms on teeth. The bacteria feed on sugar and make acid. The acid slowly dissolves the enamel and then the dentine, making a hole. This is tooth decay. When it reaches the pulp, it causes toothache and infection. Plaque at the gum line also makes gums red, swollen and bleeding. This is gum disease, and it can make teeth loose."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brush your teeth gently at least twice a day, especially before bed, with fluoride toothpaste, which makes enamel stronger. A clean chewing stick also works.",
+            "Eat fewer sweets and sugary drinks, especially between meals.",
+            "Eat foods rich in calcium and vitamins C and D.",
+            "Rinse your mouth with clean water after meals, and never open bottles with your teeth.",
+            "Visit a dental health worker for check-ups."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The alimentary canal"
+        },
+        {
+          "type": "text",
+          "text": "Digestion is the breakdown of large, insoluble food molecules into small, soluble ones that can pass into the blood. Teeth and stomach muscles break food into smaller pieces; this is mechanical digestion. Enzymes break the molecules down; this is chemical digestion. It happens in the alimentary canal, a long tube from the mouth to the anus."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Mouth: teeth chew the food. Saliva wets it, and salivary amylase starts to digest starch. The tongue rolls the food into a ball and pushes it back to be swallowed.",
+            "Oesophagus (gullet): a muscular tube to the stomach. Waves of muscle squeezing, called peristalsis, push the food along.",
+            "Stomach: a muscular bag that churns the food for a few hours. Gastric juice contains hydrochloric acid, which kills germs, and pepsin, which starts to digest protein.",
+            "Duodenum: the first part of the small intestine. Bile from the liver, stored in the gall bladder, neutralises the acid and breaks fat into tiny droplets. Juice from the pancreas adds amylase, protease and lipase.",
+            "Ileum: the rest of the small intestine. Enzymes from its wall finish digestion, producing glucose, amino acids, fatty acids and glycerol. The digested food is absorbed here.",
+            "Large intestine: it absorbs most of the remaining water. Undigested food, mainly fibre, becomes faeces.",
+            "Rectum and anus: faeces are stored in the rectum and passed out through the anus. This is egestion."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Absorption and assimilation"
+        },
+        {
+          "type": "text",
+          "text": "Absorption is the movement of digested food from the small intestine into the blood. The ileum is well suited to this. It is very long, and its inner wall is covered with millions of tiny, finger-like villi. These give a huge surface area. The wall of each villus is only one cell thick. Inside each villus is a network of blood capillaries, which absorb glucose, amino acids, vitamins and mineral salts. A lymph vessel called a lacteal absorbs fatty acids and glycerol."
+        },
+        {
+          "type": "text",
+          "text": "Assimilation is the use of absorbed food by the body's cells."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Carbohydrates: glucose is used in respiration to release energy. Extra glucose is stored as glycogen in the liver and muscles, or changed into fat.",
+            "Proteins: amino acids are used to build new cells and repair tissues, and to make enzymes and hormones. Extra amino acids are broken down in the liver, and their waste becomes urea.",
+            "Lipids: they are used to build cell membranes, stored under the skin as an energy store, and used to release energy.",
+            "Mineral salts: calcium and phosphorus build bones and teeth, iron makes haemoglobin, and iodine is used to make the hormone thyroxine.",
+            "Vitamins: they help body processes, for example vitamin K helps blood to clot."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A bead model of digestion",
+          "text": "Thread beads or bottle tops onto a string to stand for a starch molecule. One learner plays an enzyme and unthreads the beads one by one. Try to pass the whole string, and then single beads, through the holes of a mosquito net held up as the wall of the intestine. Discuss why only small molecules can be absorbed."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A person is about 1.7 m tall, yet the small intestine is several metres long and folded inside the body. Why might a long, folded intestine help a mammal?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Enzymes are proteins that speed up chemical reactions in living things without being used up. They are called biological catalysts. Each enzyme acts on only one kind of substance. Without enzymes, the reactions in cells would be far too slow to keep us alive. They control digestion, respiration and many other life processes."
+        }
+      ]
+    }
+  ]
+}

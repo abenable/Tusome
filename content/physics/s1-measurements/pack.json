@@ -1,0 +1,261 @@
+{
+  "packId": "phy.s1.matter.measurements",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.matter.measurements",
+      "title": "Measurements in Physics",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Mechanics and Properties of Matter",
+      "subStrand": "Measuring physical quantities",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "understand how to estimate and measure physical quantities: length, area, volume, mass, and time (u, s, gs)",
+        "explain how they choose the right measuring instrument and units; explain how to use the instruments to ensure accuracy (u, s)",
+        "appreciate that the accuracy of measurements may be improved by making several measurements and taking an average value (gs, v/a)",
+        "identify potential sources of error in measurement and devise strategies to minimise them (u, s, v/a)",
+        "understand the scientific method and explain the steps used in relation to the study of physics (u)",
+        "know that practical investigations involve a ‘fair test’, analysis, prediction and justification of results, and observations, and apply learning in practice (k, s)",
+        "record data in graphs and charts and look for trends (u, s)",
+        "understand and be able to use scientific notation and significant figures (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "A tailor in Owino market measures cloth before cutting it. A shopkeeper weighs sugar. Measuring is part of daily life. In physics, careful measurement is how we test our ideas."
+        },
+        {
+          "type": "heading",
+          "text": "Physical quantities and units"
+        },
+        {
+          "type": "text",
+          "text": "A physical quantity is anything that can be measured, such as length, mass or time. Every measurement has a number and a unit, as in 5 m. Scientists everywhere use the same units, called SI units. The three you will use most are these."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Length is measured in metres (m).",
+            "Mass is measured in kilograms (kg).",
+            "Time is measured in seconds (s)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A prefix makes a unit bigger or smaller. Kilo means one thousand, so 1 km = 1000 m. Centi means one hundredth and milli means one thousandth, so 1 m = 100 cm = 1000 mm."
+        },
+        {
+          "type": "heading",
+          "text": "Estimate first"
+        },
+        {
+          "type": "text",
+          "text": "An estimate is a sensible guess made without an instrument. One long step is roughly one metre. Estimating first helps you choose the right instrument and notice a reading that is clearly wrong."
+        },
+        {
+          "type": "heading",
+          "text": "Length and area"
+        },
+        {
+          "type": "text",
+          "text": "A tape measure suits long lengths, such as a football pitch. A metre rule measures up to 1 m to the nearest millimetre. For very small lengths, such as the thickness of a wire, engineers use vernier calipers and a micrometer screw gauge."
+        },
+        {
+          "type": "text",
+          "text": "Area is the size of a surface, measured in square metres (m²). A desk top 1.2 m long and 0.5 m wide has an area of 1.2 × 0.5 = 0.6 m²."
+        },
+        {
+          "type": "equation",
+          "expr": "area of a rectangle = length × width",
+          "speech": "area of a rectangle equals length times width"
+        },
+        {
+          "type": "heading",
+          "text": "Volume"
+        },
+        {
+          "type": "text",
+          "text": "Volume is the amount of space an object takes up. Its SI unit is the cubic metre (m³). In class we often use cubic centimetres (cm³). One millilitre (ml) is the same as 1 cm³."
+        },
+        {
+          "type": "equation",
+          "expr": "volume of a rectangular block = length × width × height",
+          "speech": "volume of a rectangular block equals length times width times height"
+        },
+        {
+          "type": "example",
+          "title": "Find the volume of a block of wood",
+          "steps": [
+            "A block of wood is 20 cm long, 5 cm wide and 4 cm high.",
+            "Volume = length × width × height = 20 × 5 × 4",
+            "Volume = 400 cm³",
+            "1 m³ = 100 cm × 100 cm × 100 cm = 1 000 000 cm³",
+            "So 400 cm³ = 400 ÷ 1 000 000 = 0.0004 m³"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To measure a liquid, use a measuring cylinder. The water surface curves slightly where it meets the glass. This curve is called the meniscus. Read the scale at the bottom of the meniscus, with your eye level with it."
+        },
+        {
+          "type": "text",
+          "text": "A stone has no simple formula for its volume. Lower it into a measuring cylinder that holds some water. The rise in the water level equals the volume of the stone. For a larger stone, fill a displacement can up to its spout, lower the stone in, and measure the water that flows out."
+        },
+        {
+          "type": "example",
+          "title": "Find the volume of a stone",
+          "steps": [
+            "Water in a measuring cylinder reads 50 cm³.",
+            "Atim lowers a stone into the water on a thread.",
+            "The water level rises to 72 cm³.",
+            "Volume of the stone = 72 − 50 = 22 cm³."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Mass and time"
+        },
+        {
+          "type": "text",
+          "text": "Mass is the amount of matter in an object. It is measured with a beam balance or an electronic balance, in grams (g) or kilograms (kg). Check that the balance reads zero before you start."
+        },
+        {
+          "type": "text",
+          "text": "Time is measured with a stop clock or a stopwatch. A digital one shows numbers. An analogue one has hands that move round a dial."
+        },
+        {
+          "type": "heading",
+          "text": "Choosing instruments and units"
+        },
+        {
+          "type": "text",
+          "text": "Choose an instrument whose marks suit the size of the quantity. Accuracy means how close a measurement is to the true value. A ruler measures a pen more accurately than a tape measure does. Choose a sensible unit too: kilometres for a journey, millimetres for a book's thickness."
+        },
+        {
+          "type": "heading",
+          "text": "Errors and how to reduce them"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Parallax error comes from reading a scale at an angle. Keep your eye straight in line with the mark.",
+            "Zero error happens when an instrument does not read zero when it should. Reset it before measuring, or subtract the starting reading.",
+            "Reaction time makes you start or stop a stopwatch late. Time a longer event, such as 20 paces instead of 2."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "No single measurement is perfect. Repeat each measurement several times and take the average. Small errors above and below the true value then tend to cancel out, and a reading far from the others stands out."
+        },
+        {
+          "type": "example",
+          "title": "Find the average time for 20 paces",
+          "steps": [
+            "Okello times Nakato walking 20 paces, three times.",
+            "The readings are 14.2 s, 13.8 s and 14.3 s.",
+            "Sum = 14.2 + 13.8 + 14.3 = 42.3 s",
+            "Average = 42.3 ÷ 3 = 14.1 s"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Estimate, then measure",
+          "text": "In pairs, estimate and then measure: the width of your classroom, the length and width of a desk top, the time a friend takes to walk 20 paces, and the volume of a small stone. Use a marked jug or a syringe if there is no measuring cylinder. Repeat each measurement three times, record the results in a table and find the averages."
+        },
+        {
+          "type": "heading",
+          "text": "The scientific method"
+        },
+        {
+          "type": "text",
+          "text": "The scientific method is the careful way scientists find things out. It has these steps."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Observe something and ask a question.",
+            "Suggest a hypothesis, a possible explanation that can be tested.",
+            "Predict what will happen if the hypothesis is right.",
+            "Plan and carry out an experiment, and record the results.",
+            "Analyse the results and look for patterns.",
+            "Draw a conclusion: was the prediction right, and why?",
+            "Share the findings so that others can check them."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "A fair test"
+        },
+        {
+          "type": "text",
+          "text": "In a fair test, you change only one thing and keep everything else the same. The thing you change is the independent variable. The thing you measure is the dependent variable. The things you keep the same are the controlled variables."
+        },
+        {
+          "type": "text",
+          "text": "Mugisha wants to know whether salty water cools faster than plain water. The liquid is the independent variable. The temperature, read every two minutes, is the dependent variable. He keeps the starting temperature, the volume of liquid and the type of cup the same. If he also changed the cup, he could not tell which change caused his result."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "What could go wrong with Mugisha's measurements? How could he make his experiment better?"
+        },
+        {
+          "type": "heading",
+          "text": "Tables, graphs and trends"
+        },
+        {
+          "type": "text",
+          "text": "Record results in a table, with a heading and a unit for each column. Then plot a graph, with the independent variable on the horizontal axis. A trend is the general pattern, such as the temperature falling quickly at first and then more slowly. A point far from the trend may be a mistake, so measure it again."
+        },
+        {
+          "type": "heading",
+          "text": "Scientific notation and significant figures"
+        },
+        {
+          "type": "text",
+          "text": "Scientific notation writes a very large or very small number as a number between 1 and 10 multiplied by a power of ten."
+        },
+        {
+          "type": "example",
+          "title": "Write numbers in scientific notation",
+          "steps": [
+            "The Earth is about 150 000 000 km from the Sun.",
+            "Move the decimal point 8 places to the left to get 1.5.",
+            "So 150 000 000 km = 1.5 × 10⁸ km.",
+            "A sheet of paper is about 0.0001 m thick.",
+            "Move the decimal point 4 places to the right to get 1.",
+            "So 0.0001 m = 1 × 10⁻⁴ m."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Significant figures are the digits in a number that show how accurate it is. Zeros at the start of a number, as in 0.0045, are not significant. To round, look at the next digit. If it is 5 or more, round up."
+        },
+        {
+          "type": "example",
+          "title": "Round to significant figures",
+          "steps": [
+            "Round 4.3172 to 3 significant figures.",
+            "The first three significant figures are 4, 3 and 1. The next digit, 7, is 5 or more, so round up.",
+            "So 4.3172 becomes 4.32.",
+            "Round 0.004568 to 2 significant figures.",
+            "The zeros at the start do not count. The figures are 4 and 5, and the next digit, 6, rounds up.",
+            "So 0.004568 becomes 0.0046."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Every measurement has a number and a unit. Choose an instrument and unit that suit the quantity, read scales at eye level, and repeat measurements to find an average. In a fair test, change one variable, measure one, and keep the rest the same."
+        }
+      ]
+    }
+  ]
+}

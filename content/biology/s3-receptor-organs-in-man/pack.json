@@ -1,0 +1,143 @@
+{
+  "packId": "bio.s3.coordination.receptor-organs",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.coordination.receptor-organs",
+      "title": "Receptor Organs in Man",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Coordination in Animals",
+      "subStrand": "The eye and the ear",
+      "order": 6,
+      "term": 2,
+      "outcomes": [
+        "understand the roles and functions of the human eye and ear as sense organs (u)",
+        "understand what short and long sightedness is and how they can be corrected (u, s, v)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Akello sits at the back of the classroom. She hears her teacher clearly, but the writing on the board looks blurred. A sense organ is a group of receptor cells that detect a particular stimulus and send impulses to the brain. Humans have five: the eyes detect light, the ears detect sound, the nose and tongue detect chemicals, and the skin detects touch, heat, cold and pain."
+        },
+        {
+          "type": "heading",
+          "text": "The outside of the eye"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Eyebrows and eyelashes keep sweat and dust out of the eye.",
+            "Eyelids close to protect the eye and spread tears when you blink.",
+            "Tear glands make tears, which keep the eye moist, wash away dust and kill some bacteria.",
+            "The conjunctiva is a thin, clear layer covering the front of the eye.",
+            "The sclera is the tough white outer coat.",
+            "The iris is the coloured ring. The pupil is the black hole at its centre."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Inside the eye"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cornea: the clear front window of the eye. It lets light in and bends it the most.",
+            "Aqueous humour: a watery liquid behind the cornea that keeps the front of the eye in shape.",
+            "Iris: a ring of muscle that changes the size of the pupil, controlling how much light enters.",
+            "Lens: clear and flexible. It changes shape to focus light on the retina.",
+            "Ciliary muscles and suspensory ligaments: they hold the lens and change its shape.",
+            "Vitreous humour: a clear jelly that keeps the eyeball round.",
+            "Retina: the light-sensitive layer at the back. Its rods work in dim light and see only black and white. Its cones work in bright light and detect colour.",
+            "Fovea, or yellow spot: the part of the retina with the most cones, where vision is sharpest.",
+            "Choroid: a dark layer with blood vessels. It feeds the retina and stops light reflecting inside the eye.",
+            "Optic nerve: carries impulses from the retina to the brain.",
+            "Blind spot: where the optic nerve leaves the eye. It has no rods or cones, so it cannot detect light."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How we see"
+        },
+        {
+          "type": "text",
+          "text": "Light from an object passes through the cornea and pupil. The cornea and lens bend the light to form a sharp image on the retina. The image is small and upside down. Rods and cones turn the light into impulses, which the optic nerve carries to the brain. The brain makes sense of the image and lets us see it the right way up."
+        },
+        {
+          "type": "text",
+          "text": "Focusing on objects at different distances is called accommodation. For a near object, the ciliary muscles contract, the ligaments slacken and the lens becomes fatter. For a distant object, the ciliary muscles relax, the ligaments pull tight and the lens becomes thinner."
+        },
+        {
+          "type": "text",
+          "text": "In bright light the iris makes the pupil smaller, which protects the retina. In dim light the pupil widens to let in more light."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Find your blind spot",
+          "text": "On a piece of paper, draw a small cross. Draw a dot the size of a bean 6 cm to the right of it. Hold the paper at arm's length, close your left eye and stare at the cross with your right eye. Slowly bring the paper towards your face. At one point the dot disappears, because its image falls on your blind spot. Next, ask a partner to cover their eyes for a few seconds and then look towards a window. Watch what happens to their pupils."
+        },
+        {
+          "type": "heading",
+          "text": "Short and long sightedness"
+        },
+        {
+          "type": "text",
+          "text": "Some eyes cannot focus light exactly on the retina, so the image is blurred. Spectacles or contact lenses correct this by bending the light a little before it enters the eye."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Short sightedness: near objects are clear, but distant objects are blurred. The eyeball is too long, or the lens is too strong, so light from far objects focuses in front of the retina. It is corrected with a concave (diverging) lens, which is thinner in the middle.",
+            "Long sightedness: distant objects are clear, but near objects are blurred. The eyeball is too short, or the lens is too weak, so light from near objects would focus behind the retina. It is corrected with a convex (converging) lens, which is thicker in the middle."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "With age, the lens becomes less flexible, so many adults over 40 need reading glasses. A learner who cannot read the board, gets headaches when reading or holds books very close should have an eye test at a health facility. The right spectacles make reading and learning much easier."
+        },
+        {
+          "type": "heading",
+          "text": "The ear"
+        },
+        {
+          "type": "text",
+          "text": "The ear detects sound and helps keep the body balanced. It has three parts: the outer ear, the middle ear and the inner ear."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pinna: the flap outside the head that collects sound waves.",
+            "Ear canal: a tube that leads sound to the eardrum. Hairs and wax trap dust and germs.",
+            "Eardrum: a thin membrane that vibrates when sound waves hit it. It separates the outer and middle ear.",
+            "Ossicles: three tiny bones in the middle ear, called the hammer, anvil and stirrup. They pass on the vibrations and make them stronger.",
+            "Eustachian tube: joins the middle ear to the throat and keeps the air pressure equal on both sides of the eardrum. Your ears may pop when travelling down a steep hill.",
+            "Oval window: a membrane that passes vibrations from the stirrup into the inner ear.",
+            "Cochlea: a coiled tube full of fluid in the inner ear. Hair cells inside turn vibrations into nerve impulses.",
+            "Auditory nerve: carries impulses from the cochlea to the brain.",
+            "Semicircular canals: three loops full of fluid that detect movements of the head and help with balance."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "To hear, sound waves travel down the ear canal and make the eardrum vibrate. The ossicles pass the vibrations to the oval window. The fluid in the cochlea moves, and the hair cells send impulses along the auditory nerve. The brain interprets them as sound."
+        },
+        {
+          "type": "text",
+          "text": "Care for your ears. Never push sticks, pins or other objects into them. Keep the volume low when using earphones. See a health worker about ear pain or discharge."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why do we have two eyes and two ears rather than one of each? Close one eye and try to touch the tips of two pencils together, then try again with both eyes open."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The eye detects light. The cornea and lens focus light on the retina, where rods and cones send impulses along the optic nerve. Short sightedness is corrected with a concave lens and long sightedness with a convex lens. In the ear, the eardrum and ossicles pass vibrations to the cochlea, which sends impulses along the auditory nerve. The semicircular canals help with balance."
+        }
+      ]
+    }
+  ]
+}

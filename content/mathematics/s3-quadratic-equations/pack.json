@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.algebra.quadratic-equations",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,42 +11,171 @@
       "strand": "Patterns and Algebra",
       "subStrand": "Quadratic equations",
       "order": 12,
+      "term": 3,
       "outcomes": [
-        "Determine the roots of quadratic equations using factorisation, completing the square and the formula. (k, u, s)",
-        "Form a quadratic equation given its roots. (u, s)",
-        "Make a table of values for a quadratic function and draws the graph. (k, u, s)",
-        "Link the solutions of a quadratic equation with its graphical representation. (k, u)",
-        "Solve simultaneous equations involving one quadratic equation and a linear equation. (u, s)"
+        "determine the roots of quadratic equations using factorisation, completing the square and the formula. (k u s)",
+        "form a quadratic equation given its roots. (u s)",
+        "make a table of values for a quadratic function and draws the graph. (k u s)",
+        "link the solutions of a quadratic equation with its graphical representation. (k u s)",
+        "solve simultaneous equations involving one quadratic equation and a linear equation. (u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Building on Senior 2's factorising (Algebra 2), the quadratic formula solves any quadratic equation ax^2+bx+c=0, even when it doesn't factorise neatly."
+          "text": "A school in Hoima plans a rectangular garden with an area of 1,000 m². Its length must be 30 m more than its width. If the width is w metres, then w(w + 30) = 1,000. This is a quadratic equation, because the highest power of the unknown is 2. In Senior 2 you factorised quadratic expressions. Now you will solve quadratic equations in three ways and link the answers to graphs."
+        },
+        {
+          "type": "heading",
+          "text": "Quadratic equations and their roots"
+        },
+        {
+          "type": "text",
+          "text": "A quadratic equation can always be arranged with zero on one side. The solutions are called its roots. A quadratic equation has at most two real roots."
         },
         {
           "type": "equation",
-          "latex": "x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}"
+          "latex": "ax^2 + bx + c = 0, \\quad a \\neq 0",
+          "speech": "a x squared plus b x plus c equals zero, where a is not zero"
+        },
+        {
+          "type": "heading",
+          "text": "Method 1: factorisation"
         },
         {
           "type": "text",
-          "text": "Solve x^2 - 3x + 4 = 0 using the formula, where a=1, b=-3, c=4: x = (3 ± √(9-16)) / 2. Since 9-16 = -7 is negative, there is no real square root, so this equation has no real solutions — its graph never crosses the x-axis."
+          "text": "If two numbers multiply to give zero, at least one of them must be zero. So once the quadratic is written as two brackets multiplied together, each bracket gives a root."
+        },
+        {
+          "type": "example",
+          "title": "Solve x² − 5x + 6 = 0 by factorising",
+          "steps": [
+            "Find two numbers that multiply to 6 and add to −5. They are −2 and −3.",
+            "So (x − 2)(x − 3) = 0.",
+            "Either x − 2 = 0 or x − 3 = 0.",
+            "The roots are x = 2 and x = 3."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Method 2: completing the square"
         },
         {
           "type": "text",
-          "text": "Solve x^2 - 5x + 6 = 0 using completing the square: x^2 - 5x = -6, add (5/2)^2=6.25 to both sides: x^2-5x+6.25 = 0.25, so (x-2.5)^2 = 0.25, x-2.5 = ±0.5, giving x=3 or x=2 — matching the factorised answer (x-2)(x-3)=0 from Senior 2."
+          "text": "Many quadratics do not factorise with whole numbers. Completing the square works for all of them. Move the number term to the other side. Then add the square of half the coefficient of x to both sides. The left side becomes a perfect square."
+        },
+        {
+          "type": "example",
+          "title": "Solve x² − 4x − 1 = 0 by completing the square",
+          "steps": [
+            "Move the number term: x² − 4x = 1.",
+            "Half of −4 is −2, and (−2)² = 4. Add 4 to both sides: x² − 4x + 4 = 5.",
+            "The left side is a perfect square: (x − 2)² = 5.",
+            "Take the square root of both sides: x − 2 = +√5 or −√5.",
+            "x = 2 + √5 = 4.24 or x = 2 − √5 = −0.24, to 2 decimal places."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Method 3: the quadratic formula"
         },
         {
           "type": "text",
-          "text": "The roots of a quadratic equation are exactly where its graph crosses the x-axis. A graph that touches the x-axis at one point (a repeated root) has b^2-4ac=0; a graph that doesn't cross the x-axis at all (no real roots) has b^2-4ac<0, matching the x^2-3x+4 example above."
+          "text": "Completing the square on ax² + bx + c = 0 with letters instead of numbers gives a formula. It solves any quadratic equation. Write the equation in the form ax² + bx + c = 0 first, then read off a, b and c with their signs."
+        },
+        {
+          "type": "equation",
+          "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+          "speech": "x equals minus b, plus or minus the square root of b squared minus 4 a c, all over 2 a"
+        },
+        {
+          "type": "example",
+          "title": "The school garden",
+          "steps": [
+            "w(w + 30) = 1,000 gives w² + 30w − 1,000 = 0. So a = 1, b = 30, c = −1,000.",
+            "b² − 4ac = 900 + 4,000 = 4,900, and √4,900 = 70.",
+            "w = (−30 + 70) ÷ 2 = 20 or w = (−30 − 70) ÷ 2 = −50.",
+            "A width cannot be negative, so w = 20.",
+            "The garden is 20 m wide and 50 m long. Check: 20 × 50 = 1,000 m²."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How many roots? The discriminant"
         },
         {
           "type": "text",
-          "text": "Use the PhET Graphing Quadratics simulation to change a, b and c in y = ax^2+bx+c and watch the parabola and its roots move — a fast way to see how the discriminant b^2-4ac controls whether a quadratic has two, one, or no real roots."
+          "text": "The expression under the square root, b² − 4ac, is called the discriminant. If it is positive, there are two different roots. If it is zero, there is one repeated root. If it is negative, there are no real roots, because no real number squares to give a negative. For x² − 3x + 4 = 0, b² − 4ac = 9 − 16 = −7, so this equation has no real roots."
+        },
+        {
+          "type": "heading",
+          "text": "Forming an equation from its roots"
+        },
+        {
+          "type": "text",
+          "text": "You can work backwards. If the roots are p and q, then (x − p)(x − q) = 0. Expanding gives the form below."
+        },
+        {
+          "type": "equation",
+          "latex": "x^2 - (p + q)x + pq = 0",
+          "speech": "x squared minus, p plus q, times x, plus p q, equals zero"
+        },
+        {
+          "type": "example",
+          "title": "Form an equation with roots −2 and 3",
+          "steps": [
+            "(x − (−2))(x − 3) = 0, which is (x + 2)(x − 3) = 0.",
+            "Expand: x² − 3x + 2x − 6 = 0.",
+            "So x² − x − 6 = 0.",
+            "Multiplying by any non-zero number keeps the same roots, so 2x² − 2x − 12 = 0 also works."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Graphs of quadratic functions"
+        },
+        {
+          "type": "text",
+          "text": "To draw y = x² − x − 6, make a table of values. For x = −3, −2, −1, 0, 1, 2, 3, 4 the values of y are 6, 0, −4, −6, −6, −4, 0, 6. Plot the points and join them with a smooth curve, not straight lines. The curve is a U shape called a parabola. It is symmetrical about the line x = 0.5, and its lowest point is (0.5, −6.25)."
+        },
+        {
+          "type": "text",
+          "text": "The roots of x² − x − 6 = 0 are where the graph crosses the x-axis, because y = 0 there. The graph crosses at x = −2 and x = 3, the same roots we formed above. A graph that only touches the x-axis has one repeated root. A graph that stays above the x-axis has no real roots."
+        },
+        {
+          "type": "heading",
+          "text": "A quadratic and a straight line together"
+        },
+        {
+          "type": "example",
+          "title": "Solve y = x² − x − 6 and y = x − 3 together",
+          "steps": [
+            "Both expressions equal y, so x² − x − 6 = x − 3.",
+            "Collect terms on one side: x² − 2x − 3 = 0.",
+            "Factorise: (x − 3)(x + 1) = 0, so x = 3 or x = −1.",
+            "Find y from the line: when x = 3, y = 0; when x = −1, y = −4.",
+            "The solutions are (3, 0) and (−1, −4). On a graph, these are the points where the line cuts the parabola."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Three parabolas",
+          "text": "Make a table of values from x = −3 to x = 3 for y = x², y = x² − 4 and y = (x + 1)². Plot all three on the same axes. Describe how the second and third graphs are moved from the first. Then read off the solutions of x² = 0, x² = 4 and (x + 1)² = 0 from where each graph meets the x-axis. How do the solutions relate to the graphs?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Try to solve x² − 3x + 4 = 0 by factorising, by completing the square and by the formula. What goes wrong with each method? What would the graph of y = x² − 3x + 4 look like?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A quadratic equation ax² + bx + c = 0 can be solved by factorisation, by completing the square or by the formula. The roots are where the graph of y = ax² + bx + c crosses the x-axis. The discriminant b² − 4ac tells you whether there are two, one or no real roots."
         }
       ],
       "sim": {
         "phet": "graphing-quadratics_en.html",
-        "caption": "PhET Graphing Quadratics. Adjust a, b and c in y = ax^2 + bx + c and see the parabola and its roots change instantly. (PhET, CC BY 4.0 — prototype use, license pending.)"
+        "caption": "PhET Graphing Quadratics. Change a, b and c in y = ax² + bx + c and watch the parabola and its roots move. Find values that give two roots, one repeated root and no real roots. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

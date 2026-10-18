@@ -1,54 +1,162 @@
 {
   "packId": "phy.s4.electricity.circuits",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s4.electricity.circuits",
-      "title": "Electric Circuits",
+      "title": "Voltage, Resistance and Ohm's Law",
       "subject": "physics",
       "level": "S4",
       "strand": "Electricity",
-      "subStrand": "Simple circuits",
-      "order": 1,
+      "subStrand": "Resistance, Ohm's law and electronic components",
+      "order": 2,
+      "term": 1,
       "outcomes": [
-        "DRAFT \u2014 Define electric current as the flow of charge and state its unit, the ampere (A).",
-        "DRAFT \u2014 State Ohm's law and apply V = I R to series and parallel circuits.",
-        "DRAFT \u2014 Build a simple d.c. circuit and predict how current, voltage and resistance change in series and parallel arrangements."
+        "understand electrical resistance, how it is measured, its relationship to current and voltage, and the factors that affect it (k, u, s)",
+        "know the function and use of a diode, transistor, thermistor, LDR. LED and potentiometer (k, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "An electric current is a flow of electric charge. In a metal wire, the charge carriers are electrons. Current is measured in amperes (A), and it is the amount of charge passing a point each second."
+          "text": "The thin coil inside an electric kettle glows hot, but the thick copper cable leading to it stays cool. Both carry the same current. The difference is their resistance. In this topic you will learn how voltage, current and resistance are linked, and meet the small components that control modern electronics."
         },
         {
-          "type": "equation",
-          "latex": "I = \\frac{Q}{t}"
-        },
-        {
-          "type": "text",
-          "text": "Ohm's law relates the current through a resistor to the voltage across it and its resistance. Voltage is measured in volts (V) and resistance in ohms (\u03a9)."
-        },
-        {
-          "type": "equation",
-          "latex": "V = I \\, R"
+          "type": "heading",
+          "text": "Potential difference"
         },
         {
           "type": "text",
-          "text": "In a series circuit the same current flows through every component and the total resistance is the sum of the individual resistances. In a parallel circuit the voltage across each branch is the same and the total current is the sum of the branch currents, so the combined resistance is smaller than any single branch."
+          "text": "The potential difference (p.d.), or voltage, between two points is the electrical energy changed into other forms for each coulomb of charge that passes between them. It is measured in volts (V) with a voltmeter connected in parallel, across the component."
         },
         {
-          "type": "equation",
-          "latex": "R_{series} = R_1 + R_2 + \\cdots \\qquad \\frac{1}{R_{parallel}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots"
+          "type": "heading",
+          "text": "Resistance and Ohm's law"
         },
         {
           "type": "text",
-          "text": "Use the PhET Circuit Construction Kit below to drag a battery, wires and a bulb or resistor onto the workbench. Build both a series and a parallel circuit and watch how the current and voltage change. A voltmeter is connected across a component; an ammeter is connected in series with it."
+          "text": "Resistance is the opposition a component gives to the flow of current. It is measured in ohms (Ω). For the same voltage, a larger resistance lets a smaller current flow."
+        },
+        {
+          "type": "equation",
+          "latex": "R = \\frac{V}{I}",
+          "speech": "R equals V over I"
+        },
+        {
+          "type": "text",
+          "text": "Ohm's law states that the current through a metal conductor is directly proportional to the potential difference across it, as long as its temperature and other physical conditions stay the same. A graph of current against voltage for such a conductor is a straight line through the origin. Components that obey this law are called ohmic."
+        },
+        {
+          "type": "text",
+          "text": "Some components do not obey Ohm's law. In a filament bulb, the wire heats up as the current rises, and its resistance increases. So its current–voltage graph curves and becomes flatter at higher voltages."
+        },
+        {
+          "type": "example",
+          "title": "Resistance of a torch bulb",
+          "steps": [
+            "A voltmeter across a bulb reads 6.0 V. The ammeter in series reads 0.25 A.",
+            "R = V ÷ I = 6.0 ÷ 0.25",
+            "R = 24 Ω"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Current in a kettle element",
+          "steps": [
+            "A kettle element has a resistance of 48 Ω and is connected to the 240 V mains.",
+            "I = V ÷ R = 240 ÷ 48",
+            "I = 5 A"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Measuring resistance",
+          "text": "Connect one, then two, three and four cells in series with a length of resistance wire (or a pencil lead), an ammeter and a switch. Connect a voltmeter across the wire. Record the voltage and current each time, writing each reading to the precision the meter shows, such as 0.24 A rather than 0.2 A. Before each new reading, use R = V ÷ I to predict the current, then check. Plot current against voltage and see whether the line is straight."
+        },
+        {
+          "type": "heading",
+          "text": "What affects resistance?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Length: a longer wire has more resistance. Doubling the length doubles the resistance.",
+            "Thickness: a thicker wire has less resistance. Doubling the cross-sectional area halves the resistance.",
+            "Material: nichrome has much more resistance than copper of the same size. That is why heating coils use nichrome and connecting wires use copper.",
+            "Temperature: the resistance of a metal increases as it gets hotter."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Resistors in series and parallel"
+        },
+        {
+          "type": "text",
+          "text": "Resistors in series add up. Resistors in parallel give a total resistance smaller than the smallest one, because the current has more than one path. You do not need to derive these formulae, only use them."
+        },
+        {
+          "type": "equation",
+          "latex": "R = R_1 + R_2 + R_3",
+          "speech": "In series, R equals R 1 plus R 2 plus R 3"
+        },
+        {
+          "type": "equation",
+          "latex": "\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}",
+          "speech": "In parallel, 1 over R equals 1 over R 1 plus 1 over R 2"
+        },
+        {
+          "type": "example",
+          "title": "Resistors in series",
+          "steps": [
+            "A 4 Ω resistor and a 6 Ω resistor are connected in series to a 12 V battery.",
+            "Total resistance R = 4 + 6 = 10 Ω",
+            "Current I = V ÷ R = 12 ÷ 10 = 1.2 A, the same in both resistors",
+            "Voltage across the 4 Ω resistor = IR = 1.2 × 4 = 4.8 V; across the 6 Ω resistor = 1.2 × 6 = 7.2 V",
+            "Check: 4.8 + 7.2 = 12 V, the supply voltage"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Resistors in parallel",
+          "steps": [
+            "A 6 Ω resistor and a 3 Ω resistor are connected in parallel to a 6 V battery.",
+            "1 ÷ R = 1 ÷ 6 + 1 ÷ 3 = 1 ÷ 6 + 2 ÷ 6 = 3 ÷ 6",
+            "R = 6 ÷ 3 = 2 Ω, smaller than either resistor",
+            "Total current = V ÷ R = 6 ÷ 2 = 3 A. The 6 Ω branch carries 1 A and the 3 Ω branch carries 2 A."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Electronic components"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diode: lets current flow in one direction only. Diodes protect circuits from batteries put in the wrong way round, and change a.c. into d.c. in phone chargers.",
+            "Light-emitting diode (LED): a diode that gives out light when current flows through it. LEDs use little energy and last a long time. They are used in torches, solar lamps, indicator lights and screens.",
+            "Light-dependent resistor (LDR): its resistance falls when light shines on it. LDRs switch security lights and street lights on automatically when it gets dark.",
+            "Thermistor: its resistance usually falls as its temperature rises. Thermistors sense temperature in fire alarms, egg incubators, fridges and electronic thermometers.",
+            "Transistor: an electronic switch or amplifier. A small current into one terminal controls a much larger current through the other two. Phones and computers contain billions of them.",
+            "Potentiometer: a variable resistor with a sliding contact. Turning the knob changes the resistance, as in the volume control of a radio."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A poultry farmer wants an incubator heater that switches on when the eggs get too cool. Which component could sense the temperature? Which component could act as the switch?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Resistance R = V ÷ I, measured in ohms. Ohm's law: current is proportional to voltage for a metal at constant temperature. Resistance grows with length and temperature and falls with thickness. In series, resistances add; in parallel, the total is smaller than any one branch."
         }
       ],
       "sim": {
         "phet": "circuit-construction-kit-dc_en.html",
-        "caption": "PhET Circuit Construction Kit: DC. Drag components onto the workbench to build series and parallel circuits. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Circuit Construction Kit: DC. Drag components onto the workbench to build series and parallel circuits. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

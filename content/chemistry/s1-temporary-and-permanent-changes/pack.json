@@ -1,0 +1,176 @@
+{
+  "packId": "che.s1.changes.temporary-permanent",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.changes.temporary-permanent",
+      "title": "Temporary and Permanent Changes",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Temporary and Permanent Changes to Materials",
+      "subStrand": "Reversible and irreversible changes",
+      "order": 5,
+      "term": 2,
+      "outcomes": [
+        "understand that many substances undergo permanent changes when they are heated or burnt, forming new materials, while other substances change temporarily (u, s)",
+        "recognise temporary (reversible) and permanent (irreversible) changes to matter under different conditions (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Think about cooking a meal. Margarine melts in a hot pan, but it sets again when it cools. An egg cooks solid, and nothing will make it runny again. Charcoal burns away to ash. Some changes can be undone and some cannot. Chemists sort changes into these two kinds."
+        },
+        {
+          "type": "heading",
+          "text": "Temporary changes"
+        },
+        {
+          "type": "text",
+          "text": "A temporary change is a change in which no new substance is formed. It is usually easy to reverse, so it is also called a reversible change. Chemists also call it a physical change. The mass stays the same."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Melting ice into water, and freezing it again.",
+            "Boiling water into steam, and condensing the steam back into water.",
+            "Melting candle wax, which sets again as it cools.",
+            "Heating iodine, which turns straight into a purple gas and back into solid crystals on a cold surface. This is sublimation.",
+            "Dissolving salt in water. Evaporate the water and the salt comes back."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Permanent changes"
+        },
+        {
+          "type": "text",
+          "text": "A permanent change is a change in which one or more new substances are formed. It is very hard to reverse, so it is also called an irreversible change. Chemists also call it a chemical change, or a chemical reaction."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Burning charcoal, firewood or paper.",
+            "Cooking an egg, roasting maize or baking a cake.",
+            "An iron nail rusting.",
+            "Milk going sour and food going rotten.",
+            "Firing a clay pot in a kiln."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Signs that a new substance has formed"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A change of colour, such as green copper carbonate turning black.",
+            "A gas is given off, seen as bubbles, smoke or a new smell.",
+            "Heat or light is given out, as when charcoal glows.",
+            "A solid forms, or a solid disappears and does not come back.",
+            "The change cannot easily be undone."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "One sign alone is not proof. Ice melting takes in heat, but no new substance forms. Ask the key question: is there a new substance at the end?"
+        },
+        {
+          "type": "heading",
+          "text": "Writing down a permanent change"
+        },
+        {
+          "type": "text",
+          "text": "When charcoal burns, the carbon in it joins with oxygen from the air. A new gas, carbon dioxide, is made. We write this as a word equation. The substances we start with go on the left. The new substances go on the right."
+        },
+        {
+          "type": "equation",
+          "expr": "carbon + oxygen → carbon dioxide",
+          "speech": "carbon plus oxygen gives carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C + O_2 \\rightarrow CO_2}",
+          "speech": "carbon plus oxygen gives carbon dioxide"
+        },
+        {
+          "type": "text",
+          "text": "Rusting is another permanent change. Iron joins with oxygen and water to make rust, a brown, flaky substance. Rust is not iron, and it cannot be turned back into a strong nail."
+        },
+        {
+          "type": "equation",
+          "expr": "iron + oxygen + water → rust",
+          "speech": "iron plus oxygen plus water gives rust"
+        },
+        {
+          "type": "heading",
+          "text": "The effect of heating"
+        },
+        {
+          "type": "text",
+          "text": "Heating causes both kinds of change. It depends on the substance. Ice, wax and iodine change temporarily when heated. Sugar, wood, egg white and copper carbonate change permanently."
+        },
+        {
+          "type": "text",
+          "text": "Your teacher may heat a little green copper(II) carbonate in a test tube. It turns into black copper(II) oxide and gives off carbon dioxide. When it cools, it stays black. A new substance has formed."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CuCO_3 \\rightarrow CuO + CO_2}",
+          "speech": "copper carbonate gives copper oxide plus carbon dioxide"
+        },
+        {
+          "type": "example",
+          "title": "Is a burning candle a temporary or a permanent change?",
+          "steps": [
+            "Look closely at a candle that your teacher has lit.",
+            "Near the flame, the solid wax melts into a clear liquid. When the candle is put out, the liquid sets again. This part is temporary.",
+            "The wick draws liquid wax up into the flame, where it turns to vapour and burns.",
+            "Burning makes new substances: carbon dioxide and water vapour. The candle gets shorter and the wax is gone for good. This part is permanent.",
+            "So a burning candle shows both kinds of change at once."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Show that dissolving salt is temporary",
+          "steps": [
+            "Weigh 5 g of salt. Stir it into 50 cm³ of water until it disappears.",
+            "The salt has not gone. Its particles have spread out among the water particles.",
+            "Pour the solution into a shallow dish and leave it in the sun for a few days.",
+            "The water evaporates and white salt crystals are left.",
+            "Weigh the crystals. You get back about 5 g of salt, so no new substance was made."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Different conditions"
+        },
+        {
+          "type": "text",
+          "text": "The same substance can change in different ways under different conditions. Water freezes in a freezer and boils on a stove. An iron nail stays bright in dry air but rusts in damp air. Milk keeps longer in a cold fridge than on a warm shelf. Temperature, air and water all decide which change happens and how fast."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Sort the changes",
+          "text": "In groups, carry out or observe these changes: melt an ice cube, dissolve a spoon of salt in water, snap a dry stick, leave an iron nail in a little water for a week, and watch an egg being boiled at home. For each one, record in a table: what you saw, whether a new substance formed, and whether the change can be reversed. Label each change temporary or permanent."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When you snap a stick, both pieces are still wood, so no new substance has formed. But you cannot join the pieces back together. Is breaking a stick a temporary or a permanent change? What makes it hard to decide?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many ways of keeping food, such as drying fish or keeping milk cold, slow down permanent changes. Which permanent changes are they slowing down?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "In a temporary (reversible) change, no new substance forms and the change is easy to undo. In a permanent (irreversible) change, new substances form and the change is hard to undo. Heating causes temporary changes in some substances and permanent changes in others."
+        }
+      ]
+    }
+  ]
+}

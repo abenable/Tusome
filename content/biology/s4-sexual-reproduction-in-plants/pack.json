@@ -1,0 +1,179 @@
+{
+  "packId": "bio.s4.reproduction.sexual-plants",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s4.reproduction.sexual-plants",
+      "title": "Sexual Reproduction in Plants",
+      "subject": "biology",
+      "level": "S4",
+      "strand": "Reproduction in Organisms",
+      "subStrand": "Flowers, fruits and seeds",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "recognise the flower structures that are involved in the processes of pollination, fertilisation, fruit and seed development and outline their functions (k, u, s)",
+        "know the processes of pollination, fertilization and fruit formation (u)",
+        "understand the difference between cross- and self-fertilisation, and the advantages of each method (u)",
+        "differentiate between seeds and fruits structurally and functionally (s)",
+        "understand the importance of dispersal",
+        "recognise the structures and types of fruits and seeds and relate their structures to their methods of dispersal (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Bees visit coffee flowers. Maize tassels shake yellow dust into the wind. Bean flowers turn into pods. All these are part of sexual reproduction in flowering plants."
+        },
+        {
+          "type": "text",
+          "text": "Sexual reproduction involves two gametes joining together. A gamete is a sex cell. In a flowering plant, all the events of sexual reproduction happen in the flower."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of a flower"
+        },
+        {
+          "type": "text",
+          "text": "A flower such as hibiscus has these parts, from the outside inwards."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Receptacle: the top of the flower stalk, which holds the other parts.",
+            "Sepals: small green leaf-like parts that protect the flower when it is a bud.",
+            "Petals: often brightly coloured and scented to attract insects. Many have nectaries that make sweet nectar.",
+            "Stamens: the male parts. Each has a thin stalk called the filament with an anther at the top. The anther makes pollen grains, which carry the male gametes.",
+            "Carpels (the pistil): the female parts. Each has a sticky stigma that receives pollen, a style, and an ovary that holds one or more ovules. Each ovule contains a female gamete, the egg cell."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Pollination"
+        },
+        {
+          "type": "text",
+          "text": "Pollination is the transfer of pollen grains from an anther to a stigma. In self-pollination, pollen lands on a stigma of the same flower or another flower on the same plant. In cross-pollination, pollen reaches a flower on a different plant of the same kind."
+        },
+        {
+          "type": "text",
+          "text": "Insects and wind are the main agents of pollination. Their flowers differ."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Insect-pollinated flowers, such as hibiscus, beans, coffee and passion fruit, have large, coloured, scented petals and nectar. Their anthers and stigma are inside the flower, where a visiting insect brushes against them. Their pollen is large and sticky or spiky, so it clings to insects.",
+            "Wind-pollinated flowers, such as maize, sorghum and other grasses, have small, dull petals or none, and no scent or nectar. Their anthers hang outside on long filaments so the wind shakes out the pollen. Their stigmas are large and feathery, like maize silks, to catch pollen from the air. They make huge amounts of small, light, smooth pollen."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Fertilisation"
+        },
+        {
+          "type": "text",
+          "text": "Fertilisation is the joining of a male gamete with a female gamete. After a pollen grain lands on a ripe stigma, it grows a thin pollen tube. The tube grows down through the style into the ovary. It enters an ovule through a tiny hole called the micropyle."
+        },
+        {
+          "type": "text",
+          "text": "A male nucleus moves down the tube and joins with the nucleus of the egg cell. This forms a zygote, the first cell of the new plant. A second male nucleus joins other nuclei in the ovule to form the endosperm, a food store."
+        },
+        {
+          "type": "heading",
+          "text": "Cross- and self-fertilisation"
+        },
+        {
+          "type": "text",
+          "text": "Cross-fertilisation joins gametes from two different plants. Self-fertilisation joins gametes from the same plant. Each has advantages."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cross-fertilisation mixes genes from two parents, so the offspring show more variation. Some may resist disease or drought better, and the offspring are often stronger.",
+            "Self-fertilisation does not depend on insects or wind, so seeds form even when pollinators are few. The good qualities of the parent are kept, and less pollen is wasted."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "From flower to fruit and seed"
+        },
+        {
+          "type": "text",
+          "text": "After fertilisation, the petals, stamens, style and stigma dry up and fall off. The other parts change."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The zygote divides many times to form an embryo with a young root (radicle), a young shoot (plumule) and one or two seed leaves (cotyledons).",
+            "The ovule becomes the seed, and its outer layers harden into the seed coat (testa).",
+            "The micropyle stays as a tiny hole in the seed coat. It lets water in when the seed germinates.",
+            "The ovary becomes the fruit, and the ovary wall becomes the fruit wall (pericarp)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Fruits and seeds compared"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A fruit develops from an ovary. A seed develops from an ovule inside the ovary.",
+            "A fruit has two scars: one where it joined the stalk and one where the style was. A seed has one scar, the hilum, where it joined the fruit wall, and a micropyle.",
+            "A fruit protects the seeds and helps to disperse them. A seed protects and feeds the embryo until it can grow into a new plant."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A bean pod is a fruit, and the beans inside are seeds. A maize grain is a fruit too, because its seed coat is joined to a thin fruit wall."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Succulent fruits have a soft, juicy wall. A berry, such as tomato or pawpaw, has many seeds. A drupe, such as mango or avocado, has one seed inside a hard stone.",
+            "Dry fruits have a dry wall when ripe. Dehiscent fruits, such as bean pods and crotalaria pods, split open to release their seeds. Indehiscent fruits, such as maize grains and sunflower fruits, do not split."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Dispersal of fruits and seeds"
+        },
+        {
+          "type": "text",
+          "text": "Dispersal is the spreading of seeds away from the parent plant. It stops seedlings crowding around the parent and competing for light, water and nutrients. It lets the plant reach new places. It also makes it less likely that one pest or disease reaches all the seedlings."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Wind: seeds are small and light, or have wings or hairs that catch the air. Examples are the winged seeds of the Nile tulip tree (Spathodea) and the hairy seeds of cotton and kapok.",
+            "Animals: juicy, coloured fruits such as guava and figs are eaten by birds and monkeys, and the hard seeds pass out in droppings. Other fruits, such as blackjack, have hooks that stick to fur or clothes.",
+            "Water: fruits have air spaces or a light, fibrous coat so they float, such as coconut.",
+            "Self (explosive) dispersal: pods dry out unevenly, then burst and throw out their seeds, as in beans and crotalaria."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Flower and fruit hunt",
+          "text": "In pairs, collect a hibiscus or bean flower and a grass or maize flower. Pull each flower apart gently and lay the parts on paper. Compare the anthers and stigmas of the two. Then collect five fruits or seeds, such as blackjack, a dry bean pod, a winged seed and a guava. Sort them by how each is dispersed. Draw each one and label the feature that helps it spread."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Coffee and passion fruit farmers get better harvests when there are plenty of bees. What might happen to these crops if insect numbers fell? What could farmers do to protect pollinators?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The flower is the organ of sexual reproduction in plants. Pollination moves pollen from an anther to a stigma, and fertilisation joins a male nucleus with an egg cell to form a zygote. The ovule then becomes the seed and the ovary becomes the fruit. Fruits and seeds are built to be dispersed by wind, animals, water or by bursting open."
+        }
+      ]
+    }
+  ]
+}

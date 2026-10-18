@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.heat.quantities",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,38 +9,170 @@
       "subject": "physics",
       "level": "S3",
       "strand": "Heat",
-      "subStrand": "Heat quantities and vapours",
+      "subStrand": "Heat capacity, latent heat and vapours",
       "order": 8,
+      "term": 3,
       "outcomes": [
         "understand and use the concepts of heat capacity and latent heat (k, u, s)",
+        "know and explain the implications of the high values of the specific latent heat and the specific heat capacity of water (k, u)",
+        "carry out calculations and investigations on specific heat capacity and specific latent heat (u, s)",
         "understand the concept of latent heat and change of state, and use them to explain melting and boiling point (u, s)",
+        "understand the meaning of saturated and unsaturated vapours, saturated vapour pressure, and how these terms relate to boiling and evaporation (u)",
         "appreciate the cooling effect of evaporation and how this contributes to maintaining constant body temperature (k, u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Heat capacity describes how much heat energy is needed to raise the temperature of a substance by a certain amount. Different materials need different amounts of heat energy to warm up by the same number of degrees."
+          "text": "An empty metal pan on a charcoal stove gets hot quickly, but a pan of water takes a long time to boil. Beans cook slowly high up on Mt Elgon. Water in a clay pot stays cool on a hot afternoon. This topic explains why."
+        },
+        {
+          "type": "heading",
+          "text": "Heat capacity and specific heat capacity"
         },
         {
           "type": "text",
-          "text": "Latent heat is the heat energy absorbed or released when a substance changes state (for example melting or boiling) without any change in temperature. While ice is melting, or water is boiling, the temperature stays constant even though heat energy is still being supplied \u2014 that energy is being used to break the bonds between particles, not to raise the temperature."
+          "text": "The heat capacity of an object is the heat energy needed to raise its temperature by 1 K (or 1 °C). Its unit is the joule per kelvin (J/K)."
         },
         {
           "type": "text",
-          "text": "Evaporation is the escape of the fastest-moving particles from the surface of a liquid, even below its boiling point. Because it is the higher-energy particles that escape, the average energy \u2014 and so the temperature \u2014 of the remaining liquid drops. This cooling effect is why sweating helps mammals, including humans, keep a constant body temperature: as sweat evaporates from the skin, it carries heat energy away from the body."
+          "text": "The specific heat capacity, c, of a substance is the heat energy needed to raise the temperature of 1 kg of it by 1 K. Its unit is the joule per kilogram per kelvin (J/kg K). Water has c = 4200 J/kg K, much more than aluminium (about 900 J/kg K) or copper (about 400 J/kg K)."
+        },
+        {
+          "type": "equation",
+          "latex": "Q = mc\\theta",
+          "speech": "Q equals m times c times theta, where theta is the change in temperature"
+        },
+        {
+          "type": "example",
+          "title": "Heating water for tea",
+          "steps": [
+            "Nakato heats 2 kg of water from 25 °C to 100 °C. The specific heat capacity of water is 4200 J/kg K.",
+            "Temperature rise θ = 100 − 25 = 75 °C (or 75 K)",
+            "Q = mcθ = 2 × 4200 × 75",
+            "Q = 630 000 J = 630 kJ"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The method of mixtures"
         },
         {
           "type": "text",
-          "text": "A saturated vapour is one in which particles are evaporating from and condensing back into the liquid at the same rate \u2014 no net change. Boiling happens when a liquid's saturated vapour pressure becomes equal to the surrounding atmospheric pressure, which is why water boils at a lower temperature at high altitude, where atmospheric pressure is lower."
+          "text": "To measure a specific heat capacity, we use the method of mixtures. A hot object is placed in cold water inside an insulated container called a calorimeter. Heat flows until both reach the same final temperature. If no heat escapes, heat lost by the hot object equals heat gained by the water."
+        },
+        {
+          "type": "example",
+          "title": "Specific heat capacity of a metal",
+          "steps": [
+            "A 0.5 kg metal block is heated in boiling water to 100 °C. It is moved quickly into 0.4 kg of water at 20 °C. The final temperature is 30 °C. Ignore heat taken by the container.",
+            "Heat gained by water = mcθ = 0.4 × 4200 × (30 − 20) = 16 800 J",
+            "Heat lost by metal = 0.5 × c × (100 − 30) = 35c",
+            "Heat lost = heat gained, so 35c = 16 800",
+            "c = 16 800 ÷ 35 = 480 J/kg K"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Why water's high specific heat capacity matters"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Water cools car engines, because it absorbs a lot of heat for a small rise in temperature.",
+            "Lakes and oceans heat up and cool down slowly. Lake Victoria keeps towns such as Entebbe and Jinja from extremes of heat and cold. Oceans regulate the temperature of the whole Earth in the same way.",
+            "By day, land heats up faster than water. Warm air rises over the land and cooler air blows in from the lake: a lake breeze or sea breeze. At night the land cools faster and the breeze reverses."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Latent heat and change of state"
         },
         {
           "type": "text",
-          "text": "Use the PhET States of Matter simulation below (Phase Changes screen). Heat and cool a substance and watch its temperature and phase change on the phase diagram."
+          "text": "When ice melts or water boils, the temperature stays the same until the change is complete, even though heat is still supplied. This hidden heat is called latent heat. The energy is used to break the forces between particles, not to make them move faster. When steam condenses or water freezes, the same latent heat is given out again."
+        },
+        {
+          "type": "text",
+          "text": "The specific latent heat, L, is the heat needed to change 1 kg of a substance from one state to another without a change in temperature. The specific latent heat of fusion of ice is 3.34 × 10⁵ J/kg. The specific latent heat of vaporisation of water is 2.26 × 10⁶ J/kg, nearly seven times more."
+        },
+        {
+          "type": "equation",
+          "latex": "Q = mL",
+          "speech": "Q equals m times L"
+        },
+        {
+          "type": "text",
+          "text": "A heating curve shows temperature against time as ice is heated steadily. The temperature rises to 0 °C, then stays flat while the ice melts. It rises again to 100 °C, then stays flat for a longer time while the water boils. The flat parts show the melting point and the boiling point."
+        },
+        {
+          "type": "example",
+          "title": "Turning ice into steam",
+          "steps": [
+            "Find the heat needed to change 0.5 kg of ice at 0 °C into steam at 100 °C.",
+            "Melt the ice: Q₁ = mL = 0.5 × 3.34 × 10⁵ = 167 000 J",
+            "Heat the water from 0 °C to 100 °C: Q₂ = mcθ = 0.5 × 4200 × 100 = 210 000 J",
+            "Boil the water: Q₃ = mL = 0.5 × 2.26 × 10⁶ = 1 130 000 J",
+            "Total = 167 000 + 210 000 + 1 130 000 = 1 507 000 J ≈ 1.5 MJ. Boiling takes most of the energy."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "A scald from steam is worse than one from boiling water. Steam gives out its large latent heat as it condenses on the skin.",
+            "Storms get their energy from latent heat released when rising water vapour condenses into clouds.",
+            "In a refrigerator, a special liquid evaporates in pipes inside, taking in latent heat. It condenses in the pipes at the back, giving that heat out to the room."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Evaporation, vapours and boiling"
+        },
+        {
+          "type": "text",
+          "text": "Evaporation is the escape of fast-moving particles from the surface of a liquid. It happens at any temperature. Boiling happens at one temperature, with bubbles of vapour forming all through the liquid."
+        },
+        {
+          "type": "text",
+          "text": "In a closed jar of water, particles escape into the space above and some return. When as many return as escape, the space holds as much vapour as it can at that temperature: a saturated vapour. A vapour that holds less than this amount is an unsaturated vapour. The pressure of a saturated vapour is its saturated vapour pressure. It rises as the temperature rises."
+        },
+        {
+          "type": "text",
+          "text": "A liquid boils when its saturated vapour pressure equals the air pressure above it. At sea level, water boils at 100 °C. High up on Mt Elgon or the Rwenzori, the air pressure is lower, so water boils below 100 °C, about 85 °C near 4500 m. Food cooks more slowly. A pressure cooker does the opposite. It traps the steam, raising the pressure so water boils at about 120 °C. Beans cook faster and less fuel is used."
+        },
+        {
+          "type": "heading",
+          "text": "The cooling effect of evaporation"
+        },
+        {
+          "type": "text",
+          "text": "When the fastest particles escape, the particles left behind have less energy on average, so the liquid cools. Evaporation is faster when it is warm, windy and dry, and over a large surface area."
+        },
+        {
+          "type": "text",
+          "text": "Your body uses this to stay at about 37 °C. When you are hot, you sweat. As the sweat evaporates, it takes heat from your skin. On a humid day sweat evaporates slowly and you feel sticky and hot. Water in a clay pot stays cool because water seeps through the pot and evaporates from its outside surface."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Cooling by evaporation",
+          "text": "Wrap the bulb of one thermometer in cotton wool soaked in water at room temperature. Leave a second thermometer dry. Read both after five minutes, then fan the wet one with a book. What happens to its reading? Also compare water from a clay pot and a plastic jerrycan left in the same shade."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A pressure cooker saves time and charcoal. How might this help a family, and the forests of Uganda? What safety care does a pressure cooker need?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Q = mcθ when temperature changes, and Q = mL when the state changes at constant temperature. Water's high specific heat capacity and latent heat explain cooling systems, lake breezes and steam burns. A liquid boils when its saturated vapour pressure equals the air pressure, and evaporation cools."
         }
       ],
       "sim": {
         "phet": "states-of-matter_en.html",
-        "caption": "PhET States of Matter (Phase Changes screen). Heat or cool a substance and watch its temperature and state change together. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET States of Matter (Phase Changes screen). Heat or cool a substance and watch its temperature and state change together. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

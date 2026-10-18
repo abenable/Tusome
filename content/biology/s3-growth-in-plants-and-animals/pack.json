@@ -1,0 +1,174 @@
+{
+  "packId": "bio.s3.growth-development.growth",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.growth-development.growth",
+      "title": "Growth in Plants and Animals",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Growth and Development in Plants and Animals",
+      "subStrand": "Growth, mitosis and germination",
+      "order": 8,
+      "term": 3,
+      "outcomes": [
+        "distinguish between the terms ‘growth’ and ‘development’(u)",
+        "appreciate that mitosis leads to increase in size and weight in animals (u, s)",
+        "understand the internal and external structure of a seed (k, u)",
+        "conduct experiments on conditions necessary for seed germination (s)",
+        "identify the roles of water, oxygen, and temperature in the process of germination (u)",
+        "identify and describe the type of seed germination in monocots and dicots (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Wasswa plants maize and beans when the rains begin. A week later, small shoots push through the soil. Over the next months the plants grow taller and form leaves, flowers and seeds. Biologists describe these changes as growth and development."
+        },
+        {
+          "type": "heading",
+          "text": "Growth and development"
+        },
+        {
+          "type": "text",
+          "text": "Growth is a permanent increase in the size and dry mass of an organism. Dry mass is the mass left when all the water is removed. A wilted plant that stands up again after watering has not grown, because the change is not permanent."
+        },
+        {
+          "type": "text",
+          "text": "Development is the series of changes by which an organism becomes more complex, as cells specialise and new organs form. A tadpole turning into a frog is an example. Growth is a change in quantity, while development is a change in quality. The two usually happen together."
+        },
+        {
+          "type": "heading",
+          "text": "Measuring growth"
+        },
+        {
+          "type": "text",
+          "text": "Growth can be measured as height, length, fresh mass or dry mass. Dry mass is the most accurate, but finding it kills the organism, so we usually measure height or mass. A graph of growth against time is often S-shaped. Growth is slow at first, then fast, then slows down and stops at adult size. Humans have two fast phases: in the first two years of life and during adolescence."
+        },
+        {
+          "type": "text",
+          "text": "Health workers plot a baby's weight on a child health card at each visit. A line that rises steadily shows the child is growing well."
+        },
+        {
+          "type": "example",
+          "title": "Find the growth rate of a bean plant",
+          "steps": [
+            "Namubiru measured a bean plant each week. Week 1: 3 cm. Week 2: 6 cm. Week 3: 12 cm. Week 4: 20 cm. Week 5: 26 cm.",
+            "Growth rate = change in height ÷ time taken.",
+            "From week 1 to week 2: (6 − 3) ÷ 1 = 3 cm per week.",
+            "From week 3 to week 4: (20 − 12) ÷ 1 = 8 cm per week.",
+            "From week 4 to week 5: (26 − 20) ÷ 1 = 6 cm per week.",
+            "Growth was slow at first, fastest in the middle and then began to slow down, as an S-shaped curve shows."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Mitosis and growth"
+        },
+        {
+          "type": "text",
+          "text": "An organism grows by making more cells. Cells divide by a process called mitosis. In mitosis, one cell divides into two daughter cells. Each daughter cell has exactly the same number and type of chromosomes as the parent cell. Chromosomes are thread-like structures in the nucleus that carry genetic information."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Each chromosome makes an exact copy of itself.",
+            "The copied chromosomes line up across the middle of the cell.",
+            "The copies are pulled apart to opposite ends of the cell.",
+            "A new nucleus forms at each end, and the cell divides into two."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Each new cell takes in food, grows to full size and may divide again. In this way one fertilised egg becomes the millions of cells of a baby, and the baby gains size and weight. In plants, mitosis happens mainly at the tips of roots and shoots. Mitosis also repairs wounds and replaces worn-out skin and blood cells."
+        },
+        {
+          "type": "heading",
+          "text": "The structure of a seed"
+        },
+        {
+          "type": "text",
+          "text": "A seed contains a young plant, called the embryo, and a store of food. A bean is a dicotyledon, which means its seed has two seed leaves."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Testa: the seed coat, which protects the seed.",
+            "Hilum: a scar where the seed was attached to the pod.",
+            "Micropyle: a tiny hole near the hilum, through which water enters.",
+            "Cotyledons: two thick seed leaves that store food.",
+            "Plumule: the young shoot.",
+            "Radicle: the young root."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Maize is a monocotyledon, with one seed leaf. A maize grain is really a fruit, because its seed coat is joined to the fruit wall."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fruit wall and testa: joined into one thin outer covering.",
+            "Endosperm: a large store of starch.",
+            "Cotyledon: a thin shield-shaped structure that passes food from the endosperm to the embryo.",
+            "Plumule, protected by a sheath called the coleoptile, and radicle, protected by a sheath called the coleorhiza."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Look inside seeds",
+          "text": "Soak beans and maize grains overnight. Find the testa, hilum and micropyle on a bean. Squeeze it gently and watch water come out of the micropyle. Peel off the testa and open the cotyledons to find the plumule and radicle. Ask your teacher to cut a maize grain lengthwise, and find the endosperm and embryo. Draw and label what you see."
+        },
+        {
+          "type": "heading",
+          "text": "Conditions for germination"
+        },
+        {
+          "type": "text",
+          "text": "Germination is the process by which a seed begins to grow into a seedling. A seed needs three conditions."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Water: softens the testa so it can split. It switches on the enzymes that break down stored food, and dissolves the food so it can move to the growing embryo.",
+            "Oxygen: the embryo uses it for aerobic respiration, which releases energy for growth. This is why seeds in waterlogged soil often fail to germinate.",
+            "A suitable temperature: enzymes work best when it is warm. When it is too cold, germination is very slow. When it is too hot, the enzymes are damaged and the embryo dies."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Most seeds do not need light to germinate, because they live on stored food until their leaves can make food."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "What do seeds need?",
+          "text": "Put moist cotton wool and five bean seeds in each of four cups, A, B, C and D. Leave A at room temperature. Keep B dry. In C, cover the seeds with boiled, cooled water and add a thin layer of cooking oil to keep air out. Put D in a fridge or the coolest place you can find. Check daily for a week and record which seeds germinate. Which cup is the control, and what does each of the others test? Then plant the seedlings from A and measure their height each week for up to ten weeks. Draw a graph of height against time."
+        },
+        {
+          "type": "heading",
+          "text": "Types of germination"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Epigeal germination: the cotyledons are carried above the soil. The part of the stem below the cotyledons, called the hypocotyl, grows long and pulls them up. It forms a hook, so the delicate plumule is not damaged by the soil. Beans germinate this way.",
+            "Hypogeal germination: the cotyledons stay below the soil and only the shoot grows up. Maize and other monocots germinate this way. In maize, the coleoptile pushes up through the soil first and protects the young leaves. Some dicots, such as the garden pea, also germinate this way."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers usually plant just as the rains begin. Why might seeds planted during a long dry spell, or in a waterlogged field, fail to come up?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Growth is a permanent increase in size and dry mass, while development is an increase in complexity. Mitosis makes new, identical cells, so organisms grow and repair themselves. A bean seed has two cotyledons. A maize grain has one cotyledon and an endosperm. Seeds need water, oxygen and a suitable temperature to germinate. Beans show epigeal germination and maize shows hypogeal germination."
+        }
+      ]
+    }
+  ]
+}

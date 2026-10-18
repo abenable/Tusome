@@ -1,0 +1,235 @@
+{
+  "packId": "phy.s1.light.plane-mirrors",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s1.light.plane-mirrors",
+      "title": "Nature of Light and Reflection at Plane Surfaces",
+      "subject": "physics",
+      "level": "S1",
+      "strand": "Light",
+      "subStrand": "Light, shadows and plane mirrors",
+      "order": 12,
+      "term": 3,
+      "outcomes": [
+        "Know illuminated and light source objects in everyday life (u, s)",
+        "understand how shadows are formed and that eclipses are natural forms of shadows (u)",
+        "understand how the reflection of light from plane surfaces occurs and how we can make use of this (k, u, s, gs)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "At night, a boda boda's headlamp lights up the road ahead. At midday, people sit in the shadow of a mango tree. In the morning, people check their hair in a mirror. All of these involve light."
+        },
+        {
+          "type": "heading",
+          "text": "Sources of light"
+        },
+        {
+          "type": "text",
+          "text": "A luminous object gives out its own light. The Sun is the main natural source of light. Stars, lightning, fire and fireflies are other natural sources. Artificial sources are made by people, such as electric bulbs, torches, candles and phone screens."
+        },
+        {
+          "type": "text",
+          "text": "A non-luminous object does not make its own light. We see it because light falls on it and bounces into our eyes. An object lit up in this way is illuminated. A book, a desk and the Moon are illuminated objects."
+        },
+        {
+          "type": "heading",
+          "text": "How light travels"
+        },
+        {
+          "type": "text",
+          "text": "Light travels in straight lines. This is called rectilinear propagation. You can see it when sunlight streams through a gap in a roof into a dusty room."
+        },
+        {
+          "type": "text",
+          "text": "A ray is the path that light takes, drawn as a straight line with an arrow. A beam is a bundle of rays."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A transparent material lets almost all light through, so you can see clearly through it. Examples are clear glass and clean water.",
+            "A translucent material lets some light through, but you cannot see clearly through it. Examples are frosted glass and tracing paper.",
+            "An opaque material lets no light through. Examples are wood, stone, metal and your body."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Shadows"
+        },
+        {
+          "type": "text",
+          "text": "A shadow forms when an opaque object blocks light. Light travels in straight lines and cannot bend around the object, so a dark area forms behind it."
+        },
+        {
+          "type": "text",
+          "text": "A very small source, such as a tiny torch bulb, gives a sharp, completely dark shadow called the umbra. A large source, such as the Sun, gives a shadow with two parts. The umbra in the middle gets no light. Around it is a lighter penumbra, which gets light from only part of the source."
+        },
+        {
+          "type": "heading",
+          "text": "Eclipses"
+        },
+        {
+          "type": "text",
+          "text": "An eclipse is a shadow in space. A solar eclipse happens when the Moon passes between the Sun and the Earth, and the Moon's shadow falls on the Earth. People in the umbra see a total eclipse. People in the penumbra see a partial eclipse. Northern Uganda saw a total eclipse of the Sun on 3 November 2013."
+        },
+        {
+          "type": "text",
+          "text": "A lunar eclipse happens when the Earth passes between the Sun and the Moon. The Earth's shadow falls on the Moon, which turns dark or reddish."
+        },
+        {
+          "type": "text",
+          "text": "Never look straight at the Sun, even during an eclipse. It can damage your eyes for life."
+        },
+        {
+          "type": "heading",
+          "text": "The pinhole camera"
+        },
+        {
+          "type": "text",
+          "text": "A pinhole camera is a box with a tiny hole at one end and a screen of thin paper at the other. Light from each point of an object travels straight through the hole to the screen. The image is real, which means it can be caught on a screen. It is also inverted, or upside down."
+        },
+        {
+          "type": "text",
+          "text": "Magnification tells how many times bigger the image is than the object. Moving the screen further from the hole makes the image bigger but dimmer."
+        },
+        {
+          "type": "equation",
+          "expr": "magnification = image height ÷ object height = image distance ÷ object distance",
+          "speech": "magnification equals image height divided by object height, which also equals image distance divided by object distance"
+        },
+        {
+          "type": "example",
+          "title": "Find the height of an image in a pinhole camera",
+          "steps": [
+            "Wasswa points a pinhole camera at a tree 10 m tall and 20 m away. The screen is 10 cm, or 0.1 m, behind the pinhole.",
+            "Magnification = image distance ÷ object distance = 0.1 ÷ 20 = 0.005",
+            "Image height = magnification × object height = 0.005 × 10 = 0.05 m",
+            "The image is 5 cm tall and upside down."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a pinhole camera",
+          "text": "Cut away one end of a small cardboard box and tape tracing paper or oiled paper over the opening. Make a small hole in the opposite end with a pin. Point the pinhole at a bright window, with a dark cloth over your head and the box, and look at the image on the paper."
+        },
+        {
+          "type": "heading",
+          "text": "Reflection at a plane mirror"
+        },
+        {
+          "type": "text",
+          "text": "Reflection is the bouncing of light off a surface. A plane mirror is a flat, smooth, shiny surface."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The incident ray strikes the mirror.",
+            "The reflected ray bounces off.",
+            "The normal is a line at 90° to the mirror, where the ray strikes it.",
+            "The angle of incidence, i, is between the incident ray and the normal.",
+            "The angle of reflection, r, is between the reflected ray and the normal."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Reflection obeys two laws."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The incident ray, the reflected ray and the normal all lie in the same plane.",
+            "The angle of incidence is equal to the angle of reflection."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "equation",
+          "latex": "i = r",
+          "speech": "i equals r: the angle of incidence equals the angle of reflection"
+        },
+        {
+          "type": "text",
+          "text": "Angles are always measured from the normal, not from the mirror. The angle between a ray and the mirror surface is called the glancing angle."
+        },
+        {
+          "type": "example",
+          "title": "Find the angle of reflection",
+          "steps": [
+            "A ray strikes a plane mirror with a glancing angle of 30°.",
+            "The normal is at 90° to the mirror, so the angle of incidence = 90° − 30° = 60°.",
+            "By the second law, the angle of reflection = 60°.",
+            "The angle between the incident and reflected rays is 60° + 60° = 120°."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A smooth surface, such as a mirror or still water, gives regular reflection: parallel rays stay parallel, so you see a clear image. A rough surface, such as paper, gives diffuse reflection: the rays scatter in many directions, so there is no image. Diffuse reflection lets us see objects from any direction."
+        },
+        {
+          "type": "heading",
+          "text": "The image in a plane mirror"
+        },
+        {
+          "type": "list",
+          "items": [
+            "It is the same size as the object.",
+            "It is upright, the right way up.",
+            "It is laterally inverted, so left and right are swapped. Raise your right hand, and your image raises its left.",
+            "It is virtual. It cannot be caught on a screen, because no light really passes behind the mirror.",
+            "It is as far behind the mirror as the object is in front of it."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Walking towards a mirror",
+          "steps": [
+            "Kyomuhendo stands 3 m in front of a dressing mirror, so her image is 3 m behind it.",
+            "She and her image are 3 + 3 = 6 m apart.",
+            "She walks 1 m closer. She is now 2 m from the mirror, and her image is 2 m behind it.",
+            "She and her image are now 2 + 2 = 4 m apart."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Uses of plane mirrors"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dressing mirrors at home and in salons.",
+            "A periscope uses two plane mirrors, each at 45°, to see over a wall or a crowd.",
+            "AMBULANCE is written in reverse on the front of ambulances, so drivers ahead can read it in their mirrors.",
+            "Two mirrors at an angle give several images, as in a kaleidoscope."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a periscope",
+          "text": "Fold stiff card, such as an empty juice box, into a tall square tube. Cut a window near the top of the front face and another near the bottom of the back face. Tape a small pocket mirror behind each window at 45°, with the shiny sides facing each other. Look into the bottom window to see over a desk or a wall."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "You can read a book in a room lit by one bulb, even when the page does not face the bulb. How does the light reach the page?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Luminous objects give out light. Illuminated objects reflect it. Light travels in straight lines, so opaque objects cast shadows, and eclipses are shadows in space. At a plane mirror, the angle of incidence equals the angle of reflection. The image is the same size, upright, virtual, laterally inverted, and as far behind the mirror as the object is in front."
+        }
+      ],
+      "sim": {
+        "phet": "geometric-optics-basics_en.html",
+        "caption": "PhET Geometric Optics: Basics. On the Mirror screen, choose the flat mirror and move the object closer and further away. See that the image stays the same size and is always as far behind the mirror as the object is in front. (PhET, CC BY 4.0 — prototype use, license pending.)"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.matter.vectors",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,8 +9,9 @@
       "subject": "physics",
       "level": "S3",
       "strand": "Mechanics and Properties of Matter",
-      "subStrand": "Linear and non-linear motion",
+      "subStrand": "Scalars, vectors and resultant force",
       "order": 3,
+      "term": 1,
       "outcomes": [
         "understand the differences between vector and scalar quantities, and give examples of each (u)",
         "understand that a number of forces acting on a body can be represented by a single resultant force (u, s)"
@@ -18,24 +19,138 @@
       "body": [
         {
           "type": "text",
-          "text": "A scalar quantity has only a size (magnitude) \u2014 for example mass, distance, speed, and time. A vector quantity has both a size and a direction \u2014 for example weight, displacement, velocity, and force."
+          "text": "Akello tells a visitor that the market is 2 km away. The visitor still does not know where to go. Akello must also say the direction, for example 2 km east. Some quantities in physics need only a size. Others need a size and a direction."
+        },
+        {
+          "type": "heading",
+          "text": "Scalars and vectors"
         },
         {
           "type": "text",
-          "text": "When two or more forces act on an object at the same time, they can be combined into a single resultant force that has the same overall effect on the object. If two forces act at an angle to each other (not simply in line), the resultant can be found using a scale drawing, placing the force vectors head-to-tail, or using Pythagoras' theorem when the forces are perpendicular to each other."
+          "text": "A scalar quantity has size (magnitude) only. A vector quantity has both magnitude and direction. To describe a vector fully, you must give its direction."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Scalars: mass, distance, speed, time, temperature, energy, volume, density.",
+            "Vectors: displacement, velocity, acceleration, force, weight, momentum."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Distance is how far you travel along your path. Displacement is the straight-line distance from start to finish, in a stated direction. Speed is a scalar. Velocity is speed in a stated direction, so it is a vector."
+        },
+        {
+          "type": "text",
+          "text": "We draw a vector as an arrow. The length of the arrow shows the magnitude, using a chosen scale such as 1 cm for 10 N. The arrow points in the direction of the vector."
+        },
+        {
+          "type": "example",
+          "title": "Distance and displacement",
+          "steps": [
+            "Atim walks 8 m north, then 6 m east.",
+            "Distance travelled = 8 + 6 = 14 m (a scalar)",
+            "The two walks make a right-angled triangle. Displacement = √(8² + 6²) = √100 = 10 m",
+            "Direction: tan θ = 6 ÷ 8 = 0.75, so θ ≈ 37° east of north, a bearing of about 037°",
+            "Displacement = 10 m on a bearing of 037° (a vector)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Resultant force"
+        },
+        {
+          "type": "text",
+          "text": "Often several forces act on one object at the same time. The resultant force is the single force that has the same effect as all of them together. The object moves as if only the resultant force were acting."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Forces in the same direction: add them.",
+            "Forces in opposite directions: subtract the smaller from the larger. The resultant acts in the direction of the larger force.",
+            "Forces at right angles: use Pythagoras' theorem for the size and the tangent ratio for the direction, or draw a scale diagram.",
+            "If the resultant force is zero, the forces are balanced. The object stays at rest or keeps moving at a steady velocity."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "A tug of war",
+          "steps": [
+            "Team A pulls the rope east with 500 N. Team B pulls west with 420 N.",
+            "The forces are opposite, so subtract: 500 − 420 = 80 N",
+            "Resultant force = 80 N east. The rope moves towards Team A."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "For two forces at right angles, the resultant is the diagonal of a rectangle drawn with the two forces as its sides."
         },
         {
           "type": "equation",
-          "latex": "F_{resultant} = \\sqrt{F_1^2 + F_2^2} \\quad \\text{(perpendicular forces)}"
+          "latex": "R = \\sqrt{F_1^2 + F_2^2}",
+          "speech": "R equals the square root of F 1 squared plus F 2 squared"
+        },
+        {
+          "type": "example",
+          "title": "Two forces at right angles",
+          "steps": [
+            "Two ropes pull a heavy box across the floor. One pulls east with 30 N and the other pulls north with 40 N.",
+            "R = √(30² + 40²) = √(900 + 1600) = √2500 = 50 N",
+            "Direction: tan θ = 40 ÷ 30 ≈ 1.33, so θ ≈ 53° north of east",
+            "Resultant = 50 N at about 53° north of east"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Scale drawing"
         },
         {
           "type": "text",
-          "text": "Use the PhET Vector Addition simulation below. Add vectors together and see how their resultant depends on both their sizes and their directions."
+          "text": "You can also find a resultant by drawing. This works for forces at any angle, not only right angles."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Choose a scale, for example 1 cm for 10 N.",
+            "Draw the first force as an arrow of the right length and direction.",
+            "From the tip of the first arrow, draw the second force.",
+            "Join the tail of the first arrow to the tip of the second. This line is the resultant.",
+            "Measure its length and change it back to newtons using the scale. Measure its angle with a protractor."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "example",
+          "title": "Crossing the Nile by boat",
+          "steps": [
+            "A boat heads straight across a river at 4 m/s. The water flows downstream at 3 m/s. Velocity adds like force.",
+            "Resultant velocity = √(4² + 3²) = √25 = 5 m/s",
+            "tan θ = 3 ÷ 4 = 0.75, so θ ≈ 37° downstream from the straight-across direction",
+            "The boat lands downstream of the point directly opposite its start."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Forces at right angles",
+          "text": "Knot three strings together at one point. Hang a bag holding 3 equal stones over one smooth rod or pulley, and a bag of 4 stones over another. Let a bag of 5 stones hang straight down from the knot. Move things until the knot stays still, then measure the angle between the 3-stone and 4-stone strings with a protractor. Compare it with 90°."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A lamp hangs from two ropes tied to a ceiling. Why do the ropes need to pull harder when they are almost flat than when they hang nearly straight down?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A scalar has size only; a vector has size and direction. The resultant force is the single force with the same effect as all the forces together. Add forces in the same direction, subtract opposite ones, and use Pythagoras or a scale drawing for forces at an angle."
         }
       ],
       "sim": {
         "phet": "vector-addition_en.html",
-        "caption": "PhET Vector Addition. Combine vectors of different sizes and directions and see the resultant vector. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Vector Addition. Combine vectors of different sizes and directions and see the resultant vector. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

@@ -1,0 +1,222 @@
+{
+  "packId": "che.s1.changes.mixtures-elements-compounds",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.changes.mixtures-elements-compounds",
+      "title": "Mixtures, Elements and Compounds",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Temporary and Permanent Changes to Materials",
+      "subStrand": "Pure substances, mixtures and separation",
+      "order": 6,
+      "term": 2,
+      "outcomes": [
+        "know the criteria for determining whether a substance is pure or not (k, s)",
+        "understand that substances are either elements, mixtures or compounds (u)",
+        "identify different mixtures and devise ways of separating pure substances from them (u, s)",
+        "know that, when added together, some liquids mix while others form two layers (k)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Salt from Lake Katwe comes out of the lake mixed with mud and other salts. Borehole water looks clear, but it carries dissolved minerals from the rocks. Most things around us are mixtures. In this topic you will learn to tell mixtures from pure substances, and how to separate them."
+        },
+        {
+          "type": "heading",
+          "text": "Is it pure?"
+        },
+        {
+          "type": "text",
+          "text": "In everyday speech, pure means clean or natural. A packet may say pure orange juice, but the juice is a mixture of water, sugar and many other substances. In chemistry, a pure substance contains only one substance and nothing else."
+        },
+        {
+          "type": "list",
+          "items": [
+            "A pure substance melts at one fixed temperature. Pure ice melts at 0 °C.",
+            "A pure substance boils at one fixed temperature at a given pressure.",
+            "A pure substance is the same all the way through.",
+            "A pure dye gives only one spot in paper chromatography."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Impurities change these results. Salty water freezes below 0 °C and boils above 100 °C. So ice made from tap water, which contains dissolved salts, melts at a slightly different temperature from ice made from distilled water."
+        },
+        {
+          "type": "heading",
+          "text": "Elements"
+        },
+        {
+          "type": "text",
+          "text": "An element is a substance made of only one kind of atom. An atom is the smallest particle of an element. An element cannot be broken down into anything simpler by a chemical reaction. Each element has a symbol of one or two letters."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oxygen, O, and nitrogen, N: gases in the air.",
+            "Carbon, C: most of charcoal.",
+            "Iron, Fe, and copper, Cu: metals used for tools and wires.",
+            "Gold, Au: mined in Busia and Mubende.",
+            "Chlorine, Cl: a poisonous green gas used in small amounts to treat water."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Compounds"
+        },
+        {
+          "type": "text",
+          "text": "A compound is a substance made of two or more elements chemically joined together. The elements are always in the same fixed proportions. A compound can only be split up by a chemical reaction."
+        },
+        {
+          "type": "text",
+          "text": "A compound behaves very differently from the elements in it. Sodium is a soft metal that reacts violently with water. Chlorine is a poisonous gas. Joined together, they make sodium chloride: the salt we put on food."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2Na + Cl_2 \\rightarrow 2NaCl}",
+          "speech": "two sodium plus chlorine gives two sodium chloride"
+        },
+        {
+          "type": "text",
+          "text": "Other compounds include water, H₂O, carbon dioxide, CO₂, sugar and chlorophyll, the green substance in leaves."
+        },
+        {
+          "type": "heading",
+          "text": "Mixtures"
+        },
+        {
+          "type": "text",
+          "text": "A mixture contains two or more substances that are not chemically joined. The amounts can vary. Each substance keeps its own properties. A mixture can be separated by physical methods such as filtering or using a magnet."
+        },
+        {
+          "type": "text",
+          "text": "Air, soil, salty water and hydrochloric acid are all mixtures. Hydrochloric acid is a gas, hydrogen chloride, dissolved in water."
+        },
+        {
+          "type": "example",
+          "title": "Iron and sulphur: mixture or compound?",
+          "steps": [
+            "Stir grey iron filings with yellow sulphur powder. You can still see both colours.",
+            "Pass a magnet over it. The iron filings stick to the magnet and the sulphur is left. This is a mixture.",
+            "Your teacher heats some of the mixture strongly in a test tube. It glows and turns into a black solid.",
+            "The black solid is iron sulphide, a compound. A magnet no longer picks it out, and it is not yellow.",
+            "A new substance has formed, with its own properties."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{Fe + S \\rightarrow FeS}",
+          "speech": "iron plus sulphur gives iron sulphide"
+        },
+        {
+          "type": "example",
+          "title": "Classify nine substances",
+          "steps": [
+            "Elements, one kind of atom: chlorine, gold, oxygen.",
+            "Compounds, elements chemically joined: carbon dioxide, sugar, chlorophyll, salt (sodium chloride).",
+            "Mixtures, not chemically joined: air, hydrochloric acid."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Solutions"
+        },
+        {
+          "type": "text",
+          "text": "When sugar is stirred into water, it seems to disappear. It has dissolved. Its particles have spread out among the water particles, but the sugar is still there. The mass does not change."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Solute: the substance that dissolves, such as sugar.",
+            "Solvent: the liquid it dissolves in, such as water.",
+            "Solution: the mixture of solute and solvent.",
+            "Soluble: able to dissolve. Salt and sugar are soluble in water.",
+            "Insoluble: not able to dissolve. Sand and chalk are insoluble in water."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Find the mass of a solution",
+          "steps": [
+            "Nakato dissolves 10 g of sugar in 150 g of water.",
+            "No sugar is lost when it dissolves.",
+            "Mass of solution = mass of solute + mass of solvent.",
+            "Mass of solution = 10 + 150 = 160 g."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Separating mixtures"
+        },
+        {
+          "type": "text",
+          "text": "To separate a mixture, find a property that is different for each substance. Then choose a method that uses that difference."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Different sizes: sieving, as when maize flour or building sand is sieved.",
+            "Different weights: winnowing, as when wind blows chaff away from beans or millet.",
+            "Magnetic and non-magnetic: using a magnet.",
+            "Soluble and insoluble: dissolving and filtering.",
+            "A dissolved solid from its solvent: evaporation and crystallisation.",
+            "Different boiling points: distillation."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Get clean salt from rock salt",
+          "steps": [
+            "Rock salt is a mixture of rock, which is insoluble, and salt, which is soluble.",
+            "Crush the rock salt and stir it into warm water. The salt dissolves.",
+            "Filter the mixture. The rock stays on the filter paper as the residue.",
+            "The salt solution passes through as the filtrate.",
+            "Leave the filtrate in a shallow dish in the sun. As the water evaporates, salt crystals form. This is crystallisation."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Separate salt from soil",
+          "text": "Mix two spoons of salt with two spoons of soil. Stir the mixture into a cup of warm water. Filter it through a clean cloth or a coffee filter into a second cup. Pour the clear liquid into a plate and leave it in the sun for two days. Describe each stage using the words dissolve, soluble, filtrate, residue and crystallisation."
+        },
+        {
+          "type": "heading",
+          "text": "Liquids that mix and liquids that do not"
+        },
+        {
+          "type": "text",
+          "text": "Some liquids mix completely, like water and ethanol, or water and milk. They are called miscible liquids. Others never mix. Palm oil and water separate into two layers, with the oil on top because it is less dense. Liquids that form layers are called immiscible."
+        },
+        {
+          "type": "text",
+          "text": "Immiscible liquids can be separated with a separating funnel. This is a glass funnel with a tap at the bottom. Open the tap to run off the bottom layer, then close it before the top layer comes through."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Oil and water",
+          "text": "Half-fill a clear plastic bottle with water and add a little cooking oil. Close the lid tightly and shake it. Watch for two minutes. Then add a drop of liquid soap, shake again and compare. Describe what you see using the words miscible and immiscible."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Tap water contains water, dissolved salts and a little chlorine. Is tap water an element, a compound or a mixture? Is the water in it an element, a compound or a mixture?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A pure substance has fixed melting and boiling points. Elements contain one kind of atom. Compounds contain elements chemically joined in fixed amounts. Mixtures contain substances that are not joined and can be separated by physical methods. Miscible liquids mix, while immiscible liquids form layers."
+        }
+      ],
+      "sim": {
+        "phet": "build-a-molecule_en.html",
+        "caption": "Build molecules of oxygen, water and carbon dioxide from the atoms in the kit. Notice which molecules have only one kind of atom (elements) and which have two or more kinds joined together (compounds)."
+      }
+    }
+  ]
+}

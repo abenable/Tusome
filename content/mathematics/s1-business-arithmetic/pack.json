@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.business-arithmetic",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,39 +11,144 @@
       "strand": "Geometry and Measures",
       "subStrand": "Business arithmetic",
       "order": 13,
+      "term": 3,
       "outcomes": [
-        "describe and calculate profit (includes all expenses incurred), loss, commission, interest, insurance and discount. (k, u)",
+        "describe and calculate profit (includes all expenses incurred), loss, commission, interest, insurance and discount. (u, s)",
         "express profit or loss as a percentage. (u)",
         "solve simple interest problems. (k, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Profit is made when the selling price is more than everything spent to acquire and sell an item (the cost price, including any expenses like transport); a loss happens when the selling price is less. Profit = selling price - cost price (and expenses); loss = cost price (and expenses) - selling price."
+          "text": "Every day, traders in markets such as Owino in Kampala buy goods, pay for transport and sell to customers. Some days they gain money and some days they lose. Families borrow from a SACCO and pay back with interest. Boda boda riders pay to insure their motorcycles. Business arithmetic is the mathematics behind all of these."
+        },
+        {
+          "type": "heading",
+          "text": "Cost price, selling price, profit and loss"
         },
         {
           "type": "text",
-          "text": "A trader buys a bicycle for UGX 150 000, pays UGX 10 000 to transport it, and sells it for UGX 200 000. Total cost = 150 000 + 10 000 = 160 000. Profit = 200 000 - 160 000 = UGX 40 000."
-        },
-        {
-          "type": "text",
-          "text": "Profit or loss is often expressed as a percentage of the cost price, so different sales can be compared fairly. Percentage profit = (profit ÷ cost price) x 100. For the bicycle: (40 000 ÷ 160 000) x 100 = 25%."
+          "text": "The cost price (CP) is the total amount spent to get goods ready for sale. It includes the buying price and all expenses, such as transport and market dues. The selling price (SP) is the amount the customer pays. If the selling price is more than the cost price, the trader makes a profit. If it is less, the trader makes a loss."
         },
         {
           "type": "equation",
-          "expr": "(40 000 / 160 000) x 100 = 25%"
+          "latex": "\\text{profit} = SP - CP \\qquad \\text{loss} = CP - SP",
+          "speech": "profit equals selling price minus cost price; loss equals cost price minus selling price"
+        },
+        {
+          "type": "heading",
+          "text": "Profit or loss as a percentage"
         },
         {
           "type": "text",
-          "text": "Commission is a payment (often a percentage of a sale) made to someone for arranging a deal; a discount is a reduction from the marked price, usually to encourage a sale. Simple interest is money earned or charged on a loan or savings, calculated only on the original amount (the principal), using I = PRT ÷ 100, where P is the principal, R is the rate per year (as a percentage), and T is the time in years."
+          "text": "A profit of UGX 5,000 is large on goods that cost UGX 10,000, but small on goods that cost UGX 1,000,000. To compare fairly, we write profit or loss as a percentage of the cost price."
         },
         {
           "type": "equation",
-          "latex": "I = \\frac{P \\times R \\times T}{100}"
+          "latex": "\\text{percentage profit} = \\frac{\\text{profit}}{CP} \\times 100\\%",
+          "speech": "percentage profit equals profit over cost price, times 100 percent"
+        },
+        {
+          "type": "example",
+          "title": "Selling Irish potatoes",
+          "steps": [
+            "Namubiru buys a sack of Irish potatoes for UGX 110,000. She pays UGX 12,000 for transport to Kalerwe market and UGX 3,000 in market dues.",
+            "Cost price = 110,000 + 12,000 + 3,000 = UGX 125,000.",
+            "She sells all the potatoes for UGX 150,000.",
+            "Profit = 150,000 − 125,000 = UGX 25,000.",
+            "Percentage profit = 25,000 ÷ 125,000 × 100% = 20%."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Selling a bicycle at a loss",
+          "steps": [
+            "Kato buys a second-hand bicycle for UGX 250,000 and spends UGX 30,000 repairing it.",
+            "Cost price = 250,000 + 30,000 = UGX 280,000.",
+            "He sells it for UGX 238,000. This is less than the cost price, so he makes a loss.",
+            "Loss = 280,000 − 238,000 = UGX 42,000.",
+            "Percentage loss = 42,000 ÷ 280,000 × 100% = 15%."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Discount"
         },
         {
           "type": "text",
-          "text": "Ashok invests UGX 500 000 at a simple interest rate of 8% per year for 3 years. Interest = (500 000 x 8 x 3) ÷ 100 = UGX 120 000, so after 3 years his savings total 500 000 + 120 000 = UGX 620 000."
+          "text": "The marked price is the price written on the goods. A discount is an amount taken off the marked price, often to attract customers. A discount of 10% means the customer pays 90% of the marked price."
+        },
+        {
+          "type": "example",
+          "title": "Working backwards from a discount",
+          "steps": [
+            "A trader marks his shirts 20% above the cost price. He then gives customers a 10% discount on the marked price. Okot pays UGX 54,000 for a shirt. Find the marked price and the cost price.",
+            "After a 10% discount, Okot pays 90% of the marked price. So 90% of the marked price is 54,000.",
+            "1% of the marked price is 54,000 ÷ 90 = 600, so the marked price is 600 × 100 = UGX 60,000.",
+            "The marked price is 120% of the cost price. So 1% of the cost price is 60,000 ÷ 120 = 500.",
+            "The cost price is 500 × 100 = UGX 50,000. The trader still makes a profit of UGX 4,000."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Commission and insurance"
+        },
+        {
+          "type": "text",
+          "text": "Commission is money paid to an agent for selling goods or services for someone else. It is usually a percentage of the value of the sales. For example, Akello sells solar panels and earns 3% commission. If she sells panels worth UGX 8,500,000 in a month, her commission is 3 ÷ 100 × 8,500,000 = UGX 255,000."
+        },
+        {
+          "type": "text",
+          "text": "Insurance protects people against the cost of a loss, such as a fire, theft or an accident. The owner pays a regular amount, called a premium, to an insurance company. If the loss happens, the company pays for it. Wasswa insures his boda boda, worth UGX 6,000,000, at 4% per year. His yearly premium is 4 ÷ 100 × 6,000,000 = UGX 240,000."
+        },
+        {
+          "type": "heading",
+          "text": "Simple interest"
+        },
+        {
+          "type": "text",
+          "text": "When you borrow money, you pay back more than you borrowed. The extra is called interest. When you save in a bank or SACCO, you earn interest. The amount borrowed or saved is the principal (P). The rate (R) is the percentage charged per year. The time (T) is in years. With simple interest, the interest is the same every year."
+        },
+        {
+          "type": "equation",
+          "latex": "I = \\frac{P \\times R \\times T}{100}",
+          "speech": "I equals P times R times T, over 100"
+        },
+        {
+          "type": "example",
+          "title": "A loan from a SACCO",
+          "steps": [
+            "Opio borrows UGX 800,000 from a SACCO at 12% per year simple interest for 2 years.",
+            "I = 800,000 × 12 × 2 ÷ 100.",
+            "I = 19,200,000 ÷ 100 = UGX 192,000.",
+            "The amount he pays back is principal plus interest: 800,000 + 192,000 = UGX 992,000."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "How long to earn the interest",
+          "steps": [
+            "Kyomuhendo saves UGX 500,000 at 8% per year simple interest. How long will it take to earn UGX 120,000 in interest?",
+            "Rearrange the formula: T = 100 × I ÷ (P × R).",
+            "T = 100 × 120,000 ÷ (500,000 × 8) = 12,000,000 ÷ 4,000,000.",
+            "T = 3 years."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "A classroom shop",
+          "text": "Set up an imaginary shop in your classroom using empty packets, bottles and tins. Decide a cost price for each item, including some transport costs, and a selling price. As classmates buy, record each sale and work out the profit or loss on each item and as a percentage. Then try a sale day with a 25% discount and see how your profit changes."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A shop offers two deals on the same item. In the first, you get a 50% discount and then pay 20% tax. In the second, you pay 20% tax first and then get a 50% discount. Which is better for the customer? Discuss, then test your idea with a price such as UGX 10,000."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Profit is selling price minus cost price, and the cost price includes all expenses. Percentage profit or loss is always worked out on the cost price. Discount is taken off the marked price, commission is a percentage of sales, and an insurance premium is a percentage of the value insured. Simple interest is I = PRT ÷ 100."
         }
       ]
     }

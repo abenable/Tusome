@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.nets-areas-and-volumes-of-solids",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,34 +11,175 @@
       "strand": "Geometry and Measures",
       "subStrand": "Solids",
       "order": 11,
+      "term": 3,
       "outcomes": [
-        "Form nets of common solids. (u, s)",
-        "Identify common solids and their properties including faces, edges and vertices. (k)",
-        "State units of measures. (k)",
-        "Convert units from one form to another. (u)",
-        "Calculate surface areas of three-dimensional figures. (u, s)",
-        "Calculate the volume of cubes and cuboids. (u, s)"
+        "form nets of common solids. (u s)",
+        "identify common solids and their properties including faces, edges and vertices. (k)",
+        "state units of measures. (k)",
+        "convert units from one form to another. (u)",
+        "calculate surface areas of three-dimensional figures. (u s)",
+        "calculate the volume of cubes and cuboids. (u s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A net is a 2D shape that folds up to make a 3D solid. A cube's net is six identical squares arranged so they fold into a box; a cuboid's net is three pairs of matching rectangles. The surface area of a solid is the total area of all the faces in its net added together."
+          "text": "A box of chalk, a brick, a water tank and a jerrycan are all solid shapes. A solid is a three-dimensional (3D) shape: it has length, width and height. Factories make boxes by folding flat pieces of card. Builders need to know how much water a tank holds. This topic helps you answer questions like these."
+        },
+        {
+          "type": "heading",
+          "text": "Common solids and their properties"
         },
         {
           "type": "text",
-          "text": "A cuboid measures 5 cm by 3 cm by 4 cm. It has three pairs of rectangular faces: two of 5x3, two of 5x4, and two of 3x4. Surface area = 2(5x3) + 2(5x4) + 2(3x4) = 2(15) + 2(20) + 2(12) = 30 + 40 + 24 = 94 cm^2."
+          "text": "We describe a solid by counting its faces, edges and vertices. A face is a flat surface. An edge is a line where two faces meet. A vertex is a corner where edges meet. The plural of vertex is vertices."
         },
         {
-          "type": "equation",
-          "expr": "surface area = 2(5x3) + 2(5x4) + 2(3x4) = 30 + 40 + 24 = 94 cm^2"
+          "type": "list",
+          "items": [
+            "Cube: 6 square faces, 12 edges, 8 vertices. All edges are the same length.",
+            "Cuboid: 6 rectangular faces, 12 edges, 8 vertices. A brick is a cuboid.",
+            "Square-based pyramid: 5 faces (1 square and 4 triangles), 8 edges, 5 vertices.",
+            "Triangular prism: 5 faces (2 triangles and 3 rectangles), 9 edges, 6 vertices.",
+            "Cylinder: 2 flat circular faces and 1 curved surface, 2 curved edges, no vertices.",
+            "Cone: 1 flat circular face and 1 curved surface, 1 curved edge, 1 vertex.",
+            "Sphere: 1 curved surface, no edges and no vertices."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Count the faces (F), vertices (V) and edges (E) of the cube, the cuboid, the pyramid and the prism. Work out F + V − E for each one. What do you notice? Do you think it will work for every solid with flat faces?"
+        },
+        {
+          "type": "heading",
+          "text": "Nets of solids"
         },
         {
           "type": "text",
-          "text": "The volume of a cuboid (and a cube, its special case) is length x width x height. The same cuboid (5 cm x 3 cm x 4 cm) has volume 5 x 3 x 4 = 60 cm^3. When converting units, remember 1 cm^3 = 1000 mm^3 and 1 m^3 = 1 000 000 cm^3, since each linear dimension scales by the conversion factor."
+          "text": "A net is a flat shape that can be folded to make a solid. Each face of the solid appears once in the net. A solid can have more than one net."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cube: six equal squares. One net is four squares in a row, with one more square above and one below the second square.",
+            "Cuboid: three pairs of matching rectangles, arranged like the cube net.",
+            "Square-based pyramid: a square with a triangle attached to each of its four sides.",
+            "Triangular prism: three rectangles side by side, with a triangle attached to the top and the bottom of the middle rectangle."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Open up a box",
+          "text": "Bring empty cardboard packets to class, such as toothpaste, tea or chalk boxes. Count the faces, edges and vertices of each one. Carefully cut along some edges so the box opens out flat, then draw the net in your book. Try to draw a different net that would fold into the same box. In groups, you can also build a cube and a square-based pyramid from sticks or straws of equal length. Count how many sticks each shape needs."
+        },
+        {
+          "type": "heading",
+          "text": "Units of measure"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Length is measured in millimetres (mm), centimetres (cm), metres (m) and kilometres (km).",
+            "Area is measured in square units: mm², cm², m² and km².",
+            "Volume is measured in cubic units: mm³, cm³ and m³.",
+            "Capacity, the amount a container holds, is measured in millilitres (ml) and litres (l). 1 cm³ = 1 ml and 1,000 cm³ = 1 litre."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Converting units"
+        },
+        {
+          "type": "text",
+          "text": "Since 1 m = 100 cm, a square of side 1 m is 100 cm by 100 cm. So 1 m² = 10,000 cm². A cube of side 1 m is 100 cm by 100 cm by 100 cm. So 1 m³ = 1,000,000 cm³, which is 1,000 litres."
+        },
+        {
+          "type": "example",
+          "title": "Convert area and volume units",
+          "steps": [
+            "Convert 2.5 m² to cm². Multiply by 10,000: 2.5 × 10,000 = 25,000 cm².",
+            "Convert 4,500 cm² to m². Divide by 10,000: 4,500 ÷ 10,000 = 0.45 m².",
+            "Convert 3 m³ to litres. 1 m³ = 1,000 litres, so 3 m³ = 3,000 litres."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Surface area"
+        },
+        {
+          "type": "text",
+          "text": "The surface area of a solid is the total area of all its faces. It is the same as the area of its net. A cuboid has three pairs of equal faces, so we find the area of one of each pair and double the total."
         },
         {
           "type": "equation",
-          "expr": "volume = 5 x 3 x 4 = 60 cm^3"
+          "latex": "\\text{Surface area of a cuboid} = 2(lw + lh + wh)",
+          "speech": "Surface area of a cuboid equals 2 times, l w plus l h plus w h"
+        },
+        {
+          "type": "example",
+          "title": "Wood for a box",
+          "steps": [
+            "Wasswa makes a closed wooden box 50 cm long, 30 cm wide and 20 cm high.",
+            "Top and bottom: 50 × 30 = 1,500 cm² each.",
+            "Front and back: 50 × 20 = 1,000 cm² each.",
+            "The two ends: 30 × 20 = 600 cm² each.",
+            "Surface area = 2(1,500 + 1,000 + 600) = 2 × 3,100 = 6,200 cm².",
+            "In square metres: 6,200 ÷ 10,000 = 0.62 m²."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Surface area of a square-based pyramid",
+          "steps": [
+            "A pyramid has a square base of side 6 cm. Each triangular face has a base of 6 cm and a perpendicular height of 5 cm.",
+            "Area of the base = 6 × 6 = 36 cm².",
+            "Area of one triangle = ½ × 6 × 5 = 15 cm².",
+            "Area of four triangles = 4 × 15 = 60 cm².",
+            "Surface area = 36 + 60 = 96 cm²."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Volume of cubes and cuboids"
+        },
+        {
+          "type": "text",
+          "text": "Volume is the amount of space inside a solid. A cuboid 4 cm long, 3 cm wide and 2 cm high holds 2 layers of 12 unit cubes. So its volume is 24 cm³."
+        },
+        {
+          "type": "equation",
+          "latex": "V_{\\text{cuboid}} = l \\times w \\times h",
+          "speech": "The volume of a cuboid equals length times width times height"
+        },
+        {
+          "type": "equation",
+          "latex": "V_{\\text{cube}} = s^3",
+          "speech": "The volume of a cube equals s cubed, where s is the length of one edge"
+        },
+        {
+          "type": "example",
+          "title": "Filling a water tank",
+          "steps": [
+            "A school has a cuboid water tank 2 m long, 1.5 m wide and 1 m high.",
+            "Volume = 2 × 1.5 × 1 = 3 m³.",
+            "1 m³ = 1,000 litres, so the tank holds 3 × 1,000 = 3,000 litres.",
+            "Learners carry water in 20-litre jerrycans.",
+            "Number of jerrycans to fill the tank = 3,000 ÷ 20 = 150."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "How many different cuboids can you build from 24 unit cubes? They all have the same volume. Do they all have the same surface area? Which shape would a factory choose for a box, and why?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Solids have faces, edges and vertices, and a net is the flat shape that folds into a solid. Surface area is the total area of the faces, in square units. The volume of a cuboid is l × w × h and of a cube is s³, in cubic units. Remember 1 m² = 10,000 cm², 1 m³ = 1,000,000 cm³ and 1,000 cm³ = 1 litre."
         }
       ]
     }

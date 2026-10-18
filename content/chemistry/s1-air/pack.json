@@ -1,0 +1,207 @@
+{
+  "packId": "che.s1.air.air",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.air.air",
+      "title": "Air",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Air and Environment",
+      "subStrand": "Composition of air, oxides and air pollution",
+      "order": 7,
+      "term": 3,
+      "outcomes": [
+        "understand that air is a mixture of different gases that can be separated and used (k, u)",
+        "understand how air pollution can affect the atmosphere (u)",
+        "Understand and appreciate that processes such as burning and rusting/corrosion use oxygen from the air to form oxides (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Fan a charcoal stove and it glows brighter and hotter. Leave an iron hoe out in the rain and it turns brown with rust. Both changes need something from the air. Air is all around us, but we cannot see it. In this topic you will find out what air is made of and why it matters."
+        },
+        {
+          "type": "heading",
+          "text": "What is in air?"
+        },
+        {
+          "type": "text",
+          "text": "Air is a mixture of gases. If you drew a pie chart of dry air, nearly four-fifths would be nitrogen and about one-fifth would be oxygen. A very thin slice would be all the other gases."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nitrogen: about 78%",
+            "Oxygen: about 21%",
+            "Argon: about 0.9%",
+            "Carbon dioxide: about 0.04%",
+            "Tiny amounts of other gases such as neon and helium"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Air also holds water vapour. The amount changes from day to day, and it is higher near lakes and in the rainy season. Air can also carry dust, smoke, pollen and germs."
+        },
+        {
+          "type": "heading",
+          "text": "Why air is a mixture, not a compound"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The amounts of the gases change from place to place. Air near a busy road has more carbon dioxide.",
+            "Each gas keeps its own properties. Oxygen in air still helps things burn.",
+            "The gases can be separated by a physical method, without any chemical reaction.",
+            "Air has no chemical formula."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Separating the gases in air"
+        },
+        {
+          "type": "text",
+          "text": "Factories separate air by fractional distillation. This method separates liquids that have different boiling points. First, the air must be turned into a liquid."
+        },
+        {
+          "type": "example",
+          "title": "Separate oxygen and nitrogen from liquid air",
+          "steps": [
+            "Air is filtered to remove dust. Water vapour and carbon dioxide are removed, because they would freeze and block the pipes.",
+            "The air is squeezed and cooled to about −200 °C. It becomes a pale blue liquid.",
+            "The liquid air is warmed slowly at the bottom of a tall fractionating column.",
+            "Nitrogen boils at −196 °C. It boils first and is collected as a gas at the top.",
+            "Argon boils at −186 °C and is collected next.",
+            "Oxygen boils at −183 °C. It boils last and is collected nearer the bottom."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oxygen: hospitals give it to patients who cannot breathe well. It is also used for welding.",
+            "Nitrogen: used to make fertilisers, and in packets of snacks to keep them fresh.",
+            "Argon: fills some light bulbs, because it does not react with the hot filament.",
+            "Carbon dioxide: makes drinks fizzy and is used in some fire extinguishers."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Oxygen: the active part of air"
+        },
+        {
+          "type": "text",
+          "text": "Most of the air does not react easily. Oxygen is the active part. It is needed for burning, for rusting and for breathing."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "How long does a candle burn?",
+          "text": "Your teacher will demonstrate this. A short candle stands in a dish and is lit. A large glass jar is placed over it, and the time until the flame goes out is measured. Then the test is repeated with a smaller jar. Discuss why the flame goes out, and why the time is different."
+        },
+        {
+          "type": "text",
+          "text": "Burning, or combustion, is a reaction with oxygen that gives out heat and light. When an element burns, it joins with oxygen to make an oxide. An oxide is a compound of an element with oxygen."
+        },
+        {
+          "type": "equation",
+          "expr": "carbon + oxygen → carbon dioxide",
+          "speech": "carbon plus oxygen gives carbon dioxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{C + O_2 \\rightarrow CO_2}",
+          "speech": "carbon plus oxygen gives carbon dioxide"
+        },
+        {
+          "type": "text",
+          "text": "Your teacher may burn a short piece of magnesium ribbon held in tongs. It burns with a very bright white light, so do not look straight at it. A white powder, magnesium oxide, is left."
+        },
+        {
+          "type": "equation",
+          "expr": "magnesium + oxygen → magnesium oxide",
+          "speech": "magnesium plus oxygen gives magnesium oxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2Mg + O_2 \\rightarrow 2MgO}",
+          "speech": "two magnesium plus oxygen gives two magnesium oxide"
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{S + O_2 \\rightarrow SO_2}",
+          "speech": "sulphur plus oxygen gives sulphur dioxide"
+        },
+        {
+          "type": "heading",
+          "text": "Rusting and corrosion"
+        },
+        {
+          "type": "text",
+          "text": "Corrosion is the slow wearing away of a metal as it reacts with substances around it. Rusting is the corrosion of iron. Rust is a form of iron oxide, so rusting also uses oxygen from the air."
+        },
+        {
+          "type": "equation",
+          "expr": "iron + oxygen + water → hydrated iron(III) oxide (rust)",
+          "speech": "iron plus oxygen plus water gives hydrated iron three oxide, which is rust"
+        },
+        {
+          "type": "example",
+          "title": "Find out what iron needs to rust",
+          "steps": [
+            "Set up four test tubes, each with a clean iron nail.",
+            "Tube A: dry air. Anhydrous calcium chloride, a drying agent, takes the water vapour out of the air.",
+            "Tube B: ordinary air, which contains water vapour.",
+            "Tube C: tap water, which has air dissolved in it.",
+            "Tube D: water that was boiled to drive out the air, with a layer of oil on top to keep air out.",
+            "After a week, the nails in tubes B and C have rusted. The nails in A and D have not.",
+            "Conclusion: iron needs both oxygen and water to rust."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We stop rusting by keeping air and water away from iron. Painting, oiling and greasing all work. Iron roofing sheets are coated with zinc, which is called galvanising."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Iron roofs near Lake Victoria often rust faster than iron roofs in Karamoja. What differences between the two places might explain this?"
+        },
+        {
+          "type": "heading",
+          "text": "Air pollution"
+        },
+        {
+          "type": "text",
+          "text": "Air pollution happens when harmful gases and particles are added to the air faster than nature can remove them. This changes the make-up of the atmosphere, the layer of air around the Earth."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Smoke and soot from firewood, charcoal and burning rubbish damage the lungs.",
+            "Carbon monoxide comes from car exhausts and from charcoal burning with too little air. It is a poisonous gas with no smell. Never use a charcoal stove in a closed room.",
+            "Sulphur dioxide and nitrogen oxides from vehicles and factories dissolve in rain to make acid rain. Acid rain damages iron roofs, buildings, crops and lakes.",
+            "Dust from murram roads and building sites causes coughing and eye problems.",
+            "Extra carbon dioxide traps heat and warms the Earth. You will study this in Senior Two."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We can reduce air pollution by using improved cooking stoves, servicing vehicles, not burning plastics and planting trees."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Rusting at home",
+          "text": "Put a clean iron nail in each of three clear jars. Leave the first jar empty and closed. Half-cover the second nail with tap water. Cover the third nail with water that has been boiled and cooled, then pour a thin layer of cooking oil on top. Check the nails every two days for a week. Record which nails rust and explain why."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Air is a mixture of about 78% nitrogen, 21% oxygen and small amounts of other gases. It can be separated by fractional distillation of liquid air. Oxygen is the active part: burning and rusting use it to form oxides. Smoke, carbon monoxide and acidic gases pollute the air."
+        }
+      ]
+    }
+  ]
+}

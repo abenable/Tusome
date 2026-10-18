@@ -1,0 +1,156 @@
+{
+  "packId": "che.s3.reactions.rates-reversible",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s3.reactions.rates-reversible",
+      "title": "Chemical Reactions",
+      "subject": "chemistry",
+      "level": "S3",
+      "strand": "Reactants and Products",
+      "subStrand": "Rates of reaction and reversible reactions",
+      "order": 6,
+      "term": 3,
+      "outcomes": [
+        "understand and appreciate that chemical reactions take place at different rates (u)",
+        "understand the effect of various factors on the rate of chemical reactions and recognise that many reactions are reversible (u, s)",
+        "Understand the importance of reversible reactions in industrial processes (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Some reactions are very fast. A match bursts into flame in a moment. Others are slow. An iron roof takes years to rust, and fresh milk takes a day or two to go sour. The rate of a reaction is how quickly the reactants are used up or the products are formed."
+        },
+        {
+          "type": "heading",
+          "text": "Measuring the rate of a reaction"
+        },
+        {
+          "type": "text",
+          "text": "We measure rate by watching a change over time. We might measure the volume of gas given off, the loss in mass as a gas escapes, or the time taken for a colour or cloudiness to appear."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{rate} = \\frac{\\text{change in amount of product}}{\\text{time taken}}",
+          "speech": "rate equals change in amount of product divided by time taken"
+        },
+        {
+          "type": "example",
+          "title": "Calculate an average rate",
+          "steps": [
+            "Marble chips (calcium carbonate) react with dilute acid and give off carbon dioxide.",
+            "In the first 20 seconds, 40 cm³ of gas is collected.",
+            "Average rate = 40 ÷ 20 = 2 cm³ per second.",
+            "Between 60 and 80 seconds, only 10 cm³ more gas is collected.",
+            "Rate = 10 ÷ 20 = 0.5 cm³ per second. The reaction slows down as the reactants are used up."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A graph of gas volume against time is steep at first and then levels off. A steep slope means a fast reaction. When the line becomes flat, the reaction has stopped, because one reactant is used up."
+        },
+        {
+          "type": "heading",
+          "text": "Collision theory"
+        },
+        {
+          "type": "text",
+          "text": "Particles must collide in order to react, and they must hit each other with enough energy. The smallest energy needed is called the activation energy. Anything that makes successful collisions happen more often speeds up a reaction."
+        },
+        {
+          "type": "heading",
+          "text": "Factors that affect the rate"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Temperature: heating makes particles move faster. They collide more often and with more energy, so the rate increases. Food lasts longer in a fridge because the cold slows down the reactions that spoil it.",
+            "Concentration: a more concentrated solution has more particles in the same volume, so collisions happen more often. For gases, higher pressure has the same effect.",
+            "Particle size: small pieces or powder have a larger surface area for the other reactant to hit. Powdered limestone reacts faster than lumps, and small sticks catch fire faster than a big log.",
+            "Catalyst: a catalyst speeds up a reaction without being used up. It gives the reaction an easier path with a lower activation energy. Enzymes, such as those in yeast, are catalysts in living things."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Read the effect of temperature",
+          "steps": [
+            "Okello times how long a fizzy vitamin tablet takes to stop fizzing in water at three temperatures.",
+            "At 20 °C it takes 60 s, at 40 °C it takes 30 s, and at 60 °C it takes 15 s.",
+            "Rate can be found as 1 ÷ time: 1/60, 1/30 and 1/15 per second.",
+            "Each rise of 20 °C halves the time, so the rate doubles.",
+            "Conclusion: the higher the temperature, the faster the reaction."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Investigate rate with kitchen materials",
+          "text": "Use vinegar and baking soda, or fizzy tablets and water. Change one factor at a time and keep everything else the same. For temperature, compare cool water with warm (not boiling) water. For particle size, compare a whole tablet with a crushed one. For concentration, compare vinegar with vinegar mixed half and half with water. Time each reaction with a watch or phone, record the results in a table and draw a bar chart."
+        },
+        {
+          "type": "heading",
+          "text": "Reversible reactions"
+        },
+        {
+          "type": "text",
+          "text": "Most reactions go one way only. Burnt wood cannot be turned back into wood. These are irreversible reactions. A reversible reaction can go both forwards and backwards. We show it with a double arrow, ⇌."
+        },
+        {
+          "type": "text",
+          "text": "Heating blue copper(II) sulphate crystals drives out water and leaves a white powder. Adding water to the white powder turns it blue again and gives out heat. Your teacher will demonstrate this, because copper(II) sulphate is harmful if swallowed and the powder gets hot."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CuSO_4{\\cdot}5H_2O \\rightleftharpoons CuSO_4 + 5H_2O}",
+          "speech": "blue C u S O 4 dot 5 H 2 O changes to white C u S O 4 plus 5 H 2 O, and back again"
+        },
+        {
+          "type": "text",
+          "text": "In a closed container, a reversible reaction reaches equilibrium. The forward and backward reactions carry on at the same rate, so the amounts of reactants and products stay the same. Changing the temperature, pressure or concentration can shift the balance to give more product."
+        },
+        {
+          "type": "heading",
+          "text": "Reversible reactions in industry"
+        },
+        {
+          "type": "text",
+          "text": "Many industrial processes include a reversible step. Engineers choose conditions that give a good amount of product, at a fast enough rate, for a sensible cost. Sulphuric acid is made by the Contact process:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Sulphur is burned in air to make sulphur dioxide.",
+            "Sulphur dioxide and oxygen pass over a catalyst of vanadium(V) oxide at about 450 °C. This reversible step makes sulphur trioxide.",
+            "Sulphur trioxide is dissolved in concentrated sulphuric acid to form oleum.",
+            "Oleum is carefully diluted with water to give sulphuric acid."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2SO_2 + O_2 \\rightleftharpoons 2SO_3}",
+          "speech": "2 S O 2 plus O 2 is in equilibrium with 2 S O 3"
+        },
+        {
+          "type": "text",
+          "text": "A lower temperature would give more sulphur trioxide, but the reaction would be too slow. So 450 °C with a catalyst is a compromise, and unreacted gases are recycled. Sulphuric acid is used to make fertilisers, car batteries, paints and detergents. The Haber process, which makes ammonia for fertilisers, is another important reversible reaction."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Farmers dry their grain before storing it, and families keep food in a cool place. Why do these methods help food last longer? Where else do people speed up or slow down a reaction in daily life?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The rate of a reaction is how fast reactants change into products. Higher temperature, higher concentration, smaller particles and a catalyst all increase the rate by causing more frequent or more energetic collisions. Reversible reactions can go both ways, and industries choose conditions to get enough product quickly and cheaply."
+        }
+      ],
+      "sim": {
+        "phet": "gas-properties_en.html",
+        "caption": "Pump gas particles into the box, then use the heater. Watch the particles move faster and collide more often, which is why heating speeds up reactions."
+      }
+    }
+  ]
+}

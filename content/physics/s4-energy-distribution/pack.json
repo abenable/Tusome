@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.electricity.energy-distribution",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -9,34 +9,196 @@
       "subject": "physics",
       "level": "S4",
       "strand": "Electricity",
-      "subStrand": "Electric energy distribution and consumption",
-      "order": 3,
+      "subStrand": "Transmission, safety and the cost of electricity",
+      "order": 4,
+      "term": 2,
       "outcomes": [
         "understand the distribution of electricity from the source to consumer units (u)",
         "understand the energy transformations in common domestic electrical devices and how energy can be saved (u)",
-        "know the dangers of mains electricity and understand how these may be minimised by safety devices, and by sensible precautions (k, u, v/a)"
+        "understand how to use mains electricity safely and know the insulation colour codes used in domestic wiring (u, k, s)",
+        "know the dangers of mains electricity and understand how these may be minimised by safety devices, and by sensible precautions (k, u, v/a)",
+        "know how to read a domestic electricity meter and its significance (k, u, s)",
+        "appreciate the importance of the use of energy saving appliances (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Electricity is generated at a power station, usually by spinning a coil of wire inside a magnetic field (or a magnet inside a coil) \u2014 this is what a generator does. It is then transmitted over long distances at very high voltage, which reduces energy losses along the way, before being stepped down to a safer voltage for use in homes and businesses."
+          "text": "Water rushing through the turbines at Karuma on the Nile can light a classroom in Mbale, hundreds of kilometres away. This topic follows that journey and shows how to use electricity safely and without waste."
+        },
+        {
+          "type": "heading",
+          "text": "From power station to home"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Generation: most of Uganda's electricity comes from hydroelectric power stations on the Nile, such as Bujagali, Isimba and Karuma. The generators produce a.c.",
+            "Step-up: transformers at the power station raise the voltage to very high values, such as 132 000 V, 220 000 V or even 400 000 V.",
+            "Transmission: tall pylons carry the lines across the country, forming the national grid.",
+            "Step-down: transformers at substations lower the voltage in stages, for example to 33 000 V and 11 000 V for towns.",
+            "Distribution: a transformer on a pole near your home lowers it to 240 V, which comes into the house through the meter and the consumer unit."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "heading",
+          "text": "Why transmit at high voltage?"
         },
         {
           "type": "text",
-          "text": "Domestic electrical devices transform electrical energy into other useful forms: a heater transforms it into heat energy, a lamp into heat and light energy, a speaker into sound energy, and a fan into sound and mechanical (kinetic) energy. Choosing energy-efficient appliances reduces how much electrical energy is wasted, most often as unwanted heat."
+          "text": "Transmission cables have resistance, so some energy turns into heat in them. The power lost is P = I²R, so it depends on the square of the current. For the same power, a higher voltage needs a smaller current, because P = VI. So sending power at high voltage greatly cuts the losses. Voltage is easy to raise and lower with transformers, but only with a.c. This is the main reason mains supplies use a.c."
+        },
+        {
+          "type": "example",
+          "title": "Power lost in a transmission line",
+          "steps": [
+            "A town needs 100 kW (100 000 W). The cables have a resistance of 5 Ω.",
+            "At 1000 V: I = P ÷ V = 100 000 ÷ 1000 = 100 A. Power lost = I²R = 100² × 5 = 50 000 W. Half the power is wasted.",
+            "At 10 000 V: I = 100 000 ÷ 10 000 = 10 A. Power lost = 10² × 5 = 500 W, only 0.5 percent.",
+            "Raising the voltage 10 times makes the loss 100 times smaller."
+          ]
         },
         {
           "type": "text",
-          "text": "Mains electricity can be dangerous: it can cause electric shock, burns, or fire if used carelessly. Safety devices \u2014 fuses, circuit breakers, and earthing \u2014 protect people and appliances by cutting off the current if something goes wrong, such as a fault causing too much current to flow."
+          "text": "High-voltage lines are very dangerous. Current can jump through the air to a person who only comes close. Never climb a pylon or pole, fly a kite near power lines, build under them or touch a fallen cable."
+        },
+        {
+          "type": "heading",
+          "text": "Energy changes in the home"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Heat: kettle, flat iron, cooker, water heater.",
+            "Heat and light: filament bulb, and a television screen.",
+            "Sound: radio and loudspeaker, which also give some heat.",
+            "Sound and mechanical (movement) energy: electric fan, blender.",
+            "Heat, sound and mechanical energy: hair dryer, washing machine."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "Use the PhET Generator simulation below. Turn the crank (or let the water wheel spin it) to rotate a magnet near a coil, and watch how this generates an electric current."
+          "text": "The heating effect of a current is larger when the current is larger. For the same current, a thin wire gets hotter than a thick one, because it has more resistance. Wires that carry large currents, such as those to a cooker, must be thick."
+        },
+        {
+          "type": "heading",
+          "text": "Paying for electrical energy"
+        },
+        {
+          "type": "text",
+          "text": "Every appliance has a power rating, given in watts (W) or kilowatts (kW). Electricity companies sell energy in kilowatt-hours (kWh), often called units. One kilowatt-hour is the energy used by a 1 kW appliance in one hour."
+        },
+        {
+          "type": "equation",
+          "latex": "E = P \\times t",
+          "speech": "E equals P times t, energy in kilowatt-hours equals power in kilowatts times time in hours"
+        },
+        {
+          "type": "example",
+          "title": "Cost of using a flat iron",
+          "steps": [
+            "A 2000 W flat iron is used for 30 minutes a day. Suppose electricity costs UGX 750 per unit.",
+            "P = 2000 W = 2 kW and t = 30 minutes = 0.5 h",
+            "Energy each day = 2 × 0.5 = 1 kWh",
+            "Cost each day = 1 × 750 = UGX 750. Over 30 days: UGX 22 500."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "An older meter shows the total units used since it was installed; subtract the earlier reading from the new one. With a prepaid meter, you buy units in advance and enter a token number, and the meter counts down as you use them. Reading the meter shows a family which habits use the most energy."
+        },
+        {
+          "type": "example",
+          "title": "Reading a meter",
+          "steps": [
+            "On 1st March the meter read 04567 kWh. On 1st April it read 04702 kWh.",
+            "Units used = 4702 − 4567 = 135 kWh",
+            "At UGX 750 per unit, cost = 135 × 750 = UGX 101 250"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Saving energy"
+        },
+        {
+          "type": "text",
+          "text": "An energy-saving appliance does the same job using less electrical energy. A 9 W LED bulb gives about as much light as a 60 W filament bulb, because it wastes much less energy as heat."
+        },
+        {
+          "type": "example",
+          "title": "Changing to an LED bulb",
+          "steps": [
+            "A bulb is on for 5 hours a day for 30 days, a total of 150 hours.",
+            "60 W filament bulb: 0.06 kW × 150 h = 9 kWh",
+            "9 W LED bulb: 0.009 kW × 150 h = 1.35 kWh",
+            "Saving = 7.65 kWh. At UGX 750 per unit, that is about UGX 5700 a month for one bulb."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Also switch off lights and appliances when not in use, iron many clothes at once and keep the fridge door closed. Saving energy lowers bills and reduces the need for new power stations."
+        },
+        {
+          "type": "heading",
+          "text": "Using mains electricity safely"
+        },
+        {
+          "type": "text",
+          "text": "A mains cable has three wires, each with its own colour of insulation. Uganda uses the British three-pin plug."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Live wire: brown (red in old wiring). It carries the high voltage.",
+            "Neutral wire: blue (black in old wiring). It completes the circuit.",
+            "Earth wire: green and yellow stripes (green in old wiring). It connects the metal case of an appliance to the ground."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fuse: a thin wire that melts and breaks the circuit if the current gets too large. Choose a fuse rated just above the normal current.",
+            "Circuit breaker: an automatic switch in the consumer unit that trips off when the current is too large. It can be reset.",
+            "Earthing: if the live wire touches a metal case, a large current flows to earth and blows the fuse, instead of passing through a person.",
+            "Fuses, switches and circuit breakers go in the live wire. When they break the circuit, the appliance is cut off from the high voltage."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Choosing a fuse",
+          "steps": [
+            "A kettle is rated 2000 W, 240 V. Fuses come in 3 A, 5 A and 13 A sizes.",
+            "Normal current I = P ÷ V = 2000 ÷ 240 ≈ 8.3 A",
+            "The 13 A fuse is the smallest that is larger than 8.3 A, so choose 13 A."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Never touch switches with wet hands or overload a socket with adaptors. Replace damaged cables, and leave wiring to a qualified electrician."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Home energy survey",
+          "text": "List the electrical appliances at home or at school and read the power rating on each label. Estimate the hours each is used per day, then calculate its daily energy in kWh and its cost. Which costs the most? Suggest two ways to save energy. If your teacher has an unplugged plug, practise wiring it with the right colours in the right places."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many homes now use solar panels as well as, or instead of, the national grid. What are the advantages and disadvantages of each for a family in a rural village?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Electricity is sent at high voltage to cut energy losses, then stepped down to 240 V for homes. Energy used = power × time, measured in kWh. Live is brown, neutral blue and earth green-and-yellow. Fuses, switches and circuit breakers go in the live wire, and the earth wire protects people from shocks."
         }
       ],
       "sim": {
         "phet": "generator_en.html",
-        "caption": "PhET Generator. Spin a magnet near a coil and watch it generate an electric current \u2014 the basic principle behind every power station. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Generator. Spin a magnet near a coil and watch it generate an electric current — the basic principle behind every power station. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

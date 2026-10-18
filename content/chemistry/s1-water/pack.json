@@ -1,0 +1,216 @@
+{
+  "packId": "che.s1.air.water",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s1.air.water",
+      "title": "Water",
+      "subject": "chemistry",
+      "level": "S1",
+      "strand": "Air and Environment",
+      "subStrand": "Properties of water, the water cycle and water treatment",
+      "order": 8,
+      "term": 3,
+      "outcomes": [
+        "understand the occurrence of water as a natural resource, its physical and chemical properties and importance in everyday life (u, s)",
+        "appreciate how water is recycled by natural processes (u, v)",
+        "understand the process of water and sewage treatment (u, k)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Uganda is a land of water. It has Lake Victoria, Lake Kyoga, Lake Albert, the Nile and many swamps and rivers. Families fetch water from boreholes, springs, taps and rainwater tanks. No living thing can survive without water."
+        },
+        {
+          "type": "heading",
+          "text": "Where water is found"
+        },
+        {
+          "type": "text",
+          "text": "A natural resource is something from nature that people use, such as water, soil or trees. Most of the Earth's water is salty sea water. Only a small part is fresh water."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Surface water: lakes, rivers, swamps and seas.",
+            "Groundwater: water stored in rocks and soil underground. Boreholes and springs bring it to the surface.",
+            "Water in the air: water vapour and clouds.",
+            "Water in living things: about two-thirds of your body is water."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Physical properties of water"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pure water is a colourless liquid with no smell and no taste.",
+            "It freezes at 0 °C and boils at 100 °C at sea level. In high places, such as Kabale, it boils at a lower temperature.",
+            "Its density is 1 g/cm³. Ice is less dense, so ice floats.",
+            "It dissolves more substances than any other common liquid. This makes it a very good solvent.",
+            "It warms up and cools down slowly. Large lakes help keep nearby places from getting very hot or very cold."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Chemical properties of water"
+        },
+        {
+          "type": "text",
+          "text": "Water is a compound of hydrogen and oxygen. Each molecule has two hydrogen atoms and one oxygen atom, so its formula is H₂O. Water forms when hydrogen burns in oxygen."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2H_2 + O_2 \\rightarrow 2H_2O}",
+          "speech": "two hydrogen plus oxygen gives two water"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pure water is neutral. It is neither an acid nor an alkali.",
+            "Water turns white anhydrous copper(II) sulphate blue, and blue cobalt(II) chloride paper pink.",
+            "Water reacts with some metals, such as calcium, to give hydrogen gas.",
+            "Water reacts with quicklime, giving out a lot of heat and making slaked lime for building."
+          ]
+        },
+        {
+          "type": "equation",
+          "expr": "anhydrous copper(II) sulphate (white) + water → hydrated copper(II) sulphate (blue)",
+          "speech": "anhydrous copper two sulphate, which is white, plus water gives hydrated copper two sulphate, which is blue"
+        },
+        {
+          "type": "example",
+          "title": "Test whether a liquid contains water, and whether it is pure",
+          "steps": [
+            "Put a drop of the liquid on a little white anhydrous copper(II) sulphate.",
+            "If it turns blue, the liquid contains water. This test does not tell you if the water is pure.",
+            "To test purity, find the boiling point. Pure water boils at 100 °C at sea level.",
+            "Salty or dirty water boils at a higher temperature."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Why water matters"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Homes: drinking, cooking, washing and cleaning.",
+            "Farming: watering crops, animals and fish ponds.",
+            "Industry: cooling machines and dissolving substances, such as in sugar and soda factories.",
+            "Energy: dams on the Nile at Jinja, Bujagali and Karuma turn moving water into electricity.",
+            "Transport and food: ferries cross lakes, and fishing feeds and employs many people."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The water cycle"
+        },
+        {
+          "type": "text",
+          "text": "The water on Earth is used again and again. It moves between land, lakes and air in a loop called the water cycle. The sun provides the energy that drives it."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Evaporation: the sun heats lakes, rivers and wet ground, and water turns into water vapour.",
+            "Transpiration: plants take up water through their roots and lose water vapour from their leaves.",
+            "Condensation: the vapour rises, cools and condenses into tiny droplets that form clouds.",
+            "Precipitation: the droplets join together and fall as rain or hail.",
+            "Run-off and soaking in: rainwater flows into rivers and lakes, or soaks into the ground to become groundwater."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Evaporation also cleans water naturally. When salty or dirty water evaporates, the salts and dirt are left behind. Rain begins as fairly pure water."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Make a solar still",
+          "text": "Put some salty water in a wide bowl. Stand a small clean cup in the middle. Cover the bowl with clear polythene and tie it tightly. Put a small stone on the polythene just above the cup. Leave it in the sun for a few hours. Explain where the water in the cup came from, using the words evaporation and condensation."
+        },
+        {
+          "type": "heading",
+          "text": "Water pollution"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sewage and pit latrines built too close to wells and springs spread diseases such as cholera and typhoid.",
+            "Fertilisers washed off farms feed algae and water weeds. They cover the water and use up oxygen, so fish die.",
+            "Waste from factories and mines can carry poisonous metals into rivers.",
+            "Plastic bags and bottles block streams and harm fish and birds.",
+            "Oil and fuel spilled at boat landing sites and car washes float on water and harm living things."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We can prevent pollution by building latrines far from water sources, treating sewage before it reaches lakes, using fertiliser carefully and keeping rubbish out of drains."
+        },
+        {
+          "type": "heading",
+          "text": "Treating water for drinking"
+        },
+        {
+          "type": "text",
+          "text": "Water for towns is pumped from lakes and rivers and cleaned in stages."
+        },
+        {
+          "type": "example",
+          "title": "Follow water through a treatment works",
+          "steps": [
+            "Screening: metal screens remove sticks, leaves and rubbish.",
+            "Coagulation: alum, aluminium sulphate, is added. It makes tiny bits of dirt stick together into larger clumps.",
+            "Sedimentation: the water stands in big tanks and the clumps sink to the bottom.",
+            "Filtration: the water flows through beds of sand and gravel, which trap smaller particles.",
+            "Chlorination: a little chlorine is added to kill germs.",
+            "Lime may be added to make the water less acidic. Then the clean water is stored and piped to homes."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "At home, water from an open source should be made safe. Boil it, add a chlorine water treatment tablet, or leave it in a clear plastic bottle in strong sun for six hours."
+        },
+        {
+          "type": "heading",
+          "text": "Treating sewage"
+        },
+        {
+          "type": "text",
+          "text": "Sewage is used water from toilets, kitchens and bathrooms. It must be cleaned before it goes back into a river or lake."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Screening removes rags, plastics and grit.",
+            "In settling tanks, solid waste sinks to form sludge.",
+            "Air is bubbled through the liquid. Helpful bacteria feed on the waste and break it down.",
+            "The water settles again and the clean liquid, called effluent, flows into a wetland or a river.",
+            "The sludge is dried and used as fertiliser, or used to make biogas."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Build a simple water filter",
+          "text": "Cut the bottom off a plastic bottle and turn it upside down. Push a piece of clean cloth into the neck. Add layers of crushed charcoal, fine sand, coarse sand and small stones, from bottom to top. Pour muddy water in and collect what drips out. The water looks clearer, but it may still carry germs. It must be boiled before anyone drinks it."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Many towns, farms and factories around Lake Victoria use the lake and release waste into it. Who should be responsible for keeping the lake clean, and how?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Water is a compound, H₂O, that freezes at 0 °C, boils at 100 °C at sea level and dissolves many substances. The sun drives the water cycle, which recycles water through evaporation, condensation and rain. Water works clean water by coagulation, sedimentation, filtration and chlorination. Sewage works use settling and bacteria to clean used water."
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.numbers.indices-and-standard-form",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,35 +11,185 @@
       "strand": "Numbers",
       "subStrand": "Indices and standard form",
       "order": 4,
+      "term": 1,
       "outcomes": [
-        "Give approximate answers to calculations. (u, s)",
-        "Write numbers to a given number of significant figures. (u, s)",
-        "Differentiate between significant figures and decimal places. (u, s)",
-        "Express numbers in standard form. (u)",
-        "Identify base number and index. (k)",
-        "State and apply the laws of indices in calculations. (k, u, s)",
-        "Use a calculator to find powers and roots. (k, u, s)"
+        "give approximate answers to calculations. (u, s)",
+        "write numbers to a given number of significant figures. (u, s)",
+        "differentiate between significant figures and decimal places. (u, s)",
+        "express numbers in standard form. (u)",
+        "Identify base number and index (k)",
+        "state and apply the laws of indices in calculations. (k, u, s)",
+        "use a calculator to find powers and roots. (k u s)"
       ],
       "body": [
         {
+          "type": "heading",
+          "text": "Very big and very small numbers"
+        },
+        {
           "type": "text",
-          "text": "In an index form like 5^3, 5 is the base and 3 is the index (or power) — it means 5 x 5 x 5 = 125. The laws of indices let you combine powers of the same base without expanding them: multiplying adds the indices, dividing subtracts them, and raising a power to a power multiplies the indices."
+          "text": "The 2014 census counted 34,634,650 people in Uganda. The Sun is about 150,000,000 km from the Earth. A grain of sand may be 0.0005 m wide. Numbers like these are long and easy to misread. Indices and standard form give us a short, clear way to write them."
+        },
+        {
+          "type": "heading",
+          "text": "Base and index"
+        },
+        {
+          "type": "text",
+          "text": "When a number is multiplied by itself several times, we write it with an index. In 2⁵, the 2 is the base and the 5 is the index. The index is also called the power. It tells us how many times the base appears in the multiplication."
         },
         {
           "type": "equation",
-          "latex": "a^m \\times a^n = a^{m+n}, \\qquad a^m \\div a^n = a^{m-n}, \\qquad (a^m)^n = a^{mn}"
+          "latex": "2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32",
+          "speech": "2 to the power 5 equals 2 times 2 times 2 times 2 times 2, which equals 32"
+        },
+        {
+          "type": "example",
+          "title": "Who is correct about 5³?",
+          "steps": [
+            "Akumu says 5³ = 5 × 3 = 15. Burango says 5³ = 5 × 5 × 5.",
+            "The index 3 means three 5s multiplied together, not 5 times 3.",
+            "5 × 5 = 25, and 25 × 5 = 125.",
+            "So 5³ = 125. Burango's method is correct."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The laws of indices"
         },
         {
           "type": "text",
-          "text": "Standard form (scientific notation) writes a number as A x 10^n, where 1 <= A < 10. The population of Uganda, about 45 000 000, is written 4.5 x 10^7 in standard form — count how many places the decimal point moves to get A between 1 and 10; that count is the power of 10."
+          "text": "These laws work when the bases are the same. Here a is any number that is not zero, and m and n are the indices."
         },
         {
           "type": "equation",
-          "expr": "45 000 000 = 4.5 x 10^7"
+          "latex": "a^m \\times a^n = a^{m+n}",
+          "speech": "a to the m times a to the n equals a to the power m plus n"
+        },
+        {
+          "type": "equation",
+          "latex": "a^m \\div a^n = a^{m-n}",
+          "speech": "a to the m divided by a to the n equals a to the power m minus n"
+        },
+        {
+          "type": "equation",
+          "latex": "(a^m)^n = a^{mn}",
+          "speech": "a to the m, all to the power n, equals a to the power m times n"
+        },
+        {
+          "type": "equation",
+          "latex": "a^0 = 1 \\qquad a^{-n} = \\frac{1}{a^n} \\qquad a^{\\frac{1}{2}} = \\sqrt{a}",
+          "speech": "a to the power zero equals 1. a to the power minus n equals 1 over a to the n. a to the power one half equals the square root of a"
+        },
+        {
+          "type": "example",
+          "title": "Use the laws of indices",
+          "steps": [
+            "2³ × 2⁴ = 2³⁺⁴ = 2⁷ = 128.",
+            "5⁶ ÷ 5⁴ = 5⁶⁻⁴ = 5² = 25.",
+            "(3²)³ = 3 to the power 2 × 3 = 3⁶ = 729.",
+            "7⁰ = 1, because 7³ ÷ 7³ = 7⁰, and any number divided by itself is 1.",
+            "2⁻³ = 1 ÷ 2³ = 1/8.",
+            "9 to the power ½ = √9 = 3. A fractional index undoes a power."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Approximate answers"
         },
         {
           "type": "text",
-          "text": "Significant figures count all the meaningful digits in a number starting from the first non-zero digit, while decimal places count only digits after the decimal point. 0.00456 has 3 significant figures (4, 5, 6) but 5 decimal places. Rounding 3.14159 to 3 significant figures gives 3.14; rounding it to 3 decimal places gives 3.142."
+          "text": "An approximate answer is close to the exact answer but easier to find. We round each number first, then calculate. An estimate helps us to check that a calculator answer is sensible."
+        },
+        {
+          "type": "example",
+          "title": "Estimate the cost of exercise books",
+          "steps": [
+            "Nakato buys 19 exercise books at UGX 1,950 each.",
+            "Round 19 to 20 and UGX 1,950 to UGX 2,000.",
+            "Estimate: 20 × 2,000 = UGX 40,000.",
+            "Exact: 19 × 1,950 = UGX 37,050. The estimate is close, so the exact answer is sensible."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Significant figures and decimal places"
+        },
+        {
+          "type": "text",
+          "text": "Decimal places (d.p.) count the digits after the decimal point. Significant figures (s.f.) count digits from the first digit that is not zero. Zeros at the start of a decimal are not significant. For both, look at the next digit: if it is 5 or more, round up."
+        },
+        {
+          "type": "example",
+          "title": "Compare the two kinds of rounding",
+          "steps": [
+            "3.14159 to 3 s.f. is 3.14. To 3 d.p. it is 3.142.",
+            "0.004572 to 2 s.f. is 0.0046. The first two significant figures are 4 and 5, and the next digit 7 rounds the 5 up.",
+            "0.004572 to 2 d.p. is 0.00, which hides the number completely. Significant figures suit very small numbers better.",
+            "34,634,650 to 3 s.f. is 34,600,000. The zeros keep each digit in its place."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Standard form"
+        },
+        {
+          "type": "text",
+          "text": "A number is in standard form when it is written as a number from 1 up to, but not including, 10, multiplied by a power of 10. Large numbers have a positive index. Small numbers have a negative index."
+        },
+        {
+          "type": "equation",
+          "latex": "A \\times 10^n, \\quad 1 \\le A < 10",
+          "speech": "A times 10 to the power n, where A is at least 1 and less than 10"
+        },
+        {
+          "type": "example",
+          "title": "Uganda's population growth in standard form",
+          "steps": [
+            "The 1969 census counted 9,548,847 people. The 2014 census counted 34,634,650.",
+            "Increase = 34,634,650 − 9,548,847 = 25,085,803.",
+            "To 3 s.f., this is 25,100,000.",
+            "Move the decimal point 7 places to the left to get 2.51. So the increase is about 2.51 × 10⁷ people.",
+            "A small number works the same way: 0.00052 = 5.2 × 10⁻⁴, because the point moves 4 places to the right."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Powers and roots on a calculator"
+        },
+        {
+          "type": "text",
+          "text": "Most scientific calculators have a power key, marked xʸ or ^, and a square root key, √. Many also have a cube root key. The key marked EXP or ×10ˣ enters standard form. Always estimate first, so that you notice a wrong key press."
+        },
+        {
+          "type": "example",
+          "title": "Use a calculator for powers and roots",
+          "steps": [
+            "1.5⁴: press 1.5, then the power key, then 4. The display shows 5.0625.",
+            "√50: the display shows 7.0710678… which is 7.07 to 3 s.f. Check: 7² = 49, so the answer should be just above 7.",
+            "The cube root of 100 is 4.6416… which is 4.64 to 3 s.f. Check: 4³ = 64 and 5³ = 125, so the answer lies between 4 and 5."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Fold and count",
+          "text": "Take a long strip of old newspaper. Fold it in half, open it, and count the parts. Fold it again from the start, twice this time, and count again. Record each result in a table with three columns: number of folds, number of parts, and the number of parts in index form (1 = 2⁰, 2 = 2¹, 4 = 2², and so on). Use the pattern to find the number of parts after 10 folds, and write it in index form."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Your calculator shows 1 ÷ 3 = 0.333333333. Is this exactly one third? Why can some numbers, such as thirds, sevenths and π, never be written exactly on a calculator?"
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Write 5³ = 125, 5² = 25 and 5¹ = 5 in a column. What happens each time the index goes down by 1? Continue the pattern. Does it help to explain why 5⁰ = 1 and 5⁻¹ = 1/5?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "In aⁿ, a is the base and n is the index. When bases are the same, add indices to multiply, subtract to divide and multiply them for a power of a power; a⁰ = 1. Significant figures start at the first non-zero digit, while decimal places start after the point. Standard form is A × 10ⁿ with A from 1 up to but not including 10."
         }
       ]
     }

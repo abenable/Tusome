@@ -1,0 +1,149 @@
+{
+  "packId": "bio.s1.diversity.introduction",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s1.diversity.introduction",
+      "title": "Introduction to Biology",
+      "subject": "biology",
+      "level": "S1",
+      "strand": "Diversity of Living Things",
+      "subStrand": "Biology and the characteristics of living things",
+      "order": 1,
+      "term": 1,
+      "outcomes": [
+        "Appreciate that biology is the study of life (k)",
+        "Appreciate that biology is applied in everyday life (u)",
+        "Appreciate that life processes are common to all living things, but they are manifested differently in different organisms (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Look around your school compound. You may see a goat grazing, a mango tree, ants on the path and your classmates. All of these are alive. A stone, a bicycle and a jerrycan are not alive. Biology helps us understand the difference."
+        },
+        {
+          "type": "heading",
+          "text": "What biology is"
+        },
+        {
+          "type": "text",
+          "text": "Biology is the study of life. The word comes from two Greek words: bios, meaning life, and logos, meaning study. A person who studies biology is called a biologist."
+        },
+        {
+          "type": "text",
+          "text": "Biologists study living things, which we call organisms. An organism is any single living thing. A bean plant, a cow, a mushroom and a tiny bacterium are all organisms."
+        },
+        {
+          "type": "heading",
+          "text": "Branches of biology"
+        },
+        {
+          "type": "text",
+          "text": "Biology is a big subject, so it is divided into branches. Each branch looks at life in a different way."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Botany is the study of plants.",
+            "Zoology is the study of animals.",
+            "Anatomy is the study of the structure of organisms, such as the parts inside the body.",
+            "Physiology is the study of how the parts of organisms work, such as how the heart pumps blood.",
+            "Genetics is the study of how features are passed from parents to their young.",
+            "Ecology is the study of how organisms live with each other and with their surroundings.",
+            "Taxonomy is the study of naming organisms and sorting them into groups."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Biology in everyday life"
+        },
+        {
+          "type": "text",
+          "text": "Biology is not only for scientists in laboratories. People use it every day, often without noticing."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Health: doctors and nurses use biology to understand diseases such as malaria and to treat them.",
+            "Farming: farmers use it to choose good seeds, care for the soil and control pests on maize, beans and coffee.",
+            "Food: making yoghurt, bread and local brews depends on tiny living things called microorganisms.",
+            "Environment: biology helps us protect forests, wetlands and the fish in Lake Victoria.",
+            "Hygiene: washing hands, boiling drinking water and using a latrine all stop germs from spreading.",
+            "Careers: vets, nurses, agricultural officers, game rangers and laboratory technicians all need biology."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Kyomuhendo says biology is only useful for people who want to become doctors. Think of three people in your village whose work uses biology. What do they need to know about living things?"
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics of living things"
+        },
+        {
+          "type": "text",
+          "text": "All living things carry out the same seven life processes. These processes are the signs that tell us something is alive. The word MRS GREN can help you remember them."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Movement: living things move all or part of their bodies.",
+            "Respiration: living things break down food to release energy.",
+            "Sensitivity: living things detect changes around them and respond to them.",
+            "Growth: living things increase in size and mass.",
+            "Reproduction: living things produce young of their own kind.",
+            "Excretion: living things remove waste substances made inside their bodies.",
+            "Nutrition: living things take in food or make their own food."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Something is alive only if it carries out all seven processes. A boda boda moves, uses fuel and gives out waste gases. But it cannot grow, reproduce or respond to its surroundings by itself. So it is not a living thing."
+        },
+        {
+          "type": "text",
+          "text": "To keep these processes going, living things need food, water, air, a suitable temperature and space. Green plants also need light."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Living or non-living?",
+          "text": "In pairs, walk around the school compound for 15 minutes. List ten things you see, such as a goat, a grasshopper, grass, a stone, a cloud and a bicycle. Make a table with the seven life processes across the top. For each thing, tick the processes it shows. Then decide whether it is living, non-living, or was once living, such as a dry leaf or a piece of firewood. Share your table with another pair and talk about any differences."
+        },
+        {
+          "type": "heading",
+          "text": "Same processes, different ways"
+        },
+        {
+          "type": "text",
+          "text": "Plants and animals carry out the same life processes. But they carry them out in different ways."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nutrition: green plants make their own food from sunlight, water and carbon dioxide. Animals must eat plants or other animals.",
+            "Movement: most animals move their whole body from place to place. A plant stays in one place, but its parts move. A bean shoot bends towards light, and the leaves of the touch-me-not plant (Mimosa) fold when touched.",
+            "Respiration: both plants and animals release energy from food all the time, day and night.",
+            "Excretion: animals remove waste through organs such as the kidneys, lungs and skin. Plants give off waste gases through their leaves and store some waste in old leaves that later fall off.",
+            "Growth: most animals stop growing when they become adults. Many plants keep growing all their lives, like a mango tree that gets taller every year.",
+            "Sensitivity: animals respond quickly, using sense organs and nerves. Plants respond slowly. For example, roots grow towards water.",
+            "Reproduction: animals produce young by laying eggs or giving birth. Plants produce seeds from flowers, and some grow new plants from parts of the stem, like cassava cuttings."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A dry bean seed can lie in a tin for months and show no signs of life. A car moves, uses fuel and gives out waste. Why do biologists say the seed is alive and the car is not?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Biology is the study of life, and we use it in health, farming, food and caring for the environment. All living things carry out seven life processes: movement, respiration, sensitivity, growth, reproduction, excretion and nutrition. Plants and animals carry out the same processes, but in different ways."
+        }
+      ]
+    }
+  ]
+}

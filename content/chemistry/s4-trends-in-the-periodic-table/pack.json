@@ -1,0 +1,144 @@
+{
+  "packId": "che.s4.periodicity.trends",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.periodicity.trends",
+      "title": "Trends in the Periodic Table",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Periodicity",
+      "subStrand": "Trends across Period 3 and down Group 1",
+      "order": 3,
+      "term": 2,
+      "outcomes": [
+        "know the trends in physical properties of the elements across the periods in the Periodic Table (k)",
+        "know the trends in typical, physical, and chemical properties of simple compounds of the elements of the third period (u, s)",
+        "predict physical and chemical properties of different elements in Group 1 (u, s)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In a well-run market, sellers of similar goods sit together: tomatoes in one row, clothes in another. The Periodic Table works in a similar way. Elements are arranged in order of proton number. Elements with similar properties fall in the same column, called a group. Each row is called a period."
+        },
+        {
+          "type": "heading",
+          "text": "Electron arrangement and position"
+        },
+        {
+          "type": "text",
+          "text": "An element's position tells you about its electrons. The period number equals the number of occupied electron shells. For the main groups, the group number equals the number of electrons in the outer shell. Sodium is 2,8,1. It has three shells, so it is in Period 3, and one outer electron, so it is in Group 1."
+        },
+        {
+          "type": "example",
+          "title": "Find the position of phosphorus",
+          "steps": [
+            "Phosphorus has proton number 15, so it has 15 electrons.",
+            "Electron arrangement: 2,8,5.",
+            "There are 3 occupied shells, so phosphorus is in Period 3.",
+            "There are 5 outer electrons, so phosphorus is in Group V."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Physical trends across Period 3"
+        },
+        {
+          "type": "text",
+          "text": "Period 3 runs from sodium to argon: Na, Mg, Al, Si, P, S, Cl and Ar. Each element has one more proton and one more outer electron than the one before it."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Metal to non-metal: sodium, magnesium and aluminium are metals. Silicon is a semi-metal (metalloid). Phosphorus, sulphur, chlorine and argon are non-metals.",
+            "Atomic size gets smaller from left to right, because the growing positive charge of the nucleus pulls the electrons closer.",
+            "Melting point rises from sodium to a peak at silicon, then falls sharply. The metals have metallic bonding that gets stronger from sodium to aluminium. Silicon has a giant covalent structure, so it melts at about 1410 °C. Phosphorus, sulphur and chlorine are simple molecules, and argon exists as single atoms, so their melting points are low.",
+            "Electrical conductivity is high for the three metals, low for silicon (a semiconductor) and almost zero for the non-metals.",
+            "Density rises from sodium to aluminium, then is lower for the non-metals. Chlorine and argon are gases."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Draw a Period 3 trend chart",
+          "text": "Draw a bar chart of these melting points in °C: Na 98, Mg 650, Al 660, Si 1410, P 44, S 115, Cl −101, Ar −189. Colour the metals, the semi-metal and the non-metals differently. In your group, discuss how the shape of the chart links to the structure of each element."
+        },
+        {
+          "type": "heading",
+          "text": "Compounds of the Period 3 elements"
+        },
+        {
+          "type": "text",
+          "text": "The Period 3 elements react with water, oxygen and chlorine. Their compounds also change from metallic to non-metallic character across the period."
+        },
+        {
+          "type": "list",
+          "items": [
+            "With water: sodium reacts quickly with cold water to give sodium hydroxide and hydrogen. Magnesium reacts very slowly with cold water but quickly with steam. Aluminium hardly reacts, because a thin oxide layer protects it. Chlorine dissolves in water to form an acidic solution.",
+            "Oxides: sodium oxide and magnesium oxide are basic and have giant ionic structures with high melting points. Aluminium oxide is amphoteric, which means it reacts with both acids and bases. Silicon dioxide is a giant covalent solid that is weakly acidic. The oxides of phosphorus and sulphur are simple molecules that dissolve in water to form acids. This is how sulphur dioxide causes acid rain.",
+            "Chlorides: sodium chloride and magnesium chloride are ionic solids with high melting points. Further across, the chlorides are covalent, with low melting and boiling points. Silicon tetrachloride, SiCl₄, is a liquid that reacts with water to give acidic fumes."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2Na + 2H_2O \\rightarrow 2NaOH + H_2} \\qquad \\mathrm{S + O_2 \\rightarrow SO_2}",
+          "speech": "2 N a plus 2 H 2 O gives 2 N a O H plus H 2. S plus O 2 gives S O 2"
+        },
+        {
+          "type": "heading",
+          "text": "Group 1: the alkali metals"
+        },
+        {
+          "type": "text",
+          "text": "Group 1 contains lithium, sodium and potassium, followed by rubidium, caesium and francium. They are called alkali metals because they react with water to form alkalis. Each atom has one electron in its outer shell: lithium is 2,1, sodium is 2,8,1 and potassium is 2,8,8,1."
+        },
+        {
+          "type": "list",
+          "items": [
+            "They are soft enough to cut with a knife. A fresh surface is shiny but quickly tarnishes in air.",
+            "They have low densities. Lithium, sodium and potassium float on water. Density generally rises down the group, though potassium is a little less dense than sodium.",
+            "Their melting points are low for metals, and they fall down the group: lithium 181 °C, sodium 98 °C and potassium 63 °C. They also get softer down the group.",
+            "They all react with water to give a metal hydroxide (an alkali) and hydrogen gas.",
+            "They burn in oxygen to give oxides, and react with chlorine to give white ionic chlorides such as sodium chloride.",
+            "They are stored under oil, because they react with air and water."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Reactivity increases down the group. Lithium fizzes steadily on water. Sodium melts into a ball and rushes about. Potassium catches fire with a lilac flame. Each atom reacts by losing its single outer electron. Down the group, this electron is further from the nucleus and shielded by more inner shells, so it is lost more easily. These reactions are dangerous and are shown only by a trained teacher or on video."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2K + 2H_2O \\rightarrow 2KOH + H_2}",
+          "speech": "2 K plus 2 H 2 O gives 2 K O H plus H 2"
+        },
+        {
+          "type": "example",
+          "title": "Predict the properties of rubidium",
+          "steps": [
+            "Rubidium is below potassium in Group 1.",
+            "It has one outer electron, so it reacts in the same way as the other alkali metals.",
+            "Its outer electron is further from the nucleus, so it is lost more easily. Rubidium is more reactive than potassium and would react violently with water.",
+            "Its melting point will be lower than 63 °C, and it will be very soft.",
+            "Equation: 2Rb + 2H₂O → 2RbOH + H₂"
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Sodium metal must never be touched with bare hands, yet sodium chloride is safe to eat. Why might an element and its compounds behave so differently?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Across Period 3, elements change from metals to non-metals, atoms get smaller, and melting point peaks at silicon. The oxides change from basic to acidic across the period. Group 1 metals all have one outer electron, so they react in similar ways, and reactivity increases down the group as the outer electron is lost more easily."
+        }
+      ],
+      "sim": {
+        "phet": "build-an-atom_en.html",
+        "caption": "Build lithium with 3 protons and 3 electrons, then add one proton and one electron at a time up to neon. Watch the outer shell fill across Period 2, the same pattern seen across Period 3."
+      }
+    }
+  ]
+}

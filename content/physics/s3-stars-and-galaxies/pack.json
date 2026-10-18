@@ -1,0 +1,157 @@
+{
+  "packId": "phy.s3.space.stars-galaxies",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "phy.s3.space.stars-galaxies",
+      "title": "Stars and Galaxies",
+      "subject": "physics",
+      "level": "S3",
+      "strand": "Earth and Space Physics",
+      "subStrand": "Stars and galaxies",
+      "order": 9,
+      "term": 3,
+      "outcomes": [
+        "know the source of energy in stars and appreciate the importance of the energy produced by the sun to the people on Earth (k, u)",
+        "appreciate that stars vary in colour and brightness (u)",
+        "know that stars have life cycles and that the fate of stars (white dwarfs, neutron stars and black holes) depends on their initial size (k, u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "On a clear night far from town lights, the sky is full of stars. Some look white, some bluish and a few reddish. A faint, milky band stretches across the sky. That band is our home galaxy, the Milky Way."
+        },
+        {
+          "type": "heading",
+          "text": "What is a star?"
+        },
+        {
+          "type": "text",
+          "text": "A star is a huge ball of very hot gas, mostly hydrogen and helium, that gives out its own light. The Sun is a star. It is our nearest star, about 150 million km away. The other stars look like tiny points only because they are very much further away."
+        },
+        {
+          "type": "text",
+          "text": "Distances between stars are so large that we measure them in light-years. A light-year is the distance light travels in one year, about 9.5 million million kilometres. The nearest star after the Sun, Proxima Centauri, is about 4.2 light-years away."
+        },
+        {
+          "type": "example",
+          "title": "How long does sunlight take to reach us?",
+          "steps": [
+            "The Sun is 1.5 × 10¹¹ m from the Earth. Light travels at 3 × 10⁸ m/s.",
+            "time = distance ÷ speed = 1.5 × 10¹¹ ÷ 3 × 10⁸",
+            "time = 500 s, which is about 8 minutes 20 seconds",
+            "So we always see the Sun as it was a little over 8 minutes ago."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Where a star's energy comes from"
+        },
+        {
+          "type": "text",
+          "text": "The centre of the Sun, its core, is at about 15 million °C. At this temperature, hydrogen nuclei move so fast that they join together to make helium. Joining small nuclei into a bigger one is called nuclear fusion. In each fusion, a tiny amount of mass disappears and becomes energy."
+        },
+        {
+          "type": "text",
+          "text": "The Sun turns about 4 million tonnes of mass into energy every second. Its power output is about 3.8 × 10²⁶ watts. The Earth is small and far away, so it catches only about one two-billionth of this energy. Roughly half of the sunlight reaching the top of the atmosphere gets to the ground. Plants turn only a small part of the light that falls on their leaves into food by photosynthesis, usually about 1 to 2 percent."
+        },
+        {
+          "type": "heading",
+          "text": "Why the Sun's energy matters"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Light and warmth make life on Earth possible.",
+            "Crops such as matooke, maize and cassava need sunlight for photosynthesis. Every food chain starts with it.",
+            "The Sun drives the water cycle, evaporating water that later falls as rain.",
+            "Uneven heating of the Earth causes winds.",
+            "Solar panels turn sunlight into electricity, and farmers dry coffee and fish in the Sun.",
+            "Firewood, charcoal and fossil fuels store energy that plants once captured from the Sun."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "example",
+          "title": "Power from a solar panel",
+          "steps": [
+            "At midday, about 1000 W of sunlight falls on each square metre of ground in Uganda. A solar panel has an area of 1.5 m² and turns 20 percent of the light into electricity.",
+            "Power of sunlight on the panel = 1000 × 1.5 = 1500 W",
+            "Electrical power = 20 percent of 1500 W = 0.2 × 1500 = 300 W"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Colour and brightness of stars"
+        },
+        {
+          "type": "text",
+          "text": "The colour of a star tells you its surface temperature. Think of charcoal in a stove: it glows dull red, then orange, and then yellow-white as it gets hotter. Stars behave the same way. Red stars are the coolest, at about 3000 °C. Yellow stars like the Sun are about 5500 °C. White and blue stars are the hottest, at 10 000 °C or more."
+        },
+        {
+          "type": "text",
+          "text": "How bright a star looks depends on two things. The first is how much light it really gives out, which depends on its size and temperature. The second is its distance from the Earth. A big, hot star far away may look fainter than a smaller star close by. Sirius is the brightest star in our night sky, partly because it is quite near, only about 8.6 light-years away."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Star watching",
+          "text": "On a clear, moonless night, go somewhere dark with an adult. Let your eyes adjust for ten minutes. Pick out five stars and note the colour and brightness of each. In the constellation Orion, compare reddish Betelgeuse with blue-white Rigel. Share your notes in class."
+        },
+        {
+          "type": "heading",
+          "text": "The life cycle of a star"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A star is born in a nebula, a huge cloud of gas and dust, when gravity pulls part of it together.",
+            "The gas squeezes and heats up to form a protostar.",
+            "When the core is hot enough, hydrogen fusion begins. The star is now a main sequence star, stable for most of its life. The Sun, about 4.6 billion years old, is at this stage.",
+            "When the hydrogen in the core runs low, the core shrinks and gets even hotter. Now helium fuses into carbon and oxygen. The outer layers swell and cool, and the star becomes a red giant."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "What happens next depends on the star's starting mass. A small or medium star, like the Sun, gently pushes off its outer layers. Its hot core is left behind as a white dwarf, about the size of the Earth. It slowly cools and fades. The Sun will become a red giant in about 5 billion years and end as a white dwarf."
+        },
+        {
+          "type": "text",
+          "text": "A star more than about eight times the mass of the Sun becomes a red supergiant. Its core keeps fusing heavier elements, up to iron. Then the core collapses suddenly and the star blows apart in a supernova. For a few weeks, a supernova can shine more brightly than a whole galaxy."
+        },
+        {
+          "type": "list",
+          "items": [
+            "If the leftover core is up to about three times the Sun's mass, it becomes a neutron star. A neutron star is only about 20 km across, yet a teaspoon of it would weigh about a billion tonnes.",
+            "If the core is heavier still, it collapses into a black hole. Its gravity is so strong that nothing, not even light, can escape."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "Supernovae scatter the elements made inside stars into space, where new stars and planets form from them. The iron in your blood was made inside stars long ago."
+        },
+        {
+          "type": "heading",
+          "text": "Galaxies"
+        },
+        {
+          "type": "text",
+          "text": "A galaxy is a huge group of stars, gas and dust held together by gravity. The Milky Way is a spiral galaxy, shaped like a flat disc with curved arms. It holds more than 100 billion stars and is about 100 000 light-years across. The Sun sits in one of the arms, far from the centre. The nearest large galaxy, Andromeda, is 2.5 million light-years away. Space telescopes show that the universe contains billions of galaxies."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "When you look at a star 500 light-years away, you see light that left it 500 years ago. Could that star have changed, or even exploded, since then? What does this tell us about looking into space?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Stars shine because of nuclear fusion in their cores, which turns hydrogen into helium. A star's colour shows its temperature, and its brightness depends on its size, temperature and distance. Small and medium stars end as white dwarfs; very massive stars explode as supernovae and leave neutron stars or black holes."
+        }
+      ]
+    }
+  ]
+}

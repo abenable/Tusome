@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.waves.sound",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -11,38 +11,145 @@
       "strand": "Waves",
       "subStrand": "Sound waves",
       "order": 7,
+      "term": 2,
       "outcomes": [
         "understand that sound is an example of a wave form that requires a medium through which to travel, and determine its velocity in air by the echo method (k, s)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Sound is produced by a vibrating object, such as a tuning fork, a drum skin, or vocal cords. These vibrations disturb the particles of a surrounding medium \u2014 a gas, liquid, or solid \u2014 creating a longitudinal wave that carries the sound outward."
+          "text": "The beat of a drum at a wedding, the notes of an adungu harp, the call to assembly and the roar of a passing lorry are all sounds. Every sound starts with something that vibrates. In this topic you will see how sound travels and how to measure its speed using an echo."
+        },
+        {
+          "type": "heading",
+          "text": "How sound is produced"
         },
         {
           "type": "text",
-          "text": "Sound needs a medium to travel through: it cannot travel through a vacuum (empty space), because there are no particles there to vibrate. Sound travels fastest through solids, slower through liquids, and slowest through gases like air, because particles are packed more closely in solids and can pass the vibration on more quickly."
+          "text": "Sound is a form of energy produced by vibrating objects. A vibration is a quick back-and-forth movement. When a drum skin vibrates, it pushes and pulls on the air next to it. In a guitar or adungu, the strings vibrate. When you speak, your vocal cords vibrate."
         },
         {
           "type": "text",
-          "text": "The loudness of a sound depends on the amplitude of the vibration; the pitch depends on its frequency \u2014 a higher frequency gives a higher-pitched sound."
+          "text": "A tuning fork shows this clearly. Strike it gently and touch the prongs to the surface of some water. The water splashes, showing that the prongs are vibrating."
+        },
+        {
+          "type": "heading",
+          "text": "Sound is a longitudinal wave"
         },
         {
           "type": "text",
-          "text": "The speed of sound in air can be found using the echo method: make a sound near a large, flat wall a known distance away, and measure the time for the echo to return. Because the sound travels to the wall and back, the total distance travelled is twice the distance to the wall."
+          "text": "A vibrating object pushes air particles together to form a compression. As it moves back, it leaves a region where particles are spread out, called a rarefaction. Each particle passes the vibration on to the next. So sound travels as a longitudinal wave of compressions and rarefactions. The air particles vibrate back and forth, but they do not travel from the source to your ear."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Loudness depends on the amplitude. A bigger vibration gives a louder sound.",
+            "Pitch depends on the frequency. A faster vibration gives a higher note. A small drum has a higher pitch than a big one.",
+            "Humans can hear frequencies from about 20 Hz to 20 000 Hz. Sound above 20 000 Hz is ultrasound. Bats use it to find insects, and hospitals use it to scan unborn babies."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "heading",
+          "text": "Sound needs a medium"
+        },
+        {
+          "type": "text",
+          "text": "Sound can only travel through a medium, which may be a solid, a liquid or a gas. It cannot travel through a vacuum (empty space). A classic experiment shows this. An electric bell rings inside a glass jar. As a pump removes the air, the sound gets fainter and fainter, even though the hammer can still be seen striking the bell. Astronauts in space must talk by radio."
+        },
+        {
+          "type": "text",
+          "text": "Sound travels at different speeds in different media. In air it travels at about 340 m/s. In water it travels at about 1500 m/s, and in steel at about 5000 m/s. In solids the particles are close together and strongly linked, so each particle passes the vibration on quickly. In a gas the particles are far apart, so the vibration passes more slowly."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Sound through solids",
+          "text": "Put your ear against one end of a long wooden desk or a metal fence rail. Ask a partner to tap the other end very gently with a coin. Then listen to the same tap through the air, with your head raised. Which way is the sound louder and clearer? Make a string telephone with two tins and a tight string and compare."
+        },
+        {
+          "type": "heading",
+          "text": "Echoes"
+        },
+        {
+          "type": "text",
+          "text": "An echo is a sound reflected from a hard surface, such as a wall, a cliff or the side of a hill. You hear the echo a short time after the original sound, because the sound must travel to the surface and back. The total distance travelled is twice the distance to the surface."
         },
         {
           "type": "equation",
-          "latex": "\\text{speed of sound} = \\frac{2 \\times \\text{distance to wall}}{\\text{time for echo to return}}"
+          "latex": "v = \\frac{2d}{t}",
+          "speech": "v equals 2 d over t"
         },
         {
           "type": "text",
-          "text": "Use the PhET Waves Intro simulation below (Sound screen). Make a sound source vibrate and watch how the sound wave travels through the air, represented by moving particles."
+          "text": "Here d is the distance to the reflecting surface and t is the time between the sound and its echo."
+        },
+        {
+          "type": "heading",
+          "text": "Measuring the speed of sound by the echo method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Find a large, flat wall, such as the end of a school block, with open ground in front of it.",
+            "Stand at least 50 m from the wall and measure the distance with a tape measure.",
+            "Clap two blocks of wood together. Listen for the echo.",
+            "Clap again and again, adjusting the rhythm until each clap happens at the same moment as the echo of the one before.",
+            "A partner times 20 claps with a stopwatch. The time between claps is the time for sound to travel to the wall and back.",
+            "Repeat several times and use the average. Then calculate v = 2d ÷ t."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "example",
+          "title": "Speed of sound from the clapping method",
+          "steps": [
+            "Namubiru stands 60 m from a wall. Her partner times 20 claps at 7.2 s.",
+            "Time between claps t = 7.2 ÷ 20 = 0.36 s",
+            "Distance travelled in that time = 2 × 60 = 120 m",
+            "Speed of sound v = 120 ÷ 0.36 ≈ 333 m/s"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Results are never exactly the same each time. Our reaction time when starting and stopping the watch adds errors, so timing many claps gives a better result than timing one. Wind can speed up or slow down the sound. Sound also travels a little faster in warm air than in cold air."
+        },
+        {
+          "type": "example",
+          "title": "How far away is the cliff?",
+          "steps": [
+            "Okello shouts towards a rocky hillside and hears the echo 1.5 s later. Take the speed of sound in air as 340 m/s.",
+            "Total distance travelled = v × t = 340 × 1.5 = 510 m",
+            "The sound went there and back, so the distance to the hillside = 510 ÷ 2 = 255 m"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Echo sounding on Lake Victoria",
+          "steps": [
+            "A fishing boat sends a sound pulse down into the lake. The echo from the lake bed returns after 0.08 s. Sound travels at 1500 m/s in water.",
+            "Distance there and back = 1500 × 0.08 = 120 m",
+            "Depth of water = 120 ÷ 2 = 60 m"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Ships use this method, called echo sounding or sonar, to measure the depth of water and to find shoals of fish. Bats and dolphins use echoes to find their way and their food."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "During a thunderstorm you see the lightning before you hear the thunder, even though both happen at the same moment. Why? How could you use the gap between them to estimate how far away the storm is?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Sound is a longitudinal wave made by vibrating objects. It needs a medium and cannot cross a vacuum. It travels fastest in solids and slowest in gases, at about 340 m/s in air. In the echo method, speed = 2 × distance to the wall ÷ time for the echo."
         }
       ],
       "sim": {
         "phet": "waves-intro_en.html",
-        "caption": "PhET Waves Intro (Sound screen). Watch how a vibrating source produces a sound wave that travels through the air. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Waves Intro (Sound screen). Watch how a vibrating source produces a sound wave that travels through the air. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

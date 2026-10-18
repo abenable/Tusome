@@ -1,45 +1,199 @@
 {
   "packId": "phy.s3.matter.momentum",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s3.matter.momentum",
-      "title": "Momentum and Collisions",
+      "title": "Newton's Laws and Momentum",
       "subject": "physics",
       "level": "S3",
       "strand": "Mechanics and Properties of Matter",
-      "subStrand": "Linear and non-linear motion",
+      "subStrand": "Newton's laws and momentum",
       "order": 2,
+      "term": 1,
       "outcomes": [
         "understand linear momentum and that it is conserved during collisions (u, s)",
-        "understand that momentum is conserved during a collision and the implication of this (u, s, v/a)"
+        "understand that momentum is conserved during a collision and the implication of this (u, s, v/a)",
+        "understand and apply Newton's laws of motion (u, s, v/a)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "Momentum is a measure of how hard it is to stop a moving object. It depends on both mass and velocity."
+          "text": "When a taxi brakes suddenly, the passengers lurch forward. When a footballer kicks a ball, the ball flies off and the foot feels the kick too. When two boda bodas collide, the damage depends on how heavy and how fast they were. Newton's laws of motion and the idea of momentum explain all of these."
+        },
+        {
+          "type": "heading",
+          "text": "Newton's first law"
+        },
+        {
+          "type": "text",
+          "text": "Newton's first law says that an object stays at rest, or keeps moving at a steady speed in a straight line, unless a resultant force acts on it. Inertia is the tendency of an object to keep doing what it is already doing. The more mass an object has, the more inertia it has."
+        },
+        {
+          "type": "text",
+          "text": "When a taxi stops suddenly, your body keeps moving forward because of its inertia. A seat belt provides the force that stops you safely. A load that is not tied down on a boda boda slides off when the rider brakes or turns."
+        },
+        {
+          "type": "heading",
+          "text": "Newton's second law"
+        },
+        {
+          "type": "text",
+          "text": "Newton's second law says that the acceleration of an object is directly proportional to the resultant force on it, and in the same direction. For a fixed mass, a bigger force gives a bigger acceleration. For a fixed force, a bigger mass gives a smaller acceleration."
         },
         {
           "type": "equation",
-          "latex": "p = m v"
+          "latex": "F = ma",
+          "speech": "F equals m times a"
         },
         {
           "type": "text",
-          "text": "The law of conservation of momentum states that, in a collision, the total momentum of the objects involved stays the same before and after \u2014 provided no external force acts on the system. Momentum lost by one object is gained by the other(s)."
+          "text": "Force is measured in newtons (N). One newton is the force that gives a mass of 1 kg an acceleration of 1 m/s²."
+        },
+        {
+          "type": "example",
+          "title": "Force needed to accelerate a car",
+          "steps": [
+            "A car of mass 1200 kg accelerates at 2 m/s². Find the resultant force on it.",
+            "F = ma = 1200 × 2",
+            "F = 2400 N",
+            "A loaded lorry of 12 000 kg would need 24 000 N for the same acceleration."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Newton's third law"
         },
         {
           "type": "text",
-          "text": "This is why a fast, light ball and a slow, heavy ball can have the same momentum, and why a small car colliding with a large truck experiences a much bigger change in velocity than the truck does \u2014 because the same change in momentum is shared unequally due to their different masses."
+          "text": "Newton's third law says that when object A pushes on object B, object B pushes back on object A. The two forces are equal in size and opposite in direction. They act on different objects, so they do not cancel each other out."
+        },
+        {
+          "type": "list",
+          "items": [
+            "When you walk, your foot pushes back on the ground and the ground pushes you forward.",
+            "A swimmer pushes water backwards and the water pushes the swimmer forwards.",
+            "A rocket pushes hot gases downwards and the gases push the rocket upwards.",
+            "When you step from a canoe onto the shore, the canoe moves backwards."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Balloon rocket",
+          "text": "Thread a long string through a drinking straw. Tie the string tightly between two chairs. Blow up a balloon, hold the neck closed and tape the balloon to the straw. Let go. Air rushes out backwards and the balloon shoots forwards along the string. Try a bigger balloon and compare how far it goes."
+        },
+        {
+          "type": "heading",
+          "text": "Linear momentum"
         },
         {
           "type": "text",
-          "text": "Use the PhET Collision Lab simulation below. Set up collisions between objects of different masses and velocities and check that total momentum before the collision always equals total momentum after."
+          "text": "Linear momentum is the mass of an object multiplied by its velocity. Its unit is the kilogram metre per second (kg m/s). Momentum is a vector, so it has a direction, the same as the velocity. A slow, heavy lorry and a fast, light ball can both have large momentum."
+        },
+        {
+          "type": "equation",
+          "latex": "p = mv",
+          "speech": "p equals m times v"
+        },
+        {
+          "type": "example",
+          "title": "Momentum of a boda boda",
+          "steps": [
+            "A boda boda and its rider have a total mass of 150 kg. They move at 10 m/s.",
+            "p = mv = 150 × 10",
+            "p = 1500 kg m/s, in the direction of motion"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A resultant force changes an object's momentum. Newton's second law can also be written as: force equals change of momentum divided by the time taken. So the same change of momentum, spread over a longer time, needs a smaller force."
+        },
+        {
+          "type": "equation",
+          "latex": "F = \\frac{mv - mu}{t}",
+          "speech": "F equals m v minus m u, all over t"
+        },
+        {
+          "type": "example",
+          "title": "A goalkeeper catches a football",
+          "steps": [
+            "A football of mass 0.45 kg moving at 20 m/s is caught and stopped.",
+            "Change of momentum = 0.45 × 20 − 0 = 9 kg m/s",
+            "If stiff hands stop it in 0.01 s: F = 9 ÷ 0.01 = 900 N",
+            "If the hands move back and stop it in 0.1 s: F = 9 ÷ 0.1 = 90 N",
+            "Moving the hands back with the ball makes the force ten times smaller."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Conservation of momentum"
+        },
+        {
+          "type": "text",
+          "text": "The principle of conservation of momentum says that when objects collide or push apart, their total momentum stays the same, as long as no outside force acts. Momentum lost by one object is gained by the other. This follows from Newton's third law. During the collision, the two forces are equal and opposite and act for the same time."
+        },
+        {
+          "type": "example",
+          "title": "Two trolleys stick together",
+          "steps": [
+            "A 2 kg trolley moving at 3 m/s hits a 1 kg trolley at rest. They stick and move off together. Find their speed.",
+            "Momentum before = (2 × 3) + (1 × 0) = 6 kg m/s",
+            "Momentum after = (2 + 1) × v = 3v",
+            "Momentum is conserved, so 3v = 6 and v = 2 m/s"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Jumping out of a canoe",
+          "steps": [
+            "Wasswa (50 kg) jumps forwards out of a canoe (100 kg) at 2 m/s. Both start at rest, so the total momentum is zero.",
+            "Wasswa's momentum = 50 × 2 = 100 kg m/s forwards",
+            "The canoe must have 100 kg m/s backwards: 100 × v = 100",
+            "The canoe moves backwards at v = 1 m/s"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Why this matters for safety"
+        },
+        {
+          "type": "text",
+          "text": "In a crash, a vehicle's momentum must fall to zero. Safety features make this happen over a longer time, so the force on people is smaller."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Seat belts stretch slightly and hold passengers in their seats.",
+            "Airbags inflate and cushion the head and chest.",
+            "Crumple zones at the front and back of cars fold up during a crash.",
+            "Helmets have a soft inner lining that squashes on impact. Boda boda riders and passengers should always wear them.",
+            "Long jumpers land in sand, and athletes bend their knees when they land."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Marble collisions",
+          "text": "Lay a ruler with a groove flat on a table. Roll one marble along the groove into a second marble at rest. Watch what happens to each. Then roll one marble into two touching marbles, and two marbles into two. Describe what you see using the word momentum."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A loaded lorry and an empty pickup move at the same speed. Which is harder to stop, and why? What does this mean for the gap drivers should leave behind a lorry on the road?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Newton's laws: no resultant force means no change in motion; F = ma; every force has an equal and opposite partner on another object. Momentum p = mv. In a collision or explosion, total momentum is conserved."
         }
       ],
       "sim": {
         "phet": "collision-lab_en.html",
-        "caption": "PhET Collision Lab. Collide objects of different masses and velocities and verify that momentum is conserved. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Collision Lab. Collide objects of different masses and velocities and verify that momentum is conserved. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]

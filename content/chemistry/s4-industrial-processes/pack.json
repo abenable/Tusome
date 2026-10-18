@@ -1,0 +1,206 @@
+{
+  "packId": "che.s4.redox.industrial-processes",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.redox.industrial-processes",
+      "title": "Industrial Processes",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Redox Reactions",
+      "subStrand": "Chemical industries in Uganda",
+      "order": 2,
+      "term": 1,
+      "outcomes": [
+        "know about some of the main industries that produce useful chemicals, such as the oil industry for our organic chemicals, the production of metals, the acid industry, the alkali industry, the fertiliser industry and the cement industry (k, u)",
+        "understand the processes for obtaining useful chemicals from rocks (k, u)",
+        "understand the processes involved in extracting and purifying metals, with particular reference to processes used in Uganda (k, u)",
+        "understand the importance of nitrates as fertilisers in food production and know how they are produced from the nitrogen in the air (k, u)",
+        "outline four industrial processes that make use of natural resources obtained in Uganda",
+        "recognise the importance of industrial processes in utilising natural resources to make useful chemicals, and appreciate that industrial processes have social benefits and cause problems of pollution and environmental destruction. (u, s)",
+        "describe some of the dangers to the community arising from these industrial processes and the steps that may be taken to minimise these dangers (u)",
+        "understand the process in the manufacture of lime and cement (u)",
+        "understand the production of alkali and chlorine by the electrolysis of salt solution (u)",
+        "evaluate uses of synthetic polymers (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The cement in your school walls, the iron sheets on the roof, the fertiliser on a farm and the soap in the washroom were all made by industrial processes. An industrial process turns raw materials, such as rocks, air, water and oil, into useful products on a large scale."
+        },
+        {
+          "type": "heading",
+          "text": "The main chemical industries"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The oil industry refines crude oil into fuels and supplies organic chemicals for plastics, detergents and medicines.",
+            "The metal industry extracts metals from ores, such as copper and cobalt from Kilembe in Kasese.",
+            "The acid industry makes sulphuric, nitric and hydrochloric acids for fertilisers, batteries and cleaning metals.",
+            "The alkali industry makes sodium hydroxide and chlorine from salt, for soap, paper and water treatment.",
+            "The fertiliser industry makes nitrates and phosphates to feed crops.",
+            "The cement industry makes lime and cement from limestone, as at Hima in Kasese and at Tororo."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Many useful chemicals come from rocks. Limestone gives lime and cement, salt from Lake Katwe gives sodium chloride, phosphate rock from Sukulu in Tororo gives fertiliser, and ores give metals. The rock is mined or quarried, crushed, and the useful mineral is separated from waste rock before it is processed chemically."
+        },
+        {
+          "type": "heading",
+          "text": "Lime and cement"
+        },
+        {
+          "type": "text",
+          "text": "Crushed limestone (calcium carbonate) is heated strongly in a kiln at about 900 to 1000 °C. It breaks down into quicklime (calcium oxide) and carbon dioxide. Adding water to quicklime gives slaked lime (calcium hydroxide). This gives out so much heat that quicklime must be handled with great care. Slaked lime is used to treat acid soils and water, and in building mortar."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{CaCO_3 \\rightarrow CaO + CO_2} \\qquad \\mathrm{CaO + H_2O \\rightarrow Ca(OH)_2}",
+          "speech": "C a C O 3 gives C a O plus C O 2. Then C a O plus H 2 O gives calcium hydroxide, C a O H 2"
+        },
+        {
+          "type": "text",
+          "text": "Cement is made by heating crushed limestone and clay in a long rotating kiln at about 1450 °C. The product, called clinker, is cooled and ground into a fine powder with a little gypsum, which controls how fast the cement sets. Some Ugandan factories also add pozzolana, a volcanic ash found in western Uganda. Mixed with water, sand and stones, cement sets hard as concrete."
+        },
+        {
+          "type": "example",
+          "title": "Quicklime from one tonne of limestone",
+          "steps": [
+            "Relative formula masses: CaCO₃ = 40 + 12 + (3 × 16) = 100, and CaO = 40 + 16 = 56.",
+            "From the equation, 100 g of CaCO₃ gives 56 g of CaO. The ratio is the same in kilograms.",
+            "So 1000 kg of limestone gives 1000 × 56 ÷ 100 = 560 kg of quicklime.",
+            "The other 440 kg leaves the kiln as carbon dioxide gas."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Extracting and purifying metals"
+        },
+        {
+          "type": "text",
+          "text": "How a metal is extracted depends on its reactivity. Very reactive metals, such as aluminium, are extracted by electrolysis of the molten ore. Metals in the middle of the reactivity series, such as iron, zinc and tin, are extracted by reducing their oxides with carbon or carbon monoxide."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Iron: iron ore, coke and limestone go into a blast furnace. Hot air burns the coke to make carbon monoxide, which reduces the ore to molten iron. Limestone removes sandy impurities as slag. Uganda has iron ore at Muko, and its steel mills also melt down scrap iron.",
+            "Copper: at Kilembe, copper ore was mined, crushed and concentrated, then smelted in Jinja. Impure copper is purified by electrolysis. It is made the anode, a thin sheet of pure copper is the cathode, and copper(II) sulphate solution is the electrolyte. Copper dissolves from the anode and pure copper builds up on the cathode.",
+            "Cobalt: the Kasese Cobalt Company recovered cobalt from waste heaps left by the old Kilembe copper mine."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{anode: } \\mathrm{Cu \\rightarrow Cu^{2+} + 2e^-} \\qquad \\text{cathode: } \\mathrm{Cu^{2+} + 2e^- \\rightarrow Cu}",
+          "speech": "At the anode, C u gives C u 2 plus and 2 electrons. At the cathode, C u 2 plus and 2 electrons give C u"
+        },
+        {
+          "type": "heading",
+          "text": "Nitrate fertilisers from the air"
+        },
+        {
+          "type": "text",
+          "text": "Plants need nitrogen to make proteins and grow green leaves. Air is 78% nitrogen, but most plants cannot use nitrogen gas. Industry captures it in three steps:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Haber process: nitrogen from the air reacts with hydrogen over an iron catalyst at about 450 °C and 200 atmospheres to make ammonia. The reaction is reversible.",
+            "Ammonia is oxidised with air over a platinum catalyst, and the product is dissolved in water to make nitric acid.",
+            "Ammonia reacts with nitric acid to make ammonium nitrate, a fertiliser rich in nitrogen."
+          ]
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{N_2 + 3H_2 \\rightleftharpoons 2NH_3} \\qquad \\mathrm{NH_3 + HNO_3 \\rightarrow NH_4NO_3}",
+          "speech": "N 2 plus 3 H 2 is in equilibrium with 2 N H 3. Then N H 3 plus H N O 3 gives N H 4 N O 3"
+        },
+        {
+          "type": "text",
+          "text": "Nitrate fertilisers help farmers grow more maize, beans and vegetables on the same land. But too much fertiliser washes into rivers and lakes. There it makes algae grow fast and use up the oxygen that fish need."
+        },
+        {
+          "type": "example",
+          "title": "Nitrogen in a bag of fertiliser",
+          "steps": [
+            "Ammonium nitrate is NH₄NO₃. Use N = 14, H = 1, O = 16.",
+            "Mr = 14 + (4 × 1) + 14 + (3 × 16) = 80, and the mass of nitrogen in it is 2 × 14 = 28.",
+            "Percentage of nitrogen = 28 ÷ 80 × 100 = 35%",
+            "A 50 kg bag therefore holds 50 × 0.35 = 17.5 kg of nitrogen for crops."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Alkali and chlorine from salt"
+        },
+        {
+          "type": "text",
+          "text": "Electrolysis of concentrated sodium chloride solution, called brine, gives three useful products. Chlorine gas forms at the anode, hydrogen gas forms at the cathode, and sodium hydroxide solution is left behind. Sodium hydroxide is used to make soap and paper. Chlorine kills germs in drinking water and is used to make bleach and PVC."
+        },
+        {
+          "type": "equation",
+          "latex": "\\mathrm{2NaCl + 2H_2O \\rightarrow 2NaOH + Cl_2 + H_2}",
+          "speech": "2 N a C l plus 2 H 2 O gives 2 N a O H plus C l 2 plus H 2"
+        },
+        {
+          "type": "heading",
+          "text": "Four processes using Ugandan resources"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cement from limestone, clay and volcanic ash at Hima and Tororo.",
+            "Copper and cobalt from the ores and mine waste of Kilembe.",
+            "Sugar from sugar cane at Kakira, Kinyara and Lugazi, with ethanol made from the leftover molasses.",
+            "Phosphate fertiliser from Sukulu phosphate rock in Tororo, made using sulphuric acid."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Benefits, dangers and safety"
+        },
+        {
+          "type": "text",
+          "text": "Industries bring jobs, taxes, skills and cheaper local products. They also cause problems. Quarries and kilns release dust and carbon dioxide. Mines leave waste rock and acid water that can pollute rivers, as happened at Kilembe. Factories may release harmful gases or chemicals, and quarrying destroys land. Steps that reduce these dangers include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fit filters and dust collectors to chimneys and kilns.",
+            "Treat waste water before it is released, and store mine waste safely.",
+            "Give workers protective clothing and safety training.",
+            "Refill old quarries and mines and plant trees on them.",
+            "Follow the rules of the National Environment Management Authority (NEMA), including environmental impact assessments before a factory is built."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Synthetic polymers: uses and problems"
+        },
+        {
+          "type": "text",
+          "text": "Synthetic polymers, such as polythene, PVC and nylon, are cheap, light, strong and waterproof, and they do not rot. This makes them useful for jerrycans, water pipes, packaging and fishing nets. But most are not biodegradable, so discarded bags block drains, cause flooding and harm animals that swallow them. Burning plastics gives off poisonous fumes. We can reduce, reuse and recycle plastics, and choose paper or banana-fibre bags."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Trace a product back to its raw materials",
+          "text": "In groups, list ten products you use at home or school, such as cement, sugar, soap, iron sheets, plastic basins and salt. For each one, find out the raw material, where in Uganda it may come from, and which industry makes it. Draw a flow chart from raw material to product for one of them. Add one benefit and one danger to the community."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "A cement factory gives 500 people jobs, but families nearby complain about dust. What should the factory, the community and the government each do?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Chemical industries turn natural resources such as limestone, ores, salt, air and oil into cement, metals, alkalis, acids and fertilisers. Key processes include heating limestone, reducing ores, the Haber process and the electrolysis of brine. Industries bring jobs and useful products, but they must control pollution and protect communities."
+        }
+      ]
+    }
+  ]
+}

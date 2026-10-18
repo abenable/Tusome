@@ -1,0 +1,206 @@
+{
+  "packId": "bio.s2.nutrition.types-and-nutrients",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s2.nutrition.types-and-nutrients",
+      "title": "Nutrition Types and Nutrient Compounds",
+      "subject": "biology",
+      "level": "S2",
+      "strand": "Nutrition in Plants and Animals",
+      "subStrand": "Food nutrients, balanced diet and plant mineral nutrients",
+      "order": 3,
+      "term": 2,
+      "outcomes": [
+        "understand the term nutrition (k, u)",
+        "identify the food nutrients, their sources, and importance to humans (u)",
+        "perform food tests for various nutrients (only quality testing required) (s)",
+        "appreciate the importance of a diet containing the different nutrients (u, v)",
+        "appreciate the concept of balanced diet in relation to age, sex, and an individual’s activity (u, v)",
+        "appreciate the causes and effects of nutrient deficiency in humans including diseases related to malnutrition (u, s)",
+        "calculate body mass index (BMI) and explain its implication (s, v)",
+        "identify the major plant mineral nutrients (N, P, K, Mg, Ca, S, Mg), their role, and the symptoms of deficiencies (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Yesterday you may have eaten porridge, posho and beans, or matooke with groundnut sauce. Each food gave your body something different. This topic is about what those things are and why you need them."
+        },
+        {
+          "type": "heading",
+          "text": "What nutrition is"
+        },
+        {
+          "type": "text",
+          "text": "Nutrition is the process by which living things obtain food and use it for energy, growth and repair. A nutrient is a substance in food that the body needs. Green plants make their own food; this is autotrophic nutrition. Animals and fungi take in food made by other organisms; this is heterotrophic nutrition."
+        },
+        {
+          "type": "heading",
+          "text": "Food nutrients"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Carbohydrates (sugars and starch) give energy. Sources: maize flour, cassava, matooke, sweet potatoes, rice, millet and sugarcane.",
+            "Proteins are needed for growth and the repair of body tissues. They also make enzymes and antibodies. Sources: beans, groundnuts, soya, silver fish (mukene), eggs, milk and meat.",
+            "Lipids (fats and oils) store more energy than carbohydrates, keep the body warm and protect organs. Sources: groundnuts, simsim, avocado, cooking oil, ghee and milk.",
+            "Water makes up about two-thirds of the body. It carries substances around and cools the body when we sweat.",
+            "Fibre (roughage) comes from plant cell walls in vegetables, fruits, whole grains and beans. It helps food move through the gut and prevents constipation."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Vitamins and mineral salts are needed only in small amounts, but the body cannot stay healthy without them."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Vitamin B: from millet, whole grains, beans, eggs and meat. Helps the body release energy from food. Lack of vitamin B1 causes beriberi, with weak muscles.",
+            "Vitamin C: from oranges, mangoes, guavas, pawpaw, tomatoes and fresh vegetables. Keeps skin and gums healthy and helps wounds heal. Lack causes scurvy, with bleeding gums. Long cooking destroys it.",
+            "Vitamin D: made in the skin in sunlight, and found in eggs, milk and fish oil. Helps the body use calcium for strong bones. Lack causes rickets, with soft, bent legs in children.",
+            "Vitamin K: from green vegetables such as dodo (amaranth) and cabbage. Helps blood to clot. Lack causes bleeding that is slow to stop.",
+            "Calcium and phosphorus: from milk, small fish eaten whole, beans and green vegetables. Build strong bones and teeth. Lack causes weak bones.",
+            "Iron: from liver, red meat, beans and dark green vegetables. Makes haemoglobin, which carries oxygen in red blood cells. Lack causes anaemia, with tiredness and pale skin.",
+            "Iodine: from iodised salt and fish. Used to make a hormone that controls growth. Lack causes goitre, a swelling in the neck."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Food tests"
+        },
+        {
+          "type": "text",
+          "text": "Food tests show whether a nutrient is present in a food. They do not show how much is present. Crush or mash a little of the food in water before testing."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Starch: add a few drops of iodine solution. A blue-black colour shows starch. If the colour stays brown, there is no starch.",
+            "Reducing sugar, such as glucose: add Benedict's solution and heat in a hot water bath for a few minutes. A change from blue to green, yellow, orange or brick-red shows reducing sugar.",
+            "Protein: add a little sodium hydroxide solution, then a few drops of copper sulphate solution, and shake. A purple colour shows protein. Sodium hydroxide burns skin and eyes, so the teacher should handle it.",
+            "Fat: rub some food on a piece of paper and let it dry. Hold the paper up to the light. A see-through spot that does not dry away shows fat.",
+            "Vitamin C: add the food juice drop by drop to blue DCPIP solution. If the blue colour disappears, vitamin C is present."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Testing local foods",
+          "text": "In groups, test Irish potato, egg yolk, milk, groundnuts and pineapple. Every group can do the fat test on paper. For starch, use tincture of iodine from a pharmacy mixed with ten times as much water. Do the other tests if your school has the chemicals. Record your results in a table."
+        },
+        {
+          "type": "heading",
+          "text": "A balanced diet"
+        },
+        {
+          "type": "text",
+          "text": "A balanced diet contains all the nutrients in the right amounts for a person's needs, together with water and fibre. A balanced meal could be posho or matooke for energy, beans or fish for protein, dodo or cabbage for vitamins and minerals, and a fruit such as an orange."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Babies need only breast milk for their first six months, because it has every nutrient in the right amounts.",
+            "Children and teenagers grow fast, so they need plenty of protein, calcium and energy.",
+            "Girls and women who have monthly periods need more iron. Pregnant and breastfeeding women need extra protein, iron, calcium and energy.",
+            "Men usually need more energy than women of the same age and activity, because they tend to have more muscle.",
+            "Athletes and people doing heavy work, such as farmers and porters, need more energy and protein.",
+            "Inactive and older people need less energy food; eating too much leads to weight gain."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Malnutrition"
+        },
+        {
+          "type": "text",
+          "text": "Malnutrition is poor health caused by a diet with too little, too much, or the wrong balance of nutrients. A deficiency disease is caused by a lack of one nutrient, such as scurvy or anaemia."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kwashiorkor is caused by a lack of protein, often in young children after they stop breastfeeding. The child has a swollen belly, legs and face, and thin, pale hair.",
+            "Marasmus is caused by too little food of all kinds. The child is very thin, with wasted muscles.",
+            "Obesity is caused by eating more energy food than the body uses. It raises the risk of diabetes, high blood pressure and heart disease.",
+            "Anorexia is an illness in which a person eats very little for fear of gaining weight, and becomes dangerously thin.",
+            "Bulimia is an illness in which a person overeats and then vomits or takes medicines to get rid of the food. It damages the teeth and stomach.",
+            "Diet pills and steroids taken to change body shape can harm the heart, liver and kidneys."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Healthy bodies come in many shapes and sizes. Anyone worried about their weight or eating should talk to a trusted adult or a health worker."
+        },
+        {
+          "type": "heading",
+          "text": "Body mass index"
+        },
+        {
+          "type": "text",
+          "text": "Body mass index (BMI) compares a person's mass with their height. It gives a rough guide to whether their weight is healthy for their height."
+        },
+        {
+          "type": "equation",
+          "latex": "\\text{BMI} = \\frac{\\text{mass in kg}}{(\\text{height in m})^2}",
+          "speech": "B M I equals mass in kilograms divided by height in metres squared"
+        },
+        {
+          "type": "example",
+          "title": "BMI of an adult",
+          "steps": [
+            "Mr Wasswa has a mass of 72 kg and a height of 175 cm.",
+            "Change the height to metres: 175 cm = 1.75 m.",
+            "Height squared = 1.75 × 1.75 = 3.06 m².",
+            "BMI = 72 ÷ 3.06 = 23.5 kg/m².",
+            "This is between 18.5 and 24.9, the healthy range for adults."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "For adults, a BMI below 18.5 is underweight, 18.5 to 24.9 is healthy, 25 to 29.9 is overweight, and 30 or more is obese. Children and teenagers are still growing, so health workers compare their BMI with charts for their age and sex instead. BMI is only a guide: a muscular athlete can have a high BMI and little fat."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Work out a BMI",
+          "text": "Measure your mass in kilograms and your height in centimetres, and calculate your BMI. You may keep your result private. Discuss what a person can do if their BMI is too low or too high."
+        },
+        {
+          "type": "heading",
+          "text": "Mineral nutrients for plants"
+        },
+        {
+          "type": "text",
+          "text": "Plants make their own food, but they need mineral salts from the soil. They absorb them, dissolved in water, through their roots."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nitrogen (N): makes proteins and chlorophyll for leaf and stem growth. Lack causes stunted growth and yellow older leaves.",
+            "Phosphorus (P): needed for root growth, flowering and seeds. Lack causes poor roots, stunted growth and dull leaves with purple tints.",
+            "Potassium (K): needed for flowering, fruiting and resisting disease. Lack causes yellow or brown, dry leaf edges and weak stems.",
+            "Magnesium (Mg): forms part of chlorophyll. Lack causes yellowing between the veins of older leaves.",
+            "Calcium (Ca): builds cell walls and helps the growing tips. Lack causes young leaves and tips to die back.",
+            "Sulphur (S): makes some proteins. Lack causes pale yellow young leaves."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Plants with and without nutrients",
+          "text": "Grow bean seedlings in two containers of washed sand, which has few nutrients. Water one with rain water and the other with water in which manure has soaked for a day. Give both the same amount of water and light. Record their height and leaf colour every few days for three weeks."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Akello and Opio are both 15 years old and the same height. Akello plays football every day and Opio rarely exercises. Should they eat the same amount of food? What else might affect what each of them needs?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Food nutrients are carbohydrates, proteins, lipids, vitamins and mineral salts, with water and fibre. A balanced diet gives each person the right amounts for their age, sex and activity; too little or too much causes malnutrition. BMI equals mass in kilograms divided by height in metres squared. Plants need mineral salts such as nitrogen, phosphorus, potassium, magnesium, calcium and sulphur."
+        }
+      ]
+    }
+  ]
+}

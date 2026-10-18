@@ -1,0 +1,172 @@
+{
+  "packId": "bio.s3.coordination.nervous",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "bio.s3.coordination.nervous",
+      "title": "Nervous Coordination in Humans",
+      "subject": "biology",
+      "level": "S3",
+      "strand": "Coordination in Animals",
+      "subStrand": "The nervous system, reflexes and drugs",
+      "order": 5,
+      "term": 2,
+      "outcomes": [
+        "understand how the nervous system (brain, spinal cord, and nerves) extends to all parts of the body and has sensory and motor functions (u)",
+        "identify the parts of the brain (cerebrum, cerebellum, medulla oblongata, pituitary gland and hypothalamus) and describe the role of the parts (k, u)",
+        "understand the concept of reflex action, identify the five components and explain their functions (k, u)",
+        "differentiate between voluntary and involuntary responses (u)",
+        "distinguish between substance/drug use and abuse (k, s)",
+        "know the common substances and drugs abused in Uganda and understand the physiological, social and economic effects of substance and drug abuse (k, u)",
+        "understand how to prevent, control and avoid involvement in substance and drug abuse (u, v, gs)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Opio is playing football at break time. He sees the ball coming, runs and kicks it towards the goal. In less than a second, his eyes, brain, nerves and leg muscles have worked together. The nervous system carries fast electrical messages called nerve impulses around the body."
+        },
+        {
+          "type": "heading",
+          "text": "The parts of the nervous system"
+        },
+        {
+          "type": "text",
+          "text": "The brain and spinal cord form the central nervous system, or CNS. The skull protects the brain, and the backbone protects the spinal cord. Nerves branch out from the CNS to every part of the body. Nerves are bundles of nerve cells called neurones."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sensory neurones carry impulses from receptors, such as those in the skin and eyes, to the CNS. This is the sensory function.",
+            "Motor neurones carry impulses from the CNS to effectors. Effectors are the muscles and glands that respond. This is the motor function.",
+            "Relay neurones, inside the CNS, link sensory and motor neurones."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A stimulus is a change that the body can detect, such as light, heat or sound. A receptor detects the stimulus, impulses travel through the CNS, and an effector makes a response."
+        },
+        {
+          "type": "heading",
+          "text": "Parts of the brain"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cerebrum: the largest part, with a folded surface. It controls thinking, memory, learning, speech and voluntary actions. It makes sense of messages from the eyes, ears and skin.",
+            "Cerebellum: at the back, below the cerebrum. It coordinates muscles and keeps the body balanced, for example when riding a bicycle or carrying a jerrycan on the head.",
+            "Medulla oblongata: joins the brain to the spinal cord. It controls automatic actions such as breathing, heartbeat, swallowing, coughing and sneezing.",
+            "Hypothalamus: a small region at the base of the brain. It controls body temperature, hunger, thirst and the body's water balance. It also controls the pituitary gland.",
+            "Pituitary gland: a pea-sized gland below the hypothalamus. It releases hormones that control growth and other glands, linking the nervous and endocrine systems."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Reflex actions"
+        },
+        {
+          "type": "text",
+          "text": "A reflex action is a fast, automatic response to a stimulus, made without thinking. Reflexes protect the body from harm. Examples are pulling your hand off a hot pan, blinking when dust flies at your eyes, sneezing and coughing. The pathway of a reflex is called a reflex arc. It has five components."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Receptor: detects the stimulus. Pain receptors in the skin of a finger detect heat.",
+            "Sensory neurone: carries the impulse from the receptor to the spinal cord.",
+            "Relay neurone: inside the spinal cord, it passes the impulse to a motor neurone.",
+            "Motor neurone: carries the impulse from the spinal cord to the effector.",
+            "Effector: a muscle in the arm contracts and pulls the hand away."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The impulse does not have to travel up to the cerebrum first, which saves time. You feel the pain a moment later, after the hand has already moved."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Test the knee jerk",
+          "text": "Sit on a desk so that one leg hangs freely over the other. A partner taps gently just below your kneecap with the side of a hand or a plastic ruler. Watch the lower leg. Can you stop it moving? Swap roles. The knee jerk is an even simpler reflex, with no relay neurone."
+        },
+        {
+          "type": "heading",
+          "text": "Voluntary and involuntary responses"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Voluntary responses are under conscious control. You decide to make them, as in writing, kicking a ball or raising a hand. The cerebrum controls them. They are slower, and many are learned.",
+            "Involuntary responses happen automatically. Examples are the heartbeat, breathing, blinking and reflexes. The spinal cord or medulla oblongata controls them. They are fast, and we are born with them."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Catch the ruler",
+          "text": "A partner holds a 30 cm ruler upright, with the zero mark between your open thumb and finger. Without warning, they let it go. Catch it as fast as you can and read the mark at your fingers. A smaller number means a faster reaction. Repeat five times. Is catching the ruler a voluntary or an involuntary response?"
+        },
+        {
+          "type": "heading",
+          "text": "Drug use and drug abuse"
+        },
+        {
+          "type": "text",
+          "text": "A drug is any substance that changes the way the body or mind works. Medicines are drugs. Drug use means taking a drug correctly for its proper purpose, such as finishing a course of malaria tablets prescribed by a health worker. Drug abuse, or substance abuse, means using a substance in a way that harms the user or others. Examples are taking too much, taking someone else's medicine, using illegal drugs, or sniffing glue to change one's mood."
+        },
+        {
+          "type": "text",
+          "text": "Neurones pass impulses to each other across tiny gaps called synapses, using chemicals. Many drugs act at these gaps. Alcohol, glue and petrol fumes slow impulses down. Nicotine and khat speed them up. Either way, the nervous system stops working normally."
+        },
+        {
+          "type": "heading",
+          "text": "Substances commonly abused in Uganda"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Alcohol, including spirits such as waragi and local brews: slows reactions and judgement, and over time damages the liver and brain.",
+            "Tobacco, in cigarettes, shisha and kuber: nicotine is highly addictive. Tobacco causes lung cancer, mouth cancer and heart disease. Kuber is placed in the mouth and harms the gums. Shisha, smoked through a water pipe, is at least as harmful as cigarettes.",
+            "Marijuana (cannabis): harms memory, concentration and coordination. In some users it triggers serious mental illness.",
+            "Khat (mairungi): chewed leaves that cause sleeplessness, anxiety and loss of appetite.",
+            "Petrol and glue: sniffing the fumes damages the brain, liver and kidneys, and can cause sudden death."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The harm goes beyond the body. Socially, drug abuse leads to fights, broken families, crime, unsafe sex, road accidents and dropping out of school. Economically, money is wasted on drugs, families pay for treatment, and users lose jobs and income."
+        },
+        {
+          "type": "heading",
+          "text": "Preventing and avoiding drug abuse"
+        },
+        {
+          "type": "text",
+          "text": "People start using drugs because of pressure from friends, curiosity, stress, boredom, or copying adults and adverts. Knowing this helps you protect yourself and others."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Learn the facts about drugs and their effects.",
+            "Practise saying no clearly, and walk away from pressure.",
+            "Choose friends who respect your choices.",
+            "Keep busy with sport, music, clubs and hobbies.",
+            "Talk to a parent, teacher, counsellor or other trusted adult about stress or problems.",
+            "Take medicines only as a health worker prescribes.",
+            "Encourage anyone who wants to stop to get help from a health centre or rehabilitation centre."
+          ]
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Why do some young people begin using drugs even when they know the dangers? In groups, plan the key message for a poster campaign that would help learners in your school and community make safe choices."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "The nervous system is made of the brain, spinal cord and nerves. Sensory neurones carry impulses to the CNS, and motor neurones carry them to effectors. A reflex arc has five parts: receptor, sensory neurone, relay neurone, motor neurone and effector. Drug abuse disturbs nerve impulses, harms health and damages families and communities."
+        }
+      ]
+    }
+  ]
+}

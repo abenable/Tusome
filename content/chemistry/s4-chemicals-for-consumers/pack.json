@@ -1,0 +1,148 @@
+{
+  "packId": "che.s4.consumables.consumer-chemicals",
+  "version": 1,
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "che.s4.consumables.consumer-chemicals",
+      "title": "Chemicals for Consumers",
+      "subject": "chemistry",
+      "level": "S4",
+      "strand": "Consumable Chemicals",
+      "subStrand": "Soaps, food additives and medicines",
+      "order": 5,
+      "term": 3,
+      "outcomes": [
+        "analyse properties of soap and detergent and compare and contrast the effectiveness of their cleansing action (u, s)",
+        "evaluate the use of food additives (k, u, s)",
+        "understand the importance of chemicals in medicine (k, u)",
+        "appreciate the importance of the chemical industry and its contribution to our lives (u)"
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Read the label on a bar of soap, a packet of biscuits or a bottle of cough syrup. Each one lists chemicals. Everything we eat, wash with or take as medicine is made of chemicals. Some can even be made at home or in a school laboratory."
+        },
+        {
+          "type": "heading",
+          "text": "Soap and detergents"
+        },
+        {
+          "type": "text",
+          "text": "People have made soap for thousands of years by boiling animal fat or plant oil with an alkali. Long ago, the alkali came from wood ash. Today, factories in Kampala and Jinja boil palm oil and other vegetable oils with sodium hydroxide. Soapless detergents have a similar shape to soap particles, but they are made from crude oil products and sulphuric acid."
+        },
+        {
+          "type": "text",
+          "text": "Both kinds of particle have a long tail that dissolves in grease and a charged head that dissolves in water. When soapy water meets an oily stain, the tails dig into the oil and the heads stay in the water. Rubbing breaks the oil into small droplets covered in heads. The droplets push each other apart and are rinsed away. This is called emulsifying."
+        },
+        {
+          "type": "example",
+          "title": "How soap is made (teacher demonstration)",
+          "steps": [
+            "Your teacher warms 25 cm³ of coconut oil with 30 cm³ of 20% sodium hydroxide solution, stirring for about 20 minutes. A thick suspension forms.",
+            "About 15 g of common salt is stirred in. Soap is less soluble in salty water, so it comes out as a solid. This is called salting out.",
+            "The soap is filtered off and rinsed with a little cold water. Glycerol stays behind in the solution.",
+            "The soap is left to harden for some days, because fresh soap may still contain alkali that can harm skin."
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Soap is made from renewable fats and oils, and bacteria break it down easily, so it is biodegradable.",
+            "Soap forms scum with the calcium and magnesium ions in hard water, so it lathers poorly and much is wasted. It also does not work well in acidic water.",
+            "Soapless detergents lather well in both soft and hard water and form no scum.",
+            "Some soapless detergents are not easily broken down, and the phosphates added to them pollute lakes and rivers."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Washing powders also contain additives. Biological enzymes digest stains made of protein, fat or starch, such as blood or food. Whitening agents, called optical brighteners, make white clothes look brighter in sunlight. Builders, such as phosphates, soften the water."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Compare cleaning power",
+          "text": "Rub the same amount of cooking oil onto three pieces of old cotton cloth. Wash one in plain water, one in soap solution and one in washing powder solution. Use the same amount of water and the same number of rubs each time. If your area has hard borehole water, repeat with it. Compare how clean each cloth looks."
+        },
+        {
+          "type": "heading",
+          "text": "Food additives"
+        },
+        {
+          "type": "text",
+          "text": "Food additives are chemicals added to food to keep it safe, make it last longer, or improve its taste, colour or texture."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Preservatives stop bacteria and moulds growing: sodium benzoate in juices and sauces, and sodium nitrite in sausages.",
+            "Antioxidants stop fats going rancid and cut fruit turning brown: ascorbic acid (vitamin C).",
+            "Flavour enhancers and sweeteners: monosodium glutamate (MSG) in soup cubes, and aspartame in sugar-free drinks.",
+            "Stabilisers and thickeners keep mixtures smooth: gelatine in yoghurt and sweets, and acacia gum.",
+            "Colourings make food look attractive: azo dyes such as tartrazine, which is yellow, and triphenylmethane dyes, which are blue or green."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Read a food label",
+          "steps": [
+            "A biscuit packet lists: wheat flour, sugar, vegetable fat, salt, raising agent (sodium hydrogen carbonate), emulsifier (lecithin), colour (tartrazine), antioxidant (ascorbic acid).",
+            "Ingredients are listed from the largest amount to the smallest, so flour is the main ingredient.",
+            "Sodium hydrogen carbonate gives off carbon dioxide when heated, which makes the biscuits rise.",
+            "Lecithin keeps the fat and water mixed. Ascorbic acid stops the fat going rancid.",
+            "Tartrazine gives a yellow colour. A few people are sensitive to it, which is one reason labels must list every additive."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Additives have benefits. Food lasts longer, so less is wasted, and it can travel from farms to towns and be stored in shops. But some people are allergic to certain additives, and too much of some, such as sodium nitrite, can harm health. The Uganda National Bureau of Standards (UNBS) sets safe limits. Some substances have been banned. For example, an early soapless detergent called branched alkyl benzene sulphonate was banned in many countries because bacteria could not break it down."
+        },
+        {
+          "type": "heading",
+          "text": "Chemicals in medicine"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Traditional medicines come from plants and animals, and many modern drugs began this way. Quinine for malaria comes from the bark of the cinchona tree. Artemisinin, used in malaria treatment, comes from the Artemisia plant, which is grown in Uganda.",
+            "Analgesics relieve pain: paracetamol, aspirin and codeine. Aspirin can irritate the stomach and is not given to young children. Codeine can be addictive.",
+            "Antibiotics kill bacteria or stop them growing: penicillin, and streptomycin for tuberculosis. They do not work against viruses such as flu. Always finish the full course, or bacteria may become resistant.",
+            "Psychotherapeutic medicines act on the brain. Stimulants increase alertness, antidepressants treat depression, and antipsychotics treat serious mental illness. They must be used only as a doctor prescribes."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "All medicines, modern and traditional, can have side effects. Take the correct dose at the right times, and only medicines given by a qualified health worker. Never share prescription medicines or buy drugs from unlicensed sellers."
+        },
+        {
+          "type": "heading",
+          "text": "The chemical industry and our lives"
+        },
+        {
+          "type": "text",
+          "text": "Chemicals have changed human life. Antibiotics have saved millions of lives since Alexander Fleming discovered penicillin in 1928. He noticed that a mould had killed bacteria on a dish he could have thrown away. Patience, careful observation and not giving up are traits shared by good scientists."
+        },
+        {
+          "type": "text",
+          "text": "Soap and chlorinated water prevent diseases such as cholera and typhoid. Fertilisers and pesticides help feed a growing population. Ugandan factories make soap, paint, plastics, medicines and processed food, creating many jobs. But chemicals must be used wisely: some pesticides, such as DDT, harmed wildlife, and plastic waste pollutes our land and lakes."
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Food label survey",
+          "text": "Collect empty food packets and drink bottles from home, such as biscuits, juice, soup cubes and bread. In groups, list the additives on each label. Sort them into preservatives, antioxidants, flavourings, sweeteners, stabilisers and colours, and discuss why each was added. Present a chart to the class. Do not taste anything."
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Imagine life without food additives. What would change in how food is grown, transported, stored and sold in Uganda? Would some of the changes be good?"
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "Soap and soapless detergents clean by emulsifying grease. Soapless detergents work better in hard water, but some harm the environment. Food additives preserve food and improve its taste and look, but must be kept within safe limits. Medicines save lives when used correctly, and the chemical industry contributes greatly to our health and wealth."
+        }
+      ]
+    }
+  ]
+}

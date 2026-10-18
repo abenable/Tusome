@@ -1,41 +1,188 @@
 {
   "packId": "phy.s2.light.curved-mirrors",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
       "id": "phy.s2.light.curved-mirrors",
-      "title": "Reflection of Light by Curved Mirrors",
+      "title": "Reflection of Light at Curved Surfaces",
       "subject": "physics",
       "level": "S2",
       "strand": "Light",
       "subStrand": "Reflection of light at curved surfaces",
       "order": 6,
+      "term": 2,
       "outcomes": [
         "Understand reflection of light and the formation of images by curved mirrors (u)",
-        "Use ray diagrams to show how images are formed by curved mirrors and the nature of the images (s)"
+        "Use ray diagrams to show how images are formed by curved mirrors and the nature of the images (s)",
+        "Determine the focal length of concave mirrors using a variety of methods. (s, gs)"
       ],
       "body": [
         {
           "type": "text",
-          "text": "A concave mirror curves inward, like the inside of a spoon. A convex mirror curves outward, like the back of a spoon. Both reflect light, but they form images very differently from a flat (plane) mirror."
+          "text": "Look into the inside of a shiny spoon and your face appears upside down. Turn it over and your face is upright but small. A spoon acts like two curved mirrors. Curved mirrors are also found in torches, solar cookers and the wing mirrors of boda bodas."
+        },
+        {
+          "type": "heading",
+          "text": "Concave and convex mirrors"
         },
         {
           "type": "text",
-          "text": "A concave mirror can focus parallel rays of light to a single point, called the focal point, at a distance called the focal length from the mirror. Depending on how far an object is from a concave mirror, it can form a magnified, real image (used in torches, satellite dishes, and shaving mirrors) or a different kind of image altogether."
+          "text": "A curved mirror is part of a hollow sphere, like a piece cut from a ball. A concave mirror curves inwards, like the inside of a spoon. It brings parallel rays of light together. A convex mirror curves outwards, like the back of a spoon. It spreads rays apart."
         },
         {
           "type": "text",
-          "text": "A convex mirror always forms a smaller, upright image, and it gives a wider field of view than a flat mirror of the same size. This is why convex mirrors are used as vehicle wing mirrors and in shops, to see a wide area at a glance."
+          "text": "At each point on a curved mirror, the angle of incidence equals the angle of reflection, as for a flat mirror. But the surface is curved, so the reflected rays leave in different directions and form different images."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pole (P): the centre of the mirror's surface.",
+            "Centre of curvature (C): the centre of the sphere that the mirror is part of.",
+            "Radius of curvature (r): the distance from P to C.",
+            "Principal axis: the straight line through C and P.",
+            "Principal focus (F): the point where rays parallel to the principal axis meet after reflection from a concave mirror. For a convex mirror, the reflected rays only seem to come from F, behind the mirror.",
+            "Focal length (f): the distance from P to F."
+          ],
+          "ordered": false
         },
         {
           "type": "text",
-          "text": "Use the PhET Geometric Optics: Basics simulation below (Mirror screen). Move an object in front of a concave or convex mirror and see how the image changes."
+          "text": "The focal length is half the radius of curvature."
+        },
+        {
+          "type": "equation",
+          "latex": "r = 2f",
+          "speech": "r equals two f"
+        },
+        {
+          "type": "callout",
+          "kind": "activity",
+          "title": "Spoon mirrors",
+          "text": "Look at your face in both sides of a clean, shiny spoon. Move the spoon slowly towards your eye and away again. Note when the image is upright or upside down, and when it is larger or smaller. Compare your notes with a partner."
+        },
+        {
+          "type": "heading",
+          "text": "Drawing ray diagrams"
+        },
+        {
+          "type": "text",
+          "text": "A ray diagram shows where an image forms. Draw the mirror standing on the principal axis, and mark P, F and C. Draw the object as an upright arrow on the axis. From the tip of the object, draw at least two of these rays:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A ray parallel to the principal axis reflects through F. For a convex mirror, it reflects as if it came from F behind the mirror.",
+            "A ray through F reflects parallel to the principal axis.",
+            "A ray through C hits the mirror straight on and reflects back along the same path."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "text",
+          "text": "The tip of the image is where the reflected rays meet. If they meet in front of the mirror, the image is real. A real image can be caught on a screen. If the rays only seem to meet behind the mirror, draw them back as dotted lines. The image is then virtual and cannot be caught on a screen."
+        },
+        {
+          "type": "text",
+          "text": "For a concave mirror, the image depends on where the object stands:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Object beyond C: image between C and F. It is real, inverted and diminished, which means smaller.",
+            "Object at C: image at C. It is real, inverted and the same size.",
+            "Object between C and F: image beyond C. It is real, inverted and magnified, which means larger.",
+            "Object at F: the reflected rays are parallel, so no clear image forms.",
+            "Object between F and P: image behind the mirror. It is virtual, upright and magnified."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "text",
+          "text": "A convex mirror always gives an image that is virtual, upright and diminished, wherever the object stands."
+        },
+        {
+          "type": "example",
+          "title": "Locating an image by scale drawing",
+          "steps": [
+            "An object 3 cm tall stands 30 cm in front of a concave mirror of focal length 10 cm. Find the position, size and nature of the image by scale drawing.",
+            "Choose a scale: 1 cm on paper stands for 2 cm. On paper, F is 5 cm from the mirror, C is 10 cm, and the object is 15 cm away and 1.5 cm tall.",
+            "From the tip of the object, draw a ray parallel to the axis to the mirror. Reflect it through F.",
+            "From the tip, draw a second ray through F to the mirror. Reflect it back parallel to the axis.",
+            "The two reflected rays meet 7.5 cm from the mirror and 0.75 cm below the axis.",
+            "Use the scale: the image is 7.5 × 2 = 15 cm from the mirror and 0.75 × 2 = 1.5 cm tall.",
+            "The image is real, inverted and diminished, and lies between C and F."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Uses of curved mirrors"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Shaving and make-up mirrors are concave. The face is between F and P, so the image is upright and magnified.",
+            "Torches and headlights have concave reflectors with the bulb at F, so the light leaves as a parallel beam.",
+            "Solar cookers and satellite dishes are concave. They bring sunlight or satellite signals together at F, where the pot or receiver sits.",
+            "Large telescopes use concave mirrors to collect faint starlight.",
+            "Wing mirrors on vehicles and boda bodas are convex, giving a wide view of the road behind.",
+            "Convex mirrors at blind corners and in supermarkets let people see a wide area at once."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "kind": "think",
+          "text": "Some convex wing mirrors carry the warning that objects are closer than they appear. Why might the small images in a convex mirror make a driver misjudge distance?"
+        },
+        {
+          "type": "heading",
+          "text": "Finding the focal length of a concave mirror"
+        },
+        {
+          "type": "text",
+          "text": "Method 1 uses a distant object. Rays from a distant tree are almost parallel, so a concave mirror focuses them at F. Face the mirror towards an open window and hold white paper in front of it. Move the paper until a sharp, inverted image of the tree appears. The distance from the mirror to the paper is the focal length."
+        },
+        {
+          "type": "text",
+          "text": "You can also form an image of the sun on paper. Never look at the sun or its reflection, and do not hold the paper at the focus for long, because it may burn."
+        },
+        {
+          "type": "example",
+          "title": "Using a distant object",
+          "steps": [
+            "Opio forms a sharp image of a distant tree on paper held 12.5 cm from a concave mirror. Find the focal length and the radius of curvature.",
+            "The tree is far away, so its image forms at F.",
+            "Focal length f = 12.5 cm",
+            "Radius of curvature r = 2f = 2 × 12.5 = 25 cm"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Method 2 uses an object at C. Stretch a cross of thread over a small hole in a card and shine a torch through it from behind. Move the mirror until a sharp image of the cross forms on the card, beside the hole. The object and image are now both at C, so the distance from card to mirror is the radius of curvature r."
+        },
+        {
+          "type": "example",
+          "title": "Using an object at the centre of curvature",
+          "steps": [
+            "In Akello's experiment, a sharp image forms beside the hole when the card is 36 cm from the mirror. Find the focal length.",
+            "The object is at C, so r = 36 cm.",
+            "f = r ÷ 2 = 36 ÷ 2 = 18 cm"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Repeat each method three times and take the average, to make the result more accurate."
+        },
+        {
+          "type": "callout",
+          "kind": "remember",
+          "text": "A concave mirror brings parallel rays together at F, and a convex mirror spreads them out. The focal length is half the radius of curvature. Ray diagrams use rays parallel to the axis, through F and through C. A convex mirror always forms a virtual, upright, diminished image."
         }
       ],
       "sim": {
         "phet": "geometric-optics-basics_en.html",
-        "caption": "PhET Geometric Optics: Basics (Mirror screen). Move an object in front of a concave or convex mirror and watch the image form. (PhET, CC BY 4.0 \u2014 prototype use, license pending.)"
+        "caption": "PhET Geometric Optics: Basics. On the Mirror screen, choose the concave mirror and drag the object closer to and further from it, watching where the image forms and whether it is upright or inverted. Then switch to the convex mirror and compare. (PhET, CC BY 4.0 — prototype use, license pending.)"
       }
     }
   ]
