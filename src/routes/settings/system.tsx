@@ -19,6 +19,8 @@ import {
   checkOnlineContentUpdate,
   type ApplyResult,
   type UpdateLogEvent,
+  installStagedAppUpdate,
+  stagedAppUpdateVersion,
 } from "@/lib/updates";
 import { SectionCard } from "@/components/admin/primitives";
 import { PasswordField } from "@/components/PasswordField";
@@ -208,9 +210,19 @@ function UpdatesSection(): JSX.Element {
   const [usbBusy, setUsbBusy] = useState(false);
   const [onlineBusy, setOnlineBusy] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
+  // A downloaded app update waiting for an explicit install (never automatic:
+  // on Windows installing closes the app).
+  const [stagedVersion, setStagedVersion] = useState<string | null>(null);
+  const [installing, setInstalling] = useState(false);
+  const [installError, setInstallError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
+    stagedAppUpdateVersion()
+      .then((v) => {
+        if (!cancelled) setStagedVersion(v);
+      })
+      .catch(() => {});
     (async () => {
       const load = async (key: string): Promise<boolean> => (await getSetting(key)) === "1";
       const [c, a] = await Promise.all([
@@ -293,13 +305,54 @@ function UpdatesSection(): JSX.Element {
     } catch {
       // ignore
     }
+    setStagedVersion(await stagedAppUpdateVersion().catch(() => null));
     const appliedAny = contentEvents.some((e) => e.outcome === "ok" && e.kind === "apply");
     setStatusMessage(appliedAny ? "Online check done. New content applied." : "Online check done.");
     setOnlineBusy(false);
   }
 
+  async function handleInstall(): Promise<void> {
+    if (installing) return;
+    setInstalling(true);
+    setInstallError(null);
+    try {
+      // Restarts the app (on Windows, the installer closes it) — nothing
+      // after this line runs on success.
+      await installStagedAppUpdate();
+    } catch (err) {
+      setInstallError(
+        `Couldn’t install the update: ${err instanceof Error ? err.message : String(err)}`,
+      );
+      setInstalling(false);
+    }
+  }
+
   return (
     <SectionCard icon={RefreshCw} title="Updates" ariaLabel="Update controls">
+        {stagedVersion ? (
+          <div
+            role="status"
+            className="flex flex-wrap items-center justify-between gap-4 rounded-tile bg-sun-tint px-5 py-4"
+          >
+            <p className="max-w-[52ch] font-sans text-[17px] leading-relaxed text-ink">
+              <span className="font-bold">Tusome {stagedVersion} is ready to install.</span>{" "}
+              Installing restarts the app, so do it when no lesson is running.
+            </p>
+            <button
+              type="button"
+              onClick={() => void handleInstall()}
+              disabled={installing}
+              className="inline-flex min-h-[48px] shrink-0 items-center rounded-full bg-sun px-6 font-sans text-[18px] font-bold text-ink transition hover:bg-sun-hover active:scale-[0.98] disabled:opacity-50"
+            >
+              {installing ? "Installing…" : "Restart and install"}
+            </button>
+          </div>
+        ) : null}
+        {installError ? (
+          <p role="alert" className="font-sans text-[16px] font-bold text-bad">
+            {installError}
+          </p>
+        ) : null}
         <p className="font-sans text-[18px] leading-relaxed text-ink-2">
           Content updates arrive by USB. Online checks are off by default and only
           run when a teacher turns them on.
@@ -320,7 +373,7 @@ function UpdatesSection(): JSX.Element {
             checked={appOnline}
             disabled={!togglesLoaded}
             label="Check for app updates online"
-            description="Downloads a new app version when you press Check online now. On Windows the app closes to install it, so don’t run this during a lesson."
+            description="Downloads a new app version when you press Check online now. Nothing installs until you press Restart and install."
             onChange={(v) => {
               setAppOnline(v);
               void persistToggle("updates_app_online", v);

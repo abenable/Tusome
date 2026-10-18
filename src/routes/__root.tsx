@@ -208,7 +208,7 @@ function Sidebar({
 }
 
 function RootShell() {
-  const { status, student, isGuest, returnToPicker } = useStudent()
+  const { status, dbError, student, isGuest, returnToPicker } = useStudent()
   // The pathname is read so the needs-pick gate can let /settings render through
   // the Outlet (a teacher reaches Admin from the picker, e.g. on a fresh install
   // to set the PIN). Called unconditionally — hooks can't sit behind the status
@@ -231,6 +231,35 @@ function RootShell() {
           <BrandMark size={56} wordmark={false} />
         </span>
         <p className="font-sans text-[17px] text-ink-3">Loading…</p>
+      </div>
+    )
+  }
+
+  if (status === "db-error") {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-canvas px-6">
+        <div role="alert" className="flex max-w-[520px] flex-col items-start gap-4">
+          <BrandMark />
+          <h1 className="font-heading text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
+            Tusome couldn’t open its student records
+          </h1>
+          <p className="font-sans text-[18px] leading-relaxed text-ink-2">
+            Try again. If it keeps happening, restart the computer, and if that
+            doesn’t help, call support and read them the message below.
+          </p>
+          {dbError ? (
+            <code className="max-w-full overflow-x-auto rounded-tile border border-line bg-surface px-3 py-2 font-mono text-[14px] text-ink-2">
+              {dbError}
+            </code>
+          ) : null}
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="inline-flex min-h-[48px] items-center rounded-full bg-brand px-6 font-sans text-[18px] font-bold text-white transition hover:bg-brand-hover active:scale-[0.98]"
+          >
+            Try again
+          </button>
+        </div>
       </div>
     )
   }

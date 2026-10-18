@@ -84,8 +84,19 @@ describe("checkOnlineContentUpdate", () => {
     expect(qc.invalidateQueries).not.toHaveBeenCalled();
   });
 
-  it("resolves (never throws) with a 'fail' event whose detail mentions fetch failed / no network when fetch throws", async () => {
-    fetchMock.mockImplementation(async () => {
+  it("downloads in Rust, never with a webview fetch (CORS)", async () => {
+    invokeMock.mockImplementation(async () => ({ applied: [], skipped: [], events: [] }));
+    await checkOnlineContentUpdate({
+      queryClient: makeFakeQueryClient() as never,
+      enabled: true,
+      wifiOnly: false,
+    });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(invokeMock.mock.calls[0][0]).toBe("download_and_apply_online_content");
+  });
+
+  it("resolves (never throws) with a 'fail' event when the Rust download rejects", async () => {
+    invokeMock.mockImplementation(async () => {
       throw new Error("network down");
     });
     const qc = makeFakeQueryClient();
@@ -94,22 +105,14 @@ describe("checkOnlineContentUpdate", () => {
       enabled: true,
       wifiOnly: false,
     });
-    expect(Array.isArray(events)).toBe(true);
     expect(events.length).toBe(1);
-    const e = events[0];
-    expect(e.outcome).toBe("fail");
-    expect(e.channel).toBe("content-online");
-    expect(e.detail.includes("fetch failed") || e.detail.includes("no network")).toBe(
-      true,
-    );
-    expect(invokeMock).not.toHaveBeenCalled();
+    expect(events[0].outcome).toBe("fail");
+    expect(events[0].channel).toBe("content-online");
+    expect(events[0].detail).toContain("network down");
+    expect(qc.invalidateQueries).not.toHaveBeenCalled();
   });
 
   it("on a successful apply, invalidates PACKS_QUERY_KEY and adds an apply event", async () => {
-    const fakeBytes = new Uint8Array([1, 2, 3]);
-    fetchMock.mockImplementation(async () =>
-      new Response(fakeBytes, { status: 200 }),
-    );
     // The real Rust shape: per-step events, no overall success event.
     const rustEvents = [
       {
@@ -119,17 +122,8 @@ describe("checkOnlineContentUpdate", () => {
         detail: "manifest signature valid",
       },
     ];
-    const applyEvents = [
-      ...rustEvents,
-      {
-        channel: "content-online" as const,
-        kind: "apply" as const,
-        outcome: "ok" as const,
-        detail: "applied 1 pack(s): phy-s2-motion",
-      },
-    ];
-    invokeMock.mockImplementation(async (cmd: string, _args?: Record<string, unknown>) => {
-      if (cmd === "apply_online_content_bundle") {
+    invokeMock.mockImplementation(async (cmd: string) => {
+      if (cmd === "download_and_apply_online_content") {
         return { applied: ["phy-s2-motion"], skipped: [], events: rustEvents };
       }
       throw new Error(`unexpected invoke: ${cmd}`);
@@ -140,11 +134,34 @@ describe("checkOnlineContentUpdate", () => {
       enabled: true,
       wifiOnly: false,
     });
-    expect(events).toEqual(applyEvents);
+    expect(events).toEqual([
+      ...rustEvents,
+      {
+        channel: "content-online",
+        kind: "apply",
+        outcome: "ok",
+        detail: "applied 1 pack(s): phy-s2-motion",
+      },
+    ]);
     expect(qc.invalidateQueries).toHaveBeenCalledTimes(1);
     expect(qc.invalidateQueries.mock.calls[0][0]).toEqual({
       queryKey: PACKS_QUERY_KEY,
     });
+  });
+
+  it("when nothing was applied, returns Rust's events and doesn't reload packs", async () => {
+    const skipped = [
+      { channel: "content-online", kind: "copy", outcome: "skipped", detail: "up to date" },
+    ];
+    invokeMock.mockImplementation(async () => ({ applied: [], skipped: ["a"], events: skipped }));
+    const qc = makeFakeQueryClient();
+    const events = await checkOnlineContentUpdate({
+      queryClient: qc as never,
+      enabled: true,
+      wifiOnly: false,
+    });
+    expect(events).toEqual(skipped as never);
+    expect(qc.invalidateQueries).not.toHaveBeenCalled();
   });
 
   it("with wifiOnly=true emits a single 'skipped' event and does not fetch or invoke", async () => {
@@ -171,7 +188,7 @@ describe("checkOnlineAppUpdate", () => {
     expect(invokeMock).not.toHaveBeenCalled();
   });
 
-  it("when staged=true, returns events including a 'staged; will install on next launch' detail and never invokes relaunch", async () => {
+  it("when staged=true, returns the download event and never installs or relaunches", async () => {
     invokeMock.mockImplementation(async (cmd: string) => {
       if (cmd === "check_and_stage_app_update") {
         // Shape check_and_stage_app_update really returns (updates.rs).
@@ -184,7 +201,7 @@ describe("checkOnlineAppUpdate", () => {
               channel: "app",
               kind: "stage",
               outcome: "ok",
-              detail: "staged; will install on next launch",
+              detail: "downloaded 0.2.0; waiting for Restart and install",
             },
           ],
         };
@@ -196,10 +213,12 @@ describe("checkOnlineAppUpdate", () => {
       wifiOnly: false,
     });
     const detail = events.map((e) => e.detail).join("|");
-    expect(detail).toContain("staged; will install on next launch");
-    // NEVER relaunch — doc 07 "defer relaunch to app idle or next launch".
+    expect(detail).toContain("waiting for Restart and install");
+    // NEVER install or relaunch from a check — on Windows installing quits the
+    // app mid-lesson. That's an explicit teacher action only.
     const cmds = invokeMock.mock.calls.map((c) => c[0]);
-    expect(cmds).not.toContain("relaunch");
+    expect(cmds).toEqual(["check_and_stage_app_update"]);
+    expect(cmds).not.toContain("install_staged_app_update");
     expect(cmds.some((c) => String(c).toLowerCase().includes("relaunch"))).toBe(false);
   });
 

@@ -22,7 +22,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; img-src 'self' data: asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost https://github.com https://*.githubusercontent.com; frame-src 'self' asset: http://asset.localhost",
+      "csp": "default-src 'self'; img-src 'self' data: asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; frame-src 'self' asset: http://asset.localhost",
       "assetProtocol": {
         "enable": true,
         "scope": ["$APPDATA/tusome/content/**", "$RESOURCE/content/**"]
@@ -30,11 +30,8 @@
     }
   },
   "plugins": {
-    "sql": {
-      "preload": ["sqlite:tusome.db"]
-    },
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE3QTVFMjk1MUUzRjdENUYKUldSZmZUOGVsZUtsRjd3bTNBSzNMSUUyb1pWM2hBZTdDeldxVkVKbzZ2WjdmcVYzZWZKS3JHMzgK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENFMTMyNjRBREZDMUU5MUQKUldRZDZjSGZTaVlUenZYRHU4ZENrRnVEN1lWdjgzZ0hUOStUYmU1Z01Ic20velV0NzBGbjV1ZUgK",
       "endpoints": ["https://github.com/abenable/Tusome/releases/latest/download/latest.json"]
     }
   },

@@ -25,7 +25,8 @@ entirely offline; progress is stored locally per student.
   PIN-gated admin/settings screen.
 - **Updates** via signed USB content bundles (Ed25519/minisign) and an opt-in
   online updater (`tauri-plugin-updater`). Content updates apply without a
-  restart; binary updates defer to idle.
+  restart; app updates download in the background and only install when a
+  teacher presses **Restart and install** in Settings → System.
 
 ## Stack
 
@@ -63,6 +64,37 @@ bun tauri build                  # builds the app + bundles installers
 
 The installer is ~16 MB with all 8 sims bundled.
 
+## Signing and content bundles
+
+One minisign keypair signs both app updates and content bundles. Every
+installed copy trusts only its public key (`CONTENT_PUBKEY` in
+`src-tauri/src/updates.rs` and `plugins.updater.pubkey` in
+`src-tauri/tauri.conf.json`, key id `CE13264ADFC1E91D`).
+
+- **Private key:** `~/.tusome/tusome.key`, password in `~/.tusome/tusome.key.pw`.
+  Move the password into a password manager, delete the `.pw` file, and keep
+  an offline backup of the key. If the key is lost, no installed school
+  machine can ever take another update.
+- **Rotating the key** later means shipping one release, signed with the old
+  key, that carries the new public key.
+
+Build a signed content bundle from `content/`:
+
+```sh
+export TAURI_SIGNING_PRIVATE_KEY=~/.tusome/tusome.key
+export TAURI_SIGNING_PRIVATE_KEY_PASSWORD=...   # from your password manager
+bun run bundle:content
+```
+
+This writes `dist-bundle/tusome-updates/` (copy it to the root of a USB stick)
+and `dist-bundle/bundle.zip` (attach to a GitHub release for the online
+channel). The tool refuses to finish unless the bundle verifies against the
+app's public key and installs cleanly into an empty folder.
+
+The online channels download from this repo's GitHub releases, which must be
+publicly downloadable: the app sends no credentials, so a private repo's
+release assets return 404.
+
 ## Project layout
 
 ```
@@ -95,9 +127,15 @@ cd src-tauri && cargo test   # Rust unit tests (incl. update signature/copy test
 
 - **Content is draft** — outcomes are placeholders pending the official NCDC
   syllabus and teacher review. Only a handful of topics are populated.
-- **Signing key is the dev key** — `~/.tusome/tusome.key`. Generate and rotate
-  in a production keypair before any real distribution; keep the private key
-  out of the repo and CI.
+- **Online updates need a public release host** — the repo is private, so
+  the app can't download `latest.json` or `bundle.zip` from it. Make the repo
+  public, or publish releases to a separate public repo and update the two
+  URLs (`CONTENT_BUNDLE_URL` in `updates.rs`, `endpoints` in
+  `tauri.conf.json`). USB updates work regardless.
+- **CI builds are unsigned** — no signing secret is set, so CI release
+  installers carry no updater signature. Sign releases locally with the key
+  above, or add `TAURI_SIGNING_PRIVATE_KEY` / `_PASSWORD` as repo secrets if
+  you accept the key living in CI.
 - **No hardware validation yet** — the app has not been run on the actual
   target school machines (performance, WebView2 availability, projector
   legibility). Optimisation for the slowest hardware is a later phase.

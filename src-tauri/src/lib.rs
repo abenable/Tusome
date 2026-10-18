@@ -41,7 +41,7 @@ use serde::Serialize;
 use tauri::Manager;
 use tauri_plugin_sql::{Builder, Migration, MigrationKind};
 
-mod updates;
+pub mod updates;
 
 #[derive(Serialize)]
 struct ContentPackFile {
@@ -90,14 +90,16 @@ pub fn run() {
                 )
                 .build(),
         )
+        .manage(updates::StagedAppUpdate::default())
         .invoke_handler(tauri::generate_handler![
             read_content_packs,
             get_content_manifest_version,
             resolve_content_path,
             updates::scan_and_apply_usb_updates,
-            updates::apply_online_content_bundle,
+            updates::download_and_apply_online_content,
             updates::check_and_stage_app_update,
-            updates::write_text_file,
+            updates::staged_app_update_version,
+            updates::install_staged_app_update,
             updates::append_update_log,
             updates::get_update_log
         ])
@@ -105,11 +107,11 @@ pub fn run() {
             seed_content(app.handle());
             // Silent startup USB scan (docs/plan/07): never blocks launch, never
             // shows the student anything. Spawned on the async runtime so it can
-            // await the sql pool for log persistence without holding up setup.
+            // wait for the webview to open the sql pool without holding up setup.
             let handle = app.handle().clone();
             tauri::async_runtime::spawn(async move {
                 let r = updates::run_usb_scan(&handle).await;
-                updates::persist_log_events(&handle, &r.events).await;
+                updates::persist_log_events_when_ready(&handle, &r.events).await;
             });
             Ok(())
         })

@@ -45,7 +45,7 @@ import {
 // Public types
 // ──────────────────────────────────────────────────────────────────────────
 
-export type StudentStatus = "loading" | "needs-pick" | "ready";
+export type StudentStatus = "loading" | "needs-pick" | "ready" | "db-error";
 
 export type StudentContextValue = {
   /** null = Guest chosen (or loading); the resolved StudentRow for the chosen id. */
@@ -55,6 +55,8 @@ export type StudentContextValue = {
   /** true when studentId === null AND a choice has been made (status "ready"). */
   isGuest: boolean;
   status: StudentStatus;
+  /** Why the DB couldn't be opened (status "db-error"), for support calls. */
+  dbError: string | null;
   /** all students, oldest first. */
   students: StudentRow[];
   /** null = Guest; persists to settings. */
@@ -88,7 +90,7 @@ export type StudentContextValue = {
 // ──────────────────────────────────────────────────────────────────────────
 
 export type ResolvedState = {
-  status: Exclude<StudentStatus, "loading">;
+  status: Exclude<StudentStatus, "loading" | "db-error">;
   studentId: number | null;
   student: StudentRow | null;
 };
@@ -148,6 +150,7 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
   const [students, setStudents] = useState<StudentRow[]>([]);
   const [studentId, setStudentId] = useState<number | null>(null);
   const [status, setStatus] = useState<StudentStatus>("loading");
+  const [dbError, setDbError] = useState<string | null>(null);
   // Derived, not stored: a separately-set row went stale whenever `students`
   // changed after the closure that set it (sign-up → setStudent(newId) ran
   // with the pre-insert list, so the new account showed as "Guest").
@@ -185,11 +188,14 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
         const resolved = resolveInitialState(rows, persisted);
         setStudentId(resolved.studentId);
         setStatus(resolved.status);
-      } catch {
+      } catch (err) {
         if (cancelled) return;
-        // A DB read failure shouldn't crash the app — drop to needs-pick so the
-        // picker can try again (or the user can continue as Guest).
-        setStatus("needs-pick");
+        // The DB couldn't be opened (e.g. a migration failed). Every profile
+        // action would fail too, so say so plainly instead of showing a picker
+        // that can't log anyone in.
+        console.error("[StudentProvider] opening the database failed:", err);
+        setDbError(err instanceof Error ? err.message : String(err));
+        setStatus("db-error");
       }
     })();
     return () => {
@@ -254,6 +260,7 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
       studentId,
       isGuest: studentId === null && status === "ready",
       status,
+      dbError,
       students,
       setStudent,
       addStudent,
@@ -267,6 +274,7 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
       student,
       studentId,
       status,
+      dbError,
       students,
       setStudent,
       addStudent,

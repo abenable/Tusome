@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "build:full": "bun run fetch:sims && bun run build && bun tauri build --bundles deb",
     "fetch:sims": "bun scripts/fetch-phet-sims.ts",
+    "bundle:content": "cd src-tauri && cargo run --release --example make_bundle -- ../content ../dist-bundle",
     "preview": "vite preview",
     "tauri": "tauri",
     "tsc": "tsc --noEmit",

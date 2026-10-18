@@ -59,18 +59,6 @@ export interface AppUpdateResult {
 }
 
 // ──────────────────────────────────────────────────────────────────────────
-// Content bundle endpoint
-// ──────────────────────────────────────────────────────────────────────────
-//
-// HUMAN/CI: the real bundle must be hosted (GitHub Releases `bundle.zip` is the
-// starting point per doc 07). Replace OWNER/REPO with the real repo before
-// shipping; the CSP also needs ` https://github.com https://*.githubusercontent.com`
-// added to `connect-src` (see the U2 report). Kept as a single const so a config
-// line swap is all the re-pointing the release job needs.
-export const CONTENT_BUNDLE_URL =
-  "https://github.com/abenable/Tusome/releases/latest/download/bundle.zip";
-
-// ──────────────────────────────────────────────────────────────────────────
 // Tauri detection — same shape as the content loader's guard.
 // ──────────────────────────────────────────────────────────────────────────
 
@@ -118,8 +106,12 @@ export function shouldDownloadOverNetwork(wifiOnly: boolean): {
 }
 
 // ──────────────────────────────────────────────────────────────────────────
-// Online content update — custom manifest fetch over HTTP.
+// Online content update — Rust downloads, verifies and applies the bundle.
 // ──────────────────────────────────────────────────────────────────────────
+//
+// The download happens in Rust (`download_and_apply_online_content`), not here:
+// a webview fetch of a GitHub release asset is blocked by CORS, and it keeps
+// the CSP free of remote origins. The bundle URL lives in updates.rs.
 //
 // Never throws. Never retries on failure (doc 07 "no retry storm"). On a
 // successful apply, invalidates `PACKS_QUERY_KEY` so topics reload WITHOUT a
@@ -150,13 +142,9 @@ export async function checkOnlineContentUpdate(opts: {
   }
 
   try {
-    const res = await fetch(CONTENT_BUNDLE_URL);
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const zipBytes = new Uint8Array(await res.arrayBuffer());
     const { invoke } = await import("@tauri-apps/api/core");
-    const r = await invoke<ApplyResult>("apply_online_content_bundle", {
-      zipBytes,
-    });
+    const r = await invoke<ApplyResult>("download_and_apply_online_content");
+    if (r.applied.length === 0) return r.events;
     // New topics appear without a restart (doc 07). Invalidate by hand — the
     // packs query is `staleTime: Infinity`, so it would otherwise keep serving
     // the pre-apply pack list.
@@ -164,24 +152,22 @@ export async function checkOnlineContentUpdate(opts: {
     // Rust reports per-step events but no overall success event — success is
     // a non-empty `applied`. Record it, so the log (and the admin's status
     // line) can say content actually arrived.
-    return r.applied.length > 0
-      ? [
-          ...r.events,
-          {
-            channel: "content-online",
-            kind: "apply",
-            outcome: "ok",
-            detail: `applied ${r.applied.length} pack(s): ${r.applied.join(", ")}`,
-          },
-        ]
-      : r.events;
+    return [
+      ...r.events,
+      {
+        channel: "content-online",
+        kind: "apply",
+        outcome: "ok",
+        detail: `applied ${r.applied.length} pack(s): ${r.applied.join(", ")}`,
+      },
+    ];
   } catch (err) {
     return [
       {
         channel: "content-online",
         kind: "check",
         outcome: "fail",
-        detail: "no network / fetch failed: " + msg(err),
+        detail: "online content check failed: " + msg(err),
       },
     ];
   }
@@ -191,9 +177,10 @@ export async function checkOnlineContentUpdate(opts: {
 // Online app-binary update — tauri-plugin-updater via the Rust command.
 // ──────────────────────────────────────────────────────────────────────────
 //
-// The Rust side runs `check()` + `downloadAndInstall()` to STAGE only. We NEVER
-// call `relaunch()` from here — doc 07 "defer `relaunch()` to app idle or next
-// launch — never interrupt a running lesson". Never throws.
+// The Rust side runs `check()` + `download()` only: the verified update waits in
+// memory until a teacher presses "Restart and install" (installStagedAppUpdate
+// below). Nothing here installs or relaunches — doc 07 "never interrupt a
+// running lesson" (on Windows, installing quits the app). Never throws.
 
 export async function checkOnlineAppUpdate(opts: {
   enabled: boolean;
@@ -236,6 +223,23 @@ export async function checkOnlineAppUpdate(opts: {
 // ──────────────────────────────────────────────────────────────────────────
 // Audit log — thin invoke wrappers, guarded so tests run outside Tauri.
 // ──────────────────────────────────────────────────────────────────────────
+
+/** Version of a downloaded update waiting for "Restart and install", if any. */
+export async function stagedAppUpdateVersion(): Promise<string | null> {
+  if (!isTauri()) return null;
+  const { invoke } = await import("@tauri-apps/api/core");
+  return invoke<string | null>("staged_app_update_version");
+}
+
+/**
+ * Install the downloaded update and restart into it. Only ever called from the
+ * admin "Restart and install" button: on Windows the installer closes the app
+ * the moment this runs. Rejects if nothing is staged or the install fails.
+ */
+export async function installStagedAppUpdate(): Promise<void> {
+  const { invoke } = await import("@tauri-apps/api/core");
+  await invoke("install_staged_app_update");
+}
 
 export async function appendUpdateLog(events: UpdateLogEvent[]): Promise<void> {
   if (!isTauri()) return;
