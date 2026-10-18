@@ -164,11 +164,19 @@ describe("checkOnlineAppUpdate", () => {
   it("when staged=true, returns events including a 'staged; will install on next launch' detail and never invokes relaunch", async () => {
     invokeMock.mockImplementation(async (cmd: string) => {
       if (cmd === "check_and_stage_app_update") {
+        // Shape check_and_stage_app_update really returns (updates.rs).
         return {
           staged: true,
           currentVersion: "0.1.0",
           targetVersion: "0.2.0",
-          events: [],
+          events: [
+            {
+              channel: "app",
+              kind: "stage",
+              outcome: "ok",
+              detail: "staged; will install on next launch",
+            },
+          ],
         };
       }
       throw new Error(`unexpected invoke: ${cmd}`);
@@ -183,6 +191,23 @@ describe("checkOnlineAppUpdate", () => {
     const cmds = invokeMock.mock.calls.map((c) => c[0]);
     expect(cmds).not.toContain("relaunch");
     expect(cmds.some((c) => String(c).toLowerCase().includes("relaunch"))).toBe(false);
+  });
+
+  it("when Rust reports a failed check (staged=false), adds no contradicting 'ok' event", async () => {
+    const failEvent = {
+      channel: "app",
+      kind: "check",
+      outcome: "fail",
+      detail: "check: error sending request",
+    };
+    invokeMock.mockImplementation(async () => ({
+      staged: false,
+      currentVersion: "0.1.0",
+      targetVersion: null,
+      events: [failEvent],
+    }));
+    const events = await checkOnlineAppUpdate({ enabled: true, wifiOnly: false });
+    expect(events).toEqual([failEvent] as never);
   });
 
   it("with wifiOnly=true emits a single 'skipped' event and does not invoke check_and_stage_app_update", async () => {

@@ -147,8 +147,14 @@ export function useStudent(): StudentContextValue {
 export function StudentProvider({ children }: { children: ReactNode }): JSX.Element {
   const [students, setStudents] = useState<StudentRow[]>([]);
   const [studentId, setStudentId] = useState<number | null>(null);
-  const [student, setStudentRow] = useState<StudentRow | null>(null);
   const [status, setStatus] = useState<StudentStatus>("loading");
+  // Derived, not stored: a separately-set row went stale whenever `students`
+  // changed after the closure that set it (sign-up → setStudent(newId) ran
+  // with the pre-insert list, so the new account showed as "Guest").
+  const student = useMemo(
+    () => (studentId === null ? null : (students.find((s) => s.id === studentId) ?? null)),
+    [students, studentId],
+  );
 
   const refreshStudents = useCallback(async () => {
     const rows = await getStudents();
@@ -158,14 +164,8 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
     // should choose intentionally on a shared machine).
     setStudentId((currentId) => {
       if (currentId !== null && !rows.some((s) => s.id === currentId)) {
-        setStudentRow(null);
         setStatus("needs-pick");
         return null;
-      }
-      // Keep the resolved row in sync (rename changes display_name).
-      if (currentId !== null) {
-        const updated = rows.find((s) => s.id === currentId) ?? null;
-        setStudentRow(updated);
       }
       return currentId;
     });
@@ -184,7 +184,6 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
         setStudents(rows);
         const resolved = resolveInitialState(rows, persisted);
         setStudentId(resolved.studentId);
-        setStudentRow(resolved.student);
         setStatus(resolved.status);
       } catch {
         if (cancelled) return;
@@ -201,17 +200,10 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
   const setStudent = useCallback(
     async (id: number | null) => {
       await setSetting("current_student", id === null ? "guest" : String(id));
-      if (id === null) {
-        setStudentId(null);
-        setStudentRow(null);
-      } else {
-        const match = students.find((s) => s.id === id) ?? null;
-        setStudentId(id);
-        setStudentRow(match);
-      }
+      setStudentId(id);
       setStatus("ready");
     },
-    [students],
+    [],
   );
 
   const addStudent = useCallback(
@@ -253,7 +245,6 @@ export function StudentProvider({ children }: { children: ReactNode }): JSX.Elem
   const returnToPicker = useCallback(async () => {
     await setSetting("current_student", "");
     setStudentId(null);
-    setStudentRow(null);
     setStatus("needs-pick");
   }, []);
 

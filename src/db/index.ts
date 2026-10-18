@@ -32,7 +32,12 @@ let dbPromise: Promise<Database> | null = null;
 /** Open (once) and return the memoised SQLite connection. */
 export function getDb(): Promise<Database> {
   if (!dbPromise) {
-    dbPromise = Database.load("sqlite:tusome.db");
+    // Drop a rejected load so the next call retries instead of replaying the
+    // same failure for the rest of the session.
+    dbPromise = Database.load("sqlite:tusome.db").catch((err) => {
+      dbPromise = null;
+      throw err;
+    });
   }
   return dbPromise;
 }

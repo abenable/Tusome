@@ -203,20 +203,11 @@ export async function checkOnlineAppUpdate(opts: {
   try {
     const { invoke } = await import("@tauri-apps/api/core");
     const r = await invoke<AppUpdateResult>("check_and_stage_app_update");
-    const ev: UpdateLogEvent = r.staged
-      ? {
-          channel: "app-online",
-          kind: "check",
-          outcome: "ok",
-          detail: "staged; will install on next launch",
-        }
-      : {
-          channel: "app-online",
-          kind: "check",
-          outcome: "ok",
-          detail: "no update available",
-        };
-    return [...r.events, ev];
+    // The Rust command already emits the outcome event on every path
+    // ("no update available", "staged; …", or the failure). Don't synthesise
+    // another: `staged: false` also covers a failed check/download, which an
+    // "ok / no update available" line would contradict.
+    return r.events;
   } catch (err) {
     return [
       {

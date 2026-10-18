@@ -1,6 +1,12 @@
 import { describe, it, expect } from "bun:test";
 import { Pack, Block } from "./schema";
-import { loadPacks, loadPackForTopic, loadPacksWithErrors } from "./loader";
+import {
+  loadPacks,
+  loadPackForTopic,
+  loadPacksCached,
+  loadPacksWithErrors,
+  PACKS_QUERY_KEY,
+} from "./loader";
 import { mkdir, writeFile, rm, readFile, mkdtemp } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -132,7 +138,7 @@ describe("schema: Block discriminated union", () => {
 describe("loader: malformed packs are skipped, never thrown", () => {
   // The loader reads from the content dir. We build a throwaway tree in the OS
   // temp dir — containing a copy of the real electricity-circuits pack AND a malformed
-  // pack — and point the loader at it via CBL_CONTENT_DIR. That keeps the test
+  // pack — and point the loader at it via TUSOME_CONTENT_DIR. That keeps the test
   // out of the curated content tree (an interrupted run used to leave a broken
   // pack in content/z-test-malformed) while still exercising the real walk +
   // parse + skip path.
@@ -166,7 +172,7 @@ describe("loader: malformed packs are skipped, never thrown", () => {
       }),
     );
 
-    process.env.CBL_CONTENT_DIR = tmp;
+    process.env.TUSOME_CONTENT_DIR = tmp;
     try {
       // If the loader throws on a malformed pack, this await rejects and the
       // test fails — that's the contract we're checking.
@@ -178,7 +184,7 @@ describe("loader: malformed packs are skipped, never thrown", () => {
         result.packs.some((p) => p.packId === "phy.s4.electricity.circuits"),
       ).toBe(true);
     } finally {
-      delete process.env.CBL_CONTENT_DIR;
+      delete process.env.TUSOME_CONTENT_DIR;
       await rm(tmp, { recursive: true, force: true });
     }
   });
@@ -219,7 +225,7 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
       }),
     );
 
-    process.env.CBL_CONTENT_DIR = tmp;
+    process.env.TUSOME_CONTENT_DIR = tmp;
     try {
       const qc = new QueryClient();
       const { packs, errors } = await loadPacksWithErrors(qc);
@@ -234,7 +240,7 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
         true,
       );
     } finally {
-      delete process.env.CBL_CONTENT_DIR;
+      delete process.env.TUSOME_CONTENT_DIR;
       await rm(tmp, { recursive: true, force: true });
     }
   });
@@ -254,14 +260,49 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
     await mkdir(join(tmp, "physics", "s4-electricity-circuits"), { recursive: true });
     await writeFile(join(tmp, "physics", "s4-electricity-circuits", "pack.json"), realPack);
 
-    process.env.CBL_CONTENT_DIR = tmp;
+    process.env.TUSOME_CONTENT_DIR = tmp;
     try {
       const qc = new QueryClient();
       const { packs, errors } = await loadPacksWithErrors(qc);
       expect(errors).toEqual([]);
       expect(packs.length).toBeGreaterThanOrEqual(1);
     } finally {
-      delete process.env.CBL_CONTENT_DIR;
+      delete process.env.TUSOME_CONTENT_DIR;
+      await rm(tmp, { recursive: true, force: true });
+    }
+  });
+});
+
+describe("loadPacksCached", () => {
+  it("serves the cached walk until PACKS_QUERY_KEY is invalidated, then re-walks", async () => {
+    const tmp = await mkdtemp(join(tmpdir(), "tusome-cache-"));
+    const realPack = await readFile(
+      join(import.meta.dirname, "..", "..", "content", "physics", "s4-electricity-circuits", "pack.json"),
+      "utf-8",
+    );
+    await mkdir(join(tmp, "a"), { recursive: true });
+    await writeFile(join(tmp, "a", "pack.json"), realPack);
+
+    process.env.TUSOME_CONTENT_DIR = tmp;
+    try {
+      const qc = new QueryClient();
+      expect((await loadPacksCached(qc)).packs).toHaveLength(1);
+
+      // A USB/online update lands a second pack on disk.
+      const second = JSON.parse(realPack);
+      second.packId = "phy.s4.extra";
+      second.topics[0].id = "phy.s4.extra";
+      await mkdir(join(tmp, "b"), { recursive: true });
+      await writeFile(join(tmp, "b", "pack.json"), JSON.stringify(second));
+
+      // Cached: no re-walk without an invalidation.
+      expect((await loadPacksCached(qc)).packs).toHaveLength(1);
+
+      // What updates.ts / the admin USB handler do after an apply.
+      await qc.invalidateQueries({ queryKey: PACKS_QUERY_KEY });
+      expect((await loadPacksCached(qc)).packs).toHaveLength(2);
+    } finally {
+      delete process.env.TUSOME_CONTENT_DIR;
       await rm(tmp, { recursive: true, force: true });
     }
   });

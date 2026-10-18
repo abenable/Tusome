@@ -298,8 +298,21 @@ pub fn apply_update_bundle(
         }
     };
 
+    apply_manifest(content_dir, bundle_root, &remote, channel)
+}
+
+/// Diff + stage + verify + swap for an already-trusted manifest. Callers either
+/// verified its signature (`apply_update_bundle`) or built it from the bundled
+/// resources inside the signed installer (the post-upgrade re-seed in lib.rs).
+pub fn apply_manifest(
+    content_dir: &Path,
+    bundle_root: &Path,
+    remote: &ManifestBundle,
+    channel: &str,
+) -> ApplyResult {
+    let mut result = ApplyResult::default();
     let local = load_local_versions(content_dir);
-    let to_copy = diff_manifests(&local, &remote);
+    let to_copy = diff_manifests(&local, remote);
 
     // skipped = remote packs whose version is NOT strictly higher than local
     // (genuinely unchanged — independent of whether a later pack fails to copy).
@@ -455,7 +468,7 @@ pub fn apply_update_bundle(
 
     // ── Update the local manifest to reflect the new installed set. ──
     if !result.applied.is_empty() {
-        if let Err(e) = write_updated_manifest(content_dir, &remote) {
+        if let Err(e) = write_updated_manifest(content_dir, remote, &result.applied) {
             // A failed manifest write does NOT undo the (already-applied) packs;
             // it just means the next diff will re-copy them. Log to stderr; the
             // ApplyResult is returned to JS which surfaces it via the events.
@@ -502,19 +515,25 @@ pub fn load_local_manifest(content_dir: &Path) -> Option<ManifestBundle> {
     serde_json::from_slice(&raw).ok()
 }
 
-/// Build the new local manifest = (old local packs ∪ remote packs), with
-/// remote entries authoritative where they overlap. Preserves packs that exist
-/// locally but aren't in this bundle (e.g. a partial bundle updating one
-/// subject). bundleVersion is taken from the remote (the applied bundle's
-/// version becomes the new local version).
-fn write_updated_manifest(content_dir: &Path, remote: &ManifestBundle) -> std::io::Result<()> {
+/// Build the new local manifest = (old local packs ∪ APPLIED remote packs), with
+/// applied entries authoritative where they overlap. Only packs actually swapped
+/// in are recorded: a pack whose swap failed, or a skipped lower-version pack,
+/// must keep its old local entry or the next diff would never retry/compare it
+/// correctly. Preserves packs that exist locally but aren't in this bundle (e.g.
+/// a partial bundle updating one subject). bundleVersion is taken from the
+/// remote (the applied bundle's version becomes the new local version).
+fn write_updated_manifest(
+    content_dir: &Path,
+    remote: &ManifestBundle,
+    applied: &[String],
+) -> std::io::Result<()> {
     let mut by_id: BTreeMap<String, ManifestPack> = BTreeMap::new();
     if let Some(old) = load_local_manifest(content_dir) {
         for p in old.packs {
             by_id.insert(p.pack_id.clone(), p);
         }
     }
-    for p in &remote.packs {
+    for p in remote.packs.iter().filter(|p| applied.contains(&p.pack_id)) {
         by_id.insert(p.pack_id.clone(), p.clone());
     }
     let new = ManifestBundle {
@@ -668,6 +687,12 @@ pub fn scan_removable_roots() -> Vec<PathBuf> {
             if let Ok(entries) = fs::read_dir(base) {
                 for e in entries.flatten() {
                     consider(e.path().join("tusome-updates"), &mut out);
+                    // udisks2 (Ubuntu, Fedora, …) mounts at <base>/<user>/<label>.
+                    if let Ok(sub) = fs::read_dir(e.path()) {
+                        for s in sub.flatten() {
+                            consider(s.path().join("tusome-updates"), &mut out);
+                        }
+                    }
                 }
             }
         }
@@ -687,7 +712,8 @@ pub fn scan_removable_roots() -> Vec<PathBuf> {
         for c in b'D'..=b'Z' {
             let drive = format!("{}:\\", c as char);
             if let Some(ref sys) = sys_drive {
-                if drive.eq_ignore_ascii_case(sys) {
+                // %SystemDrive% is "C:" (no trailing backslash).
+                if drive[..2].eq_ignore_ascii_case(sys) {
                     continue;
                 }
             }
@@ -720,7 +746,7 @@ async fn get_pool(app: &AppHandle) -> Option<sqlx::Pool<sqlx::Sqlite>> {
     }
 }
 
-async fn persist_log_events(app: &AppHandle, events: &[UpdateLogEvent]) -> usize {
+pub async fn persist_log_events(app: &AppHandle, events: &[UpdateLogEvent]) -> usize {
     let Some(pool) = get_pool(app).await else {
         // Pool not ready (e.g. DB still initialising). Best-effort: drop to
         // stderr so the event isn't totally invisible during bring-up.
@@ -765,7 +791,9 @@ fn content_dir_for(app: &AppHandle) -> Option<PathBuf> {
 /// Scan every removable drive for a `tusome-updates/` bundle and apply it. Runs
 /// silently at startup (spawned from `setup`, never blocks launch, never shows
 /// the student anything) and on demand from the admin screen. Always returns;
-/// never panics.
+/// never panics. Does NOT persist its events: the startup caller does, and the
+/// webview caller appends the returned events via `append_update_log` (as it
+/// does for every command here) — persisting in both places double-logged.
 pub async fn run_usb_scan(app: &AppHandle) -> ApplyResult {
     let mut merged = ApplyResult::default();
     let Some(content_dir) = content_dir_for(app) else {
@@ -782,9 +810,6 @@ pub async fn run_usb_scan(app: &AppHandle) -> ApplyResult {
         merged.applied.extend(r.applied);
         merged.skipped.extend(r.skipped);
         merged.events.extend(r.events);
-    }
-    if !merged.events.is_empty() {
-        let _ = persist_log_events(app, &merged.events).await;
     }
     merged
 }
@@ -823,7 +848,6 @@ pub async fn apply_online_content_bundle(app: AppHandle, zip_bytes: Vec<u8>) -> 
                 "fail",
                 format!("create scratch dir: {e}"),
             ));
-            let _ = persist_log_events(&app, &result.events).await;
             return result;
         }
     };
@@ -831,15 +855,10 @@ pub async fn apply_online_content_bundle(app: AppHandle, zip_bytes: Vec<u8>) -> 
         result
             .events
             .push(ev("online", "extract", "fail", format!("unzip: {e}")));
-        let _ = persist_log_events(&app, &result.events).await;
         return result;
     }
 
-    let r = apply_update_bundle(&content_dir, scratch.path(), CONTENT_PUBKEY, "online");
-    if !r.events.is_empty() {
-        let _ = persist_log_events(&app, &r.events).await;
-    }
-    r
+    apply_update_bundle(&content_dir, scratch.path(), CONTENT_PUBKEY, "online")
 }
 
 /// Check for a binary update and stage it, but never relaunch mid-lesson. Fails
@@ -862,7 +881,6 @@ pub async fn check_and_stage_app_update(app: AppHandle) -> AppUpdateResult {
         Ok(u) => u,
         Err(e) => {
             events.push(ev("app", "check", "fail", format!("updater init: {e}")));
-            let _ = persist_log_events(&app, &events).await;
             return finish(false, None, events);
         }
     };
@@ -870,13 +888,11 @@ pub async fn check_and_stage_app_update(app: AppHandle) -> AppUpdateResult {
         Ok(Some(u)) => u,
         Ok(None) => {
             events.push(ev("app", "check", "ok", "no update available".to_string()));
-            let _ = persist_log_events(&app, &events).await;
             return finish(false, None, events);
         }
         Err(e) => {
             // No network / no endpoint — fail silently, carry on offline.
             events.push(ev("app", "check", "fail", format!("check: {e}")));
-            let _ = persist_log_events(&app, &events).await;
             return finish(false, None, events);
         }
     };
@@ -889,7 +905,6 @@ pub async fn check_and_stage_app_update(app: AppHandle) -> AppUpdateResult {
                 "ok",
                 "staged; will install on next launch".to_string(),
             ));
-            let _ = persist_log_events(&app, &events).await;
             finish(true, Some(target_version), events)
         }
         Err(e) => {
@@ -899,7 +914,6 @@ pub async fn check_and_stage_app_update(app: AppHandle) -> AppUpdateResult {
                 "fail",
                 format!("download_and_install: {e}"),
             ));
-            let _ = persist_log_events(&app, &events).await;
             finish(false, Some(target_version), events)
         }
     }
@@ -1309,6 +1323,70 @@ mod tests {
             ids,
             vec!["a", "c"],
             "a higher (copy), b equal (skip), c missing (copy), e lower (skip)"
+        );
+    }
+
+    // 5b. A pack whose swap fails must NOT be recorded in the local manifest
+    //     (else the next diff thinks it's installed and never retries it), and
+    //     a skipped lower-version remote entry must not overwrite the local one.
+    #[test]
+    fn failed_swap_and_skipped_packs_not_recorded_in_manifest() {
+        let content = TempDir::new().unwrap();
+        let content_dir = content.path();
+        let bundle = TempDir::new().unwrap();
+        let bundle_root = bundle.path();
+
+        // Installed: gamma v3.
+        write_pack_files(
+            &content_dir.join("g/gamma"),
+            &[("pack.json", &pack_json("gamma", 3))],
+        );
+        write_manifest(content_dir, &build_manifest_for_dir(content_dir).unwrap()).unwrap();
+
+        // Bundle: alpha v1 (installs), beta v1 (swap fails), gamma v2 (skipped).
+        write_pack_files(
+            &bundle_root.join("a/alpha"),
+            &[("pack.json", &pack_json("alpha", 1))],
+        );
+        write_pack_files(
+            &bundle_root.join("b/beta"),
+            &[("pack.json", &pack_json("beta", 1))],
+        );
+        write_pack_files(
+            &bundle_root.join("g/gamma"),
+            &[("pack.json", &pack_json("gamma", 2))],
+        );
+        let key = make_key();
+        build_and_sign_bundle(
+            bundle_root,
+            &key,
+            &[
+                ("alpha", 1, "a/alpha"),
+                ("beta", 1, "b/beta"),
+                ("gamma", 2, "g/gamma"),
+            ],
+        );
+        // A plain FILE where beta's parent dir should be → rename into place fails.
+        fs::write(content_dir.join("b"), b"not a dir").unwrap();
+
+        let r = apply_update_bundle(content_dir, bundle_root, &key.pubkey_b64, "usb");
+
+        assert!(r.applied.contains(&"alpha".to_string()), "{:?}", r.events);
+        assert!(!r.applied.contains(&"beta".to_string()));
+        let local = load_local_manifest(content_dir).expect("local manifest");
+        let v = |id: &str| {
+            local
+                .packs
+                .iter()
+                .find(|p| p.pack_id == id)
+                .map(|p| p.version)
+        };
+        assert_eq!(v("alpha"), Some(1));
+        assert_eq!(v("beta"), None, "failed swap must not be recorded");
+        assert_eq!(
+            v("gamma"),
+            Some(3),
+            "skipped lower remote must not overwrite"
         );
     }
 

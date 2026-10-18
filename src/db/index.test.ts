@@ -78,6 +78,13 @@ describe("db connection", () => {
     expect(loadMock).toHaveBeenCalledWith("sqlite:tusome.db");
   });
 
+  it("a failed Database.load is not memoised — the next getDb retries", async () => {
+    loadMock.mockImplementationOnce(() => Promise.reject(new Error("db locked")));
+    await expect(getDb()).rejects.toThrow("db locked");
+    expect(await getDb()).toBe(fakeDb as never);
+    expect(loadMock).toHaveBeenCalledTimes(2);
+  });
+
   it("does not hardcode a filesystem path — only the sqlite: connection string is passed", () => {
     const calls = loadMock.mock.calls.map((c) => c[0]);
     for (const path of calls) {

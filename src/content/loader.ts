@@ -15,7 +15,7 @@
 //      school machine uses it.
 //
 //   2. Non-Tauri (`bun test`, plain `bun run dev`): walk the repo-root `content/`
-//      dir with `node:fs`. `CBL_CONTENT_DIR` overrides the root so tests can
+//      dir with `node:fs`. `TUSOME_CONTENT_DIR` overrides the root so tests can
 //      point at a temp tree instead of polluting curated content.
 //
 // Both paths return `{ path, raw }[]`; the JSON.parse + safeParse + skip logic
@@ -102,7 +102,7 @@ async function loadFromTauri(): Promise<RawFile[]> {
 // Non-Tauri covers two distinct runtimes that need different content sources:
 //
 //   - `bun test` (Node/Bun): reads `content/` off the filesystem with
-//     `node:fs`. `CBL_CONTENT_DIR` overrides the root so the malformed-pack test
+//     `node:fs`. `TUSOME_CONTENT_DIR` overrides the root so the malformed-pack test
 //     can point at a temp tree.
 //   - `bun run dev` / plain browser: there is no `node:fs` in a browser. Vite's
 //     `import.meta.glob` (eager, `?raw`) bundles every `pack.json` into the
@@ -161,7 +161,7 @@ async function walk(
 
 function repoContentDir(): string {
   const override =
-    typeof process !== "undefined" ? process.env?.CBL_CONTENT_DIR : undefined;
+    typeof process !== "undefined" ? process.env?.TUSOME_CONTENT_DIR : undefined;
   if (override) return override;
   // This file lives at <repo>/src/content/loader.ts → go up two dirs to repo
   // root. `import.meta.dirname` is stable under bun and (vite) dev; this branch
@@ -176,17 +176,20 @@ function repoContentDir(): string {
 
 // ---------------------------------------------------------------------------
 // TanStack Query — cache the walk once, invalidate by hand on USB update.
-// `ensureQueryData` fetches on first call and serves from cache after, so the
-// four subject/topic routes share one filesystem walk instead of re-walking on
-// every navigation.
+// `fetchQuery` with `staleTime: Infinity` fetches on first call and serves from
+// cache after, so the subject/topic routes share one filesystem walk instead of
+// re-walking on every navigation. Not `ensureQueryData`: that returns cached
+// data even after `invalidateQueries`, and nothing observes this key (route
+// loaders only), so an invalidation would never trigger a refetch.
 // ---------------------------------------------------------------------------
 
 export const PACKS_QUERY_KEY = ["packs"] as const;
 
 export async function loadPacksCached(qc: QueryClient): Promise<LoadResult> {
-  return qc.ensureQueryData({
+  return qc.fetchQuery({
     queryKey: PACKS_QUERY_KEY,
     queryFn: loadPacks,
+    staleTime: Infinity,
   }) as Promise<LoadResult>;
 }
 

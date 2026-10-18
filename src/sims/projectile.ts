@@ -147,7 +147,7 @@ export const projectile: SimModule = {
       // nudge and the test tolerance (1% rel. error at dt=1/1000) covers the
       // overshoot of the last sub-ground step.
       y = 0
-      vx = s.vx
+      vx = 0
       vy = 0
       // We still advance x to its last in-flight position (already computed
       // above) and freeze t at the moment of landing.

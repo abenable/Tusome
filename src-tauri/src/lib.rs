@@ -108,7 +108,8 @@ pub fn run() {
             // await the sql pool for log persistence without holding up setup.
             let handle = app.handle().clone();
             tauri::async_runtime::spawn(async move {
-                let _ = updates::run_usb_scan(&handle).await;
+                let r = updates::run_usb_scan(&handle).await;
+                updates::persist_log_events(&handle, &r.events).await;
             });
             Ok(())
         })
@@ -287,7 +288,8 @@ fn resolve_content_path(app: tauri::AppHandle, rel: String) -> Option<String> {
 // ──────────────────────────────────────────────────────────────────────────
 // First-run seed: copy bundled content → writable content dir, but only if the
 // writable dir is empty. That preserves any USB-delivered packs already there
-// (Phase 5) — we never overwrite a pack the admin dropped on the machine.
+// (Phase 5) — we never overwrite a pack the admin dropped on the machine with
+// an older one. After an app update, newer bundled packs and sims are synced in.
 // ──────────────────────────────────────────────────────────────────────────
 fn seed_content(app: &tauri::AppHandle) {
     let paths = app.path();
@@ -301,12 +303,6 @@ fn seed_content(app: &tauri::AppHandle) {
     };
     let target = data_dir.join("tusome").join("content");
 
-    // Don't clobber a populated dir — a re-seed on a later launch must not wipe
-    // USB-delivered content or updated packs.
-    if has_packs(&target) {
-        return;
-    }
-
     let source = match paths.resource_dir() {
         Ok(r) => r.join("content"),
         Err(e) => {
@@ -319,6 +315,40 @@ fn seed_content(app: &tauri::AppHandle) {
         // read command handles this; nothing to seed.
         return;
     }
+
+    // The app version whose bundled content this dir was last synced from.
+    // Written only after a successful seed, so a failed/partial seed retries.
+    let version = app.package_info().version.to_string();
+    let stamp = target.join(".seeded-version");
+
+    // Don't clobber a populated dir — a re-seed on a later launch must not wipe
+    // USB-delivered content or updated packs. But a binary update ships new sims
+    // and packs in its bundled resources, which this dir would otherwise shadow
+    // forever. So once per app version: refresh sims (binary-owned, never
+    // USB-delivered) and pull in only strictly-newer bundled packs through the
+    // same atomic, version-gated apply the USB channel uses.
+    if has_packs(&target) {
+        if fs::read_to_string(&stamp).is_ok_and(|v| v == version) {
+            return;
+        }
+        let sims = source.join("sims");
+        if sims.exists() {
+            if let Err(e) = copy_tree(&sims, &target.join("sims")) {
+                eprintln!("[seed] failed to refresh sims: {e}");
+                return;
+            }
+        }
+        if let Some(bundled) = updates::build_manifest_for_dir(&source) {
+            let r = updates::apply_manifest(&target, &source, &bundled, "seed");
+            if r.events.iter().any(|e| e.outcome == "fail") {
+                eprintln!("[seed] failed to apply bundled packs: {:?}", r.events);
+                return;
+            }
+        }
+        let _ = fs::write(&stamp, &version);
+        return;
+    }
+
     if let Err(e) = copy_tree(&source, &target) {
         eprintln!(
             "[seed] failed to seed content from {} to {}: {e}",
@@ -336,9 +366,11 @@ fn seed_content(app: &tauri::AppHandle) {
         if let Some(bundle) = updates::build_manifest_for_dir(&target) {
             if let Err(e) = updates::write_manifest(&target, &bundle) {
                 eprintln!("[seed] failed to write content manifest: {e}");
+                return;
             }
         }
     }
+    let _ = fs::write(&stamp, &version);
 }
 
 fn has_packs(dir: &Path) -> bool {

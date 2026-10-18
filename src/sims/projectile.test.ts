@@ -72,6 +72,12 @@ describe('projectile step', () => {
     expect(num(s2.t)).toBe(t0)
   })
 
+  it('a landed projectile reports zero speed in telemetry', () => {
+    const s = runToGround({ speed: 20, angle: 45, gravity: 9.81 })
+    const speed = projectile.telemetry!(s).find((t) => t.label === 'Speed')!
+    expect(speed.value).toBe(0)
+  })
+
   it('step is pure: it does not mutate the input state object', () => {
     const before = projectile.reset({ speed: 20, angle: 45, gravity: 9.81 })
     const snapshot = {
