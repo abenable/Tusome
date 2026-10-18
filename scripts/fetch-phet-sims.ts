@@ -22,10 +22,14 @@ import { fileURLToPath } from "node:url"
 type SimEntry = {
   id: string
   file: string
-  // Usually one hash. Some PhET "latest" URLs are served inconsistently
-  // across CDN edges/requests (observed for under-pressure) — an array
-  // pins every byte stream actually seen from real fetches, so the build
-  // doesn't flap between green and red depending on which edge answers.
+  // Exact PhET release, substituted into `source`. Pinned because PhET's
+  // `/latest/` URLs change whenever a sim is republished, which broke the
+  // pinned checksums and failed the 1.0.0, 1.0.1 and 1.1.0 release builds.
+  // A versioned URL serves the same bytes forever. To upgrade a sim, bump
+  // its version here and re-pin its sha256.
+  version: string
+  // Usually one hash. An array pins every byte stream actually seen, for a
+  // URL the CDN serves inconsistently, so the build doesn't flap.
   sha256: string | string[]
 }
 type Manifest = { source: string; sims: SimEntry[] }
@@ -52,7 +56,9 @@ let ok = 0
 let bad = 0
 
 for (const sim of manifest.sims) {
-  const url = manifest.source.replace(/\{id\}/g, sim.id)
+  const url = manifest.source
+    .replace(/\{id\}/g, sim.id)
+    .replace(/\{version\}/g, sim.version)
   const out = join(simsDir, sim.file)
   const expected = Array.isArray(sim.sha256) ? sim.sha256 : [sim.sha256]
 
