@@ -1,6 +1,6 @@
 {
   "packId": "bio.s3.coordination.nervous",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -166,7 +166,11 @@
           "kind": "remember",
           "text": "The nervous system is made of the brain, spinal cord and nerves. Sensory neurones carry impulses to the CNS, and motor neurones carry them to effectors. A reflex arc has five parts: receptor, sensory neurone, relay neurone, motor neurone and effector. Drug abuse disturbs nerve impulses, harms health and damages families and communities."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "neuron_en.html",
+        "caption": "Stimulate the neuron and watch the impulse travel along the axon. Slow it down to see sodium and potassium ions move."
+      }
     }
   ]
 }

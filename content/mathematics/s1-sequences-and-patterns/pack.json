@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.sequence-and-patterns",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -162,7 +162,11 @@
           "kind": "remember",
           "text": "A sequence follows a rule. A term-to-term rule gets the next term from the last one. For a linear sequence with a constant gap d, the nth term is dn + c, and you can use it to find any term or the position of a term."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "function-builder-basics_en.html",
+        "caption": "Send inputs through a function machine and work out what the machine does."
+      }
     }
   ]
 }

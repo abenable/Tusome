@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.linear-programming",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -143,7 +143,11 @@
           "kind": "remember",
           "text": "Define the variables, then write one inequality for each constraint. Draw each boundary line, shade out the unwanted side, and find the vertices of the feasible region. Work out the objective at each vertex: the largest gives the maximum and the smallest gives the minimum. State the answer in words."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "graphing-lines_en.html",
+        "caption": "Drag points on the grid and see how the equation of the line changes."
+      }
     }
   ]
 }

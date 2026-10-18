@@ -1,6 +1,6 @@
 {
   "packId": "bio.s1.cells.structure",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -145,7 +145,11 @@
           "kind": "remember",
           "text": "The cell is the basic unit of life. Plant and animal cells both have a cell membrane, cytoplasm and a nucleus; plant cells also have a cell wall, a large vacuole and, in green parts, chloroplasts. Specialised cells have structures that suit their jobs, and cells are organised into tissues, organs, organ systems and whole organisms."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "membrane-transport_en.html",
+        "caption": "Add particles on each side of the membrane, then add channels and pumps. Watch which particles cross and in which direction."
+      }
     }
   ]
 }

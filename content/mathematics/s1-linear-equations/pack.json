@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.linear-equations",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -162,7 +162,11 @@
           "kind": "remember",
           "text": "A letter can stand for an unknown number. Simplify by collecting like terms and multiplying out brackets. Substitute values carefully, using brackets for negative numbers. Solve an equation by doing the same operation to both sides until the letter is alone, then check the solution in the original equation."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "equality-explorer_en.html",
+        "caption": "Keep the scale balanced while you add, remove and change items on each side, then solve the equation."
+      }
     }
   ]
 }

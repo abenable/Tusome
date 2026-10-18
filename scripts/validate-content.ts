@@ -11,7 +11,7 @@
 import { readFile } from "node:fs/promises"
 import { fileURLToPath } from "node:url"
 import { Glob } from "bun"
-import { BLOCK_TYPES, Pack } from "../src/content/schema"
+import { BLOCK_TYPES, Pack, topicSims } from "../src/content/schema"
 import { getSim } from "../src/sims"
 
 // fileURLToPath, not URL.pathname: on Windows the latter is "/D:/...".
@@ -40,12 +40,17 @@ for await (const rel of new Glob("**/pack.json").scan(root)) {
     if (seen.has(t.id)) errors.push(`${rel}: duplicate topic id ${t.id} (also in ${seen.get(t.id)})`)
     seen.set(t.id, rel)
     if (t.term === undefined) errors.push(`${rel}: ${t.id}: no term`)
-    if (t.sim && "phet" in t.sim && !phetFiles.has(t.sim.phet)) {
-      errors.push(`${rel}: ${t.id}: PhET sim ${t.sim.phet} isn't in phet-manifest.json`)
+    const sims = topicSims(t)
+    for (const sim of sims) {
+      if ("phet" in sim && !phetFiles.has(sim.phet)) {
+        errors.push(`${rel}: ${t.id}: PhET sim ${sim.phet} isn't in phet-manifest.json`)
+      }
+      if ("simId" in sim && !getSim(sim.simId)) {
+        errors.push(`${rel}: ${t.id}: no custom sim "${sim.simId}" in src/sims`)
+      }
     }
-    if (t.sim && "simId" in t.sim && !getSim(t.sim.simId)) {
-      errors.push(`${rel}: ${t.id}: no custom sim "${t.sim.simId}" in src/sims`)
-    }
+    const files = sims.map((s) => ("phet" in s ? s.phet : s.simId))
+    if (new Set(files).size !== files.length) errors.push(`${rel}: ${t.id}: the same sim is listed twice`)
   }
 }
 

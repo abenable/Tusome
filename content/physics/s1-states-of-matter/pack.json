@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.states-of-matter",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -161,7 +161,17 @@
       "sim": {
         "phet": "states-of-matter-basics_en.html",
         "caption": "PhET States of Matter: Basics. On the States screen, choose water and switch between solid, liquid and gas to compare how the molecules are arranged and how they move. Then add heat and watch the state change. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "gases-intro_en.html",
+          "caption": "Pump gas particles into the box. Heat it, cool it and change its size, and watch the pressure and temperature."
+        },
+        {
+          "phet": "atomic-interactions_en.html",
+          "caption": "Pull two atoms apart and push them together. Feel where the attraction is strongest and where the atoms repel."
+        }
+      ]
     }
   ]
 }

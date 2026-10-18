@@ -1,6 +1,6 @@
 {
   "packId": "che.s4.redox.oxidation-reduction",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -170,7 +170,11 @@
           "kind": "remember",
           "text": "Oxidation is gain of oxygen, loss of hydrogen or loss of electrons. Reduction is the opposite, and the two always happen together. In electrolysis, cations are reduced at the cathode and anions are oxidised at the anode. Redox reactions are used to extract metals, make chemicals and release energy from fuels."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "balancing-chemical-equations_en.html",
+        "caption": "Change the numbers in front of each formula until the atoms on both sides balance. Then try the game."
+      }
     }
   ]
 }

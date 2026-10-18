@@ -1,6 +1,6 @@
 {
   "packId": "bio.s4.interrelationships.humans-environment",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -175,7 +175,11 @@
           "kind": "remember",
           "text": "Sustainability means using resources so that future generations can meet their needs too. Uganda has renewable resources such as forests, fish and water, and non-renewable ones such as oil and minerals. Human activities can harm or protect ecosystems. Air, land and water pollution can be reduced by cleaner fuels, proper waste disposal, recycling and protecting wetlands."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "greenhouse-effect_en.html",
+        "caption": "Add greenhouse gases to the atmosphere and watch how the temperature changes. Compare an ice age, today and the future."
+      }
     }
   ]
 }

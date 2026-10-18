@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.space.solar-system",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -193,7 +193,13 @@
       "sim": {
         "phet": "my-solar-system_en.html",
         "caption": "PhET My Solar System. Start with a sun and one planet, press play and watch the orbit. Then make the planet start faster or slower and see how its path changes. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "gravity-and-orbits_en.html",
+          "caption": "Turn gravity off and on and watch what happens to the Moon and the Earth's paths."
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.matter.motion",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -208,7 +208,13 @@
       "sim": {
         "phet": "forces-and-motion-basics_en.html",
         "caption": "PhET Forces and Motion: Basics (Motion screen). Apply a force and watch position, velocity, and acceleration change over time. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "projectile-motion_en.html",
+          "caption": "Fire objects at different angles and speeds. Find the angle that sends a projectile furthest."
+        }
+      ]
     }
   ]
 }

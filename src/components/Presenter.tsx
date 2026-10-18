@@ -6,16 +6,15 @@
 // between slides; Esc leaves. Read-aloud reads the current slide.
 //
 // Slides: the title and outcomes, then a slide per heading-led section of the
-// lesson (long sections split so text stays large), then the simulation.
+// lesson (long sections split so text stays large), then one per simulation.
 
 import { useEffect, useMemo, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight, Target, X } from "lucide-react"
 
-import type { BlockT, TopicT } from "@/content/schema"
+import { topicSims, type BlockT, type SimRefT, type TopicT } from "@/content/schema"
 import { LessonBlock } from "@/components/LessonBlock"
 import { ListenBar } from "@/components/ListenBar"
-import { PhETSim } from "@/components/PhETSim"
-import { SimCanvas } from "@/components/SimCanvas"
+import { SimView, simName } from "@/components/SimHost"
 import { useReadAloud } from "@/lib/read-aloud"
 import { blockChunks, speakable, type Chunk } from "@/lib/speech"
 import type { SubjectAccent } from "@/lib/subjects"
@@ -23,7 +22,7 @@ import type { SubjectAccent } from "@/lib/subjects"
 type Slide =
   | { kind: "title" }
   | { kind: "blocks"; blocks: Array<{ block: BlockT; i: number }> }
-  | { kind: "sim" }
+  | { kind: "sim"; sim: SimRefT }
 
 // Most blocks a slide holds before it splits, so type can stay large.
 const MAX_BLOCKS = 3
@@ -40,7 +39,7 @@ export function slidesFor(topic: TopicT): Slide[] {
     current.push({ block, i })
   })
   flush()
-  if (topic.sim) slides.push({ kind: "sim" })
+  for (const sim of topicSims(topic)) slides.push({ kind: "sim", sim })
   return slides
 }
 
@@ -127,13 +126,10 @@ export function Presenter({
       </header>
 
       <main className="flex min-h-0 flex-1 items-center justify-center overflow-y-auto px-10 py-8">
-        {slide.kind === "sim" && topic.sim ? (
-          <div className="w-full max-w-[1400px]">
-            {"simId" in topic.sim ? (
-              <SimCanvas simId={topic.sim.simId} params={(topic.sim.params as Record<string, number>) ?? {}} />
-            ) : (
-              <PhETSim file={topic.sim.phet} />
-            )}
+        {slide.kind === "sim" ? (
+          <div className="flex w-full max-w-[1400px] flex-col gap-3">
+            <h2 className="font-heading text-[26px] font-extrabold text-ink">{simName(slide.sim)}</h2>
+            <SimView key={n} sim={slide.sim} />
           </div>
         ) : (
           // `zoom` scales the whole lesson layout up for the back of the room.

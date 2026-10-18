@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.trigonometry-1",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -147,7 +147,11 @@
           "kind": "remember",
           "text": "On the unit circle, cos θ is the x-coordinate and sin θ is the y-coordinate of the point at angle θ, and tan θ = sin θ ÷ cos θ. In a right-angled triangle use SOH CAH TOA, and sin⁻¹, cos⁻¹ or tan⁻¹ to find an angle. Angles of elevation and depression are always measured from the horizontal."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "trig-tour_en.html",
+        "caption": "Move the point around the unit circle and watch sine, cosine and tangent change."
+      }
     }
   ]
 }

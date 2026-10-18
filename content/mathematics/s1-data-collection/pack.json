@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.data.data-collection-and-presentation",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -147,6 +147,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Qualitative data are words or categories; quantitative data are numbers, either counted (discrete) or measured (continuous). A tally chart records data as you collect it. Bar charts compare frequencies with separate bars, pie charts share 360° in proportion to frequency, and line graphs show change over time."
+        }
+      ],
+      "sim": {
+        "phet": "mean-share-and-balance_en.html",
+        "caption": "Share items out evenly to find the mean, then balance a set of data around its mean."
+      },
+      "sims": [
+        {
+          "phet": "center-and-variability_en.html",
+          "caption": "Kick balls and record where they land. Find the median, mean and range of the data."
         }
       ]
     }

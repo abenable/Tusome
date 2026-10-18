@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.gravity-and-weight",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -152,7 +152,13 @@
       "sim": {
         "phet": "gravity-force-lab-basics_en.html",
         "caption": "PhET Gravity Force Lab: Basics. Change the masses of the two spheres and the distance between them, and watch the force of gravity change. Notice that the pulls on the two spheres are always equal in size. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "gravity-force-lab_en.html",
+          "caption": "Change the masses of the two objects and the distance between them, and watch the gravitational force change."
+        }
+      ]
     }
   ]
 }

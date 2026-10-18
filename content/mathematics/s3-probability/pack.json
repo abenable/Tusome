@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.data.probability",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -172,7 +172,11 @@
           "kind": "remember",
           "text": "Probability is a number from 0 (impossible) to 1 (certain). For equally likely outcomes, P(event) = favourable outcomes ÷ total outcomes. Add probabilities for mutually exclusive events and multiply them for independent events. Possibility spaces, tree diagrams and Venn diagrams help you organise outcomes."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "plinko-probability_en.html",
+        "caption": "Drop balls through the pegs and see the pattern they make. Compare the results with what probability predicts."
+      }
     }
   ]
 }

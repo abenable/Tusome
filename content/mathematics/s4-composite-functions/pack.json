@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.composite-functions",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -153,7 +153,11 @@
           "kind": "remember",
           "text": "f(x) is the output of f when the input is x. gf(x) means apply f first, then g, and usually fg(x) is not the same as gf(x). To find f⁻¹, swap x and y and make y the subject. The graph of f⁻¹ is the reflection of the graph of f in the line y = x."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "function-builder_en.html",
+        "caption": "Chain function machines together and find the rule from the inputs and outputs."
+      }
     }
   ]
 }

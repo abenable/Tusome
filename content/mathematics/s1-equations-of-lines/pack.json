@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.algebra.equations-of-lines",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -153,7 +153,13 @@
       "sim": {
         "phet": "graphing-lines_en.html",
         "caption": "PhET Graphing Lines. Build a line from two points, a point and a slope, or y = mx + c, and see it drawn instantly. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "graphing-slope-intercept_en.html",
+          "caption": "Change the gradient and the y-intercept and watch the straight line move."
+        }
+      ]
     }
   ]
 }

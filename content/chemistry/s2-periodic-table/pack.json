@@ -1,6 +1,6 @@
 {
   "packId": "che.s2.periodic.periodic-table",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -198,7 +198,13 @@
       "sim": {
         "phet": "build-an-atom_en.html",
         "caption": "Add protons, neutrons and electrons to build an atom. Watch how the element changes on the Periodic Table each time you add a proton, and see what happens to the charge when electrons and protons do not balance."
-      }
+      },
+      "sims": [
+        {
+          "phet": "isotopes-and-atomic-mass_en.html",
+          "caption": "Add neutrons to an atom to make different isotopes, then mix isotopes and see how the average atomic mass changes."
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.working-with-integers",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -227,6 +227,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Integers are the whole numbers and their negatives. Same signs give a positive product or quotient; different signs give a negative one. Use BODMAS for the order of operations, and use prime factors to find the HCF and LCM."
+        }
+      ],
+      "sim": {
+        "phet": "number-line-integers_en.html",
+        "caption": "Place integers on the number line and compare them. See where negative numbers go."
+      },
+      "sims": [
+        {
+          "phet": "number-line-operations_en.html",
+          "caption": "Add and subtract integers by moving along the number line."
         }
       ]
     }

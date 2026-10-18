@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.vectors",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -178,6 +178,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "A position vector goes from the origin to a point. The vector from A to B is b − a, and the midpoint has position vector ½(a + b). Vectors are parallel when one is a multiple of the other. Points are collinear when the vectors joining them are parallel and share a point."
+        }
+      ],
+      "sim": {
+        "phet": "vector-addition_en.html",
+        "caption": "Drag vectors onto the grid and see their sum."
+      },
+      "sims": [
+        {
+          "phet": "vector-addition-equations_en.html",
+          "caption": "Change two vectors and see how they combine into the resultant, written as an equation."
         }
       ]
     }

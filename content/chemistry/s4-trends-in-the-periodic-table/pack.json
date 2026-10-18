@@ -1,6 +1,6 @@
 {
   "packId": "che.s4.periodicity.trends",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -138,7 +138,13 @@
       "sim": {
         "phet": "build-an-atom_en.html",
         "caption": "Build lithium with 3 protons and 3 electrons, then add one proton and one electron at a time up to neon. Watch the outer shell fill across Period 2, the same pattern seen across Period 3."
-      }
+      },
+      "sims": [
+        {
+          "phet": "isotopes-and-atomic-mass_en.html",
+          "caption": "Add neutrons to an atom to make different isotopes, then mix isotopes and see how the average atomic mass changes."
+        }
+      ]
     }
   ]
 }

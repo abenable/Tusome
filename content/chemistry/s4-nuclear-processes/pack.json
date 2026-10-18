@@ -1,6 +1,6 @@
 {
   "packId": "che.s4.consumables.nuclear-processes",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -174,7 +174,25 @@
       "sim": {
         "phet": "build-an-atom_en.html",
         "caption": "Build carbon-12 with 6 protons and 6 neutrons. Then add or remove neutrons and watch when the nucleus becomes unstable. Unstable nuclei are the radioactive ones."
-      }
+      },
+      "sims": [
+        {
+          "phet": "build-a-nucleus_en.html",
+          "caption": "Add protons and neutrons to build a nucleus. See which nuclei are stable and how unstable ones decay."
+        },
+        {
+          "phet": "alpha-decay_en.html",
+          "caption": "Watch an unstable nucleus give out an alpha particle, and see how its mass number and atomic number change."
+        },
+        {
+          "phet": "beta-decay_en.html",
+          "caption": "Watch a neutron in the nucleus change into a proton and give out a beta particle."
+        },
+        {
+          "phet": "isotopes-and-atomic-mass_en.html",
+          "caption": "Add neutrons to an atom to make different isotopes, then mix isotopes and see how the average atomic mass changes."
+        }
+      ]
     }
   ]
 }

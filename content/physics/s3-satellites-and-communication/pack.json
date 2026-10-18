@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.space.satellites",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -164,7 +164,13 @@
       "sim": {
         "phet": "gravity-and-orbits_en.html",
         "caption": "PhET Gravity and Orbits (Model screen). Choose the Earth and space station system and watch the orbit. Then switch gravity off and see the station fly off in a straight line. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "gravity-force-lab_en.html",
+          "caption": "Change the masses of the two objects and the distance between them, and watch the gravitational force change."
+        }
+      ]
     }
   ]
 }

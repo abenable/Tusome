@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.magnetism.electromagnetic-effects",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -159,7 +159,17 @@
       "sim": {
         "phet": "magnets-and-electromagnets_en.html",
         "caption": "PhET Magnets and Electromagnets. Build an electromagnet and see how coil turns and current affect its strength. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "faradays-law_en.html",
+          "caption": "Move the magnet in and out of the coil and watch the bulb light. Try moving it faster."
+        },
+        {
+          "phet": "faradays-electromagnetic-lab_en.html",
+          "caption": "Explore magnets, coils, electromagnets, a transformer and a generator, and see when a current is induced."
+        }
+      ]
     }
   ]
 }

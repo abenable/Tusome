@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.waves.sound",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -150,7 +150,13 @@
       "sim": {
         "phet": "waves-intro_en.html",
         "caption": "PhET Waves Intro (Sound screen). Watch how a vibrating source produces a sound wave that travels through the air. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "wave-interference_en.html",
+          "caption": "Turn on two sources and watch the waves overlap, reinforcing in some places and cancelling in others."
+        }
+      ]
     }
   ]
 }

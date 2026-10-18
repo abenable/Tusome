@@ -167,7 +167,15 @@ export const Topic = z.object({
   outcomes: z.array(z.string()).min(1),
   body: Body,
   sim: SimRef.optional(),
+  // More simulations after `sim`. A separate field (not `sim` as an array)
+  // so an older app, which drops keys it doesn't know, still shows `sim`.
+  sims: z.array(SimRef).optional(),
 });
+
+/** Every simulation a topic offers, in order. */
+export function topicSims(topic: { sim?: SimRefT; sims?: SimRefT[] }): SimRefT[] {
+  return [...(topic.sim ? [topic.sim] : []), ...(topic.sims ?? [])];
+}
 
 // ---------------------------------------------------------------------------
 // Pack

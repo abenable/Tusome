@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.nets-areas-and-volumes-of-solids",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -181,7 +181,11 @@
           "kind": "remember",
           "text": "Solids have faces, edges and vertices, and a net is the flat shape that folds into a solid. Surface area is the total area of the faces, in square units. The volume of a cuboid is l × w × h and of a cube is s³, in cubic units. Remember 1 m² = 10,000 cm², 1 m³ = 1,000,000 cm³ and 1,000 cm³ = 1 litre."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "area-builder_en.html",
+        "caption": "Build shapes on the grid and compare their areas and perimeters."
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.equations.mole-concept",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -235,6 +235,24 @@
           "type": "callout",
           "kind": "remember",
           "text": "One mole contains 6.02 × 10²³ particles and has a mass equal to the Ar or Mr in grams. One mole of any gas fills 22.4 dm³ at STP or about 24 dm³ at room conditions. Convert to moles first, then use the balanced equation to link reactants and products."
+        }
+      ],
+      "sim": {
+        "phet": "balancing-chemical-equations_en.html",
+        "caption": "Change the numbers in front of each formula until the atoms on both sides balance. Then try the game."
+      },
+      "sims": [
+        {
+          "phet": "reactants-products-and-leftovers_en.html",
+          "caption": "Choose how much of each reactant to start with and predict the products and what is left over."
+        },
+        {
+          "phet": "molarity_en.html",
+          "caption": "Change the amount of solute and the volume of the solution, and watch how the concentration in moles per litre changes."
+        },
+        {
+          "phet": "concentration_en.html",
+          "caption": "Add a solute to water, then add or evaporate water. Watch how the concentration changes, and when the solution becomes saturated."
         }
       ]
     }

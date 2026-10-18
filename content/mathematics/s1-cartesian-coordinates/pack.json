@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.cartesian-coordinates",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -144,6 +144,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "The x-axis is horizontal and the y-axis is vertical. They meet at the origin (0, 0). A point is written (x, y): across first, then up or down. Choose a scale that is easy to read and fills the page."
+        }
+      ],
+      "sim": {
+        "phet": "number-line-distance_en.html",
+        "caption": "Find the distance between two points on a number line and on a grid."
+      },
+      "sims": [
+        {
+          "phet": "graphing-lines_en.html",
+          "caption": "Drag points on the grid and see how the equation of the line changes."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.algebra.ratio-and-proportion",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -155,6 +155,20 @@
           "type": "callout",
           "kind": "remember",
           "text": "Equivalent ratios come from multiplying or dividing every part by the same number. In direct proportion the ratio stays the same; in inverse proportion the product stays the same. A scale is the ratio of map length to real length. A line of best fit shows the trend on a scatter graph."
+        }
+      ],
+      "sim": {
+        "phet": "ratio-and-proportion_en.html",
+        "caption": "Move the two hands to keep the ratio the same and find equal ratios."
+      },
+      "sims": [
+        {
+          "phet": "proportion-playground_en.html",
+          "caption": "Make necklaces, paint and billiards that keep the same ratio, and compare different ratios."
+        },
+        {
+          "phet": "unit-rates_en.html",
+          "caption": "Shop for items at different prices and work out the cost of one item."
         }
       ]
     }

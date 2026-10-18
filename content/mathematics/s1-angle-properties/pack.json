@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.angle-properties-of-geometric-figures",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -180,7 +180,11 @@
           "kind": "remember",
           "text": "Angles on a straight line add up to 180° and angles at a point add up to 360°. With parallel lines, corresponding and alternate angles are equal, and co-interior angles add up to 180°. A triangle's angles add up to 180°, a polygon's interior angles add up to (n − 2) × 180°, and its exterior angles add up to 360°."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "quadrilateral_en.html",
+        "caption": "Drag the corners of a quadrilateral and watch its angles and sides. Can you make a rectangle, a rhombus or a kite?"
+      }
     }
   ]
 }

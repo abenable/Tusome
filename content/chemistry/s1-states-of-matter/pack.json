@@ -1,6 +1,6 @@
 {
   "packId": "che.s1.matter.states-of-matter",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -174,7 +174,13 @@
       "sim": {
         "phet": "states-of-matter-basics_en.html",
         "caption": "Choose water on the States screen and switch between solid, liquid and gas. Then use the heater on the Phase Changes screen and watch how the particles move faster as the temperature rises."
-      }
+      },
+      "sims": [
+        {
+          "phet": "gases-intro_en.html",
+          "caption": "Pump gas particles into the box. Heat it, cool it and change its size, and watch the pressure and temperature."
+        }
+      ]
     }
   ]
 }

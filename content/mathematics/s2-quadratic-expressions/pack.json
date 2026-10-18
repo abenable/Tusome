@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.quadratic-expressions",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -164,7 +164,17 @@
       "sim": {
         "phet": "graphing-quadratics_en.html",
         "caption": "PhET Graphing Quadratics. Set a = 1, b = −10 and c = 21 to draw y = x² − 10x + 21, then see where the curve crosses the x-axis and compare those points with the solutions you found by factorising. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "area-model-algebra_en.html",
+          "caption": "Use rectangles to multiply algebraic expressions and see each term of the product."
+        },
+        {
+          "phet": "expression-exchange_en.html",
+          "caption": "Collect like terms and simplify algebraic expressions."
+        }
+      ]
     }
   ]
 }

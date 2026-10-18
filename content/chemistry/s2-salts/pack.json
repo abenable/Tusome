@@ -1,6 +1,6 @@
 {
   "packId": "che.s2.acids.salts",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -191,7 +191,11 @@
           "kind": "remember",
           "text": "A salt forms when an acid is neutralised by an alkali, a metal oxide or a carbonate. Its name comes from the metal and the acid. Soluble salts are made with an excess of base, then filtering and crystallising. Salts are used in food, farming, building, medicine and industry."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "ph-scale_en.html",
+        "caption": "Measure the pH of household liquids, then dilute them and watch the hydrogen and hydroxide ions."
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.light.lenses",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -177,7 +177,13 @@
       "sim": {
         "phet": "geometric-optics-basics_en.html",
         "caption": "PhET Geometric Optics: Basics (Lens screen). Move an object in front of a lens and watch how the image forms. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "geometric-optics_en.html",
+          "caption": "Move the object towards and away from the lens and watch where the image forms and how big it is."
+        }
+      ]
     }
   ]
 }

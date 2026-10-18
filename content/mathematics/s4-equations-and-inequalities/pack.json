@@ -1,6 +1,6 @@
 {
   "packId": "mat.s4.algebra.equations-and-inequalities",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -150,7 +150,11 @@
           "kind": "remember",
           "text": "Build a formula by choosing letters and writing each sentence in symbols. Change the subject by undoing operations in reverse order. Solve inequalities like equations, but reverse the sign when multiplying or dividing by a negative number. For a quadratic inequality, find the critical values first, then test each part of the number line."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "equality-explorer_en.html",
+        "caption": "Keep the scale balanced while you add, remove and change items on each side, then solve the equation."
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.matter.friction",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -152,7 +152,13 @@
       "sim": {
         "phet": "friction_en.html",
         "caption": "PhET Friction. Drag the top book across the bottom one and zoom in on the surfaces. Rub faster and watch the particles vibrate more and the temperature rise as friction turns movement into heat. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "atomic-interactions_en.html",
+          "caption": "Pull two atoms apart and push them together. Feel where the attraction is strongest and where the atoms repel."
+        }
+      ]
     }
   ]
 }

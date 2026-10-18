@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.business-mathematics",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -186,7 +186,11 @@
           "kind": "remember",
           "text": "A multiplier makes a percentage change in one step. Compound interest and depreciation apply it once for each year. Hire purchase and mortgages cost more than cash because you pay for borrowing. Income tax is worked out band by band."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "unit-rates_en.html",
+        "caption": "Shop for items at different prices and work out the cost of one item."
+      }
     }
   ]
 }

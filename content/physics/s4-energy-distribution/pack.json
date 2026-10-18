@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.electricity.energy-distribution",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -199,7 +199,17 @@
       "sim": {
         "phet": "generator_en.html",
         "caption": "PhET Generator. Spin a magnet near a coil and watch it generate an electric current — the basic principle behind every power station. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "circuit-construction-kit-ac_en.html",
+          "caption": "Build a circuit with an AC source and watch the current change direction back and forth."
+        },
+        {
+          "phet": "faradays-electromagnetic-lab_en.html",
+          "caption": "Explore magnets, coils, electromagnets, a transformer and a generator, and see when a current is induced."
+        }
+      ]
     }
   ]
 }

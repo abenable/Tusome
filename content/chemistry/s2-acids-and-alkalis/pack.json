@@ -1,6 +1,6 @@
 {
   "packId": "che.s2.acids.acids-alkalis",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -207,7 +207,13 @@
       "sim": {
         "phet": "acid-base-solutions_en.html",
         "caption": "Test the solutions with the pH meter, the pH paper and the light bulb tester. Compare a strong acid with a weak acid, then a strong base with a weak base, and see how the pH changes."
-      }
+      },
+      "sims": [
+        {
+          "phet": "ph-scale-basics_en.html",
+          "caption": "Test everyday liquids such as milk, soap and coffee. Add water and see how the pH moves towards 7."
+        }
+      ]
     }
   ]
 }

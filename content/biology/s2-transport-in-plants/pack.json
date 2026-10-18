@@ -1,6 +1,6 @@
 {
   "packId": "bio.s2.transport.plants",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -184,7 +184,13 @@
       "sim": {
         "phet": "diffusion_en.html",
         "caption": "Add particles to one side of the box, remove the divider and watch them spread until they are evenly mixed. Then raise the temperature and compare how fast they spread."
-      }
+      },
+      "sims": [
+        {
+          "phet": "membrane-transport_en.html",
+          "caption": "Add particles on each side of the membrane, then add channels and pumps. Watch which particles cross and in which direction."
+        }
+      ]
     }
   ]
 }

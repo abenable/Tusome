@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.fuels.fossil-fuels",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -135,6 +135,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Coal, crude oil and natural gas formed from the remains of ancient plants and animals under heat and pressure over millions of years. They contain carbon because living things are built from carbon compounds. They release energy when burned and are raw materials for many products, but they are non-renewable and their use harms the environment."
+        }
+      ],
+      "sim": {
+        "phet": "greenhouse-effect_en.html",
+        "caption": "Add greenhouse gases to the atmosphere and watch how the temperature changes. Compare an ice age, today and the future."
+      },
+      "sims": [
+        {
+          "phet": "molecules-and-light_en.html",
+          "caption": "Shine infrared, visible and ultraviolet light on gases such as carbon dioxide and methane, and see which ones absorb it."
         }
       ]
     }

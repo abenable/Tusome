@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.light.plane-mirrors",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -229,7 +229,13 @@
       "sim": {
         "phet": "geometric-optics-basics_en.html",
         "caption": "PhET Geometric Optics: Basics. On the Mirror screen, choose the flat mirror and move the object closer and further away. See that the image stays the same size and is always as far behind the mirror as the object is in front. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "bending-light_en.html",
+          "caption": "Shine the laser at a mirror-like surface and compare the angle of incidence with the angle of reflection."
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.geometry.length-and-area-properties",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -160,7 +160,11 @@
           "kind": "remember",
           "text": "Perimeter is the total length around a shape. Area is the surface it covers, in square units: a rectangle is l × w and a triangle is ½ × base × perpendicular height. In a right-angled triangle, a² + b² = c², where c is the hypotenuse, the side opposite the right angle."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "area-builder_en.html",
+        "caption": "Build shapes on the grid and compare their areas and perimeters."
+      }
     }
   ]
 }

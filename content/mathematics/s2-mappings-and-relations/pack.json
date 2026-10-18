@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.mappings-and-relations",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -163,6 +163,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "A relation links members of one set to members of another, and an arrow diagram shows it. The domain is the set of inputs, and the range is the set of images actually reached. A mapping is a function only when every member of the domain has exactly one image, so one-to-one and many-to-one mappings are functions."
+        }
+      ],
+      "sim": {
+        "phet": "function-builder-basics_en.html",
+        "caption": "Send inputs through a function machine and work out what the machine does."
+      },
+      "sims": [
+        {
+          "phet": "function-builder_en.html",
+          "caption": "Chain function machines together and find the rule from the inputs and outputs."
         }
       ]
     }

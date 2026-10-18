@@ -1,6 +1,6 @@
 {
   "packId": "che.s1.air.air",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -200,6 +200,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Air is a mixture of about 78% nitrogen, 21% oxygen and small amounts of other gases. It can be separated by fractional distillation of liquid air. Oxygen is the active part: burning and rusting use it to form oxides. Smoke, carbon monoxide and acidic gases pollute the air."
+        }
+      ],
+      "sim": {
+        "phet": "gases-intro_en.html",
+        "caption": "Pump gas particles into the box. Heat it, cool it and change its size, and watch the pressure and temperature."
+      },
+      "sims": [
+        {
+          "phet": "greenhouse-effect_en.html",
+          "caption": "Add greenhouse gases to the atmosphere and watch how the temperature changes. Compare an ice age, today and the future."
         }
       ]
     }

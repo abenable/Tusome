@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.space.stars-galaxies",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -151,7 +151,11 @@
           "kind": "remember",
           "text": "Stars shine because of nuclear fusion in their cores, which turns hydrogen into helium. A star's colour shows its temperature, and its brightness depends on its size, temperature and distance. Small and medium stars end as white dwarfs; very massive stars explode as supernovae and leave neutron stars or black holes."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "blackbody-spectrum_en.html",
+        "caption": "Change the temperature of a star and watch its colour and the peak of its spectrum change."
+      }
     }
   ]
 }

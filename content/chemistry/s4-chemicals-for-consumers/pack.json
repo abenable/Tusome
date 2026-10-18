@@ -1,6 +1,6 @@
 {
   "packId": "che.s4.consumables.consumer-chemicals",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -142,7 +142,11 @@
           "kind": "remember",
           "text": "Soap and soapless detergents clean by emulsifying grease. Soapless detergents work better in hard water, but some harm the environment. Food additives preserve food and improve its taste and look, but must be kept within safe limits. Medicines save lives when used correctly, and the chemical industry contributes greatly to our health and wealth."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "ph-scale_en.html",
+        "caption": "Measure the pH of household liquids, then dilute them and watch the hydrogen and hydroxide ions."
+      }
     }
   ]
 }

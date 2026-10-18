@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.substances.properties-structures",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -142,7 +142,17 @@
       "sim": {
         "phet": "states-of-matter_en.html",
         "caption": "Choose neon, argon, oxygen and water, and heat each solid until it melts. Water needs the highest temperature, because the forces between its molecules are the strongest."
-      }
+      },
+      "sims": [
+        {
+          "phet": "molecule-shapes_en.html",
+          "caption": "Build molecules with single, double and triple bonds and lone pairs, and compare their shapes and bond angles."
+        },
+        {
+          "phet": "atomic-interactions_en.html",
+          "caption": "Pull two atoms apart and push them together. Feel where the attraction is strongest and where the atoms repel."
+        }
+      ]
     }
   ]
 }

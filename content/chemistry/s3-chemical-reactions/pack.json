@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.reactions.rates-reversible",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -150,7 +150,17 @@
       "sim": {
         "phet": "gas-properties_en.html",
         "caption": "Pump gas particles into the box, then use the heater. Watch the particles move faster and collide more often, which is why heating speeds up reactions."
-      }
+      },
+      "sims": [
+        {
+          "phet": "reactants-products-and-leftovers_en.html",
+          "caption": "Choose how much of each reactant to start with and predict the products and what is left over."
+        },
+        {
+          "phet": "balancing-chemical-equations_en.html",
+          "caption": "Change the numbers in front of each formula until the atoms on both sides balance. Then try the game."
+        }
+      ]
     }
   ]
 }

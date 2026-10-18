@@ -1,6 +1,6 @@
 {
   "packId": "bio.s3.respiration.gaseous-exchange",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -154,7 +154,11 @@
           "kind": "remember",
           "text": "Large organisms need a gas exchange surface with a large area, thin walls, moisture and a good blood supply. In humans this is the alveoli. We breathe in when the ribs rise and the diaphragm flattens, making the chest bigger. Smoking and polluted air damage the lungs and cause diseases such as bronchitis, emphysema and lung cancer."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "diffusion_en.html",
+        "caption": "Fill one side with particles, remove the divider and watch them spread out until they are even."
+      }
     }
   ]
 }

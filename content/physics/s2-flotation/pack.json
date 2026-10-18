@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.flotation",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -154,7 +154,13 @@
       "sim": {
         "phet": "buoyancy-basics_en.html",
         "caption": "PhET Buoyancy: Basics. Drop blocks of different materials into the pool and compare the weight and buoyant force arrows on each. Change the fluid and see a block that sinks in one liquid float in another. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "buoyancy_en.html",
+          "caption": "Put blocks of different materials and sizes in the water. Compare the upthrust with the weight of water displaced."
+        }
+      ]
     }
   ]
 }

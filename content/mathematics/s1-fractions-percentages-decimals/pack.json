@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.numbers.fractions-percentages-decimals",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -223,6 +223,20 @@
           "type": "callout",
           "kind": "remember",
           "text": "Fractions, decimals and percentages are three ways of writing the same amount. To find a percentage of a quantity, divide by 100 and multiply by the percentage. A recurring decimal can always be written as a fraction."
+        }
+      ],
+      "sim": {
+        "phet": "fractions-equality_en.html",
+        "caption": "Build fractions that are equal to each other in different ways."
+      },
+      "sims": [
+        {
+          "phet": "fraction-matcher_en.html",
+          "caption": "Match fractions, pictures and numbers that have the same value."
+        },
+        {
+          "phet": "area-model-decimals_en.html",
+          "caption": "Use the area model to multiply decimals, then check the answer."
         }
       ]
     }

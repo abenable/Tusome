@@ -1,6 +1,6 @@
 {
   "packId": "mat.s1.geometry.business-arithmetic",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -150,7 +150,11 @@
           "kind": "remember",
           "text": "Profit is selling price minus cost price, and the cost price includes all expenses. Percentage profit or loss is always worked out on the cost price. Discount is taken off the marked price, commission is a percentage of sales, and an insurance premium is a percentage of the value insured. Simple interest is I = PRT ÷ 100."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "unit-rates_en.html",
+        "caption": "Shop for items at different prices and work out the cost of one item."
+      }
     }
   ]
 }

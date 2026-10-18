@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.heat.quantities",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -173,7 +173,13 @@
       "sim": {
         "phet": "states-of-matter_en.html",
         "caption": "PhET States of Matter (Phase Changes screen). Heat or cool a substance and watch its temperature and state change together. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "energy-forms-and-changes_en.html",
+          "caption": "Heat and cool blocks of different materials and watch the energy move between them."
+        }
+      ]
     }
   ]
 }

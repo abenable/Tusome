@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.work-energy-power",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -251,7 +251,17 @@
       "sim": {
         "phet": "pendulum-lab_en.html",
         "caption": "PhET Pendulum Lab. On the Energy screen, pull the bob to one side and let it go, then watch the bar graph as potential energy changes into kinetic energy and back. Add some friction and see the total energy slowly turn into heat. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "energy-skate-park-basics_en.html",
+          "caption": "Let the skater roll on the track and watch kinetic and potential energy change while the total stays the same."
+        },
+        {
+          "phet": "energy-skate-park_en.html",
+          "caption": "Add friction to the track and watch some of the energy become thermal energy. Try changing the skater's mass."
+        }
+      ]
     }
   ]
 }

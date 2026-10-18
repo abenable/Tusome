@@ -1,6 +1,6 @@
 {
   "packId": "phy.s1.heat.expansion",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -149,7 +149,13 @@
       "sim": {
         "phet": "gas-properties_en.html",
         "caption": "PhET Gas Properties. On the Ideal screen, pump some gas into the box, set Hold Constant to Pressure ↕V, then heat the gas. Watch the box grow wider as the gas expands. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "gases-intro_en.html",
+          "caption": "Pump gas particles into the box. Heat it, cool it and change its size, and watch the pressure and temperature."
+        }
+      ]
     }
   ]
 }

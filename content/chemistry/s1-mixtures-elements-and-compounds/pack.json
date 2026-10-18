@@ -1,6 +1,6 @@
 {
   "packId": "che.s1.changes.mixtures-elements-compounds",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -216,7 +216,13 @@
       "sim": {
         "phet": "build-a-molecule_en.html",
         "caption": "Build molecules of oxygen, water and carbon dioxide from the atoms in the kit. Notice which molecules have only one kind of atom (elements) and which have two or more kinds joined together (compounds)."
-      }
+      },
+      "sims": [
+        {
+          "phet": "concentration_en.html",
+          "caption": "Add a solute to water, then add or evaporate water. Watch how the concentration changes, and when the solution becomes saturated."
+        }
+      ]
     }
   ]
 }

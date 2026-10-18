@@ -1,6 +1,6 @@
 {
   "packId": "bio.s3.coordination.receptor-organs",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -137,7 +137,11 @@
           "kind": "remember",
           "text": "The eye detects light. The cornea and lens focus light on the retina, where rods and cones send impulses along the optic nerve. Short sightedness is corrected with a concave lens and long sightedness with a convex lens. In the ear, the eardrum and ossicles pass vibrations to the cochlea, which sends impulses along the auditory nerve. The semicircular canals help with balance."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "color-vision_en.html",
+        "caption": "Shine red, green and blue light into the eye and mix them to see which colour the person sees."
+      }
     }
   ]
 }

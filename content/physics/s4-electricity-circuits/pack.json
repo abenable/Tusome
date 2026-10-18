@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.electricity.circuits",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -157,7 +157,17 @@
       "sim": {
         "phet": "circuit-construction-kit-dc_en.html",
         "caption": "PhET Circuit Construction Kit: DC. Drag components onto the workbench to build series and parallel circuits. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "ohms-law_en.html",
+          "caption": "Change the voltage and the resistance and watch the current change, as in V = IR."
+        },
+        {
+          "phet": "resistance-in-a-wire_en.html",
+          "caption": "Change the wire's length, thickness and material and see how its resistance changes."
+        }
+      ]
     }
   ]
 }

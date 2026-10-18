@@ -2,48 +2,670 @@
   "source": "https://phet.colorado.edu/sims/html/{id}/{version}/{id}_en.html",
   "license": "CC BY 4.0 (PhET). Partnership license pending — see docs/plan/07 Phase 3. Prototype use only; do not redistribute without a signed license.",
   "sims": [
-    { "id": "circuit-construction-kit-dc", "subject": "physics", "file": "circuit-construction-kit-dc_en.html", "version": "1.5.2", "sha256": "435750c64760f1c9c4d1cef7691e84b05c80d6c6d6a97a8aa6e50b20d185fe90" },
-    { "id": "pendulum-lab", "subject": "physics", "file": "pendulum-lab_en.html", "version": "1.0.35", "sha256": "1cd8125af856cd58821656fccff79cea32ccdcb5437f45ce05082aedb8c423a8" },
-    { "id": "acid-base-solutions", "subject": "chemistry", "file": "acid-base-solutions_en.html", "version": "1.3.15", "sha256": "d284740ef93f001202c83dbfacf800a2c6283e82edca3cc68f72d4231921561a" },
-    { "id": "build-a-molecule", "subject": "chemistry", "file": "build-a-molecule_en.html", "version": "1.0.25", "sha256": "faeaa9f0fc61efec57f235ad2a2912d7e3a803556c3538c0b6d1699458fed394" },
-    { "id": "natural-selection", "subject": "biology", "file": "natural-selection_en.html", "version": "1.5.15", "sha256": "4d4bd09678747752be0adc1d0981537d5daea4b3608fa3c4034fbd748d30bd98" },
-    { "id": "diffusion", "subject": "biology", "file": "diffusion_en.html", "version": "1.1.7", "sha256": "5b13d3c0b158200f567cd02606051f45b691239a4a3a44987245d8404daa13ab" },
-    { "id": "graphing-lines", "subject": "mathematics", "file": "graphing-lines_en.html", "version": "1.4.8", "sha256": "8e9dfb36d9da0c15c2977f4cdeac96d96e103537d35dd72a0fab7316fd848aa0" },
-    { "id": "graphing-quadratics", "subject": "mathematics", "file": "graphing-quadratics_en.html", "version": "1.4.4", "sha256": "d114646403882226ca58215520c7a88b64617e97cc3dede909c3cc2da06aa6bd" },
-    { "id": "density", "subject": "physics", "file": "density_en.html", "version": "1.2.10", "sha256": "52e5ea5f7489d45b82966768bcb1c82822cddf4c199d990326b91ea57fbb2548" },
-    { "id": "states-of-matter-basics", "subject": "physics", "file": "states-of-matter-basics_en.html", "version": "1.2.23", "sha256": "804a8f14e1c3b02304acb97bc58b74291e42d1625d1de36339ecd163e0785526" },
-    { "id": "states-of-matter", "subject": "physics", "file": "states-of-matter_en.html", "version": "1.2.23", "sha256": "200a54e901bca09fd8287238ceb15616d82742f6865147cff38dd07701b2a915" },
-    { "id": "forces-and-motion-basics", "subject": "physics", "file": "forces-and-motion-basics_en.html", "version": "2.6.5", "sha256": "f7786c13fe53675cfa04f061a699f72be34450493dc8c05ff280800e31f23be5" },
-    { "id": "friction", "subject": "physics", "file": "friction_en.html", "version": "1.6.23", "sha256": "b1f8cc95975417568b76ea4cce11b5a6a79c73f463761fbfcfa3182efb290cd1" },
-    { "id": "gravity-force-lab-basics", "subject": "physics", "file": "gravity-force-lab-basics_en.html", "version": "1.1.27", "sha256": "427990e88215452780d7b5ee1784a5b928430e18984a137db0dae27db2b4cef6" },
-    { "id": "energy-forms-and-changes", "subject": "physics", "file": "energy-forms-and-changes_en.html", "version": "1.4.24", "sha256": "90d44963e9835b6fe7558fb59d69c66bb8844716e9c54631ec366131231f58e7" },
-    { "id": "energy-skate-park-basics", "subject": "physics", "file": "energy-skate-park-basics_en.html", "version": "1.6.0", "sha256": "48ca8cace616e6944114e7e2a192c89873989a1584309ef449a69551d9bf0c5b" },
-    { "id": "balancing-act", "subject": "physics", "file": "balancing-act_en.html", "version": "1.3.7", "sha256": "5e2bba6363b61bac1449415dbfe2a5f16a9973c03252736017b71aeac03d75ef" },
-    { "id": "under-pressure", "subject": "physics", "file": "under-pressure_en.html", "version": "1.1.36", "sha256": "7151d564f924c8028139e07f1718a697eda134785bc77da54d08a8c67705d46d" },
-    { "id": "buoyancy-basics", "subject": "physics", "file": "buoyancy-basics_en.html", "version": "1.2.11", "sha256": "00f7edc958bef586ce7d6161c25e87ca4600e1033f8bc1f4cb66942ee2aea9ff" },
-    { "id": "hookes-law", "subject": "physics", "file": "hookes-law_en.html", "version": "1.2.4", "sha256": "1441d9fab9d10cf3b0ac89663059ff143e2ee8942373b0ad1d423c2114784060" },
-    { "id": "masses-and-springs-basics", "subject": "physics", "file": "masses-and-springs-basics_en.html", "version": "1.0.28", "sha256": "52bb2601701fdfe516bf068748b0655ac7e9bbf44da83d462f89b8a666f72041" },
-    { "id": "geometric-optics-basics", "subject": "physics", "file": "geometric-optics-basics_en.html", "version": "1.3.16", "sha256": "115e65f63f6e88863be7a8bf9028f1dce87b9a47e26509e05b9c2d33bdaee098" },
-    { "id": "magnet-and-compass", "subject": "physics", "file": "magnet-and-compass_en.html", "version": "1.0.7", "sha256": "7a20b468a4106bcd1b7645cca9aacc78466a5dcd9f5460a4f3a8ffb67ccef045" },
-    { "id": "magnets-and-electromagnets", "subject": "physics", "file": "magnets-and-electromagnets_en.html", "version": "1.0.7", "sha256": "90bdb82607214becd3f1dd8f06d8ba047a5755c3007d5c6ff3bfaab47eea14cc" },
-    { "id": "balloons-and-static-electricity", "subject": "physics", "file": "balloons-and-static-electricity_en.html", "version": "1.5.26", "sha256": "ca0eac8ad46649d63653362ce151cefe055c35f244f012d0a81167fde6df68be" },
-    { "id": "john-travoltage", "subject": "physics", "file": "john-travoltage_en.html", "version": "1.6.26", "sha256": "89a2c770aa4d389a8a3055733f87f9e78b65ddc58f66df30814f3ebfcc11b680" },
-    { "id": "my-solar-system", "subject": "physics", "file": "my-solar-system_en.html", "version": "1.3.16", "sha256": "e364fe90d0f51070706c17b68fa4d503b63e43fde17163459e3e331d48f1a1ba" },
-    { "id": "gravity-and-orbits", "subject": "physics", "file": "gravity-and-orbits_en.html", "version": "1.6.28", "sha256": "9ccc493a68a9a2163d7b7ade21dbf7bf24b4fd24d4811613d1e49687b8d89de7" },
-    { "id": "collision-lab", "subject": "physics", "file": "collision-lab_en.html", "version": "1.1.23", "sha256": "5eedacb6477451558c8129d45f924348b2bdec3cf776fb9f81276f184bb84ba7" },
-    { "id": "vector-addition", "subject": "physics", "file": "vector-addition_en.html", "version": "1.2.4", "sha256": "7337bce9a1710e93285ab4256fbb36bc226d227cd4fab1b3cb1ec768ec7599cf" },
-    { "id": "bending-light", "subject": "physics", "file": "bending-light_en.html", "version": "1.2.5", "sha256": "6d96b49d3e3a255940fb410cc5c3a364beda4411c7acfe679742e1743588cf67" },
-    { "id": "color-vision", "subject": "physics", "file": "color-vision_en.html", "version": "1.3.7", "sha256": "d5beda268e39c6cb43b03081acfa01404eee29d6a898c20ff5d2c3ff7803c300" },
-    { "id": "waves-intro", "subject": "physics", "file": "waves-intro_en.html", "version": "2.1.0", "sha256": "3714a2ff6348e6fcb0bb1cbd94431948c1cf21981a782a669bf90b818bd43236" },
-    { "id": "wave-on-a-string", "subject": "physics", "file": "wave-on-a-string_en.html", "version": "1.2.4", "sha256": "5adf23efe54284b082a010e96a03e1b0473d18246307f8b5c60c5fccf5e425c8" },
-    { "id": "wave-interference", "subject": "physics", "file": "wave-interference_en.html", "version": "2.1.0", "sha256": "75849f73ece582440e933a056e45e4b16c80391c042ab9bded4caa55c975b23a" },
-    { "id": "gas-properties", "subject": "physics", "file": "gas-properties_en.html", "version": "1.1.10", "sha256": "c5b28d527763e2a7e41ea0c5e830d833a79c0e22a3d55149d03af8c7640d4a5b" },
-    { "id": "ohms-law", "subject": "physics", "file": "ohms-law_en.html", "version": "1.4.31", "sha256": "1dec47564c777f2f5128aeed780950e5e50ce90b662bcdade0cee84d142ee748" },
-    { "id": "resistance-in-a-wire", "subject": "physics", "file": "resistance-in-a-wire_en.html", "version": "1.7.0", "sha256": "f6f14643f64e53cf2415e4cc3bc76436e985f160f9b918373d88ab59c2dafa73" },
-    { "id": "faradays-electromagnetic-lab", "subject": "physics", "file": "faradays-electromagnetic-lab_en.html", "version": "1.0.7", "sha256": "7a048a0926409861183dc06c6828af60208ec69ede30eba461df691f0d387cf5" },
-    { "id": "generator", "subject": "physics", "file": "generator_en.html", "version": "1.0.7", "sha256": "cdf0feff6888fcfba23ffa066d6054ae2623f9bba1525c54462a5808db286882" },
-    { "id": "circuit-construction-kit-ac", "subject": "physics", "file": "circuit-construction-kit-ac_en.html", "version": "1.0.23", "sha256": "bee5639ebc35e33b5b704d97d5962b3bc7fe2fb5cba777fe5793e3dee056ecb9" },
-    { "id": "build-an-atom", "subject": "physics", "file": "build-an-atom_en.html", "version": "1.9.3", "sha256": "8a5131e0c08e54c58c17720c685e602ef6d55adb4a732abebfee0eb246b76b09" },
-    { "id": "rutherford-scattering", "subject": "physics", "file": "rutherford-scattering_en.html", "version": "1.2.0", "sha256": "e5181722ee84ddbede70fa1e4e0462e5390e3d8a7c2c99312243495eb560b35d" }
+    {
+      "id": "diffusion",
+      "subject": "biology",
+      "file": "diffusion_en.html",
+      "version": "1.1.7",
+      "sha256": "5b13d3c0b158200f567cd02606051f45b691239a4a3a44987245d8404daa13ab"
+    },
+    {
+      "id": "gene-expression-essentials",
+      "subject": "biology",
+      "file": "gene-expression-essentials_en.html",
+      "version": "1.0.36",
+      "sha256": "3cc68efeb1a25eb3b6516470f275116523a194ad4261091a63cd8814b71fb6fe"
+    },
+    {
+      "id": "membrane-transport",
+      "subject": "biology",
+      "file": "membrane-transport_en.html",
+      "version": "1.0.6",
+      "sha256": "a717d0bd4232d824bc68238b2975dff1d4c192aa02603dbe8a7b8f00918a09f5"
+    },
+    {
+      "id": "natural-selection",
+      "subject": "biology",
+      "file": "natural-selection_en.html",
+      "version": "1.5.15",
+      "sha256": "4d4bd09678747752be0adc1d0981537d5daea4b3608fa3c4034fbd748d30bd98"
+    },
+    {
+      "id": "neuron",
+      "subject": "biology",
+      "file": "neuron_en.html",
+      "version": "1.1.36",
+      "sha256": "27dd8c9d7e9aef54a652950adf5e6bb29fea334ba9b46afcf3c02574f776e24f"
+    },
+    {
+      "id": "acid-base-solutions",
+      "subject": "chemistry",
+      "file": "acid-base-solutions_en.html",
+      "version": "1.3.15",
+      "sha256": "d284740ef93f001202c83dbfacf800a2c6283e82edca3cc68f72d4231921561a"
+    },
+    {
+      "id": "atomic-interactions",
+      "subject": "chemistry",
+      "file": "atomic-interactions_en.html",
+      "version": "1.2.21",
+      "sha256": "8d3ef6cdf065f051fac8f88d7faec7cf5541deb955616713014600599dd9f37f"
+    },
+    {
+      "id": "balancing-chemical-equations",
+      "subject": "chemistry",
+      "file": "balancing-chemical-equations_en.html",
+      "version": "2.1.2",
+      "sha256": "2c3e8cfaf4aba8189725cb9ba46ad719a4bf0e091fa9c83bea81b9d23a150807"
+    },
+    {
+      "id": "build-a-molecule",
+      "subject": "chemistry",
+      "file": "build-a-molecule_en.html",
+      "version": "1.0.25",
+      "sha256": "faeaa9f0fc61efec57f235ad2a2912d7e3a803556c3538c0b6d1699458fed394"
+    },
+    {
+      "id": "concentration",
+      "subject": "chemistry",
+      "file": "concentration_en.html",
+      "version": "1.8.6",
+      "sha256": "b614f1d8c16938fbc1f0d223f05a2d1b2b555471800f3a587b02c301e07e7a8d"
+    },
+    {
+      "id": "gases-intro",
+      "subject": "chemistry",
+      "file": "gases-intro_en.html",
+      "version": "1.1.7",
+      "sha256": "206d8e2acdd6511eb103d0d808e653cfd948b259532d4b432393cfabba5631b6"
+    },
+    {
+      "id": "greenhouse-effect",
+      "subject": "chemistry",
+      "file": "greenhouse-effect_en.html",
+      "version": "1.3.13",
+      "sha256": "2b03e54ac77cdd2b8dd05e37a486b7ac49ca6ef66d93748521b73f3d6ac5ddf1"
+    },
+    {
+      "id": "isotopes-and-atomic-mass",
+      "subject": "chemistry",
+      "file": "isotopes-and-atomic-mass_en.html",
+      "version": "1.2.1",
+      "sha256": "bc0c1a9cfeee76220fdcbc7db660653792a8548c5a5e7a03fe544a96931f41c3"
+    },
+    {
+      "id": "molarity",
+      "subject": "chemistry",
+      "file": "molarity_en.html",
+      "version": "1.5.24",
+      "sha256": "d8adec1acaa7dfa1e40b32cb60718601cafc49511d98e4dc1615d5787fbc6cd7"
+    },
+    {
+      "id": "molecule-shapes",
+      "subject": "chemistry",
+      "file": "molecule-shapes_en.html",
+      "version": "1.6.19",
+      "sha256": "54478d697f07703af8f2fafd0a91dbf932f8c1c2b3596028550555cf09f4e4b3"
+    },
+    {
+      "id": "molecule-shapes-basics",
+      "subject": "chemistry",
+      "file": "molecule-shapes-basics_en.html",
+      "version": "1.6.19",
+      "sha256": "423525fb8dc6537b74fc95a9192b54fbcbd5c1989fcd997aed6c08972dd2730b"
+    },
+    {
+      "id": "molecules-and-light",
+      "subject": "chemistry",
+      "file": "molecules-and-light_en.html",
+      "version": "1.5.33",
+      "sha256": "8da6ef4271d278acb4b6cfd629ca19f8f4df790462ca1784783a4a3a086c630c"
+    },
+    {
+      "id": "ph-scale",
+      "subject": "chemistry",
+      "file": "ph-scale_en.html",
+      "version": "1.7.6",
+      "sha256": "ee930a56963b5678eb39d9942384b2bb9451ad288010269e1fe762cc59f300aa"
+    },
+    {
+      "id": "ph-scale-basics",
+      "subject": "chemistry",
+      "file": "ph-scale-basics_en.html",
+      "version": "1.7.5",
+      "sha256": "243799d5b29ab28f2ca6e505350c28b345fe1bde33c1c83fb61e48f4e33d233b"
+    },
+    {
+      "id": "reactants-products-and-leftovers",
+      "subject": "chemistry",
+      "file": "reactants-products-and-leftovers_en.html",
+      "version": "1.3.5",
+      "sha256": "fd3372f51f0c9614c2f5d09f6d7163b9ef6bc092d009a75639e5364710d75525"
+    },
+    {
+      "id": "area-builder",
+      "subject": "mathematics",
+      "file": "area-builder_en.html",
+      "version": "1.1.38",
+      "sha256": "143cd53c966d46984c6072383df641d6cfe9f2a5847a02a6f766a6e50e29b8b7"
+    },
+    {
+      "id": "area-model-algebra",
+      "subject": "mathematics",
+      "file": "area-model-algebra_en.html",
+      "version": "1.3.9",
+      "sha256": "a89410d0b75ebc484b848ba42765a67241aa3bbd650aef6582ad05a0da367b2e"
+    },
+    {
+      "id": "area-model-decimals",
+      "subject": "mathematics",
+      "file": "area-model-decimals_en.html",
+      "version": "1.3.8",
+      "sha256": "fb57ba02ffdb290682d237a8ea462be8be8c684a28ba85c8c9ea7a01c4eca3d0"
+    },
+    {
+      "id": "center-and-variability",
+      "subject": "mathematics",
+      "file": "center-and-variability_en.html",
+      "version": "1.2.6",
+      "sha256": "631629609691199093253b4f3dffcd6f1b54198d81b8cb77268c9cb047251800"
+    },
+    {
+      "id": "equality-explorer",
+      "subject": "mathematics",
+      "file": "equality-explorer_en.html",
+      "version": "1.2.5",
+      "sha256": "53b0b0c0ff1e47cd1f3a9a1a25d90d50bc70d239879e2449de0a8b9796835229"
+    },
+    {
+      "id": "equality-explorer-two-variables",
+      "subject": "mathematics",
+      "file": "equality-explorer-two-variables_en.html",
+      "version": "1.2.5",
+      "sha256": "a66e6b0a72c6a7f7fb0ef0be1f98acfc18f0abeb1a077e74f52085e9c3534718"
+    },
+    {
+      "id": "expression-exchange",
+      "subject": "mathematics",
+      "file": "expression-exchange_en.html",
+      "version": "1.1.33",
+      "sha256": "01684084c6326fe02ff3d7d41acd49de7c7e1265dfef3f1242c85a9991cf12a8"
+    },
+    {
+      "id": "fraction-matcher",
+      "subject": "mathematics",
+      "file": "fraction-matcher_en.html",
+      "version": "1.2.21",
+      "sha256": "5b4be86456196028d848c7baf459da5bf385e27a1950230a947e0677121dc265"
+    },
+    {
+      "id": "fractions-equality",
+      "subject": "mathematics",
+      "file": "fractions-equality_en.html",
+      "version": "1.1.22",
+      "sha256": "324a2e14118bac7a6805610a326c3bb20a65cee7fef4911987109ba74971dcfe"
+    },
+    {
+      "id": "function-builder",
+      "subject": "mathematics",
+      "file": "function-builder_en.html",
+      "version": "1.2.18",
+      "sha256": "a2c8776356b84726742f6281e76c13c595ccc3aa0a1d5de7bfc649b819bb81e1"
+    },
+    {
+      "id": "function-builder-basics",
+      "subject": "mathematics",
+      "file": "function-builder-basics_en.html",
+      "version": "1.2.19",
+      "sha256": "1d0e1be5abe38c79c1aa94b4513db2958a54b3ed3ee591ecbc6d0c1a29e11076"
+    },
+    {
+      "id": "graphing-lines",
+      "subject": "mathematics",
+      "file": "graphing-lines_en.html",
+      "version": "1.4.8",
+      "sha256": "8e9dfb36d9da0c15c2977f4cdeac96d96e103537d35dd72a0fab7316fd848aa0"
+    },
+    {
+      "id": "graphing-quadratics",
+      "subject": "mathematics",
+      "file": "graphing-quadratics_en.html",
+      "version": "1.4.4",
+      "sha256": "d114646403882226ca58215520c7a88b64617e97cc3dede909c3cc2da06aa6bd"
+    },
+    {
+      "id": "graphing-slope-intercept",
+      "subject": "mathematics",
+      "file": "graphing-slope-intercept_en.html",
+      "version": "1.2.8",
+      "sha256": "825704c9b325a94b73f11332144d0acd5326e4cce95abfc78976afea05f1cb3b"
+    },
+    {
+      "id": "mean-share-and-balance",
+      "subject": "mathematics",
+      "file": "mean-share-and-balance_en.html",
+      "version": "1.1.9",
+      "sha256": "28628439320a4d42d148a0ecc1e648a4ace21691f8647db0cf700284ec4555b0"
+    },
+    {
+      "id": "number-line-distance",
+      "subject": "mathematics",
+      "file": "number-line-distance_en.html",
+      "version": "1.1.11",
+      "sha256": "84dbfbd1ad40d753671c233c2ded85511b53896396534f34f746fa263793a072"
+    },
+    {
+      "id": "number-line-integers",
+      "subject": "mathematics",
+      "file": "number-line-integers_en.html",
+      "version": "1.2.12",
+      "sha256": "8ca5cc0b1aaa4b67ecc5d68fb20058651527e4ffe2824de64a3ba974178b1a0c"
+    },
+    {
+      "id": "number-line-operations",
+      "subject": "mathematics",
+      "file": "number-line-operations_en.html",
+      "version": "1.1.10",
+      "sha256": "12f7cb9c8bd447900397094b0e40595ce9e4f15b6fe2f5b8f6002fdc0ecdba95"
+    },
+    {
+      "id": "plinko-probability",
+      "subject": "mathematics",
+      "file": "plinko-probability_en.html",
+      "version": "1.1.36",
+      "sha256": "dce31821979c587c1d92e1f283bf14323e080624a2129f99cb6bd89d261f6df1"
+    },
+    {
+      "id": "proportion-playground",
+      "subject": "mathematics",
+      "file": "proportion-playground_en.html",
+      "version": "1.0.33",
+      "sha256": "dc0afc6b97ff83bd2836078d31d43838be526aa3f9cdc392ce48c59944259149"
+    },
+    {
+      "id": "quadrilateral",
+      "subject": "mathematics",
+      "file": "quadrilateral_en.html",
+      "version": "1.1.14",
+      "sha256": "3d12ba8ea74760e0492390e7507cf204b268cd746be264d56091e24fc557322a"
+    },
+    {
+      "id": "ratio-and-proportion",
+      "subject": "mathematics",
+      "file": "ratio-and-proportion_en.html",
+      "version": "1.2.22",
+      "sha256": "3cacb1aa1bf48dad16112c76b43480a2dddcb4095a7bb5d5fe4dba4743f6c81a"
+    },
+    {
+      "id": "trig-tour",
+      "subject": "mathematics",
+      "file": "trig-tour_en.html",
+      "version": "1.1.9",
+      "sha256": "21c0ab08109975da0619a6a9b68455eee81aefb0ccb8f6494fc92886370276fd"
+    },
+    {
+      "id": "unit-rates",
+      "subject": "mathematics",
+      "file": "unit-rates_en.html",
+      "version": "1.1.5",
+      "sha256": "dde6a8d66b4f3bca7eae9bd9595c29c327406c378414de57a814108cc1734182"
+    },
+    {
+      "id": "alpha-decay",
+      "subject": "physics",
+      "file": "alpha-decay_en.html",
+      "version": "1.0.0",
+      "sha256": "ad28c0ba7444012362adbf51465a4a4e8d41410238d33c2f6f5602139ea0de82"
+    },
+    {
+      "id": "balancing-act",
+      "subject": "physics",
+      "file": "balancing-act_en.html",
+      "version": "1.3.7",
+      "sha256": "5e2bba6363b61bac1449415dbfe2a5f16a9973c03252736017b71aeac03d75ef"
+    },
+    {
+      "id": "balloons-and-static-electricity",
+      "subject": "physics",
+      "file": "balloons-and-static-electricity_en.html",
+      "version": "1.5.26",
+      "sha256": "ca0eac8ad46649d63653362ce151cefe055c35f244f012d0a81167fde6df68be"
+    },
+    {
+      "id": "bending-light",
+      "subject": "physics",
+      "file": "bending-light_en.html",
+      "version": "1.2.5",
+      "sha256": "6d96b49d3e3a255940fb410cc5c3a364beda4411c7acfe679742e1743588cf67"
+    },
+    {
+      "id": "beta-decay",
+      "subject": "physics",
+      "file": "beta-decay_en.html",
+      "version": "1.0.0",
+      "sha256": "5c4d68a5cb595ea126f35242f16c1de301218fc60352215959078af7c9ba25be"
+    },
+    {
+      "id": "blackbody-spectrum",
+      "subject": "physics",
+      "file": "blackbody-spectrum_en.html",
+      "version": "1.0.26",
+      "sha256": "3018a130e67a523d5ad6a1f81ccd0ae45934a885a4bd7c758eab935007d57ed2"
+    },
+    {
+      "id": "build-a-nucleus",
+      "subject": "physics",
+      "file": "build-a-nucleus_en.html",
+      "version": "1.1.10",
+      "sha256": "11145470a711ee218f91f2ad60e8387fe93cfb35b0055d337f5074db2256b0f3"
+    },
+    {
+      "id": "build-an-atom",
+      "subject": "physics",
+      "file": "build-an-atom_en.html",
+      "version": "1.9.3",
+      "sha256": "8a5131e0c08e54c58c17720c685e602ef6d55adb4a732abebfee0eb246b76b09"
+    },
+    {
+      "id": "buoyancy",
+      "subject": "physics",
+      "file": "buoyancy_en.html",
+      "version": "1.2.12",
+      "sha256": "4634b362557a49761573c119390c565775f941a251515085d59d2491a1e3d208"
+    },
+    {
+      "id": "buoyancy-basics",
+      "subject": "physics",
+      "file": "buoyancy-basics_en.html",
+      "version": "1.2.11",
+      "sha256": "00f7edc958bef586ce7d6161c25e87ca4600e1033f8bc1f4cb66942ee2aea9ff"
+    },
+    {
+      "id": "charges-and-fields",
+      "subject": "physics",
+      "file": "charges-and-fields_en.html",
+      "version": "1.0.67",
+      "sha256": "975292cfffdd17708ca20eeb1b358c0d98ce32c9fb1eba34918f0b0ab49ca8a0"
+    },
+    {
+      "id": "circuit-construction-kit-ac",
+      "subject": "physics",
+      "file": "circuit-construction-kit-ac_en.html",
+      "version": "1.0.23",
+      "sha256": "bee5639ebc35e33b5b704d97d5962b3bc7fe2fb5cba777fe5793e3dee056ecb9"
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "subject": "physics",
+      "file": "circuit-construction-kit-dc_en.html",
+      "version": "1.5.2",
+      "sha256": "435750c64760f1c9c4d1cef7691e84b05c80d6c6d6a97a8aa6e50b20d185fe90"
+    },
+    {
+      "id": "collision-lab",
+      "subject": "physics",
+      "file": "collision-lab_en.html",
+      "version": "1.1.23",
+      "sha256": "5eedacb6477451558c8129d45f924348b2bdec3cf776fb9f81276f184bb84ba7"
+    },
+    {
+      "id": "color-vision",
+      "subject": "physics",
+      "file": "color-vision_en.html",
+      "version": "1.3.7",
+      "sha256": "d5beda268e39c6cb43b03081acfa01404eee29d6a898c20ff5d2c3ff7803c300"
+    },
+    {
+      "id": "density",
+      "subject": "physics",
+      "file": "density_en.html",
+      "version": "1.2.10",
+      "sha256": "52e5ea5f7489d45b82966768bcb1c82822cddf4c199d990326b91ea57fbb2548"
+    },
+    {
+      "id": "energy-forms-and-changes",
+      "subject": "physics",
+      "file": "energy-forms-and-changes_en.html",
+      "version": "1.4.24",
+      "sha256": "90d44963e9835b6fe7558fb59d69c66bb8844716e9c54631ec366131231f58e7"
+    },
+    {
+      "id": "energy-skate-park",
+      "subject": "physics",
+      "file": "energy-skate-park_en.html",
+      "version": "1.6.0",
+      "sha256": "2ba4a1abdfa4beb71bedc5b9f7a0fcad7196d4382e153f96019284270c1a584f"
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "subject": "physics",
+      "file": "energy-skate-park-basics_en.html",
+      "version": "1.6.0",
+      "sha256": "48ca8cace616e6944114e7e2a192c89873989a1584309ef449a69551d9bf0c5b"
+    },
+    {
+      "id": "faradays-electromagnetic-lab",
+      "subject": "physics",
+      "file": "faradays-electromagnetic-lab_en.html",
+      "version": "1.0.7",
+      "sha256": "7a048a0926409861183dc06c6828af60208ec69ede30eba461df691f0d387cf5"
+    },
+    {
+      "id": "faradays-law",
+      "subject": "physics",
+      "file": "faradays-law_en.html",
+      "version": "1.4.25",
+      "sha256": "1ede01ea19dfbd8e9afae2814fbeaf353656ff14fadaaa63ee090c6ec3291c62"
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "subject": "physics",
+      "file": "forces-and-motion-basics_en.html",
+      "version": "2.6.5",
+      "sha256": "f7786c13fe53675cfa04f061a699f72be34450493dc8c05ff280800e31f23be5"
+    },
+    {
+      "id": "friction",
+      "subject": "physics",
+      "file": "friction_en.html",
+      "version": "1.6.23",
+      "sha256": "b1f8cc95975417568b76ea4cce11b5a6a79c73f463761fbfcfa3182efb290cd1"
+    },
+    {
+      "id": "gas-properties",
+      "subject": "physics",
+      "file": "gas-properties_en.html",
+      "version": "1.1.10",
+      "sha256": "c5b28d527763e2a7e41ea0c5e830d833a79c0e22a3d55149d03af8c7640d4a5b"
+    },
+    {
+      "id": "generator",
+      "subject": "physics",
+      "file": "generator_en.html",
+      "version": "1.0.7",
+      "sha256": "cdf0feff6888fcfba23ffa066d6054ae2623f9bba1525c54462a5808db286882"
+    },
+    {
+      "id": "geometric-optics",
+      "subject": "physics",
+      "file": "geometric-optics_en.html",
+      "version": "1.3.16",
+      "sha256": "9fc8fd4bbaeee16265fe230070a8a67adb997b4ea568e3882ed885e9f47041ad"
+    },
+    {
+      "id": "geometric-optics-basics",
+      "subject": "physics",
+      "file": "geometric-optics-basics_en.html",
+      "version": "1.3.16",
+      "sha256": "115e65f63f6e88863be7a8bf9028f1dce87b9a47e26509e05b9c2d33bdaee098"
+    },
+    {
+      "id": "gravity-and-orbits",
+      "subject": "physics",
+      "file": "gravity-and-orbits_en.html",
+      "version": "1.6.28",
+      "sha256": "9ccc493a68a9a2163d7b7ade21dbf7bf24b4fd24d4811613d1e49687b8d89de7"
+    },
+    {
+      "id": "gravity-force-lab",
+      "subject": "physics",
+      "file": "gravity-force-lab_en.html",
+      "version": "2.2.25",
+      "sha256": "58bb715033544ec91e3979d9837f4401b5d25adf55db8b2348070a08a7201f21"
+    },
+    {
+      "id": "gravity-force-lab-basics",
+      "subject": "physics",
+      "file": "gravity-force-lab-basics_en.html",
+      "version": "1.1.27",
+      "sha256": "427990e88215452780d7b5ee1784a5b928430e18984a137db0dae27db2b4cef6"
+    },
+    {
+      "id": "hookes-law",
+      "subject": "physics",
+      "file": "hookes-law_en.html",
+      "version": "1.2.4",
+      "sha256": "1441d9fab9d10cf3b0ac89663059ff143e2ee8942373b0ad1d423c2114784060"
+    },
+    {
+      "id": "john-travoltage",
+      "subject": "physics",
+      "file": "john-travoltage_en.html",
+      "version": "1.6.26",
+      "sha256": "89a2c770aa4d389a8a3055733f87f9e78b65ddc58f66df30814f3ebfcc11b680"
+    },
+    {
+      "id": "magnet-and-compass",
+      "subject": "physics",
+      "file": "magnet-and-compass_en.html",
+      "version": "1.0.7",
+      "sha256": "7a20b468a4106bcd1b7645cca9aacc78466a5dcd9f5460a4f3a8ffb67ccef045"
+    },
+    {
+      "id": "magnets-and-electromagnets",
+      "subject": "physics",
+      "file": "magnets-and-electromagnets_en.html",
+      "version": "1.0.7",
+      "sha256": "90bdb82607214becd3f1dd8f06d8ba047a5755c3007d5c6ff3bfaab47eea14cc"
+    },
+    {
+      "id": "masses-and-springs",
+      "subject": "physics",
+      "file": "masses-and-springs_en.html",
+      "version": "1.0.29",
+      "sha256": "b20d690e30a4a49ab4012b908195e5ef3c4223a40380d029da6fc949d3c3782c"
+    },
+    {
+      "id": "masses-and-springs-basics",
+      "subject": "physics",
+      "file": "masses-and-springs-basics_en.html",
+      "version": "1.0.28",
+      "sha256": "52bb2601701fdfe516bf068748b0655ac7e9bbf44da83d462f89b8a666f72041"
+    },
+    {
+      "id": "models-of-the-hydrogen-atom",
+      "subject": "physics",
+      "file": "models-of-the-hydrogen-atom_en.html",
+      "version": "1.0.9",
+      "sha256": "5c11ac89d8c91edc445fe39be354648258e68ce63158331cb13e8e57b3a9fbd3"
+    },
+    {
+      "id": "my-solar-system",
+      "subject": "physics",
+      "file": "my-solar-system_en.html",
+      "version": "1.3.16",
+      "sha256": "e364fe90d0f51070706c17b68fa4d503b63e43fde17163459e3e331d48f1a1ba"
+    },
+    {
+      "id": "ohms-law",
+      "subject": "physics",
+      "file": "ohms-law_en.html",
+      "version": "1.4.31",
+      "sha256": "1dec47564c777f2f5128aeed780950e5e50ce90b662bcdade0cee84d142ee748"
+    },
+    {
+      "id": "pendulum-lab",
+      "subject": "physics",
+      "file": "pendulum-lab_en.html",
+      "version": "1.0.35",
+      "sha256": "1cd8125af856cd58821656fccff79cea32ccdcb5437f45ce05082aedb8c423a8"
+    },
+    {
+      "id": "projectile-motion",
+      "subject": "physics",
+      "file": "projectile-motion_en.html",
+      "version": "1.0.34",
+      "sha256": "b5fa4426cac53e2937b97fca524f3e54a012007f2b897439574cfcaaeee93590"
+    },
+    {
+      "id": "resistance-in-a-wire",
+      "subject": "physics",
+      "file": "resistance-in-a-wire_en.html",
+      "version": "1.7.0",
+      "sha256": "f6f14643f64e53cf2415e4cc3bc76436e985f160f9b918373d88ab59c2dafa73"
+    },
+    {
+      "id": "rutherford-scattering",
+      "subject": "physics",
+      "file": "rutherford-scattering_en.html",
+      "version": "1.2.0",
+      "sha256": "e5181722ee84ddbede70fa1e4e0462e5390e3d8a7c2c99312243495eb560b35d"
+    },
+    {
+      "id": "states-of-matter",
+      "subject": "physics",
+      "file": "states-of-matter_en.html",
+      "version": "1.2.23",
+      "sha256": "200a54e901bca09fd8287238ceb15616d82742f6865147cff38dd07701b2a915"
+    },
+    {
+      "id": "states-of-matter-basics",
+      "subject": "physics",
+      "file": "states-of-matter-basics_en.html",
+      "version": "1.2.23",
+      "sha256": "804a8f14e1c3b02304acb97bc58b74291e42d1625d1de36339ecd163e0785526"
+    },
+    {
+      "id": "under-pressure",
+      "subject": "physics",
+      "file": "under-pressure_en.html",
+      "version": "1.1.36",
+      "sha256": "7151d564f924c8028139e07f1718a697eda134785bc77da54d08a8c67705d46d"
+    },
+    {
+      "id": "vector-addition",
+      "subject": "physics",
+      "file": "vector-addition_en.html",
+      "version": "1.2.4",
+      "sha256": "7337bce9a1710e93285ab4256fbb36bc226d227cd4fab1b3cb1ec768ec7599cf"
+    },
+    {
+      "id": "vector-addition-equations",
+      "subject": "physics",
+      "file": "vector-addition-equations_en.html",
+      "version": "1.2.4",
+      "sha256": "7e35fa1eec437e3fc979f48ad6babb67afc2a36d62f078be94ea0f1392d05101"
+    },
+    {
+      "id": "wave-interference",
+      "subject": "physics",
+      "file": "wave-interference_en.html",
+      "version": "2.1.0",
+      "sha256": "75849f73ece582440e933a056e45e4b16c80391c042ab9bded4caa55c975b23a"
+    },
+    {
+      "id": "wave-on-a-string",
+      "subject": "physics",
+      "file": "wave-on-a-string_en.html",
+      "version": "1.2.4",
+      "sha256": "5adf23efe54284b082a010e96a03e1b0473d18246307f8b5c60c5fccf5e425c8"
+    },
+    {
+      "id": "waves-intro",
+      "subject": "physics",
+      "file": "waves-intro_en.html",
+      "version": "2.1.0",
+      "sha256": "3714a2ff6348e6fcb0bb1cbd94431948c1cf21981a782a669bf90b818bd43236"
+    }
   ]
 }

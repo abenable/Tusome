@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.structures-bonds.atoms-bonding",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -183,7 +183,17 @@
       "sim": {
         "phet": "build-an-atom_en.html",
         "caption": "Add protons, neutrons and electrons to build a carbon atom, then add one more neutron to make an isotope. Watch how the element, nucleon number and charge change."
-      }
+      },
+      "sims": [
+        {
+          "phet": "molecule-shapes-basics_en.html",
+          "caption": "Add bonds and lone pairs to a central atom and see how the shape of the molecule changes."
+        },
+        {
+          "phet": "atomic-interactions_en.html",
+          "caption": "Pull two atoms apart and push them together. Feel where the attraction is strongest and where the atoms repel."
+        }
+      ]
     }
   ]
 }

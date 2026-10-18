@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.algebra.simultaneous-equations",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -148,6 +148,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Simultaneous equations are two equations that are true at the same time. Solve them by substitution, elimination, graphs or matrices. Parallel lines, or a determinant of 0, mean there is no unique solution. Always check your answer in both equations."
+        }
+      ],
+      "sim": {
+        "phet": "equality-explorer-two-variables_en.html",
+        "caption": "Balance equations with two unknowns and find values that keep the scale level."
+      },
+      "sims": [
+        {
+          "phet": "graphing-lines_en.html",
+          "caption": "Drag points on the grid and see how the equation of the line changes."
         }
       ]
     }

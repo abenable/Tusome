@@ -1,6 +1,6 @@
 {
   "packId": "che.s3.carbon.life",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -209,7 +209,13 @@
       "sim": {
         "phet": "build-a-molecule_en.html",
         "caption": "Build methane, ethane and ethanol from carbon, hydrogen and oxygen atoms. Count how many bonds each carbon atom makes."
-      }
+      },
+      "sims": [
+        {
+          "phet": "molecule-shapes-basics_en.html",
+          "caption": "Add bonds and lone pairs to a central atom and see how the shape of the molecule changes."
+        }
+      ]
     }
   ]
 }

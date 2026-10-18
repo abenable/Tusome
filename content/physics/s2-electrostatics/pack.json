@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.electricity.electrostatics",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -171,7 +171,17 @@
       "sim": {
         "phet": "balloons-and-static-electricity_en.html",
         "caption": "PhET Balloons and Static Electricity. Rub the balloon on the sweater and count the charges that move, then bring it near the wall. Add a second balloon to see like charges repel. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "john-travoltage_en.html",
+          "caption": "Rub John's foot on the carpet to build up charge, then move his hand near the door handle and watch the spark."
+        },
+        {
+          "phet": "charges-and-fields_en.html",
+          "caption": "Place positive and negative charges and see the electric field lines around them."
+        }
+      ]
     }
   ]
 }

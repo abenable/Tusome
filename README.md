@@ -19,7 +19,7 @@ Every S1–S4 topic in the new curriculum, read-aloud, PhET simulations and a pr
 ![Works offline](https://img.shields.io/badge/works-offline-fbc629?style=flat-square&labelColor=201c17)
 ![Curriculum](https://img.shields.io/badge/curriculum-Uganda%20CBC%20S1--S4-fbc629?style=flat-square&labelColor=201c17)
 ![Topics](https://img.shields.io/badge/topics-139-fbc629?style=flat-square&labelColor=201c17)
-![Simulations](https://img.shields.io/badge/PhET%20simulations-43-fbc629?style=flat-square&labelColor=201c17)
+![Simulations](https://img.shields.io/badge/PhET%20simulations-95-fbc629?style=flat-square&labelColor=201c17)
 
 [![Tauri](https://img.shields.io/badge/Tauri-2-3c3730?style=flat-square&labelColor=201c17&logo=tauri&logoColor=24C8D8)](https://tauri.app)
 [![React](https://img.shields.io/badge/React-19-3c3730?style=flat-square&labelColor=201c17&logo=react&logoColor=61DAFB)](https://react.dev)
@@ -100,9 +100,10 @@ teacher types once per PC.
 <tr>
 <td valign="top">
 
-### 43 PhET simulations
-Interactive HTML5 sims from [PhET](https://phet.colorado.edu/), bundled and
-pinned to exact versions, plus a native TypeScript sim engine for custom ones.
+### 95 PhET simulations
+Every PhET HTML5 sim that fits a topic in the syllabus, bundled and pinned to
+exact versions. A lesson can offer several; only one runs at a time, so old
+PCs keep up.
 
 </td>
 <td valign="top">
@@ -175,7 +176,7 @@ for your system (WebView2 on Windows, `libwebkit2gtk` on Linux).
 
 ```sh
 bun install          # dependencies
-bun run fetch:sims   # download and checksum-verify the 43 PhET sims
+bun run fetch:sims   # download and checksum-verify the 95 PhET sims
 bun tauri dev        # run the desktop app
 ```
 
@@ -230,6 +231,9 @@ reference is one of:
 { "sim": { "simId": "projectile", "params": { "speed": 20 } } }   // custom TypeScript sim
 { "sim": { "phet": "circuit-construction-kit-dc_en.html" } }      // bundled PhET sim
 ```
+
+A topic can add more in `sims`, an array of the same shapes. They're shown
+after `sim`, one at a time.
 
 PhET sims are pinned to exact versions in
 [`content/sims/phet-manifest.json`](content/sims/phet-manifest.json). To

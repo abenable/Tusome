@@ -1,6 +1,6 @@
 {
   "packId": "phy.s4.modern.nuclear",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -210,6 +210,24 @@
           "type": "callout",
           "kind": "remember",
           "text": "Radioactive decay is spontaneous and random. Alpha is stopped by paper, beta by aluminium, and gamma is reduced by thick lead. Half-life is the time for half the nuclei to decay, found from a decay graph. Fission splits heavy nuclei and fusion joins light ones; both turn a little mass into a lot of energy."
+        }
+      ],
+      "sim": {
+        "phet": "build-a-nucleus_en.html",
+        "caption": "Add protons and neutrons to build a nucleus. See which nuclei are stable and how unstable ones decay."
+      },
+      "sims": [
+        {
+          "phet": "alpha-decay_en.html",
+          "caption": "Watch an unstable nucleus give out an alpha particle, and see how its mass number and atomic number change."
+        },
+        {
+          "phet": "beta-decay_en.html",
+          "caption": "Watch a neutron in the nucleus change into a proton and give out a beta particle."
+        },
+        {
+          "phet": "isotopes-and-atomic-mass_en.html",
+          "caption": "Add neutrons to an atom to make different isotopes, then mix isotopes and see how the average atomic mass changes."
         }
       ]
     }

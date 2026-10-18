@@ -1,6 +1,6 @@
 {
   "packId": "che.s1.air.water",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -210,7 +210,11 @@
           "kind": "remember",
           "text": "Water is a compound, H₂O, that freezes at 0 °C, boils at 100 °C at sea level and dissolves many substances. The sun drives the water cycle, which recycles water through evaporation, condensation and rain. Water works clean water by coagulation, sedimentation, filtration and chlorination. Sewage works use settling and bacteria to clean used water."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "concentration_en.html",
+        "caption": "Add a solute to water, then add or evaporate water. Watch how the concentration changes, and when the solution becomes saturated."
+      }
     }
   ]
 }

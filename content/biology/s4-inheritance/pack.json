@@ -1,6 +1,6 @@
 {
   "packId": "bio.s4.genetics.inheritance",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -179,7 +179,11 @@
           "kind": "remember",
           "text": "Genes on chromosomes carry characteristics from parents to offspring. Meiosis halves the chromosome number to make gametes and creates variation. Dominant alleles hide recessive ones, and genetic diagrams show expected ratios such as 3 : 1. Females are XX and males XY, so the sperm decides the sex. Sex-linked conditions such as colour blindness are more common in males."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "gene-expression-essentials_en.html",
+        "caption": "Help a cell make a protein: let RNA polymerase copy the gene, then let a ribosome build the protein."
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "packId": "mat.s2.algebra.vectors-and-translation",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -150,7 +150,13 @@
       "sim": {
         "phet": "vector-addition_en.html",
         "caption": "PhET Vector Addition. Drag vectors onto the grid, read their x and y components, and add two vectors to see the resultant drawn nose to tail. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "vector-addition-equations_en.html",
+          "caption": "Change two vectors and see how they combine into the resultant, written as an equation."
+        }
+      ]
     }
   ]
 }

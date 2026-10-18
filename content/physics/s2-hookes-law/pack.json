@@ -1,6 +1,6 @@
 {
   "packId": "phy.s2.matter.hookes-law",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -189,7 +189,17 @@
       "sim": {
         "phet": "hookes-law_en.html",
         "caption": "PhET Hooke's Law. On the Intro screen, pull the spring with different forces and read the displacement. Check that doubling the force doubles the extension, then make the spring stiffer and compare. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "masses-and-springs-basics_en.html",
+          "caption": "Hang different masses on the spring and measure how far it stretches."
+        },
+        {
+          "phet": "masses-and-springs_en.html",
+          "caption": "Hang masses, change the spring's stiffness and measure the extension. Check that extension is proportional to the force."
+        }
+      ]
     }
   ]
 }

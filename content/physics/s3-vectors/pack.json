@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.matter.vectors",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -151,7 +151,13 @@
       "sim": {
         "phet": "vector-addition_en.html",
         "caption": "PhET Vector Addition. Combine vectors of different sizes and directions and see the resultant vector. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "vector-addition-equations_en.html",
+          "caption": "Change two vectors and see how they combine into the resultant, written as an equation."
+        }
+      ]
     }
   ]
 }

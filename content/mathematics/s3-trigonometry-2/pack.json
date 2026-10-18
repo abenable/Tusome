@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.geometry.trigonometry-2",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -179,7 +179,11 @@
           "kind": "remember",
           "text": "On the unit circle a point is (cos θ, sin θ), which defines the ratios for any angle. Use the quadrant to fix the sign, and the graphs to find every angle with a given ratio. The sine rule links each side with the sine of its opposite angle. The cosine rule finds a side from two sides and the angle between them, or an angle from three sides."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "trig-tour_en.html",
+        "caption": "Move the point around the unit circle and watch sine, cosine and tangent change."
+      }
     }
   ]
 }

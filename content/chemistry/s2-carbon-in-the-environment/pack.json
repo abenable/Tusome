@@ -1,6 +1,6 @@
 {
   "packId": "che.s2.carbon.environment",
-  "version": 1,
+  "version": 2,
   "schemaVersion": 1,
   "topics": [
     {
@@ -242,6 +242,16 @@
           "type": "callout",
           "kind": "remember",
           "text": "Carbon fuels burn to give carbon dioxide, water and heat. Fossil fuels are non-renewable and not sustainable. Charcoal is sustainable only if trees are regrown. Carbon dioxide is a dense, colourless gas that turns limewater milky. Extra greenhouse gases warm the air and oceans and change the climate. Hard water comes from limestone and can be softened. Diamond and graphite are allotropes of carbon with different structures and uses."
+        }
+      ],
+      "sim": {
+        "phet": "greenhouse-effect_en.html",
+        "caption": "Add greenhouse gases to the atmosphere and watch how the temperature changes. Compare an ice age, today and the future."
+      },
+      "sims": [
+        {
+          "phet": "molecules-and-light_en.html",
+          "caption": "Shine infrared, visible and ultraviolet light on gases such as carbon dioxide and methane, and see which ones absorb it."
         }
       ]
     }

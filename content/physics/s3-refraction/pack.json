@@ -1,6 +1,6 @@
 {
   "packId": "phy.s3.light.refraction",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -189,7 +189,13 @@
       "sim": {
         "phet": "bending-light_en.html",
         "caption": "PhET Bending Light (Prisms screen). Shine white light through a prism and see it split into the colours of the spectrum. (PhET, CC BY 4.0 — prototype use, license pending.)"
-      }
+      },
+      "sims": [
+        {
+          "phet": "color-vision_en.html",
+          "caption": "Shine red, green and blue light into the eye and mix them to see which colour the person sees."
+        }
+      ]
     }
   ]
 }

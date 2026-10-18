@@ -8,9 +8,8 @@ import {
   isSubject,
   type Subject,
 } from "@/lib/subjects"
-import { type BlockT, type TopicT } from "@/content/schema"
-import { SimCanvas } from "@/components/SimCanvas"
-import { PhETSim } from "@/components/PhETSim"
+import { type BlockT, type TopicT, topicSims } from "@/content/schema"
+import { SimHost } from "@/components/SimHost"
 import { LessonBlock } from "@/components/LessonBlock"
 import { ListenBar } from "@/components/ListenBar"
 import { Presenter } from "@/components/Presenter"
@@ -208,34 +207,9 @@ function TopicView() {
         ))}
       </section>
 
-      {/* Simulation host. Two kinds: a custom TS sim module (registry, rendered
-          by <SimCanvas> with its own rAF loop) or a bundled PhET HTML5 sim
-          (rendered by <PhETSim> in an iframe via the Tauri asset protocol).
-          The pack's sim ref is a union distinguished by shape: `simId` → custom,
-          `phet` → PhET file (03-architecture.md §Simulation contract). */}
-      {topic.sim ? (
-        <section className="flex flex-col gap-3" aria-labelledby="sim">
-          <h2
-            id="sim"
-            className="font-heading text-[25px] font-extrabold tracking-[-0.01em] text-ink"
-          >
-            Simulation
-          </h2>
-          {"simId" in topic.sim ? (
-            <SimCanvas
-              simId={topic.sim.simId}
-              params={(topic.sim.params as Record<string, number>) ?? {}}
-            />
-          ) : (
-            <PhETSim file={topic.sim.phet} />
-          )}
-          {topic.sim.caption ? (
-            <p className="max-w-[68ch] font-sans text-[16px] leading-[1.5] text-ink-3">
-              {topic.sim.caption}
-            </p>
-          ) : null}
-        </section>
-      ) : null}
+      {/* Simulations: a custom TS sim (registry, <SimCanvas>) or a bundled
+          PhET HTML5 sim (iframe, <PhETSim>), one mounted at a time. */}
+      <SimHost sims={topicSims(topic)} />
 
       <section
         className="flex flex-wrap items-center justify-between gap-5 rounded-card border border-line bg-surface px-6 py-5"

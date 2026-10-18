@@ -1,6 +1,6 @@
 {
   "packId": "mat.s3.data.data-collection-and-display",
-  "version": 2,
+  "version": 3,
   "schemaVersion": 1,
   "topics": [
     {
@@ -174,7 +174,11 @@
           "kind": "remember",
           "text": "Mode is the most common value, median the middle value, and mean the total divided by the number of values. Range = largest − smallest. For grouped data use mid-points for the mean, a histogram for the mode, and an ogive for the median. These are estimates, because grouping hides the exact values."
         }
-      ]
+      ],
+      "sim": {
+        "phet": "center-and-variability_en.html",
+        "caption": "Kick balls and record where they land. Find the median, mean and range of the data."
+      }
     }
   ]
 }
