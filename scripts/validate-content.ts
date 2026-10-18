@@ -9,11 +9,13 @@
 //   - PhET sims are in phet-manifest.json, custom sims are in the registry
 
 import { readFile } from "node:fs/promises"
+import { fileURLToPath } from "node:url"
 import { Glob } from "bun"
 import { BLOCK_TYPES, Pack } from "../src/content/schema"
 import { getSim } from "../src/sims"
 
-const root = new URL("../content/", import.meta.url).pathname
+// fileURLToPath, not URL.pathname: on Windows the latter is "/D:/...".
+const root = fileURLToPath(new URL("../content/", import.meta.url))
 const manifest = JSON.parse(await readFile(`${root}sims/phet-manifest.json`, "utf-8"))
 const phetFiles = new Set<string>(manifest.sims.map((s: { file: string }) => s.file))
 
