@@ -1,7 +1,3 @@
-<!-- Badges are static because the repo is private and shields.io can't read
-     it. Bump the release badge with each release, or switch to dynamic
-     badges (img.shields.io/github/v/release/abenable/Tusome) once public. -->
-
 <div align="center">
 
 <picture>
@@ -18,7 +14,7 @@ Every S1–S4 topic in the new curriculum, read-aloud, PhET simulations and a pr
 <br>
 
 [![Build](https://github.com/abenable/Tusome/actions/workflows/build.yml/badge.svg)](https://github.com/abenable/Tusome/actions/workflows/build.yml)
-[![Release](https://img.shields.io/badge/release-v1.1.1-fbc629?style=flat-square&labelColor=201c17)](https://github.com/abenable/Tusome/releases/latest)
+[![Release](https://img.shields.io/github/v/release/abenable/Tusome?style=flat-square&labelColor=201c17&color=fbc629)](https://github.com/abenable/Tusome/releases/latest)
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-fbc629?style=flat-square&labelColor=201c17)](https://github.com/abenable/Tusome/releases/latest)
 ![Works offline](https://img.shields.io/badge/works-offline-fbc629?style=flat-square&labelColor=201c17)
 ![Curriculum](https://img.shields.io/badge/curriculum-Uganda%20CBC%20S1--S4-fbc629?style=flat-square&labelColor=201c17)
@@ -253,9 +249,9 @@ For installed copies to find updates, two things must be true:
    `TAURI_SIGNING_PRIVATE_KEY` (the contents of `~/.tusome/tusome.key`) and
    `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`. CI then signs every installer and
    publishes `latest.json` with each tagged release.
-2. **Releases are public.** The app sends no credentials, so it can't read a
-   private repo's releases. Make this repo public, or publish releases to a
-   public one and change `endpoints` in `tauri.conf.json`.
+2. **Releases are public.** The app sends no credentials, so it reads this
+   public repo's releases. If releases ever move, change `endpoints` in
+   `tauri.conf.json`.
 
 <details>
 <summary><b>How signing works</b></summary>
