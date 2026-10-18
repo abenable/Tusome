@@ -44,7 +44,7 @@ describe("parseManifestVersion", () => {
 
   it("ignores other fields", () => {
     expect(
-      parseManifestVersion({ version: "v9", name: "cbclab", packs: 3 }),
+      parseManifestVersion({ version: "v9", name: "tusome", packs: 3 }),
     ).toBe("v9");
   });
 });

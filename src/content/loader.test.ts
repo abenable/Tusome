@@ -138,7 +138,7 @@ describe("loader: malformed packs are skipped, never thrown", () => {
   // parse + skip path.
 
   it("skips a malformed pack without throwing and keeps valid packs", async () => {
-    const tmp = await mkdtemp(join(tmpdir(), "cbclab-test-"));
+    const tmp = await mkdtemp(join(tmpdir(), "tusome-test-"));
 
     // Copy the real pack so `packs` has something valid alongside the bad one.
     const realPackSrc = join(
@@ -191,7 +191,7 @@ describe("loader: malformed packs are skipped, never thrown", () => {
 // malformed pack lands in `errors` (not `packs`) and that valid packs survive.
 describe("loadPacksWithErrors (W7 admin loader)", () => {
   it("returns { packs, errors } with a malformed pack in errors, not packs", async () => {
-    const tmp = await mkdtemp(join(tmpdir(), "cbclab-admin-"));
+    const tmp = await mkdtemp(join(tmpdir(), "tusome-admin-"));
 
     // A valid pack alongside the broken one, so `packs` isn't empty.
     const realPackSrc = join(
@@ -240,7 +240,7 @@ describe("loadPacksWithErrors (W7 admin loader)", () => {
   });
 
   it("returns empty errors when all packs validate", async () => {
-    const tmp = await mkdtemp(join(tmpdir(), "cbclab-admin-clean-"));
+    const tmp = await mkdtemp(join(tmpdir(), "tusome-admin-clean-"));
     const realPackSrc = join(
       import.meta.dirname,
       "..",

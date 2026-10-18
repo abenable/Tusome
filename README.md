@@ -1,4 +1,4 @@
-# CBCLab
+# Tusome
 
 Offline-first desktop app for Uganda's lower-secondary CBC (S1–S4) science and
 maths — Biology, Chemistry, Physics, Mathematics. Built for low-spec shared
@@ -95,7 +95,7 @@ cd src-tauri && cargo test   # Rust unit tests (incl. update signature/copy test
 
 - **Content is draft** — outcomes are placeholders pending the official NCDC
   syllabus and teacher review. Only a handful of topics are populated.
-- **Signing key is the dev key** — `~/.cbclab/cbclab.key`. Generate and rotate
+- **Signing key is the dev key** — `~/.tusome/tusome.key`. Generate and rotate
   in a production keypair before any real distribution; keep the private key
   out of the repo and CI.
 - **No hardware validation yet** — the app has not been run on the actual

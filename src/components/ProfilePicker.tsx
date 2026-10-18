@@ -118,7 +118,7 @@ function RootScreen({
     <>
       <header className="flex flex-col items-center gap-3 text-center">
         <h1 className="font-heading text-[38px] font-extrabold leading-tight tracking-[-0.02em] text-ink">
-          Who’s using CBCLab?
+          Who’s using Tusome?
         </h1>
         <p className="font-sans text-[19px] leading-relaxed text-ink-2">
           Log in to an existing profile, or sign up for a new one.

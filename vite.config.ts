@@ -11,7 +11,7 @@ import tailwindcss from '@tailwindcss/vite'
 // repo-root content tree). In a built app the asset protocol serves them.
 const PHET_DIR = path.resolve(import.meta.dirname, './content/sims')
 const servePhetSims = () => ({
-  name: 'cbclab-phet-sims',
+  name: 'tusome-phet-sims',
   configureServer(server: any) {
     server.middlewares.use((req: any, res: any, next: any) => {
       const url = (req.url ?? '') as string

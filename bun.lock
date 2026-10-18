@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "cbclab",
+      "name": "tusome",
       "dependencies": {
         "@base-ui/react": "1.7.0",
         "@tanstack/react-query": "5.101.4",
@@ -17,7 +17,7 @@
         "@tauri-apps/plugin-updater": "2.10.1",
         "class-variance-authority": "0.7.1",
         "clsx": "2.1.1",
-        "katex": "^0.18.4",
+        "katex": "0.18.4",
         "lucide-react": "1.33.0",
         "react": "19.2.8",
         "react-dom": "19.2.8",
@@ -31,7 +31,7 @@
         "@tanstack/router-plugin": "1.168.34",
         "@tauri-apps/cli": "2.11.4",
         "@types/bun": "1.4.0",
-        "@types/katex": "^0.16.8",
+        "@types/katex": "0.16.8",
         "@types/react": "19.2.18",
         "@types/react-dom": "19.2.4",
         "@vitejs/plugin-react": "6.1.0",

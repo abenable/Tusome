@@ -10,7 +10,7 @@ dist-ssr
 # Tauri
 src-tauri/target
 
-# CBCLab signing keypair — the minisign keypair lives in ~/.cbclab (outside the
+# Tusome signing keypair — the minisign keypair lives in ~/.tusome (outside the
 # repo), but these patterns are defensive so no key ever lands in a commit.
 *.key
 *.key.pub

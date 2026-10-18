@@ -115,14 +115,14 @@ function Sidebar({
         <Link
           to="/"
           className="mb-7 flex items-center gap-[10px] px-[6px]"
-          title={collapsed ? "CBCLab" : undefined}
+          title={collapsed ? "Tusome" : undefined}
         >
           <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
             <GraduationCap size={18} aria-hidden />
           </span>
           {!collapsed && (
             <span className="whitespace-nowrap font-heading text-[20px] font-extrabold tracking-tight text-white">
-              CBCLab
+              Tusome
             </span>
           )}
         </Link>
@@ -274,13 +274,13 @@ function RootShell() {
             <Link
               to="/"
               className="flex items-center gap-[10px]"
-              title="CBCLab"
+              title="Tusome"
             >
               <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand font-heading text-[16px] font-extrabold text-white">
                 CB
               </span>
               <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
-                CBCLab
+                Tusome
               </span>
             </Link>
           </header>

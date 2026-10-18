@@ -70,19 +70,19 @@ beforeEach(() => {
 });
 
 describe("db connection", () => {
-  it("Database.load is called once with sqlite:cbclab.db and getDb memoises the promise", async () => {
+  it("Database.load is called once with sqlite:tusome.db and getDb memoises the promise", async () => {
     const a = await getDb();
     const b = await getDb();
     expect(a).toBe(b);
     expect(loadMock).toHaveBeenCalledTimes(1);
-    expect(loadMock).toHaveBeenCalledWith("sqlite:cbclab.db");
+    expect(loadMock).toHaveBeenCalledWith("sqlite:tusome.db");
   });
 
   it("does not hardcode a filesystem path — only the sqlite: connection string is passed", () => {
     const calls = loadMock.mock.calls.map((c) => c[0]);
     for (const path of calls) {
       // The only permitted path form is the sqlite: special prefix.
-      expect(path).toBe("sqlite:cbclab.db");
+      expect(path).toBe("sqlite:tusome.db");
       expect(path).not.toContain("/");
       expect(path).not.toContain("\\");
     }

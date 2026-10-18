@@ -35,12 +35,12 @@ function SettingsLayout(): JSX.Element {
           <ArrowLeft size={16} aria-hidden />
           Back
         </Link>
-        <Link to="/" className="flex items-center gap-[10px]" title="CBCLab">
+        <Link to="/" className="flex items-center gap-[10px]" title="Tusome">
           <span className="flex size-[34px] shrink-0 items-center justify-center rounded-[10px] bg-brand text-white">
             <GraduationCap size={18} aria-hidden />
           </span>
           <span className="font-heading text-[20px] font-extrabold tracking-tight text-ink">
-            CBCLab
+            Tusome
           </span>
         </Link>
         <span aria-hidden />

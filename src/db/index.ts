@@ -1,5 +1,5 @@
 /**
- * CBCLab data layer — a thin typed wrapper over `@tauri-apps/plugin-sql`.
+ * Tusome data layer — a thin typed wrapper over `@tauri-apps/plugin-sql`.
  *
  * No React here; this is pure data access. State ownership is documented in
  * docs/plan/03-architecture.md: DB reads are server-ish state consumed by
@@ -14,15 +14,15 @@ import Database from "@tauri-apps/plugin-sql";
 //
 // appDataDir reasoning — and the app_config_dir correction:
 //
-// `Database.load("sqlite:cbclab.db")` uses the `sqlite:` special prefix.
+// `Database.load("sqlite:tusome.db")` uses the `sqlite:` special prefix.
 // tauri-plugin-sql resolves that prefix against the Tauri *app config dir*
 // (`app_config_dir()`), NOT the app data dir (`appDataDir()`). On Windows the
-// two coincide (`%APPDATA%\ug.cbclab`); on Linux they split — the DB lands in
-// `~/.config/ug.cbclab/cbclab.db` while content lives under
-// `~/.local/share/ug.cbclab/cbclab/content/`. Two roots, but the three-directory
+// two coincide (`%APPDATA%\ug.tusome`); on Linux they split — the DB lands in
+// `~/.config/ug.tusome/tusome.db` while content lives under
+// `~/.local/share/ug.tusome/tusome/content/`. Two roots, but the three-directory
 // guarantee the architecture doc cares about (install / content / data are all
 // distinct and reinstall-safe) still holds. We pass only the bare
-// `"sqlite:cbclab.db"` connection string and never hardcode a filesystem path
+// `"sqlite:tusome.db"` connection string and never hardcode a filesystem path
 // or call `appDataDir()` to build one — the plugin owns that resolution. The
 // actual relaunch-survival property is a human Gate-1 check
 // (docs/plan/04-vertical-slice.md §2), not something this file can prove.
@@ -32,7 +32,7 @@ let dbPromise: Promise<Database> | null = null;
 /** Open (once) and return the memoised SQLite connection. */
 export function getDb(): Promise<Database> {
   if (!dbPromise) {
-    dbPromise = Database.load("sqlite:cbclab.db");
+    dbPromise = Database.load("sqlite:tusome.db");
   }
   return dbPromise;
 }

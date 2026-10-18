@@ -1,24 +1,24 @@
-// CBCLab Tauri shell — plugin registration, first-run content seed, and the
+// Tusome Tauri shell — plugin registration, first-run content seed, and the
 // content-read command.
 //
 // Directory model (see docs/plan/03-architecture.md §"The three directories"):
 //   - install dir       — binary + bundled content resources, read-only,
 //                         replaced on reinstall
-//   - app data dir /cbclab/content/ — writable content packs, seeded from the
+//   - app data dir /tusome/content/ — writable content packs, seeded from the
 //                         bundled resources on first run, survives reinstall,
 //                         hot-swapped by the Phase-5 USB update channel
-//   - app config dir /cbclab.db     — writable progress DB, survives reinstall
+//   - app config dir /tusome.db     — writable progress DB, survives reinstall
 //
-// ── Where "sqlite:cbclab.db" actually lands ──────────────────────────────
+// ── Where "sqlite:tusome.db" actually lands ──────────────────────────────
 //
 // tauri-plugin-sql resolves the `sqlite:<name>` prefix against the Tauri
 // *app config dir* (`app_config_dir()`), NOT the app data dir. On Windows the
-// two coincide (`%APPDATA%\ug.cbclab`), so the shipping target is unaffected.
-// On Linux they split: the DB lands in `~/.config/ug.cbclab/cbclab.db` while
-// content lives under `~/.local/share/ug.cbclab/cbclab/content/`. That is two
+// two coincide (`%APPDATA%\ug.tusome`), so the shipping target is unaffected.
+// On Linux they split: the DB lands in `~/.config/ug.tusome/tusome.db` while
+// content lives under `~/.local/share/ug.tusome/tusome/content/`. That is two
 // roots, but the three-directory guarantee the architecture doc cares about
 // (install / content / data are all distinct and reinstall-safe) still holds.
-// We pass only the bare `"sqlite:cbclab.db"` connection string and let the
+// We pass only the bare `"sqlite:tusome.db"` connection string and let the
 // plugin own path resolution — never hardcode a filesystem path. The actual
 // relaunch-survival guarantee is verified as a human Gate-1 check
 // (docs/plan/04-vertical-slice.md §2), not asserted here.
@@ -60,7 +60,7 @@ pub fn run() {
         .plugin(
             Builder::default()
                 .add_migrations(
-                    "sqlite:cbclab.db",
+                    "sqlite:tusome.db",
                     vec![
                         Migration {
                             version: 1,
@@ -131,7 +131,7 @@ fn read_content_packs(app: tauri::AppHandle) -> Vec<ContentPackFile> {
     // 1. Writable content dir — seeded on first run, the one Phase-5 USB updates
     //    write into. This is where production reads from after the seed.
     if let Ok(data_dir) = paths.app_data_dir() {
-        walk_packs(&data_dir.join("cbclab").join("content"), &mut found);
+        walk_packs(&data_dir.join("tusome").join("content"), &mut found);
     }
 
     // 2. Bundled resources fallback — used before the seed has run (e.g. a dev
@@ -190,7 +190,7 @@ fn walk_packs(dir: &Path, out: &mut Vec<(PathBuf, String)>) {
 // ──────────────────────────────────────────────────────────────────────────
 // get_content_manifest_version — read the content manifest's version field.
 //
-// Reads `<app_data_dir>/cbclab/content/manifest.json` (the same writable
+// Reads `<app_data_dir>/tusome/content/manifest.json` (the same writable
 // content dir `read_content_packs` reads from), parses it as JSON, and returns
 // the `bundleVersion` field as a string (Phase 7 manifest shape, camelCase),
 // falling back to a legacy `version` field, else `"unknown"`. On ANY error —
@@ -207,7 +207,7 @@ fn get_content_manifest_version(app: tauri::AppHandle) -> String {
     let paths = app.path();
     let manifest = match paths.app_data_dir() {
         Ok(data_dir) => data_dir
-            .join("cbclab")
+            .join("tusome")
             .join("content")
             .join("manifest.json"),
         Err(_) => return "unknown".to_string(),
@@ -258,7 +258,7 @@ fn resolve_content_path(app: tauri::AppHandle, rel: String) -> Option<String> {
 
     // 1. Writable content dir (post-seed / post-USB-update).
     if let Ok(data_dir) = paths.app_data_dir() {
-        let p = data_dir.join("cbclab").join("content").join(rel_path);
+        let p = data_dir.join("tusome").join("content").join(rel_path);
         if p.exists() {
             return Some(p.display().to_string());
         }
@@ -299,7 +299,7 @@ fn seed_content(app: &tauri::AppHandle) {
             return;
         }
     };
-    let target = data_dir.join("cbclab").join("content");
+    let target = data_dir.join("tusome").join("content");
 
     // Don't clobber a populated dir — a re-seed on a later launch must not wipe
     // USB-delivered content or updated packs.
